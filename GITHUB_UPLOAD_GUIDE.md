@@ -71,7 +71,7 @@ Delivered post with status=publish
 
 Once GitHub Actions publishes successfully, keep the Windows/Codex jobs as backups only. The stale-feed guard prevents duplicate posts, but GitHub should become the main PC-off runner.
 
-The workflow checks every 10 minutes. It only publishes when the public feed is stale. The automation still respects:
+The workflow checks every 10 minutes. It only publishes when the latest public post is at least 30 minutes old. The automation still respects:
 
 ```text
 MAX_POSTS_PER_RUN=1

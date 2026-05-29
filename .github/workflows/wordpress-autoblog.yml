@@ -41,8 +41,8 @@ jobs:
       - name: Publish only if the public feed is stale
         env:
           BLOG_FEED_URL: https://chuckyscarnage.tech.blog/feed/
-          FAILOVER_STALE_MINUTES: "75"
-          FAILOVER_COOLDOWN_MINUTES: "75"
+          FAILOVER_STALE_MINUTES: "30"
+          FAILOVER_COOLDOWN_MINUTES: "30"
           FAILOVER_LOCK_STALE_MINUTES: "30"
           WP_POST_METHOD: email
           POST_BY_EMAIL_ADDRESS: ${{ secrets.POST_BY_EMAIL_ADDRESS }}

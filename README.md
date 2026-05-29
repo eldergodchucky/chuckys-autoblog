@@ -208,7 +208,7 @@ python .\src\wp_auto_blog.py status
 
 ### Free Cloud Schedule With GitHub Actions
 
-Use this when you want posting to continue even if your PC is off. The workflow lives at `.github/workflows/wordpress-autoblog.yml` and checks every 10 minutes around `:07`, `:17`, `:27`, `:37`, `:47`, and `:57`, plus manual runs from the GitHub Actions tab. It runs the stale-feed failover, so it checks the live blog first and only publishes when the newest public post is stale.
+Use this when you want posting to continue even if your PC is off. The workflow lives at `.github/workflows/wordpress-autoblog.yml` and checks every 10 minutes around `:07`, `:17`, `:27`, `:37`, `:47`, and `:57`, plus manual runs from the GitHub Actions tab. It runs the stale-feed failover, so it checks the live blog first and only publishes when the newest public post is at least 30 minutes old.
 
 1. Create a GitHub repository for this project. A public repository avoids GitHub Actions minute charges for standard runners. A private repository uses your free monthly Actions minutes.
 2. Upload or push this folder to that repository.
