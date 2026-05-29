@@ -2,12 +2,13 @@ name: WordPress Auto Blog Failover
 
 on:
   schedule:
-    # Offset away from :00 because GitHub says top-of-hour schedules are more likely to be delayed.
-    - cron: "7,17,27,37,47,57 * * * *"
+    # Backup kicks. The job itself loops, so these mainly revive it if a runner dies.
+    - cron: "13,43 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: wordpress-autoblog
@@ -16,7 +17,53 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 80
+    env:
+      BLOG_FEED_URL: https://chuckyscarnage.tech.blog/feed/
+      FAILOVER_STALE_MINUTES: "30"
+      FAILOVER_COOLDOWN_MINUTES: "30"
+      FAILOVER_LOCK_STALE_MINUTES: "30"
+      WP_POST_METHOD: email
+      POST_BY_EMAIL_ADDRESS: ${{ secrets.POST_BY_EMAIL_ADDRESS }}
+      POST_BY_EMAIL_PUBLICIZE: ""
+      POST_STATUS: publish
+      AUTO_PUBLISH_CONFIRM: I_UNDERSTAND_POSTS_GO_LIVE
+      ARTICLE_GENERATOR: free
+      HERO_IMAGE_MODE: real
+      MAX_POSTS_PER_RUN: "1"
+      MAX_POSTS_PER_DAY: "90"
+      LOOKBACK_HOURS: "96"
+      MIN_SOURCES_PER_POST: "2"
+      REQUEST_TIMEOUT_SECONDS: "25"
+      RUN_LOCK_STALE_SECONDS: "1800"
+      TOPIC_FOCUS_KEYWORDS: science,scientists,research,researchers,breakthrough,discovery,experiment,study,physics,biology,chemistry,climate,energy,robotics,space,nasa,astronomy,planet,moon,mars,telescope,galaxy,phone,phones,iphone,ios,android,apple,samsung,pixel,gadget,gadgets,ai,artificial intelligence,software,apps,app,innovation
+      CATEGORY_ROTATION: science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks
+      CATEGORY_WEIGHTS: science=6,space=6,ai=6,gadgets=6,security=6,tutorials=6,hacks=6,phones=6,apple=6,android=6,software=6,tech=4
+      RECENT_CATEGORY_WINDOW: "8"
+      RECENT_CATEGORY_PENALTY: "4"
+      ALLOW_SINGLE_SOURCE_PRIORITY_POSTS: "true"
+      SINGLE_SOURCE_PRIORITY_CATEGORIES: science,space
+      SINGLE_SOURCE_MIN_QUALITY: "4"
+      WP_CREATE_TERMS: "false"
+      BLOCKLIST_DOMAINS: ""
+      SMTP_HOST: ${{ secrets.SMTP_HOST }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      SMTP_USE_TLS: "true"
+      SMTP_USE_SSL: "false"
+      SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      SMTP_FROM: ${{ secrets.SMTP_FROM }}
+      X_CLIENT_ID: ${{ secrets.X_CLIENT_ID }}
+      X_CLIENT_SECRET: ${{ secrets.X_CLIENT_SECRET }}
+      X_USER_ACCESS_TOKEN: ${{ secrets.X_USER_ACCESS_TOKEN }}
+      X_REFRESH_TOKEN: ${{ secrets.X_REFRESH_TOKEN }}
+      X_TOKEN_EXPIRES_AT: ${{ secrets.X_TOKEN_EXPIRES_AT }}
+      X_SHARE_MAX_PER_RUN: "2"
+      X_SHARE_BACKFILL: "false"
+      X_SHARE_TEMPLATE: "New on Chucky's Carnage: {title}\n{link}"
+      X_SHARE_STATE_PATH: data/x_shared_posts.json
+      WATCHDOG_RUNTIME_MINUTES: "65"
+      WATCHDOG_INTERVAL_SECONDS: "600"
 
     steps:
       - name: Check out site automation
@@ -38,77 +85,78 @@ jobs:
           mkdir -p data
           mkdir -p out/images
 
-      - name: Publish only if the public feed is stale
-        env:
-          BLOG_FEED_URL: https://chuckyscarnage.tech.blog/feed/
-          FAILOVER_STALE_MINUTES: "30"
-          FAILOVER_COOLDOWN_MINUTES: "30"
-          FAILOVER_LOCK_STALE_MINUTES: "30"
-          WP_POST_METHOD: email
-          POST_BY_EMAIL_ADDRESS: ${{ secrets.POST_BY_EMAIL_ADDRESS }}
-          POST_BY_EMAIL_PUBLICIZE: ""
-          POST_STATUS: publish
-          AUTO_PUBLISH_CONFIRM: I_UNDERSTAND_POSTS_GO_LIVE
-          ARTICLE_GENERATOR: free
-          HERO_IMAGE_MODE: real
-          MAX_POSTS_PER_RUN: "1"
-          MAX_POSTS_PER_DAY: "90"
-          LOOKBACK_HOURS: "96"
-          MIN_SOURCES_PER_POST: "2"
-          REQUEST_TIMEOUT_SECONDS: "25"
-          RUN_LOCK_STALE_SECONDS: "1800"
-          TOPIC_FOCUS_KEYWORDS: science,scientists,research,researchers,breakthrough,discovery,experiment,study,physics,biology,chemistry,climate,energy,robotics,space,nasa,astronomy,planet,moon,mars,telescope,galaxy,phone,phones,iphone,ios,android,apple,samsung,pixel,gadget,gadgets,ai,artificial intelligence,software,apps,app,innovation
-          CATEGORY_ROTATION: science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks
-          CATEGORY_WEIGHTS: science=6,space=6,ai=6,gadgets=6,security=6,tutorials=6,hacks=6,phones=6,apple=6,android=6,software=6,tech=4
-          RECENT_CATEGORY_WINDOW: "8"
-          RECENT_CATEGORY_PENALTY: "4"
-          ALLOW_SINGLE_SOURCE_PRIORITY_POSTS: "true"
-          SINGLE_SOURCE_PRIORITY_CATEGORIES: science,space
-          SINGLE_SOURCE_MIN_QUALITY: "4"
-          WP_CREATE_TERMS: "false"
-          BLOCKLIST_DOMAINS: ""
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USE_TLS: "true"
-          SMTP_USE_SSL: "false"
-          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-          SMTP_FROM: ${{ secrets.SMTP_FROM }}
-        run: python src/wp_failover_publish.py
-
-      - name: Share new published posts to X
-        continue-on-error: true
-        env:
-          BLOG_FEED_URL: https://chuckyscarnage.tech.blog/feed/
-          X_CLIENT_ID: ${{ secrets.X_CLIENT_ID }}
-          X_CLIENT_SECRET: ${{ secrets.X_CLIENT_SECRET }}
-          X_USER_ACCESS_TOKEN: ${{ secrets.X_USER_ACCESS_TOKEN }}
-          X_REFRESH_TOKEN: ${{ secrets.X_REFRESH_TOKEN }}
-          X_TOKEN_EXPIRES_AT: ${{ secrets.X_TOKEN_EXPIRES_AT }}
-          X_SHARE_MAX_PER_RUN: "2"
-          X_SHARE_BACKFILL: "false"
-          X_SHARE_TEMPLATE: "New on Chucky's Carnage: {title}\n{link}"
-          X_SHARE_STATE_PATH: data/x_shared_posts.json
-          REQUEST_TIMEOUT_SECONDS: "25"
-        run: python src/share_blog_to_x.py
-
-      - name: Save posting memory
+      - name: Watch feed, publish when stale, and save state
+        shell: bash
         run: |
+          set +e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f data/.gitkeep
-          if [ -f data/autoblog.sqlite3 ]; then
-            git add -f data/autoblog.sqlite3
-          fi
-          if [ -f data/failover_last_publish.json ]; then
-            git add -f data/failover_last_publish.json
-          fi
-          if [ -f data/x_shared_posts.json ]; then
-            git add -f data/x_shared_posts.json
-          fi
-          if git diff --cached --quiet; then
-            echo "No posting state changes to save."
+          runtime_minutes="${WATCHDOG_RUNTIME_MINUTES:-65}"
+          interval_seconds="${WATCHDOG_INTERVAL_SECONDS:-600}"
+          end_at=$((SECONDS + runtime_minutes * 60))
+          iteration=1
+
+          while true; do
+            echo "::group::Watchdog iteration ${iteration}"
+            echo "Checking feed and publishing only if stale..."
+            python src/wp_failover_publish.py
+            publish_status=$?
+
+            echo "Checking X sharing..."
+            python src/share_blog_to_x.py
+            share_status=$?
+            if [ "$share_status" -ne 0 ]; then
+              echo "X sharing failed with status ${share_status}; continuing because blog publishing is independent."
+            fi
+
+            git add -f data/.gitkeep
+            if [ -f data/autoblog.sqlite3 ]; then
+              git add -f data/autoblog.sqlite3
+            fi
+            if [ -f data/failover_last_publish.json ]; then
+              git add -f data/failover_last_publish.json
+            fi
+            if [ -f data/x_shared_posts.json ]; then
+              git add -f data/x_shared_posts.json
+            fi
+            if git diff --cached --quiet; then
+              echo "No posting state changes to save."
+            else
+              git commit -m "Update WordPress auto-blog state"
+              git pull --rebase origin main
+              git push
+            fi
+
+            if [ "$publish_status" -ne 0 ]; then
+              echo "Publisher check returned ${publish_status}; watchdog will continue on the next interval."
+            fi
+            echo "::endgroup::"
+
+            next_seconds=$((SECONDS + interval_seconds))
+            if [ "$next_seconds" -ge "$end_at" ]; then
+              break
+            fi
+            sleep "$interval_seconds"
+            iteration=$((iteration + 1))
+          done
+
+      - name: Queue the next watchdog run
+        if: ${{ always() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          payload='{"ref":"main"}'
+          code="$(curl -sS -o /tmp/dispatch-response.txt -w "%{http_code}" \
+            -X POST \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/wordpress-autoblog.yml/dispatches" \
+            -d "${payload}")"
+          if [ "$code" = "204" ]; then
+            echo "Queued next watchdog run."
           else
-            git commit -m "Update WordPress auto-blog state"
-            git push
+            echo "Could not queue next watchdog run; HTTP ${code}."
+            cat /tmp/dispatch-response.txt
           fi

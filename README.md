@@ -196,7 +196,9 @@ This only works while your PC is on and Codex/Windows can run the job. Use it fo
 python C:\Users\ELDERCHUCKY\Documents\Codex\2026-05-12\so-i-wanna-automate-my-wordpress\src\wp_auto_blog.py run
 ```
 
-Current schedule: every 15 minutes, with `MAX_POSTS_PER_RUN=1` and `MAX_POSTS_PER_DAY=24`. The frequent check keeps posts fresh, while the daily cap reduces the risk of flooding the site. The same schedule can run `src/share_blog_to_x.py` after the blog publisher so newly published feed items are shared to X.
+Current local schedule: every 15 minutes, with `MAX_POSTS_PER_RUN=1`. The local schedule only works while the PC is on.
+
+Current GitHub cloud schedule: one watchdog run checks the public feed every 10 minutes for about 65 minutes, then queues the next watchdog run. Backup scheduled triggers run at `:13` and `:43` every hour. The failover only publishes when the newest public post is at least 30 minutes old, and `MAX_POSTS_PER_DAY=90` still caps total output.
 
 The publisher writes a private local health file at `data/last_run_status.json` and uses `data/autoblog.lock` to prevent overlapping runs. If a run appears stuck, the lock is treated as stale after `RUN_LOCK_STALE_SECONDS` seconds, which defaults to 1800.
 
