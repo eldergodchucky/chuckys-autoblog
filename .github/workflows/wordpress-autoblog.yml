@@ -3,7 +3,7 @@ name: WordPress Auto Blog Failover
 on:
   schedule:
     # Offset away from :00 because GitHub says top-of-hour schedules are more likely to be delayed.
-    - cron: "7/10 * * * *"
+    - cron: "7,17,27,37,47,57 * * * *"
   workflow_dispatch:
 
 permissions:
