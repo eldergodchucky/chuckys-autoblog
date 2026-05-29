@@ -1,0 +1,10 @@
+.env
+data/*
+!data/
+!data/.gitkeep
+!data/autoblog.sqlite3
+!data/failover_last_publish.json
+!data/x_shared_posts.json
+out/
+__pycache__/
+*.pyc

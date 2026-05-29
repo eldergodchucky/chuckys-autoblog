@@ -1,0 +1,42 @@
+{
+  "initialized_at": "2026-05-18T10:39:00.612915+00:00",
+  "seen": {
+    "0e2b81e28b6bfecb3b30312b": {
+      "link": "https://chuckyscarnage.tech.blog/2026/05/18/switchbot-launches-two-matter-smart-locks-with-3d-facial-recognition/",
+      "reason": "initial_feed_baseline",
+      "seen_at": "2026-05-18T10:39:00.612915+00:00",
+      "title": "SwitchBot Launches Two Matter Smart Locks With 3D Facial Recognition"
+    },
+    "19f668b0926e6e157d3fd62d": {
+      "link": "https://chuckyscarnage.tech.blog/2026/05/18/spacex-dragon-docks-to-station-filled-with-new-science-experiments/",
+      "reason": "initial_feed_baseline",
+      "seen_at": "2026-05-18T10:39:00.612915+00:00",
+      "title": "SpaceX Dragon Docks to Station Filled with New Science Experiments"
+    },
+    "2a3bb9ec5fe8e7e7f2640cef": {
+      "link": "https://chuckyscarnage.tech.blog/2026/05/18/new-crash-data-highlights-the-slow-progress-of-tesla-s-robotaxis/",
+      "reason": "initial_feed_baseline",
+      "seen_at": "2026-05-18T10:39:00.612915+00:00",
+      "title": "New crash data highlights the slow progress of Tesla's robotaxis"
+    },
+    "5a2c500932f610ccccbee126": {
+      "link": "https://chuckyscarnage.tech.blog/2026/05/18/ai-rings-on-fingers-can-interpret-sign-language/",
+      "reason": "initial_feed_baseline",
+      "seen_at": "2026-05-18T10:39:00.612915+00:00",
+      "title": "AI Rings on Fingers Can Interpret Sign Language"
+    },
+    "79b9a0398ada302ec4a6c926": {
+      "link": "https://chuckyscarnage.tech.blog/2026/05/18/plant-believed-extinct-for-60-years-suddenly-reappears/",
+      "reason": "initial_feed_baseline",
+      "seen_at": "2026-05-18T10:39:00.612915+00:00",
+      "title": "Plant believed extinct for 60 years suddenly reappears"
+    },
+    "dd7c1a70c9bef126cc88ef45": {
+      "link": "https://chuckyscarnage.tech.blog/2026/05/18/samsung-galaxy-s24-series/",
+      "reason": "initial_feed_baseline",
+      "seen_at": "2026-05-18T10:39:00.612915+00:00",
+      "title": "Samsung Galaxy S24 series"
+    }
+  },
+  "shared": {}
+}

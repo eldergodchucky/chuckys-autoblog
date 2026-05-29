@@ -1,0 +1,260 @@
+{
+  "source_policy": {
+    "purpose": "Use high-quality RSS feeds as discovery signals for original, cited WordPress posts about science breakthroughs, space, phones, iPhone/iOS, Android, gadgets, AI, software/apps, innovation, tutorials, security, DIY, and practical hacks.",
+    "rules": [
+      "Create original synthesis from multiple sources; do not republish or lightly spin feed text.",
+      "Use source titles, summaries, dates, and links as inputs unless the source explicitly allows broader reuse.",
+      "Use natural inline attribution with visible source links where the reporting comes from outside sources.",
+      "Skip paywalled, single-source, thin, or duplicate stories.",
+      "If a source's RSS terms are restrictive, use it only as a topic alert or disable it until reviewed."
+    ]
+  },
+  "feeds": [
+    {
+      "name": "Apple Newsroom",
+      "url": "https://www.apple.com/newsroom/rss-feed.rss",
+      "category": "apple",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "MacRumors",
+      "url": "https://feeds.macrumors.com/MacRumors-All",
+      "category": "apple",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "9to5Mac",
+      "url": "https://9to5mac.com/feed/",
+      "category": "apple",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "9to5Mac iPhone",
+      "url": "https://9to5mac.com/guides/iphone/feed/",
+      "category": "phones",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Android Developers Blog",
+      "url": "https://android-developers.googleblog.com/feeds/posts/default?alt=rss",
+      "category": "android",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Android Authority",
+      "url": "https://www.androidauthority.com/feed/",
+      "category": "android",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Android Authority News",
+      "url": "https://www.androidauthority.com/news/feed/",
+      "category": "phones",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "GSMArena",
+      "url": "https://www.gsmarena.com/rss-news-reviews.php3",
+      "category": "phones",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Engadget",
+      "url": "https://www.engadget.com/rss.xml",
+      "category": "gadgets",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "OpenAI News",
+      "url": "https://openai.com/news/rss.xml",
+      "category": "ai",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "NASA Technology",
+      "url": "https://www.nasa.gov/technology/feed/",
+      "category": "science",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "NASA Science",
+      "url": "https://science.nasa.gov/feed/",
+      "category": "space",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "ScienceDaily Top Technology",
+      "url": "https://www.sciencedaily.com/rss/top/technology.xml",
+      "category": "science",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "ScienceDaily Top Science",
+      "url": "https://www.sciencedaily.com/rss/top/science.xml",
+      "category": "science",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Phys.org Technology",
+      "url": "https://phys.org/rss-feed/technology-news/",
+      "category": "science",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Phys.org Space",
+      "url": "https://phys.org/rss-feed/space-news/",
+      "category": "space",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "IEEE Spectrum AI",
+      "url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss",
+      "category": "tech",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "IEEE Spectrum Consumer Electronics",
+      "url": "https://spectrum.ieee.org/feeds/topic/consumer-electronics.rss",
+      "category": "gadgets",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "IEEE Spectrum Robotics",
+      "url": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
+      "category": "tech",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "WIRED Gear",
+      "url": "https://www.wired.com/feed/category/gear/latest/rss",
+      "category": "gadgets",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "WIRED Science",
+      "url": "https://www.wired.com/feed/category/science/latest/rss",
+      "category": "science",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "WIRED Security",
+      "url": "https://www.wired.com/feed/category/security/latest/rss",
+      "category": "security",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Ars Technica Science",
+      "url": "https://arstechnica.com/science/feed/",
+      "category": "science",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Ars Technica Gadgets",
+      "url": "https://arstechnica.com/gadgets/feed/",
+      "category": "gadgets",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Ars Technica Information Technology",
+      "url": "https://arstechnica.com/information-technology/feed/",
+      "category": "tech",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Hackaday",
+      "url": "https://hackaday.com/blog/feed/",
+      "category": "hacks",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Raspberry Pi News",
+      "url": "https://www.raspberrypi.com/news/feed/",
+      "category": "tutorials",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Arduino Blog",
+      "url": "https://blog.arduino.cc/feed/",
+      "category": "tutorials",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Adafruit Blog",
+      "url": "https://blog.adafruit.com/feed/",
+      "category": "gadgets",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Mozilla Hacks",
+      "url": "https://hacks.mozilla.org/feed/",
+      "category": "tutorials",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "GitHub Blog Engineering",
+      "url": "https://github.blog/engineering/feed/",
+      "category": "tutorials",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/rss/",
+      "category": "security",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/feed/",
+      "category": "security",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "KrebsOnSecurity",
+      "url": "https://krebsonsecurity.com/feed/",
+      "category": "security",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "category": "tech",
+      "quality": 4,
+      "enabled": false,
+      "notes": "Disabled by default because its RSS terms are restrictive. Enable only after you are comfortable using it as a topic alert with attribution."
+    }
+  ]
+}
