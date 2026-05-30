@@ -71,9 +71,11 @@ Delivered post with status=publish
 
 Once GitHub Actions publishes successfully, keep the Windows/Codex jobs as backups only. The stale-feed guard prevents duplicate posts, but GitHub should become the main PC-off runner.
 
-The workflow now runs as a cloud watchdog. One run checks the public feed every 10 minutes for about 65 minutes, then queues the next watchdog run. GitHub scheduled runs at `:13` and `:43` are backup kicks in case a runner dies or the self-queue is delayed.
+The workflow now runs as a cloud watchdog. One run checks the public feed every 5 minutes for about 70 minutes, then queues the next watchdog run. GitHub scheduled runs at `:13` and `:43` are backup kicks in case a runner dies or the self-queue is delayed.
 
-It only publishes when the latest public post is at least 30 minutes old. The automation still respects:
+A second GitHub workflow, `WordPress Auto Blog Rescue Guard`, checks every 15 minutes at `:05`, `:20`, `:35`, and `:50`. It uses the public feed and GitHub run history to stand down while the main watchdog is healthy, cancel a stale main watchdog run if needed, and publish only when the feed is stale.
+
+The main watchdog publishes when the latest public post is at least 20 minutes old. The rescue guard publishes only when the latest public post is at least 35 minutes old, unless the feed becomes much older and needs emergency recovery. The automation still respects:
 
 ```text
 MAX_POSTS_PER_RUN=1

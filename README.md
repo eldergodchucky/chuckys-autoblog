@@ -198,7 +198,9 @@ python C:\Users\ELDERCHUCKY\Documents\Codex\2026-05-12\so-i-wanna-automate-my-wo
 
 Current local schedule: every 15 minutes, with `MAX_POSTS_PER_RUN=1`. The local schedule only works while the PC is on.
 
-Current GitHub cloud schedule: one watchdog run checks the public feed every 10 minutes for about 65 minutes, then queues the next watchdog run. Backup scheduled triggers run at `:13` and `:43` every hour. The failover only publishes when the newest public post is at least 30 minutes old, and `MAX_POSTS_PER_DAY=90` still caps total output.
+Current GitHub cloud schedule: one watchdog run checks the public feed every 5 minutes for about 70 minutes, then queues the next watchdog run. Backup scheduled triggers run at `:13` and `:43` every hour. The main watchdog publishes only when the newest public post is at least 20 minutes old, and `MAX_POSTS_PER_DAY=90` still caps total output.
+
+An independent rescue workflow also runs every 15 minutes at `:05`, `:20`, `:35`, and `:50`. It normally stands down while the main watchdog is healthy. If the main watchdog is missing, stuck, or too old, the rescue workflow can run the same stale-feed publisher after the public feed is at least 35 minutes stale.
 
 The publisher writes a private local health file at `data/last_run_status.json` and uses `data/autoblog.lock` to prevent overlapping runs. If a run appears stuck, the lock is treated as stale after `RUN_LOCK_STALE_SECONDS` seconds, which defaults to 1800.
 

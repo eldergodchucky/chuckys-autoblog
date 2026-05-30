@@ -20,8 +20,8 @@ jobs:
     timeout-minutes: 80
     env:
       BLOG_FEED_URL: https://chuckyscarnage.tech.blog/feed/
-      FAILOVER_STALE_MINUTES: "30"
-      FAILOVER_COOLDOWN_MINUTES: "30"
+      FAILOVER_STALE_MINUTES: "20"
+      FAILOVER_COOLDOWN_MINUTES: "18"
       FAILOVER_LOCK_STALE_MINUTES: "30"
       WP_POST_METHOD: email
       POST_BY_EMAIL_ADDRESS: ${{ secrets.POST_BY_EMAIL_ADDRESS }}
@@ -62,8 +62,8 @@ jobs:
       X_SHARE_BACKFILL: "false"
       X_SHARE_TEMPLATE: "New on Chucky's Carnage: {title}\n{link}"
       X_SHARE_STATE_PATH: data/x_shared_posts.json
-      WATCHDOG_RUNTIME_MINUTES: "65"
-      WATCHDOG_INTERVAL_SECONDS: "600"
+      WATCHDOG_RUNTIME_MINUTES: "70"
+      WATCHDOG_INTERVAL_SECONDS: "300"
 
     steps:
       - name: Check out site automation

@@ -4,6 +4,7 @@ data/*
 !data/.gitkeep
 !data/autoblog.sqlite3
 !data/failover_last_publish.json
+!data/cloud_guard_status.json
 !data/x_shared_posts.json
 out/
 __pycache__/
