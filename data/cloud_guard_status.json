@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 45,
-      "created_at": "2026-05-30T14:04:26Z",
+      "age_minutes": 53,
+      "created_at": "2026-05-30T17:23:25Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26685788650",
-      "id": 26685788650,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26690189488",
+      "id": 26690189488,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-05-30T14:50:07.738738+00:00",
+  "finished_at": "2026-05-30T18:16:55.140149+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 45,
-      "created_at": "2026-05-30T14:04:26Z",
+      "age_minutes": 53,
+      "created_at": "2026-05-30T17:23:25Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26685788650",
-      "id": 26685788650,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26690189488",
+      "id": 26690189488,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 14,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/05/30/a-trip-to-the-united-arab-emirates-darkest-spot-reveals-a-rare/",
-  "latest_published_at": "2026-05-30T14:35:19+00:00",
-  "latest_title": "A trip to the United Arab Emirates' darkest spot reveals a rare",
+  "latest_age_minutes": 17,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/05/30/climate-driven-water-stress-could-undercut-most-proposed-u-s-lithium-mines/",
+  "latest_published_at": "2026-05-30T17:59:10+00:00",
+  "latest_title": "Climate-driven water stress could undercut most proposed U.S. lithium mines",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
