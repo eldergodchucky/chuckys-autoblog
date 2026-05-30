@@ -1,0 +1,35 @@
+{
+  "active_main_runs": [
+    {
+      "age_minutes": 42,
+      "created_at": "2026-05-29T23:53:27Z",
+      "event": "workflow_dispatch",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26668179489",
+      "id": 26668179489,
+      "status": "in_progress"
+    }
+  ],
+  "cancelled_stale_main_runs": [],
+  "finished_at": "2026-05-30T00:35:44.434342+00:00",
+  "fresh_main_runs": [
+    {
+      "age_minutes": 42,
+      "created_at": "2026-05-29T23:53:27Z",
+      "event": "workflow_dispatch",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26668179489",
+      "id": 26668179489,
+      "status": "in_progress"
+    }
+  ],
+  "github_error": "",
+  "latest_age_minutes": 14,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/05/30/kuo-apples-iphone-camera-roadmap-includes-a-costly-upgrade/",
+  "latest_published_at": "2026-05-30T00:20:45+00:00",
+  "latest_title": "Kuo: Apple\u2019s iPhone camera roadmap includes a costly upgrade",
+  "main_run_stale_minutes": 95,
+  "message": "Latest post is fresh; rescue did not publish.",
+  "rescue_emergency_stale_minutes": 90,
+  "rescue_force_stale_minutes": 50,
+  "rescue_stale_minutes": 35,
+  "state": "fresh"
+}
