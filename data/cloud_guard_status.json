@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 53,
-      "created_at": "2026-05-30T17:23:25Z",
+      "age_minutes": 62,
+      "created_at": "2026-05-30T20:42:04Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26690189488",
-      "id": 26690189488,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26694428879",
+      "id": 26694428879,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-05-30T18:16:55.140149+00:00",
+  "finished_at": "2026-05-30T21:44:37.062770+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 53,
-      "created_at": "2026-05-30T17:23:25Z",
+      "age_minutes": 62,
+      "created_at": "2026-05-30T20:42:04Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26690189488",
-      "id": 26690189488,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26694428879",
+      "id": 26694428879,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 17,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/05/30/climate-driven-water-stress-could-undercut-most-proposed-u-s-lithium-mines/",
-  "latest_published_at": "2026-05-30T17:59:10+00:00",
-  "latest_title": "Climate-driven water stress could undercut most proposed U.S. lithium mines",
+  "latest_age_minutes": 1,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/05/30/vitamin-b12-and-folate-deficiencies-linked-to-chronic-fatigue/",
+  "latest_published_at": "2026-05-30T21:43:20+00:00",
+  "latest_title": "Vitamin B12 and folate deficiencies linked to chronic fatigue",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
