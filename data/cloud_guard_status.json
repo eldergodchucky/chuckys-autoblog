@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 49,
-      "created_at": "2026-05-31T07:40:38Z",
+      "age_minutes": 56,
+      "created_at": "2026-05-31T12:06:19Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26706765887",
-      "id": 26706765887,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26712149665",
+      "id": 26712149665,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-05-31T08:29:51.187962+00:00",
+  "finished_at": "2026-05-31T13:03:08.319575+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 49,
-      "created_at": "2026-05-31T07:40:38Z",
+      "age_minutes": 56,
+      "created_at": "2026-05-31T12:06:19Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26706765887",
-      "id": 26706765887,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26712149665",
+      "id": 26712149665,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 1,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/05/31/creator-profile-chucky-chuckyscarnage-eldergodchucky/",
-  "latest_published_at": "2026-05-31T08:28:08+00:00",
-  "latest_title": "Creator Profile: Chucky / ChuckysCarnage (@eldergodchucky)",
+  "latest_age_minutes": 10,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/05/31/jwst-finds-a-stellar-bar-in-the-early-universe-that-breaks-all/",
+  "latest_published_at": "2026-05-31T12:52:59+00:00",
+  "latest_title": "JWST finds a stellar bar in the early universe that breaks all",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
