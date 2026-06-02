@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 18,
-      "created_at": "2026-06-02T12:42:39Z",
+      "age_minutes": 39,
+      "created_at": "2026-06-02T21:33:56Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26820420525",
-      "id": 26820420525,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26849370441",
+      "id": 26849370441,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-02T13:01:00.297524+00:00",
+  "finished_at": "2026-06-02T22:13:42.342759+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 18,
-      "created_at": "2026-06-02T12:42:39Z",
+      "age_minutes": 39,
+      "created_at": "2026-06-02T21:33:56Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26820420525",
-      "id": 26820420525,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26849370441",
+      "id": 26849370441,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 18,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/02/iphone-18-pro-battery-capacities-allegedly-leaked-2/",
-  "latest_published_at": "2026-06-02T12:42:37+00:00",
-  "latest_title": "iPhone 18 Pro Battery Capacities Allegedly Leaked",
+  "latest_age_minutes": 19,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/02/europa-clipper-scale-model-3d-print-version-2025d/",
+  "latest_published_at": "2026-06-02T21:54:34+00:00",
+  "latest_title": "europa-clipper-scale-model-3d-print-version-2025d",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
