@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 60,
-      "created_at": "2026-06-04T09:51:46Z",
+      "age_minutes": 51,
+      "created_at": "2026-06-04T18:41:55Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26944391441",
-      "id": 26944391441,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26972153055",
+      "id": 26972153055,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-04T10:51:52.767402+00:00",
+  "finished_at": "2026-06-04T19:33:21.975861+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 60,
-      "created_at": "2026-06-04T09:51:46Z",
+      "age_minutes": 51,
+      "created_at": "2026-06-04T18:41:55Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26944391441",
-      "id": 26944391441,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26972153055",
+      "id": 26972153055,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 16,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/04/fixing-a-nintendo-game-boy-clone-that-runs-too-fast/",
-  "latest_published_at": "2026-06-04T10:35:42+00:00",
-  "latest_title": "Fixing a Nintendo Game Boy Clone that Runs Too Fast",
+  "latest_age_minutes": 5,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/04/the-world-s-first-gpib-speech-synthesizer/",
+  "latest_published_at": "2026-06-04T19:28:14+00:00",
+  "latest_title": "The World\u2019s First GPIB Speech Synthesizer",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
