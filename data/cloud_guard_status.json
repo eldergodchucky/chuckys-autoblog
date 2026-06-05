@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 42,
-      "created_at": "2026-06-04T23:06:56Z",
+      "age_minutes": 38,
+      "created_at": "2026-06-05T11:11:00Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26984961681",
-      "id": 26984961681,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27011475716",
+      "id": 27011475716,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-04T23:49:08.497256+00:00",
+  "finished_at": "2026-06-05T11:49:58.307256+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 42,
-      "created_at": "2026-06-04T23:06:56Z",
+      "age_minutes": 38,
+      "created_at": "2026-06-05T11:11:00Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/26984961681",
-      "id": 26984961681,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27011475716",
+      "id": 27011475716,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 16,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/05/making-llms-faster-and-more-efficient-across-multiple-languages/",
-  "latest_published_at": "2026-06-04T23:32:36+00:00",
-  "latest_title": "Making LLMs faster and more efficient across multiple languages",
+  "latest_age_minutes": 13,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/05/the-morning-after-nvidia-thinks-its-new-chip-will-revolutionize-pcs/",
+  "latest_published_at": "2026-06-05T11:36:43+00:00",
+  "latest_title": "The Morning After: NVIDIA thinks its new chip will revolutionize PCs",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
