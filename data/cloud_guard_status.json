@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 41,
-      "created_at": "2026-06-05T17:47:58Z",
+      "age_minutes": 32,
+      "created_at": "2026-06-05T22:12:55Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27030866294",
-      "id": 27030866294,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27042835089",
+      "id": 27042835089,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-05T18:29:19.365754+00:00",
+  "finished_at": "2026-06-05T22:45:37.030820+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 41,
-      "created_at": "2026-06-05T17:47:58Z",
+      "age_minutes": 32,
+      "created_at": "2026-06-05T22:12:55Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27030866294",
-      "id": 27030866294,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27042835089",
+      "id": 27042835089,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/05/q-a-how-organic-glass-scintillators-could-improve-nuclear-security/",
-  "latest_published_at": "2026-06-05T18:28:45+00:00",
-  "latest_title": "Q&A: How organic glass scintillators could improve nuclear security",
+  "latest_age_minutes": 12,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/05/leak-on-space-station-triggers-brief-safety-alert/",
+  "latest_published_at": "2026-06-05T22:33:21+00:00",
+  "latest_title": "Leak on space station triggers brief safety alert",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
