@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 53,
-      "created_at": "2026-06-06T11:23:40Z",
+      "age_minutes": 31,
+      "created_at": "2026-06-06T15:48:28Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27060953145",
-      "id": 27060953145,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27066731456",
+      "id": 27066731456,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-06T12:17:35.199730+00:00",
+  "finished_at": "2026-06-06T16:19:53.943884+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 53,
-      "created_at": "2026-06-06T11:23:40Z",
+      "age_minutes": 31,
+      "created_at": "2026-06-06T15:48:28Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27060953145",
-      "id": 27060953145,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27066731456",
+      "id": 27066731456,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 13,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/06/spacex-denied-fast-track-to-s-p-500-after-ipo/",
-  "latest_published_at": "2026-06-06T12:04:29+00:00",
-  "latest_title": "SpaceX denied fast track to S&P 500 after IPO",
+  "latest_age_minutes": 10,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/06/hd-6718-b/",
+  "latest_published_at": "2026-06-06T16:09:04+00:00",
+  "latest_title": "HD 6718 b",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
