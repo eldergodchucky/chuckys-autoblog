@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 31,
-      "created_at": "2026-06-06T15:48:28Z",
+      "age_minutes": 27,
+      "created_at": "2026-06-06T20:14:59Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27066731456",
-      "id": 27066731456,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27072746655",
+      "id": 27072746655,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-06T16:19:53.943884+00:00",
+  "finished_at": "2026-06-06T20:42:36.245155+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 31,
-      "created_at": "2026-06-06T15:48:28Z",
+      "age_minutes": 27,
+      "created_at": "2026-06-06T20:14:59Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27066731456",
-      "id": 27066731456,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27072746655",
+      "id": 27072746655,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 10,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/06/hd-6718-b/",
-  "latest_published_at": "2026-06-06T16:09:04+00:00",
-  "latest_title": "HD 6718 b",
+  "latest_age_minutes": 7,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/06/tiny-x-ray-telescope-could-unlock-the-moon-s-hidden-chemistry-2/",
+  "latest_published_at": "2026-06-06T20:35:27+00:00",
+  "latest_title": "Tiny X-ray telescope could unlock the Moon's hidden chemistry",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
