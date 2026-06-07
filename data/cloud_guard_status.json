@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 27,
-      "created_at": "2026-06-06T20:14:59Z",
+      "age_minutes": 17,
+      "created_at": "2026-06-07T08:20:27Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27072746655",
-      "id": 27072746655,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27087206888",
+      "id": 27087206888,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-06T20:42:36.245155+00:00",
+  "finished_at": "2026-06-07T08:37:33.499103+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 27,
-      "created_at": "2026-06-06T20:14:59Z",
+      "age_minutes": 17,
+      "created_at": "2026-06-07T08:20:27Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27072746655",
-      "id": 27072746655,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27087206888",
+      "id": 27087206888,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 7,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/06/tiny-x-ray-telescope-could-unlock-the-moon-s-hidden-chemistry-2/",
-  "latest_published_at": "2026-06-06T20:35:27+00:00",
-  "latest_title": "Tiny X-ray telescope could unlock the Moon's hidden chemistry",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/07/google-photos-is-working-to-streamline-copying-and-pasting-images-into-other-apps/",
+  "latest_published_at": "2026-06-07T08:36:34+00:00",
+  "latest_title": "Google Photos is working to streamline copying and pasting images into other apps",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
