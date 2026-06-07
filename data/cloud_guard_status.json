@@ -1,35 +1,38 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 37,
-      "created_at": "2026-06-07T19:24:28Z",
+      "age_minutes": 61,
+      "created_at": "2026-06-07T22:45:02Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27102386112",
-      "id": 27102386112,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27107092469",
+      "id": 27107092469,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-07T20:02:10.132651+00:00",
+  "finished_at": "2026-06-07T23:46:21.197190+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 37,
-      "created_at": "2026-06-07T19:24:28Z",
+      "age_minutes": 61,
+      "created_at": "2026-06-07T22:45:02Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27102386112",
-      "id": 27102386112,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27107092469",
+      "id": 27107092469,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 11,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/07/lunar-orbiter-concept-could-reveal-five-key-elements-across-moon-in-two/",
-  "latest_published_at": "2026-06-07T19:50:34+00:00",
-  "latest_title": "Lunar orbiter concept could reveal five key elements across moon in two",
+  "latest_age_minutes": 133,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/07/could-the-milky-way-s-missing-mass-be-hiding-in-a-swarm/",
+  "latest_published_at": "2026-06-07T21:33:03+00:00",
+  "latest_title": "Could the Milky Way's missing mass be hiding in a swarm",
   "main_run_stale_minutes": 95,
-  "message": "Latest post is fresh; rescue did not publish.",
+  "message": "Rescue guard ran the stale-feed publisher.",
+  "publisher_returncode": 0,
+  "publisher_stderr": "",
+  "publisher_stdout": "Fetching 34 enabled feeds...\nFetched 2019 items; 0 new.\nNo usable multi-source clusters found.\n",
   "rescue_emergency_stale_minutes": 90,
   "rescue_force_stale_minutes": 50,
   "rescue_stale_minutes": 35,
-  "state": "fresh"
+  "state": "publisher_succeeded"
 }
