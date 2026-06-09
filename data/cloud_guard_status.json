@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 8,
-      "created_at": "2026-06-08T21:18:11Z",
+      "age_minutes": 14,
+      "created_at": "2026-06-09T10:29:12Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27167575341",
-      "id": 27167575341,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27200070453",
+      "id": 27200070453,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-08T21:26:58.461924+00:00",
+  "finished_at": "2026-06-09T10:43:39.665419+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 8,
-      "created_at": "2026-06-08T21:18:11Z",
+      "age_minutes": 14,
+      "created_at": "2026-06-09T10:29:12Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27167575341",
-      "id": 27167575341,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27200070453",
+      "id": 27200070453,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 13,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/08/organic-transistor-unites-memory/",
-  "latest_published_at": "2026-06-08T21:13:09+00:00",
-  "latest_title": "Organic transistor unites memory",
+  "latest_age_minutes": 19,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/09/visionos-27-gains-new-icelandic-environment-called-th-rsm-rk/",
+  "latest_published_at": "2026-06-09T10:24:09+00:00",
+  "latest_title": "visionOS 27 Gains New Icelandic Environment Called 'Th\u00f3rsm\u00f6rk'",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
