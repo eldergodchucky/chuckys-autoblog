@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 11,
-      "created_at": "2026-06-12T11:40:43Z",
+      "age_minutes": 7,
+      "created_at": "2026-06-12T19:24:53Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27413394631",
-      "id": 27413394631,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27437981961",
+      "id": 27437981961,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-12T11:51:56.851659+00:00",
+  "finished_at": "2026-06-12T19:32:33.125580+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 11,
-      "created_at": "2026-06-12T11:40:43Z",
+      "age_minutes": 7,
+      "created_at": "2026-06-12T19:24:53Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27413394631",
-      "id": 27413394631,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27437981961",
+      "id": 27437981961,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 11,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/12/apple-says-siri-ai-won-t-suck-up/",
-  "latest_published_at": "2026-06-12T11:40:39+00:00",
-  "latest_title": "Apple says Siri AI won't suck up",
+  "latest_age_minutes": 12,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/12/spacex-ipo-set-for-liftoff-in-record-market-debut/",
+  "latest_published_at": "2026-06-12T19:19:49+00:00",
+  "latest_title": "SpaceX IPO set for liftoff in record market debut",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
