@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 1,
-      "created_at": "2026-06-13T15:18:18Z",
+      "age_minutes": 23,
+      "created_at": "2026-06-13T19:44:51Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27470697043",
-      "id": 27470697043,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27477148834",
+      "id": 27477148834,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-13T15:19:19.169110+00:00",
+  "finished_at": "2026-06-13T20:08:41.138006+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 1,
-      "created_at": "2026-06-13T15:18:18Z",
+      "age_minutes": 23,
+      "created_at": "2026-06-13T19:44:51Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27470697043",
-      "id": 27470697043,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27477148834",
+      "id": 27477148834,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 6,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/13/alien-planet-spins-revealed-a-hidden-clue-to-how-worlds-form/",
-  "latest_published_at": "2026-06-13T15:13:15+00:00",
-  "latest_title": "Alien planet spins revealed a hidden clue to how worlds form",
+  "latest_age_minutes": 7,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/13/tracers-spacecraft-maps-solar-energy-s-route-into-earth-using-cusp-electrons/",
+  "latest_published_at": "2026-06-13T20:00:51+00:00",
+  "latest_title": "TRACERS spacecraft maps solar energy's route into Earth using cusp electrons",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
