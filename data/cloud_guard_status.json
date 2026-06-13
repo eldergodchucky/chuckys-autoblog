@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 7,
-      "created_at": "2026-06-12T19:24:53Z",
+      "age_minutes": 1,
+      "created_at": "2026-06-13T15:18:18Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27437981961",
-      "id": 27437981961,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27470697043",
+      "id": 27470697043,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-12T19:32:33.125580+00:00",
+  "finished_at": "2026-06-13T15:19:19.169110+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 7,
-      "created_at": "2026-06-12T19:24:53Z",
+      "age_minutes": 1,
+      "created_at": "2026-06-13T15:18:18Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27437981961",
-      "id": 27437981961,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27470697043",
+      "id": 27470697043,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 12,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/12/spacex-ipo-set-for-liftoff-in-record-market-debut/",
-  "latest_published_at": "2026-06-12T19:19:49+00:00",
-  "latest_title": "SpaceX IPO set for liftoff in record market debut",
+  "latest_age_minutes": 6,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/13/alien-planet-spins-revealed-a-hidden-clue-to-how-worlds-form/",
+  "latest_published_at": "2026-06-13T15:13:15+00:00",
+  "latest_title": "Alien planet spins revealed a hidden clue to how worlds form",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
