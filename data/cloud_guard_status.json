@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 56,
-      "created_at": "2026-06-14T14:33:21Z",
+      "age_minutes": 17,
+      "created_at": "2026-06-14T20:06:03Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27502002646",
-      "id": 27502002646,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27510522844",
+      "id": 27510522844,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-14T15:29:47.195510+00:00",
+  "finished_at": "2026-06-14T20:23:30.752081+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 56,
-      "created_at": "2026-06-14T14:33:21Z",
+      "age_minutes": 17,
+      "created_at": "2026-06-14T20:06:03Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27502002646",
-      "id": 27502002646,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27510522844",
+      "id": 27510522844,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 23,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/14/scientists-found-a-surprising-problem-with-sugar-free-diets/",
-  "latest_published_at": "2026-06-14T15:05:55+00:00",
-  "latest_title": "Scientists found a surprising problem with sugar-free diets",
+  "latest_age_minutes": 11,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/14/eyes-on-exoplanets-tutorial-2/",
+  "latest_published_at": "2026-06-14T20:11:46+00:00",
+  "latest_title": "Eyes on Exoplanets Tutorial",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
