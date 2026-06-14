@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 23,
-      "created_at": "2026-06-13T19:44:51Z",
+      "age_minutes": 60,
+      "created_at": "2026-06-14T07:53:42Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27477148834",
-      "id": 27477148834,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27492481767",
+      "id": 27492481767,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-13T20:08:41.138006+00:00",
+  "finished_at": "2026-06-14T08:54:40.895033+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 23,
-      "created_at": "2026-06-13T19:44:51Z",
+      "age_minutes": 60,
+      "created_at": "2026-06-14T07:53:42Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27477148834",
-      "id": 27477148834,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27492481767",
+      "id": 27492481767,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 7,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/13/tracers-spacecraft-maps-solar-energy-s-route-into-earth-using-cusp-electrons/",
-  "latest_published_at": "2026-06-13T20:00:51+00:00",
-  "latest_title": "TRACERS spacecraft maps solar energy's route into Earth using cusp electrons",
+  "latest_age_minutes": 3,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/14/a-dying-star-could-create-a-new-universe-instead-of-a-black-hole/",
+  "latest_published_at": "2026-06-14T08:51:29+00:00",
+  "latest_title": "A dying star could create a new universe instead of a black hole",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
