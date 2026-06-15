@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 17,
-      "created_at": "2026-06-14T20:06:03Z",
+      "age_minutes": 27,
+      "created_at": "2026-06-15T15:55:46Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27510522844",
-      "id": 27510522844,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27558818670",
+      "id": 27558818670,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-14T20:23:30.752081+00:00",
+  "finished_at": "2026-06-15T16:23:01.018231+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 17,
-      "created_at": "2026-06-14T20:06:03Z",
+      "age_minutes": 27,
+      "created_at": "2026-06-15T15:55:46Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27510522844",
-      "id": 27510522844,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27558818670",
+      "id": 27558818670,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 11,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/14/eyes-on-exoplanets-tutorial-2/",
-  "latest_published_at": "2026-06-14T20:11:46+00:00",
-  "latest_title": "Eyes on Exoplanets Tutorial",
+  "latest_age_minutes": 1,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/15/administration-s-ai-security-order-acknowledges-risks-but-stops-short-of-regulat/",
+  "latest_published_at": "2026-06-15T16:21:51+00:00",
+  "latest_title": "AI is moving out of the theatre of \u2026",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
