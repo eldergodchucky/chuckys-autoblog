@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 27,
-      "created_at": "2026-06-15T15:55:46Z",
+      "age_minutes": 44,
+      "created_at": "2026-06-15T22:35:56Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27558818670",
-      "id": 27558818670,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27580930857",
+      "id": 27580930857,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-15T16:23:01.018231+00:00",
+  "finished_at": "2026-06-15T23:20:50.614554+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 27,
-      "created_at": "2026-06-15T15:55:46Z",
+      "age_minutes": 44,
+      "created_at": "2026-06-15T22:35:56Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27558818670",
-      "id": 27558818670,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27580930857",
+      "id": 27580930857,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 1,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/15/administration-s-ai-security-order-acknowledges-risks-but-stops-short-of-regulat/",
-  "latest_published_at": "2026-06-15T16:21:51+00:00",
-  "latest_title": "AI is moving out of the theatre of \u2026",
+  "latest_age_minutes": 4,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/16/liquid-cooling-technology-for-semiconductor-chips-is-10-times-more-efficient-tha/",
+  "latest_published_at": "2026-06-15T23:16:38+00:00",
+  "latest_title": "The important part of this research is not \u2026",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
