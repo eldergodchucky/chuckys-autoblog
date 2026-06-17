@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 61,
-      "created_at": "2026-06-16T22:51:16Z",
+      "age_minutes": 59,
+      "created_at": "2026-06-17T12:03:31Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27653362318",
-      "id": 27653362318,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27687537713",
+      "id": 27687537713,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-16T23:52:16.776860+00:00",
+  "finished_at": "2026-06-17T13:03:09.716870+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 61,
-      "created_at": "2026-06-16T22:51:16Z",
+      "age_minutes": 59,
+      "created_at": "2026-06-17T12:03:31Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27653362318",
-      "id": 27653362318,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27687537713",
+      "id": 27687537713,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 9,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/17/apple-home-adds-new-smart-lock-with-auto-unlock-that-s-hands-free/",
-  "latest_published_at": "2026-06-16T23:42:28+00:00",
-  "latest_title": "Apple Home adds new smart lock with auto-unlock that\u2019s hands-free",
+  "latest_age_minutes": 3,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/17/could-ai-tell-you-where-you-left-your-keys/",
+  "latest_published_at": "2026-06-17T13:00:01+00:00",
+  "latest_title": "Could AI tell you where you left your keys?",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
