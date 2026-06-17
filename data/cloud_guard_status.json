@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 115,
-      "created_at": "2026-06-17T18:42:33Z",
+      "age_minutes": 41,
+      "created_at": "2026-06-17T21:45:11Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27711690935",
-      "id": 27711690935,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27721781353",
+      "id": 27721781353,
       "status": "in_progress"
     }
   ],
-  "cancelled_stale_main_runs": [
+  "cancelled_stale_main_runs": [],
+  "finished_at": "2026-06-17T22:27:09.799048+00:00",
+  "fresh_main_runs": [
     {
-      "age_minutes": 115,
-      "created_at": "2026-06-17T18:42:33Z",
+      "age_minutes": 41,
+      "created_at": "2026-06-17T21:45:11Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27711690935",
-      "id": 27711690935,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27721781353",
+      "id": 27721781353,
       "status": "in_progress"
     }
   ],
-  "finished_at": "2026-06-17T20:38:29.384073+00:00",
-  "fresh_main_runs": [],
   "github_error": "",
-  "latest_age_minutes": 8,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/17/powerbeats-pro-2-available-for-199-95-low-price-2/",
-  "latest_published_at": "2026-06-17T20:29:38+00:00",
-  "latest_title": "Powerbeats Pro 2 Available for $199.95 Low Price",
+  "latest_age_minutes": 10,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/17/upsampling-method-sharpens-ai-vision-with-up-to-16-times-less-gpu/",
+  "latest_published_at": "2026-06-17T22:16:19+00:00",
+  "latest_title": "Upsampling method sharpens AI vision with up to 16 times less GPU",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
