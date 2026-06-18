@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 51,
-      "created_at": "2026-06-18T17:46:48Z",
-      "event": "schedule",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27778484148",
-      "id": 27778484148,
+      "age_minutes": 29,
+      "created_at": "2026-06-18T20:44:32Z",
+      "event": "workflow_dispatch",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27788177109",
+      "id": 27788177109,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-18T18:38:13.259026+00:00",
+  "finished_at": "2026-06-18T21:14:29.785555+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 51,
-      "created_at": "2026-06-18T17:46:48Z",
-      "event": "schedule",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27778484148",
-      "id": 27778484148,
+      "age_minutes": 29,
+      "created_at": "2026-06-18T20:44:32Z",
+      "event": "workflow_dispatch",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27788177109",
+      "id": 27788177109,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 11,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/18/spin-orbit-torque-hardware-creates-random-keys-and-reveals-unauthorized-access-a/",
-  "latest_published_at": "2026-06-18T18:27:02+00:00",
-  "latest_title": "Spin-orbit torque hardware creates random keys and reveals unauthorized access attempts",
+  "latest_age_minutes": 3,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/18/google-has-discontinued-the-nest-home-mini-and-nest-audio/",
+  "latest_published_at": "2026-06-18T21:10:34+00:00",
+  "latest_title": "Google has discontinued the Nest Home Mini and Nest Audio",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
