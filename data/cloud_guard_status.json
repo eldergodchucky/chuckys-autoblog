@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 38,
-      "created_at": "2026-06-18T08:44:00Z",
+      "age_minutes": 35,
+      "created_at": "2026-06-18T12:03:01Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27747681245",
-      "id": 27747681245,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27758071341",
+      "id": 27758071341,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-18T09:22:27.619228+00:00",
+  "finished_at": "2026-06-18T12:38:52.913120+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 38,
-      "created_at": "2026-06-18T08:44:00Z",
+      "age_minutes": 35,
+      "created_at": "2026-06-18T12:03:01Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27747681245",
-      "id": 27747681245,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27758071341",
+      "id": 27758071341,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 12,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/18/apple-reportedly-considering-price-hikes-as-memory-prices-surge/",
-  "latest_published_at": "2026-06-18T09:09:48+00:00",
-  "latest_title": "Apple reportedly considering price hikes as memory prices surge",
+  "latest_age_minutes": 4,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/18/macos-27-golden-gate-kills-time-capsule-support/",
+  "latest_published_at": "2026-06-18T12:33:57+00:00",
+  "latest_title": "macOS 27 Golden Gate Kills Time Capsule Support",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
