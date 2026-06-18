@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 35,
-      "created_at": "2026-06-18T12:03:01Z",
-      "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27758071341",
-      "id": 27758071341,
+      "age_minutes": 118,
+      "created_at": "2026-06-18T14:20:38Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27766101396",
+      "id": 27766101396,
       "status": "in_progress"
     }
   ],
-  "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-18T12:38:52.913120+00:00",
-  "fresh_main_runs": [
+  "cancelled_stale_main_runs": [
     {
-      "age_minutes": 35,
-      "created_at": "2026-06-18T12:03:01Z",
-      "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27758071341",
-      "id": 27758071341,
+      "age_minutes": 118,
+      "created_at": "2026-06-18T14:20:38Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27766101396",
+      "id": 27766101396,
       "status": "in_progress"
     }
   ],
+  "finished_at": "2026-06-18T16:18:56.675777+00:00",
+  "fresh_main_runs": [],
   "github_error": "",
-  "latest_age_minutes": 4,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/18/macos-27-golden-gate-kills-time-capsule-support/",
-  "latest_published_at": "2026-06-18T12:33:57+00:00",
-  "latest_title": "macOS 27 Golden Gate Kills Time Capsule Support",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/18/apple-announces-major-app-store-changes-for-brazil-2/",
+  "latest_published_at": "2026-06-18T16:18:45+00:00",
+  "latest_title": "Apple announces major App Store changes for Brazil",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
