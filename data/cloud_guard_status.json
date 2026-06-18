@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 1,
-      "created_at": "2026-06-17T23:58:06Z",
+      "age_minutes": 32,
+      "created_at": "2026-06-18T04:21:06Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27727469984",
-      "id": 27727469984,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27736490910",
+      "id": 27736490910,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-17T23:59:20.382965+00:00",
+  "finished_at": "2026-06-18T04:53:33.605701+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 1,
-      "created_at": "2026-06-17T23:58:06Z",
+      "age_minutes": 32,
+      "created_at": "2026-06-18T04:21:06Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27727469984",
-      "id": 27727469984,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27736490910",
+      "id": 27736490910,
       "status": "in_progress"
     }
   ],
   "github_error": "",
   "latest_age_minutes": 1,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/18/apple-s-webkit-rules-reportedly-cost-ios-users-almost-30-browser-performance/",
-  "latest_published_at": "2026-06-17T23:58:05+00:00",
-  "latest_title": "Apple's WebKit Rules Reportedly Cost iOS Users Almost 30% Browser Performance",
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/18/2026-frikkin-lasers-contest-steampunk-360-o-scope-does-it-with-tubes/",
+  "latest_published_at": "2026-06-18T04:51:43+00:00",
+  "latest_title": "2026 Frikkin Lasers Contest: Steampunk, 360 O-Scope Does it with Tubes",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
