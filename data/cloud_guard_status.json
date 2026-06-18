@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 118,
-      "created_at": "2026-06-18T14:20:38Z",
+      "age_minutes": 51,
+      "created_at": "2026-06-18T17:46:48Z",
       "event": "schedule",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27766101396",
-      "id": 27766101396,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27778484148",
+      "id": 27778484148,
       "status": "in_progress"
     }
   ],
-  "cancelled_stale_main_runs": [
+  "cancelled_stale_main_runs": [],
+  "finished_at": "2026-06-18T18:38:13.259026+00:00",
+  "fresh_main_runs": [
     {
-      "age_minutes": 118,
-      "created_at": "2026-06-18T14:20:38Z",
+      "age_minutes": 51,
+      "created_at": "2026-06-18T17:46:48Z",
       "event": "schedule",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27766101396",
-      "id": 27766101396,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27778484148",
+      "id": 27778484148,
       "status": "in_progress"
     }
   ],
-  "finished_at": "2026-06-18T16:18:56.675777+00:00",
-  "fresh_main_runs": [],
   "github_error": "",
-  "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/18/apple-announces-major-app-store-changes-for-brazil-2/",
-  "latest_published_at": "2026-06-18T16:18:45+00:00",
-  "latest_title": "Apple announces major App Store changes for Brazil",
+  "latest_age_minutes": 11,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/18/spin-orbit-torque-hardware-creates-random-keys-and-reveals-unauthorized-access-a/",
+  "latest_published_at": "2026-06-18T18:27:02+00:00",
+  "latest_title": "Spin-orbit torque hardware creates random keys and reveals unauthorized access attempts",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
