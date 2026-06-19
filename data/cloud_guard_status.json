@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 8,
-      "created_at": "2026-06-19T15:28:23Z",
+      "age_minutes": 58,
+      "created_at": "2026-06-19T16:34:38Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27834544269",
-      "id": 27834544269,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27837594569",
+      "id": 27837594569,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-19T15:37:14.392711+00:00",
+  "finished_at": "2026-06-19T17:32:45.570112+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 8,
-      "created_at": "2026-06-19T15:28:23Z",
+      "age_minutes": 58,
+      "created_at": "2026-06-19T16:34:38Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27834544269",
-      "id": 27834544269,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27837594569",
+      "id": 27837594569,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 8,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/19/desert-field-test-with-nasa-advanced-rover-prototype-2/",
-  "latest_published_at": "2026-06-19T15:28:21+00:00",
-  "latest_title": "Desert field test with NASA advanced rover prototype",
+  "latest_age_minutes": 1,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/19/alpha-magnetic-spectrometer-reveals-four-cosmic-ray-classes-across-20-elements/",
+  "latest_published_at": "2026-06-19T17:30:51+00:00",
+  "latest_title": "Alpha Magnetic Spectrometer reveals four cosmic ray classes across 20 elements",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
