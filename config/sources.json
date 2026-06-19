@@ -1,12 +1,13 @@
 {
   "source_policy": {
-    "purpose": "Use high-quality RSS feeds as discovery signals for original, cited WordPress posts about science breakthroughs, space, phones, iPhone/iOS, Android, gadgets, AI, software/apps, innovation, tutorials, security, DIY, and practical hacks.",
+    "purpose": "Use high-quality RSS feeds as discovery signals for original, cited WordPress posts about science breakthroughs, space, phones, iPhone/iOS, Android, gadgets, AI, software/apps, innovation, tutorials, security, DIY, practical hacks, health research, medical breakthroughs, nutrition, fitness, mental health, and wellness.",
     "rules": [
       "Create original synthesis from multiple sources; do not republish or lightly spin feed text.",
       "Use source titles, summaries, dates, and links as inputs unless the source explicitly allows broader reuse.",
       "Use natural inline attribution with visible source links where the reporting comes from outside sources.",
       "Skip paywalled, single-source, thin, or duplicate stories.",
-      "If a source's RSS terms are restrictive, use it only as a topic alert or disable it until reviewed."
+      "If a source's RSS terms are restrictive, use it only as a topic alert or disable it until reviewed.",
+      "Health and medical content requires extra scrutiny: verify claims, cite peer-reviewed sources when possible, and include appropriate disclaimers."
     ]
   },
   "feeds": [
@@ -247,6 +248,154 @@
       "category": "security",
       "quality": 5,
       "enabled": true
+    },
+    {
+      "name": "ScienceDaily Health & Medicine",
+      "url": "https://www.sciencedaily.com/rss/health_medicine.xml",
+      "category": "health",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "BioMed Central Medicine",
+      "url": "https://bmcmedcollect.biomedcentral.com/articles/most-recent/rss.xml",
+      "category": "health",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "NEJM Today",
+      "url": "https://www.nejm.org/action/showFeed?jc=nejm&type=etoc",
+      "category": "health",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Nature Health Sciences",
+      "url": "https://www.nature.com/subjects/health-sciences.rss",
+      "category": "health",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Harvard Health Publishing",
+      "url": "https://www.health.harvard.edu/blog/feed/",
+      "category": "health",
+      "quality": 5,
+      "enabled": false,
+      "notes": "Returns 404 Not Found - URL may have changed"
+    },
+    {
+      "name": "Mayo Clinic News",
+      "url": "https://newsnetwork.mayoclinic.org/feed/",
+      "category": "health",
+      "quality": 5,
+      "enabled": false,
+      "notes": "Returns 403 Forbidden - may require authentication"
+    },
+    {
+      "name": "CDC Health Topics",
+      "url": "https://www.cdc.gov/rss.xml",
+      "category": "health",
+      "quality": 5,
+      "enabled": false,
+      "notes": "Returns 404 Not Found - URL may have changed"
+    },
+    {
+      "name": "WHO News",
+      "url": "https://www.who.int/feeds/entity/covid-19/don/situation-reports/en/rss.xml",
+      "category": "health",
+      "quality": 5,
+      "enabled": false,
+      "notes": "Returns 404 Not Found - URL may have changed"
+    },
+    {
+      "name": "NIH News Releases",
+      "url": "https://www.nih.gov/news-events/news-releases/rss",
+      "category": "health",
+      "quality": 5,
+      "enabled": false,
+      "notes": "Returns 404 Not Found - URL may have changed"
+    },
+    {
+      "name": "WebMD Health News",
+      "url": "https://www.webmd.com/rss/default.aspx",
+      "category": "health",
+      "quality": 4,
+      "enabled": false,
+      "notes": "Returns 404 Not Found - URL may have changed"
+    },
+    {
+      "name": "Medical News Today",
+      "url": "https://www.medicalnewstoday.com/rss.xml",
+      "category": "health",
+      "quality": 4,
+      "enabled": false,
+      "notes": "Returns 403 Forbidden - may require authentication"
+    },
+    {
+      "name": "Healthline News",
+      "url": "https://www.healthline.com/health-news/rss.xml",
+      "category": "health",
+      "quality": 4,
+      "enabled": false,
+      "notes": "Returns 403 Forbidden - may require authentication"
+    },
+    {
+      "name": "JAMA Network News",
+      "url": "https://jamanetwork.com/rss/news.xml",
+      "category": "health",
+      "quality": 5,
+      "enabled": false,
+      "notes": "Returns 404 Not Found - URL may have changed"
+    },
+    {
+      "name": "PubMed Health",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/rss/nihms/",
+      "category": "health",
+      "quality": 5,
+      "enabled": false,
+      "notes": "Returns 404 Not Found - URL may have changed"
+    },
+    {
+      "name": "NIH Research Matters",
+      "url": "https://nih.gov/news-releases/news-releases/rss.xml",
+      "category": "health",
+      "quality": 5,
+      "enabled": false,
+      "notes": "Returns 404 Not Found - URL may have changed"
+    },
+    {
+      "name": "FDA News",
+      "url": "https://www.fda.gov/about-fda/contact-fda/rss-feeds",
+      "category": "health",
+      "quality": 5,
+      "enabled": false,
+      "notes": "SSL certificate verification failed - may need proper SSL configuration"
+    },
+    {
+      "name": "Medscape Medical News",
+      "url": "https://www.medscape.com/viewarticle/rss",
+      "category": "health",
+      "quality": 4,
+      "enabled": false,
+      "notes": "XML parsing error - feed format may have changed"
+    },
+    {
+      "name": "Reuters Health News",
+      "url": "https://www.reuters.com/news/health/rss",
+      "category": "health",
+      "quality": 5,
+      "enabled": false,
+      "notes": "HTTP 401 Forbidden - may require authentication"
+    },
+    {
+      "name": "CNN Health",
+      "url": "https://www.cnn.com/health/rss.xml",
+      "category": "health",
+      "quality": 4,
+      "enabled": false,
+      "notes": "SSL certificate verification failed"
     },
     {
       "name": "TechCrunch",

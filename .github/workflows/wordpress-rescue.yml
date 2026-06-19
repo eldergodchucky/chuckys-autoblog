@@ -41,13 +41,13 @@ jobs:
       MIN_SOURCES_PER_POST: "2"
       REQUEST_TIMEOUT_SECONDS: "25"
       RUN_LOCK_STALE_SECONDS: "1800"
-      TOPIC_FOCUS_KEYWORDS: science,scientists,research,researchers,breakthrough,discovery,experiment,study,physics,biology,chemistry,climate,energy,robotics,space,nasa,astronomy,planet,moon,mars,telescope,galaxy,phone,phones,iphone,ios,android,apple,samsung,pixel,gadget,gadgets,ai,artificial intelligence,software,apps,app,innovation
-      CATEGORY_ROTATION: science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks
-      CATEGORY_WEIGHTS: science=6,space=6,ai=6,gadgets=6,security=6,tutorials=6,hacks=6,phones=6,apple=6,android=6,software=6,tech=4
+      TOPIC_FOCUS_KEYWORDS: health,medicine,medical,disease,clinical,treatment,patients,nutrition,fitness,mental health,wellness,science,scientists,research,researchers,breakthrough,discovery,experiment,study,physics,biology,chemistry,climate,energy,robotics,space,nasa,astronomy,planet,moon,mars,telescope,galaxy,phone,phones,iphone,ios,android,apple,samsung,pixel,gadget,gadgets,ai,artificial intelligence,software,apps,app,innovation
+      CATEGORY_ROTATION: health,science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks
+      CATEGORY_WEIGHTS: health=7,science=6,space=6,ai=6,gadgets=6,security=6,tutorials=6,hacks=6,phones=6,apple=6,android=6,software=6,tech=4
       RECENT_CATEGORY_WINDOW: "8"
       RECENT_CATEGORY_PENALTY: "4"
       ALLOW_SINGLE_SOURCE_PRIORITY_POSTS: "true"
-      SINGLE_SOURCE_PRIORITY_CATEGORIES: science,space
+      SINGLE_SOURCE_PRIORITY_CATEGORIES: health,science,space
       SINGLE_SOURCE_MIN_QUALITY: "4"
       WP_CREATE_TERMS: "false"
       BLOCKLIST_DOMAINS: ""

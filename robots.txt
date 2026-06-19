@@ -1,0 +1,61 @@
+# robots.txt for WordPress Blog
+# This file guides search engine crawlers on how to index your site
+
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the entire site
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-content/cache/
+Disallow: /wp-content/uploads/
+Disallow: /author/
+Disallow: /category/
+Disallow: /tag/
+Disallow: /read/
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+
+# Allow important paths
+Allow: /wp-content/uploads/
+Allow: /feed/$
+Allow: /feed/atom/$
+
+# Sitemap location
+Sitemap: https://chuckyscarnage.tech.blog/sitemap.xml
+
+# Crawl-delay (optional - remove if you want faster crawling)
+# Crawl-delay: 1
+
+# Specific search engine instructions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Block unwanted bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

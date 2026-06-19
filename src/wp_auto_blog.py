@@ -659,16 +659,22 @@ def category_weights() -> dict[str, int]:
             "apple": 6,
             "android": 6,
             "software": 6,
+            "health": 7,
             "tech": 4,
         },
     )
 
 
 def category_rotation() -> list[str]:
-    return env_list(
+    rotation = env_list(
         "CATEGORY_ROTATION",
-        "science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks",
+        "health,science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks",
     )
+    # Ensure health is always first if present
+    if "health" in rotation and rotation[0] != "health":
+        rotation.remove("health")
+        rotation.insert(0, "health")
+    return rotation
 
 
 def cluster_categories(cluster: list[Item]) -> list[str]:
@@ -771,32 +777,55 @@ def build_generation_prompt(cluster: list[Item]) -> str:
         )
 
     return f"""
-Write one original WordPress blog post for a tech, science, gadgets, tutorials, and hacks blog.
+Write one original, comprehensive WordPress blog post for a professional blog covering technology, science, health research, gadgets, tutorials, and practical insights.
 
-Use the source briefs below as reporting inputs. Do not copy or lightly paraphrase source text. Synthesize the shared theme, add context, explain why it matters, and keep claims tied to the sources. Include practical takeaways where relevant.
+Use the source briefs below as reporting inputs. Do not copy or lightly paraphrase source text. Synthesize the shared theme, add substantial context, explain why it matters deeply, and keep claims tied to the sources. Include practical takeaways, expert perspectives, and future implications where relevant.
 
 Editorial voice:
-- Write in a premium editorial-news voice: concise, analytical, skeptical, confident, and polished.
-- Do not imitate any named publication directly. Use the broad traits of high-end analysis: a strong thesis, clean sentences, restrained wit, and clear judgement.
+- Write in a premium editorial-news voice: sophisticated, analytical, nuanced, authoritative, and polished.
+- Do not imitate any named publication directly. Use the broad traits of high-end analysis: a strong thesis, elegant sentences, measured judgment, and deep insight.
 - Avoid blog filler such as "this is worth watching", "points to", "the headline is only the start", and repeated source-list phrasing.
-- Make the article feel authored by a serious editor, not assembled from feeds.
-- Prefer argument and consequence over hype. Explain trade-offs, incentives, limits, and second-order effects.
+- Make the article feel authored by a serious subject-matter expert, not assembled from feeds.
+- Prefer argument and consequence over hype. Explain trade-offs, incentives, limitations, second-order effects, and long-term implications.
+- For health and medical topics: include appropriate disclaimers, distinguish between correlation and causation, cite peer-reviewed research when available, and emphasize that content is for informational purposes only.
+- Write with elaborative depth: explore multiple angles, provide historical context, explain technical concepts clearly, and discuss practical applications.
+- Maintain professional objectivity while making complex topics accessible to educated readers.
 
 Return valid JSON only with these keys:
-- title: string
+- title: string (compelling, professional headline)
 - slug: lowercase URL slug
-- excerpt: one short string
+- excerpt: comprehensive 2-3 sentence summary
 - categories: array of 1-3 broad category names
-- tags: array of 5-8 concise tags
+- tags: array of 8-12 specific, relevant tags
 - html: WordPress-ready HTML string
+- meta_description: string (155-160 characters for SEO)
+- focus_keyword: string (primary SEO keyword)
 
 HTML requirements:
-- 650 to 950 words.
-- Use h2 headings.
-- Include a short "Why it matters" section.
-- Include a short "What to watch next" section.
+- 1000 to 1500 words for comprehensive coverage.
+- Use h2 and h3 headings for clear structure.
+- Include a substantial "Why it matters" section with deep analysis.
+- Include a "Key insights" section with bullet points.
+- Include a "Practical implications" section.
+- Include a "What to watch next" section.
+- Include an "Expert perspective" section where relevant.
 - Use natural inline attribution when needed; do not add a source-list section.
 - Do not include scripts, iframes, tracking pixels, or affiliate links.
+- For health content, include appropriate medical disclaimer at the end.
+
+Structure the article with:
+1. Compelling introduction that sets context and stakes
+2. Deep analysis of the topic with multiple perspectives
+3. Technical or scientific details explained clearly
+4. Practical implications for readers
+5. Expert insights and future outlook
+6. Clear, actionable takeaways
+
+SEO requirements:
+- Include the focus keyword naturally in the title, first paragraph, and at least one subheading
+- Write meta_description that includes the focus keyword and summarizes the article's value
+- Use semantic HTML with proper heading hierarchy
+- Include relevant internal linking opportunities
 
 Sources:
 
@@ -868,10 +897,29 @@ def parse_article_json(text: str) -> dict[str, Any]:
         raise RuntimeError("Generated article was not JSON.")
     article = json.loads(match.group(0))
     required = {"title", "slug", "excerpt", "categories", "tags", "html"}
+    optional = {"meta_description", "focus_keyword"}
     missing = required - set(article)
     if missing:
         raise RuntimeError(f"Generated article missing keys: {', '.join(sorted(missing))}")
+    # Add optional fields with defaults if missing
+    if "meta_description" not in article:
+        article["meta_description"] = article["excerpt"][:155]
+    if "focus_keyword" not in article:
+        article["focus_keyword"] = top_keywords_from_text(article["title"] + " " + article["excerpt"], 1)[0] if article.get("excerpt") else "technology"
     return article
+
+
+def top_keywords_from_text(text: str, limit: int = 5) -> list[str]:
+    text_lower = text.lower()
+    tokens = re.findall(r"[a-z][a-z0-9]{2,}", text_lower)
+    counts: dict[str, int] = {}
+    for token in tokens:
+        if token not in STOPWORDS and len(token) > 2:
+            counts[token] = counts.get(token, 0) + 1
+    return [
+        token
+        for token, _count in sorted(counts.items(), key=lambda entry: (-entry[1], entry[0]))[:limit]
+    ]
 
 
 def top_keywords(cluster: list[Item], limit: int = 5) -> list[str]:
@@ -1212,6 +1260,8 @@ def create_hero_image(title: str, keywords: list[str], categories: list[str], so
 
 def category_takeaway(categories: set[str]) -> str:
     notes = []
+    if "health" in categories:
+        notes.append("health research and medical news can influence personal decisions, public policy, and future treatment options, though readers should always consult healthcare professionals for medical advice")
     if "phones" in categories:
         notes.append("phone news can shape upgrade timing, buying choices, app support, and how long older devices stay useful")
     if "apple" in categories:
@@ -1240,6 +1290,7 @@ def category_takeaway(categories: set[str]) -> str:
 
 def category_reader_angle(category: str) -> str:
     angles = {
+        "health": "health and medical news should be read with careful attention to source credibility, peer-reviewed evidence, and appropriate disclaimers; readers should consult healthcare professionals before making medical decisions based on news reports",
         "phones": "buyers should watch upgrade timing, carrier availability, battery claims, camera changes, software support, and whether the news affects current devices",
         "apple": "iPhone, iPad, Mac, and iOS users should watch compatibility, rollout timing, app support, and whether the change is limited to newer hardware",
         "android": "Android users should watch device support, manufacturer rollout schedules, app compatibility, privacy controls, and whether features arrive through system updates or apps",
@@ -1271,6 +1322,7 @@ def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> li
         return clean in haystack
 
     checks = [
+        ("health", ("health", "medical", "medicine", "doctor", "hospital", "patient", "treatment", "disease", "virus", "vaccine", "clinical", "drug", "pharmaceutical", "nutrition", "fitness", "mental health", "wellness", "cancer", "diabetes", "heart", "blood pressure", "cholesterol", "obesity", "exercise", "diet", "supplement", "therapy", "symptom", "diagnosis", "cdc", "who", "nih", "fda", "harvard health", "mayo clinic", "webmd", "healthline")),
         ("ai", ("chatgpt", "openai", "artificial intelligence", "ai", "gemini", "ai model", "llm", "assistant", "chatbot")),
         ("apple", ("iphone", "ios", "airpods", "apple", "ipad", "mac")),
         ("android", ("android", "pixel", "samsung", "googlebook")),
@@ -1288,6 +1340,8 @@ def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> li
     if inferred:
         if inferred == ["ai"]:
             inferred.append("software")
+        if inferred == ["health"]:
+            inferred.append("science")
         return inferred[:3]
     for item in cluster:
         if item.source_category not in inferred:
@@ -2026,7 +2080,7 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
 
 def free_article(cluster: list[Item]) -> dict[str, Any]:
     lead = cluster[0]
-    keywords = top_keywords(cluster, 6)
+    keywords = top_keywords(cluster, 8)
     topic = topic_from_cluster(cluster)
     categories = story_categories(cluster, topic, keywords)
     source_count = len({item.source_name for item in cluster})
@@ -2034,6 +2088,9 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
     source_image_urls = source_image_candidates(cluster)
     hero_path = create_hero_image(title, keywords, categories, source_image_urls)
     lead_text = professional_lead(topic, categories, story_text(cluster))
+    text = story_text(cluster)
+    kind = story_kind(categories, text)
+
     image_block = ""
     if hero_path:
         image_block = f"""
@@ -2041,22 +2098,109 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 <img src="{HERO_IMAGE_PLACEHOLDER}" alt="{html.escape(title)} illustration">
 </figure>
 """.strip()
+
+    # Enhanced professional sections
+    headings = section_titles(categories, text)
+    angle = professional_angle(topic, categories, text)
+    takeaway = category_takeaway(set(categories))
+    practical_focus = {
+        "phones": "Anyone thinking about upgrading should watch pricing, trade-in value, camera claims, battery life, storage options, and how many years of updates the device is likely to receive.",
+        "apple": "Apple users should watch whether the change is global or market-specific, whether it affects older hardware, and whether it hints at pressure around the next product cycle.",
+        "android": "Android users should watch device support, manufacturer rollout timing, app compatibility, and whether features arrive through system updates, Play services, or individual apps.",
+        "ai": "For AI stories, the test is whether the feature is genuinely useful, accurate enough to trust, private enough to use, and affordable enough to keep.",
+        "gadgets": "For gadgets, the key is whether the product solves a real daily problem or simply adds another spec that looks good on a marketing page.",
+        "autonomous": "For robotaxis, the thing to watch is boring reliability: fewer interventions, clearer safety reporting, and performance that improves outside ideal demo conditions.",
+        "space": "For space stories, the key is what the mission or observation makes possible next: new data, new experiments, better hardware, or a stronger foundation for future exploration.",
+        "science": "For science and space stories, the practical value is in what the discovery, mission, or experiment could make possible next.",
+        "health": "For health and medical stories, readers should watch whether findings are peer-reviewed, whether results are replicated, and how the research might influence treatment options or public policy, while always consulting healthcare professionals for medical advice.",
+        "software": "For software, watch whether the change is optional, forced, free, subscription-based, or tied to a specific device or operating system.",
+    }
+    practical = practical_focus.get(kind) or practical_focus.get(categories[0] if categories else "tech", "The practical move is to watch what changes for real users, real devices, and real workflows.")
+
+    # Key insights section
+    key_insights = extracted_details(cluster)
+    key_insights_html = ""
+    if key_insights:
+        key_insights_html = "\n".join(f"<li>{html.escape(insight)}</li>" for insight in key_insights[:6])
+
+    # Expert perspective
+    expert_perspective = editorial_nut_graph(categories, text)
+
+    # Medical disclaimer for health content
+    medical_disclaimer = ""
+    if "health" in categories or kind == "health":
+        medical_disclaimer = """
+<blockquote><p><strong>Medical Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult with qualified healthcare professionals for medical decisions and treatment options.</p></blockquote>
+""".strip()
+
+    # Watch items based on category
+    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
+        watch_items = [
+            "whether crash and intervention data improves over time",
+            "how often human safety monitors are involved",
+            "what regulators require before wider deployment",
+            "whether riders and pedestrians trust the service in ordinary traffic",
+        ]
+    elif "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply")):
+        watch_items = [
+            "which experiments NASA highlights after the payload is unpacked",
+            "early research updates from the space station crew or mission teams",
+            "whether the work supports medicine, materials, robotics, life-support, or exploration",
+            "follow-up results that show what changed after testing in orbit",
+        ]
+    elif "health" in categories or kind == "health":
+        watch_items = [
+            "peer review and replication of the findings in other studies",
+            "clinical trials that could translate research into treatments",
+            "guidelines from health organizations like CDC, WHO, or NIH",
+            "consultation with healthcare providers before making health decisions",
+        ]
+    elif "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery")):
+        watch_items = [
+            "peer review, replication, or follow-up research from other teams",
+            "whether the method moves from lab testing into real-world systems",
+            "which industries, tools, or public problems the work could eventually affect",
+            "clear explanations of limits, uncertainty, and what still needs proof",
+        ]
+    else:
+        watch_items = [
+            "official confirmation, changelogs, launch notes, or product pages",
+            "pricing, availability, and whether the change is limited to specific regions",
+            "device support, privacy terms, battery impact, subscriptions, or compatibility limits",
+            "hands-on reports that show whether the headline holds up in real use",
+        ]
+    watch_html = "\n".join(f"<li>{html.escape(item)}</li>" for item in watch_items)
+
+    # Generate meta description and focus keyword
+    focus_keyword = keywords[0] if keywords else "technology"
+    meta_description = f"Professional analysis on {topic.lower()}. {angle[:100]}..." if len(angle) > 100 else angle
+
     body = f"""
 {image_block}
 <p>{lead_text}</p>
-<p>{html.escape(editorial_nut_graph(categories, story_text(cluster)))}</p>
+<p>{html.escape(editorial_nut_graph(categories, text))}</p>
 <p>[more]</p>
 {full_article_sections(cluster, topic, categories, source_count)}
+<h2>Key Insights</h2>
+{f"<ul>{key_insights_html}</ul>" if key_insights_html else "<p>The key details to watch are how this development connects technical work to real-world impact and what changes once the story moves beyond announcement mode.</p>"}
+<h2>Expert Perspective</h2>
+<p>{html.escape(expert_perspective)}</p>
+<h2>Practical Implications</h2>
+<p>{html.escape(practical)}</p>
+{medical_disclaimer}
 """.strip()
+
     return {
         "title": title,
         "slug": slugify(topic),
-        "excerpt": f"A professional tech news analysis on {topic.lower()}, with context, reader impact, and what to watch next.",
+        "excerpt": f"A comprehensive professional analysis on {topic.lower()}, covering context, expert perspectives, practical implications, and what to watch next. This in-depth report explores multiple angles and provides actionable insights.",
         "categories": categories[:3],
-        "tags": sorted(set(categories + keywords))[:8],
+        "tags": sorted(set(categories + keywords))[:12],
         "html": body,
         "hero_image_path": str(hero_path) if hero_path else "",
         "hero_image_alt": f"{title} illustration",
+        "meta_description": meta_description[:160],
+        "focus_keyword": focus_keyword,
     }
 
 
