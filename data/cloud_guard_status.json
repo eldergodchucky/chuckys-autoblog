@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 14,
-      "created_at": "2026-06-18T22:57:26Z",
+      "age_minutes": 58,
+      "created_at": "2026-06-19T01:09:35Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27794418005",
-      "id": 27794418005,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27799182705",
+      "id": 27799182705,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-18T23:11:58.055335+00:00",
+  "finished_at": "2026-06-19T02:07:55.138420+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 14,
-      "created_at": "2026-06-18T22:57:26Z",
+      "age_minutes": 58,
+      "created_at": "2026-06-19T01:09:35Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27794418005",
-      "id": 27794418005,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27799182705",
+      "id": 27799182705,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 19,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/18/waymo-recalls-nearly-4/",
-  "latest_published_at": "2026-06-18T22:52:24+00:00",
-  "latest_title": "Waymo recalls nearly 4",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/19/new-unpatchable-exploit-targets-apple-devices-with-a12-and-a13-chips/",
+  "latest_published_at": "2026-06-19T02:07:24+00:00",
+  "latest_title": "New unpatchable exploit targets Apple devices with A12 and A13 chips",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
