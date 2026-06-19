@@ -4,7 +4,7 @@ This project fetches high-quality tech, science, gadget, security, tutorial, and
 
 The current focus rotates through science breakthroughs, space, AI, gadgets, phones, Android, Apple/iOS, software/apps, security, tutorials, and practical hacks so the blog does not get stuck in one lane.
 
-Health research is now included as a first-class lane. Health posts use extra source scrutiny, health-specific keywords, and a medical disclaimer so the blog can cover medical research without presenting it as personal medical advice. See `IMPROVEMENTS-SUMMARY.md` and `seo-guide.md` for the handoff notes from the SEO/content update.
+Health research is included as a normal rotation lane, with extra source scrutiny and a medical disclaimer when a health story is selected. It is not prioritized above the blog's science, space, AI, phone, gadget, software, security, tutorial, and hacks coverage. See `IMPROVEMENTS-SUMMARY.md` and `seo-guide.md` for the handoff notes from the SEO/content update.
 
 Key safety controls:
 

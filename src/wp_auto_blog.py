@@ -659,7 +659,7 @@ def category_weights() -> dict[str, int]:
             "apple": 6,
             "android": 6,
             "software": 6,
-            "health": 7,
+            "health": 6,
             "tech": 4,
         },
     )
@@ -668,12 +668,8 @@ def category_weights() -> dict[str, int]:
 def category_rotation() -> list[str]:
     rotation = env_list(
         "CATEGORY_ROTATION",
-        "health,science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks",
+        "science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks,health",
     )
-    # Ensure health is always first if present
-    if "health" in rotation and rotation[0] != "health":
-        rotation.remove("health")
-        rotation.insert(0, "health")
     return rotation
 
 
