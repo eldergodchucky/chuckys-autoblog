@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 53,
-      "created_at": "2026-06-19T06:38:23Z",
+      "age_minutes": 47,
+      "created_at": "2026-06-19T11:02:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27809902542",
-      "id": 27809902542,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27821870042",
+      "id": 27821870042,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-19T07:31:29.803774+00:00",
+  "finished_at": "2026-06-19T11:50:42.520278+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 53,
-      "created_at": "2026-06-19T06:38:23Z",
+      "age_minutes": 47,
+      "created_at": "2026-06-19T11:02:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27809902542",
-      "id": 27809902542,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27821870042",
+      "id": 27821870042,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 8,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/19/nasas-lucy-reveals-wobbling-peanut-shaped-asteroid/",
-  "latest_published_at": "2026-06-19T07:23:05+00:00",
-  "latest_title": "NASA\u2019s Lucy Reveals Wobbling, Peanut-Shaped Asteroid",
+  "latest_age_minutes": 7,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/19/nasa-mission-to-study-space-weather-impacts-of-earth-s-atmosphere/",
+  "latest_published_at": "2026-06-19T11:43:41+00:00",
+  "latest_title": "NASA mission to study space weather impacts of Earth's atmosphere",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
