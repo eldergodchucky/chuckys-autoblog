@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 47,
-      "created_at": "2026-06-19T11:02:50Z",
+      "age_minutes": 8,
+      "created_at": "2026-06-19T15:28:23Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27821870042",
-      "id": 27821870042,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27834544269",
+      "id": 27834544269,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-19T11:50:42.520278+00:00",
+  "finished_at": "2026-06-19T15:37:14.392711+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 47,
-      "created_at": "2026-06-19T11:02:50Z",
+      "age_minutes": 8,
+      "created_at": "2026-06-19T15:28:23Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27821870042",
-      "id": 27821870042,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27834544269",
+      "id": 27834544269,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 7,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/19/nasa-mission-to-study-space-weather-impacts-of-earth-s-atmosphere/",
-  "latest_published_at": "2026-06-19T11:43:41+00:00",
-  "latest_title": "NASA mission to study space weather impacts of Earth's atmosphere",
+  "latest_age_minutes": 8,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/19/desert-field-test-with-nasa-advanced-rover-prototype-2/",
+  "latest_published_at": "2026-06-19T15:28:21+00:00",
+  "latest_title": "Desert field test with NASA advanced rover prototype",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
