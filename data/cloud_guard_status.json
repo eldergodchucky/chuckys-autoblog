@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 29,
-      "created_at": "2026-06-19T18:47:08Z",
+      "age_minutes": 55,
+      "created_at": "2026-06-19T19:53:34Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27843049667",
-      "id": 27843049667,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27845651882",
+      "id": 27845651882,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-19T19:16:24.032978+00:00",
+  "finished_at": "2026-06-19T20:48:57.704410+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 29,
-      "created_at": "2026-06-19T18:47:08Z",
+      "age_minutes": 55,
+      "created_at": "2026-06-19T19:53:34Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27843049667",
-      "id": 27843049667,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27845651882",
+      "id": 27845651882,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 3,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/19/researchers-uncover-an-unpatchable-security-flaw-affecting-several-iphone-genera/",
-  "latest_published_at": "2026-06-19T19:12:59+00:00",
-  "latest_title": "Researchers uncover an unpatchable security flaw affecting several iPhone generations",
+  "latest_age_minutes": 14,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/19/ieee-rolls-out-large-language-models-virtual-training-course/",
+  "latest_published_at": "2026-06-19T20:34:21+00:00",
+  "latest_title": "IEEE Rolls Out Large Language Models Virtual Training Course",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
