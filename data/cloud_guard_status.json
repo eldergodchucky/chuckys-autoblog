@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 58,
-      "created_at": "2026-06-19T01:09:35Z",
+      "age_minutes": 53,
+      "created_at": "2026-06-19T06:38:23Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27799182705",
-      "id": 27799182705,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27809902542",
+      "id": 27809902542,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-19T02:07:55.138420+00:00",
+  "finished_at": "2026-06-19T07:31:29.803774+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 58,
-      "created_at": "2026-06-19T01:09:35Z",
+      "age_minutes": 53,
+      "created_at": "2026-06-19T06:38:23Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27799182705",
-      "id": 27799182705,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27809902542",
+      "id": 27809902542,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/19/new-unpatchable-exploit-targets-apple-devices-with-a12-and-a13-chips/",
-  "latest_published_at": "2026-06-19T02:07:24+00:00",
-  "latest_title": "New unpatchable exploit targets Apple devices with A12 and A13 chips",
+  "latest_age_minutes": 8,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/19/nasas-lucy-reveals-wobbling-peanut-shaped-asteroid/",
+  "latest_published_at": "2026-06-19T07:23:05+00:00",
+  "latest_title": "NASA\u2019s Lucy Reveals Wobbling, Peanut-Shaped Asteroid",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
