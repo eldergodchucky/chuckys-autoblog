@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 61,
-      "created_at": "2026-06-20T19:03:22Z",
+      "age_minutes": 22,
+      "created_at": "2026-06-20T21:16:09Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27880907186",
-      "id": 27880907186,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27884114219",
+      "id": 27884114219,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-20T20:05:17.488172+00:00",
+  "finished_at": "2026-06-20T21:38:19.033302+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 61,
-      "created_at": "2026-06-20T19:03:22Z",
+      "age_minutes": 22,
+      "created_at": "2026-06-20T21:16:09Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27880907186",
-      "id": 27880907186,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27884114219",
+      "id": 27884114219,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 10,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/20/sound-waves-could-power-a-new-kind-of-chip-inspired-by/",
-  "latest_published_at": "2026-06-20T19:54:30+00:00",
-  "latest_title": "Sound waves could power a new kind of chip inspired by",
+  "latest_age_minutes": 1,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/20/this-simple-twist-could-bring-quantum-computers-closer-to-reality/",
+  "latest_published_at": "2026-06-20T21:36:45+00:00",
+  "latest_title": "This simple twist could bring quantum computers closer to reality",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
