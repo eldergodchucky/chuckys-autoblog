@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 8,
-      "created_at": "2026-06-20T01:23:38Z",
+      "age_minutes": 12,
+      "created_at": "2026-06-20T05:47:16Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27855976638",
-      "id": 27855976638,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27861967677",
+      "id": 27861967677,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-20T01:32:00.550104+00:00",
+  "finished_at": "2026-06-20T05:59:22.331608+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 8,
-      "created_at": "2026-06-20T01:23:38Z",
+      "age_minutes": 12,
+      "created_at": "2026-06-20T05:47:16Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27855976638",
-      "id": 27855976638,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27861967677",
+      "id": 27861967677,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 2,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/20/wet-coffee-grounds-turned-into-high-grade-solid-fuel-in-just-90-seconds/",
-  "latest_published_at": "2026-06-20T01:29:11+00:00",
-  "latest_title": "Wet coffee grounds turned into high-grade solid fuel in just 90 seconds",
+  "latest_age_minutes": 8,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/20/t1-phone-saga-gets-stranger-as-pr-team-abandons-trump-mobile/",
+  "latest_published_at": "2026-06-20T05:51:04+00:00",
+  "latest_title": "T1 phone saga gets stranger as PR team abandons Trump Mobile",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
