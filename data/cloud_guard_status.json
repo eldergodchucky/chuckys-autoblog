@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 13,
-      "created_at": "2026-06-20T11:17:22Z",
+      "age_minutes": 44,
+      "created_at": "2026-06-20T12:24:01Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27869530722",
-      "id": 27869530722,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27871085059",
+      "id": 27871085059,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-20T11:31:04.410248+00:00",
+  "finished_at": "2026-06-20T13:08:01.924110+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 13,
-      "created_at": "2026-06-20T11:17:22Z",
+      "age_minutes": 44,
+      "created_at": "2026-06-20T12:24:01Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27869530722",
-      "id": 27869530722,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27871085059",
+      "id": 27871085059,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 8,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/20/long-gamma-ray-bursts-may-trace-collapsing-stars-rather-than-neutron-star-merger/",
-  "latest_published_at": "2026-06-20T11:22:58+00:00",
-  "latest_title": "Long gamma-ray bursts may trace collapsing stars rather than neutron-star mergers",
+  "latest_age_minutes": 1,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/20/bullet-cluster-observations-reopen-dark-matter-debate-with-mond-compatible-expla/",
+  "latest_published_at": "2026-06-20T13:06:09+00:00",
+  "latest_title": "Bullet Cluster observations reopen dark matter debate with MOND-compatible explanation",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
