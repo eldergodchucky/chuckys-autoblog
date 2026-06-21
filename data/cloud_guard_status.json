@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 7,
-      "created_at": "2026-06-21T22:37:53Z",
+      "age_minutes": 14,
+      "created_at": "2026-06-21T23:44:10Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27919715409",
-      "id": 27919715409,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27921297483",
+      "id": 27921297483,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-21T22:45:43.510336+00:00",
+  "finished_at": "2026-06-21T23:58:52.247457+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 7,
-      "created_at": "2026-06-21T22:37:53Z",
+      "age_minutes": 14,
+      "created_at": "2026-06-21T23:44:10Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27919715409",
-      "id": 27919715409,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27921297483",
+      "id": 27921297483,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 17,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/21/association-of-ideal-body-weight-normalized-post-transplantation-cyclophosphamid/",
-  "latest_published_at": "2026-06-21T22:27:49+00:00",
-  "latest_title": "Association of ideal body weight\u2013normalized post-transplantation cyclophosphamide dose with chronic GVHD",
+  "latest_age_minutes": 9,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/22/combined-aerobic-and-resistance-exercise-improves-glucose-metabolism-and-insulin/",
+  "latest_published_at": "2026-06-21T23:49:46+00:00",
+  "latest_title": "Combined aerobic and resistance exercise improves glucose metabolism and insulin resistance",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
