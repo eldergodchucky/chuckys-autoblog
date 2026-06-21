@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 49,
-      "created_at": "2026-06-21T17:06:09Z",
+      "age_minutes": 37,
+      "created_at": "2026-06-21T19:18:42Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27911470492",
-      "id": 27911470492,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27914797106",
+      "id": 27914797106,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-21T17:55:44.773634+00:00",
+  "finished_at": "2026-06-21T19:56:18.952156+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 49,
-      "created_at": "2026-06-21T17:06:09Z",
+      "age_minutes": 37,
+      "created_at": "2026-06-21T19:18:42Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27911470492",
-      "id": 27911470492,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27914797106",
+      "id": 27914797106,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 13,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/21/nasa-testing-advanced-capabilities-for-moon/",
-  "latest_published_at": "2026-06-21T17:41:56+00:00",
-  "latest_title": "NASA testing advanced capabilities for moon",
+  "latest_age_minutes": 11,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/21/characterization-of-gut-microbiome-signatures-in-metabolic-dysfunction-associate/",
+  "latest_published_at": "2026-06-21T19:44:38+00:00",
+  "latest_title": "Characterization of gut microbiome signatures in metabolic dysfunction associated steatotic liver disease",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
