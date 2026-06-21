@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 40,
-      "created_at": "2026-06-21T13:46:59Z",
+      "age_minutes": 16,
+      "created_at": "2026-06-21T15:59:41Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27906336646",
-      "id": 27906336646,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27909737621",
+      "id": 27909737621,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-21T14:27:58.279674+00:00",
+  "finished_at": "2026-06-21T16:16:11.121385+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 40,
-      "created_at": "2026-06-21T13:46:59Z",
+      "age_minutes": 16,
+      "created_at": "2026-06-21T15:59:41Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27906336646",
-      "id": 27906336646,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27909737621",
+      "id": 27909737621,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 10,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/21/if-aliens-landed-on-earth-tomorrow/",
-  "latest_published_at": "2026-06-21T14:17:45+00:00",
-  "latest_title": "If aliens landed on Earth tomorrow",
+  "latest_age_minutes": 16,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/21/long-lived-families-reveal-a-rare-genetic-clue-to-healthy-aging/",
+  "latest_published_at": "2026-06-21T15:59:39+00:00",
+  "latest_title": "Long-lived families reveal a rare genetic clue to healthy aging",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
