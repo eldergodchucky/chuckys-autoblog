@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 29,
-      "created_at": "2026-06-20T22:22:29Z",
+      "age_minutes": 48,
+      "created_at": "2026-06-20T23:28:55Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27885670953",
-      "id": 27885670953,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27887154947",
+      "id": 27887154947,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-20T22:51:50.740783+00:00",
+  "finished_at": "2026-06-21T00:17:18.703287+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 29,
-      "created_at": "2026-06-20T22:22:29Z",
+      "age_minutes": 48,
+      "created_at": "2026-06-20T23:28:55Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27885670953",
-      "id": 27885670953,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27887154947",
+      "id": 27887154947,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 13,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/20/a-single-cobalt-shock-could-trigger-global-ev-battery-supply-chaos/",
-  "latest_published_at": "2026-06-20T22:38:05+00:00",
-  "latest_title": "A single cobalt shock could trigger global EV battery supply chaos",
+  "latest_age_minutes": 10,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/21/apple-is-permanently-closing-three-stores-today-heres-the-list/",
+  "latest_published_at": "2026-06-21T00:06:21+00:00",
+  "latest_title": "Apple is permanently closing three stores today, here\u2019s the list",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
