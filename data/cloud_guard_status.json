@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 37,
-      "created_at": "2026-06-21T19:18:42Z",
+      "age_minutes": 57,
+      "created_at": "2026-06-21T20:25:28Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27914797106",
-      "id": 27914797106,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27916451712",
+      "id": 27916451712,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-21T19:56:18.952156+00:00",
+  "finished_at": "2026-06-21T21:23:27.850798+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 37,
-      "created_at": "2026-06-21T19:18:42Z",
+      "age_minutes": 57,
+      "created_at": "2026-06-21T20:25:28Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27914797106",
-      "id": 27914797106,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/27916451712",
+      "id": 27916451712,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 11,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/21/characterization-of-gut-microbiome-signatures-in-metabolic-dysfunction-associate/",
-  "latest_published_at": "2026-06-21T19:44:38+00:00",
-  "latest_title": "Characterization of gut microbiome signatures in metabolic dysfunction associated steatotic liver disease",
+  "latest_age_minutes": 17,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/21/time-to-resolution-of-veno-occlusive-disease-sinusoidal-obstruction-syndrome-pos/",
+  "latest_published_at": "2026-06-21T21:06:21+00:00",
+  "latest_title": "Time to resolution of veno-occlusive disease/sinusoidal obstruction syndrome post-HCT in defibrotide-treated",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
