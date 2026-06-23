@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 61,
-      "created_at": "2026-06-23T04:53:13Z",
+      "age_minutes": 62,
+      "created_at": "2026-06-23T18:26:07Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28003107367",
-      "id": 28003107367,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28047800598",
+      "id": 28047800598,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-23T05:54:54.559510+00:00",
+  "finished_at": "2026-06-23T19:29:06.633830+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 61,
-      "created_at": "2026-06-23T04:53:13Z",
+      "age_minutes": 62,
+      "created_at": "2026-06-23T18:26:07Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28003107367",
-      "id": 28003107367,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28047800598",
+      "id": 28047800598,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 2,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/23/meta-is-pausing-employee-tracking-program-after-it-let-the-whole-company-see-sensitive-data/",
-  "latest_published_at": "2026-06-23T05:51:59+00:00",
-  "latest_title": "Meta is 'pausing' employee tracking program after it let the whole company see sensitive data",
+  "latest_age_minutes": 18,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/23/confidential-apple-files-leaked-on-dark-web-after-supplier-cyberattack/",
+  "latest_published_at": "2026-06-23T19:10:28+00:00",
+  "latest_title": "Confidential Apple Files Leaked on Dark Web After Supplier Cyberattack",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
