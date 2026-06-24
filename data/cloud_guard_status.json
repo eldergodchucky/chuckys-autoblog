@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 19,
-      "created_at": "2026-06-24T01:13:43Z",
+      "age_minutes": 9,
+      "created_at": "2026-06-24T05:37:17Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28068281819",
-      "id": 28068281819,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28077680060",
+      "id": 28077680060,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-24T01:33:24.218735+00:00",
+  "finished_at": "2026-06-24T05:47:00.273045+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 19,
-      "created_at": "2026-06-24T01:13:43Z",
+      "age_minutes": 9,
+      "created_at": "2026-06-24T05:37:17Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28068281819",
-      "id": 28068281819,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28077680060",
+      "id": 28077680060,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 12,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/24/apple-watch-series-11-ultra-3-and-more-hit-new-prime-day-lows-from-199/",
-  "latest_published_at": "2026-06-24T01:21:13+00:00",
-  "latest_title": "Apple Watch Series 11, Ultra 3, and more hit new Prime Day lows (from $199)",
+  "latest_age_minutes": 9,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/24/valve-paves-the-way-to-turn-your-pc-into-a-steam-machine/",
+  "latest_published_at": "2026-06-24T05:37:26+00:00",
+  "latest_title": "Valve paves the way to turn your PC into a Steam Machine",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
