@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 9,
-      "created_at": "2026-06-24T05:37:17Z",
+      "age_minutes": 54,
+      "created_at": "2026-06-24T07:50:46Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28077680060",
-      "id": 28077680060,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28083635817",
+      "id": 28083635817,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-24T05:47:00.273045+00:00",
+  "finished_at": "2026-06-24T08:45:33.139483+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 9,
-      "created_at": "2026-06-24T05:37:17Z",
+      "age_minutes": 54,
+      "created_at": "2026-06-24T07:50:46Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28077680060",
-      "id": 28077680060,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28083635817",
+      "id": 28083635817,
       "status": "in_progress"
     }
   ],
   "github_error": "",
   "latest_age_minutes": 9,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/24/valve-paves-the-way-to-turn-your-pc-into-a-steam-machine/",
-  "latest_published_at": "2026-06-24T05:37:26+00:00",
-  "latest_title": "Valve paves the way to turn your PC into a Steam Machine",
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/24/a-t9-keyboard-for-your-smartphone/",
+  "latest_published_at": "2026-06-24T08:36:20+00:00",
+  "latest_title": "A T9 Keyboard For Your Smartphone",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
