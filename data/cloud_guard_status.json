@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 54,
-      "created_at": "2026-06-24T07:50:46Z",
+      "age_minutes": 30,
+      "created_at": "2026-06-24T23:48:13Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28083635817",
-      "id": 28083635817,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28137050046",
+      "id": 28137050046,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-24T08:45:33.139483+00:00",
+  "finished_at": "2026-06-25T00:19:05.050087+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 54,
-      "created_at": "2026-06-24T07:50:46Z",
+      "age_minutes": 30,
+      "created_at": "2026-06-24T23:48:13Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28083635817",
-      "id": 28083635817,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28137050046",
+      "id": 28137050046,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 9,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/24/a-t9-keyboard-for-your-smartphone/",
-  "latest_published_at": "2026-06-24T08:36:20+00:00",
-  "latest_title": "A T9 Keyboard For Your Smartphone",
+  "latest_age_minutes": 8,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/25/openai-and-broadcom-unveil-llm-optimized-inference-chip/",
+  "latest_published_at": "2026-06-25T00:10:43+00:00",
+  "latest_title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
