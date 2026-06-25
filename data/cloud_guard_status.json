@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 25,
-      "created_at": "2026-06-25T04:12:58Z",
+      "age_minutes": 43,
+      "created_at": "2026-06-25T07:31:59Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28146373190",
-      "id": 28146373190,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28154315393",
+      "id": 28154315393,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-25T04:38:02.377079+00:00",
+  "finished_at": "2026-06-25T08:15:00.057454+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 25,
-      "created_at": "2026-06-25T04:12:58Z",
+      "age_minutes": 43,
+      "created_at": "2026-06-25T07:31:59Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28146373190",
-      "id": 28146373190,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28154315393",
+      "id": 28154315393,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/25/lineshine-is-fastest-supercomputer-at-over-2-exaflops/",
-  "latest_published_at": "2026-06-25T04:37:58+00:00",
-  "latest_title": "LineShine Is Fastest Supercomputer at Over 2 Exaflops",
+  "latest_age_minutes": 6,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/25/ios-27-beta-2-apple-tells-siri-ai-to-clearly-refuse-requests-to-summarize-urls/",
+  "latest_published_at": "2026-06-25T08:08:02+00:00",
+  "latest_title": "iOS 27 beta 2: Apple tells Siri AI to clearly refuse requests to summarize URLs",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
