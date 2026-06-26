@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 8,
-      "created_at": "2026-06-26T06:09:49Z",
+      "age_minutes": 25,
+      "created_at": "2026-06-26T09:28:41Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28220634201",
-      "id": 28220634201,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28229539395",
+      "id": 28229539395,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-26T06:18:20.451536+00:00",
+  "finished_at": "2026-06-26T09:54:22.750644+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 8,
-      "created_at": "2026-06-26T06:09:49Z",
+      "age_minutes": 25,
+      "created_at": "2026-06-26T09:28:41Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28220634201",
-      "id": 28220634201,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28229539395",
+      "id": 28229539395,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 26,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/26/nothing-phone-4b-just-lost-a-few-more-secrets-ahead-of-its-july-7-debut/",
-  "latest_published_at": "2026-06-26T05:51:21+00:00",
-  "latest_title": "Nothing Phone 4b just lost a few more secrets ahead of its July 7 debut",
+  "latest_age_minutes": 3,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/26/its-only-been-a-month-and-the-2026-razr-is-already-letting-me-down/",
+  "latest_published_at": "2026-06-26T09:51:03+00:00",
+  "latest_title": "It\u2019s only been a month, and the 2026 Razr is already letting me down",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
