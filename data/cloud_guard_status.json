@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 25,
-      "created_at": "2026-06-26T09:28:41Z",
+      "age_minutes": 21,
+      "created_at": "2026-06-26T21:59:12Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28229539395",
-      "id": 28229539395,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28267632184",
+      "id": 28267632184,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-26T09:54:22.750644+00:00",
+  "finished_at": "2026-06-26T22:21:07.061622+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 25,
-      "created_at": "2026-06-26T09:28:41Z",
+      "age_minutes": 21,
+      "created_at": "2026-06-26T21:59:12Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28229539395",
-      "id": 28229539395,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28267632184",
+      "id": 28267632184,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 3,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/26/its-only-been-a-month-and-the-2026-razr-is-already-letting-me-down/",
-  "latest_published_at": "2026-06-26T09:51:03+00:00",
-  "latest_title": "It\u2019s only been a month, and the 2026 Razr is already letting me down",
+  "latest_age_minutes": 30,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/26/trump-mobile-t1-phone-now-seems-to-be-available/",
+  "latest_published_at": "2026-06-26T21:51:00+00:00",
+  "latest_title": "Trump Mobile T1 Phone now seems to be available",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
