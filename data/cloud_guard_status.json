@@ -1,35 +1,35 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 61,
-      "created_at": "2026-06-27T04:38:29Z",
+      "age_minutes": 21,
+      "created_at": "2026-06-27T07:56:47Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28278806256",
-      "id": 28278806256,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28283177176",
+      "id": 28283177176,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-27T05:40:16.514408+00:00",
+  "finished_at": "2026-06-27T08:18:38.324224+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 61,
-      "created_at": "2026-06-27T04:38:29Z",
+      "age_minutes": 21,
+      "created_at": "2026-06-27T07:56:47Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28278806256",
-      "id": 28278806256,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28283177176",
+      "id": 28283177176,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 15,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/27/openai-launches-a-limited-preview-of-gpt-5-6-for-a-small-group-of-trusted-partners/",
-  "latest_published_at": "2026-06-27T05:24:35+00:00",
-  "latest_title": "OpenAI launches a limited preview of GPT-5.6 for a 'small group of trusted partners'",
+  "latest_age_minutes": 39,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/27/using-t-mobile-abroad-just-got-a-lot-pricier/",
+  "latest_published_at": "2026-06-27T07:38:38+00:00",
+  "latest_title": "Using T-Mobile abroad just got a lot pricier",
   "main_run_stale_minutes": 95,
-  "message": "Latest post is fresh; rescue did not publish.",
+  "message": "Main watchdog is active; rescue stood down.",
   "rescue_emergency_stale_minutes": 90,
   "rescue_force_stale_minutes": 50,
   "rescue_stale_minutes": 35,
-  "state": "fresh"
+  "state": "main_watchdog_active"
 }
