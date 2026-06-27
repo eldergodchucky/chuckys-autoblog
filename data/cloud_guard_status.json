@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 26,
-      "created_at": "2026-06-27T01:20:13Z",
+      "age_minutes": 61,
+      "created_at": "2026-06-27T04:38:29Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28274232568",
-      "id": 28274232568,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28278806256",
+      "id": 28278806256,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-27T01:46:49.149458+00:00",
+  "finished_at": "2026-06-27T05:40:16.514408+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 26,
-      "created_at": "2026-06-27T01:20:13Z",
+      "age_minutes": 61,
+      "created_at": "2026-06-27T04:38:29Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28274232568",
-      "id": 28274232568,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28278806256",
+      "id": 28278806256,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 8,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/27/partners-nasa-ready-for-june-launch-of-swift-boost-mission/",
-  "latest_published_at": "2026-06-27T01:38:11+00:00",
-  "latest_title": "Partners, NASA Ready for June Launch of Swift Boost Mission",
+  "latest_age_minutes": 15,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/27/openai-launches-a-limited-preview-of-gpt-5-6-for-a-small-group-of-trusted-partners/",
+  "latest_published_at": "2026-06-27T05:24:35+00:00",
+  "latest_title": "OpenAI launches a limited preview of GPT-5.6 for a 'small group of trusted partners'",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
