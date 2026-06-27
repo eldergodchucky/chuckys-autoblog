@@ -1,35 +1,35 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 21,
-      "created_at": "2026-06-27T07:56:47Z",
+      "age_minutes": 37,
+      "created_at": "2026-06-27T14:44:02Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28283177176",
-      "id": 28283177176,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28292406152",
+      "id": 28292406152,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-27T08:18:38.324224+00:00",
+  "finished_at": "2026-06-27T15:21:57.120966+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 21,
-      "created_at": "2026-06-27T07:56:47Z",
+      "age_minutes": 37,
+      "created_at": "2026-06-27T14:44:02Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28283177176",
-      "id": 28283177176,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28292406152",
+      "id": 28292406152,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 39,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/27/using-t-mobile-abroad-just-got-a-lot-pricier/",
-  "latest_published_at": "2026-06-27T07:38:38+00:00",
-  "latest_title": "Using T-Mobile abroad just got a lot pricier",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/27/apple-starts-selling-refurbished-macbook-neo/",
+  "latest_published_at": "2026-06-27T15:21:10+00:00",
+  "latest_title": "Apple starts selling refurbished MacBook Neo",
   "main_run_stale_minutes": 95,
-  "message": "Main watchdog is active; rescue stood down.",
+  "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
   "rescue_force_stale_minutes": 50,
   "rescue_stale_minutes": 35,
-  "state": "main_watchdog_active"
+  "state": "fresh"
 }
