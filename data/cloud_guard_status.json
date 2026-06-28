@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 37,
-      "created_at": "2026-06-27T14:44:02Z",
+      "age_minutes": 61,
+      "created_at": "2026-06-28T00:53:47Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28292406152",
-      "id": 28292406152,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28306898156",
+      "id": 28306898156,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-27T15:21:57.120966+00:00",
+  "finished_at": "2026-06-28T01:54:55.282145+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 37,
-      "created_at": "2026-06-27T14:44:02Z",
+      "age_minutes": 61,
+      "created_at": "2026-06-28T00:53:47Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28292406152",
-      "id": 28292406152,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28306898156",
+      "id": 28306898156,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/27/apple-starts-selling-refurbished-macbook-neo/",
-  "latest_published_at": "2026-06-27T15:21:10+00:00",
-  "latest_title": "Apple starts selling refurbished MacBook Neo",
+  "latest_age_minutes": 17,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/28/top-stories-massive-apple-price-increases-ios-27-beta-2-and-more/",
+  "latest_published_at": "2026-06-28T01:37:45+00:00",
+  "latest_title": "Top Stories: Massive Apple Price Increases, iOS 27 Beta 2, and More",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
