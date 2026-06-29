@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 8,
-      "created_at": "2026-06-28T06:25:50Z",
+      "age_minutes": 22,
+      "created_at": "2026-06-29T01:37:08Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28313757311",
-      "id": 28313757311,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28343263952",
+      "id": 28343263952,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-28T06:34:09.220952+00:00",
+  "finished_at": "2026-06-29T01:59:58.580553+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 8,
-      "created_at": "2026-06-28T06:25:50Z",
+      "age_minutes": 22,
+      "created_at": "2026-06-29T01:37:08Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28313757311",
-      "id": 28313757311,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28343263952",
+      "id": 28343263952,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 12,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/28/refurbished-macbook-neo-models-now-available-a-day-after-price-hike/",
-  "latest_published_at": "2026-06-28T06:22:04+00:00",
-  "latest_title": "Refurbished MacBook Neo Models Now Available, a Day After Price Hike",
+  "latest_age_minutes": 9,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/29/weekly-poll-would-you-buy-the-oppo-reno16-what-about-the-oppo-reno16-pro/",
+  "latest_published_at": "2026-06-29T01:50:56+00:00",
+  "latest_title": "Weekly poll: would you buy the Oppo Reno16? What about the Oppo Reno16 Pro?",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
