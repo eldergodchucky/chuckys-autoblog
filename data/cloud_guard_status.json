@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 22,
-      "created_at": "2026-06-29T01:37:08Z",
+      "age_minutes": 58,
+      "created_at": "2026-06-29T06:01:47Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28343263952",
-      "id": 28343263952,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28351904550",
+      "id": 28351904550,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-29T01:59:58.580553+00:00",
+  "finished_at": "2026-06-29T07:00:27.784521+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 22,
-      "created_at": "2026-06-29T01:37:08Z",
+      "age_minutes": 58,
+      "created_at": "2026-06-29T06:01:47Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28343263952",
-      "id": 28343263952,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28351904550",
+      "id": 28351904550,
       "status": "in_progress"
     }
   ],
   "github_error": "",
   "latest_age_minutes": 9,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/29/weekly-poll-would-you-buy-the-oppo-reno16-what-about-the-oppo-reno16-pro/",
-  "latest_published_at": "2026-06-29T01:50:56+00:00",
-  "latest_title": "Weekly poll: would you buy the Oppo Reno16? What about the Oppo Reno16 Pro?",
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/29/google-translate-could-soon-borrow-another-one-of-duolingos-best-ideas/",
+  "latest_published_at": "2026-06-29T06:50:59+00:00",
+  "latest_title": "Google Translate could soon borrow another one of Duolingo\u2019s best ideas",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
