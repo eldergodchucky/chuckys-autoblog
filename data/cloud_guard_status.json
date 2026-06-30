@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 58,
-      "created_at": "2026-06-29T06:01:47Z",
+      "age_minutes": 9,
+      "created_at": "2026-06-30T01:17:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28351904550",
-      "id": 28351904550,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28413646410",
+      "id": 28413646410,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-29T07:00:27.784521+00:00",
+  "finished_at": "2026-06-30T01:27:04.526567+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 58,
-      "created_at": "2026-06-29T06:01:47Z",
+      "age_minutes": 9,
+      "created_at": "2026-06-30T01:17:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28351904550",
-      "id": 28351904550,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28413646410",
+      "id": 28413646410,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 9,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/29/google-translate-could-soon-borrow-another-one-of-duolingos-best-ideas/",
-  "latest_published_at": "2026-06-29T06:50:59+00:00",
-  "latest_title": "Google Translate could soon borrow another one of Duolingo\u2019s best ideas",
+  "latest_age_minutes": 15,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/30/apple-asks-uk-supreme-court-to-overturn-502-million-patent-ruling-in-optis-dispute/",
+  "latest_published_at": "2026-06-30T01:11:04+00:00",
+  "latest_title": "Apple asks UK Supreme Court to overturn $502 million patent ruling in Optis dispute",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
