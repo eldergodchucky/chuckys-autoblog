@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 6,
-      "created_at": "2026-06-30T05:42:42Z",
+      "age_minutes": 52,
+      "created_at": "2026-06-30T07:55:51Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28423060833",
-      "id": 28423060833,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28429185355",
+      "id": 28429185355,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-30T05:49:36.812928+00:00",
+  "finished_at": "2026-06-30T08:48:39.102132+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 6,
-      "created_at": "2026-06-30T05:42:42Z",
+      "age_minutes": 52,
+      "created_at": "2026-06-30T07:55:51Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28423060833",
-      "id": 28423060833,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28429185355",
+      "id": 28429185355,
       "status": "in_progress"
     }
   ],
   "github_error": "",
   "latest_age_minutes": 12,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/30/making-a-magnetic-core-memory-usb-drive/",
-  "latest_published_at": "2026-06-30T05:37:09+00:00",
-  "latest_title": "Making a Magnetic Core Memory USB Drive",
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/30/google-play-store-is-getting-faster-everywhere-from-your-android-phone-to-your-cars-dashboard/",
+  "latest_published_at": "2026-06-30T08:36:25+00:00",
+  "latest_title": "Google Play Store is getting faster everywhere, from your Android phone to your car\u2019s dashboard",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
