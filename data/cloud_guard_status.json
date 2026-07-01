@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 44,
-      "created_at": "2026-07-01T00:57:33Z",
+      "age_minutes": 49,
+      "created_at": "2026-07-01T05:22:51Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28486018174",
-      "id": 28486018174,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28495515127",
+      "id": 28495515127,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-07-01T01:41:43.483624+00:00",
+  "finished_at": "2026-07-01T06:12:03.617811+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 44,
-      "created_at": "2026-07-01T00:57:33Z",
+      "age_minutes": 49,
+      "created_at": "2026-07-01T05:22:51Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28486018174",
-      "id": 28486018174,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28495515127",
+      "id": 28495515127,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 6,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/07/01/claude-fable-5-cleared-to-return-as-us-lifts-anthropics-export-control-restriction/",
-  "latest_published_at": "2026-07-01T01:35:41+00:00",
-  "latest_title": "Claude Fable 5 cleared to return as US lifts Anthropic\u2019s export control restriction",
+  "latest_age_minutes": 5,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/07/01/samsung-officially-starts-teasing-its-wide-screen-galaxy-z-fold8/",
+  "latest_published_at": "2026-07-01T06:06:14+00:00",
+  "latest_title": "Samsung officially starts teasing its wide-screen Galaxy Z Fold8",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
