@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 52,
-      "created_at": "2026-06-30T07:55:51Z",
+      "age_minutes": 44,
+      "created_at": "2026-07-01T00:57:33Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28429185355",
-      "id": 28429185355,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28486018174",
+      "id": 28486018174,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-06-30T08:48:39.102132+00:00",
+  "finished_at": "2026-07-01T01:41:43.483624+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 52,
-      "created_at": "2026-06-30T07:55:51Z",
+      "age_minutes": 44,
+      "created_at": "2026-07-01T00:57:33Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28429185355",
-      "id": 28429185355,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28486018174",
+      "id": 28486018174,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 12,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/06/30/google-play-store-is-getting-faster-everywhere-from-your-android-phone-to-your-cars-dashboard/",
-  "latest_published_at": "2026-06-30T08:36:25+00:00",
-  "latest_title": "Google Play Store is getting faster everywhere, from your Android phone to your car\u2019s dashboard",
+  "latest_age_minutes": 6,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/07/01/claude-fable-5-cleared-to-return-as-us-lifts-anthropics-export-control-restriction/",
+  "latest_published_at": "2026-07-01T01:35:41+00:00",
+  "latest_title": "Claude Fable 5 cleared to return as US lifts Anthropic\u2019s export control restriction",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
