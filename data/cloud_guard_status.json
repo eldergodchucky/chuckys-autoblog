@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 54,
-      "created_at": "2026-07-02T00:39:50Z",
+      "age_minutes": 35,
+      "created_at": "2026-07-02T05:04:43Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28557332426",
-      "id": 28557332426,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28566770192",
+      "id": 28566770192,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-07-02T01:34:40.702535+00:00",
+  "finished_at": "2026-07-02T05:39:59.163067+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 54,
-      "created_at": "2026-07-02T00:39:50Z",
+      "age_minutes": 35,
+      "created_at": "2026-07-02T05:04:43Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28557332426",
-      "id": 28557332426,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28566770192",
+      "id": 28566770192,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 27,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/07/02/apple-to-launch-new-ipad-pro-in-spring-2027/",
-  "latest_published_at": "2026-07-02T01:07:24+00:00",
-  "latest_title": "Apple to Launch New iPad Pro in Spring 2027",
+  "latest_age_minutes": 3,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/07/02/apple-reportedly-orders-10m-foldable-iphone-ultra-models-which-could-sell-for-around-2500/",
+  "latest_published_at": "2026-07-02T05:36:25+00:00",
+  "latest_title": "Apple reportedly orders 10M foldable iPhone Ultra models, which could sell for around $2500",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
