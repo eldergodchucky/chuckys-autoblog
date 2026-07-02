@@ -6,6 +6,7 @@ data/*
 !data/failover_last_publish.json
 !data/cloud_guard_status.json
 !data/x_shared_posts.json
+!data/last_run_status.json
 out/
 __pycache__/
 *.pyc
