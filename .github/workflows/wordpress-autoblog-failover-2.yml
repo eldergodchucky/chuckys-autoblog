@@ -1,15 +1,15 @@
-name: WordPress Auto Blog
+name: WordPress Auto Blog Failover 2
 
 on:
   schedule:
-    - cron: "0,15,30,45 * * * *"
+    - cron: "3,18,33,48 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: wordpress-autoblog
+  group: wordpress-autoblog-failover-2
   cancel-in-progress: false
 
 jobs:
