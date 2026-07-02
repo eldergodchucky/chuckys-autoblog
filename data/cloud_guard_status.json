@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 29,
-      "created_at": "2026-07-01T09:48:04Z",
+      "age_minutes": 54,
+      "created_at": "2026-07-02T00:39:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28508750072",
-      "id": 28508750072,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28557332426",
+      "id": 28557332426,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-07-01T10:17:19.002360+00:00",
+  "finished_at": "2026-07-02T01:34:40.702535+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 29,
-      "created_at": "2026-07-01T09:48:04Z",
+      "age_minutes": 54,
+      "created_at": "2026-07-02T00:39:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28508750072",
-      "id": 28508750072,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/28557332426",
+      "id": 28557332426,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 25,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/07/01/ai-browsers-were-tricked-into-revealing-passwords-with-a-shockingly-simple-approach/",
-  "latest_published_at": "2026-07-01T09:51:44+00:00",
-  "latest_title": "AI browsers were tricked into revealing passwords with a shockingly simple approach",
+  "latest_age_minutes": 27,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/07/02/apple-to-launch-new-ipad-pro-in-spring-2027/",
+  "latest_published_at": "2026-07-02T01:07:24+00:00",
+  "latest_title": "Apple to Launch New iPad Pro in Spring 2027",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
