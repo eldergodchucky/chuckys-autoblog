@@ -1648,6 +1648,7 @@ def has_term(text: str, terms: tuple[str, ...]) -> bool:
 
 
 def professional_angle(topic: str, categories: list[str], text: str) -> str:
+    kind = story_kind(categories, text)
     if "health" in categories or has_term(text, ("glucose", "biosensor", "metabolic", "medical", "health", "clinical", "patient", "treatment")):
         return (
             "The important question is whether the health claim is supported by reliable measurement and sensible guidance. "
