@@ -2202,88 +2202,26 @@ def editorial_nut_graph(categories: list[str], text: str) -> str:
 
 
 def full_article_sections(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
-    text = story_text(cluster)
-    headings = section_titles(categories, text)
-    angle = professional_angle(topic, categories, text)
-    takeaway = category_takeaway(set(categories))
-    kind = story_kind(categories, text)
-    primary_category = categories[0] if categories else "tech"
-    practical_focus = {
-        "phones": "Anyone thinking about upgrading should watch pricing, trade-in value, camera claims, battery life, storage options, and how many years of updates the device is likely to receive.",
-        "apple": "Apple users should watch whether the change is global or market-specific, whether it affects older hardware, and whether it hints at pressure around the next product cycle.",
-        "android": "Android users should watch device support, manufacturer rollout timing, app compatibility, and whether features arrive through system updates, Play services, or individual apps.",
-        "ai": "For AI stories, the test is whether the feature is genuinely useful, accurate enough to trust, private enough to use, and affordable enough to keep.",
-        "gadgets": "For gadgets, the key is whether the product solves a real daily problem or simply adds another spec that looks good on a marketing page.",
-        "autonomous": "For robotaxis, the thing to watch is boring reliability: fewer interventions, clearer safety reporting, and performance that improves outside ideal demo conditions.",
-        "space": "For space stories, the key is what the mission or observation makes possible next: new data, new experiments, better hardware, or a stronger foundation for future exploration.",
-        "science": "For science and space stories, the practical value is in what the discovery, mission, or experiment could make possible next.",
-        "health": "For health-tech stories, readers should watch measurement accuracy, privacy, medical guidance, pricing, availability, and whether the company clearly explains the limits of its claims.",
-        "software": "For software, watch whether the change is optional, forced, free, subscription-based, or tied to a specific device or operating system.",
-    }
-    practical = practical_focus.get(kind) or practical_focus.get(primary_category, "The practical move is to watch what changes for real users, real devices, and real workflows.")
-    if kind == "health" or "health" in categories:
-        watch_items = [
-            "independent accuracy or validation data for the sensor",
-            "privacy terms covering health and biometric data",
-            "subscription pricing, device compatibility, and regional availability",
-            "clear guidance about when users should consult a healthcare professional",
-        ]
-    elif has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
-        watch_items = [
-            "whether crash and intervention data improves over time",
-            "how often human safety monitors are involved",
-            "what regulators require before wider deployment",
-            "whether riders and pedestrians trust the service in ordinary traffic",
-        ]
-    elif "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply")):
-        watch_items = [
-            "which experiments NASA highlights after the payload is unpacked",
-            "early research updates from the space station crew or mission teams",
-            "whether the work supports medicine, materials, robotics, life-support, or exploration",
-            "follow-up results that show what changed after testing in orbit",
-        ]
-    elif "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
-        watch_items = [
-            "peer review, replication, or follow-up research from other teams",
-            "whether the method moves from lab testing into real-world systems",
-            "which industries, tools, or public problems the work could eventually affect",
-            "clear explanations of limits, uncertainty, and what still needs proof",
-        ]
-    else:
-        watch_items = [
-            "official confirmation, changelogs, launch notes, or product pages",
-            "pricing, availability, and whether the change is limited to specific regions",
-            "device support, privacy terms, battery impact, subscriptions, or compatibility limits",
-            "hands-on reports that show whether the headline holds up in real use",
-        ]
-    watch_html = "\n".join(f"<li>{html.escape(item)}</li>" for item in watch_items)
-    return f"""
-<h2>{headings["what"]}</h2>
-{source_report_paragraphs(cluster)}
-<h2>Known Details</h2>
-{known_details_html(cluster)}
-<h2>Why It Matters</h2>
-<p>{html.escape(angle)}</p>
-{reader_impact_paragraph(categories, text)}
-{detail_paragraph(topic, cluster)}
-{direction_paragraph(categories, text)}
-<p>{html.escape(takeaway)}</p>
-{practical_question_paragraph(categories, text)}
-{why_extra_paragraph(categories, text)}
-<h2>{headings["picture"]}</h2>
-{bigger_picture_paragraphs(categories, text)}
-{human_aside_paragraph(categories, text)}
-<h2>The Practical Read</h2>
-<p>{html.escape(practical)}</p>
-{missing_details_paragraph(categories, text)}
-{real_world_effect_paragraph(categories, text)}
-<h2>{headings["watch"]}</h2>
-<ul>
-{watch_html}
-</ul>
-<h2>{headings["bottom"]}</h2>
-{bottom_line_paragraph(topic, categories, text)}
-""".strip()
+    paragraphs: list[str] = []
+    full_text = " ".join(f"{item.title} {item.summary}" for item in cluster)
+    grouped = collect_source_sentences(cluster)
+    if not grouped:
+        return f'<p>{html.escape(clean_text(topic, max_len=500))}.</p>'
+    lead_source, lead_sentences = grouped[0]
+    opening = paragraphize_sentences(lead_sentences[:12], size=2, max_paragraphs=8)
+    for paragraph in opening:
+        paragraphs.append(f"<p>{html.escape(paragraph)}</p>")
+    for source_name, sentences in grouped:
+        if source_name == lead_source:
+            remaining = sentences[12:]
+        else:
+            remaining = sentences
+        for paragraph in paragraphize_sentences(remaining, size=4, max_paragraphs=12):
+            paragraphs.append(f"<p>{html.escape(paragraph)}</p>")
+    numeric_facts = extract_numeric_facts(full_text)
+    if numeric_facts:
+        paragraphs.append(f"<p>{html.escape(numeric_facts)}</p>")
+    return "\n".join(paragraphs)
 
 
 def free_article(cluster: list[Item]) -> dict[str, Any]:
@@ -2331,20 +2269,12 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
     # Generate meta description and focus keyword
     focus_keyword = keywords[0] if keywords else "technology"
-    meta_description = clean_text(f"{topic}: what happened, why it matters, and what readers should watch next.", max_len=160)
-    excerpt_details = known_details(cluster)[:2]
-    if excerpt_details:
-        excerpt = f"{topic}: {human_join(excerpt_details)}. A clear look at what is known, why it matters, and what could happen next."
-    else:
-        excerpt = f"{topic}: a clear look at what is known, why it matters, and what readers should watch next."
+    meta_description = clean_text(topic, max_len=160)
+    excerpt = ""
 
     body = f"""
 {image_block}
-<p>{lead_text}</p>
-<p>{html.escape(editorial_nut_graph(categories, text))}</p>
-<p>[more]</p>
 {full_article_sections(cluster, topic, categories, source_count)}
-{medical_disclaimer}
 """.strip()
 
     return {
