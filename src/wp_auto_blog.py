@@ -2201,6 +2201,36 @@ def editorial_nut_graph(categories: list[str], text: str) -> str:
     return "The real question is not whether the news is interesting for a day. It is whether it changes incentives, habits, products, or expectations in a way that lasts."
 
 
+def collect_source_sentences(cluster: list[Item]) -> list[tuple[str, list[str]]]:
+    grouped = {}
+    for item in cluster:
+        text = f"{item.title} {item.summary}"
+        sentences = re.split(r'[.!?]+', text)
+        sentences = [s.strip() for s in sentences if s.strip()]
+        if item.source_name not in grouped:
+            grouped[item.source_name] = []
+        grouped[item.source_name].extend(sentences)
+    return list(grouped.items())
+
+
+def paragraphize_sentences(sentences: list[str], size: int = 3, max_paragraphs: int = 24) -> list[str]:
+    paragraphs = []
+    for i in range(0, len(sentences), size):
+        if len(paragraphs) >= max_paragraphs:
+            break
+        chunk = sentences[i:i+size]
+        if chunk:
+            paragraphs.append(" ".join(chunk))
+    return paragraphs
+
+
+def extract_numeric_facts(text: str) -> str:
+    facts = re.findall(r'\$[\d,]+(?:\.\d+)?|\d[\d,]*(?:\.\d+)?\s*(?:percent|gb|tb|mp|mah|hours|days|weeks|months|years|yuan)', text, flags=re.IGNORECASE)
+    if facts:
+        return " ".join(facts[:5])
+    return ""
+
+
 def full_article_sections(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
     paragraphs: list[str] = []
     full_text = " ".join(f"{item.title} {item.summary}" for item in cluster)
