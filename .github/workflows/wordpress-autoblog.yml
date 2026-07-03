@@ -87,8 +87,6 @@ jobs:
           X_REFRESH_TOKEN: ${{ secrets.X_REFRESH_TOKEN }}
           X_SHARE_MAX_PER_RUN: "2"
           X_SHARE_BACKFILL: "false"
-          SOCIAL_SHARE_TITLE_ONLY: "true"
-          X_SHARE_TITLE_ONLY: "true"
           X_SHARE_TEMPLATE: "{title}"
           X_SHARE_STATE_PATH: data/x_shared_posts.json
           REQUEST_TIMEOUT_SECONDS: "25"

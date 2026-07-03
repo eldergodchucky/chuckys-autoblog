@@ -2213,7 +2213,7 @@ def collect_source_sentences(cluster: list[Item]) -> list[tuple[str, list[str]]]
     return list(grouped.items())
 
 
-def paragraphize_sentences(sentences: list[str], size: int = 3, max_paragraphs: int = 24) -> list[str]:
+def paragraphize_sentences(sentences: list[str], size: int = 3, max_paragraphs: int = 40) -> list[str]:
     paragraphs = []
     for i in range(0, len(sentences), size):
         if len(paragraphs) >= max_paragraphs:
@@ -2304,7 +2304,10 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
     body = f"""
 {image_block}
+<p>{lead_text}</p>
+<p>[more]</p>
 {full_article_sections(cluster, topic, categories, source_count)}
+{medical_disclaimer}
 """.strip()
 
     return {
