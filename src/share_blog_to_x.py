@@ -240,6 +240,13 @@ def save_state(path: Path, state: dict[str, Any]) -> None:
 
 
 def post_text_for(post: BlogPost) -> str:
+    if env_bool("X_SHARE_TITLE_ONLY", False):
+        title_only = post.title.strip()
+        max_chars = max(120, env_int("X_MAX_POST_CHARS", 280))
+        if len(title_only) <= max_chars:
+            return title_only
+        return title_only[: max_chars - 3].rstrip() + "..."
+    
     template = os.getenv("X_SHARE_TEMPLATE", DEFAULT_TEMPLATE).replace("\\n", "\n")
     max_chars = max(120, env_int("X_MAX_POST_CHARS", 280))
     text = template.format(title=post.title, link=post.link).strip()

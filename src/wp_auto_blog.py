@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Fetch RSS sources, generate original cited articles, and post to WordPress."""
 
 from __future__ import annotations
@@ -827,56 +827,40 @@ def build_generation_prompt(cluster: list[Item]) -> str:
         )
 
     return f"""
-Write one original, comprehensive WordPress blog post for a professional blog covering technology, science, health research, gadgets, tutorials, and practical insights.
+Write one original, comprehensive, and straight professional news/analysis article for a high-quality publication covering technology, science, health research, gadgets, tutorials, or practical insights.
 
-Use the source briefs below as reporting inputs. Do not copy or lightly paraphrase source text. Synthesize the shared theme, add substantial context, explain why it matters deeply, and keep claims tied to the sources. Include practical takeaways, expert perspectives, and future implications where relevant.
+Use the source briefs below as reporting inputs. Synthesize the shared theme, add substantial facts/context, and keep claims tied to the sources. The article must be a straight, professional piece.
+
+DO NOT use formulaic, repetitive, or generic section labels like "What Happened", "Why It Matters", "What Readers Learn", "What to Watch", "The Catch", "Bottom Line", "Known Details", or any other generic "AI slop" headers. Instead, structure the article using natural, descriptive, and topical subheadings (h2 and h3) that flow directly from the subject matter itself (for example, refer to specific technologies, organizations, clinical methods, or market forces).
 
 Editorial voice:
-- Write in a premium editorial-news voice: sophisticated, analytical, nuanced, authoritative, and polished.
-- Do not imitate any named publication directly. Use the broad traits of high-end analysis: a strong thesis, elegant sentences, measured judgment, and deep insight.
-- Lead with the specific news: what happened, who is involved, what changed, and why readers should care.
-- Avoid blog filler such as "this is worth watching", "points to", "the headline is only the start", "quiet side of innovation", and repeated source-list phrasing.
-- Do not write generic passages that could fit any science, AI, phone, or gadget story. Every paragraph must contain a concrete fact, consequence, named actor, technical detail, market effect, or reader-facing implication from the source briefs.
-- If source briefs are thin, be transparent about what is known and what remains unclear. Do not pad with generic analysis.
-- Make the article feel authored by a serious subject-matter expert, not assembled from feeds.
-- Prefer argument and consequence over hype. Explain trade-offs, incentives, limitations, second-order effects, and long-term implications.
-- For health and medical topics: include appropriate disclaimers, distinguish between correlation and causation, cite peer-reviewed research when available, and emphasize that content is for informational purposes only.
-- Write with elaborative depth: explore multiple angles, provide historical context, explain technical concepts clearly, and discuss practical applications.
-- Maintain professional objectivity while making complex topics accessible to educated readers.
+- Write in a premium editorial voice: sophisticated, analytical, nuanced, authoritative, straight-forward, and polished.
+- Do not use generic filler, AI buzzwords, or repetitive introductory phrases.
+- Every paragraph must be elaborative and contain concrete facts, technical details, named actors, or reader-facing implications.
+- For health and medical topics, maintain factual objectivity, cite clinical details/organizations from the sources, and include a standard medical disclaimer at the end of the text.
+- The article should be significantly longer, reading like a real, detailed professional article.
 
 Return valid JSON only with these keys:
 - title: string (compelling, professional headline)
 - slug: lowercase URL slug
-- excerpt: comprehensive 2-3 sentence summary
+- excerpt: comprehensive 2-3 sentence summary (keep it straight and factual, no "why it matters" or "what readers learn")
 - categories: array of 1-3 broad category names
 - tags: array of 8-12 specific, relevant tags
 - html: WordPress-ready HTML string
-- meta_description: string (155-160 characters for SEO)
+- meta_description: string (155-160 characters for SEO, straight and factual)
 - focus_keyword: string (primary SEO keyword)
 
 HTML requirements:
 - 1000 to 1500 words for comprehensive coverage.
-- Use h2 and h3 headings for clear structure.
-- Use specific section labels such as "What Happened", "The Details", "Why It Matters", "The Catch", "What Readers Should Watch", and "Bottom Line".
-- Include a "Known Details" section with bullet points drawn only from the source briefs.
-- Include practical implications, but avoid repetitive generic sections.
+- Use h2 and h3 headings for clear structure, using natural topical titles.
 - Use natural inline attribution when needed; do not add a source-list section.
 - Do not include scripts, iframes, tracking pixels, or affiliate links.
 - For health content, include appropriate medical disclaimer at the end.
 
-Structure the article with:
-1. Compelling introduction that sets context and stakes
-2. Deep analysis of the topic with multiple perspectives
-3. Technical or scientific details explained clearly
-4. Practical implications for readers
-5. Expert insights and future outlook
-6. Clear, actionable takeaways
-
 SEO requirements:
-- Include the focus keyword naturally in the title, first paragraph, and at least one subheading
-- Write meta_description that includes the focus keyword and summarizes the article's value
-- Use semantic HTML with proper heading hierarchy
-- Include relevant internal linking opportunities
+- Include the focus keyword naturally in the title, first paragraph, and at least one subheading.
+- Write a straight and factual meta_description that includes the focus keyword.
+- Use semantic HTML with proper heading hierarchy.
 
 Sources:
 
@@ -2202,11 +2186,28 @@ def editorial_nut_graph(categories: list[str], text: str) -> str:
 
 
 def collect_source_sentences(cluster: list[Item]) -> list[tuple[str, list[str]]]:
-    grouped = {}
+    """Split each item's summary into clean sentences, grouped by source.
+
+    Uses only item.summary (not the title) so the title is not injected as a
+    duplicate sentence inside the article body.
+    """
+    grouped: dict[str, list[str]] = {}
+    # Sentence splitter: split after . ! ? that are followed by whitespace+uppercase,
+    # but NOT after decimal numbers like 7800.5 or abbreviations followed by lowercase.
+    _sent_re = re.compile(r'(?<=[.!?])(?=\s+[A-Z])')
+    # RSS branding patterns to strip
+    _branding_re = re.compile(
+        r'(?:The post\s+.+?\s+appeared first on\s+.+?\.?)'
+        r'|(?:\bRead more\b.*$)'
+        r'|(?:\bRead the full article\b.*$)',
+        re.IGNORECASE | re.DOTALL,
+    )
     for item in cluster:
-        text = f"{item.title} {item.summary}"
-        sentences = re.split(r'[.!?]+', text)
-        sentences = [s.strip() for s in sentences if s.strip()]
+        raw = item.summary or ""
+        raw = _branding_re.sub("", raw).strip()
+        raw = fix_mojibake(strip_html(raw))
+        raw = re.sub(r"\s+", " ", raw).strip()
+        sentences = [s.strip() for s in _sent_re.split(raw) if len(s.strip()) >= 40]
         if item.source_name not in grouped:
             grouped[item.source_name] = []
         grouped[item.source_name].extend(sentences)
@@ -2232,26 +2233,71 @@ def extract_numeric_facts(text: str) -> str:
 
 
 def full_article_sections(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
-    paragraphs: list[str] = []
+    """Build the main article body from the cluster's source summaries.
+
+    Produces clean, professional paragraphs extracted from the RSS summaries
+    without any formulaic section headers, analytical filler, or repeated
+    injections of the article title.
+    """
     full_text = " ".join(f"{item.title} {item.summary}" for item in cluster)
     grouped = collect_source_sentences(cluster)
     if not grouped:
-        return f'<p>{html.escape(clean_text(topic, max_len=500))}.</p>'
-    lead_source, lead_sentences = grouped[0]
-    opening = paragraphize_sentences(lead_sentences[:12], size=2, max_paragraphs=8)
-    for paragraph in opening:
-        paragraphs.append(f"<p>{html.escape(paragraph)}</p>")
-    for source_name, sentences in grouped:
-        if source_name == lead_source:
-            remaining = sentences[12:]
-        else:
-            remaining = sentences
-        for paragraph in paragraphize_sentences(remaining, size=4, max_paragraphs=12):
-            paragraphs.append(f"<p>{html.escape(paragraph)}</p>")
+        return f'<p>{html.escape(clean_text(topic, max_len=5000))}.</p>'
+
+    # Collect, deduplicate, and clean every sentence across all sources
+    all_sentences: list[str] = []
+    seen_keys: set[str] = set()
+
+    # Normalised topic for near-duplicate filtering
+    _topic_key = re.sub(r'[^a-z0-9]', '', topic.lower())[:70]
+
+    def _add(sent: str) -> None:
+        sent = sent.strip()
+        if not sent or len(sent) < 55:
+            return
+        # Strip trailing punctuation/ellipsis artifacts (incl. comma-period combos)
+        sent = re.sub(r'[,\s.]+$', '', sent).strip()
+        if not sent or len(sent) < 55:
+            return
+        # Capitalise first letter if needed
+        if not sent[0].isupper():
+            sent = sent[0].upper() + sent[1:]
+        # Reject sentences that are essentially a restatement of the title
+        sent_key = re.sub(r'[^a-z0-9]', '', sent.lower())[:70]
+        if _topic_key and len(_topic_key) > 20 and sent_key.startswith(_topic_key[:50]):
+            return
+        key = re.sub(r'[^a-z0-9]', '', sent.lower())[:90]
+        if key in seen_keys:
+            return
+        seen_keys.add(key)
+        all_sentences.append(sent + ".")
+
+    for _source_name, sentences in grouped:
+        for s in sentences:
+            _add(s)
+
+    if not all_sentences:
+        return f'<p>{html.escape(clean_text(topic, max_len=5000))}.</p>'
+
+    # Build HTML paragraphs: 2 sentences for the opener, then 3-4 each
+    paragraphs: list[str] = []
+    remaining = list(all_sentences)
+
+    first_chunk = remaining[:2]
+    remaining = remaining[2:]
+    paragraphs.append(" ".join(first_chunk))
+
+    while remaining:
+        size = min(4, len(remaining))
+        paragraphs.append(" ".join(remaining[:size]))
+        remaining = remaining[size:]
+
+    # Numeric facts as a closing factual note
     numeric_facts = extract_numeric_facts(full_text)
     if numeric_facts:
-        paragraphs.append(f"<p>{html.escape(numeric_facts)}</p>")
-    return "\n".join(paragraphs)
+        paragraphs.append(f"Key figures from the report: {numeric_facts}.")
+
+    return "\n".join(f"<p>{html.escape(p)}</p>" for p in paragraphs if p.strip())
 
 
 def free_article(cluster: list[Item]) -> dict[str, Any]:
@@ -2263,7 +2309,6 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
     title = topic
     source_image_urls = source_image_candidates(cluster)
     hero_path = create_hero_image(title, keywords, categories, source_image_urls)
-    lead_text = professional_lead(topic, categories, story_text(cluster))
     text = story_text(cluster)
     kind = story_kind(categories, text)
 
@@ -2274,21 +2319,6 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 <img src="{HERO_IMAGE_PLACEHOLDER}" alt="{html.escape(title)} illustration">
 </figure>
 """.strip()
-
-    angle = professional_angle(topic, categories, text)
-    practical_focus = {
-        "phones": "Anyone thinking about upgrading should watch pricing, trade-in value, camera claims, battery life, storage options, and how many years of updates the device is likely to receive.",
-        "apple": "Apple users should watch whether the change is global or market-specific, whether it affects older hardware, and whether it hints at pressure around the next product cycle.",
-        "android": "Android users should watch device support, manufacturer rollout timing, app compatibility, and whether features arrive through system updates, Play services, or individual apps.",
-        "ai": "For AI stories, the test is whether the feature is genuinely useful, accurate enough to trust, private enough to use, and affordable enough to keep.",
-        "gadgets": "For gadgets, the key is whether the product solves a real daily problem or simply adds another spec that looks good on a marketing page.",
-        "autonomous": "For robotaxis, the thing to watch is boring reliability: fewer interventions, clearer safety reporting, and performance that improves outside ideal demo conditions.",
-        "space": "For space stories, the key is what the mission or observation makes possible next: new data, new experiments, better hardware, or a stronger foundation for future exploration.",
-        "science": "For science and space stories, the practical value is in what the discovery, mission, or experiment could make possible next.",
-        "health": "For health and medical stories, readers should watch whether findings are peer-reviewed, whether results are replicated, and how the research might influence treatment options or public policy, while always consulting healthcare professionals for medical advice.",
-        "software": "For software, watch whether the change is optional, forced, free, subscription-based, or tied to a specific device or operating system.",
-    }
-    practical = practical_focus.get(kind) or practical_focus.get(categories[0] if categories else "tech", "The practical move is to watch what changes for real users, real devices, and real workflows.")
 
     # Medical disclaimer for health content
     medical_disclaimer = ""
@@ -2302,9 +2332,9 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
     meta_description = clean_text(topic, max_len=160)
     excerpt = ""
 
+    # Build professional straight article layout
     body = f"""
 {image_block}
-<p>{lead_text}</p>
 <p>[more]</p>
 {full_article_sections(cluster, topic, categories, source_count)}
 {medical_disclaimer}
@@ -2313,7 +2343,7 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
     return {
         "title": title,
         "slug": slugify(topic),
-        "excerpt": clean_text(excerpt, max_len=280),
+        "excerpt": "",
         "categories": categories[:3],
         "tags": sorted(set(categories + keywords))[:12],
         "html": body,
@@ -2449,8 +2479,17 @@ def email_shortcodes(article: dict[str, Any]) -> list[str]:
     if tags:
         shortcodes.append(f"[tags {', '.join(tags)}]")
     publicize = os.getenv("POST_BY_EMAIL_PUBLICIZE", "").strip().lower()
-    if publicize:
-        shortcodes.append(f"[publicize {publicize}]")
+    if publicize == "off":
+        # Explicit opt-out: disable all social sharing for this post
+        shortcodes.append("[publicize off]")
+    else:
+        # Default: share with title-only message to ALL connected social platforms
+        # (Bluesky, Mastodon, Facebook, Tumblr, etc.) via Jetpack Social / Publicize.
+        # [publicize]...[/publicize] sets a custom message for every connected service.
+        # Title-only keeps shares clean and uncluttered across all platforms.
+        title = str(article.get("title", "")).strip()
+        if title:
+            shortcodes.append(f"[publicize]{title}[/publicize]")
     return shortcodes
 
 
