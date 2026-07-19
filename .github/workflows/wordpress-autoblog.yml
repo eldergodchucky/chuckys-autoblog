@@ -52,16 +52,17 @@ jobs:
           ARTICLE_GENERATOR: free
           HERO_IMAGE_MODE: real
           MAX_POSTS_PER_RUN: "1"
-          MAX_POSTS_PER_DAY: "96"
+          MAX_POSTS_PER_DAY: "200"
           SOCIAL_SHARE_TITLE_ONLY: "true"
           X_SHARE_TITLE_ONLY: "true"
+          POST_BY_EMAIL_PUBLICIZE_TITLE_ONLY: "true"
           LOOKBACK_HOURS: "96"
           MIN_SOURCES_PER_POST: "2"
           REQUEST_TIMEOUT_SECONDS: "25"
           RUN_LOCK_STALE_SECONDS: "1800"
-          TOPIC_FOCUS_KEYWORDS: science,scientists,research,researchers,breakthrough,discovery,experiment,study,physics,biology,chemistry,climate,energy,robotics,space,nasa,astronomy,planet,moon,mars,telescope,galaxy,phone,phones,iphone,ios,android,apple,samsung,pixel,gadget,gadgets,ai,artificial intelligence,software,apps,app,innovation
-          CATEGORY_ROTATION: science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks
-          CATEGORY_WEIGHTS: science=6,space=6,ai=6,gadgets=6,security=6,tutorials=6,hacks=6,phones=6,apple=6,android=6,software=6,tech=4
+          TOPIC_FOCUS_KEYWORDS: science,scientists,research,researchers,breakthrough,discovery,experiment,study,physics,biology,chemistry,climate,energy,robotics,space,nasa,astronomy,planet,moon,mars,telescope,galaxy,phone,phones,iphone,ios,android,apple,samsung,pixel,gadget,gadgets,ai,artificial intelligence,software,apps,app,innovation,health,medical,medicine,clinical,patient,treatment,drug,pharmaceutical,biotech,genetics,neuroscience,psychology,fitness,nutrition,wellness
+          CATEGORY_ROTATION: science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks,health,medical,biotech,fitness
+          CATEGORY_WEIGHTS: science=6,space=6,ai=6,gadgets=6,security=6,tutorials=6,hacks=6,phones=6,apple=6,android=6,software=6,health=6,medical=6,biotech=5,fitness=5,tech=4
           RECENT_CATEGORY_WINDOW: "8"
           RECENT_CATEGORY_PENALTY: "4"
           ALLOW_SINGLE_SOURCE_PRIORITY_POSTS: "true"
@@ -87,7 +88,7 @@ jobs:
           X_REFRESH_TOKEN: ${{ secrets.X_REFRESH_TOKEN }}
           X_SHARE_MAX_PER_RUN: "2"
           X_SHARE_BACKFILL: "false"
-          X_SHARE_TEMPLATE: "{title}"
+          X_SHARE_TITLE_ONLY: "true"
           X_SHARE_STATE_PATH: data/x_shared_posts.json
           REQUEST_TIMEOUT_SECONDS: "25"
         run: python src/share_blog_to_x.py

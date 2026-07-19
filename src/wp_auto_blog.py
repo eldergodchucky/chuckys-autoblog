@@ -2253,11 +2253,11 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
 
     def _add(sent: str) -> None:
         sent = sent.strip()
-        if not sent or len(sent) < 55:
+        if not sent or len(sent) < 30:
             return
         # Strip trailing punctuation/ellipsis artifacts (incl. comma-period combos)
         sent = re.sub(r'[,\s.]+$', '', sent).strip()
-        if not sent or len(sent) < 55:
+        if not sent or len(sent) < 30:
             return
         # Capitalise first letter if needed
         if not sent[0].isupper():
@@ -2279,23 +2279,23 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
     if not all_sentences:
         return f'<p>{html.escape(clean_text(topic, max_len=5000))}.</p>'
 
-    # Build HTML paragraphs: 2 sentences for the opener, then 3-4 each
+    # Build HTML paragraphs: 3 sentences for the opener, then 4-5 each for longer articles
     paragraphs: list[str] = []
     remaining = list(all_sentences)
 
-    first_chunk = remaining[:2]
-    remaining = remaining[2:]
+    first_chunk = remaining[:3]
+    remaining = remaining[3:]
     paragraphs.append(" ".join(first_chunk))
 
     while remaining:
-        size = min(4, len(remaining))
+        size = min(5, len(remaining))
         paragraphs.append(" ".join(remaining[:size]))
         remaining = remaining[size:]
 
     # Numeric facts as a closing factual note
     numeric_facts = extract_numeric_facts(full_text)
     if numeric_facts:
-        paragraphs.append(f"Key figures from the report: {numeric_facts}.")
+        paragraphs.append(f"{numeric_facts}.")
 
     return "\n".join(f"<p>{html.escape(p)}</p>" for p in paragraphs if p.strip())
 
@@ -2469,9 +2469,7 @@ def email_shortcodes(article: dict[str, Any]) -> list[str]:
         f"[slug {str(article.get('slug') or slugify(str(article.get('title', 'Generated post'))))}]",
         f"[status {post_status()}]",
     ]
-    excerpt = clean_text(str(article.get("excerpt", "")), max_len=220)
-    if excerpt:
-        shortcodes.append(f"[excerpt]{excerpt}[/excerpt]")
+    # Skip excerpt entirely to prevent double title on social media
     categories = [str(value).strip() for value in article.get("categories", []) if str(value).strip()]
     tags = [str(value).strip() for value in article.get("tags", []) if str(value).strip()]
     if categories:
