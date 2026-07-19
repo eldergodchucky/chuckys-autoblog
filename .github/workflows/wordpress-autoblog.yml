@@ -8,14 +8,10 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: wordpress-autoblog
-  cancel-in-progress: false
-
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 10
 
     steps:
       - name: Check out site automation
