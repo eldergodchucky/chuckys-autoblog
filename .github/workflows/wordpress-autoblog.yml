@@ -57,7 +57,7 @@ jobs:
           X_SHARE_TITLE_ONLY: "true"
           POST_BY_EMAIL_PUBLICIZE_TITLE_ONLY: "true"
           LOOKBACK_HOURS: "96"
-          MIN_SOURCES_PER_POST: "2"
+          MIN_SOURCES_PER_POST: "1"
           REQUEST_TIMEOUT_SECONDS: "25"
           RUN_LOCK_STALE_SECONDS: "1800"
           TOPIC_FOCUS_KEYWORDS: science,scientists,research,researchers,breakthrough,discovery,experiment,study,physics,biology,chemistry,climate,energy,robotics,space,nasa,astronomy,planet,moon,mars,telescope,galaxy,phone,phones,iphone,ios,android,apple,samsung,pixel,gadget,gadgets,ai,artificial intelligence,software,apps,app,innovation,health,medical,medicine,clinical,patient,treatment,drug,pharmaceutical,biotech,genetics,neuroscience,psychology,fitness,nutrition,wellness
@@ -66,8 +66,8 @@ jobs:
           RECENT_CATEGORY_WINDOW: "8"
           RECENT_CATEGORY_PENALTY: "4"
           ALLOW_SINGLE_SOURCE_PRIORITY_POSTS: "true"
-          SINGLE_SOURCE_PRIORITY_CATEGORIES: science,space
-          SINGLE_SOURCE_MIN_QUALITY: "4"
+          SINGLE_SOURCE_PRIORITY_CATEGORIES: science,space,ai,health,medical,biotech,fitness
+          SINGLE_SOURCE_MIN_QUALITY: "3"
           WP_CREATE_TERMS: "false"
           BLOCKLIST_DOMAINS: ""
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
