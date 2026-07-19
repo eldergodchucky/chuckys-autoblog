@@ -54,6 +54,7 @@ jobs:
           POST_BY_EMAIL_PUBLICIZE_TITLE_ONLY: "true"
           LOOKBACK_HOURS: "96"
           MIN_SOURCES_PER_POST: "1"
+          MIN_CLUSTER_DETAIL_SCORE: "3"
           REQUEST_TIMEOUT_SECONDS: "25"
           RUN_LOCK_STALE_SECONDS: "1800"
           TOPIC_FOCUS_KEYWORDS: science,scientists,research,researchers,breakthrough,discovery,experiment,study,physics,biology,chemistry,climate,energy,robotics,space,nasa,astronomy,planet,moon,mars,telescope,galaxy,phone,phones,iphone,ios,android,apple,samsung,pixel,gadget,gadgets,ai,artificial intelligence,software,apps,app,innovation,health,medical,medicine,clinical,patient,treatment,drug,pharmaceutical,biotech,genetics,neuroscience,psychology,fitness,nutrition,wellness
