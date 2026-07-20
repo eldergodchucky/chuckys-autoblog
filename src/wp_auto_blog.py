@@ -1707,61 +1707,7 @@ def professional_angle(topic: str, categories: list[str], text: str) -> str:
 
 
 def professional_lead(topic: str, categories: list[str], text: str) -> str:
-    if "health" in categories or has_term(text, ("glucose", "biosensor", "metabolic", "medical", "health", "clinical", "patient", "treatment")):
-        return (
-            f"<strong>{html.escape(topic)}</strong> sits at the busy intersection of wearable technology and personal health. "
-            "The promise is useful data; the risk is that readers mistake a consumer signal for a diagnosis, treatment plan, or substitute for professional care."
-        )
-    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
-        return (
-            "Robotaxi progress has moved from the stage-managed demo to the harder test of public roads, real passengers, and messy safety data. "
-            "The robotaxi dream is still alive, but the latest crash reporting is a reminder that progress is slower and more complicated than a launch demo can make it look."
-        )
-    if has_term(text, ("spacex", "dragon", "space station", "resupply", "station", "nasa")):
-        return (
-            "The useful part of this space story is not only the visible mission milestone. "
-            "The real value is in the experiments, supplies, and research opportunities now available aboard the International Space Station."
-        )
-    if "chatgpt" in text and "malta" in text:
-        return (
-            "<strong>OpenAI's Malta partnership</strong> is a notable expansion of consumer AI access, pairing ChatGPT Plus availability "
-            "with training designed to help people use the tools more responsibly. The move turns a premium AI product into something closer "
-            "to public digital infrastructure, at least for the citizens covered by the program."
-        )
-    if "iphone" in text and "china" in text and any(word in text for word in ("discount", "price", "slash", "618")):
-        return (
-            "<strong>Apple's latest iPhone discounts in China</strong> show the company leaning harder on retail promotions ahead of a major "
-            "shopping season. The move is not just about a temporary price cut; it is a signal about competition, demand, and how aggressively "
-            "premium phone makers may need to fight for upgrades."
-        )
-    if has_term(text, ("residual stress", "aircraft", "engine blades", "materials", "reliability", "manufacturing")):
-        return (
-            "This is a science and engineering story with practical weight. Better ways to measure stress inside "
-            "critical aircraft parts could help manufacturers improve reliability, spot risk earlier, and build components that last longer under extreme conditions."
-        )
-    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery")):
-        return (
-            f"<strong>{html.escape(topic)}</strong> is best read as a research story with consequences, not as a novelty headline. "
-            "The question is what the work actually shows, how strong the evidence is, and whether it gives researchers or engineers a more useful way to solve the next problem."
-        )
-    if has_term(text, ("chatgpt", "openai", "ai", "artificial intelligence", "gemini")):
-        return (
-            f"<strong>{html.escape(topic)}</strong> lands in the part of AI that matters most now: not the demo, but the everyday consequence. "
-            "The useful test is whether the change improves real work, trust, access, privacy, cost, or reliability."
-        )
-    if "apple" in categories:
-        return (
-            f"<strong>{html.escape(topic)}</strong> matters because Apple news rarely stays inside one product detail. "
-            "A feature, price move, or software change can quickly affect users, developers, accessories, services, and buying decisions across the wider ecosystem."
-        )
-    if "phones" in categories:
-        return (
-            f"<strong>{html.escape(topic)}</strong> is a phone story with practical stakes: pricing, upgrade timing, software support, camera expectations, and the choices buyers make before locking into another device."
-        )
-    return (
-        f"<strong>{html.escape(topic)}</strong> deserves attention if it changes incentives, habits, costs, trust, or the tools people use every day. "
-        "The useful read is not just what was announced, but what becomes easier, harder, cheaper, riskier, or more widely available because of it."
-    )
+    return f"<strong>{html.escape(topic)}</strong>."
 
 
 def legacy_detail_paragraph(topic: str, cluster: list[Item]) -> str:
@@ -1863,162 +1809,35 @@ def extracted_details(cluster: list[Item]) -> list[str]:
 
 
 def detail_paragraph(topic: str, cluster: list[Item]) -> str:
-    details = extracted_details(cluster)
-    if details:
-        detail_text = human_join(details[:6])
-        return (
-            f"<p>A few details give the story its shape: <strong>{html.escape(detail_text)}</strong>. "
-            "Those are the pieces that keep this from feeling like a vague headline and make it easier to see where the real impact may land.</p>"
-        )
     return ""
 
 
 def direction_paragraph(categories: list[str], text: str) -> str:
-    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
-        return (
-            "<p>Autonomous driving is a rare tech story where the scoreboard is not a spec sheet. The real measure is boring, repeatable competence: miles driven safely, edge cases handled calmly, and fewer moments where a human has to step in.</p>"
-        )
-    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
-        return ""
-    if "space" in categories or has_term(text, ("space", "nasa", "mars", "moon", "telescope", "astronomy")):
-        return (
-            "<p>Space updates can look routine from the outside: a launch, a docking, an instrument check, another mission note. Look closer, though, and they are usually about data, endurance, materials, communications, robotics, or the next piece of exploration infrastructure.</p>"
-        )
     return ""
 
 
 def bigger_picture_paragraphs(categories: list[str], text: str) -> str:
-    if "health" in categories or story_kind(categories, text) == "health":
-        return (
-            "<p>The bigger picture is the consumerization of health data. More sensors are moving from clinics into watches, rings, patches, apps, and subscription platforms, which can help people notice patterns earlier but also creates questions about accuracy, privacy, anxiety, and medical interpretation.</p>"
-        )
-    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
-        return (
-            "<p>Robotaxis sit in an awkward space between product launch and public infrastructure. They are sold like software progress, but they have to behave like transportation: predictable, auditable, and boring enough that people stop thinking about the machine doing the driving.</p>\n"
-            "<p>Even small crash numbers deserve attention here. They give readers a less polished view of the technology than the launch video: where the vehicles struggled, how humans were involved, and whether the service is getting safer as it expands.</p>\n"
-            "<p>Tesla has spent years making autonomy sound inevitable. The harder question is not whether the company can make a robotaxi move through a city. It is whether it can make the service reliable enough that regulators, riders, pedestrians, and other drivers trust it at scale.</p>"
-        )
-    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
-        return (
-            "<p>The bigger picture is whether this work changes the tools available to researchers or engineers. A narrow finding becomes important when it improves measurement, reduces uncertainty, or gives other teams a method they can test against their own data.</p>"
-        )
-    if "space" in categories or has_term(text, ("space", "nasa", "mars", "moon", "telescope", "astronomy")):
-        return (
-            "<p>The bigger picture is not exploration for its own sake. It is the way every mission creates data, tests hardware, and pushes systems to survive conditions that ordinary technology never faces.</p>"
-        )
-    return (
-        "<p>The bigger picture is the pressure underneath the announcement: price, timing, availability, competition, platform loyalty, and whether the product or feature is useful after the first wave of attention passes.</p>"
-    )
+    return ""
 
 
 def why_extra_paragraph(categories: list[str], text: str) -> str:
-    if "health" in categories or story_kind(categories, text) == "health":
-        return (
-            "<p>It also matters because health data can feel more authoritative than it really is. A number on a screen may be useful, but it still needs context: the sensor, the person, the condition being monitored, and whether a qualified professional should interpret the result.</p>"
-        )
-    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
-        return (
-            "<p>It also matters because the public does not experience autonomy as a roadmap. People experience it as a car turning, braking, merging, hesitating, or making a mistake in front of them. That gap between ambition and lived experience is where trust is either built or lost.</p>"
-        )
-    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
-        return (
-            "<p>It also matters because scientific progress often arrives quietly. A method can improve before the public ever sees a new product, and that improvement can later influence safety standards, manufacturing choices, research tools, or the way engineers solve old problems.</p>"
-        )
-    if "space" in categories or has_term(text, ("space", "nasa", "mars", "moon", "telescope", "astronomy")):
-        return (
-            "<p>It also matters because space research has a habit of producing side effects: better instruments, tougher materials, sharper data, smarter robotics, and new ways to think about problems back on Earth.</p>"
-        )
-    return (
-        "<p>It also matters because these stories often reveal the real strategy behind polished product announcements. A company may talk about access, education, performance, or value, but the deeper goal is usually to strengthen the ecosystem, grow user habits, and make the next paid service or device feel harder to ignore.</p>"
-    )
+    return ""
 
 
 def practical_question_paragraph(categories: list[str], text: str) -> str:
-    if "health" in categories or story_kind(categories, text) == "health":
-        return (
-            "<p>The practical question is whether the product gives users clearer information without overstating what it can prove. Readers should look for accuracy claims, regulatory status, privacy terms, cost, availability, and whether the company clearly explains when to seek medical advice.</p>"
-        )
-    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
-        return (
-            "<p>The practical question is simple and uncomfortable: is the service improving fast enough to justify expanding it? Crash reports, human intervention notes, and deployment limits are not side details. They are the evidence that shows whether the technology is becoming safer or just becoming more visible.</p>"
-        )
-    if "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply")):
-        return (
-            "<p>So the better question is not just whether the docking succeeded. It is what the mission enables: which experiments can begin, what kind of data researchers expect, and whether any of it feeds into medicine, materials, robotics, life-support systems, or future exploration.</p>"
-        )
-    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
-        return (
-            "<p>The useful question is what the finding changes: whether it improves a method, confirms a theory, reduces risk, makes a tool more accurate, or opens a path for future work.</p>"
-        )
-    return (
-        "<p>The practical question is what changes after the headline: price, availability, compatibility, trust, convenience, or timing. That is what decides whether a tech story becomes useful or disappears after a day of attention.</p>"
-    )
+    return ""
 
 
 def missing_details_paragraph(categories: list[str], text: str) -> str:
-    if "health" in categories or story_kind(categories, text) == "health":
-        return (
-            "<p>The missing details matter. Readers should look for validation data, sensor limitations, subscription pricing, region availability, privacy policy details, and clear guidance about who should or should not rely on the product.</p>"
-        )
-    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
-        return (
-            "<p>The missing details matter. Readers should watch how many miles the cars are driving, when safety monitors are present, what conditions trigger problems, and whether incident rates improve as the fleet grows.</p>"
-        )
-    if "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply")):
-        return (
-            "<p>The missing details are just as important as the headline. Mission updates often announce that experiments have arrived before the results are known, so the next useful information will come from what researchers learn after the work begins in orbit.</p>"
-        )
-    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
-        return (
-            "<p>The missing details are just as important as the confirmed ones. Readers should watch whether the work is peer-reviewed, whether the method can be repeated, and whether other teams build on it or challenge it.</p>"
-        )
-    return (
-        "<p>The missing details are just as important as the confirmed ones. If a report does not clearly explain pricing, regions, release timing, device support, privacy rules, or long-term availability, readers should treat the news as useful but unfinished.</p>"
-    )
+    return ""
 
 
 def bottom_line_paragraph(topic: str, categories: list[str], text: str) -> str:
-    if "health" in categories or story_kind(categories, text) == "health":
-        return (
-            "<p>The opportunity is better personal insight. The caution is that health data is not the same as medical judgment, and the most useful products will be the ones that make that distinction clear.</p>"
-        )
-    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
-        return (
-            "<p>The next phase will be judged by safety, transparency, and whether robotaxis can earn trust one uneventful ride at a time.</p>"
-        )
-    if "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply")):
-        return (
-            "<p>Space science turns ambition into a ledger of data, failures, fixes and measured progress. The visible moment is only the opening entry; the real value comes from what the mission reveals next.</p>"
-        )
-    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
-        return (
-            "<p>Not every early result becomes a revolution, but the useful ones reveal where knowledge is becoming sturdier. The question is whether the evidence survives follow-up work.</p>"
-        )
-    return (
-        "<p>Technology changes through pressure as much as invention: pricing, regulation, supply chains, user habits and the slow work of making things reliable. The story now is whether this early signal turns into real consequence.</p>"
-    )
+    return ""
 
 
 def real_world_effect_paragraph(categories: list[str], text: str) -> str:
-    if "health" in categories or story_kind(categories, text) == "health":
-        return (
-            "<p>The best move is to separate the health signal from the medical conclusion. A device can show a trend or measurement, but the serious question is how accurately it measures, how the company explains uncertainty, and whether users know when professional care is needed.</p>"
-        )
-    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
-        return (
-            "<p>The best move is to separate the promise from the road test. A robotaxi program can sound impressive in a presentation, but the real story is what happens in traffic, around pedestrians, during edge cases, and under the kind of boring conditions that reveal whether a system is actually ready.</p>"
-        )
-    if "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply")):
-        return (
-            "<p>The best move is to separate the mission milestone from the research payoff. Docking is visible and dramatic, but the value builds later as experiments run, samples are studied, and researchers explain what the orbital environment helped them learn.</p>"
-        )
-    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
-        return (
-            "<p>The best move is to separate the initial finding from the real-world effect. A study can be promising without being final, and the strongest science stories become more important when other researchers test, refine, and apply the work.</p>"
-        )
-    return (
-        "<p>The best move is to separate the announcement from the real-world effect. A feature can sound impressive before anyone tests it properly. A discount can look generous while still being limited by model, region, trade-in rules, or stock. A free offer can be valuable, but it can also be designed to create a habit that later becomes paid.</p>"
-    )
+    return ""
 
 
 def story_kind(categories: list[str], text: str) -> str:
