@@ -2207,7 +2207,7 @@ def collect_source_sentences(cluster: list[Item]) -> list[tuple[str, list[str]]]
         raw = _branding_re.sub("", raw).strip()
         raw = fix_mojibake(strip_html(raw))
         raw = re.sub(r"\s+", " ", raw).strip()
-        sentences = [s.strip() for s in _sent_re.split(raw) if len(s.strip()) >= 40]
+        sentences = [s.strip() for s in _sent_re.split(raw) if len(s.strip()) >= 10]
         if item.source_name not in grouped:
             grouped[item.source_name] = []
         grouped[item.source_name].extend(sentences)
