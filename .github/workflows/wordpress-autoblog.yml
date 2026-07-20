@@ -52,11 +52,11 @@ jobs:
           SOCIAL_SHARE_TITLE_ONLY: "true"
           X_SHARE_TITLE_ONLY: "true"
           POST_BY_EMAIL_PUBLICIZE_TITLE_ONLY: "true"
-          LOOKBACK_HOURS: "96"
+          LOOKBACK_HOURS: "168"
           MIN_SOURCES_PER_POST: "1"
           MIN_CLUSTER_DETAIL_SCORE: "1"
-          REQUEST_TIMEOUT_SECONDS: "25"
-          RUN_LOCK_STALE_SECONDS: "900"
+          REQUEST_TIMEOUT_SECONDS: "30"
+          RUN_LOCK_STALE_SECONDS: "600"
           TOPIC_FOCUS_KEYWORDS: science,scientists,research,researchers,breakthrough,discovery,experiment,study,physics,biology,chemistry,climate,energy,robotics,space,nasa,astronomy,planet,moon,mars,telescope,galaxy,phone,phones,iphone,ios,android,apple,samsung,pixel,gadget,gadgets,ai,artificial intelligence,software,apps,app,innovation,health,medical,medicine,clinical,patient,treatment,drug,pharmaceutical,biotech,genetics,neuroscience,psychology,fitness,nutrition,wellness
           CATEGORY_ROTATION: science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks,health,medical,biotech,fitness
           CATEGORY_WEIGHTS: science=6,space=6,ai=6,gadgets=6,security=6,tutorials=6,hacks=6,phones=6,apple=6,android=6,software=6,health=6,medical=6,biotech=5,fitness=5,tech=4
