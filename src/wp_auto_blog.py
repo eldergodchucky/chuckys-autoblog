@@ -2007,8 +2007,7 @@ def editorial_nut_graph(categories: list[str], text: str) -> str:
 def collect_source_sentences(cluster: list[Item]) -> list[tuple[str, list[str]]]:
     """Split each item's summary into clean sentences, grouped by source.
 
-    Uses only item.summary (not the title) so the title is not injected as a
-    duplicate sentence inside the article body.
+    Uses both item.title and item.summary to maximize content when summaries are short.
     """
     grouped: dict[str, list[str]] = {}
     # Sentence splitter: split after . ! ? that are followed by whitespace+uppercase,
@@ -2022,11 +2021,12 @@ def collect_source_sentences(cluster: list[Item]) -> list[tuple[str, list[str]]]
         re.IGNORECASE | re.DOTALL,
     )
     for item in cluster:
-        raw = item.summary or ""
+        # Use both title and summary to get more content
+        raw = f"{item.title or ''} {item.summary or ''}"
         raw = _branding_re.sub("", raw).strip()
         raw = fix_mojibake(strip_html(raw))
         raw = re.sub(r"\s+", " ", raw).strip()
-        sentences = [s.strip() for s in _sent_re.split(raw) if len(s.strip()) >= 10]
+        sentences = [s.strip() for s in _sent_re.split(raw) if len(s.strip()) >= 8]
         if item.source_name not in grouped:
             grouped[item.source_name] = []
         grouped[item.source_name].extend(sentences)
@@ -2063,7 +2063,43 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
     if not grouped:
         return f'<p>{html.escape(clean_text(topic, max_len=5000))}.</p>'
 
-    # Collect, deduplicate, and clean every sentence across all sources
+    # For single-source posts, use simpler approach with less filtering
+    if source_count == 1:
+        all_sentences = []
+        for _source_name, sentences in grouped:
+            for s in sentences:
+                s = s.strip()
+                if s and len(s) >= 8:
+                    # Basic cleanup
+                    s = re.sub(r'[,\s.]+$', '', s).strip()
+                    if s:
+                        all_sentences.append(s + ".")
+        
+        if not all_sentences:
+            # Ultimate fallback
+            fallback_sentences = re.split(r'(?<=[.!?])\s+', full_text)
+            for sent in fallback_sentences:
+                sent = sent.strip()
+                if sent and len(sent) >= 8:
+                    all_sentences.append(sent + ".")
+        
+        if all_sentences:
+            # Group into paragraphs of 2-3 sentences
+            paragraphs = []
+            for i in range(0, len(all_sentences), 2):
+                chunk = all_sentences[i:i+2]
+                paragraphs.append(" ".join(chunk))
+            
+            # Add numeric facts if available
+            numeric_facts = extract_numeric_facts(full_text)
+            if numeric_facts:
+                paragraphs.append(f"{numeric_facts}.")
+            
+            return "\n".join(f"<p>{html.escape(p)}</p>" for p in paragraphs if p.strip())
+        
+        return f'<p>{html.escape(clean_text(topic, max_len=5000))}.</p>'
+
+    # Multi-source posts: use filtering logic
     all_sentences: list[str] = []
     seen_keys: set[str] = set()
 
@@ -2072,11 +2108,11 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
 
     def _add(sent: str) -> None:
         sent = sent.strip()
-        if not sent or len(sent) < 15:
+        if not sent or len(sent) < 8:
             return
         # Strip trailing punctuation/ellipsis artifacts (incl. comma-period combos)
         sent = re.sub(r'[,\s.]+$', '', sent).strip()
-        if not sent or len(sent) < 15:
+        if not sent or len(sent) < 8:
             return
         # Capitalise first letter if needed
         if not sent[0].isupper():
@@ -2100,7 +2136,7 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
         fallback_sentences = re.split(r'(?<=[.!?])\s+', full_text)
         for sent in fallback_sentences:
             sent = sent.strip()
-            if sent and len(sent) >= 10:
+            if sent and len(sent) >= 8:
                 all_sentences.append(sent + ".")
         if not all_sentences:
             return f'<p>{html.escape(clean_text(topic, max_len=5000))}.</p>'
