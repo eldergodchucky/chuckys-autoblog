@@ -2253,11 +2253,11 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
 
     def _add(sent: str) -> None:
         sent = sent.strip()
-        if not sent or len(sent) < 30:
+        if not sent or len(sent) < 15:
             return
         # Strip trailing punctuation/ellipsis artifacts (incl. comma-period combos)
         sent = re.sub(r'[,\s.]+$', '', sent).strip()
-        if not sent or len(sent) < 30:
+        if not sent or len(sent) < 15:
             return
         # Capitalise first letter if needed
         if not sent[0].isupper():
@@ -2277,18 +2277,25 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
             _add(s)
 
     if not all_sentences:
-        return f'<p>{html.escape(clean_text(topic, max_len=5000))}.</p>'
+        # Fallback: use the full summary text split into sentences
+        fallback_sentences = re.split(r'(?<=[.!?])\s+', full_text)
+        for sent in fallback_sentences:
+            sent = sent.strip()
+            if sent and len(sent) >= 10:
+                all_sentences.append(sent + ".")
+        if not all_sentences:
+            return f'<p>{html.escape(clean_text(topic, max_len=5000))}.</p>'
 
-    # Build HTML paragraphs: 3 sentences for the opener, then 4-5 each for longer articles
+    # Build HTML paragraphs: 2-3 sentences for the opener, then 3-4 each for longer articles
     paragraphs: list[str] = []
     remaining = list(all_sentences)
 
-    first_chunk = remaining[:3]
-    remaining = remaining[3:]
+    first_chunk = remaining[:2]
+    remaining = remaining[2:]
     paragraphs.append(" ".join(first_chunk))
 
     while remaining:
-        size = min(5, len(remaining))
+        size = min(4, len(remaining))
         paragraphs.append(" ".join(remaining[:size]))
         remaining = remaining[size:]
 
