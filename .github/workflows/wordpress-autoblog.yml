@@ -47,7 +47,7 @@ jobs:
           AUTO_PUBLISH_CONFIRM: I_UNDERSTAND_POSTS_GO_LIVE
           ARTICLE_GENERATOR: free
           HERO_IMAGE_MODE: real
-          MAX_POSTS_PER_RUN: "1"
+          MAX_POSTS_PER_RUN: "3"
           MAX_POSTS_PER_DAY: "200"
           SOCIAL_SHARE_TITLE_ONLY: "true"
           X_SHARE_TITLE_ONLY: "true"
