@@ -772,11 +772,11 @@ def build_clusters(items: list[Item], min_sources: int) -> list[list[Item]]:
             if candidate.source_name == item.source_name and len(cluster) < min_sources:
                 continue
             shared_terms = item_tokens[item.uid] & item_tokens[candidate.uid]
-            if len(shared_terms) < 2:
+            if len(shared_terms) < 1:
                 continue
             similarity = jaccard(item_tokens[item.uid], item_tokens[candidate.uid])
             same_category = item.source_category == candidate.source_category
-            if similarity >= 0.16 or (same_category and similarity >= 0.10):
+            if similarity >= 0.08 or (same_category and similarity >= 0.05):
                 cluster.append(candidate)
                 used.add(candidate.uid)
                 cluster_links.add(candidate.link)
