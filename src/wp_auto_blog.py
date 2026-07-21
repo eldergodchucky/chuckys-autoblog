@@ -2339,14 +2339,18 @@ def email_shortcodes(article: dict[str, Any]) -> list[str]:
     if tags:
         shortcodes.append(f"[tags {', '.join(tags)}]")
     publicize = os.getenv("POST_BY_EMAIL_PUBLICIZE", "").strip().lower()
+    title_only = env_bool("POST_BY_EMAIL_PUBLICIZE_TITLE_ONLY", True)
     if publicize == "off":
         # Explicit opt-out: disable all social sharing for this post
         shortcodes.append("[publicize off]")
-    else:
-        # Default: share with title-only message to ALL connected social platforms
+    elif title_only:
+        # Title-only sharing to ALL connected social platforms
         # (Bluesky, Mastodon, Facebook, Tumblr, etc.) via Jetpack Social / Publicize.
-        # [publicize]...[/publicize] sets a custom message for every connected service.
-        # Title-only keeps shares clean and uncluttered across all platforms.
+        title = str(article.get("title", "")).strip()
+        if title:
+            shortcodes.append(f"[publicize]{title}[/publicize]")
+    else:
+        # Full template sharing (not recommended - can cause double titles)
         title = str(article.get("title", "")).strip()
         if title:
             shortcodes.append(f"[publicize]{title}[/publicize]")
@@ -2641,20 +2645,6 @@ def run_once(args: argparse.Namespace) -> int:
     try:
         feeds = load_config()
         conn = init_db()
-        if not args.dry_run:
-            max_posts_per_day = max(1, env_int("MAX_POSTS_PER_DAY", 24))
-            posted_today = todays_post_count(conn)
-            if posted_today >= max_posts_per_day:
-                message = f"Daily cap reached: {posted_today}/{max_posts_per_day} posts already sent today."
-                print(message)
-                write_run_status(
-                    "skipped",
-                    message,
-                    dry_run=False,
-                    posted_today=posted_today,
-                    max_posts_per_day=max_posts_per_day,
-                )
-                return 0
 
         print(f"Fetching {len(feeds)} enabled feeds...")
         items, errors = fetch_all(feeds, timeout)
