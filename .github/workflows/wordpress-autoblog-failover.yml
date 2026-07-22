@@ -2,7 +2,7 @@ name: WordPress Auto Blog Failover
 
 on:
   schedule:
-    - cron: "7,22,37,52 * * * *"
+    - cron: "2,7,12,17,22,27,32,37,42,47,52,57 * * * *"
   workflow_dispatch:
 
 permissions:
