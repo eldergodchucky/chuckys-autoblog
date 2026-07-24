@@ -1,13 +1,31 @@
 {
-  "active_main_runs": [],
+  "active_main_runs": [
+    {
+      "age_minutes": 0,
+      "created_at": "2026-07-24T11:26:29Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30089570395",
+      "id": 30089570395,
+      "status": "in_progress"
+    }
+  ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-07-24T07:12:13.880917+00:00",
-  "fresh_main_runs": [],
+  "finished_at": "2026-07-24T11:27:26.700657+00:00",
+  "fresh_main_runs": [
+    {
+      "age_minutes": 0,
+      "created_at": "2026-07-24T11:26:29Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30089570395",
+      "id": 30089570395,
+      "status": "in_progress"
+    }
+  ],
   "github_error": "",
-  "latest_age_minutes": 4,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/07/24/oppo-a7-pro-max-might-have-just-run-geekbench-confirming-its-soc-and-ram-amount/",
-  "latest_published_at": "2026-07-24T07:07:41+00:00",
-  "latest_title": "Oppo A7 Pro Max might have just run Geekbench, confirming its SoC and RAM amount",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/07/24/hackaday-europe-2026-half-quad/",
+  "latest_published_at": "2026-07-24T11:27:22+00:00",
+  "latest_title": "Hackaday Europe 2026: Half Quad",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
