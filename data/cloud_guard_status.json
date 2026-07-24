@@ -1,31 +1,13 @@
 {
-  "active_main_runs": [
-    {
-      "age_minutes": 0,
-      "created_at": "2026-07-24T11:26:29Z",
-      "event": "schedule",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30089570395",
-      "id": 30089570395,
-      "status": "in_progress"
-    }
-  ],
+  "active_main_runs": [],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-07-24T11:27:26.700657+00:00",
-  "fresh_main_runs": [
-    {
-      "age_minutes": 0,
-      "created_at": "2026-07-24T11:26:29Z",
-      "event": "schedule",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30089570395",
-      "id": 30089570395,
-      "status": "in_progress"
-    }
-  ],
+  "finished_at": "2026-07-24T13:03:45.009746+00:00",
+  "fresh_main_runs": [],
   "github_error": "",
-  "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/07/24/hackaday-europe-2026-half-quad/",
-  "latest_published_at": "2026-07-24T11:27:22+00:00",
-  "latest_title": "Hackaday Europe 2026: Half Quad",
+  "latest_age_minutes": 4,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/07/24/apple-s-trade-secrets-lawsuit-against-openai-reassigned-to-new-judge/",
+  "latest_published_at": "2026-07-24T12:58:50+00:00",
+  "latest_title": "Apple\u2019s trade secrets lawsuit against OpenAI reassigned to new judge",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
