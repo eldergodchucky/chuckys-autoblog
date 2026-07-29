@@ -1,13 +1,31 @@
 {
-  "active_main_runs": [],
+  "active_main_runs": [
+    {
+      "age_minutes": 0,
+      "created_at": "2026-07-29T14:52:57Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30463082801",
+      "id": 30463082801,
+      "status": "in_progress"
+    }
+  ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-07-29T10:12:22.677248+00:00",
-  "fresh_main_runs": [],
+  "finished_at": "2026-07-29T14:53:54.317579+00:00",
+  "fresh_main_runs": [
+    {
+      "age_minutes": 0,
+      "created_at": "2026-07-29T14:52:57Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30463082801",
+      "id": 30463082801,
+      "status": "in_progress"
+    }
+  ],
   "github_error": "",
-  "latest_age_minutes": 4,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/07/29/building-a-portable-weather-radar/",
-  "latest_published_at": "2026-07-29T10:07:53+00:00",
-  "latest_title": "Building a Portable Weather Radar",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/07/29/picojig-control-peripherals-gpio/",
+  "latest_published_at": "2026-07-29T14:53:50+00:00",
+  "latest_title": "PicoJig: control peripherals (GPIO",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 90,
