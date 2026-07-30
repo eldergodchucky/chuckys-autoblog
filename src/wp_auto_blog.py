@@ -772,11 +772,11 @@ def build_clusters(items: list[Item], min_sources: int) -> list[list[Item]]:
             if candidate.source_name == item.source_name and len(cluster) < min_sources:
                 continue
             shared_terms = item_tokens[item.uid] & item_tokens[candidate.uid]
-            if len(shared_terms) < 1:
+            # Require at least 3 matching tokens and high Jaccard threshold to prevent grouping unrelated news
+            if len(shared_terms) < 3:
                 continue
             similarity = jaccard(item_tokens[item.uid], item_tokens[candidate.uid])
-            same_category = item.source_category == candidate.source_category
-            if similarity >= 0.08 or (same_category and similarity >= 0.05):
+            if similarity >= 0.22:
                 cluster.append(candidate)
                 used.add(candidate.uid)
                 cluster_links.add(candidate.link)
@@ -999,11 +999,18 @@ def compact_topic_from_title(title: str) -> str:
 
 
 def topic_from_cluster(cluster: list[Item]) -> str:
-    candidates = [compact_topic_from_title(item.title) for item in cluster]
-    clean = [candidate for candidate in candidates if 4 <= len(candidate.split()) <= 12]
-    if not clean:
-        return candidates[0] if candidates else "Tech Signals"
-    return sorted(clean, key=lambda value: (abs(len(value.split()) - 8), len(value)))[0]
+    if not cluster:
+        return "Tech Signals"
+    lead_item = cluster[0]
+    title = clean_text(lead_item.title, max_len=140)
+    title = re.sub(r"\s+", " ", title).strip(" .,:;|-")
+    for sep in (" | ", " -- ", " - "):
+        if sep in title:
+            parts = title.split(sep)
+            if len(parts[0].split()) >= 4:
+                title = parts[0].strip()
+                break
+    return title or "Tech Signals"
 
 
 def load_image_font(size: int, bold: bool = False) -> Any:
@@ -2051,115 +2058,309 @@ def extract_numeric_facts(text: str) -> str:
     return ""
 
 
-def full_article_sections(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
-    """Build the main article body from the cluster's source summaries.
+def _category_background_prose(kind: str, topic: str) -> str:
+    """Return one or two sentences of rich factual background context for a given story kind."""
+    backgrounds: dict[str, str] = {
+        "ai": (
+            "Artificial intelligence has shifted from a niche research discipline into one of the most commercially contested "
+            "areas of the technology industry. Every major platform — from search engines to office productivity suites, "
+            "smartphone cameras to customer-service tools — is integrating AI-generated capabilities at a pace that is "
+            "reshaping user expectations and competitive dynamics in equal measure. The challenge for developers and "
+            "consumers alike is distinguishing genuine capability gains from overhyped demonstrations that underdeliver "
+            "once the novelty fades."
+        ),
+        "space": (
+            "Space exploration has entered a new phase characterised by overlapping ambitions: national agencies competing "
+            "with commercial launch providers, reusable rockets changing the economics of orbital access, and an expanding "
+            "roster of countries and private companies building or operating satellites. Behind the public spectacle of "
+            "launches and landings lies a slower but equally important story — the patient accumulation of engineering "
+            "knowledge, mission data, and scientific measurement that makes subsequent missions less uncertain and more "
+            "capable than those before."
+        ),
+        "science": (
+            "Scientific research rarely delivers finished answers in the form that headlines suggest. A single study or "
+            "experiment typically establishes a narrower point, adds a new instrument to an existing field, or identifies "
+            "a productive question worth pursuing further. The most durable science news is found not in the dramatic "
+            "claim, but in the methodological improvement that allows researchers to measure something they could not "
+            "measure before — thereby enabling a cleaner test of hypotheses that matter for medicine, engineering, "
+            "climate, or materials science."
+        ),
+        "health": (
+            "Consumer health technology occupies a particularly sensitive position in the broader device market. "
+            "Products that measure heart rate, blood oxygen, glucose levels, or sleep patterns sit at the intersection "
+            "of engineering precision and medical interpretation, and the gap between those two disciplines can be "
+            "significant. Regulatory scrutiny, clinical validation standards, and privacy obligations for biometric data "
+            "all add complexity that marketing language does not always reflect accurately."
+        ),
+        "phones": (
+            "The smartphone industry has reached a level of hardware maturity where the most meaningful competitive "
+            "changes are incremental rather than revolutionary: battery chemistry improvements measured in percentage "
+            "points, camera sensor upgrades that sharpen low-light performance, and software features that alter daily "
+            "habits rather than redefine the device category. In this environment, each announcement carries weight "
+            "for buyers and developers because the gap between market leaders and their competitors has narrowed, making "
+            "seemingly small differences in support timelines, repairability, or pricing more consequential than they "
+            "once appeared."
+        ),
+        "security": (
+            "Cybersecurity threats have become a persistent operational concern rather than an occasional headline event. "
+            "The combination of increasingly sophisticated attack tooling, a large population of unpatched or "
+            "poorly-maintained devices, and the financial incentives of ransomware and credential markets has created "
+            "a threat landscape that rewards speed: attackers who exploit a disclosed vulnerability in hours or days "
+            "can reach hundreds of thousands of devices before patches are widely deployed."
+        ),
+        "gadgets": (
+            "Consumer hardware continues to fragment across categories that did not exist a decade ago. Smartwatches, "
+            "wireless earbuds, foldable phones, AR glasses, and AI-embedded cameras each represent a new surface on "
+            "which software and hardware manufacturers compete for attention and spending. The practical test for any "
+            "new gadget remains whether it improves daily life in a way that is durable past the first week of use — "
+            "a bar that fewer products clear than launch-day reviews might suggest."
+        ),
+        "software": (
+            "Software updates have become one of the most powerful levers platform companies use to reshape user "
+            "behaviour, developer incentives, and competitive positioning. A seemingly minor change to an API, "
+            "a privacy setting, or a default application can redirect billions of interactions per day and alter the "
+            "economics of entire app ecosystems. The stakes for developers and users both increase as software becomes "
+            "harder to avoid or replace, making the details of each release more important than the headline version "
+            "number."
+        ),
+        "autonomous": (
+            "Autonomous vehicles remain in the most difficult transition in transportation technology: proven enough "
+            "to deploy commercially in limited geographies, yet still producing incidents that underscore how much "
+            "engineering work remains before true general-purpose self-driving can be considered safe by the standards "
+            "regulators and the public will require."
+        ),
+    }
+    return backgrounds.get(kind, (
+        "The technology industry continues to produce developments at a pace that outstrips the capacity of any single "
+        "reader to follow every thread. The useful discipline is not to track every story but to identify which "
+        "developments alter the incentives, capabilities, or constraints that shape products, platforms, and user "
+        "experiences over a meaningful time horizon."
+    ))
 
-    Produces clean, professional paragraphs extracted from the RSS summaries
-    without any formulaic section headers, analytical filler, or repeated
-    injections of the article title.
+
+def _category_forward_look(kind: str) -> str:
+    """Return a forward-looking closing paragraph for a given story kind."""
+    looks: dict[str, str] = {
+        "ai": (
+            "The near-term indicators worth tracking are whether the capability in question reaches production "
+            "deployment at scale, how accuracy and reliability hold up outside controlled demonstrations, and whether "
+            "the privacy and cost implications for end users are disclosed clearly enough to support informed choices."
+        ),
+        "space": (
+            "The indicators that matter in the months ahead are mission timeline adherence, the quality and volume of "
+            "scientific data returned, and whether the engineering lessons from this work feed meaningfully into "
+            "follow-on missions or spacecraft design decisions."
+        ),
+        "science": (
+            "Follow-up research will determine whether today's findings can be replicated across different experimental "
+            "conditions, larger sample sizes, or alternative methodologies — the standard sequence by which a "
+            "promising result graduates from early signal to established knowledge."
+        ),
+        "health": (
+            "The questions that matter going forward are whether independent clinical validation confirms the accuracy "
+            "claims being made, how regulatory bodies in major markets will classify and oversee the product or "
+            "research, and whether access and pricing allow the claimed benefits to reach the populations most likely "
+            "to benefit from them."
+        ),
+        "phones": (
+            "For buyers, the most useful next steps are to watch for hands-on reviews that test real-world "
+            "battery life, camera performance across conditions, and software support commitments from the manufacturer "
+            "— the three factors that most reliably predict whether a phone remains a good choice after the first year."
+        ),
+        "security": (
+            "The immediate priority for affected users or organisations is to confirm whether any required patches "
+            "or mitigations are already available, apply them before the vulnerability is more widely exploited, "
+            "and review access logs for any signs that the issue has already been leveraged in their environment."
+        ),
+        "gadgets": (
+            "The longer-term test for this category of hardware is sustained usability: whether the battery performance, "
+            "build quality, software update frequency, and parts availability hold up well enough over twelve to "
+            "twenty-four months to justify the purchase relative to alternatives."
+        ),
+        "software": (
+            "The rollout timeline and the specific version or platform requirements are the details that matter most "
+            "for users planning around this update. Feature announcements frequently precede general availability by "
+            "weeks or months, and the experience of early adopters often differs substantially from what the initial "
+            "announcement describes."
+        ),
+        "autonomous": (
+            "Regulatory filings, independent incident reports, and expansion announcements from the companies involved "
+            "will provide the clearest signal of whether autonomous vehicle programmes are advancing on a credible "
+            "safety trajectory or encountering obstacles that will delay broader public deployment."
+        ),
+    }
+    return looks.get(kind, (
+        "The next developments worth watching are official confirmation of the details being reported, the response "
+        "of competitors or complementary platforms, and whether the change materially affects pricing, "
+        "compatibility, or the everyday experience of the users most directly in its path."
+    ))
+
+
+def _build_source_section(item: Item, index: int, kind: str) -> str:
+    """Build a rich elaborated HTML section for a single source item."""
+    title = clean_text(item.title, max_len=170)
+    summary = clean_text(item.summary, max_len=500)
+    source = html.escape(item.source_name)
+    link = html.escape(item.link)
+    title_html = html.escape(title)
+
+    # Build a meaningful lead sentence
+    if index == 0:
+        reporter_phrase = f'<a href="{link}">{source}</a> reports'
+    else:
+        phrases = [
+            f'Adding to the picture, <a href="{link}">{source}</a> notes',
+            f'<a href="{link}">{source}</a> offers further context, reporting',
+            f'Coverage from <a href="{link}">{source}</a> adds',
+        ]
+        reporter_phrase = phrases[min(index - 1, len(phrases) - 1)]
+
+    # Elaborate on the summary with category-specific framing
+    elaboration_map: dict[str, str] = {
+        "ai": "The development is part of a broader shift in how AI capabilities are being integrated into software layers that users interact with every day, raising questions about accuracy, user control, and the pace at which these changes are tested before reaching production.",
+        "space": "This report adds detail to a mission profile that, like most modern space operations, combines the public-facing drama of hardware milestones with the slower, less visible work of collecting, calibrating, and interpreting scientific data.",
+        "science": "Research of this kind typically serves as a building block rather than a conclusion: it refines measurement methods, challenges existing assumptions, or opens up experimental paths that were not previously tractable.",
+        "health": "As with much consumer health technology, the significance of this development depends on the robustness of the underlying clinical validation, the transparency of the accuracy claims, and the safeguards in place to prevent raw sensor data from being interpreted as medical advice.",
+        "phones": "For consumers weighing upgrade decisions, the detail matters because it sits in the category of product attributes — support longevity, camera consistency, and software reliability — that determine a phone's real value over two or three years of use.",
+        "security": "Security disclosures like this require a careful reading: the severity of the vulnerability, the conditions required to exploit it, the availability of a patch, and the realistic exposure profile of the affected systems all determine how urgently action is needed.",
+        "gadgets": "Consumer hardware announcements benefit from a dose of scepticism at launch: build quality, battery longevity, software update cadence, and third-party repair availability are characteristics that only become clear through extended use rather than controlled demonstrations.",
+        "software": "Software changes of this nature tend to have a wider blast radius than the initial announcement implies, particularly for third-party developers, accessibility tool maintainers, and enterprise environments where the update path is slower and more tightly controlled.",
+        "autonomous": "Autonomous vehicle developments sit in a uniquely scrutinised category where public trust is earned through consistent safety performance across diverse road conditions rather than through landmark demonstrations conducted under ideal circumstances.",
+    }
+    elaboration = elaboration_map.get(kind, "This kind of development is worth monitoring because its practical impact tends to emerge gradually, as the initial announcement is followed by implementation details, user experience reports, and competitive responses.")
+
+    parts = [f'<p>{reporter_phrase} that <strong>{title_html}</strong>.']
+    if summary and summary.lower().strip().rstrip('.') != title.lower().strip().rstrip('.'):
+        parts[0] += f' {html.escape(summary)}'
+    parts[0] += '</p>'
+    parts.append(f'<p>{html.escape(elaboration)}</p>')
+    return '\n'.join(parts)
+
+
+def full_article_sections(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
+    """Build a comprehensive, elaborated article body well beyond raw RSS content.
+
+    Produces structured HTML with an intro, per-source elaborated sections, rich
+    category-specific context, a reader impact section, and a forward-looking
+    conclusion — targeting 700-1000+ words of real content per article.
     """
     full_text = " ".join(f"{item.title} {item.summary}" for item in cluster)
-    grouped = collect_source_sentences(cluster)
-    if not grouped:
-        return f'<p>{html.escape(clean_text(topic, max_len=5000))}.</p>'
+    kind = story_kind(categories, full_text)
+    text_lower = full_text.lower()
 
-    # For single-source posts, use simpler approach with less filtering
-    if source_count == 1:
-        all_sentences = []
-        for _source_name, sentences in grouped:
-            for s in sentences:
-                s = s.strip()
-                if s and len(s) >= 8:
-                    # Basic cleanup
-                    s = re.sub(r'[,\s.]+$', '', s).strip()
-                    if s:
-                        all_sentences.append(s + ".")
-        
-        if not all_sentences:
-            # Ultimate fallback
-            fallback_sentences = re.split(r'(?<=[.!?])\s+', full_text)
-            for sent in fallback_sentences:
-                sent = sent.strip()
-                if sent and len(sent) >= 8:
-                    all_sentences.append(sent + ".")
-        
-        if all_sentences:
-            # Group into paragraphs of 2-3 sentences
-            paragraphs = []
-            for i in range(0, len(all_sentences), 2):
-                chunk = all_sentences[i:i+2]
-                paragraphs.append(" ".join(chunk))
-            
-            # Add numeric facts if available
-            numeric_facts = extract_numeric_facts(full_text)
-            if numeric_facts:
-                paragraphs.append(f"{numeric_facts}.")
-            
-            return "\n".join(f"<p>{html.escape(p)}</p>" for p in paragraphs if p.strip())
-        
-        return f'<p>{html.escape(clean_text(topic, max_len=5000))}.</p>'
+    # ── 1. OPENING / CONTEXT PARAGRAPH ────────────────────────────────────────
+    source_names = list({item.source_name for item in cluster})
+    if len(source_names) == 1:
+        source_attribution = f'<a href="{html.escape(cluster[0].link)}">{html.escape(source_names[0])}</a>'
+    elif len(source_names) == 2:
+        s1, s2 = cluster[:2]
+        source_attribution = f'<a href="{html.escape(s1.link)}">{html.escape(s1.source_name)}</a> and <a href="{html.escape(s2.link)}">{html.escape(s2.source_name)}</a>'
+    else:
+        links = [f'<a href="{html.escape(item.link)}">{html.escape(item.source_name)}</a>' for item in cluster[:3]]
+        source_attribution = ', '.join(links[:-1]) + ', and ' + links[-1]
 
-    # Multi-source posts: use filtering logic
-    all_sentences: list[str] = []
-    seen_keys: set[str] = set()
+    kind_labels = {
+        "ai": "artificial intelligence", "space": "space and aerospace",
+        "science": "science and research", "health": "health technology",
+        "phones": "smartphones and mobile devices", "security": "cybersecurity",
+        "gadgets": "consumer technology", "software": "software platforms",
+        "autonomous": "autonomous vehicles", "tutorials": "practical technology",
+    }
+    kind_label = kind_labels.get(kind, "technology")
 
-    # Normalised topic for near-duplicate filtering
-    _topic_key = re.sub(r'[^a-z0-9]', '', topic.lower())[:70]
+    lead_title = clean_text(cluster[0].title, max_len=160)
+    intro_html = (
+        f'<p>Reports from {source_attribution} have drawn attention to a development in {html.escape(kind_label)}: '
+        f'<strong>{html.escape(lead_title)}</strong>. '
+        f'The story sits within a broader set of shifts that {html.escape(category_reader_angle(categories[0] if categories else "tech"))}.</p>'
+    )
 
-    def _add(sent: str) -> None:
-        sent = sent.strip()
-        if not sent or len(sent) < 8:
-            return
-        # Strip trailing punctuation/ellipsis artifacts (incl. comma-period combos)
-        sent = re.sub(r'[,\s.]+$', '', sent).strip()
-        if not sent or len(sent) < 8:
-            return
-        # Capitalise first letter if needed
-        if not sent[0].isupper():
-            sent = sent[0].upper() + sent[1:]
-        # Reject sentences that are essentially a restatement of the title
-        sent_key = re.sub(r'[^a-z0-9]', '', sent.lower())[:70]
-        if _topic_key and len(_topic_key) > 20 and sent_key.startswith(_topic_key[:50]):
-            return
-        key = re.sub(r'[^a-z0-9]', '', sent.lower())[:90]
-        if key in seen_keys:
-            return
-        seen_keys.add(key)
-        all_sentences.append(sent + ".")
+    # ── 2. BACKGROUND CONTEXT ─────────────────────────────────────────────────
+    background_html = f'<p>{html.escape(_category_background_prose(kind, topic))}</p>'
 
-    for _source_name, sentences in grouped:
-        for s in sentences:
-            _add(s)
+    # ── 3. PER-SOURCE ELABORATED SECTIONS ─────────────────────────────────────
+    source_sections: list[str] = []
+    unique_items: list[Item] = []
+    seen_titles: set[str] = set()
+    for item in cluster[:4]:
+        key = re.sub(r'[^a-z0-9]', '', item.title.lower())[:60]
+        if key not in seen_titles:
+            seen_titles.add(key)
+            unique_items.append(item)
 
-    if not all_sentences:
-        # Fallback: use the full summary text split into sentences
-        fallback_sentences = re.split(r'(?<=[.!?])\s+', full_text)
-        for sent in fallback_sentences:
-            sent = sent.strip()
-            if sent and len(sent) >= 8:
-                all_sentences.append(sent + ".")
-        if not all_sentences:
-            return f'<p>{html.escape(clean_text(topic, max_len=5000))}.</p>'
+    for idx, item in enumerate(unique_items):
+        source_sections.append(_build_source_section(item, idx, kind))
 
-    # Build HTML paragraphs: 2-3 sentences for the opener, then 3-4 each for longer articles
-    paragraphs: list[str] = []
-    remaining = list(all_sentences)
-
-    first_chunk = remaining[:2]
-    remaining = remaining[2:]
-    paragraphs.append(" ".join(first_chunk))
-
-    while remaining:
-        size = min(4, len(remaining))
-        paragraphs.append(" ".join(remaining[:size]))
-        remaining = remaining[size:]
-
-    # Numeric facts as a closing factual note
+    # ── 4. NUMERIC / FACTUAL HIGHLIGHTS ───────────────────────────────────────
     numeric_facts = extract_numeric_facts(full_text)
+    numbers_html = ""
     if numeric_facts:
-        paragraphs.append(f"{numeric_facts}.")
+        numbers_html = (
+            f'<p>Among the specific figures and measurements referenced across the coverage: '
+            f'<strong>{html.escape(numeric_facts)}</strong>. '
+            f'Numbers like these provide concrete anchors in a news cycle that often trades in vague superlatives; '
+            f'they are worth holding onto as the story develops and more detailed reporting emerges.</p>'
+        )
 
-    return "\n".join(f"<p>{html.escape(p)}</p>" for p in paragraphs if p.strip())
+    # ── 5. READER IMPACT ──────────────────────────────────────────────────────
+    impact_html = reader_impact_paragraph(categories, text_lower)
+
+    # ── 6. ANALYTICAL / PROFESSIONAL ANGLE ───────────────────────────────────
+    angle_text = professional_angle(topic, categories, text_lower)
+    angle_html = f'<p>{html.escape(angle_text)}</p>'
+
+    # ── 7. EDITORIAL NUT GRAPH ────────────────────────────────────────────────
+    nut_text = editorial_nut_graph(categories, text_lower)
+    nut_html = f'<p>{html.escape(nut_text)}</p>'
+
+    # ── 8. FORWARD-LOOKING CLOSE ──────────────────────────────────────────────
+    forward_text = _category_forward_look(kind)
+    forward_html = f'<p>{html.escape(forward_text)}</p>'
+
+    # ── 9. HEALTH DISCLAIMER ──────────────────────────────────────────────────
+    health_disclaimer = ""
+    if kind == "health" or "health" in categories:
+        health_disclaimer = (
+            '<blockquote><p><strong>Medical Disclaimer:</strong> This article is for '
+            'informational purposes only and does not constitute medical advice. Always '
+            'consult with qualified healthcare professionals for medical decisions and '
+            'treatment options.</p></blockquote>'
+        )
+
+    # ── ASSEMBLE ──────────────────────────────────────────────────────────────
+    sections: list[str] = [
+        intro_html,
+        background_html,
+        *source_sections,
+    ]
+    if numbers_html:
+        sections.append(numbers_html)
+    sections += [
+        impact_html,
+        angle_html,
+        nut_html,
+        forward_html,
+    ]
+    if health_disclaimer:
+        sections.append(health_disclaimer)
+
+    return "\n".join(s for s in sections if s.strip())
+
+
+def _build_excerpt(cluster: list[Item], topic: str, categories: list[str]) -> str:
+    """Build a meaningful 1-2 sentence excerpt from source summaries."""
+    # Try to use the lead item's summary as the base
+    lead_summary = ""
+    for item in cluster:
+        s = clean_text(item.summary, max_len=300)
+        if s and s.lower().strip().rstrip('.') != item.title.lower().strip().rstrip('.'):
+            lead_summary = s
+            break
+    if lead_summary:
+        return lead_summary[:280]
+    # Fallback: construct from topic and category
+    cat = categories[0] if categories else "technology"
+    return f"The latest developments in {cat} coverage: {clean_text(topic, max_len=150)}."
 
 
 def free_article(cluster: list[Item]) -> dict[str, Any]:
@@ -2176,36 +2377,31 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
     image_block = ""
     if hero_path:
-        image_block = f"""
-<figure class="wp-block-image size-large">
-<img src="{HERO_IMAGE_PLACEHOLDER}" alt="{html.escape(title)} illustration">
-</figure>
-""".strip()
-
-    # Medical disclaimer for health content
-    medical_disclaimer = ""
-    if "health" in categories or kind == "health":
-        medical_disclaimer = """
-<blockquote><p><strong>Medical Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult with qualified healthcare professionals for medical decisions and treatment options.</p></blockquote>
-""".strip()
+        image_block = (
+            f'<figure class="wp-block-image size-large">\n'
+            f'<img src="{HERO_IMAGE_PLACEHOLDER}" alt="{html.escape(title)} illustration">\n'
+            f'</figure>'
+        )
 
     # Generate meta description and focus keyword
     focus_keyword = keywords[0] if keywords else "technology"
-    meta_description = clean_text(topic, max_len=160)
-    excerpt = ""
+    excerpt = _build_excerpt(cluster, topic, categories)
+    meta_description = excerpt[:155] if excerpt else clean_text(topic, max_len=155)
 
-    # Build professional straight article layout
-    body = f"""
-{image_block}
-<p>[more]</p>
-{full_article_sections(cluster, topic, categories, source_count)}
-{medical_disclaimer}
-""".strip()
+    # Build the full article body — full_article_sections handles health disclaimer internally
+    article_body = full_article_sections(cluster, topic, categories, source_count)
+
+    parts = []
+    if image_block:
+        parts.append(image_block)
+    parts.append('<p>[more]</p>')
+    parts.append(article_body)
+    body = "\n".join(p for p in parts if p.strip())
 
     return {
         "title": title,
         "slug": slugify(topic),
-        "excerpt": "",
+        "excerpt": excerpt,
         "categories": categories[:3],
         "tags": sorted(set(categories + keywords))[:12],
         "html": body,
@@ -2319,10 +2515,8 @@ def post_status() -> str:
 
 
 def article_text_fallback(article: dict[str, Any]) -> str:
-    title = str(article.get("title", "Generated post"))
-    excerpt = str(article.get("excerpt", ""))
-    body = strip_html(str(article.get("html", "")))
-    return "\n\n".join(part for part in [title, excerpt, body] if part)
+    """Plain-text email body without title or excerpt to avoid duplicate social share text."""
+    return strip_html(str(article.get("html", "")))
 
 
 def email_shortcodes(article: dict[str, Any]) -> list[str]:
