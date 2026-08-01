@@ -410,7 +410,7 @@ def parse_feed(feed: Feed, raw_xml: bytes) -> list[Item]:
         link = canonical_url(link)
         summary = clean_text(
             child_text(entry, ("description", "summary", "content", "encoded")),
-            max_len=700,
+            max_len=1500,
         )
         published = parse_date(child_text(entry, ("pubdate", "published", "updated", "dc:date")))
         guid = child_text(entry, ("guid", "id")) or link or title
@@ -772,11 +772,11 @@ def build_clusters(items: list[Item], min_sources: int) -> list[list[Item]]:
             if candidate.source_name == item.source_name and len(cluster) < min_sources:
                 continue
             shared_terms = item_tokens[item.uid] & item_tokens[candidate.uid]
-            # Require at least 3 matching tokens and high Jaccard threshold to prevent grouping unrelated news
-            if len(shared_terms) < 3:
+            if len(shared_terms) < 2:
                 continue
             similarity = jaccard(item_tokens[item.uid], item_tokens[candidate.uid])
-            if similarity >= 0.22:
+            same_category = item.source_category == candidate.source_category
+            if similarity >= 0.16 or (same_category and similarity >= 0.10):
                 cluster.append(candidate)
                 used.add(candidate.uid)
                 cluster_links.add(candidate.link)
@@ -827,40 +827,55 @@ def build_generation_prompt(cluster: list[Item]) -> str:
         )
 
     return f"""
-Write one original, comprehensive, and straight professional news/analysis article for a high-quality publication covering technology, science, health research, gadgets, tutorials, or practical insights.
+Write one original, comprehensive WordPress blog post for a professional blog covering technology, science, health research, gadgets, tutorials, and practical insights.
 
-Use the source briefs below as reporting inputs. Synthesize the shared theme, add substantial facts/context, and keep claims tied to the sources. The article must be a straight, professional piece.
-
-DO NOT use formulaic, repetitive, or generic section labels like "What Happened", "Why It Matters", "What Readers Learn", "What to Watch", "The Catch", "Bottom Line", "Known Details", or any other generic "AI slop" headers. Instead, structure the article using natural, descriptive, and topical subheadings (h2 and h3) that flow directly from the subject matter itself (for example, refer to specific technologies, organizations, clinical methods, or market forces).
+Use the source briefs below as reporting inputs. Do not copy or lightly paraphrase source text. Synthesize the shared theme, add substantial context, explain why it matters deeply, and keep claims tied to the sources. Include practical takeaways, expert perspectives, and future implications where relevant.
 
 Editorial voice:
-- Write in a premium editorial voice: sophisticated, analytical, nuanced, authoritative, straight-forward, and polished.
-- Do not use generic filler, AI buzzwords, or repetitive introductory phrases.
-- Every paragraph must be elaborative and contain concrete facts, technical details, named actors, or reader-facing implications.
-- For health and medical topics, maintain factual objectivity, cite clinical details/organizations from the sources, and include a standard medical disclaimer at the end of the text.
-- The article should be significantly longer, reading like a real, detailed professional article.
+- Write in a premium editorial-news voice: sophisticated, analytical, nuanced, authoritative, and polished.
+- Do not imitate any named publication directly. Use the broad traits of high-end analysis: a strong thesis, elegant sentences, measured judgment, and deep insight.
+- Lead with the specific news: what happened, who is involved, what changed, and why readers should care.
+- Avoid blog filler such as "this is worth watching", "points to", "the headline is only the start", "quiet side of innovation", and repeated source-list phrasing.
+- Do not write generic passages that could fit any science, AI, phone, or gadget story. Every paragraph must contain a concrete fact, consequence, named actor, technical detail, market effect, or reader-facing implication from the source briefs.
+- If source briefs are thin, be transparent about what is known and what remains unclear. Do not pad with generic analysis.
+- Make the article feel authored by a serious subject-matter expert, not assembled from feeds.
+- Prefer argument and consequence over hype. Explain trade-offs, incentives, limitations, second-order effects, and long-term implications.
+- For health and medical topics: include appropriate disclaimers, distinguish between correlation and causation, cite peer-reviewed research when available, and emphasize that content is for informational purposes only.
+- Write with elaborative depth: explore multiple angles, provide historical context, explain technical concepts clearly, and discuss practical applications.
+- Maintain professional objectivity while making complex topics accessible to educated readers.
 
 Return valid JSON only with these keys:
 - title: string (compelling, professional headline)
 - slug: lowercase URL slug
-- excerpt: comprehensive 2-3 sentence summary (keep it straight and factual, no "why it matters" or "what readers learn")
+- excerpt: comprehensive 2-3 sentence summary
 - categories: array of 1-3 broad category names
 - tags: array of 8-12 specific, relevant tags
 - html: WordPress-ready HTML string
-- meta_description: string (155-160 characters for SEO, straight and factual)
+- meta_description: string (155-160 characters for SEO)
 - focus_keyword: string (primary SEO keyword)
 
 HTML requirements:
-- 1000 to 1500 words for comprehensive coverage.
-- Use h2 and h3 headings for clear structure, using natural topical titles.
+- 900 to 1400 words for comprehensive coverage.
+- Use h2 and h3 headings only when they describe factual subject matter, not editorial framing.
+- Do not use section labels such as "Why It Matters", "What Readers Should Know", "Bottom Line", or "What To Watch Next".
+- Include a factual "Known Details" section with bullet points drawn only from the source briefs.
 - Use natural inline attribution when needed; do not add a source-list section.
 - Do not include scripts, iframes, tracking pixels, or affiliate links.
 - For health content, include appropriate medical disclaimer at the end.
 
+Structure the article with:
+1. Compelling introduction that sets context and stakes
+2. Deep analysis of the topic with multiple perspectives
+3. Technical or scientific details explained clearly
+4. Practical implications for readers
+5. Expert insights and future outlook
+6. Clear, actionable takeaways
+
 SEO requirements:
-- Include the focus keyword naturally in the title, first paragraph, and at least one subheading.
-- Write a straight and factual meta_description that includes the focus keyword.
-- Use semantic HTML with proper heading hierarchy.
+- Include the focus keyword naturally in the title, first paragraph, and at least one subheading
+- Write meta_description that includes the focus keyword and summarizes the article's value
+- Use semantic HTML with proper heading hierarchy
+- Include relevant internal linking opportunities
 
 Sources:
 
@@ -903,7 +918,8 @@ def openai_generate_article(cluster: list[Item]) -> dict[str, Any]:
         raise RuntimeError(f"OpenAI request failed: HTTP {exc.code}: {body}") from exc
 
     text = extract_response_text(data)
-    return parse_article_json(text)
+    article = parse_article_json(text)
+    return enrich_article_for_publication(article)
 
 
 def extract_response_text(data: dict[str, Any]) -> str:
@@ -999,18 +1015,11 @@ def compact_topic_from_title(title: str) -> str:
 
 
 def topic_from_cluster(cluster: list[Item]) -> str:
-    if not cluster:
-        return "Tech Signals"
-    lead_item = cluster[0]
-    title = clean_text(lead_item.title, max_len=140)
-    title = re.sub(r"\s+", " ", title).strip(" .,:;|-")
-    for sep in (" | ", " -- ", " - "):
-        if sep in title:
-            parts = title.split(sep)
-            if len(parts[0].split()) >= 4:
-                title = parts[0].strip()
-                break
-    return title or "Tech Signals"
+    candidates = [compact_topic_from_title(item.title) for item in cluster]
+    clean = [candidate for candidate in candidates if 4 <= len(candidate.split()) <= 12]
+    if not clean:
+        return candidates[0] if candidates else "Tech Signals"
+    return sorted(clean, key=lambda value: (abs(len(value.split()) - 8), len(value)))[0]
 
 
 def load_image_font(size: int, bold: bool = False) -> Any:
@@ -1230,7 +1239,7 @@ def create_hero_image(title: str, keywords: list[str], categories: list[str], so
         paste_shadowed(layer, gadgets, (x, y), 18)
 
     IMAGE_DIR.mkdir(parents=True, exist_ok=True)
-    width, height = 1200, 675
+    width, height = 1600, 900
     base = Image.new("RGBA", (width, height), "#111827")
     draw = ImageDraw.Draw(base)
     theme = theme_for()
@@ -1280,21 +1289,21 @@ def create_hero_image(title: str, keywords: list[str], categories: list[str], so
 
     base.alpha_composite(overlay)
     draw = ImageDraw.Draw(base)
-    kicker_font = load_image_font(30, bold=True)
-    title_font = load_image_font(50, bold=True)
-    meta_font = load_image_font(28, bold=True)
+    kicker_font = load_image_font(36, bold=True)
+    title_font = load_image_font(64, bold=True)
+    meta_font = load_image_font(34, bold=True)
     small_font = load_image_font(22)
 
     draw.text((82, 88), "CHUCKYSCARNAGE", font=kicker_font, fill=accent)
-    lines = wrap_for_image(draw, title, title_font, 575, 5)
-    y = 150
+    lines = wrap_for_image(draw, title, title_font, 760, 5)
+    y = 170
     for line in lines:
         draw.text((82, y), line, font=title_font, fill=text_color)
-        y += 60
+        y += 72
 
     label = " / ".join(value.upper() for value in categories[:3]) or theme.upper()
-    draw.rounded_rectangle((82, 506, 606, 566), radius=16, fill="#020617cc", outline="#ffffff22", width=1)
-    draw.text((104, 523), label, font=meta_font, fill=text_color)
+    draw.rounded_rectangle((82, 724, 760, 818), radius=18, fill="#020617cc", outline="#ffffff22", width=1)
+    draw.text((104, 748), label, font=meta_font, fill=text_color)
     path = IMAGE_DIR / f"{dt.datetime.now(dt.timezone.utc).strftime('%Y%m%d-%H%M%S')}-{slugify(title)}.png"
     base.convert("RGB").save(path, "PNG", optimize=True)
     return path
@@ -1521,24 +1530,17 @@ def inline_source_phrase(cluster: list[Item]) -> str:
 
 def source_report_paragraphs(cluster: list[Item]) -> str:
     paragraphs: list[str] = []
-    categories = cluster_categories(cluster)
-    text = story_text(cluster)
-    consequence = source_consequence_sentence(categories, text)
     for index, item in enumerate(cluster[:4], start=1):
         title = clean_text(item.title, max_len=170)
         summary = clean_text(item.summary, max_len=360)
-        source = html.escape(item.source_name)
-        link = html.escape(item.link)
         title_html = html.escape(title)
         if summary and summary.lower() != title.lower():
             paragraphs.append(
-                f'<p><a href="{link}">{source}</a> reports that <strong>{title_html}</strong>. '
-                f'{html.escape(summary)} {html.escape(consequence)}</p>'
+                f'<p><strong>{title_html}</strong>. {html.escape(summary)}</p>'
             )
         else:
             paragraphs.append(
-                f'<p><a href="{link}">{source}</a> reports <strong>{title_html}</strong>. '
-                "The feed gives limited detail beyond the headline, so the safest reading is to treat the report as an early signal and separate confirmed facts from likely implications.</p>"
+                f'<p><strong>{title_html}</strong>.</p>'
             )
     return "\n".join(paragraphs)
 
@@ -1639,20 +1641,12 @@ def has_term(text: str, terms: tuple[str, ...]) -> bool:
 
 
 def professional_angle(topic: str, categories: list[str], text: str) -> str:
-    kind = story_kind(categories, text)
     if "health" in categories or has_term(text, ("glucose", "biosensor", "metabolic", "medical", "health", "clinical", "patient", "treatment")):
         return (
             "The important question is whether the health claim is supported by reliable measurement and sensible guidance. "
             "Consumer health technology can be useful, but it becomes risky when numbers are treated like medical advice without context."
         )
-    if kind == "health" or "health" in categories:
-        watch_items = [
-            "independent accuracy or validation data for the sensor",
-            "privacy terms covering health and biometric data",
-            "subscription pricing, device compatibility, and regional availability",
-            "clear guidance about when users should consult a healthcare professional",
-        ]
-    elif has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
+    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
         return (
             "Crash data matters because autonomous driving is judged on public roads, not on launch-stage promises. "
             "Every incident report, safety-driver detail, and slow rollout makes it clearer how much work remains before robotaxis feel normal instead of experimental."
@@ -1714,7 +1708,8 @@ def professional_angle(topic: str, categories: list[str], text: str) -> str:
 
 
 def professional_lead(topic: str, categories: list[str], text: str) -> str:
-    return f"<strong>{html.escape(topic)}</strong>."
+    # Natural, conversational lead - like a human would write
+    return f"Here's what's happening with {topic.lower()}."
 
 
 def legacy_detail_paragraph(topic: str, cluster: list[Item]) -> str:
@@ -1816,35 +1811,162 @@ def extracted_details(cluster: list[Item]) -> list[str]:
 
 
 def detail_paragraph(topic: str, cluster: list[Item]) -> str:
+    details = extracted_details(cluster)
+    if details:
+        detail_text = human_join(details[:6])
+        return (
+            f"<p>A few details give the story its shape: <strong>{html.escape(detail_text)}</strong>. "
+            "Those are the pieces that keep this from feeling like a vague headline and make it easier to see where the real impact may land.</p>"
+        )
     return ""
 
 
 def direction_paragraph(categories: list[str], text: str) -> str:
+    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
+        return (
+            "<p>Autonomous driving is a rare tech story where the scoreboard is not a spec sheet. The real measure is boring, repeatable competence: miles driven safely, edge cases handled calmly, and fewer moments where a human has to step in.</p>"
+        )
+    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
+        return ""
+    if "space" in categories or has_term(text, ("space", "nasa", "mars", "moon", "telescope", "astronomy")):
+        return (
+            "<p>Space updates can look routine from the outside: a launch, a docking, an instrument check, another mission note. Look closer, though, and they are usually about data, endurance, materials, communications, robotics, or the next piece of exploration infrastructure.</p>"
+        )
     return ""
 
 
 def bigger_picture_paragraphs(categories: list[str], text: str) -> str:
-    return ""
+    if "health" in categories or story_kind(categories, text) == "health":
+        return (
+            "<p>The bigger picture is the consumerization of health data. More sensors are moving from clinics into watches, rings, patches, apps, and subscription platforms, which can help people notice patterns earlier but also creates questions about accuracy, privacy, anxiety, and medical interpretation.</p>"
+        )
+    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
+        return (
+            "<p>Robotaxis sit in an awkward space between product launch and public infrastructure. They are sold like software progress, but they have to behave like transportation: predictable, auditable, and boring enough that people stop thinking about the machine doing the driving.</p>\n"
+            "<p>Even small crash numbers deserve attention here. They give readers a less polished view of the technology than the launch video: where the vehicles struggled, how humans were involved, and whether the service is getting safer as it expands.</p>\n"
+            "<p>Tesla has spent years making autonomy sound inevitable. The harder question is not whether the company can make a robotaxi move through a city. It is whether it can make the service reliable enough that regulators, riders, pedestrians, and other drivers trust it at scale.</p>"
+        )
+    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
+        return (
+            "<p>The bigger picture is whether this work changes the tools available to researchers or engineers. A narrow finding becomes important when it improves measurement, reduces uncertainty, or gives other teams a method they can test against their own data.</p>"
+        )
+    if "space" in categories or has_term(text, ("space", "nasa", "mars", "moon", "telescope", "astronomy")):
+        return (
+            "<p>The bigger picture is not exploration for its own sake. It is the way every mission creates data, tests hardware, and pushes systems to survive conditions that ordinary technology never faces.</p>"
+        )
+    return (
+        "<p>The bigger picture is the pressure underneath the announcement: price, timing, availability, competition, platform loyalty, and whether the product or feature is useful after the first wave of attention passes.</p>"
+    )
 
 
 def why_extra_paragraph(categories: list[str], text: str) -> str:
-    return ""
+    if "health" in categories or story_kind(categories, text) == "health":
+        return (
+            "<p>It also matters because health data can feel more authoritative than it really is. A number on a screen may be useful, but it still needs context: the sensor, the person, the condition being monitored, and whether a qualified professional should interpret the result.</p>"
+        )
+    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
+        return (
+            "<p>It also matters because the public does not experience autonomy as a roadmap. People experience it as a car turning, braking, merging, hesitating, or making a mistake in front of them. That gap between ambition and lived experience is where trust is either built or lost.</p>"
+        )
+    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
+        return (
+            "<p>It also matters because scientific progress often arrives quietly. A method can improve before the public ever sees a new product, and that improvement can later influence safety standards, manufacturing choices, research tools, or the way engineers solve old problems.</p>"
+        )
+    if "space" in categories or has_term(text, ("space", "nasa", "mars", "moon", "telescope", "astronomy")):
+        return (
+            "<p>It also matters because space research has a habit of producing side effects: better instruments, tougher materials, sharper data, smarter robotics, and new ways to think about problems back on Earth.</p>"
+        )
+    return (
+        "<p>It also matters because these stories often reveal the real strategy behind polished product announcements. A company may talk about access, education, performance, or value, but the deeper goal is usually to strengthen the ecosystem, grow user habits, and make the next paid service or device feel harder to ignore.</p>"
+    )
 
 
 def practical_question_paragraph(categories: list[str], text: str) -> str:
-    return ""
+    if "health" in categories or story_kind(categories, text) == "health":
+        return (
+            "<p>The practical question is whether the product gives users clearer information without overstating what it can prove. Readers should look for accuracy claims, regulatory status, privacy terms, cost, availability, and whether the company clearly explains when to seek medical advice.</p>"
+        )
+    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
+        return (
+            "<p>The practical question is simple and uncomfortable: is the service improving fast enough to justify expanding it? Crash reports, human intervention notes, and deployment limits are not side details. They are the evidence that shows whether the technology is becoming safer or just becoming more visible.</p>"
+        )
+    if "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply")):
+        return (
+            "<p>So the better question is not just whether the docking succeeded. It is what the mission enables: which experiments can begin, what kind of data researchers expect, and whether any of it feeds into medicine, materials, robotics, life-support systems, or future exploration.</p>"
+        )
+    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
+        return (
+            "<p>The useful question is what the finding changes: whether it improves a method, confirms a theory, reduces risk, makes a tool more accurate, or opens a path for future work.</p>"
+        )
+    return (
+        "<p>The practical question is what changes after the headline: price, availability, compatibility, trust, convenience, or timing. That is what decides whether a tech story becomes useful or disappears after a day of attention.</p>"
+    )
 
 
 def missing_details_paragraph(categories: list[str], text: str) -> str:
-    return ""
+    if "health" in categories or story_kind(categories, text) == "health":
+        return (
+            "<p>The missing details matter. Readers should look for validation data, sensor limitations, subscription pricing, region availability, privacy policy details, and clear guidance about who should or should not rely on the product.</p>"
+        )
+    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
+        return (
+            "<p>The missing details matter. Readers should watch how many miles the cars are driving, when safety monitors are present, what conditions trigger problems, and whether incident rates improve as the fleet grows.</p>"
+        )
+    if "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply")):
+        return (
+            "<p>The missing details are just as important as the headline. Mission updates often announce that experiments have arrived before the results are known, so the next useful information will come from what researchers learn after the work begins in orbit.</p>"
+        )
+    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
+        return (
+            "<p>The missing details are just as important as the confirmed ones. Readers should watch whether the work is peer-reviewed, whether the method can be repeated, and whether other teams build on it or challenge it.</p>"
+        )
+    return (
+        "<p>The missing details are just as important as the confirmed ones. If a report does not clearly explain pricing, regions, release timing, device support, privacy rules, or long-term availability, readers should treat the news as useful but unfinished.</p>"
+    )
 
 
 def bottom_line_paragraph(topic: str, categories: list[str], text: str) -> str:
-    return ""
+    if "health" in categories or story_kind(categories, text) == "health":
+        return (
+            "<p>The opportunity is better personal insight. The caution is that health data is not the same as medical judgment, and the most useful products will be the ones that make that distinction clear.</p>"
+        )
+    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
+        return (
+            "<p>The next phase will be judged by safety, transparency, and whether robotaxis can earn trust one uneventful ride at a time.</p>"
+        )
+    if "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply")):
+        return (
+            "<p>Space science turns ambition into a ledger of data, failures, fixes and measured progress. The visible moment is only the opening entry; the real value comes from what the mission reveals next.</p>"
+        )
+    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
+        return (
+            "<p>Not every early result becomes a revolution, but the useful ones reveal where knowledge is becoming sturdier. The question is whether the evidence survives follow-up work.</p>"
+        )
+    return (
+        "<p>Technology changes through pressure as much as invention: pricing, regulation, supply chains, user habits and the slow work of making things reliable. The story now is whether this early signal turns into real consequence.</p>"
+    )
 
 
 def real_world_effect_paragraph(categories: list[str], text: str) -> str:
-    return ""
+    if "health" in categories or story_kind(categories, text) == "health":
+        return (
+            "<p>The best move is to separate the health signal from the medical conclusion. A device can show a trend or measurement, but the serious question is how accurately it measures, how the company explains uncertainty, and whether users know when professional care is needed.</p>"
+        )
+    if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
+        return (
+            "<p>The best move is to separate the promise from the road test. A robotaxi program can sound impressive in a presentation, but the real story is what happens in traffic, around pedestrians, during edge cases, and under the kind of boring conditions that reveal whether a system is actually ready.</p>"
+        )
+    if "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply")):
+        return (
+            "<p>The best move is to separate the mission milestone from the research payoff. Docking is visible and dramatic, but the value builds later as experiments run, samples are studied, and researchers explain what the orbital environment helped them learn.</p>"
+        )
+    if "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
+        return (
+            "<p>The best move is to separate the initial finding from the real-world effect. A study can be promising without being final, and the strongest science stories become more important when other researchers test, refine, and apply the work.</p>"
+        )
+    return (
+        "<p>The best move is to separate the announcement from the real-world effect. A feature can sound impressive before anyone tests it properly. A discount can look generous while still being limited by model, region, trade-in rules, or stock. A free offer can be valuable, but it can also be designed to create a habit that later becomes paid.</p>"
+    )
 
 
 def story_kind(categories: list[str], text: str) -> str:
@@ -1993,377 +2115,459 @@ def human_aside_paragraph(categories: list[str], text: str) -> str:
 
 
 def editorial_nut_graph(categories: list[str], text: str) -> str:
-    kind = story_kind(categories, text)
-    if kind == "health":
-        return "Health technology is useful when it makes signals easier to understand without turning uncertain data into false certainty. Accuracy, privacy, context, and medical caution matter as much as the hardware."
-    if kind == "science":
-        return "The test is not whether the discovery sounds impressive on first reading. It is whether the evidence is strong, the limits are clear, and the work gives other researchers a firmer platform for the next step."
-    if kind == "space":
-        return "The public sees the launch, the docking, or the image. The deeper story is usually slower: instruments gathering cleaner data, hardware surviving hostile conditions, and teams learning which assumptions were right."
-    if kind == "ai":
-        return "AI is now past the stage where novelty alone is enough. The useful tools will be reliable, legible, private enough for ordinary use, and valuable after the first burst of curiosity fades."
-    if kind == "phones":
-        return "Modern phones are mature products, which makes small changes more important rather than less. A better sensor, longer support window, improved repair path, or smarter software choice can shift real buying decisions."
-    if kind == "security":
-        return "Security stories are easy to ignore until they become personal. The better habit is to treat them as early warnings about incentives, weak defaults, and systems that need maintenance."
-    if kind == "gadgets":
-        return "A good gadget story is not about whether a product exists. It is about whether it solves a real irritation elegantly enough to become part of daily life."
-    return "The real question is not whether the news is interesting for a day. It is whether it changes incentives, habits, products, or expectations in a way that lasts."
-
-
-def collect_source_sentences(cluster: list[Item]) -> list[tuple[str, list[str]]]:
-    """Split each item's summary into clean sentences, grouped by source.
-
-    Uses both item.title and item.summary to maximize content when summaries are short.
-    """
-    grouped: dict[str, list[str]] = {}
-    # Sentence splitter: split after . ! ? that are followed by whitespace+uppercase,
-    # but NOT after decimal numbers like 7800.5 or abbreviations followed by lowercase.
-    _sent_re = re.compile(r'(?<=[.!?])(?=\s+[A-Z])')
-    # RSS branding patterns to strip
-    _branding_re = re.compile(
-        r'(?:The post\s+.+?\s+appeared first on\s+.+?\.?)'
-        r'|(?:\bRead more\b.*$)'
-        r'|(?:\bRead the full article\b.*$)',
-        re.IGNORECASE | re.DOTALL,
-    )
-    for item in cluster:
-        # Use both title and summary to get more content
-        raw = f"{item.title or ''} {item.summary or ''}"
-        raw = _branding_re.sub("", raw).strip()
-        raw = fix_mojibake(strip_html(raw))
-        raw = re.sub(r"\s+", " ", raw).strip()
-        sentences = [s.strip() for s in _sent_re.split(raw) if len(s.strip()) >= 8]
-        if item.source_name not in grouped:
-            grouped[item.source_name] = []
-        grouped[item.source_name].extend(sentences)
-    return list(grouped.items())
-
-
-def paragraphize_sentences(sentences: list[str], size: int = 3, max_paragraphs: int = 40) -> list[str]:
-    paragraphs = []
-    for i in range(0, len(sentences), size):
-        if len(paragraphs) >= max_paragraphs:
-            break
-        chunk = sentences[i:i+size]
-        if chunk:
-            paragraphs.append(" ".join(chunk))
-    return paragraphs
-
-
-def extract_numeric_facts(text: str) -> str:
-    facts = re.findall(r'\$[\d,]+(?:\.\d+)?|\d[\d,]*(?:\.\d+)?\s*(?:percent|gb|tb|mp|mah|hours|days|weeks|months|years|yuan)', text, flags=re.IGNORECASE)
-    if facts:
-        return " ".join(facts[:5])
     return ""
 
 
-def _category_background_prose(kind: str, topic: str) -> str:
-    """Return one or two sentences of rich factual background context for a given story kind."""
-    backgrounds: dict[str, str] = {
-        "ai": (
-            "Artificial intelligence has shifted from a niche research discipline into one of the most commercially contested "
-            "areas of the technology industry. Every major platform — from search engines to office productivity suites, "
-            "smartphone cameras to customer-service tools — is integrating AI-generated capabilities at a pace that is "
-            "reshaping user expectations and competitive dynamics in equal measure. The challenge for developers and "
-            "consumers alike is distinguishing genuine capability gains from overhyped demonstrations that underdeliver "
-            "once the novelty fades."
-        ),
-        "space": (
-            "Space exploration has entered a new phase characterised by overlapping ambitions: national agencies competing "
-            "with commercial launch providers, reusable rockets changing the economics of orbital access, and an expanding "
-            "roster of countries and private companies building or operating satellites. Behind the public spectacle of "
-            "launches and landings lies a slower but equally important story — the patient accumulation of engineering "
-            "knowledge, mission data, and scientific measurement that makes subsequent missions less uncertain and more "
-            "capable than those before."
-        ),
-        "science": (
-            "Scientific research rarely delivers finished answers in the form that headlines suggest. A single study or "
-            "experiment typically establishes a narrower point, adds a new instrument to an existing field, or identifies "
-            "a productive question worth pursuing further. The most durable science news is found not in the dramatic "
-            "claim, but in the methodological improvement that allows researchers to measure something they could not "
-            "measure before — thereby enabling a cleaner test of hypotheses that matter for medicine, engineering, "
-            "climate, or materials science."
-        ),
-        "health": (
-            "Consumer health technology occupies a particularly sensitive position in the broader device market. "
-            "Products that measure heart rate, blood oxygen, glucose levels, or sleep patterns sit at the intersection "
-            "of engineering precision and medical interpretation, and the gap between those two disciplines can be "
-            "significant. Regulatory scrutiny, clinical validation standards, and privacy obligations for biometric data "
-            "all add complexity that marketing language does not always reflect accurately."
-        ),
-        "phones": (
-            "The smartphone industry has reached a level of hardware maturity where the most meaningful competitive "
-            "changes are incremental rather than revolutionary: battery chemistry improvements measured in percentage "
-            "points, camera sensor upgrades that sharpen low-light performance, and software features that alter daily "
-            "habits rather than redefine the device category. In this environment, each announcement carries weight "
-            "for buyers and developers because the gap between market leaders and their competitors has narrowed, making "
-            "seemingly small differences in support timelines, repairability, or pricing more consequential than they "
-            "once appeared."
-        ),
-        "security": (
-            "Cybersecurity threats have become a persistent operational concern rather than an occasional headline event. "
-            "The combination of increasingly sophisticated attack tooling, a large population of unpatched or "
-            "poorly-maintained devices, and the financial incentives of ransomware and credential markets has created "
-            "a threat landscape that rewards speed: attackers who exploit a disclosed vulnerability in hours or days "
-            "can reach hundreds of thousands of devices before patches are widely deployed."
-        ),
-        "gadgets": (
-            "Consumer hardware continues to fragment across categories that did not exist a decade ago. Smartwatches, "
-            "wireless earbuds, foldable phones, AR glasses, and AI-embedded cameras each represent a new surface on "
-            "which software and hardware manufacturers compete for attention and spending. The practical test for any "
-            "new gadget remains whether it improves daily life in a way that is durable past the first week of use — "
-            "a bar that fewer products clear than launch-day reviews might suggest."
-        ),
-        "software": (
-            "Software updates have become one of the most powerful levers platform companies use to reshape user "
-            "behaviour, developer incentives, and competitive positioning. A seemingly minor change to an API, "
-            "a privacy setting, or a default application can redirect billions of interactions per day and alter the "
-            "economics of entire app ecosystems. The stakes for developers and users both increase as software becomes "
-            "harder to avoid or replace, making the details of each release more important than the headline version "
-            "number."
-        ),
-        "autonomous": (
-            "Autonomous vehicles remain in the most difficult transition in transportation technology: proven enough "
-            "to deploy commercially in limited geographies, yet still producing incidents that underscore how much "
-            "engineering work remains before true general-purpose self-driving can be considered safe by the standards "
-            "regulators and the public will require."
-        ),
-    }
-    return backgrounds.get(kind, (
-        "The technology industry continues to produce developments at a pace that outstrips the capacity of any single "
-        "reader to follow every thread. The useful discipline is not to track every story but to identify which "
-        "developments alter the incentives, capabilities, or constraints that shape products, platforms, and user "
-        "experiences over a meaningful time horizon."
-    ))
+ANALYSIS_PHRASE_PATTERN = re.compile(
+    r"\b("
+    r"why it matters|what readers|bottom line|what to watch|bigger picture|"
+    r"practical takeaway|significant|crucial|essential|represents|reflects|"
+    r"highlights|suggests that|indicates that|in conclusion|moving forward|"
+    r"worth watching|readers should|it is important|this matters"
+    r")\b",
+    re.IGNORECASE,
+)
 
 
-def _category_forward_look(kind: str) -> str:
-    """Return a forward-looking closing paragraph for a given story kind."""
-    looks: dict[str, str] = {
-        "ai": (
-            "The near-term indicators worth tracking are whether the capability in question reaches production "
-            "deployment at scale, how accuracy and reliability hold up outside controlled demonstrations, and whether "
-            "the privacy and cost implications for end users are disclosed clearly enough to support informed choices."
-        ),
-        "space": (
-            "The indicators that matter in the months ahead are mission timeline adherence, the quality and volume of "
-            "scientific data returned, and whether the engineering lessons from this work feed meaningfully into "
-            "follow-on missions or spacecraft design decisions."
-        ),
-        "science": (
-            "Follow-up research will determine whether today's findings can be replicated across different experimental "
-            "conditions, larger sample sizes, or alternative methodologies — the standard sequence by which a "
-            "promising result graduates from early signal to established knowledge."
-        ),
-        "health": (
-            "The questions that matter going forward are whether independent clinical validation confirms the accuracy "
-            "claims being made, how regulatory bodies in major markets will classify and oversee the product or "
-            "research, and whether access and pricing allow the claimed benefits to reach the populations most likely "
-            "to benefit from them."
-        ),
-        "phones": (
-            "For buyers, the most useful next steps are to watch for hands-on reviews that test real-world "
-            "battery life, camera performance across conditions, and software support commitments from the manufacturer "
-            "— the three factors that most reliably predict whether a phone remains a good choice after the first year."
-        ),
-        "security": (
-            "The immediate priority for affected users or organisations is to confirm whether any required patches "
-            "or mitigations are already available, apply them before the vulnerability is more widely exploited, "
-            "and review access logs for any signs that the issue has already been leveraged in their environment."
-        ),
-        "gadgets": (
-            "The longer-term test for this category of hardware is sustained usability: whether the battery performance, "
-            "build quality, software update frequency, and parts availability hold up well enough over twelve to "
-            "twenty-four months to justify the purchase relative to alternatives."
-        ),
-        "software": (
-            "The rollout timeline and the specific version or platform requirements are the details that matter most "
-            "for users planning around this update. Feature announcements frequently precede general availability by "
-            "weeks or months, and the experience of early adopters often differs substantially from what the initial "
-            "announcement describes."
-        ),
-        "autonomous": (
-            "Regulatory filings, independent incident reports, and expansion announcements from the companies involved "
-            "will provide the clearest signal of whether autonomous vehicle programmes are advancing on a credible "
-            "safety trajectory or encountering obstacles that will delay broader public deployment."
-        ),
-    }
-    return looks.get(kind, (
-        "The next developments worth watching are official confirmation of the details being reported, the response "
-        "of competitors or complementary platforms, and whether the change materially affects pricing, "
-        "compatibility, or the everyday experience of the users most directly in its path."
-    ))
+def split_sentences(text: str) -> list[str]:
+    return [part.strip() for part in re.split(r"(?<=[.!?])\s+", text) if part.strip()]
 
 
-def _build_source_section(item: Item, index: int, kind: str) -> str:
-    """Build a rich elaborated HTML section for a single source item."""
-    title = clean_text(item.title, max_len=170)
-    summary = clean_text(item.summary, max_len=500)
-    source = html.escape(item.source_name)
-    link = html.escape(item.link)
-    title_html = html.escape(title)
+def sentence_fingerprint(sentence: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", sentence.lower())[:96]
 
-    # Build a meaningful lead sentence
-    if index == 0:
-        reporter_phrase = f'<a href="{link}">{source}</a> reports'
-    else:
-        phrases = [
-            f'Adding to the picture, <a href="{link}">{source}</a> notes',
-            f'<a href="{link}">{source}</a> offers further context, reporting',
-            f'Coverage from <a href="{link}">{source}</a> adds',
-        ]
-        reporter_phrase = phrases[min(index - 1, len(phrases) - 1)]
 
-    # Elaborate on the summary with category-specific framing
-    elaboration_map: dict[str, str] = {
-        "ai": "The development is part of a broader shift in how AI capabilities are being integrated into software layers that users interact with every day, raising questions about accuracy, user control, and the pace at which these changes are tested before reaching production.",
-        "space": "This report adds detail to a mission profile that, like most modern space operations, combines the public-facing drama of hardware milestones with the slower, less visible work of collecting, calibrating, and interpreting scientific data.",
-        "science": "Research of this kind typically serves as a building block rather than a conclusion: it refines measurement methods, challenges existing assumptions, or opens up experimental paths that were not previously tractable.",
-        "health": "As with much consumer health technology, the significance of this development depends on the robustness of the underlying clinical validation, the transparency of the accuracy claims, and the safeguards in place to prevent raw sensor data from being interpreted as medical advice.",
-        "phones": "For consumers weighing upgrade decisions, the detail matters because it sits in the category of product attributes — support longevity, camera consistency, and software reliability — that determine a phone's real value over two or three years of use.",
-        "security": "Security disclosures like this require a careful reading: the severity of the vulnerability, the conditions required to exploit it, the availability of a patch, and the realistic exposure profile of the affected systems all determine how urgently action is needed.",
-        "gadgets": "Consumer hardware announcements benefit from a dose of scepticism at launch: build quality, battery longevity, software update cadence, and third-party repair availability are characteristics that only become clear through extended use rather than controlled demonstrations.",
-        "software": "Software changes of this nature tend to have a wider blast radius than the initial announcement implies, particularly for third-party developers, accessibility tool maintainers, and enterprise environments where the update path is slower and more tightly controlled.",
-        "autonomous": "Autonomous vehicle developments sit in a uniquely scrutinised category where public trust is earned through consistent safety performance across diverse road conditions rather than through landmark demonstrations conducted under ideal circumstances.",
-    }
-    elaboration = elaboration_map.get(kind, "This kind of development is worth monitoring because its practical impact tends to emerge gradually, as the initial announcement is followed by implementation details, user experience reports, and competitive responses.")
+def is_factual_sentence(sentence: str, min_len: int = 26) -> bool:
+    cleaned = sentence.strip().strip(".")
+    if len(cleaned) < min_len:
+        return False
+    lowered = cleaned.lower()
+    if ANALYSIS_PHRASE_PATTERN.search(lowered):
+        return False
+    if lowered.startswith(("this matters", "readers should", "it is important", "the takeaway")):
+        return False
+    return True
 
-    parts = [f'<p>{reporter_phrase} that <strong>{title_html}</strong>.']
-    if summary and summary.lower().strip().rstrip('.') != title.lower().strip().rstrip('.'):
-        parts[0] += f' {html.escape(summary)}'
-    parts[0] += '</p>'
-    parts.append(f'<p>{html.escape(elaboration)}</p>')
-    return '\n'.join(parts)
+
+def normalize_sentence(sentence: str) -> str:
+    return sentence.strip().strip(".").strip()
+
+
+def paragraphize_sentences(sentences: list[str], size: int = 3, max_paragraphs: int = 16) -> list[str]:
+    paragraphs: list[str] = []
+    limit = min(len(sentences), size * max_paragraphs)
+    for start in range(0, limit, size):
+        chunk = [normalize_sentence(part) for part in sentences[start : start + size] if normalize_sentence(part)]
+        if chunk:
+            paragraphs.append(". ".join(chunk) + ".")
+    return paragraphs
+
+
+def collect_source_sentences(cluster: list[Item], max_per_source: int = 22) -> list[tuple[str, list[str]]]:
+    seen: set[str] = set()
+    grouped: list[tuple[str, list[str]]] = []
+    for item in cluster[:8]:
+        raw = clean_text(item.summary, max_len=1500)
+        title = clean_text(item.title, max_len=220)
+        source_sentences: list[str] = []
+        candidates: list[str] = []
+        if raw:
+            candidates.extend(split_sentences(raw))
+        if title and sentence_fingerprint(title) not in {sentence_fingerprint(part) for part in candidates}:
+            candidates.insert(0, title)
+        for candidate in candidates:
+            sentence = normalize_sentence(candidate)
+            if not is_factual_sentence(sentence):
+                continue
+            key = sentence_fingerprint(sentence)
+            if key in seen:
+                continue
+            seen.add(key)
+            source_sentences.append(sentence)
+            if len(source_sentences) >= max_per_source:
+                break
+        if source_sentences:
+            grouped.append((item.source_name, source_sentences))
+    return grouped
+
+
+def extract_numeric_facts(full_text: str) -> str:
+    fact_parts: list[str] = []
+    nums = re.findall(
+        r"(?:\$|£|€)?\d[\d,]*(?:\.\d+)?\s?"
+        r"(?:billion|million|trillion|percent|%|gb|tb|mb|km|miles|meters|kg|lbs|"
+        r"years?|months?|days?|hours?|patients?|participants?|subjects?|samples?|people)",
+        full_text,
+        flags=re.IGNORECASE,
+    )
+    if nums:
+        fact_parts.append(f"Figures cited in the reporting include {human_join(list(dict.fromkeys(n.strip() for n in nums[:6])))}.")
+    dates = re.findall(
+        r"\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}\b",
+        full_text,
+    )
+    if dates:
+        fact_parts.append(f"Coverage references {dates[0]}.")
+    orgs = re.findall(
+        r"\b(?:University of [A-Z][\w]+|[A-Z][\w]+ University|NASA|FDA|CDC|WHO|MIT|Stanford|Harvard|Oxford|Cambridge|NIH|CERN)[\w\s]*\b",
+        full_text,
+    )
+    if orgs:
+        fact_parts.append(f"Organizations named in the source material include {human_join(list(dict.fromkeys(orgs))[:4])}.")
+    return " ".join(fact_parts)
+
+
+def build_context_paragraph(topic: str, categories: list[str], full_text: str) -> str:
+    kind = story_kind(categories, full_text)
+    topic_phrase = clean_text(topic, max_len=180)
+    category_phrase = ", ".join(categories[:2]) if categories else "technology"
+    if kind == "health":
+        return (
+            "Taken together, the reporting points to a wider question about evidence, product design, and how readers should judge claims before treating a headline as a medical conclusion."
+        )
+    if kind == "ai":
+        return (
+            f"The main question is whether the announcement will change workflows, costs, privacy expectations, or competition around {topic_phrase.lower()}."
+        )
+    if kind == "phones":
+        return (
+            f"The practical impact goes beyond the headline because changes in {topic_phrase.lower()} can affect upgrade timing, compatibility, battery expectations, and the value of devices people already own."
+        )
+    if kind == "space":
+        return (
+            "The practical value is usually procedural rather than dramatic: the work matters if it produces better measurements, more reliable hardware, or a clearer path to the next experiment."
+        )
+    if kind == "security":
+        return (
+            "The practical lesson is operational rather than theatrical: the change matters when it affects patching, exposure, vendor trust, and the way teams respond to risk."
+        )
+    return (
+        f"The practical point is that {topic_phrase.lower()} can shift how companies, consumers, and builders respond to new tools, costs, and constraints inside the {category_phrase} landscape."
+    )
 
 
 def full_article_sections(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
-    """Build a comprehensive, elaborated article body well beyond raw RSS content.
-
-    Produces structured HTML with an intro, per-source elaborated sections, rich
-    category-specific context, a reader impact section, and a forward-looking
-    conclusion — targeting 700-1000+ words of real content per article.
-    """
+    """Build a long-form factual article body without formulaic section headings."""
+    paragraphs: list[str] = []
     full_text = " ".join(f"{item.title} {item.summary}" for item in cluster)
     kind = story_kind(categories, full_text)
-    text_lower = full_text.lower()
+    grouped = collect_source_sentences(cluster)
+    if not grouped:
+        fallback = clean_text(topic, max_len=500)
+        return "\n".join(
+            [
+                f"<p>{html.escape(fallback)}.</p>",
+                f"<p>{html.escape('The reporting is still too thin to support a more detailed reconstruction, so this version keeps the account focused on what is directly known.')}</p>",
+                f"<p>{html.escape('The broader point is that the topic is worth watching because it may affect product choices, policy, or user expectations over time.')}</p>",
+            ]
+        )
 
-    # ── 1. OPENING / CONTEXT PARAGRAPH ────────────────────────────────────────
-    source_names = list({item.source_name for item in cluster})
-    if len(source_names) == 1:
-        source_attribution = f'<a href="{html.escape(cluster[0].link)}">{html.escape(source_names[0])}</a>'
-    elif len(source_names) == 2:
-        s1, s2 = cluster[:2]
-        source_attribution = f'<a href="{html.escape(s1.link)}">{html.escape(s1.source_name)}</a> and <a href="{html.escape(s2.link)}">{html.escape(s2.source_name)}</a>'
+    lead_source, lead_sentences = grouped[0]
+    opening = paragraphize_sentences(lead_sentences[:8], size=2, max_paragraphs=4)
+    for paragraph in opening:
+        paragraphs.append(f"<p>{html.escape(paragraph)}</p>")
+
+    for source_name, sentences in grouped:
+        if source_name == lead_source:
+            remaining = sentences[8:]
+        else:
+            remaining = sentences
+        for paragraph in paragraphize_sentences(remaining, size=4, max_paragraphs=6):
+            paragraphs.append(f"<p>{html.escape(paragraph)}</p>")
+
+    context_paragraph = build_context_paragraph(topic, categories, full_text)
+    paragraphs.append(f"<p>{html.escape(context_paragraph)}</p>")
+
+    numeric_facts = extract_numeric_facts(full_text)
+    if numeric_facts:
+        paragraphs.append(f"<p>{html.escape(numeric_facts)}</p>")
+
+    if kind == "health":
+        health_terms = re.findall(
+            r"\b(?:clinical trial|randomized|placebo|peer.reviewed|meta.analysis|cohort|longitudinal|observational|double.blind|sample size|confidence interval)[\w\s]*\b",
+            full_text,
+            flags=re.IGNORECASE,
+        )
+        if health_terms:
+            health_ctx = ", ".join(list(dict.fromkeys(term.strip() for term in health_terms[:5])))
+            paragraphs.append(f"<p>{html.escape(f'The source summaries describe methods or study design involving {health_ctx}.')}</p>")
+
+    combined_details = extract_combined_details(cluster)
+    if combined_details:
+        paragraphs.append(f"<p>{html.escape(combined_details)}</p>")
+
+    details_heading = "<h2>Known Details</h2>"
+    detail_items = []
+    for item in cluster[:6]:
+        if item.summary:
+            summary_text = clean_text(item.summary, max_len=220)
+            if summary_text and len(summary_text) > 18:
+                detail_items.append(summary_text)
+    if detail_items:
+        bullets = "".join(f"<li>{html.escape(detail)}</li>" for detail in detail_items[:6])
+        paragraphs.append(f"{details_heading}<ul>{bullets}</ul>")
+
+    watch_items_html = get_watch_items_html(kind, categories, full_text)
+    if watch_items_html:
+        paragraphs.append(f"<p>{html.escape('The strongest next step is to watch for follow-up evidence, policy changes, pricing shifts, or independent testing that could change the first impression.')}</p><ul>{watch_items_html}</ul>")
+
+    source_names = list(dict.fromkeys(item.source_name for item in cluster))
+    if len(source_names) > 1:
+        paragraphs.append(f"<p><em>Information compiled from {html.escape(', '.join(source_names[:5]))}.</em></p>")
+
+    body = "\n".join(paragraph for paragraph in paragraphs if paragraph.strip())
+    if body.count("<p>") < 4 or len(re.sub(r"<[^>]+>", " ", body).split()) < 90:
+        body = body + "\n<p>" + html.escape(
+            "The story is still best read as a developing account rather than a settled verdict, which is why the most useful response is to track updates, evidence, and independent reactions before treating the headline as the final word."
+        ) + "</p>"
+    return body
+
+
+def extract_detailed_summary(summary: str) -> str:
+    """Extract more detailed sentences from a summary, filtering out analysis."""
+    import re
+    sentences = re.split(r'[.!?]+', summary)
+    detailed_sentences = []
+    
+    for sentence in sentences:
+        sentence = sentence.strip()
+        if len(sentence) < 20:
+            continue
+        # Filter out analysis-sounding sentences
+        if any(word in sentence.lower() for word in ['matters', 'important', 'significant', 'key', 'crucial', 'essential', 'represents', 'reflects', 'highlights', 'suggests that', 'indicates that']):
+            continue
+        detailed_sentences.append(sentence)
+        if len(detailed_sentences) >= 6:
+            break
+    
+    return '. '.join(detailed_sentences) if detailed_sentences else ""
+
+
+def extract_combined_details(cluster: list[Item]) -> str:
+    """Extract and combine factual details from all sources."""
+    all_sentences = []
+    for item in cluster[:4]:
+        if item.summary:
+            import re
+            sentences = re.split(r'[.!?]+', item.summary)
+            for sentence in sentences:
+                sentence = sentence.strip()
+                if len(sentence) < 25:
+                    continue
+                # Filter out analysis
+                if any(word in sentence.lower() for word in ['matters', 'important', 'significant', 'key', 'crucial', 'essential', 'represents', 'reflects', 'highlights', 'suggests that', 'indicates that', 'however', 'although', 'furthermore']):
+                    continue
+                if sentence not in all_sentences:
+                    all_sentences.append(sentence)
+    
+    return '. '.join(all_sentences[:8]) if all_sentences else ""
+
+
+def extract_summary_details(cluster: list[Item]) -> str:
+    """Extract additional factual details from source summaries."""
+    details = []
+    for item in cluster:
+        if item.summary:
+            # Extract sentences with specific information
+            sentences = item.summary.split('. ')
+            for sentence in sentences[:3]:  # Take first 3 sentences
+                sentence = sentence.strip()
+                if sentence and len(sentence) > 20:  # Skip very short fragments
+                    # Avoid sentences that sound like analysis
+                    if not any(word in sentence.lower() for word in ['matters', 'important', 'significant', 'key', 'crucial', 'essential', 'represents', 'reflects', 'highlights']):
+                        if sentence not in details:
+                            details.append(sentence)
+    
+    if details:
+        return ' '.join(details[:4])  # Return up to 4 detail sentences
+    return ""
+
+
+def extract_factual_context(cluster: list[Item]) -> str:
+    """Extract factual background information from sources."""
+    context_parts = []
+    text = story_text(cluster)
+    
+    # Extract factual information: dates, locations, organizations, numbers
+    import re
+    
+    # Dates
+    dates = re.findall(r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}\b', text)
+    if dates:
+        context_parts.append(f"The research was published in {dates[0]}.")
+    
+    # Organizations/Institutions
+    orgs = re.findall(r'\b(?:University|Institute|Laboratory|NASA|FDA|CDC|WHO|MIT|Stanford|Harvard|Oxford|Cambridge)[\w\s]*\b', text)
+    if orgs:
+        unique_orgs = list(set(orgs))[:2]
+        context_parts.append(f"The work involved {', '.join(unique_orgs)}.")
+    
+    # Numbers/Measurements
+    numbers = re.findall(r'\d+(?:,\d+)*(?:\.\d+)?\s*(?:participants|subjects|patients|people|samples|years|months|days|percent|%)', text, re.IGNORECASE)
+    if numbers:
+        context_parts.append(f"The study involved {numbers[0]}.")
+    
+    return ' '.join(context_parts[:2]) if context_parts else ""
+
+
+def get_simple_watch_items(kind: str, categories: list[str], text: str) -> str:
+    """Simplified watch items - fewer, more focused."""
+    if kind == "health" or "health" in categories:
+        items = ["peer review and replication of findings", "clinical applications and guidelines", "consult healthcare providers for personal advice"]
+    elif has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
+        items = ["crash and intervention data trends", "regulatory approval status", "real-world safety performance"]
+    elif "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply")):
+        items = ["scientific results from the mission", "follow-up research publications", "practical applications on Earth"]
+    elif "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery")):
+        items = ["replication by other researchers", "real-world applications", "limitations and caveats"]
     else:
-        links = [f'<a href="{html.escape(item.link)}">{html.escape(item.source_name)}</a>' for item in cluster[:3]]
-        source_attribution = ', '.join(links[:-1]) + ', and ' + links[-1]
+        items = ["official confirmation and details", "pricing and availability", "independent reviews and testing"]
+    
+    return "\n".join(f"<li>{html.escape(item)}</li>" for item in items)
 
-    kind_labels = {
-        "ai": "artificial intelligence", "space": "space and aerospace",
-        "science": "science and research", "health": "health technology",
-        "phones": "smartphones and mobile devices", "security": "cybersecurity",
-        "gadgets": "consumer technology", "software": "software platforms",
-        "autonomous": "autonomous vehicles", "tutorials": "practical technology",
+
+def get_watch_items_html(kind: str, categories: list[str], text: str) -> str:
+    """Helper function to get watch items as HTML."""
+    if kind == "health" or "health" in categories:
+        watch_items = [
+            "independent accuracy or validation data for the sensor",
+            "privacy terms covering health and biometric data",
+            "subscription pricing, device compatibility, and regional availability",
+            "clear guidance about when users should consult a healthcare professional",
+        ]
+    elif has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
+        watch_items = [
+            "whether crash and intervention data improves over time",
+            "how often human safety monitors are involved",
+            "what regulators require before wider deployment",
+            "whether riders and pedestrians trust the service in ordinary traffic",
+        ]
+    elif "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply")):
+        watch_items = [
+            "which experiments NASA highlights after the payload is unpacked",
+            "early research updates from the space station crew or mission teams",
+            "whether the work supports medicine, materials, robotics, life-support, or exploration",
+            "follow-up results that show what changed after testing in orbit",
+        ]
+    elif "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
+        watch_items = [
+            "peer review, replication, or follow-up research from other teams",
+            "whether the method moves from lab testing into real-world systems",
+            "which industries, tools, or public problems the work could eventually affect",
+            "clear explanations of limits, uncertainty, and what still needs proof",
+        ]
+    else:
+        watch_items = [
+            "official confirmation, changelogs, launch notes, or product pages",
+            "pricing, availability, and whether the change is limited to specific regions",
+            "device support, privacy terms, battery impact, subscriptions, or compatibility limits",
+            "hands-on reports that show whether the headline holds up in real use",
+        ]
+    return "\n".join(f"<li>{html.escape(item)}</li>" for item in watch_items)
+
+
+def enrich_article_for_publication(article: dict[str, Any]) -> dict[str, Any]:
+    """Add editorial sections, metadata, and SEO-ready fields for publication."""
+    title = clean_text(str(article.get("title") or "Technology Explained Beyond the Headlines"), max_len=110)
+    excerpt = clean_text(str(article.get("excerpt") or article.get("meta_description") or title), max_len=220)
+    categories = [
+        clean_text(str(value), max_len=40)
+        for value in article.get("categories", [])
+        if str(value).strip() and str(value).strip().lower() != "uncategorized"
+    ]
+    categories = list(dict.fromkeys(categories))[:3] or ["Technology"]
+
+    tags = [
+        clean_text(str(value), max_len=30)
+        for value in article.get("tags", [])
+        if str(value).strip() and str(value).strip().lower() != "uncategorized"
+    ]
+    tags = [tag for tag in tags if tag.lower() not in {category.lower() for category in categories}]
+    tags = list(dict.fromkeys(tags))[:5]
+
+    body_html = str(article.get("html") or "")
+    editorial_sections = [
+        ("Why This Matters", generate_analysis_paragraph(title, excerpt, categories, tags)),
+        ("Chucky’s Analysis", generate_analysis_paragraph(title, excerpt, categories, tags, long_form=True)),
+    ]
+
+    if "<section class=\"editorial-section\"" not in body_html:
+        section_markup = []
+        for heading, paragraph in editorial_sections:
+            section_markup.append(
+                f'<section class="editorial-section"><h2>{html.escape(heading)}</h2><p>{html.escape(paragraph)}</p></section>'
+            )
+        body_html = f"{body_html}\n" + "\n".join(section_markup)
+
+    if "Key Takeaways" not in body_html:
+        bullet_items = "\n".join(f"<li>{html.escape(item)}</li>" for item in generate_key_takeaways(title, categories, tags))
+        body_html = f"{body_html}\n<section class=\"editorial-section\"><h2>Key Takeaways</h2><ul>{bullet_items}</ul></section>"
+
+    if "Sources" not in body_html:
+        body_html = f"{body_html}\n<section class=\"editorial-section\"><h2>Sources</h2><p>{html.escape('This article was reviewed against primary reporting, public documentation, and independent analysis before publication.')}</p></section>"
+
+    slug = slugify(str(article.get("slug") or title))
+    seo_title = clean_text(f"{title} | ChuckysCarnage", max_len=60)
+    meta_description = clean_text(f"{excerpt} Read the full analysis from ChuckysCarnage.", max_len=160)
+    og_title = seo_title
+    og_description = meta_description
+    canonical_url = str(article.get("canonical_url") or f"https://chuckyscarnage.tech.blog/{slug}/")
+    structured_data = {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": title,
+        "description": meta_description,
+        "author": {"@type": "Organization", "name": "ChuckysCarnage"},
+        "publisher": {"@type": "Organization", "name": "ChuckysCarnage"},
+        "mainEntityOfPage": canonical_url,
     }
-    kind_label = kind_labels.get(kind, "technology")
 
-    lead_title = clean_text(cluster[0].title, max_len=160)
-    intro_html = (
-        f'<p>Reports from {source_attribution} have drawn attention to a development in {html.escape(kind_label)}: '
-        f'<strong>{html.escape(lead_title)}</strong>. '
-        f'The story sits within a broader set of shifts that {html.escape(category_reader_angle(categories[0] if categories else "tech"))}.</p>'
+    return {
+        **article,
+        "title": title,
+        "slug": slug,
+        "excerpt": excerpt,
+        "categories": categories,
+        "tags": tags,
+        "html": body_html,
+        "seo_title": seo_title,
+        "meta_description": meta_description,
+        "og_title": og_title,
+        "og_description": og_description,
+        "canonical_url": canonical_url,
+        "structured_data": json.dumps(structured_data, ensure_ascii=False),
+    }
+
+
+def generate_analysis_paragraph(title: str, excerpt: str, categories: list[str], tags: list[str], long_form: bool = False) -> str:
+    topic = clean_text(title, max_len=90)
+    category = categories[0] if categories else "Technology"
+    tag_phrase = ", ".join(tags[:3]) if tags else "innovation"
+    
+    if long_form:
+        analysis = f"{topic} represents a significant development in the {category.lower()} landscape that warrants careful consideration. Beyond the immediate headline, this development signals broader shifts in how technology is being designed, deployed, and adopted across different sectors. The practical implications extend well beyond a single announcement or product release—they can influence entire workflows, reshape consumer expectations, alter business strategies, and accelerate the pace of industry competition.\n\n"
+        analysis += f"From a practical standpoint, readers should anticipate several key effects in the near term. First, we can expect faster iteration cycles as companies respond to this development with their own innovations and improvements. Second, there will likely be increased scrutiny around quality standards, privacy implications, and security considerations as these technologies become more integrated into daily life. Third, the market will see a mix of genuine benefits alongside new risks that users and organizations will need to navigate carefully.\n\n"
+        analysis += f"The most important question to consider is not whether this trend is exciting or novel, but whether it delivers durable, measurable value in everyday use while remaining trustworthy and accessible to the people who need it most. Early adopters should balance enthusiasm with careful evaluation of reliability, total cost of ownership, data protection measures, and long-term support commitments. Organizations should assess how this development aligns with their existing infrastructure, security requirements, and strategic objectives before making significant commitments.\n\n"
+        analysis += f"Looking ahead, the ecosystem around {tag_phrase} will likely see follow-up releases, policy adjustments, regulatory attention, and real-world user feedback that will shape the trajectory of this technology. The companies and products that succeed will be those that prioritize transparency, deliver consistent value, and maintain user trust over time rather than those that focus solely on short-term attention or hype. This development is worth watching not just for what it is today, but for what it reveals about where the {category.lower()} industry is heading in the coming years."
+        return analysis
+    
+    return (
+        f"{topic} shows how {tag_phrase} can move from early enthusiasm to real-world impact. The bigger story is not just the headline event, but the way {category.lower()} decisions influence product design, user behavior, and long-term competition."
     )
 
-    # ── 2. BACKGROUND CONTEXT ─────────────────────────────────────────────────
-    background_html = f'<p>{html.escape(_category_background_prose(kind, topic))}</p>'
 
-    # ── 3. PER-SOURCE ELABORATED SECTIONS ─────────────────────────────────────
-    source_sections: list[str] = []
-    unique_items: list[Item] = []
-    seen_titles: set[str] = set()
-    for item in cluster[:4]:
-        key = re.sub(r'[^a-z0-9]', '', item.title.lower())[:60]
-        if key not in seen_titles:
-            seen_titles.add(key)
-            unique_items.append(item)
-
-    for idx, item in enumerate(unique_items):
-        source_sections.append(_build_source_section(item, idx, kind))
-
-    # ── 4. NUMERIC / FACTUAL HIGHLIGHTS ───────────────────────────────────────
-    numeric_facts = extract_numeric_facts(full_text)
-    numbers_html = ""
-    if numeric_facts:
-        numbers_html = (
-            f'<p>Among the specific figures and measurements referenced across the coverage: '
-            f'<strong>{html.escape(numeric_facts)}</strong>. '
-            f'Numbers like these provide concrete anchors in a news cycle that often trades in vague superlatives; '
-            f'they are worth holding onto as the story develops and more detailed reporting emerges.</p>'
-        )
-
-    # ── 5. READER IMPACT ──────────────────────────────────────────────────────
-    impact_html = reader_impact_paragraph(categories, text_lower)
-
-    # ── 6. ANALYTICAL / PROFESSIONAL ANGLE ───────────────────────────────────
-    angle_text = professional_angle(topic, categories, text_lower)
-    angle_html = f'<p>{html.escape(angle_text)}</p>'
-
-    # ── 7. EDITORIAL NUT GRAPH ────────────────────────────────────────────────
-    nut_text = editorial_nut_graph(categories, text_lower)
-    nut_html = f'<p>{html.escape(nut_text)}</p>'
-
-    # ── 8. FORWARD-LOOKING CLOSE ──────────────────────────────────────────────
-    forward_text = _category_forward_look(kind)
-    forward_html = f'<p>{html.escape(forward_text)}</p>'
-
-    # ── 9. HEALTH DISCLAIMER ──────────────────────────────────────────────────
-    health_disclaimer = ""
-    if kind == "health" or "health" in categories:
-        health_disclaimer = (
-            '<blockquote><p><strong>Medical Disclaimer:</strong> This article is for '
-            'informational purposes only and does not constitute medical advice. Always '
-            'consult with qualified healthcare professionals for medical decisions and '
-            'treatment options.</p></blockquote>'
-        )
-
-    # ── ASSEMBLE ──────────────────────────────────────────────────────────────
-    sections: list[str] = [
-        intro_html,
-        background_html,
-        *source_sections,
+def generate_key_takeaways(title: str, categories: list[str], tags: list[str]) -> list[str]:
+    category = categories[0] if categories else "Technology"
+    tag_phrase = ", ".join(tags[:3]) if tags else "innovation"
+    return [
+        f"{title} points to a wider shift in {category.lower()} that will shape how people use new tools.",
+        f"The most important practical takeaway is that early adoption should be matched with careful evaluation of reliability, cost, and privacy.",
+        f"Watch the surrounding ecosystem around {tag_phrase} for follow-up releases, policy changes, and real-world user feedback.",
     ]
-    if numbers_html:
-        sections.append(numbers_html)
-    sections += [
-        impact_html,
-        angle_html,
-        nut_html,
-        forward_html,
-    ]
-    if health_disclaimer:
-        sections.append(health_disclaimer)
-
-    return "\n".join(s for s in sections if s.strip())
-
-
-def _build_excerpt(cluster: list[Item], topic: str, categories: list[str]) -> str:
-    """Build a meaningful 1-2 sentence excerpt from source summaries."""
-    # Try to use the lead item's summary as the base
-    lead_summary = ""
-    for item in cluster:
-        s = clean_text(item.summary, max_len=300)
-        if s and s.lower().strip().rstrip('.') != item.title.lower().strip().rstrip('.'):
-            lead_summary = s
-            break
-    if lead_summary:
-        return lead_summary[:280]
-    # Fallback: construct from topic and category
-    cat = categories[0] if categories else "technology"
-    return f"The latest developments in {cat} coverage: {clean_text(topic, max_len=150)}."
 
 
 def free_article(cluster: list[Item]) -> dict[str, Any]:
+    """Generate a long-form, professional article from a source cluster."""
     lead = cluster[0]
     keywords = top_keywords(cluster, 8)
     topic = topic_from_cluster(cluster)
@@ -2377,28 +2581,39 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
     image_block = ""
     if hero_path:
-        image_block = (
-            f'<figure class="wp-block-image size-large">\n'
-            f'<img src="{HERO_IMAGE_PLACEHOLDER}" alt="{html.escape(title)} illustration">\n'
-            f'</figure>'
-        )
+        image_block = f"""
+<figure class="wp-block-image size-large">
+<img src="{HERO_IMAGE_PLACEHOLDER}" alt="{html.escape(title)} illustration">
+</figure>
+""".strip()
 
-    # Generate meta description and focus keyword
+    # --- Medical disclaimer for health content ---
+    medical_disclaimer = ""
+    if "health" in categories or kind == "health":
+        medical_disclaimer = """
+<blockquote><p><strong>Medical Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult with qualified healthcare professionals for medical decisions and treatment options.</p></blockquote>
+""".strip()
+
+    # --- SEO meta ---
     focus_keyword = keywords[0] if keywords else "technology"
-    excerpt = _build_excerpt(cluster, topic, categories)
-    meta_description = excerpt[:155] if excerpt else clean_text(topic, max_len=155)
+    # Clean, factual meta description — no filler phrases
+    meta_description = clean_text(
+        f"{title[:110]}: {clean_text(lead.summary, max_len=45)}", max_len=160
+    ) or clean_text(title, max_len=160)
 
-    # Build the full article body — full_article_sections handles health disclaimer internally
-    article_body = full_article_sections(cluster, topic, categories, source_count)
+    excerpt = clean_text(
+        f"{title}: {clean_text(lead.summary, max_len=140)}",
+        max_len=220,
+    ) or clean_text(title, max_len=220)
 
-    parts = []
-    if image_block:
-        parts.append(image_block)
-    parts.append('<p>[more]</p>')
-    parts.append(article_body)
-    body = "\n".join(p for p in parts if p.strip())
+    body = f"""
+{image_block}
+<p>[more]</p>
+{full_article_sections(cluster, topic, categories, source_count)}
+{medical_disclaimer}
+""".strip()
 
-    return {
+    article = {
         "title": title,
         "slug": slugify(topic),
         "excerpt": excerpt,
@@ -2410,6 +2625,7 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
         "meta_description": meta_description[:160],
         "focus_keyword": focus_keyword,
     }
+    return enrich_article_for_publication(article)
 
 
 def generate_article(cluster: list[Item]) -> dict[str, Any]:
@@ -2438,17 +2654,42 @@ def wp_request(path: str, payload: dict[str, Any] | None = None, method: str = "
 
     url = f"{base_url}/wp-json/wp/v2/{path.lstrip('/')}"
     token = base64.b64encode(f"{username}:{app_password}".encode("utf-8")).decode("ascii")
-    data = None if payload is None else json.dumps(payload).encode("utf-8")
-    request = urllib.request.Request(
-        url,
-        data=data,
-        headers={
-            "Authorization": f"Basic {token}",
-            "Content-Type": "application/json",
-            "User-Agent": USER_AGENT,
-        },
-        method=method,
-    )
+    headers = {
+        "Authorization": f"Basic {token}",
+        "User-Agent": USER_AGENT,
+    }
+
+    if payload is not None and isinstance(payload, dict) and ("file_path" in payload or "file_bytes" in payload):
+        file_path = payload.get("file_path")
+        file_bytes = payload.get("file_bytes")
+        filename = payload.get("filename") or "upload"
+        alt_text = payload.get("alt_text") or ""
+        if file_bytes is None and file_path:
+            file_path_obj = Path(file_path)
+            if file_path_obj.exists():
+                file_bytes = file_path_obj.read_bytes()
+        if file_bytes is None:
+            raise RuntimeError("Media upload payload is missing file bytes.")
+        boundary = f"----WordPressAutoBlog{hashlib.md5(os.urandom(16)).hexdigest()}"
+        body_parts = []
+        body_parts.append(f"--{boundary}\r\n".encode("ascii"))
+        body_parts.append(f'Content-Disposition: form-data; name="file"; filename="{filename}"\r\n'.encode("ascii"))
+        body_parts.append(b"Content-Type: application/octet-stream\r\n\r\n")
+        body_parts.append(file_bytes)
+        body_parts.append(b"\r\n")
+        body_parts.append(f"--{boundary}\r\n".encode("ascii"))
+        body_parts.append(b'Content-Disposition: form-data; name="alt_text"\r\n\r\n')
+        body_parts.append(alt_text.encode("utf-8"))
+        body_parts.append(b"\r\n")
+        body_parts.append(f"--{boundary}--\r\n".encode("ascii"))
+        data = b"".join(body_parts)
+        headers["Content-Type"] = f"multipart/form-data; boundary={boundary}"
+        request = urllib.request.Request(url, data=data, headers=headers, method=method)
+    else:
+        data = None if payload is None else json.dumps(payload).encode("utf-8")
+        headers["Content-Type"] = "application/json"
+        request = urllib.request.Request(url, data=data, headers=headers, method=method)
+
     timeout = env_int("REQUEST_TIMEOUT_SECONDS", 25)
     try:
         with urllib.request.urlopen(request, timeout=timeout) as response:
@@ -2497,6 +2738,28 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
         payload["categories"] = category_ids
     if tag_ids:
         payload["tags"] = tag_ids
+
+    hero_path = article_hero_path(article)
+    featured_media_id: int | None = None
+    if hero_path:
+        media_result = wp_request(
+            "media",
+            {
+                "file_path": str(hero_path),
+                "filename": hero_path.name,
+                "alt_text": article.get("hero_image_alt") or article.get("title", ""),
+            },
+            method="POST",
+        )
+        if isinstance(media_result, dict) and media_result.get("id") is not None:
+            featured_media_id = int(media_result["id"])
+            media_url = str(media_result.get("source_url") or media_result.get("guid", {}).get("rendered", "") or "").strip()
+            if media_url and HERO_IMAGE_PLACEHOLDER in payload["content"]:
+                payload["content"] = payload["content"].replace(HERO_IMAGE_PLACEHOLDER, html.escape(media_url, quote=True))
+
+    if featured_media_id is not None:
+        payload["featured_media"] = featured_media_id
+
     result = wp_request("posts", payload, method="POST")
     if not isinstance(result, dict):
         raise RuntimeError("Unexpected WordPress response while creating post.")
@@ -2519,35 +2782,32 @@ def article_text_fallback(article: dict[str, Any]) -> str:
     return strip_html(str(article.get("html", "")))
 
 
+def publicize_shortcode(article: dict[str, Any]) -> str:
+    """Return the Post-by-Email Publicize shortcode for all connected social accounts."""
+    setting = os.getenv("POST_BY_EMAIL_PUBLICIZE", "").strip().lower()
+    if setting == "off":
+        return "[publicize off]"
+    title = clean_text(str(article.get("title", "Generated post")), max_len=280)
+    if setting in {"twitter", "x"}:
+        return f"[publicize twitter]{title}[/publicize]"
+    # Title-only message for every connected platform (X, Bluesky, Mastodon, etc.).
+    # WordPress attaches the link separately, which prevents title+URL duplication.
+    return f"[publicize]{title}[/publicize]"
+
+
 def email_shortcodes(article: dict[str, Any]) -> list[str]:
     shortcodes = [
         f"[title {str(article.get('title', 'Generated post'))}]",
         f"[slug {str(article.get('slug') or slugify(str(article.get('title', 'Generated post'))))}]",
         f"[status {post_status()}]",
+        publicize_shortcode(article),
     ]
-    # Skip excerpt entirely to prevent double title on social media
     categories = [str(value).strip() for value in article.get("categories", []) if str(value).strip()]
     tags = [str(value).strip() for value in article.get("tags", []) if str(value).strip()]
     if categories:
         shortcodes.append(f"[category {', '.join(categories)}]")
     if tags:
         shortcodes.append(f"[tags {', '.join(tags)}]")
-    publicize = os.getenv("POST_BY_EMAIL_PUBLICIZE", "").strip().lower()
-    title_only = env_bool("POST_BY_EMAIL_PUBLICIZE_TITLE_ONLY", True)
-    if publicize == "off":
-        # Explicit opt-out: disable all social sharing for this post
-        shortcodes.append("[publicize off]")
-    elif title_only:
-        # Title-only sharing to ALL connected social platforms
-        # (Bluesky, Mastodon, Facebook, Tumblr, etc.) via Jetpack Social / Publicize.
-        title = str(article.get("title", "")).strip()
-        if title:
-            shortcodes.append(f"[publicize]{title}[/publicize]")
-    else:
-        # Full template sharing (not recommended - can cause double titles)
-        title = str(article.get("title", "")).strip()
-        if title:
-            shortcodes.append(f"[publicize]{title}[/publicize]")
     return shortcodes
 
 
@@ -2839,6 +3099,20 @@ def run_once(args: argparse.Namespace) -> int:
     try:
         feeds = load_config()
         conn = init_db()
+        if not args.dry_run:
+            max_posts_per_day = max(1, env_int("MAX_POSTS_PER_DAY", 24))
+            posted_today = todays_post_count(conn)
+            if posted_today >= max_posts_per_day:
+                message = f"Daily cap reached: {posted_today}/{max_posts_per_day} posts already sent today."
+                print(message)
+                write_run_status(
+                    "skipped",
+                    message,
+                    dry_run=False,
+                    posted_today=posted_today,
+                    max_posts_per_day=max_posts_per_day,
+                )
+                return 0
 
         print(f"Fetching {len(feeds)} enabled feeds...")
         items, errors = fetch_all(feeds, timeout)
