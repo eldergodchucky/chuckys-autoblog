@@ -86,6 +86,25 @@
         });
     }
     
+    // Social sharing buttons with tracking
+    const shareButtons = document.querySelectorAll('[data-share-track]');
+    
+    shareButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const postId = document.getElementById('post-id');
+            if (postId) {
+                // Track share via AJAX
+                fetch('/wp-admin/admin-ajax.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'action=track_share&post_id=' + postId.value
+                }).catch(error => console.log('Share tracking error:', error));
+            }
+        });
+    });
+    
     // Article card hover effects
     const articleCards = document.querySelectorAll('.article-card');
     

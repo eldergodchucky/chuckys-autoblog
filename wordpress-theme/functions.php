@@ -334,3 +334,89 @@ function chuckyscarnage_generate_sitemap() {
     exit;
 }
 add_action('template_redirect', 'chuckyscarnage_generate_sitemap');
+
+// Share count tracking
+function chuckyscarnage_get_share_count($post_id = null) {
+    if (!$post_id) {
+        $post_id = get_the_ID();
+    }
+    
+    $share_count = get_post_meta($post_id, 'share_count', true);
+    return $share_count ? intval($share_count) : 0;
+}
+
+function chuckyscarnage_increment_share_count($post_id = null) {
+    if (!$post_id) {
+        $post_id = get_the_ID();
+    }
+    
+    $count = chuckyscarnage_get_share_count($post_id);
+    update_post_meta($post_id, 'share_count', $count + 1);
+}
+
+// Core Web Vitals optimization
+function chuckyscarnage_performance_optimization() {
+    // Preload critical resources
+    echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
+    echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+    echo '<link rel="dns-prefetch" href="//chuckyscarnage.tech.blog">' . "\n";
+    
+    // Defer non-critical JavaScript
+    echo '<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Defer non-critical scripts
+        var scripts = document.querySelectorAll("script[data-defer]");
+        scripts.forEach(function(script) {
+            script.defer = true;
+        });
+    });
+    </script>' . "\n";
+}
+add_action('wp_head', 'chuckyscarnage_performance_optimization', 1);
+
+// Remove unnecessary WordPress bloat
+function chuckyscarnage_remove_bloat() {
+    // Remove emoji scripts
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('wp_print_styles', 'print_emoji_styles');
+    
+    // Remove WordPress version
+    remove_action('wp_head', 'wp_generator');
+    
+    // Remove RSD link
+    remove_action('wp_head', 'rsd_link');
+    
+    // Remove wlwmanifest link
+    remove_action('wp_head', 'wlwmanifest_link');
+    
+    // Remove shortlink
+    remove_action('wp_head', 'wp_shortlink_wp_head');
+    
+    // Remove adjacent posts links
+    remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
+}
+add_action('init', 'chuckyscarnage_remove_bloat');
+
+// Lazy load images with native loading attribute
+function chuckyscarnage_lazy_load_images($content) {
+    if (!is_admin() && !is_feed()) {
+        $content = preg_replace('/<img([^>]+)src=/i', '<img$1loading="lazy" src=', $content);
+    }
+    return $content;
+}
+add_filter('the_content', 'chuckyscarnage_lazy_load_images', 10);
+
+// AJAX handler for share tracking
+function chuckyscarnage_track_share_ajax() {
+    $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
+    
+    if ($post_id > 0) {
+        $count = chuckyscarnage_get_share_count($post_id);
+        update_post_meta($post_id, 'share_count', $count + 1);
+        wp_send_json_success(array('count' => $count + 1));
+    }
+    
+    wp_send_json_error();
+}
+add_action('wp_ajax_track_share', 'chuckyscarnage_track_share_ajax');
+add_action('wp_ajax_nopriv_track_share', 'chuckyscarnage_track_share_ajax');
