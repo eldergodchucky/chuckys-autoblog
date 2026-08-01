@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChuckysCarnage | Technology Explained Beyond the Headlines</title>
+    <meta name="description" content="ChuckysCarnage explores artificial intelligence, cybersecurity, science, gaming, space, software, mobile technology, and the innovations shaping tomorrow.">
+    <meta name="theme-color" content="#050816">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preload" href="assets/styles.css" as="style">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ChuckysCarnage",
+        "url": "https://eldergodchucky.github.io/chuckys-autoblog/",
+        "description": "Technology explained beyond the headlines."
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">CC</span>
+          <span>ChuckysCarnage</span>
+        </a>
+        <nav class="nav-links">
+          <a class="active" href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy</a>
+          <button data-theme-toggle type="button">Dark mode</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-card">
+          <div>
+            <p class="badge">Premium Technology Publication</p>
+            <h1>Technology Explained Beyond the Headlines</h1>
+            <p class="lead">ChuckysCarnage explores artificial intelligence, cybersecurity, science, gaming, space, software, mobile technology, and the innovations shaping tomorrow. Every article goes beyond the news to explain why it matters, what happens next, and how it affects everyday people.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#latest">Start Reading</a>
+              <a class="btn btn-secondary" href="#latest">Latest News</a>
+            </div>
+          </div>
+          <div class="hero-preview">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Futuristic technology interface with cyan accents" loading="lazy">
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Featured Stories</h2>
+            <a class="section-link" href="#latest">See all</a>
+          </div>
+          <div class="grid grid-3" id="featured-grid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header"><h2 class="section-title">Trending Now</h2><span class="section-link">Fresh from the feed</span></div>
+          <div class="grid grid-4" id="trending-grid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-cat-title="tech">Technology</h2>
+            <a class="section-link" href="#latest" data-cat-more="tech">More in Technology</a>
+          </div>
+          <div class="grid grid-3" id="cat-grid-1"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-cat-title="science">Science</h2>
+            <a class="section-link" href="#latest" data-cat-more="science">More in Science</a>
+          </div>
+          <div class="grid grid-3" id="cat-grid-2"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-cat-title="info">Info &amp; Analysis</h2>
+            <a class="section-link" href="#latest" data-cat-more="info">More analysis</a>
+          </div>
+          <div class="grid grid-3" id="cat-grid-3"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header"><h2 class="section-title">Latest Articles</h2><a class="section-link" href="#latest">Refine below</a></div>
+          <div class="filters">
+            <input type="search" placeholder="Search stories" data-search aria-label="Search stories">
+            <select data-category aria-label="Filter by category">
+              <option value="">All categories</option>
+            </select>
+            <select data-tag aria-label="Filter by tag">
+              <option value="">All tags</option>
+            </select>
+            <select data-range aria-label="Filter by date">
+              <option value="">Any date</option>
+              <option value="24h">Last 24 hours</option>
+              <option value="7d">Last 7 days</option>
+              <option value="30d">Last 30 days</option>
+            </select>
+          </div>
+          <div class="grid grid-3" id="latest"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="newsletter">
+            <div>
+              <h2 class="section-title">Stay Ahead of Tomorrow</h2>
+              <p>Receive the latest articles covering AI, cybersecurity, gaming, science, software, and technology delivered directly to your inbox.</p>
+            </div>
+            <form class="newsletter-form" data-newsletter>
+              <input type="email" placeholder="Email address" aria-label="Email address" required>
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header"><h2 class="section-title">Popular Tags</h2></div>
+          <div class="tag-cloud" id="tag-cloud"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>ChuckysCarnage is an independent technology publication covering artificial intelligence, cybersecurity, gaming, science, software, mobile technology, and emerging innovations. We explain not only what is happening, but why it matters.</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="editorial-policy.html">Editorial Policy</a>
+          <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+          <a href="ai-policy.html">AI Policy</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
+          <a href="sitemap.html">Sitemap</a>
+          <a href="social.html">Social Media</a>
+          <a href="copyright.html">Copyright</a>
+        </div>
+      </div>
+    </footer>
+
+    <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
+    <script src="assets/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eldergodchucky.github.io/chuckys-autoblog/sitemap.html
