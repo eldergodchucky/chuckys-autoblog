@@ -190,7 +190,11 @@ def wp_request(path: str, payload: dict | None = None, method: str = "GET") -> d
             "WP_BASE_URL, WP_USERNAME, and WP_APPLICATION_PASSWORD must be set in .env (REST publishing)."
         )
 
-    url = f"{base_url}/wp-json/wp/v2/{path.lstrip('/')}"
+    if "/wp-json/wp/v2/" in f"{base_url}/" or "/wp/v2/sites/" in f"{base_url}/":
+        api_base = base_url
+    else:
+        api_base = f"{base_url}/wp-json/wp/v2"
+    url = f"{api_base}/{path.lstrip('/')}"
     token = base64.b64encode(f"{username}:{app_password}".encode("utf-8")).decode("ascii")
     headers = {
         "Authorization": f"Basic {token}",

@@ -132,7 +132,7 @@ Share new feed posts once:
 
 REST publishing is the recommended method. It fixes hero images, applies categories/tags reliably, and lets the automation edit pages. If the REST credentials are missing, the script automatically falls back to Post-by-Email so publishing never stops.
 
-On WordPress.com (free plan included):
+On WordPress.com (free plan included), the site's own `/wp-json/` is not exposed, so you must point at the `public-api` base:
 
 1. Open https://wordpress.com/me/security
 2. Scroll to **Application Passwords** and click **Add New Application Password**.
@@ -141,14 +141,14 @@ On WordPress.com (free plan included):
 
 ```text
 WP_POST_METHOD=rest
-WP_BASE_URL=https://chuckyscarnage.tech.blog
+WP_BASE_URL=https://public-api.wordpress.com/wp/v2/sites/chuckyscarnage.tech.blog
 WP_USERNAME=your-wordpress-com-username
 WP_APPLICATION_PASSWORD=xxxx xxxx xxxx xxxx xxxx xxxx
 ARTICLE_GENERATOR=free
 WP_CREATE_TERMS=true
 ```
 
-If `WP_BASE_URL`, `WP_USERNAME`, or `WP_APPLICATION_PASSWORD` are empty, the script logs a fallback and uses Post-by-Email instead.
+If `WP_BASE_URL`, `WP_USERNAME`, or `WP_APPLICATION_PASSWORD` are empty, the script logs a fallback and uses Post-by-Email instead. If REST publishing fails (wrong password, network error), it also falls back to Post-by-Email automatically.
 
 `OPENAI_API_KEY` is optional. Only use it if you later choose `ARTICLE_GENERATOR=openai` for longer, higher-polish generated articles.
 

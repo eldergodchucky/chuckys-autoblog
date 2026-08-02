@@ -241,6 +241,76 @@ class FullArticleSectionsTests(unittest.TestCase):
         send_email.assert_called_once()
         self.assertEqual(result["status"], "sent")
 
+    def test_wp_request_uses_public_api_base_when_supplied(self) -> None:
+        from unittest.mock import MagicMock, patch
+
+        captured = {}
+
+        class FakeResponse:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                return False
+
+            def read(self):
+                return b"{}"
+
+        def fake_urlopen(request, timeout):
+            captured["url"] = request.full_url
+            captured["method"] = request.get_method()
+            return FakeResponse()
+
+        with patch.dict(
+            os.environ,
+            {
+                "WP_BASE_URL": "https://public-api.wordpress.com/wp/v2/sites/chuckyscarnage.tech.blog",
+                "WP_USERNAME": "user",
+                "WP_APPLICATION_PASSWORD": "app pass",
+            },
+            clear=False,
+        ):
+            with patch("wp_auto_blog.urllib.request.urlopen", side_effect=fake_urlopen):
+                wp_auto_blog.wp_request("posts")
+
+        self.assertEqual(
+            captured["url"],
+            "https://public-api.wordpress.com/wp/v2/sites/chuckyscarnage.tech.blog/posts",
+        )
+
+    def test_wp_request_appends_wp_json_for_site_root_base(self) -> None:
+        from unittest.mock import patch
+
+        captured = {}
+
+        class FakeResponse:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                return False
+
+            def read(self):
+                return b"{}"
+
+        def fake_urlopen(request, timeout):
+            captured["url"] = request.full_url
+            return FakeResponse()
+
+        with patch.dict(
+            os.environ,
+            {
+                "WP_BASE_URL": "https://example.test",
+                "WP_USERNAME": "user",
+                "WP_APPLICATION_PASSWORD": "app pass",
+            },
+            clear=False,
+        ):
+            with patch("wp_auto_blog.urllib.request.urlopen", side_effect=fake_urlopen):
+                wp_auto_blog.wp_request("posts")
+
+        self.assertEqual(captured["url"], "https://example.test/wp-json/wp/v2/posts")
+
 
 if __name__ == "__main__":
     unittest.main()
