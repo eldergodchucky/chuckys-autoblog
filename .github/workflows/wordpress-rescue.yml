@@ -65,7 +65,7 @@ jobs:
       X_TOKEN_EXPIRES_AT: ${{ secrets.X_TOKEN_EXPIRES_AT }}
       X_SHARE_MAX_PER_RUN: "2"
       X_SHARE_BACKFILL: "false"
-      X_SHARE_TEMPLATE: "New on Chucky's Carnage: {title}\n{link}"
+      X_SHARE_TEMPLATE: "{title}"
       X_SHARE_STATE_PATH: data/x_shared_posts.json
 
     steps:
