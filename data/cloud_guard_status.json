@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 32,
-      "created_at": "2026-08-02T14:37:28Z",
+      "age_minutes": 35,
+      "created_at": "2026-08-02T15:39:45Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30752512524",
-      "id": 30752512524,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30754850073",
+      "id": 30754850073,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-02T15:10:07.677767+00:00",
+  "finished_at": "2026-08-02T16:15:25.124559+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 32,
-      "created_at": "2026-08-02T14:37:28Z",
+      "age_minutes": 35,
+      "created_at": "2026-08-02T15:39:45Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30752512524",
-      "id": 30752512524,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30754850073",
+      "id": 30754850073,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 16,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/02/superheated-magma-may-power-towering-lava-fountains/",
-  "latest_published_at": "2026-08-02T14:53:39+00:00",
-  "latest_title": "Superheated magma may power towering lava fountains",
+  "latest_age_minutes": 19,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/02/toi-2049-b/",
+  "latest_published_at": "2026-08-02T15:56:00+00:00",
+  "latest_title": "TOI-2049 b",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
