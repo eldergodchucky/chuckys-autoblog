@@ -1,4 +1,10 @@
-# WordPress Auto Blog
+# ChuckysCarnage Auto Blog
+
+An independent technology publication (AI, cybersecurity, science, gaming, space, software, mobile) with a premium WordPress theme and automated article publishing.
+
+## Premium Publication Theme
+
+The `wordpress-theme/` folder is a magazine-style premium theme (upload `chuckyscarnage-theme.zip` to WordPress): dark/light themes with system detection, cyan accent, rounded cards, sticky navigation, hero section, Featured/Trending/category/Opinion/Reviews/Guides sections, newsletter signup, popular tags, advanced search with filters, breadcrumbs, article cards with reading time/views/comments/author, related articles, prev/next navigation, author bio, social sharing, comments, back-to-top, XML sitemap, robots.txt, schema markup, and performance optimizations.
 
 This project fetches high-quality tech, science, gadget, security, tutorial, and DIY feeds, groups related items, generates an original cited post, and sends it to WordPress through Post by Email or the REST API.
 
@@ -22,7 +28,9 @@ Key safety controls:
 
 ### WordPress.com Free / No-Fee Setup
 
-Use WordPress.com's Post by Email feature:
+Recommended: use the WordPress REST API with an Application Password (see [WordPress REST Setup](#wordpress-rest-setup)). It makes hero images, categories, tags, and page edits reliable.
+
+The older Post-by-Email route still works and is used automatically as a fallback when REST credentials are missing. To configure it:
 
 1. Go to your WordPress.com site dashboard.
 2. Open `Settings -> Writing`.
@@ -122,15 +130,25 @@ Share new feed posts once:
 
 ### WordPress REST Setup
 
-For self-hosted or plugin-enabled WordPress sites, you can use the REST API instead:
+REST publishing is the recommended method. It fixes hero images, applies categories/tags reliably, and lets the automation edit pages. If the REST credentials are missing, the script automatically falls back to Post-by-Email so publishing never stops.
+
+On WordPress.com (free plan included):
+
+1. Open https://wordpress.com/me/security
+2. Scroll to **Application Passwords** and click **Add New Application Password**.
+3. Name it (e.g. `auto-blog`) and copy the generated password.
+4. Fill in `.env` (and the GitHub Actions secrets with the same values):
 
 ```text
 WP_POST_METHOD=rest
-WP_BASE_URL=https://your-site.example
-WP_USERNAME=automation-author
+WP_BASE_URL=https://chuckyscarnage.tech.blog
+WP_USERNAME=your-wordpress-com-username
 WP_APPLICATION_PASSWORD=xxxx xxxx xxxx xxxx xxxx xxxx
 ARTICLE_GENERATOR=free
+WP_CREATE_TERMS=true
 ```
+
+If `WP_BASE_URL`, `WP_USERNAME`, or `WP_APPLICATION_PASSWORD` are empty, the script logs a fallback and uses Post-by-Email instead.
 
 `OPENAI_API_KEY` is optional. Only use it if you later choose `ARTICLE_GENERATOR=openai` for longer, higher-polish generated articles.
 

@@ -3,7 +3,7 @@ name: WordPress Auto Blog Rescue Guard
 on:
   schedule:
     # Independent rescue checks, offset from the main watchdog backup kicks.
-    - cron: "1,6,11,16,21,26,31,36,41,46,51,56 * * * *"
+    - cron: "5,20,35,50 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -22,13 +22,16 @@ jobs:
       BLOG_FEED_URL: https://chuckyscarnage.tech.blog/feed/
       MAIN_WORKFLOW_FILE: wordpress-autoblog.yml
       MAIN_WATCHDOG_STALE_MINUTES: "95"
-      RESCUE_STALE_MINUTES: "35"
-      RESCUE_FORCE_STALE_MINUTES: "50"
-      RESCUE_EMERGENCY_STALE_MINUTES: "90"
-      FAILOVER_STALE_MINUTES: "35"
-      FAILOVER_COOLDOWN_MINUTES: "20"
+      RESCUE_STALE_MINUTES: "20"
+      RESCUE_FORCE_STALE_MINUTES: "25"
+      RESCUE_EMERGENCY_STALE_MINUTES: "45"
+      FAILOVER_STALE_MINUTES: "15"
+      FAILOVER_COOLDOWN_MINUTES: "14"
       FAILOVER_LOCK_STALE_MINUTES: "30"
-      WP_POST_METHOD: email
+      WP_POST_METHOD: rest
+      WP_BASE_URL: ${{ secrets.WP_BASE_URL }}
+      WP_USERNAME: ${{ secrets.WP_USERNAME }}
+      WP_APPLICATION_PASSWORD: ${{ secrets.WP_APPLICATION_PASSWORD }}
       POST_BY_EMAIL_ADDRESS: ${{ secrets.POST_BY_EMAIL_ADDRESS }}
       POST_BY_EMAIL_PUBLICIZE: ""
       POST_STATUS: publish
@@ -49,7 +52,7 @@ jobs:
       ALLOW_SINGLE_SOURCE_PRIORITY_POSTS: "true"
       SINGLE_SOURCE_PRIORITY_CATEGORIES: science,space
       SINGLE_SOURCE_MIN_QUALITY: "4"
-      WP_CREATE_TERMS: "false"
+      WP_CREATE_TERMS: "true"
       BLOCKLIST_DOMAINS: ""
       SMTP_HOST: ${{ secrets.SMTP_HOST }}
       SMTP_PORT: ${{ secrets.SMTP_PORT }}
@@ -65,7 +68,7 @@ jobs:
       X_TOKEN_EXPIRES_AT: ${{ secrets.X_TOKEN_EXPIRES_AT }}
       X_SHARE_MAX_PER_RUN: "2"
       X_SHARE_BACKFILL: "false"
-      X_SHARE_TEMPLATE: "New on Chucky's Carnage: {title}\n{link}"
+      X_SHARE_TEMPLATE: "{title}"
       X_SHARE_STATE_PATH: data/x_shared_posts.json
 
     steps:

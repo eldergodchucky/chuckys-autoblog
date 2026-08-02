@@ -1,8 +1,6 @@
 name: WordPress Auto Blog Failover 2
 
 on:
-  schedule:
-    - cron: "4,9,14,19,24,29,34,39,44,49,54,59 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -44,7 +42,10 @@ jobs:
 
       - name: Publish one post if a fresh topic is available
         env:
-          WP_POST_METHOD: email
+          WP_POST_METHOD: rest
+          WP_BASE_URL: ${{ secrets.WP_BASE_URL }}
+          WP_USERNAME: ${{ secrets.WP_USERNAME }}
+          WP_APPLICATION_PASSWORD: ${{ secrets.WP_APPLICATION_PASSWORD }}
           POST_BY_EMAIL_ADDRESS: ${{ secrets.POST_BY_EMAIL_ADDRESS }}
           POST_BY_EMAIL_PUBLICIZE: ""
           POST_STATUS: publish
@@ -67,7 +68,7 @@ jobs:
           ALLOW_SINGLE_SOURCE_PRIORITY_POSTS: "true"
           SINGLE_SOURCE_PRIORITY_CATEGORIES: science,space
           SINGLE_SOURCE_MIN_QUALITY: "4"
-          WP_CREATE_TERMS: "false"
+          WP_CREATE_TERMS: "true"
           BLOCKLIST_DOMAINS: ""
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
