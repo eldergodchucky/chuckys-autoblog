@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 24,
-      "created_at": "2026-08-02T13:35:02Z",
+      "age_minutes": 32,
+      "created_at": "2026-08-02T14:37:28Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30750240210",
-      "id": 30750240210,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30752512524",
+      "id": 30752512524,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-02T14:00:01.166434+00:00",
+  "finished_at": "2026-08-02T15:10:07.677767+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 24,
-      "created_at": "2026-08-02T13:35:02Z",
+      "age_minutes": 32,
+      "created_at": "2026-08-02T14:37:28Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30750240210",
-      "id": 30750240210,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30752512524",
+      "id": 30752512524,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 8,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/02/cancer-may-be-breaking-its-own-dna-to-keep-growing/",
-  "latest_published_at": "2026-08-02T13:51:13+00:00",
-  "latest_title": "Cancer may be breaking its own DNA to keep growing",
+  "latest_age_minutes": 16,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/02/superheated-magma-may-power-towering-lava-fountains/",
+  "latest_published_at": "2026-08-02T14:53:39+00:00",
+  "latest_title": "Superheated magma may power towering lava fountains",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
