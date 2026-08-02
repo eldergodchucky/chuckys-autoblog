@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 46,
-      "created_at": "2026-08-02T20:53:24Z",
+      "age_minutes": 44,
+      "created_at": "2026-08-02T21:56:04Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30766631554",
-      "id": 30766631554,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30768974795",
+      "id": 30768974795,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-02T21:39:28.740157+00:00",
+  "finished_at": "2026-08-02T22:40:44.490971+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 46,
-      "created_at": "2026-08-02T20:53:24Z",
+      "age_minutes": 44,
+      "created_at": "2026-08-02T21:56:04Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30766631554",
-      "id": 30766631554,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30768974795",
+      "id": 30768974795,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 76,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/02/weekly-poll-results-galaxy-z-fold8-excites/",
-  "latest_published_at": "2026-08-02T20:22:32+00:00",
-  "latest_title": "Weekly poll results: Galaxy Z Fold8 excites",
+  "latest_age_minutes": 28,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/02/scientists-found-two-mysterious-ghost-ancestors-hiding-in-our-dna/",
+  "latest_published_at": "2026-08-02T22:12:31+00:00",
+  "latest_title": "Scientists found two mysterious \u2018ghost\u2019 ancestors hiding in our DNA",
   "main_run_stale_minutes": 95,
   "message": "Feed is stale enough for rescue, but publish mode was not enabled.",
   "rescue_emergency_stale_minutes": 45,
