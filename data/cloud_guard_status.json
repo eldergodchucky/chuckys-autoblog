@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 26,
-      "created_at": "2026-08-02T04:16:07Z",
-      "event": "schedule",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30732078673",
-      "id": 30732078673,
+      "age_minutes": 0,
+      "created_at": "2026-08-02T07:19:44Z",
+      "event": "workflow_dispatch",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30737592939",
+      "id": 30737592939,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-02T04:42:10.611412+00:00",
+  "finished_at": "2026-08-02T07:20:29.921901+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 26,
-      "created_at": "2026-08-02T04:16:07Z",
-      "event": "schedule",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30732078673",
-      "id": 30732078673,
+      "age_minutes": 0,
+      "created_at": "2026-08-02T07:19:44Z",
+      "event": "workflow_dispatch",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30737592939",
+      "id": 30737592939,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 6,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/02/browser-based-3d-editor-covers-the-basics-while-staying-local/",
-  "latest_published_at": "2026-08-02T04:36:04+00:00",
-  "latest_title": "Browser-based 3D Editor Covers The Basics While Staying Local",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/02/scientists-left-water-inside-a-battery-and-nearly-doubled-its-power/",
+  "latest_published_at": "2026-08-02T07:19:33+00:00",
+  "latest_title": "Scientists left water inside a battery and nearly doubled its power",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
