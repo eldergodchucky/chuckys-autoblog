@@ -130,25 +130,34 @@ Share new feed posts once:
 
 ### WordPress REST Setup
 
-REST publishing is the recommended method. It fixes hero images, applies categories/tags reliably, and lets the automation edit pages. If the REST credentials are missing, the script automatically falls back to Post-by-Email so publishing never stops.
+REST publishing is the recommended method. It fixes hero images, applies categories/tags reliably, and lets the automation edit pages. If REST publishing fails (missing token, auth error, network), the script automatically falls back to Post-by-Email so publishing never stops.
 
-On WordPress.com (free plan included), the site's own `/wp-json/` is not exposed, so you must point at the `public-api` base:
+**Important for WordPress.com-hosted (free) sites:** the site's own `/wp-json/` is not exposed, and HTTP Basic auth with an application password is rejected for REST writes. You must obtain an OAuth2 token. Self-hosted WordPress sites just use Basic auth with the site root URL.
 
-1. Open https://wordpress.com/me/security
-2. Scroll to **Application Passwords** and click **Add New Application Password**.
-3. Name it (e.g. `auto-blog`) and copy the generated password.
-4. Fill in `.env` (and the GitHub Actions secrets with the same values):
+For WordPress.com:
+
+1. Create an Application Password at https://wordpress.com/me/security (needed for the token exchange).
+2. Register an OAuth2 app at https://developer.wordpress.com/apps/new/ — name it `auto-blog`, redirect URL `http://127.0.0.1:9999/callback`. Copy the Client ID and Client Secret.
+3. Fill in `.env` (and the GitHub Actions secrets with the same values):
 
 ```text
 WP_POST_METHOD=rest
 WP_BASE_URL=https://public-api.wordpress.com/wp/v2/sites/chuckyscarnage.tech.blog
 WP_USERNAME=your-wordpress-com-username
 WP_APPLICATION_PASSWORD=xxxx xxxx xxxx xxxx xxxx xxxx
+WPCOM_CLIENT_ID=your-client-id
+WPCOM_CLIENT_SECRET=your-client-secret
 ARTICLE_GENERATOR=free
 WP_CREATE_TERMS=true
 ```
 
-If `WP_BASE_URL`, `WP_USERNAME`, or `WP_APPLICATION_PASSWORD` are empty, the script logs a fallback and uses Post-by-Email instead. If REST publishing fails (wrong password, network error), it also falls back to Post-by-Email automatically.
+4. Exchange the password for an OAuth2 token (saves `WP_COM_ACCESS_TOKEN` to `.env`):
+
+```powershell
+python src\wpcom_oauth_setup.py
+```
+
+For the GitHub Actions secrets, set `WP_COM_ACCESS_TOKEN` (plus the `WP_*` values above) the same way. Publishing uses the bearer token when present, and Basic auth otherwise.
 
 `OPENAI_API_KEY` is optional. Only use it if you later choose `ARTICLE_GENERATOR=openai` for longer, higher-polish generated articles.
 

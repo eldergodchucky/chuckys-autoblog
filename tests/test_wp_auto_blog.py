@@ -311,6 +311,91 @@ class FullArticleSectionsTests(unittest.TestCase):
 
         self.assertEqual(captured["url"], "https://example.test/wp-json/wp/v2/posts")
 
+    def test_wp_request_uses_bearer_token_when_wpcom_access_token_set(self) -> None:
+        from unittest.mock import patch
+
+        captured = {}
+
+        class FakeResponse:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                return False
+
+            def read(self):
+                return b"{}"
+
+        def fake_urlopen(request, timeout):
+            captured["auth"] = request.get_header("Authorization")
+            return FakeResponse()
+
+        with patch.dict(
+            os.environ,
+            {
+                "WP_BASE_URL": "https://public-api.wordpress.com/wp/v2/sites/chuckyscarnage.tech.blog",
+                "WP_USERNAME": "user",
+                "WP_APPLICATION_PASSWORD": "app pass",
+                "WP_COM_ACCESS_TOKEN": "secret-token",
+            },
+            clear=False,
+        ):
+            with patch("wp_auto_blog.urllib.request.urlopen", side_effect=fake_urlopen):
+                wp_auto_blog.wp_request("posts")
+
+        self.assertEqual(captured["auth"], "Bearer secret-token")
+
+    def test_wpcom_oauth_setup_exchanges_token_and_saves_env(self) -> None:
+        import tempfile
+        from unittest.mock import patch
+
+        import wpcom_oauth_setup
+
+        with tempfile.TemporaryDirectory() as tmp:
+            env_path = Path(tmp) / ".env"
+            env_path.write_text("WPCOM_CLIENT_ID=cid\nWPCOM_CLIENT_SECRET=cs\n", encoding="utf-8")
+
+            response = {
+                "access_token": "tok123",
+                "blog_id": 204403701,
+                "blog_url": "https://chuckyscarnage.tech.blog",
+                "expires_in": 3600,
+                "refresh_token": "refreshtok",
+            }
+
+            def fake_urlopen(request, timeout):
+                class FakeResponse:
+                    def __enter__(self):
+                        return self
+
+                    def __exit__(self, *args):
+                        return False
+
+                    def read(self):
+                        import json
+                        return json.dumps(response).encode("utf-8")
+
+                return FakeResponse()
+
+            with patch.dict(
+                os.environ,
+                {
+                    "WPCOM_CLIENT_ID": "cid",
+                    "WPCOM_CLIENT_SECRET": "cs",
+                    "WP_USERNAME": "eldergodchucky",
+                    "WP_APPLICATION_PASSWORD": "app pass",
+                },
+                clear=False,
+            ):
+                with patch("sys.argv", ["wpcom_oauth_setup.py"]):
+                    with patch("wpcom_oauth_setup.ENV_PATH", env_path):
+                        with patch("wpcom_oauth_setup.urllib.request.urlopen", side_effect=fake_urlopen):
+                            wpcom_oauth_setup.main()
+
+            content = env_path.read_text(encoding="utf-8")
+            self.assertIn("WP_COM_ACCESS_TOKEN=tok123", content)
+            self.assertIn("WP_COM_REFRESH_TOKEN=refreshtok", content)
+
 
 if __name__ == "__main__":
     unittest.main()

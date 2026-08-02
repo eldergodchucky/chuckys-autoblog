@@ -195,9 +195,14 @@ def wp_request(path: str, payload: dict | None = None, method: str = "GET") -> d
     else:
         api_base = f"{base_url}/wp-json/wp/v2"
     url = f"{api_base}/{path.lstrip('/')}"
-    token = base64.b64encode(f"{username}:{app_password}".encode("utf-8")).decode("ascii")
+    access_token = os.getenv("WP_COM_ACCESS_TOKEN", "").strip()
+    if access_token:
+        authorization = f"Bearer {access_token}"
+    else:
+        token = base64.b64encode(f"{username}:{app_password}".encode("utf-8")).decode("ascii")
+        authorization = f"Basic {token}"
     headers = {
-        "Authorization": f"Basic {token}",
+        "Authorization": authorization,
         "User-Agent": USER_AGENT,
         "Content-Type": "application/json",
     }
@@ -224,7 +229,7 @@ def upsert_page(page: dict, dry_run: bool = False) -> str:
     slug = page["slug"]
     if dry_run:
         return f"would create or update page: {page['title']} (slug={slug})"
-    found = wp_request(f"pages?slug={slug}&status=publish,draft&per_page=1")
+    found = wp_request(f"pages?slug={slug}&per_page=1")
     if found:
         page_id = found[0]["id"]
         updated = wp_request(
@@ -257,7 +262,7 @@ STALE_PAGE_SLUGS = {"about-2", "contact-2", "home-2", "blog-2"}
 
 def cleanup_stale_pages(dry_run: bool = False) -> list[str]:
     messages: list[str] = []
-    pages = wp_request("pages?per_page=100&status=publish,draft")
+    pages = wp_request("pages?per_page=100")
     if not isinstance(pages, list):
         return ["Could not list pages for cleanup."]
     for page in pages:
