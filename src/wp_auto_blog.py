@@ -3086,6 +3086,11 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
         "content": content_html,
         "status": post_status(),
     }
+    pm = publicize_message(article)
+    if pm is None:
+        payload["publicize"] = False
+    else:
+        payload["publicize_message"] = pm
     category_ids = wp_term_ids("category", [str(v) for v in article.get("categories", [])])
     tag_ids = wp_term_ids("tag", [str(v) for v in article.get("tags", [])])
     if category_ids:
@@ -3121,6 +3126,17 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
     if not isinstance(result, dict):
         raise RuntimeError("Unexpected WordPress response while creating post.")
     return result
+
+
+def publicize_message(article: dict[str, Any]) -> str | None:
+    """Title-only message shared by WordPress.com Publicize to every connected service.
+
+    Returns None when POST_BY_EMAIL_PUBLICIZE=off, so callers disable Publicize entirely.
+    """
+    setting = os.getenv("POST_BY_EMAIL_PUBLICIZE", "").strip().lower()
+    if setting == "off":
+        return None
+    return clean_text(str(article.get("title", "Generated post")), max_len=280)
 
 
 def post_status() -> str:

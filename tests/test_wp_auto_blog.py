@@ -484,6 +484,85 @@ class FullArticleSectionsTests(unittest.TestCase):
         self.assertTrue(result.get("already_exists"))
         self.assertEqual(result["id"], 1234)
 
+    def test_publicize_message_is_title_only_by_default(self) -> None:
+        from unittest.mock import patch
+
+        with patch.dict(os.environ, {"POST_BY_EMAIL_PUBLICIZE": ""}, clear=False):
+            self.assertEqual(
+                wp_auto_blog.publicize_message({"title": "My Great Post"}),
+                "My Great Post",
+            )
+
+    def test_publicize_message_returns_none_when_off(self) -> None:
+        from unittest.mock import patch
+
+        with patch.dict(os.environ, {"POST_BY_EMAIL_PUBLICIZE": "off"}, clear=False):
+            self.assertIsNone(wp_auto_blog.publicize_message({"title": "My Great Post"}))
+
+    def test_publish_to_wordpress_sends_title_only_publicize_message(self) -> None:
+        from unittest.mock import patch
+
+        article = {
+            "title": "Test post",
+            "slug": "test-post",
+            "excerpt": "A short excerpt",
+            "html": "<p>Body.</p>",
+            "categories": ["tech"],
+            "tags": ["test"],
+        }
+
+        captured: dict[str, object] = {}
+
+        def fake_wp_request(path: str, payload: object = None, method: str = "GET") -> dict[str, object]:
+            captured["path"] = path
+            captured["payload"] = payload
+            return {"id": 99}
+
+        with patch.dict(
+            os.environ,
+            {"POST_BY_EMAIL_PUBLICIZE": ""},
+            clear=False,
+        ):
+            with patch("wp_auto_blog.wp_request", side_effect=fake_wp_request):
+                with patch("wp_auto_blog.wp_existing_post", return_value=None):
+                    with patch("wp_auto_blog.wp_term_ids", return_value=[]):
+                        wp_auto_blog.publish_to_wordpress(article)
+
+        self.assertEqual(captured["payload"]["publicize_message"], "Test post")
+        self.assertNotIn("publicize", captured["payload"])
+
+    def test_publish_to_wordpress_disables_publicize_when_off(self) -> None:
+        from unittest.mock import patch
+
+        article = {
+            "title": "Test post",
+            "slug": "test-post",
+            "excerpt": "A short excerpt",
+            "html": "<p>Body.</p>",
+            "categories": ["tech"],
+            "tags": ["test"],
+        }
+
+        captured: dict[str, object] = {}
+
+        def fake_wp_request(path: str, payload: object = None, method: str = "GET") -> dict[str, object]:
+            captured["path"] = path
+            captured["payload"] = payload
+            return {"id": 99}
+
+        with patch.dict(
+            os.environ,
+            {"POST_BY_EMAIL_PUBLICIZE": "off"},
+            clear=False,
+        ):
+            with patch("wp_auto_blog.wp_request", side_effect=fake_wp_request):
+                with patch("wp_auto_blog.wp_existing_post", return_value=None):
+                    with patch("wp_auto_blog.wp_term_ids", return_value=[]):
+                        wp_auto_blog.publish_to_wordpress(article)
+
+        self.assertFalse(captured["payload"]["publicize"])
+        self.assertNotIn("publicize_message", captured["payload"])
+
 
 if __name__ == "__main__":
     unittest.main()
