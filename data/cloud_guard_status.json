@@ -1,13 +1,31 @@
 {
-  "active_main_runs": [],
+  "active_main_runs": [
+    {
+      "age_minutes": 26,
+      "created_at": "2026-08-02T04:16:07Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30732078673",
+      "id": 30732078673,
+      "status": "in_progress"
+    }
+  ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-02T01:09:15.821191+00:00",
-  "fresh_main_runs": [],
+  "finished_at": "2026-08-02T04:42:10.611412+00:00",
+  "fresh_main_runs": [
+    {
+      "age_minutes": 26,
+      "created_at": "2026-08-02T04:16:07Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30732078673",
+      "id": 30732078673,
+      "status": "in_progress"
+    }
+  ],
   "github_error": "",
-  "latest_age_minutes": 3,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/02/stewart-platform-walker-gains-feeling-in-legs-from-resistors/",
-  "latest_published_at": "2026-08-02T01:06:01+00:00",
-  "latest_title": "Stewart Platform Walker Gains Feeling In Legs From Resistors",
+  "latest_age_minutes": 6,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/02/browser-based-3d-editor-covers-the-basics-while-staying-local/",
+  "latest_published_at": "2026-08-02T04:36:04+00:00",
+  "latest_title": "Browser-based 3D Editor Covers The Basics While Staying Local",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
