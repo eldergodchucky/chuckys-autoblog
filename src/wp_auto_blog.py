@@ -2943,6 +2943,12 @@ def slugify(value: str) -> str:
     return value.strip("-")[:80] or "generated-post"
 
 
+def normalize_title(value: str) -> str:
+    value = html.unescape(str(value or ""))
+    value = re.sub(r"[^a-z0-9]+", " ", value.lower())
+    return re.sub(r"\s+", " ", value).strip()
+
+
 def wp_request(path: str, payload: dict[str, Any] | None = None, method: str = "GET") -> dict[str, Any] | list[Any]:
     base_url = os.getenv("WP_BASE_URL", "").rstrip("/")
     username = os.getenv("WP_USERNAME", "")
@@ -3007,6 +3013,38 @@ def wp_request(path: str, payload: dict[str, Any] | None = None, method: str = "
         raise RuntimeError(f"WordPress request failed: HTTP {exc.code}: {body}") from exc
 
 
+def wp_existing_post(slug: str, title: str) -> dict[str, Any] | None:
+    """Return an existing WordPress post matching the given slug or title, if any."""
+    slug = (slug or "").strip()
+    title = (title or "").strip()
+    if not slug and not title:
+        return None
+    norm_title = normalize_title(title)
+    query = urllib.parse.urlencode({"per_page": 20, "status": "publish,draft,pending,future,private"})
+    candidates: list[dict[str, Any]] = []
+    try:
+        if slug:
+            matches = wp_request(f"posts?{query}&slug={urllib.parse.quote(slug)}")
+            if isinstance(matches, list):
+                candidates.extend(matches)
+        if title:
+            matches = wp_request(f"posts?{query}&search={urllib.parse.quote(title)}")
+            if isinstance(matches, list):
+                candidates.extend(matches)
+    except Exception:
+        return None
+    for post in candidates:
+        if str(post.get("status") or "") == "trash":
+            continue
+        post_slug = str(post.get("slug") or "")
+        post_title = normalize_title((post.get("title") or {}).get("rendered") or "")
+        if slug and post_slug == slug:
+            return post
+        if norm_title and post_title == norm_title:
+            return post
+    return None
+
+
 def wp_term_ids(kind: str, names: list[str]) -> list[int]:
     if not names:
         return []
@@ -3033,9 +3071,17 @@ def wp_term_ids(kind: str, names: list[str]) -> list[int]:
 
 def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
     content_html = str(article["html"]).replace("[more]", "<!--more-->")
+    slug = article.get("slug") or slugify(article["title"])
+    existing = wp_existing_post(slug, str(article.get("title") or ""))
+    if existing:
+        print(
+            f"Skipped duplicate post (already on site as #{existing.get('id')}): "
+            f"{article.get('title', '')} — marking items as used."
+        )
+        return dict(existing, already_exists=True)
     payload: dict[str, Any] = {
         "title": article["title"],
-        "slug": article.get("slug") or slugify(article["title"]),
+        "slug": slug,
         "excerpt": article.get("excerpt", ""),
         "content": content_html,
         "status": post_status(),
@@ -3224,6 +3270,16 @@ def deliver_article(article: dict[str, Any]) -> dict[str, Any]:
             try:
                 return publish_to_wordpress(article)
             except Exception as exc:
+                existing = wp_existing_post(
+                    str(article.get("slug") or slugify(str(article.get("title") or ""))),
+                    str(article.get("title") or ""),
+                )
+                if existing:
+                    print(
+                        f"REST publish failed but topic already exists on site (#{existing.get('id')}); "
+                        "skipping to avoid a duplicate.",
+                    )
+                    return dict(existing, already_exists=True)
                 print(
                     f"REST publishing failed ({type(exc).__name__}: {exc}); "
                     "falling back to Post-by-Email.",
@@ -3232,7 +3288,6 @@ def deliver_article(article: dict[str, Any]) -> dict[str, Any]:
         print("REST publishing requested but credentials are missing; falling back to Post-by-Email.")
         return send_article_by_email(article)
     raise RuntimeError(f"Unsupported WP_POST_METHOD: {method}")
-
 
 def save_preview(article: dict[str, Any], cluster: list[Item]) -> Path:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -3485,6 +3540,8 @@ def run_once(args: argparse.Namespace) -> int:
             raw_wp_id = result.get("id")
             wp_id = int(raw_wp_id) if raw_wp_id not in {None, ""} else None
             status = str(result.get("status", os.getenv("POST_STATUS", "draft")))
+            if result.get("already_exists"):
+                status = "duplicate"
             mark_used(conn, cluster, article, wp_id, status)
             delivered_posts.append(
                 {
@@ -3495,7 +3552,9 @@ def run_once(args: argparse.Namespace) -> int:
                     "sources": unique_sources,
                 }
             )
-            if wp_id:
+            if result.get("already_exists"):
+                print(f"Skipped duplicate post (already on site as #{wp_id}): {article['title']}")
+            elif wp_id:
                 print(f"Created WordPress post {wp_id} with status={status}: {result.get('link', '')}")
             else:
                 print(f"Delivered post with status={status}: {result.get('link', '')}")

@@ -396,6 +396,94 @@ class FullArticleSectionsTests(unittest.TestCase):
             self.assertIn("WP_COM_ACCESS_TOKEN=tok123", content)
             self.assertIn("WP_COM_REFRESH_TOKEN=refreshtok", content)
 
+    def test_wp_existing_post_matches_by_title_when_slug_differs(self) -> None:
+        from unittest.mock import patch
+
+        hits = []
+
+        def fake_urlopen(request, timeout):
+            class FakeResponse:
+                def __enter__(self):
+                    return self
+
+                def __exit__(self, *args):
+                    return False
+
+                def read(self):
+                    import json
+                    return json.dumps(hits).encode("utf-8")
+
+            return FakeResponse()
+
+        with patch.dict(
+            os.environ,
+            {
+                "WP_BASE_URL": "https://public-api.wordpress.com/wp/v2/sites/chuckyscarnage.tech.blog",
+                "WP_USERNAME": "user",
+                "WP_APPLICATION_PASSWORD": "app pass",
+            },
+            clear=False,
+        ):
+            with patch("wp_auto_blog.urllib.request.urlopen", side_effect=fake_urlopen):
+                hits[:] = [{"id": 1234, "status": "publish", "slug": "foo-2", "title": {"rendered": "Foo bar"}}]
+                found = wp_auto_blog.wp_existing_post("foo", "Foo bar")
+                self.assertIsNotNone(found)
+                self.assertEqual(found["id"], 1234)
+
+                hits[:] = [{"id": 1234, "status": "publish", "slug": "foo-2", "title": {"rendered": "Foo bar"}}]
+                found = wp_auto_blog.wp_existing_post("other-slug", "Completely different title")
+                self.assertIsNone(found)
+
+                hits[:] = []
+                found = wp_auto_blog.wp_existing_post("no-results", "Nothing here")
+                self.assertIsNone(found)
+
+    def test_wp_existing_post_failsafe_returns_none_on_network_error(self) -> None:
+        from unittest.mock import patch
+
+        with patch.dict(
+            os.environ,
+            {
+                "WP_BASE_URL": "https://example.test",
+                "WP_USERNAME": "user",
+                "WP_APPLICATION_PASSWORD": "bad password",
+            },
+            clear=False,
+        ):
+            with patch("wp_auto_blog.wp_request", side_effect=RuntimeError("boom")):
+                found = wp_auto_blog.wp_existing_post("slug", "Title")
+        self.assertIsNone(found)
+
+    def test_publish_to_wordpress_skips_existing_post(self) -> None:
+        from unittest.mock import patch
+
+        with patch.dict(
+            os.environ,
+            {
+                "WP_POST_METHOD": "rest",
+                "WP_BASE_URL": "https://public-api.wordpress.com/wp/v2/sites/chuckyscarnage.tech.blog",
+                "WP_USERNAME": "user",
+                "WP_APPLICATION_PASSWORD": "app pass",
+                "POST_STATUS": "publish",
+                "AUTO_PUBLISH_CONFIRM": "I_UNDERSTAND_POSTS_GO_LIVE",
+            },
+            clear=False,
+        ):
+            article = {
+                "title": "Foo bar",
+                "slug": "foo",
+                "excerpt": "",
+                "html": "<p>Body</p>",
+                "categories": ["tech"],
+                "tags": ["test"],
+            }
+            existing = {"id": 1234, "status": "publish", "slug": "foo", "title": {"rendered": "Foo bar"}}
+            with patch("wp_auto_blog.wp_existing_post", return_value=existing):
+                with patch("wp_auto_blog.wp_term_ids", return_value=[]):
+                    result = wp_auto_blog.publish_to_wordpress(article)
+        self.assertTrue(result.get("already_exists"))
+        self.assertEqual(result["id"], 1234)
+
 
 if __name__ == "__main__":
     unittest.main()
