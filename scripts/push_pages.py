@@ -252,10 +252,36 @@ def upsert_page(page: dict, dry_run: bool = False) -> str:
     return f"created: {page['title']} (id={created.get('id')}, link={created.get('link')})"
 
 
+STALE_PAGE_SLUGS = {"about-2", "contact-2", "home-2", "blog-2"}
+
+
+def cleanup_stale_pages(dry_run: bool = False) -> list[str]:
+    messages: list[str] = []
+    pages = wp_request("pages?per_page=100&status=publish,draft")
+    if not isinstance(pages, list):
+        return ["Could not list pages for cleanup."]
+    for page in pages:
+        slug = str(page.get("slug") or "")
+        if slug in STALE_PAGE_SLUGS:
+            page_id = page["id"]
+            title = str(page.get("title", {}).get("rendered", "")) if isinstance(page.get("title"), dict) else ""
+            if dry_run:
+                messages.append(f"would delete stale page: {title} (slug={slug}, id={page_id})")
+                continue
+            wp_request(f"pages/{page_id}", method="DELETE")
+            messages.append(f"deleted stale page: {title} (slug={slug}, id={page_id})")
+    return messages
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Create or update ChuckysCarnage WordPress pages via the REST API.")
     parser.add_argument("--dry-run", action="store_true", help="Print what would happen without calling WordPress.")
     parser.add_argument("--slug", help="Only process this page slug.")
+    parser.add_argument(
+        "--cleanup-stale",
+        action="store_true",
+        help="Also delete duplicate/stale pages (about-2, contact-2, home-2, blog-2).",
+    )
     args = parser.parse_args()
 
     load_env()
@@ -268,6 +294,9 @@ def main() -> int:
         print("DRY RUN — no changes made:")
     for page in selected:
         print(upsert_page(page, dry_run=args.dry_run))
+    if args.cleanup_stale:
+        for message in cleanup_stale_pages(dry_run=args.dry_run):
+            print(message)
     return 0
 
 
