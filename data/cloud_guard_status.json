@@ -1,35 +1,35 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 45,
-      "created_at": "2026-08-02T22:59:06Z",
+      "age_minutes": 13,
+      "created_at": "2026-08-03T01:04:21Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30771279740",
-      "id": 30771279740,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30775974645",
+      "id": 30775974645,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-02T23:44:42.146779+00:00",
+  "finished_at": "2026-08-03T01:17:24.307880+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 45,
-      "created_at": "2026-08-02T22:59:06Z",
+      "age_minutes": 13,
+      "created_at": "2026-08-03T01:04:21Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30771279740",
-      "id": 30771279740,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30775974645",
+      "id": 30775974645,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 29,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/03/hackaday-links-august-2/",
-  "latest_published_at": "2026-08-02T23:15:32+00:00",
-  "latest_title": "Hackaday Links: August 2",
+  "latest_age_minutes": 11,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/03/heres-how-iphone-ultras-form-factor-could-compare-to-other-apple-products/",
+  "latest_published_at": "2026-08-03T01:06:16+00:00",
+  "latest_title": "Here\u2019s how iPhone Ultra\u2019s form factor could compare to other Apple products",
   "main_run_stale_minutes": 95,
-  "message": "Feed is stale enough for rescue, but publish mode was not enabled.",
+  "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
   "rescue_force_stale_minutes": 25,
   "rescue_stale_minutes": 20,
-  "state": "rescue_ready"
+  "state": "fresh"
 }
