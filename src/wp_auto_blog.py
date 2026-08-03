@@ -3407,26 +3407,86 @@ def title_similarity(left: str, right: str) -> float:
     return (jaccard + containment) / 2
 
 
+def wp_recent_published_posts(limit: int = 50) -> list[dict[str, Any]]:
+    """Fetch recently published posts (title + content) from WordPress."""
+    posts: list[dict[str, Any]] = []
+    try:
+        query = urllib.parse.urlencode(
+            {
+                "per_page": min(100, max(1, limit)),
+                "status": "publish",
+                "_fields": "id,title,content,link",
+            }
+        )
+        matches = wp_request(f"posts?{query}")
+    except Exception:
+        return posts
+    if isinstance(matches, list):
+        for post in matches:
+            if isinstance(post, dict):
+                posts.append(post)
+    return posts
+
+
+def normalize_source_url(url: str) -> str:
+    """Normalize a URL for duplicate comparison (host + path, stripped query/fragment)."""
+    try:
+        parsed = urllib.parse.urlsplit(str(url).strip())
+    except ValueError:
+        return str(url).strip().rstrip("/").lower()
+    return f"{parsed.netloc.lower()}{parsed.path.rstrip('/')}"
+
+
+def extract_source_urls_from_html(html: str) -> set[str]:
+    """Extract normalized external URLs from a post's rendered content."""
+    urls: set[str] = set()
+    for match in re.finditer(r'<a[^>]*\shref="([^"]+)"', html, flags=re.IGNORECASE):
+        raw = match.group(1).strip()
+        if not raw or raw.startswith("#"):
+            continue
+        parsed = urllib.parse.urlsplit(raw)
+        if parsed.scheme not in ("http", "https"):
+            continue
+        urls.add(normalize_source_url(raw))
+    return urls
+
+
 def guard_against_duplicate_title(article: dict[str, Any], cluster: list[Item] | None = None) -> dict[str, Any] | None:
     """Return a 'already_exists' result if the article topic matches a recent published title.
 
-    Compares the new topic against the site's recently published titles (and, when a
-    cluster is provided, against this run's own recently generated titles) so near-identical
-    stories about the same event never get posted twice.
+    Compares the new topic against the site's recently published posts (headline similarity
+    plus exact source-URL overlap) and, when a cluster is provided, against this run's own
+    recently generated titles, so near-identical stories about the same event never get
+    posted twice.
     """
     title = str(article.get("title") or "").strip()
     if not title:
         return None
     threshold = max(0.0, min(1.0, env_float("DUPLICATE_TITLE_THRESHOLD", 0.45)))
-    recent: list[str] = []
+    recent_limit = max(1, env_int("DUPLICATE_RECENT_POSTS", 50))
+    recent_posts: list[dict[str, Any]] = []
     try:
-        recent.extend(wp_recent_published_titles(30))
+        recent_posts = wp_recent_published_posts(recent_limit)
     except Exception:
         pass
-    for other in recent:
-        if title_similarity(title, other) >= threshold:
-            print(f"Duplicate-guard blocked '{title}' — too similar to published post '{other}'.")
-            return {"id": 0, "status": "duplicate", "already_exists": True, "similar_to": other}
+
+    cluster_urls: set[str] = set()
+    for item in cluster or []:
+        if item.link:
+            cluster_urls.add(normalize_source_url(item.link))
+
+    for post in recent_posts:
+        rendered_title = str((post.get("title") or {}).get("rendered") or "")
+        if rendered_title and title_similarity(title, rendered_title) >= threshold:
+            print(f"Duplicate-guard blocked '{title}' — too similar to published post '{rendered_title}'.")
+            return {"id": 0, "status": "duplicate", "already_exists": True, "similar_to": rendered_title}
+        if cluster_urls:
+            post_content = str((post.get("content") or {}).get("rendered") or "")
+            overlap = cluster_urls & extract_source_urls_from_html(post_content)
+            if overlap:
+                matched = sorted(overlap)[0]
+                print(f"Duplicate-guard blocked '{title}' — source already used in post '{rendered_title}' ({matched}).")
+                return {"id": 0, "status": "duplicate", "already_exists": True, "source_url_matched": matched}
     return None
 
 

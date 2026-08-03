@@ -850,12 +850,75 @@ class FullArticleSectionsTests(unittest.TestCase):
     def test_guard_against_duplicate_title_blocks_similar(self) -> None:
         from unittest.mock import patch
 
-        with patch("wp_auto_blog.wp_recent_published_titles", return_value=["MacBook Air shortage hits stores"]):
+        with patch(
+            "wp_auto_blog.wp_recent_published_posts",
+            return_value=[{"title": {"rendered": "MacBook Air shortage hits stores"}, "content": {"rendered": ""}}],
+        ):
             result = wp_auto_blog.guard_against_duplicate_title(
                 {"title": "MacBook Air shortage is affecting store stock"}
             )
         self.assertIsNotNone(result)
         self.assertTrue(result["already_exists"])
+
+    def test_guard_against_duplicate_title_blocks_source_url_overlap(self) -> None:
+        from unittest.mock import patch
+
+        recent = [
+            {
+                "title": {"rendered": "Sony WH-1000XM6 new color"},
+                "content": {
+                    "rendered": '<p>Read the original <a href="https://www.gsmarena.com/sony_wh1000xm6_color-news.php?utm=1">here</a>.</p>'
+                },
+            }
+        ]
+        cluster = [
+            wp_auto_blog.Item(
+                uid="s1",
+                source_name="GSMArena",
+                source_url="https://example.com/feed",
+                source_category="phones",
+                source_quality=5,
+                title="Sony WH-1000XM6 gets a gorgeous new color option",
+                link="https://www.gsmarena.com/sony_wh1000xm6_color-news.php",
+                summary="Sony adds a new color to the flagship headphone range.",
+                published_at=None,
+            )
+        ]
+        with patch("wp_auto_blog.wp_recent_published_posts", return_value=recent):
+            result = wp_auto_blog.guard_against_duplicate_title(
+                {"title": "Sony adds a fresh color to its premium headphones"}, cluster
+            )
+        self.assertIsNotNone(result)
+        self.assertTrue(result["already_exists"])
+        self.assertIn("source_url_matched", result)
+
+    def test_guard_against_duplicate_title_allows_new_story(self) -> None:
+        from unittest.mock import patch
+
+        recent = [
+            {
+                "title": {"rendered": "Google Pixel camera teardown"},
+                "content": {"rendered": '<a href="https://www.androidpolice.com/pixel-teardown/">link</a>'},
+            }
+        ]
+        cluster = [
+            wp_auto_blog.Item(
+                uid="s2",
+                source_name="MacRumors",
+                source_url="https://example.com/feed",
+                source_category="apple",
+                source_quality=5,
+                title="Apple Watch battery life update",
+                link="https://www.macrumors.com/2026/08/apple-watch-battery/",
+                summary="New watchOS battery tweak extends usage time.",
+                published_at=None,
+            )
+        ]
+        with patch("wp_auto_blog.wp_recent_published_posts", return_value=recent):
+            result = wp_auto_blog.guard_against_duplicate_title(
+                {"title": "Apple Watch gets a battery life boost"}, cluster
+            )
+        self.assertIsNone(result)
 
     def test_story_categories_reflects_actual_topic_not_ai_default(self) -> None:
         now = dt.datetime.now(dt.timezone.utc)
