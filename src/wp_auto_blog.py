@@ -1224,6 +1224,7 @@ def create_hero_image(title: str, keywords: list[str], categories: list[str], so
                 with urllib.request.urlopen(request, timeout=timeout) as response:
                     raw = response.read(8_000_000)
                 image = Image.open(io.BytesIO(raw))
+                image.load()
                 if image.width < 360 or image.height < 220:
                     continue
                 return image

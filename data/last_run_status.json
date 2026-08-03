@@ -1,13 +1,24 @@
 {
-  "dry_run": true,
-  "feed_warnings": 8,
-  "feeds": 34,
-  "fetched": 1675,
-  "finished_at": "2026-07-02T16:05:46.942534+00:00",
-  "inserted": 0,
-  "message": "Dry run generated 1 preview file(s).",
-  "previews": [
-    "C:\\Users\\ELDERCHUCKY\\Documents\\Codex\\chuckys-autoblog-github-upload\\out\\20260702-160546-nautilus-array-to-track-missing-exoplanet-atmospheres.html"
+  "dry_run": false,
+  "feed_warnings": 9,
+  "feeds": 38,
+  "fetched": 1872,
+  "finished_at": "2026-08-03T07:14:41.990478+00:00",
+  "inserted": 1,
+  "message": "Published 1 post(s).",
+  "posts": [
+    {
+      "categories": [
+        "Space",
+        "Science"
+      ],
+      "sources": [
+        "NASA Science"
+      ],
+      "status": "publish",
+      "title": "NASA to Host Florida Event Celebrating American Air",
+      "wp_id": 8245
+    }
   ],
-  "state": "dry_run_ok"
+  "state": "published"
 }
