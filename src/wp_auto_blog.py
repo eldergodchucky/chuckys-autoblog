@@ -1675,7 +1675,7 @@ def source_analysis_paragraphs(cluster: list[Item]) -> str:
         paragraphs.append(
             f"<p>{report_intro} "
             f"{summary_sentence} This puts the story in the <strong>{category}</strong> lane, where {angle}. "
-            "That matters because one isolated report is easy to miss, but repeated coverage across sources can show that the topic has real momentum.</p>"
+            "That matters because repeated coverage across sources can show that the topic has real momentum.</p>"
         )
     return "\n".join(paragraphs)
 
@@ -1911,7 +1911,7 @@ def professional_angle(topic: str, categories: list[str], text: str) -> str:
         )
     if "phones" in categories:
         return (
-            "For phone buyers, the useful question is whether the news changes upgrade timing, pricing, battery expectations, camera value, "
+            "For phone buyers, what matters most is whether the news changes upgrade timing, pricing, battery expectations, camera value, "
             "repairability, or long-term software support."
         )
     return (
@@ -2436,7 +2436,7 @@ def build_context_paragraph(topic: str, categories: list[str], full_text: str) -
     category_phrase = ", ".join(categories[:2]) if categories else "technology"
     if kind == "health":
         return (
-            "Taken together, the reporting points to a wider question about evidence, product design, and how readers should judge claims before treating a headline as a medical conclusion."
+            "Taken together, the reporting frames a wider question about evidence, product design, and how readers should judge claims before treating a headline as a medical conclusion."
         )
     if kind == "ai":
         return (
@@ -2471,7 +2471,7 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
             [
                 f"<p>{html.escape(fallback)}.</p>",
                 f"<p>{html.escape('The reporting is still too thin to support a more detailed reconstruction, so this version keeps the account focused on what is directly known.')}</p>",
-                f"<p>{html.escape('The broader point is that the topic is worth watching because it may affect product choices, policy, or user expectations over time.')}</p>",
+                f"<p>{html.escape('The broader point is that the topic may affect product choices, policy, or user expectations over time.')}</p>",
             ]
         )
 
@@ -2531,7 +2531,7 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
     body = "\n".join(paragraph for paragraph in paragraphs if paragraph.strip())
     if body.count("<p>") < 4 or len(re.sub(r"<[^>]+>", " ", body).split()) < 90:
         body = body + "\n<p>" + html.escape(
-            "The story is still best read as a developing account rather than a settled verdict, which is why the most useful response is to track updates, evidence, and independent reactions before treating the headline as the final word."
+            "The story is still early and could change as more details, evidence, and independent reactions arrive, which is why the most useful response is to track updates before treating the headline as the final word."
         ) + "</p>"
     return body
 
@@ -2864,7 +2864,7 @@ def build_key_takeaways(article: dict[str, Any]) -> list[str]:
     if facts:
         takeaways.append(f"What we know: {lower_first(first_sentence(facts[0]).rstrip('.'))}.")
     else:
-        takeaways.append("What we know: the reporting is still early, so treat the details as a developing account.")
+        takeaways.append("What we know: the reporting is still early, so treat the details as provisional.")
     takeaways.append(f"What it means for you: {category_reader_angle(category)}.")
     if tags:
         takeaways.append(f"What to watch next: follow-up coverage of {', '.join(tags[:3])}, plus independent testing and user feedback.")
@@ -3195,14 +3195,38 @@ def check_links_in_html(html: str, max_links: int = 10) -> list[str]:
         seen.add(raw_url)
         if len(seen) > max_links:
             break
-        try:
-            request = urllib.request.Request(raw_url, method="GET", headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(request, timeout=15) as response:
-                if response.status >= 400:
-                    broken.append(raw_url)
-        except Exception:
+        if not url_reachable(raw_url):
             broken.append(raw_url)
     return broken
+
+
+def url_reachable(url: str, attempts: int = 2) -> bool:
+    """Return True when a URL loads successfully (or is bot-protected).
+
+    Retries once with a different User-Agent so transient network errors and
+    bot-protection responses (403/429) do not falsely flag a working link.
+    """
+    user_agents = [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+        "Mozilla/5.0 (compatible; FeedReader/1.0; +https://example.org)",
+    ]
+    for attempt in range(attempts):
+        try:
+            request = urllib.request.Request(
+                url, method="GET", headers={"User-Agent": user_agents[attempt % len(user_agents)]}
+            )
+            with urllib.request.urlopen(request, timeout=15) as response:
+                if response.status in (403, 429):
+                    return True
+                if response.status >= 400:
+                    continue
+                return True
+        except urllib.error.HTTPError as exc:
+            if exc.code in (403, 429):
+                return True
+        except Exception:
+            pass
+    return False
 
 
 def pre_publish_checks(article: dict[str, Any], cluster: list[Item] | None = None) -> list[str]:
@@ -3214,6 +3238,9 @@ def pre_publish_checks(article: dict[str, Any], cluster: list[Item] | None = Non
     failures: list[str] = []
     title = str(article.get("title") or "").strip()
     html_body = str(article.get("html") or "")
+    # Section headings may use curly apostrophes (U+2019) from the generator's
+    # templates, so normalize both apostrophe forms before matching.
+    normalized_body = html_body.replace("\u2019", "'").replace("\u2018", "'")
     plain = strip_html(html_body)
     word_count = len(plain.split())
     tags = [str(value) for value in article.get("tags", []) if str(value).strip()]
@@ -3224,15 +3251,15 @@ def pre_publish_checks(article: dict[str, Any], cluster: list[Item] | None = Non
     if not title.strip().lower() == title.strip().lower() and len(title) < 10:
         failures.append("title is too short")
 
-    subheading_count = len(re.findall(r"<h2[ >]", html_body)) + len(re.findall(r"<h3[ >]", html_body))
+    subheading_count = len(re.findall(r"<h2[ >]", normalized_body)) + len(re.findall(r"<h3[ >]", normalized_body))
     if subheading_count < MIN_SUBHEADINGS:
         failures.append(f"only {subheading_count} subheadings; need at least {MIN_SUBHEADINGS}")
 
-    if "Why This Matters" not in html_body:
+    if "Why This Matters" not in normalized_body:
         failures.append("missing 'Why This Matters' section")
-    if "Chucky's Analysis" not in html_body:
+    if "Chucky's Analysis" not in normalized_body:
         failures.append("missing 'Chucky's Analysis' section")
-    if "Key Takeaways" not in html_body:
+    if "Key Takeaways" not in normalized_body:
         failures.append("missing 'Key Takeaways' section")
 
     if not categories:

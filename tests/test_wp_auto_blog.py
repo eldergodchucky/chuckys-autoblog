@@ -747,6 +747,13 @@ class FullArticleSectionsTests(unittest.TestCase):
         failures = wp_auto_blog.pre_publish_checks(article)
         self.assertEqual(failures, [])
 
+    def test_pre_publish_checks_accept_curly_apostrophe_in_section_names(self) -> None:
+        article = self._valid_article()
+        article["html"] = article["html"].replace("Chucky's Analysis", "Chucky\u2019s Analysis")
+        article["html"] = article["html"].replace("Key Takeaways", "Key Takeaways")
+        failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertEqual(failures, [])
+
     def test_pre_publish_checks_block_filler_and_missing_sections(self) -> None:
         article = self._valid_article()
         article["html"] = article["html"].replace(
