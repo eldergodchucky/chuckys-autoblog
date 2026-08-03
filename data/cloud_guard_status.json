@@ -1,28 +1,28 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 51,
-      "created_at": "2026-08-03T18:17:21Z",
-      "event": "schedule",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30840597154",
-      "id": 30840597154,
+      "age_minutes": 52,
+      "created_at": "2026-08-03T19:47:30Z",
+      "event": "workflow_dispatch",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30847303077",
+      "id": 30847303077,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-03T19:08:32.775597+00:00",
+  "finished_at": "2026-08-03T20:40:16.011843+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 51,
-      "created_at": "2026-08-03T18:17:21Z",
-      "event": "schedule",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30840597154",
-      "id": 30840597154,
+      "age_minutes": 52,
+      "created_at": "2026-08-03T19:47:30Z",
+      "event": "workflow_dispatch",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30847303077",
+      "id": 30847303077,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 599,
+  "latest_age_minutes": 690,
   "latest_link": "https://chuckyscarnage.tech.blog/2026/08/03/gemini-notebook-may-soon-let-you-build-custom-learning-games-out/",
   "latest_published_at": "2026-08-03T09:09:22+00:00",
   "latest_title": "Gemini Notebook may soon let you build custom learning games out",
