@@ -256,6 +256,45 @@ class FullArticleSectionsTests(unittest.TestCase):
         analysis_word_count = len(re.sub(r"\s+", " ", analysis_text).split())
         self.assertGreaterEqual(analysis_word_count, 200)
 
+    def test_free_article_places_more_tag_directly_below_thumbnail(self) -> None:
+        now = dt.datetime.now(dt.timezone.utc)
+        cluster = [
+            Item(
+                uid="a",
+                source_name="Alpha Reports",
+                source_url="https://example.com",
+                source_category="science",
+                source_quality=5,
+                title="New battery material doubles charging speed",
+                link="https://example.com/post-a",
+                summary="Researchers at MIT developed a solid-state battery that charges twice as fast and lasts 12 million cycles.",
+                published_at=now,
+            ),
+            Item(
+                uid="b",
+                source_name="Beta News",
+                source_url="https://example.org",
+                source_category="science",
+                source_quality=4,
+                title="Battery breakthrough promises faster charging",
+                link="https://example.org/post-b",
+                summary="A university team reported that the new electrode design reduces charging time by 50 percent.",
+                published_at=now,
+            ),
+        ]
+
+        article = wp_auto_blog.free_article(cluster)
+        html = article["html"]
+
+        thumbnail_end = html.index("</figure>") + len("</figure>") if "<figure" in html else html.index("<p>")
+        more_pos = html.index("[more]")
+        self.assertGreater(more_pos, thumbnail_end)
+
+        between = html[thumbnail_end:more_pos]
+        self.assertNotIn("<p>", between)
+        self.assertIn("[more]", html)
+        self.assertNotIn("<p>", html[thumbnail_end:more_pos + len("[more]")].replace("[more]", ""))
+
     def test_deliver_article_falls_back_to_email_without_rest_credentials(self) -> None:
         from unittest.mock import patch
 

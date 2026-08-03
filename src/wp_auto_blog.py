@@ -2897,8 +2897,8 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
     body = f"""
 {image_block}
-<p>{build_lede(cluster, topic, categories, source_count)}</p>
 [more]
+<p>{build_lede(cluster, topic, categories, source_count)}</p>
 {full_article_sections(cluster, topic, categories, source_count)}
 {medical_disclaimer}
 """.strip()
