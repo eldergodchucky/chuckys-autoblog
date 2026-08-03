@@ -891,5 +891,44 @@ class FullArticleSectionsTests(unittest.TestCase):
             self.assertNotIn(tag.lower(), wp_auto_blog.STOPWORDS)
 
 
+class ParseFeedRdfTests(unittest.TestCase):
+    def test_parse_feed_reads_namespaced_rdf_items(self) -> None:
+        rdf_xml = b"""<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns="http://purl.org/rss/1.0/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel rdf:about="https://example.org/feed">
+    <title>Example Health Research</title>
+    <link>https://example.org</link>
+    <description>Research news</description>
+  </channel>
+  <item rdf:about="https://example.org/breakthrough">
+    <title>New therapy shows promise in early trials</title>
+    <link>https://example.org/breakthrough</link>
+    <description>Researchers report promising results from an early-stage trial of the therapy.</description>
+    <dc:date>2026-07-01T12:00:00Z</dc:date>
+  </item>
+  <item rdf:about="https://example.org/second">
+    <title>Second research update</title>
+    <link>https://example.org/second</link>
+    <description>Follow-up results confirm the earlier findings.</description>
+  </item>
+</rdf:RDF>
+"""
+        feed = wp_auto_blog.Feed(
+            name="Example Health Research",
+            url="https://example.org/feed",
+            category="health",
+            quality=5,
+        )
+        items = wp_auto_blog.parse_feed(feed, rdf_xml)
+
+        self.assertEqual(len(items), 2)
+        self.assertEqual(items[0].title, "New therapy shows promise in early trials")
+        self.assertEqual(items[0].link, "https://example.org/breakthrough")
+        self.assertEqual(items[0].source_category, "health")
+        self.assertIsNotNone(items[0].published_at)
+
+
 if __name__ == "__main__":
     unittest.main()

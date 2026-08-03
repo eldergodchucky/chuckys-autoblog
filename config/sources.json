@@ -261,7 +261,8 @@
       "url": "https://bmcmedcollect.biomedcentral.com/articles/most-recent/rss.xml",
       "category": "health",
       "quality": 5,
-      "enabled": true
+      "enabled": false,
+      "notes": "Returns bot-challenge HTML page instead of RSS - feed unavailable"
     },
     {
       "name": "NEJM Today",
@@ -271,8 +272,85 @@
       "enabled": true
     },
     {
-      "name": "Nature Health Sciences",
-      "url": "https://www.nature.com/subjects/health-sciences.rss",
+      "name": "Nature Medicine",
+      "url": "https://www.nature.com/nm.rss",
+      "category": "health",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "ScienceDaily Top Health",
+      "url": "https://www.sciencedaily.com/rss/top/health.xml",
+      "category": "health",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Medical Xpress",
+      "url": "https://medicalxpress.com/rss-feed/",
+      "category": "health",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "STAT News",
+      "url": "https://www.statnews.com/feed/",
+      "category": "health",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "The Guardian Health",
+      "url": "https://www.theguardian.com/society/health/rss",
+      "category": "health",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "BBC Health",
+      "url": "https://feeds.bbci.co.uk/news/health/rss.xml",
+      "category": "health",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "NYT Health",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml",
+      "category": "health",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "SciTechDaily Health",
+      "url": "https://scitechdaily.com/news/health/feed/",
+      "category": "health",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "New Scientist Health",
+      "url": "https://www.newscientist.com/subject/health/feed/",
+      "category": "health",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "KFF Health News",
+      "url": "https://kffhealthnews.org/feed/",
+      "category": "health",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "PsyPost",
+      "url": "https://www.psypost.org/feed",
+      "category": "health",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Science Magazine Health",
+      "url": "https://www.science.org/rss/news_current.xml",
       "category": "health",
       "quality": 5,
       "enabled": true

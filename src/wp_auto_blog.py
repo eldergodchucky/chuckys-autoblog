@@ -427,7 +427,7 @@ def parse_feed(feed: Feed, raw_xml: bytes) -> list[Item]:
     elif root_tag == "feed":
         entries = [child for child in list(root) if child.tag.rsplit("}", 1)[-1].lower() == "entry"]
     else:
-        entries = root.findall(".//item")
+        entries = [child for child in root.iter() if child.tag.rsplit("}", 1)[-1].lower() == "item"]
 
     items: list[Item] = []
     for entry in entries:
@@ -440,7 +440,7 @@ def parse_feed(feed: Feed, raw_xml: bytes) -> list[Item]:
             child_text(entry, ("description", "summary", "content", "encoded")),
             max_len=1500,
         )
-        published = parse_date(child_text(entry, ("pubdate", "published", "updated", "dc:date")))
+        published = parse_date(child_text(entry, ("pubdate", "published", "updated", "dc:date", "date")))
         guid = child_text(entry, ("guid", "id")) or link or title
         if not title or not link:
             continue
