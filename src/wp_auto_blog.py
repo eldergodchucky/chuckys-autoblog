@@ -3113,14 +3113,17 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
             )
             if isinstance(media_result, dict) and media_result.get("id") is not None:
                 featured_media_id = int(media_result["id"])
-                media_url = str(media_result.get("source_url") or media_result.get("guid", {}).get("rendered", "") or "").strip()
-                if media_url and HERO_IMAGE_PLACEHOLDER in payload["content"]:
-                    payload["content"] = payload["content"].replace(HERO_IMAGE_PLACEHOLDER, html.escape(media_url, quote=True))
         except Exception as exc:
             print(f"Media upload skipped ({type(exc).__name__}: {exc}); publishing without a hero image.")
 
     if featured_media_id is not None:
         payload["featured_media"] = featured_media_id
+        # The theme renders the featured image once at the top of the post, so drop the
+        # inline hero figure to avoid showing the same thumbnail twice.
+        payload["content"] = strip_inline_hero_figure(payload["content"])
+    else:
+        # No featured media was set; make sure the placeholder never leaks into the post.
+        payload["content"] = payload["content"].replace(HERO_IMAGE_PLACEHOLDER, "")
 
     result = wp_request("posts", payload, method="POST")
     if not isinstance(result, dict):
@@ -3182,6 +3185,15 @@ def email_shortcodes(article: dict[str, Any]) -> list[str]:
     if tags:
         shortcodes.append(f"[tags {', '.join(tags)}]")
     return shortcodes
+
+
+def strip_inline_hero_figure(body_html: str) -> str:
+    """Remove the inline hero <figure> block so the featured image is shown only once."""
+    pattern = re.compile(
+        r"<figure[^>]*>\s*<img[^>]*" + re.escape(HERO_IMAGE_PLACEHOLDER) + r"[^>]*>\s*</figure>",
+        re.IGNORECASE | re.DOTALL,
+    )
+    return pattern.sub("", body_html)
 
 
 def render_article_html(article: dict[str, Any], hero_src: str = "") -> str:

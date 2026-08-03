@@ -110,10 +110,82 @@ class FullArticleSectionsTests(unittest.TestCase):
 
         self.assertEqual(captured["path"], "posts")
         self.assertEqual(captured["payload"]["featured_media"], 42)
-        self.assertIn("https://example.com/image.png", str(captured["payload"]["content"]))
+        self.assertNotIn("__HERO_IMAGE_SRC__", str(captured["payload"]["content"]))
+        self.assertNotIn("https://example.com/image.png", str(captured["payload"]["content"]))
         self.assertEqual(result["id"], 99)
 
         image_path.unlink(missing_ok=True)
+
+    def test_publish_to_wordpress_strips_inline_hero_when_featured_media_set(self) -> None:
+        with tempfile.NamedTemporaryFile("wb", suffix=".png", delete=False) as handle:
+            handle.write(b"fake image")
+            image_path = Path(handle.name)
+
+        article = {
+            "title": "Test post",
+            "slug": "test-post",
+            "excerpt": "A short excerpt",
+            "html": '<p>Intro</p><figure class="wp-block-image size-large"><img src="__HERO_IMAGE_SRC__" alt="hero"></figure><p>Body.</p>',
+            "categories": ["tech"],
+            "tags": ["test"],
+            "hero_image_path": str(image_path),
+            "hero_image_alt": "A hero image",
+        }
+
+        captured: dict[str, object] = {}
+
+        def fake_wp_request(path: str, payload: object = None, method: str = "GET") -> dict[str, object]:
+            captured["path"] = path
+            captured["payload"] = payload
+            captured["method"] = method
+            if path == "media":
+                return {"id": 42, "source_url": "https://example.com/image.png"}
+            return {"id": 99}
+
+        from unittest.mock import patch
+
+        with patch("wp_auto_blog.wp_request", side_effect=fake_wp_request):
+            wp_auto_blog.publish_to_wordpress(article)
+
+        content = str(captured["payload"]["content"])
+        self.assertNotIn("<figure", content)
+        self.assertNotIn("__HERO_IMAGE_SRC__", content)
+        self.assertNotIn("https://example.com/image.png", content)
+        self.assertIn("<p>Intro</p>", content)
+        self.assertIn("<p>Body.</p>", content)
+
+        image_path.unlink(missing_ok=True)
+
+    def test_publish_to_wordpress_strips_placeholder_when_hero_upload_fails(self) -> None:
+        article = {
+            "title": "Test post",
+            "slug": "test-post",
+            "excerpt": "A short excerpt",
+            "html": '<p>Intro</p><figure class="wp-block-image size-large"><img src="__HERO_IMAGE_SRC__" alt="hero"></figure><p>Body.</p>',
+            "categories": ["tech"],
+            "tags": ["test"],
+        }
+
+        captured: dict[str, object] = {}
+
+        def fake_wp_request(path: str, payload: object = None, method: str = "GET") -> dict[str, object]:
+            captured["path"] = path
+            captured["payload"] = payload
+            captured["method"] = method
+            if path == "media":
+                raise RuntimeError("upload boom")
+            return {"id": 99}
+
+        from unittest.mock import patch
+
+        with patch("wp_auto_blog.wp_request", side_effect=fake_wp_request):
+            wp_auto_blog.publish_to_wordpress(article)
+
+        content = str(captured["payload"]["content"])
+        self.assertNotIn("__HERO_IMAGE_SRC__", content)
+        self.assertNotIn("featured_media", captured["payload"])
+
+        image_path = None
 
     def test_publish_to_wordpress_converts_more_tag_for_rest(self) -> None:
         article = {
