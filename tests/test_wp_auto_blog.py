@@ -13,6 +13,13 @@ from wp_auto_blog import Item, full_article_sections
 
 
 class FullArticleSectionsTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.tmpdir = tempfile.mkdtemp(prefix="wp_auto_blog_test_")
+
+    def tearDown(self) -> None:
+        import shutil
+        shutil.rmtree(self.tmpdir, ignore_errors=True)
+
     def test_expands_short_source_material_into_longer_body(self) -> None:
         cluster = [
             Item(
@@ -305,6 +312,7 @@ class FullArticleSectionsTests(unittest.TestCase):
                 "WP_BASE_URL": "",
                 "WP_USERNAME": "",
                 "WP_APPLICATION_PASSWORD": "",
+                "PRE_PUBLISH_CHECKS": "false",
             },
             clear=False,
         ):
@@ -333,6 +341,7 @@ class FullArticleSectionsTests(unittest.TestCase):
                 "WP_BASE_URL": "https://example.test",
                 "WP_USERNAME": "user",
                 "WP_APPLICATION_PASSWORD": "bad password",
+                "PRE_PUBLISH_CHECKS": "false",
             },
             clear=False,
         ):
@@ -673,6 +682,213 @@ class FullArticleSectionsTests(unittest.TestCase):
 
         self.assertFalse(captured["payload"]["publicize"])
         self.assertNotIn("publicize_message", captured["payload"])
+
+    def _valid_article(self) -> dict[str, object]:
+        body = (
+            "<h2>What Changed</h2><p>Researchers at MIT reported a solid-state battery that lasts "
+            "12 million cycles, recharges in under fifteen minutes, and costs 40 percent less than "
+            "existing lithium cells. The new chemistry packs more energy per kilogram, which lets car "
+            "makers install a lighter, smaller battery while keeping the same driving range.</p>"
+            "<h2>Why It Matters</h2><p>Why This Matters for drivers who want longer range, faster "
+            "charging, and lower prices. Analysts at Bloomberg New Energy Finance expect solid-state "
+            "cells to reach mass production by 2028, and several automakers already have prototypes "
+            "on the road. A cheaper, denser battery could make electric cars affordable for millions "
+            "of households that currently buy gasoline vehicles.</p>"
+            "<h2>Chucky's Analysis</h2><p>The details matter more than the headline. The 12 million "
+            "cycle figure is far beyond what a typical driver will ever use, but it means the battery "
+            "will not degrade the way today's cells do. Combined with the reported 40 percent cost "
+            "reduction, the economics shift in favor of adoption, and legacy automakers will have to "
+            "respond quickly to avoid losing market share to newer entrants that license the "
+            "technology first.</p>"
+            "<h2>Key Takeaways</h2><ul><li>Range improves without adding weight.</li><li>Cost drops "
+            "by up to 40 percent.</li><li>Mass production expected by 2028.</li></ul>"
+            "<h2>Known Details</h2><p>MIT researchers measured a 50 percent cost cut in a follow-up "
+            "report, and the university has licensed the patent to two manufacturing partners in "
+            "Asia. Public charging networks are also expanding, which addresses one of the biggest "
+            "objections to ownership. Grid operators are studying how the faster charge times will "
+            "affect peak demand on local substations.</p>"
+        )
+        filler = (
+            "<h2>Background</h2><p>The automotive industry has experimented with several battery "
+            "chemistries over the past decade, including nickel, cobalt, and solid ceramic options. "
+            "Each approach balances energy density, cost, safety, and manufacturing complexity, and "
+            "the winners are still being decided. Solid-state designs have long promised the best of "
+            "both worlds, but scaling them from the lab to the factory floor has been the hardest "
+            "part, so progress here matters. Regulators in Europe and California are pushing stricter "
+            "emissions rules, which gives manufacturers a strong incentive to adopt newer chemistry "
+            "sooner rather than later.</p>"
+            "<h2>Industry Context</h2><p>Battery factories are being built at record pace around the "
+            "world, and every new plant raises the question of which chemistry will dominate. The "
+            "cells announced today would slot directly into existing assembly lines with only minor "
+            "tooling changes, which lowers the risk for automakers that have already invested heavily "
+            "in current lithium ion equipment. Suppliers are also watching closely, because a switch "
+            "in chemistry changes which minerals are mined, refined, and shipped across the globe.</p>"
+        )
+        html = body + filler
+        image_path = os.path.join(self.tmpdir, "hero.png")
+        from PIL import Image
+        img = Image.new("RGB", (1200, 630), "navy")
+        img.save(image_path, format="PNG")
+        return {
+            "title": "Solid-state batteries double electric car range",
+            "slug": "solid-state-batteries",
+            "excerpt": "A solid-state battery from MIT doubles EV range to 600 miles per charge.",
+            "html": html,
+            "categories": ["Science"],
+            "tags": ["Battery", "EV"],
+            "hero_image_path": image_path,
+            "fact_sentences": [
+                "MIT researchers developed a solid-state battery that charges twice as fast and lasts 12 million cycles."
+            ],
+        }
+
+    def test_pre_publish_checks_pass_for_complete_article(self) -> None:
+        article = self._valid_article()
+        failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertEqual(failures, [])
+
+    def test_pre_publish_checks_block_filler_and_missing_sections(self) -> None:
+        article = self._valid_article()
+        article["html"] = article["html"].replace(
+            "<h2>Key Takeaways</h2><ul><li>Range improves without adding weight.</li><li>Cost drops "
+            "by up to 40 percent.</li><li>Mass production expected by 2028.</li></ul>",
+            "",
+        )
+        article["html"] += "<p>This is worth watching and points to big changes.</p>"
+        failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertTrue(any("Key Takeaways" in failure for failure in failures))
+        self.assertTrue(any("generic filler" in failure for failure in failures))
+
+    def test_pre_publish_checks_block_short_article_without_facts(self) -> None:
+        article = {
+            "title": "Short post",
+            "html": "<p>Nothing here.</p>",
+            "categories": ["Tech"],
+            "tags": [],
+            "hero_image_path": "",
+        }
+        failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertTrue(any("only 0 subheadings" in failure for failure in failures))
+        self.assertTrue(any("no concrete fact" in failure for failure in failures))
+        self.assertTrue(any("no featured image" in failure for failure in failures))
+
+    def test_deliver_article_blocks_low_quality_article(self) -> None:
+        from unittest.mock import patch
+
+        article = {
+            "title": "Short post",
+            "slug": "short-post",
+            "excerpt": "",
+            "html": "<p>Nothing here.</p>",
+            "categories": ["Tech"],
+            "tags": [],
+            "hero_image_path": "",
+        }
+        with patch.dict(
+            os.environ,
+            {"WP_POST_METHOD": "rest", "PRE_PUBLISH_CHECKS": "true"},
+            clear=False,
+        ):
+            with patch("wp_auto_blog.send_article_by_email") as send_email:
+                result = wp_auto_blog.deliver_article(article)
+        send_email.assert_not_called()
+        self.assertTrue(result["blocked"])
+        self.assertTrue(any("no concrete fact" in failure for failure in result["failures"]))
+
+    def test_check_links_in_html_flags_broken_external_urls(self) -> None:
+        from unittest.mock import patch
+
+        html = (
+            '<p>See <a href="https://example.com/ok">this</a> and '
+            '<a href="https://example.com/dead">that</a>.</p>'
+        )
+
+        class FakeResponse:
+            def __init__(self, status: int) -> None:
+                self.status = status
+
+            def __enter__(self) -> "FakeResponse":
+                return self
+
+            def __exit__(self, *exc_info: object) -> None:
+                return None
+
+        def fake_urlopen(request, timeout=None):
+            url = request.full_url
+            if url == "https://example.com/dead":
+                return FakeResponse(404)
+            return FakeResponse(200)
+
+        with patch("wp_auto_blog.urllib.request.urlopen", side_effect=fake_urlopen):
+            broken = wp_auto_blog.check_links_in_html(html)
+        self.assertIn("https://example.com/dead", broken)
+        self.assertNotIn("https://example.com/ok", broken)
+
+    def test_title_similarity_detects_near_duplicates(self) -> None:
+        self.assertGreater(
+            wp_auto_blog.title_similarity(
+                "MacBook Air shortage hits stores",
+                "MacBook Air shortage is affecting store stock",
+            ),
+            0.4,
+        )
+        self.assertLess(
+            wp_auto_blog.title_similarity(
+                "New battery technology unveiled",
+                "Roku raises streaming stick prices",
+            ),
+            0.3,
+        )
+
+    def test_guard_against_duplicate_title_blocks_similar(self) -> None:
+        from unittest.mock import patch
+
+        with patch("wp_auto_blog.wp_recent_published_titles", return_value=["MacBook Air shortage hits stores"]):
+            result = wp_auto_blog.guard_against_duplicate_title(
+                {"title": "MacBook Air shortage is affecting store stock"}
+            )
+        self.assertIsNotNone(result)
+        self.assertTrue(result["already_exists"])
+
+    def test_story_categories_reflects_actual_topic_not_ai_default(self) -> None:
+        now = dt.datetime.now(dt.timezone.utc)
+        phone_cluster = [
+            Item(
+                uid="p1",
+                source_name="GSMArena",
+                source_url="https://example.com",
+                source_category="phones",
+                source_quality=5,
+                title="Samsung Galaxy S26 camera upgrade details leak",
+                link="https://example.com/phone",
+                summary="The next Samsung flagship smartphone will get a larger main sensor and a brighter foldable display.",
+                published_at=now,
+            )
+        ]
+        categories = wp_auto_blog.story_categories(phone_cluster, phone_cluster[0].title, ["galaxy", "camera"])
+        self.assertIn("phones", categories)
+        self.assertNotIn("ai", categories)
+
+    def test_meaningful_tags_reject_junk_words(self) -> None:
+        now = dt.datetime.now(dt.timezone.utc)
+        cluster = [
+            Item(
+                uid="t1",
+                source_name="Beta News",
+                source_url="https://example.org",
+                source_category="tech",
+                source_quality=4,
+                title="OpenAI launches ChatGPT app for older devices",
+                link="https://example.org/chat",
+                summary="ChatGPT now runs on older Android phones, giving more users access to the assistant.",
+                published_at=now,
+            )
+        ]
+        tags = wp_auto_blog.meaningful_tags(cluster, ["AI"], limit=5)
+        self.assertLessEqual(len(tags), 5)
+        for tag in tags:
+            self.assertNotIn(tag.lower(), wp_auto_blog.JUNK_TAG_TOKENS)
+            self.assertNotIn(tag.lower(), wp_auto_blog.STOPWORDS)
 
 
 if __name__ == "__main__":

@@ -48,6 +48,34 @@ POST_METHOD_EMAIL = "email"
 POST_METHOD_REST = "rest"
 HERO_IMAGE_PLACEHOLDER = "__HERO_IMAGE_SRC__"
 
+MIN_ARTICLE_WORDS = 350
+MIN_SUBHEADINGS = 3
+MAX_TAGS = 5
+
+FILLER_PHRASES = {
+    "this is worth watching",
+    "points to",
+    "the headline is only the start",
+    "quiet side of innovation",
+    "in today's fast-paced world",
+    "in today's digital age",
+    "it's important to note",
+    "stay tuned for updates",
+    "in conclusion",
+    "as technology continues to evolve",
+    "in the ever-evolving world",
+    "the future of",
+    "game changer",
+    "has moved forward this week",
+    "this post distills the reporting",
+    "distills the reporting from",
+    "adds chucky's take on what it actually means",
+    "the story is still best read as a developing account",
+    "one isolated report is easy to miss",
+    "the useful question is whether",
+    "the broader point is that the topic is worth watching",
+}
+
 STOPWORDS = {
     "about",
     "after",
@@ -831,13 +859,14 @@ Write one original, comprehensive WordPress blog post for a professional blog co
 
 Use the source briefs below as reporting inputs. Do not copy or lightly paraphrase source text. Synthesize the shared theme, add substantial context, explain why it matters deeply, and keep claims tied to the sources. Include practical takeaways, expert perspectives, and future implications where relevant.
 
+MANDATORY FACT REQUIREMENT: Before you finalize the post, pick at least one concrete, verifiable detail from the source briefs — a number, a price, a date, a company or product name, a model number, a named researcher, or a measured result — and state it explicitly in the first two paragraphs and again in the "Known Details" section. If the source briefs contain no concrete detail, say so explicitly rather than inventing one. Do NOT fabricate numbers, prices, dates, or names.
+
+FILLER BAN: Do not use any of these generic phrases anywhere in the post: "this is worth watching", "points to", "the headline is only the start", "quiet side of innovation", "in today's fast-paced world", "in today's digital age", "it's important to note", "stay tuned for updates", "in conclusion", "as technology continues to evolve", "in the ever-evolving world", "the future of", "game changer", "has moved forward this week", "distills the reporting from". Every paragraph must either state a concrete fact, name a specific actor or product, cite a number or price, describe a real consequence, or give a specific reader-facing implication. No filler sentences that could fit any story.
+
 Editorial voice:
 - Write in a premium editorial-news voice: sophisticated, analytical, nuanced, authoritative, and polished.
 - Do not imitate any named publication directly. Use the broad traits of high-end analysis: a strong thesis, elegant sentences, measured judgment, and deep insight.
 - Lead with the specific news: what happened, who is involved, what changed, and why readers should care.
-- Avoid blog filler such as "this is worth watching", "points to", "the headline is only the start", "quiet side of innovation", and repeated source-list phrasing.
-- Do not write generic passages that could fit any science, AI, phone, or gadget story. Every paragraph must contain a concrete fact, consequence, named actor, technical detail, market effect, or reader-facing implication from the source briefs.
-- If source briefs are thin, be transparent about what is known and what remains unclear. Do not pad with generic analysis.
 - Make the article feel authored by a serious subject-matter expert, not assembled from feeds.
 - Prefer argument and consequence over hype. Explain trade-offs, incentives, limitations, second-order effects, and long-term implications.
 - For health and medical topics: include appropriate disclaimers, distinguish between correlation and causation, cite peer-reviewed research when available, and emphasize that content is for informational purposes only.
@@ -848,15 +877,15 @@ Return valid JSON only with these keys:
 - title: string (compelling, professional headline)
 - slug: lowercase URL slug
 - excerpt: comprehensive 2-3 sentence summary
-- categories: array of 1-3 broad category names
-- tags: array of 8-12 specific, relevant tags
+- categories: array of 1-3 broad category names (choose the category that best matches the actual topic; do not default to "ai")
+- tags: array of 3-5 specific, relevant tags (never generic words like "news", "tech", "update", "launch")
 - html: WordPress-ready HTML string
 - meta_description: string (155-160 characters for SEO)
 - focus_keyword: string (primary SEO keyword)
 
 HTML requirements:
-- 900 to 1400 words for comprehensive coverage.
-- Use h2 and h3 headings only when they describe factual subject matter, not editorial framing.
+- At least 900 words for comprehensive coverage.
+- Use at least 3 subheadings (h2 or h3) that describe factual subject matter.
 - Do not use section labels such as "Why It Matters", "What Readers Should Know", "Bottom Line", or "What To Watch Next".
 - Include a factual "Known Details" section with bullet points drawn only from the source briefs.
 - Use natural inline attribution when needed; do not add a source-list section.
@@ -864,7 +893,7 @@ HTML requirements:
 - For health content, include appropriate medical disclaimer at the end.
 
 Structure the article with:
-1. Compelling introduction that sets context and stakes
+1. Compelling introduction that sets context and stakes and states the key concrete fact
 2. Deep analysis of the topic with multiple perspectives
 3. Technical or scientific details explained clearly
 4. Practical implications for readers
@@ -875,7 +904,6 @@ SEO requirements:
 - Include the focus keyword naturally in the title, first paragraph, and at least one subheading
 - Write meta_description that includes the focus keyword and summarizes the article's value
 - Use semantic HTML with proper heading hierarchy
-- Include relevant internal linking opportunities
 
 Sources:
 
@@ -919,6 +947,22 @@ def openai_generate_article(cluster: list[Item]) -> dict[str, Any]:
 
     text = extract_response_text(data)
     article = parse_article_json(text)
+    article["source_count"] = len({item.source_name for item in cluster})
+    article["source_links"] = [
+        {"name": item.source_name, "url": item.link}
+        for item in cluster
+        if item.source_name and item.link
+    ]
+    article["fact_sentences"] = build_fact_sentences(cluster)
+    article["keywords"] = top_keywords(cluster, 8)
+    hero_path = create_hero_image(
+        str(article.get("title") or "Generated post"),
+        article.get("keywords") or [],
+        [str(value) for value in article.get("categories", [])],
+        source_image_candidates(cluster),
+    )
+    article["hero_image_path"] = str(hero_path) if hero_path else ""
+    article["hero_image_alt"] = f"{article.get('title')} illustration"
     return enrich_article_for_publication(article)
 
 
@@ -1042,13 +1086,38 @@ def clean_tag_name(tag: str) -> str:
     return tag
 
 
-def meaningful_tags(cluster: list[Item], categories: list[str], limit: int = 5) -> list[str]:
-    """Relevance-ranked tags: frequent content words, filtered and capped at `limit`."""
-    generic_tokens = {"million", "billion", "trillion", "percent", "percentage", "people", "users", "year", "years", "month", "months", "today", "week"}
+JUNK_TAG_TOKENS = {
+    "about", "according", "after", "again", "along", "also", "among", "announced", "another", "around",
+    "back", "based", "because", "been", "before", "being", "best", "big", "called", "came", "can",
+    "come", "comes", "coming", "could", "current", "currently", "day", "days", "does", "during",
+    "even", "every", "first", "from", "get", "gets", "got", "has", "have", "here", "how", "into",
+    "just", "last", "latest", "like", "made", "make", "makes", "may", "might", "month", "months",
+    "more", "most", "much", "must", "need", "needs", "new", "news", "next", "now", "one", "over",
+    "percent", "people", "per", "plus", "really", "report", "reports", "says", "said", "still",
+    "take", "takes", "than", "that", "the", "their", "them", "then", "there", "these", "they",
+    "thing", "things", "this", "those", "through", "today", "under", "use", "used", "uses", "using",
+    "want", "wants", "way", "week", "weeks", "what", "when", "where", "which", "while", "will",
+    "with", "within", "without", "would", "year", "years", "yet", "you", "your", "million", "billion",
+    "trillion", "technology", "tech", "device", "devices", "user", "users", "company", "companies",
+    "maker", "makers", "time", "times", "found", "find", "finding", "study", "research", "researcher",
+    "researchers", "scientist", "scientists", "team", "groups", "group", "platform", "feature",
+    "features", "offer", "offers", "introduce", "introduces", "launch", "launches", "release",
+    "releases", "update", "updates", "version", "biggest", "largest", "small", "large", "better",
+    "best", "newer", "older", "recent", "recently", "latest",
+}
+
+
+def meaningful_tags(cluster: list[Item], categories: list[str], limit: int = MAX_TAGS) -> list[str]:
+    """Relevance-ranked tags: frequent content words, filtered and capped at `limit`.
+
+    Excludes generic tokens, common English stop words, category names, and any tag
+    that would just repeat a category — so the pipeline never turns everyday words
+    into junk tags.
+    """
     counts: dict[str, int] = {}
     for item in cluster:
         for token in tokens_for(item):
-            if len(token) < 4 or token in generic_tokens:
+            if len(token) < 4 or token in JUNK_TAG_TOKENS or token in STOPWORDS:
                 continue
             if re.fullmatch(r"[\d.,%]+", token):
                 continue
@@ -1490,8 +1559,14 @@ def category_reader_angle(category: str) -> str:
 
 
 def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> list[str]:
+    """Classify a story into 1-3 categories based on the actual topic.
+
+    Uses weighted keyword signals instead of first-match order, so a phone
+    story does not default to "ai" just because the word "assistant" appears.
+    Falls back to the feed's own source_category only when no signal matches.
+    """
     text = " ".join([topic, *keywords, *(item.title for item in cluster), *(item.summary for item in cluster)]).lower()
-    inferred: list[str] = []
+    padded = f" {text} "
 
     def matches_needle(haystack: str, needle: str) -> bool:
         clean = needle.strip()
@@ -1503,31 +1578,41 @@ def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> li
             return re.search(rf"\b{re.escape(clean)}\b", haystack) is not None
         return clean in haystack
 
-    checks = [
-        ("health", ("health", "medical", "medicine", "doctor", "hospital", "patient", "treatment", "disease", "virus", "vaccine", "clinical", "drug", "pharmaceutical", "nutrition", "fitness", "mental health", "wellness", "cancer", "diabetes", "heart", "blood pressure", "cholesterol", "obesity", "exercise", "diet", "supplement", "therapy", "symptom", "diagnosis", "cdc", "who", "nih", "fda", "harvard health", "mayo clinic", "webmd", "healthline")),
-        ("ai", ("chatgpt", "openai", "artificial intelligence", "ai", "gemini", "ai model", "llm", "assistant", "chatbot")),
-        ("apple", ("iphone", "ios", "airpods", "apple", "ipad", "mac")),
-        ("android", ("android", "pixel", "samsung", "googlebook")),
-        ("phones", ("phone", "phones", "smartphone", "mobile", "foldable")),
-        ("space", ("nasa", "mars", "moon", "galaxies", "seyfert", "exoplanet", "telescope", "astronomy", "astronomer", "astronomers", "spacecraft", "space station", "spacex", "rocket", "satellite")),
-        ("science", ("study", "research", "scientists", "science", "researchers")),
-        ("software", ("app", "apps", "software", "update", "developer")),
-        ("security", ("security", "hack", "breach", "malware", "password", "vulnerability")),
-        ("gadgets", ("gadget", "device", "smartwatch", "wearable", "earbuds", "laptop", "glasses", "robotaxi", "robotaxis")),
+    signals = [
+        ("health", 4, ("health", "medical", "medicine", "doctor", "hospital", "patient", "treatment", "disease", "virus", "vaccine", "clinical", "drug", "pharmaceutical", "nutrition", "fitness", "mental health", "wellness", "cancer", "diabetes", "heart", "blood pressure", "cholesterol", "obesity", "exercise", "diet", "supplement", "therapy", "symptom", "diagnosis", "cdc", "who", "nih", "fda", "harvard health", "mayo clinic", "webmd", "healthline")),
+        ("security", 4, ("security", "breach", "malware", "ransomware", "password", "vulnerability", "exploit", "zero-day", "cyber", "phishing", "hacker", "hacking", "encryption", "data leak", "databreach", "attackers")),
+        ("space", 4, ("nasa", "mars", "moon", "galaxies", "seyfert", "exoplanet", "telescope", "astronomy", "astronomer", "astronomers", "spacecraft", "space station", "spacex", "rocket", "satellite", "orbit", "launch")),
+        ("ai", 3, ("chatgpt", "openai", "artificial intelligence", "ai model", "llm", "machine learning", "neural network", "deep learning", "generative ai", "gpt", "claude", "gemini")),
+        ("phones", 3, ("phone", "phones", "smartphone", "smartphones", "mobile", "foldable", "handset", "flagship")),
+        ("android", 3, ("android", "pixel", "samsung", "oneplus", "xiaomi")),
+        ("apple", 3, ("iphone", "ipad", "macbook", "mac", "apple", "airpods", "ios", "macos", "watchos", "tvos")),
+        ("science", 3, ("study", "research", "scientists", "researchers", "experiment", "clinical trial", "peer-review", "university", "journal")),
+        ("software", 2, ("software", "developer", "api", "app update", "coding", "programming", "framework", "cloud", "database")),
+        ("gadgets", 2, ("gadget", "device", "smartwatch", "wearable", "earbuds", "laptop", "glasses", "robotaxi", "robotaxis", "router", "drone", "headset")),
+        ("tech", 1, ("technology", "tech", "startup", "industry")),
     ]
-    padded = f" {text} "
-    for category, needles in checks:
-        if any(matches_needle(padded, needle) for needle in needles):
-            inferred.append(category)
+
+    scored: dict[str, int] = {}
+    for category, base_weight, needles in signals:
+        hit_count = sum(1 for needle in needles if matches_needle(padded, needle))
+        if hit_count:
+            scored[category] = scored.get(category, 0) + hit_count * base_weight
+
+    inferred: list[str] = []
+    for category, _score in sorted(scored.items(), key=lambda entry: (-entry[1], entry[0])):
+        inferred.append(category)
+
     if inferred:
         if inferred == ["ai"]:
             inferred.append("software")
         if inferred == ["health"]:
             inferred.append("science")
         return inferred[:3]
+
     for item in cluster:
-        if item.source_category not in inferred:
-            inferred.append(item.source_category)
+        source_cat = str(item.source_category or "").strip().lower()
+        if source_cat and source_cat != "uncategorized" and source_cat not in inferred:
+            inferred.append(source_cat)
     return inferred[:3] or ["tech"]
 
 
@@ -2838,19 +2923,29 @@ def build_fact_sentences(cluster: list[Item], limit: int = 6) -> list[str]:
 
 
 def build_lede(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
+    """A concrete, factual lead that anchors on the strongest source detail."""
     topic_phrase = clean_text(topic, max_len=160)
     source_names = list(dict.fromkeys(item.source_name for item in cluster if item.source_name))
-    category_phrase = categories[0].lower() if categories else "technology"
+    facts = build_fact_sentences(cluster, limit=2)
+
+    if facts:
+        lead_fact = first_sentence(facts[0])
+        source_tag = source_names[0] if source_names else "the source"
+        return (
+            f"{lead_fact} {source_tag} is reporting on {topic_phrase.lower().rstrip('.')}, "
+            f"and this post walks through what changed and what it means."
+        )
+
     if len(source_names) > 1:
         return (
-            f"{topic_phrase} is a {category_phrase} story worth tracking. This post pulls together "
-            f"{len(source_names)} independent sources and adds Chucky's take on what it actually "
-            "means for people who use this technology."
+            f"{topic_phrase} is a story being covered by {len(source_names)} independent "
+            f"sources — {', '.join(source_names[:2])} and others. This post pulls the "
+            "reporting together and looks at what it means for readers."
         )
     return (
-        f"{topic_phrase} has moved forward this week. This post distills the reporting from "
-        f"{source_names[0] if source_names else 'the primary source'} and adds Chucky's take on what "
-        "it actually means for people who use this technology."
+        f"{topic_phrase} is moving this week, and the reporting from "
+        f"{source_names[0] if source_names else 'the primary source'} gives us a "
+        "clearer look at what changed and what comes next."
     )
 
 
@@ -3070,6 +3165,251 @@ def wp_term_ids(kind: str, names: list[str]) -> list[int]:
     return ids
 
 
+def check_links_in_html(html: str, max_links: int = 10) -> list[str]:
+    """Return a list of external URLs that fail to load, or [] when all are reachable.
+
+    Only the first ``max_links`` distinct external URLs are probed so a single bad
+    post can never hammer the network. A URL is considered broken when the server
+    returns an HTTP error status or the connection fails. Relative and on-site links
+    are skipped because they are not the hotlinking problem this check guards against.
+    """
+    broken: list[str] = []
+    seen: set[str] = set()
+    local_hosts = {
+        urllib.parse.urlsplit(str(os.getenv("WP_BASE_URL", ""))).netloc.lower(),
+        urllib.parse.urlsplit(str(os.getenv("WP_SITE_URL", ""))).netloc.lower(),
+    }
+    local_hosts.discard("")
+    for match in re.finditer(r'<a[^>]*\shref="([^"]+)"', html, flags=re.IGNORECASE):
+        raw_url = match.group(1).strip()
+        if not raw_url or raw_url.startswith("#"):
+            continue
+        parsed = urllib.parse.urlsplit(raw_url)
+        if parsed.scheme not in ("http", "https"):
+            continue
+        host = parsed.netloc.lower()
+        if not host or host in local_hosts:
+            continue
+        if raw_url in seen:
+            continue
+        seen.add(raw_url)
+        if len(seen) > max_links:
+            break
+        try:
+            request = urllib.request.Request(raw_url, method="GET", headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(request, timeout=15) as response:
+                if response.status >= 400:
+                    broken.append(raw_url)
+        except Exception:
+            broken.append(raw_url)
+    return broken
+
+
+def pre_publish_checks(article: dict[str, Any], cluster: list[Item] | None = None) -> list[str]:
+    """Run the required quality checks before an article is allowed to publish.
+
+    Returns a list of human-readable failures. An empty list means the article
+    passes every check. Any single failure blocks publishing.
+    """
+    failures: list[str] = []
+    title = str(article.get("title") or "").strip()
+    html_body = str(article.get("html") or "")
+    plain = strip_html(html_body)
+    word_count = len(plain.split())
+    tags = [str(value) for value in article.get("tags", []) if str(value).strip()]
+    categories = [str(value) for value in article.get("categories", []) if str(value).strip()]
+
+    if not title:
+        failures.append("title is empty")
+    if not title.strip().lower() == title.strip().lower() and len(title) < 10:
+        failures.append("title is too short")
+
+    subheading_count = len(re.findall(r"<h2[ >]", html_body)) + len(re.findall(r"<h3[ >]", html_body))
+    if subheading_count < MIN_SUBHEADINGS:
+        failures.append(f"only {subheading_count} subheadings; need at least {MIN_SUBHEADINGS}")
+
+    if "Why This Matters" not in html_body:
+        failures.append("missing 'Why This Matters' section")
+    if "Chucky's Analysis" not in html_body:
+        failures.append("missing 'Chucky's Analysis' section")
+    if "Key Takeaways" not in html_body:
+        failures.append("missing 'Key Takeaways' section")
+
+    if not categories:
+        failures.append("no categories assigned")
+    if len(tags) > MAX_TAGS:
+        failures.append(f"{len(tags)} tags; max is {MAX_TAGS}")
+
+    if word_count < MIN_ARTICLE_WORDS:
+        failures.append(f"article is only {word_count} words; need at least {MIN_ARTICLE_WORDS}")
+
+    fact_sentences = [str(value) for value in article.get("fact_sentences") or [] if str(value).strip()]
+    full_text = " ".join(
+        f"{item.title} {item.summary}" for item in (cluster or [])
+    )
+    numeric = extract_numeric_facts(full_text) if full_text.strip() else ""
+    has_fact = bool(fact_sentences or numeric)
+    if not has_fact:
+        failures.append("no concrete fact (number, name, price) drawn from the source")
+
+    lowered = plain.lower()
+    for phrase in FILLER_PHRASES:
+        if phrase in lowered:
+            failures.append(f"generic filler detected: '{phrase}'")
+
+    if env_bool("CHECK_BROKEN_LINKS", True):
+        broken_links = check_links_in_html(html_body)
+        if broken_links:
+            failures.append(f"{len(broken_links)} broken external link(s): " + ", ".join(broken_links[:3]))
+
+    hero_path = article_hero_path(article)
+    image_mode = os.getenv("HERO_IMAGE_MODE", "real").strip().lower()
+    if image_mode != "off":
+        if hero_path:
+            try:
+                from PIL import Image
+                with Image.open(hero_path) as probe:
+                    probe.verify()
+            except Exception:
+                failures.append("featured image is not a valid image file")
+        else:
+            failures.append("no featured image")
+
+    return failures
+
+
+def localize_images(content_html: str, alt_text: str = "") -> str:
+    """Download external images referenced in HTML and re-upload them to the media library.
+
+    WordPress.com will otherwise hotlink to GSMArena, Hackaday, 9to5Mac and other
+    publishers' servers, which is fragile and uses their bandwidth. Any image whose
+    host is not our own site is fetched and uploaded, then the src is rewritten to
+    the local media URL. Failed downloads are left untouched so the post never breaks.
+    """
+    own_domains = {
+        urllib.parse.urlsplit(str(os.getenv("WP_BASE_URL", ""))).netloc.lower(),
+        urllib.parse.urlsplit(str(os.getenv("WP_SITE_URL", ""))).netloc.lower(),
+        "chuckyscarnage.tech.blog",
+        "chuckyscarnagetech.wordpress.com",
+    }
+    own_domains.discard("")
+
+    def is_external(url: str) -> bool:
+        try:
+            host = urllib.parse.urlsplit(url).netloc.lower()
+        except ValueError:
+            return False
+        if not host or "wp-content" in url or host in own_domains:
+            return False
+        return True
+
+    def upload_remote(url: str) -> str:
+        try:
+            raw = request_bytes(url, env_int("REQUEST_TIMEOUT_SECONDS", 25))
+        except Exception:
+            return url
+        if not raw:
+            return url
+        from PIL import Image
+        try:
+            with Image.open(io.BytesIO(raw)) as probe:
+                probe.verify()
+        except Exception:
+            return url
+        import time
+        import uuid
+        extension = urllib.parse.urlsplit(url).path.split("?")[0].rsplit(".", 1)[-1].lower()
+        if extension not in {"jpg", "jpeg", "png", "gif", "webp"}:
+            extension = "jpg"
+        filename = f"image-{int(time.time())}-{uuid.uuid4().hex[:8]}.{extension}"
+        try:
+            uploaded = wp_request(
+                "media",
+                {"file_bytes": raw, "filename": filename, "alt_text": alt_text},
+                method="POST",
+            )
+        except Exception:
+            return url
+        if isinstance(uploaded, dict):
+            source_url = str(uploaded.get("source_url") or uploaded.get("guid", {}).get("rendered") or "")
+            if source_url:
+                return source_url
+        return url
+
+    def replace_match(match: "re.Match[str]") -> str:
+        full_tag = match.group(0)
+        src = match.group(1)
+        if is_external(src):
+            local = upload_remote(src)
+            if local != src:
+                return full_tag.replace(src, local)
+        return full_tag
+
+    return re.sub(r'<img[^>]*\ssrc="([^"]+)"', replace_match, content_html, flags=re.IGNORECASE)
+
+
+def wp_recent_published_titles(limit: int = 30) -> list[str]:
+    """Fetch titles of recently published posts from WordPress."""
+    titles: list[str] = []
+    try:
+        query = urllib.parse.urlencode({"per_page": min(100, max(1, limit)), "status": "publish", "_fields": "title"})
+        matches = wp_request(f"posts?{query}")
+    except Exception:
+        return titles
+    if isinstance(matches, list):
+        for post in matches:
+            rendered = (post.get("title") or {}).get("rendered") if isinstance(post, dict) else None
+            if rendered:
+                titles.append(str(rendered))
+    return titles
+
+
+def title_similarity(left: str, right: str) -> float:
+    """Similarity of two titles (0..1).
+
+    Uses the containment coefficient (share of the shorter token set that also
+    appears in the longer one) blended with Jaccard, so a reworded retelling of
+    the same story scores highly while unrelated headlines stay near zero.
+    """
+    a = set(normalize_title(left).split())
+    b = set(normalize_title(right).split())
+    if not a or not b:
+        return 0.0
+    jaccard = len(a & b) / len(a | b)
+    containment = len(a & b) / min(len(a), len(b))
+    return (jaccard + containment) / 2
+
+
+def guard_against_duplicate_title(article: dict[str, Any], cluster: list[Item] | None = None) -> dict[str, Any] | None:
+    """Return a 'already_exists' result if the article topic matches a recent published title.
+
+    Compares the new topic against the site's recently published titles (and, when a
+    cluster is provided, against this run's own recently generated titles) so near-identical
+    stories about the same event never get posted twice.
+    """
+    title = str(article.get("title") or "").strip()
+    if not title:
+        return None
+    threshold = max(0.0, min(1.0, env_float("DUPLICATE_TITLE_THRESHOLD", 0.45)))
+    recent: list[str] = []
+    try:
+        recent.extend(wp_recent_published_titles(30))
+    except Exception:
+        pass
+    for other in recent:
+        if title_similarity(title, other) >= threshold:
+            print(f"Duplicate-guard blocked '{title}' — too similar to published post '{other}'.")
+            return {"id": 0, "status": "duplicate", "already_exists": True, "similar_to": other}
+    return None
+
+
+def env_float(name: str, default: float) -> float:
+    try:
+        return float(os.getenv(name, str(default)).strip() or default)
+    except ValueError:
+        return default
+
+
 def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
     content_html = str(article["html"]).replace("[more]", "<!--more-->")
     slug = article.get("slug") or slugify(article["title"])
@@ -3125,6 +3465,10 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
     else:
         # No featured media was set; make sure the placeholder never leaks into the post.
         payload["content"] = payload["content"].replace(HERO_IMAGE_PLACEHOLDER, "")
+
+    # Stop hotlinking: download and re-upload any external images into our own media library.
+    if env_bool("LOCALIZE_CONTENT_IMAGES", True):
+        payload["content"] = localize_images(payload["content"], article.get("hero_image_alt") or article.get("title", ""))
 
     result = wp_request("posts", payload, method="POST")
     if not isinstance(result, dict):
@@ -3290,7 +3634,17 @@ def send_article_by_email(article: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def deliver_article(article: dict[str, Any]) -> dict[str, Any]:
+def deliver_article(article: dict[str, Any], cluster: list[Item] | None = None) -> dict[str, Any]:
+    if env_bool("PRE_PUBLISH_CHECKS", True):
+        failures = pre_publish_checks(article, cluster)
+        if failures:
+            for failure in failures:
+                print(f"  Quality check failed: {failure}")
+            print(f"Article not published (blocked by quality gate): {article.get('title', '')}")
+            return {"status": "blocked", "blocked": True, "failures": failures}
+    duplicate = guard_against_duplicate_title(article, cluster)
+    if duplicate:
+        return duplicate
     method = os.getenv("WP_POST_METHOD", POST_METHOD_EMAIL).strip().lower() or POST_METHOD_EMAIL
     if method == POST_METHOD_EMAIL:
         return send_article_by_email(article)
@@ -3565,12 +3919,14 @@ def run_once(args: argparse.Namespace) -> int:
                 print(f"Dry-run preview written: {preview}")
                 continue
 
-            result = deliver_article(article)
+            result = deliver_article(article, cluster)
             raw_wp_id = result.get("id")
             wp_id = int(raw_wp_id) if raw_wp_id not in {None, ""} else None
             status = str(result.get("status", os.getenv("POST_STATUS", "draft")))
             if result.get("already_exists"):
                 status = "duplicate"
+            if result.get("blocked"):
+                status = "blocked"
             mark_used(conn, cluster, article, wp_id, status)
             delivered_posts.append(
                 {
@@ -3583,6 +3939,8 @@ def run_once(args: argparse.Namespace) -> int:
             )
             if result.get("already_exists"):
                 print(f"Skipped duplicate post (already on site as #{wp_id}): {article['title']}")
+            elif result.get("blocked"):
+                print(f"Blocked low-quality post (did not publish): {article['title']}")
             elif wp_id:
                 print(f"Created WordPress post {wp_id} with status={status}: {result.get('link', '')}")
             else:

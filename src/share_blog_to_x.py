@@ -12,6 +12,7 @@ import json
 import os
 import sys
 import tempfile
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -265,25 +266,36 @@ def post_text_for(post: BlogPost) -> str:
 
 def post_to_x(access_token: str, text: str) -> dict[str, Any]:
     payload = json.dumps({"text": text}).encode("utf-8")
-    request = urllib.request.Request(
-        X_CREATE_POST_URL,
-        data=payload,
-        method="POST",
-        headers={
-            "Authorization": f"Bearer {access_token}",
-            "Content-Type": "application/json",
-            "User-Agent": USER_AGENT,
-        },
-    )
-    try:
-        with urllib.request.urlopen(request, timeout=env_int("REQUEST_TIMEOUT_SECONDS", 25)) as response:
-            body = response.read().decode("utf-8")
-            return json.loads(body) if body else {}
-    except urllib.error.HTTPError as error:
-        body = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"X API returned HTTP {error.code}: {body}") from error
-    except urllib.error.URLError as error:
-        raise RuntimeError(f"Could not reach X API: {error}") from error
+    timeout = env_int("REQUEST_TIMEOUT_SECONDS", 25)
+    last_error: Exception | None = None
+    for attempt in range(env_int("X_MAX_RETRIES", 2)):
+        request = urllib.request.Request(
+            X_CREATE_POST_URL,
+            data=payload,
+            method="POST",
+            headers={
+                "Authorization": f"Bearer {access_token}",
+                "Content-Type": "application/json",
+                "User-Agent": USER_AGENT,
+            },
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                body = response.read().decode("utf-8")
+                return json.loads(body) if body else {}
+        except urllib.error.HTTPError as error:
+            body = error.read().decode("utf-8", errors="replace")
+            if error.code == 429 and attempt < env_int("X_MAX_RETRIES", 2) - 1:
+                time.sleep(1)
+                continue
+            raise RuntimeError(f"X API returned HTTP {error.code}: {body}") from error
+        except urllib.error.URLError as error:
+            last_error = error
+            if attempt < env_int("X_MAX_RETRIES", 2) - 1:
+                time.sleep(1)
+                continue
+            break
+    raise RuntimeError(f"Could not reach X API: {last_error}") from last_error
 
 
 def refresh_x_access_token() -> str:
