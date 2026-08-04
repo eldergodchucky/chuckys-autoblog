@@ -1360,6 +1360,49 @@ class PublishGateTests(unittest.TestCase):
         failures = wp_auto_blog.pre_publish_checks(article)
         self.assertFalse(any("politics" in failure for failure in failures), failures)
 
+    def test_promote_latest_post_rotates_sticky(self) -> None:
+        from unittest.mock import patch
+
+        calls: list[tuple[str, object, str]] = []
+
+        def fake_wp_request(path: str, payload: object = None, method: str = "GET") -> object:
+            calls.append((path, payload, method))
+            if path.startswith("posts?sticky=true"):
+                return [{"id": 333}, {"id": 334}]
+            return {"id": 335}
+
+        with patch("wp_auto_blog.wp_request", side_effect=fake_wp_request):
+            wp_auto_blog.promote_latest_post(335)
+
+        self.assertIn(("posts/333", {"sticky": False}, "POST"), calls)
+        self.assertIn(("posts/334", {"sticky": False}, "POST"), calls)
+        self.assertIn(("posts/335", {"sticky": True}, "POST"), calls)
+
+    def test_promote_latest_post_skips_when_already_sticky(self) -> None:
+        from unittest.mock import patch
+
+        calls: list[str] = []
+
+        def fake_wp_request(path: str, payload: object = None, method: str = "GET") -> object:
+            calls.append(path)
+            if path.startswith("posts?sticky=true"):
+                return [{"id": 335}]
+            return {"id": 335}
+
+        with patch("wp_auto_blog.wp_request", side_effect=fake_wp_request):
+            wp_auto_blog.promote_latest_post(335)
+
+        self.assertEqual(calls, ["posts?sticky=true&per_page=100&_fields=id"])
+
+    def test_promote_latest_post_swallows_api_errors(self) -> None:
+        from unittest.mock import patch
+
+        def boom(path: str, payload: object = None, method: str = "GET") -> object:
+            raise RuntimeError("api down")
+
+        with patch("wp_auto_blog.wp_request", side_effect=boom):
+            wp_auto_blog.promote_latest_post(335)
+
 
 if __name__ == "__main__":
     unittest.main()

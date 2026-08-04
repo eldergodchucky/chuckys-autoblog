@@ -4407,6 +4407,29 @@ def deliver_article(article: dict[str, Any], cluster: list[Item] | None = None) 
             return {"status": "publish-failed", "id": None}
     raise RuntimeError(f"Unsupported WP_POST_METHOD: {method}")
 
+def promote_latest_post(wp_id: int) -> None:
+    """Move the sticky feature flag onto the newest published post.
+
+    This keeps a single highlighted "featured" post pinned to the top of the
+    blog index. Any currently stuck post is un-stuck first so the rotation
+    always points at the latest published article. Failures are logged and
+    ignored rather than allowed to abort the run.
+    """
+    if not wp_id:
+        return
+    try:
+        sticky = wp_request("posts?sticky=true&per_page=100&_fields=id")
+        current = [int(p.get("id")) for p in sticky if isinstance(p, dict) and p.get("id")]
+        if wp_id in current:
+            return
+        for old_id in current:
+            wp_request(f"posts/{old_id}", {"sticky": False}, method="POST")
+        wp_request(f"posts/{wp_id}", {"sticky": True}, method="POST")
+        print(f"Featured post updated: #{wp_id} is now pinned on the blog index.")
+    except Exception as exc:
+        print(f"Could not update the featured/sticky post ({type(exc).__name__}: {exc}); continuing.")
+
+
 def save_preview(article: dict[str, Any], cluster: list[Item]) -> Path:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     timestamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d-%H%M%S")
@@ -4691,6 +4714,8 @@ def run_once(args: argparse.Namespace) -> int:
             elif wp_id:
                 published_count += 1
                 print(f"Created WordPress post {wp_id} with status={status}: {result.get('link', '')}")
+                if status == "publish" and env_bool("ROTATE_STICKY", True):
+                    promote_latest_post(wp_id)
             else:
                 published_count += 1
                 print(f"Delivered post with status={status}: {result.get('link', '')}")
