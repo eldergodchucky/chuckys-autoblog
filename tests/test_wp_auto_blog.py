@@ -84,6 +84,76 @@ class FullArticleSectionsTests(unittest.TestCase):
         self.assertIn('<section class="editorial-section"', enriched["html"])
         self.assertIn("<h2>Why This Matters</h2>", enriched["html"])
 
+    def test_editorial_sections_include_conclusion_keep_exploring_and_author(self) -> None:
+        from unittest.mock import patch
+
+        article = {
+            "title": "Solid-state batteries double electric car range",
+            "excerpt": "A short excerpt.",
+            "categories": ["Science"],
+            "tags": ["Battery", "EV"],
+            "html": "<p>Original article body.</p>",
+            "fact_sentences": [
+                "MIT researchers developed a solid-state battery that charges twice as fast."
+            ],
+            "source_links": [{"name": "MIT", "url": "https://example.com/mit"}],
+        }
+        with patch.dict(os.environ, {"WP_BASE_URL": "https://chuckyscarnage.tech.blog"}, clear=False):
+            sections = "".join(wp_auto_blog.build_editorial_sections(article))
+        self.assertIn("<h2>Conclusion</h2>", sections)
+        self.assertIn("<h2>Keep Exploring</h2>", sections)
+        self.assertIn('<a href="https://chuckyscarnage.tech.blog/category/science/">Science archive</a>', sections)
+        self.assertIn("<h2>About the Author</h2>", sections)
+        self.assertIn("ChuckysCarnage is a technology news site", sections)
+        self.assertNotIn("<h2>Related Reading</h2>", sections)
+
+    def test_related_reading_uses_rest_posts_sharing_a_category(self) -> None:
+        from unittest.mock import patch
+
+        article = {
+            "title": "Solid-state batteries double electric car range",
+            "slug": "solid-state-batteries",
+            "categories": ["Science"],
+            "tags": ["Battery"],
+            "html": "<p>Body.</p>",
+        }
+
+        fake_terms = [{"id": 7, "name": "Science"}]
+
+        def fake_wp_request(path: str, payload: object = None, method: str = "GET") -> object:
+            if path.startswith("categories?"):
+                return fake_terms
+            return [
+                {"id": 100, "title": {"rendered": "Older battery breakthrough explained"}, "link": "https://example.test/older"},
+                {"id": 101, "title": {"rendered": "Solid-state batteries double EV range"}, "link": "https://example.test/solid-state-batteries"},
+                {"id": 102, "title": {"rendered": "Grid operators study fast charging"}, "link": "https://example.test/grid"},
+            ]
+
+        with patch("wp_auto_blog.wp_request", side_effect=fake_wp_request):
+            posts = wp_auto_blog.wp_related_posts(article, limit=2)
+            html = wp_auto_blog.build_related_reading_html(article)
+
+        self.assertEqual([post["title"] for post in posts], ["Older battery breakthrough explained", "Grid operators study fast charging"])
+        self.assertIn('href="https://example.test/older"', html)
+        self.assertNotIn("solid-state-batteries", html)
+
+    def test_related_reading_returns_empty_when_api_unavailable(self) -> None:
+        from unittest.mock import patch
+
+        article = {
+            "title": "Test",
+            "categories": ["Science"],
+            "html": "<p>Body.</p>",
+        }
+
+        def raise_runtime_error(path: str, payload: object = None, method: str = "GET") -> object:
+            raise RuntimeError("no credentials")
+
+        with patch("wp_auto_blog.wp_request", side_effect=raise_runtime_error):
+            html = wp_auto_blog.build_related_reading_html(article)
+
+        self.assertEqual(html, "")
+
     def test_publish_to_wordpress_uploads_hero_image_as_featured_media(self) -> None:
         with tempfile.NamedTemporaryFile("wb", suffix=".png", delete=False) as handle:
             handle.write(b"fake image")

@@ -2885,7 +2885,128 @@ def build_editorial_sections(article: dict[str, Any]) -> list[str]:
     sources = build_sources_html(article)
     if sources:
         markup.append(f'<section class="editorial-section"><h2>Sources</h2>{sources}</section>')
+    conclusion = build_conclusion_html(article)
+    if conclusion:
+        markup.append(f'<section class="editorial-section"><h2>Conclusion</h2>{conclusion}</section>')
+    related = build_related_reading_html(article)
+    if related:
+        markup.append(f'<section class="editorial-section"><h2>Related Reading</h2>{related}</section>')
+    exploring = build_keep_exploring_html(article)
+    if exploring:
+        markup.append(f'<section class="editorial-section"><h2>Keep Exploring</h2>{exploring}</section>')
+    markup.append(
+        '<section class="editorial-section"><h2>About the Author</h2>'
+        '<p>ChuckysCarnage is a technology news site that tracks gadgets, software, science, '
+        'and space. Every article is assembled from the day\u2019s independent reporting, checked '
+        'against the original sources, and reviewed for accuracy before it goes live.</p></section>'
+    )
     return markup
+
+
+def build_conclusion_html(article: dict[str, Any]) -> str:
+    """A short, fact-anchored wrap-up paragraph for the end of the article."""
+    title = clean_text(str(article.get("title") or "this story"), max_len=110)
+    categories = [
+        clean_text(str(value), max_len=40)
+        for value in article.get("categories", [])
+        if str(value).strip()
+    ]
+    category_label = clean_category_name(categories[0]) if categories else "Tech"
+    facts = article.get("fact_sentences") or []
+    paragraph = (
+        f"The short version: {title} is a real development in {category_label}, "
+        "and the reporting above explains what changed and what it could mean."
+    )
+    if facts:
+        paragraph += (
+            f" The detail that stands out: {lower_first(first_sentence(facts[0]).rstrip('.'))}."
+        )
+    paragraph += (
+        " Watch for follow-up coverage, pricing, availability, and independent testing "
+        "before drawing conclusions about real-world impact."
+    )
+    return f"<p>{html.escape(paragraph)}</p>"
+
+
+def wp_related_posts(article: dict[str, Any], limit: int = 3) -> list[dict[str, str]]:
+    """Fetch recently published posts that share a category with this article."""
+    categories = [str(value).strip() for value in article.get("categories", []) if str(value).strip()]
+    if not categories:
+        return []
+    try:
+        ids = wp_term_ids("category", categories[:3])
+    except Exception:
+        return []
+    if not ids:
+        return []
+    query = urllib.parse.urlencode(
+        {
+            "per_page": 20,
+            "status": "publish",
+            "orderby": "date",
+            "order": "desc",
+            "categories": ",".join(str(term_id) for term_id in ids),
+            "_fields": "id,title,link",
+        }
+    )
+    try:
+        matches = wp_request(f"posts?{query}")
+    except Exception:
+        return []
+    if not isinstance(matches, list):
+        return []
+    own_slug = str(article.get("slug") or "")
+    posts: list[dict[str, str]] = []
+    for post in matches:
+        if not isinstance(post, dict):
+            continue
+        title = (post.get("title") or {}).get("rendered")
+        link = post.get("link")
+        if not title or not link:
+            continue
+        if own_slug and own_slug in str(link):
+            continue
+        posts.append({"title": str(title), "link": str(link)})
+        if len(posts) >= limit:
+            break
+    return posts
+
+
+def build_related_reading_html(article: dict[str, Any]) -> str:
+    """Best-effort 'Related Reading' links pulled from the site's own REST API."""
+    if not env_bool("ENABLE_RELATED_READING", True):
+        return ""
+    posts = wp_related_posts(article)
+    if not posts:
+        return ""
+    items = "".join(
+        f'<li><a href="{html.escape(post["link"], quote=True)}">{html.escape(post["title"])}</a></li>'
+        for post in posts
+    )
+    return f'<p>More coverage from ChuckysCarnage on this topic:</p><ul>{items}</ul>'
+
+
+def build_keep_exploring_html(article: dict[str, Any]) -> str:
+    """A small block of internal links (home page and category archives)."""
+    base_url = os.getenv("WP_BASE_URL", "https://chuckyscarnage.tech.blog").strip().rstrip("/")
+    if not base_url:
+        return ""
+    links = [f'<li><a href="{html.escape(f"{base_url}/", quote=True)}">Latest posts</a></li>']
+    seen: set[str] = set()
+    for name in article.get("categories", []):
+        name = clean_text(str(name), max_len=40)
+        if not name:
+            continue
+        slug = slugify(name)
+        if not slug or slug in seen:
+            continue
+        seen.add(slug)
+        archive = f"{base_url}/category/{slug}/"
+        links.append(
+            f'<li><a href="{html.escape(archive, quote=True)}">'
+            f'{html.escape(clean_category_name(name))} archive</a></li>'
+        )
+    return '<p>Browse more stories on the site:</p><ul>' + "".join(links) + "</ul>"
 
 
 def build_why_it_matters(article: dict[str, Any]) -> str:
