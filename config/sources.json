@@ -480,8 +480,43 @@
       "url": "https://techcrunch.com/feed/",
       "category": "tech",
       "quality": 4,
-      "enabled": false,
-      "notes": "Disabled by default because its RSS terms are restrictive. Enable only after you are comfortable using it as a topic alert with attribution."
+      "enabled": true,
+      "notes": "Used as a topic alert with attribution (original synthesis only, never republished)."
+    },
+    {
+      "name": "VentureBeat AI",
+      "url": "https://venturebeat.com/category/ai/feed/",
+      "category": "ai",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Ars Technica AI",
+      "url": "https://arstechnica.com/ai/feed/",
+      "category": "ai",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "EurekAlert News Releases",
+      "url": "https://www.eurekalert.org/rss/news_releases.xml",
+      "category": "science",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Nature News",
+      "url": "https://www.nature.com/news.rss",
+      "category": "science",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "BBC Science & Environment",
+      "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+      "category": "science",
+      "quality": 4,
+      "enabled": true
     },
     {
       "name": "The Verge",
