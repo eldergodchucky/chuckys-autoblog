@@ -95,7 +95,7 @@ jobs:
       - name: Run independent rescue guard
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python src/wp_cloud_guard.py
+        run: python src/wp_cloud_guard.py --publish
 
       - name: Share new published posts to X
         continue-on-error: true
