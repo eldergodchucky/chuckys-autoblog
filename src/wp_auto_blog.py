@@ -4362,10 +4362,21 @@ def deliver_article(article: dict[str, Any], cluster: list[Item] | None = None) 
     if duplicate:
         return duplicate
     method = os.getenv("WP_POST_METHOD", POST_METHOD_EMAIL).strip().lower() or POST_METHOD_EMAIL
+    rest_ready = bool(os.getenv("WP_BASE_URL") and os.getenv("WP_USERNAME") and os.getenv("WP_APPLICATION_PASSWORD"))
     if method == POST_METHOD_EMAIL:
-        return send_article_by_email(article)
+        try:
+            return send_article_by_email(article)
+        except Exception as exc:
+            print(f"Email publishing failed ({type(exc).__name__}: {exc}); ")
+            if not rest_ready:
+                return {"status": "publish-failed", "id": None}
+            try:
+                return publish_to_wordpress(article)
+            except Exception as rest_exc:
+                print(f"REST fallback also failed ({type(rest_exc).__name__}: {rest_exc}); post not published this run.")
+                return {"status": "publish-failed", "id": None}
     if method == POST_METHOD_REST:
-        if os.getenv("WP_BASE_URL") and os.getenv("WP_USERNAME") and os.getenv("WP_APPLICATION_PASSWORD"):
+        if rest_ready:
             try:
                 return publish_to_wordpress(article)
             except Exception as exc:
@@ -4383,9 +4394,17 @@ def deliver_article(article: dict[str, Any], cluster: list[Item] | None = None) 
                     f"REST publishing failed ({type(exc).__name__}: {exc}); "
                     "falling back to Post-by-Email.",
                 )
-                return send_article_by_email(article)
+                try:
+                    return send_article_by_email(article)
+                except Exception as mail_exc:
+                    print(f"Email fallback also failed ({type(mail_exc).__name__}: {mail_exc}); post not published this run.")
+                    return {"status": "publish-failed", "id": None}
         print("REST publishing requested but credentials are missing; falling back to Post-by-Email.")
-        return send_article_by_email(article)
+        try:
+            return send_article_by_email(article)
+        except Exception as mail_exc:
+            print(f"Email publishing failed ({type(mail_exc).__name__}: {mail_exc}); post not published this run.")
+            return {"status": "publish-failed", "id": None}
     raise RuntimeError(f"Unsupported WP_POST_METHOD: {method}")
 
 def save_preview(article: dict[str, Any], cluster: list[Item]) -> Path:
@@ -4640,7 +4659,14 @@ def run_once(args: argparse.Namespace) -> int:
                 print(f"Dry-run preview written: {preview}")
                 continue
 
-            result = deliver_article(article, cluster)
+            try:
+                result = deliver_article(article, cluster)
+            except Exception as exc:
+                print(
+                    f"Delivery crashed with {type(exc).__name__}: {exc}; "
+                    "cluster marked as failed and run continues.",
+                )
+                result = {"status": "publish-failed", "id": None}
             raw_wp_id = result.get("id")
             wp_id = int(raw_wp_id) if raw_wp_id not in {None, ""} else None
             status = str(result.get("status", os.getenv("POST_STATUS", "draft")))

@@ -498,8 +498,8 @@
       "enabled": true
     },
     {
-      "name": "EurekAlert News Releases",
-      "url": "https://www.eurekalert.org/rss/news_releases.xml",
+      "name": "ScienceDaily Health & Medicine",
+      "url": "https://rss.sciencedaily.com/health_medicine.xml",
       "category": "science",
       "quality": 5,
       "enabled": true
