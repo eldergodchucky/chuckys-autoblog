@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 19,
-      "created_at": "2026-08-03T23:57:31Z",
+      "age_minutes": 44,
+      "created_at": "2026-08-04T02:57:51Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30864004672",
-      "id": 30864004672,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30873334374",
+      "id": 30873334374,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-04T00:16:43.352074+00:00",
+  "finished_at": "2026-08-04T03:42:50.954220+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 19,
-      "created_at": "2026-08-03T23:57:31Z",
+      "age_minutes": 44,
+      "created_at": "2026-08-04T02:57:51Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30864004672",
-      "id": 30864004672,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30873334374",
+      "id": 30873334374,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 2,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/04/parkinson-s-gene-linked-to-early-dysfunction-in-brain-cells/",
-  "latest_published_at": "2026-08-04T00:14:23+00:00",
-  "latest_title": "Parkinson\u2019s gene linked to early dysfunction in brain cells",
+  "latest_age_minutes": 6,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/04/child-friendly-music-player-uses-rfid/",
+  "latest_published_at": "2026-08-04T03:35:55+00:00",
+  "latest_title": "Child-Friendly Music Player Uses RFID",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
