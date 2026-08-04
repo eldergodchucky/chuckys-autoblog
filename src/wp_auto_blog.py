@@ -108,13 +108,15 @@ TEMPLATE_LEFTOVER_FRAGMENTS = {
 }
 
 POLITICS_TERMS = (
-    # Site policy: this blog covers science, technology, and health — no politics.
+    # Site policy: this blog covers science, technology, and health. Only stories
+    # whose HEADLINE is about major politics are excluded; a passing mention in
+    # the body (e.g. "senators praised the NASA budget") never blocks a post.
     "president", "presidential", "election", "electoral", "impeach",
-    "voters", "ballot", "congress", "senate", "senator", "parliament",
-    "prime minister", "chancellor", "democrat", "republican", "bipartisan",
-    "politician", "political party", "party leader", "geopolitical",
-    "geopolitics", "foreign policy", "embassy", "diplomatic ties",
-    "campaign trail", "sanctions",
+    "voters", "ballot", "congress", "congressional", "senate", "senator",
+    "parliament", "prime minister", "chancellor", "democrat", "republican",
+    "bipartisan", "politician", "political party", "party leader",
+    "referendum", "geopolitical", "geopolitics", "foreign policy",
+    "embassy", "diplomatic ties", "sanctions", "tariff",
 )
 
 MAX_TITLE_REPETITIONS = 2
@@ -3841,9 +3843,9 @@ def pre_publish_checks(article: dict[str, Any], cluster: list[Item] | None = Non
         failures.append("no concrete fact (number, name, price) drawn from the source")
 
     lowered = plain.lower()
-    politics_hits = [term for term in POLITICS_TERMS if term in lowered or term in title.lower()]
+    politics_hits = [term for term in POLITICS_TERMS if term in title.lower()]
     if politics_hits:
-        failures.append(f"politics coverage excluded by site policy: '{politics_hits[0]}'")
+        failures.append(f"major political news excluded by site policy: '{politics_hits[0]}'")
 
     for phrase in FILLER_PHRASES:
         if phrase in lowered:

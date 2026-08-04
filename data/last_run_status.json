@@ -1,24 +1,16 @@
 {
-  "dry_run": false,
-  "feed_warnings": 9,
-  "feeds": 38,
-  "fetched": 1872,
-  "finished_at": "2026-08-03T07:14:41.990478+00:00",
-  "inserted": 1,
-  "message": "Published 1 post(s).",
-  "posts": [
-    {
-      "categories": [
-        "Space",
-        "Science"
-      ],
-      "sources": [
-        "NASA Science"
-      ],
-      "status": "publish",
-      "title": "NASA to Host Florida Event Celebrating American Air",
-      "wp_id": 8245
-    }
+  "dry_run": true,
+  "feed_warnings": 8,
+  "feeds": 53,
+  "fetched": 2327,
+  "finished_at": "2026-08-04T17:22:55.721493+00:00",
+  "inserted": 4,
+  "message": "Dry run generated 4 preview file(s).",
+  "previews": [
+    "C:\\Users\\ELDERCHUCKY\\Documents\\Codex\\2026-05-12\\so-i-wanna-automate-my-wordpress\\out\\20260804-172136-cmf-announces-its-first-pair-of-open-ear-earbuds-for-under-100.html",
+    "C:\\Users\\ELDERCHUCKY\\Documents\\Codex\\2026-05-12\\so-i-wanna-automate-my-wordpress\\out\\20260804-172203-bigger-displays-rumored-for-next-year-s-iphone-models.html",
+    "C:\\Users\\ELDERCHUCKY\\Documents\\Codex\\2026-05-12\\so-i-wanna-automate-my-wordpress\\out\\20260804-172213-nothing-cmf-is-launching-its-first-open-earbuds.html",
+    "C:\\Users\\ELDERCHUCKY\\Documents\\Codex\\2026-05-12\\so-i-wanna-automate-my-wordpress\\out\\20260804-172255-t-mobile-s-last-outage-may-net-you-some-compensation.html"
   ],
-  "state": "published"
+  "state": "dry_run_ok"
 }

@@ -1314,13 +1314,23 @@ class PublishGateTests(unittest.TestCase):
         self.assertEqual(wp_auto_blog.coarse_category_key("Tech Advances"), "tech")
         self.assertEqual(wp_auto_blog.coarse_category_key("Gadgets"), "gadgets")
 
-    def test_politics_article_blocked_by_gate(self) -> None:
+    def test_major_political_news_blocked_by_gate(self) -> None:
         article = self._article(
-            html=self._clean_body()
-            + "<p>The president and congress remain split on the budget.</p>"
+            title="Election day arrives as voters head to the polls",
+            html=self._clean_body(),
         )
         failures = wp_auto_blog.pre_publish_checks(article)
-        self.assertTrue(any("politics coverage excluded" in failure for failure in failures), failures)
+        self.assertTrue(any("major political news excluded" in failure for failure in failures), failures)
+
+    def test_politics_word_in_body_not_blocked(self) -> None:
+        # A passing mention of politics in the body is fine; only headlines
+        # about major political news are excluded.
+        article = self._article(
+            html=self._clean_body()
+            + "<p>The president and congress remain split on the budget, but research funding is unaffected.</p>"
+        )
+        failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertFalse(any("political" in failure for failure in failures), failures)
 
     def test_clean_article_not_blocked_by_politics_gate(self) -> None:
         article = self._article()
