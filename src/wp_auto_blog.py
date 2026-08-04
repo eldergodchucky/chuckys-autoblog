@@ -50,7 +50,7 @@ HERO_IMAGE_PLACEHOLDER = "__HERO_IMAGE_SRC__"
 
 MIN_ARTICLE_WORDS = 350
 MIN_SUBHEADINGS = 3
-MAX_TAGS = 5
+MAX_TAGS = 7
 
 FILLER_PHRASES = {
     "this is worth watching",
@@ -1074,6 +1074,11 @@ BRAND_CASING = {
     "youtube": "YouTube",
     "spotify": "Spotify",
     "netflix": "Netflix",
+    "ev": "EV",
+    "jwst": "JWST",
+    "iss": "ISS",
+    "5g": "5G",
+    "wifi": "Wi-Fi",
 }
 
 
@@ -1103,25 +1108,77 @@ JUNK_TAG_TOKENS = {
     "researchers", "scientist", "scientists", "team", "groups", "group", "platform", "feature",
     "features", "offer", "offers", "introduce", "introduces", "launch", "launches", "release",
     "releases", "update", "updates", "version", "biggest", "largest", "small", "large", "better",
-    "best", "newer", "older", "recent", "recently", "latest",
+    "newer", "older", "recent", "recently", "latest",
+    # Verb forms and common filler words that frequently slip past the list above.
+    "added", "adds", "adding", "allows", "allow", "allowing", "choosing", "choose", "chose", "chosen",
+    "collect", "collects", "collecting", "build", "builds", "built", "building", "bring", "brings",
+    "bringing", "keep", "keeps", "keeping", "promise", "promises", "color", "colors", "option",
+    "options", "works", "working", "worked", "shows", "shown", "show", "showing", "goes", "going",
+    "went", "gone", "set", "sets", "setting", "look", "looks", "looking", "start", "starts",
+    "starting", "started", "begin", "begins", "beginning", "become", "becomes", "became", "call",
+    "calls", "calling", "give", "gives", "giving", "given", "put", "puts", "putting", "see", "sees",
+    "seen", "saw", "help", "helps", "helping", "helped", "support", "supports", "supporting",
+    "supported", "expect", "expects", "expecting", "expected", "plan", "plans", "planning",
+    "planned", "aim", "aims", "aiming", "aimed", "push", "pushes", "pushing", "pushed", "hit",
+    "hits", "hitting", "beat", "beats", "win", "wins", "winning", "won", "tops", "top", "overall",
+    "includes", "include", "including", "included", "adds", "ships", "ship", "shipping", "shipped",
+    "sold", "sells", "sell", "selling", "buy", "buys", "buying", "bought", "pay", "pays", "paying",
+    "paid", "cost", "costs", "costing", "price", "prices", "pricing", "reach", "reaches", "reached",
+    "reachable", "stay", "stays", "staying", "remain", "remains", "remaining", "turn", "turns",
+    "turning", "turned", "move", "moves", "moving", "moved", "close", "closes", "closing", "closed",
+    "open", "opens", "opening", "opened", "run", "runs", "running", "ran", "try", "tries", "trying",
+    "tried", "appear", "appears", "appearing", "appeared", "seems", "seem", "seemed", "likely",
+    "unlikely", "possible", "possible", "available", "availability", "specific", "various", "certain",
+    "several", "enough", "well", "good", "great", "little", "lot", "lots", "few", "many", "much",
+    "such", "own", "other", "others", "same", "different", "different", "between", "among", "since",
+    "though", "although", "however", "therefore", "indeed", "often", "usually", "sometimes", "always",
+    "never", "ever", "already", "still", "yet", "also", "too", "very", "quite", "pretty", "really",
+    "two", "three", "four", "five", "one", "single", "double", "first", "second", "third",
+    "everything", "everyone", "anything", "anyone", "nothing", "something", "someone",
+    "video", "videos", "photo", "photos", "image", "images", "pictures", "picture", "detail",
+    "details", "info", "information", "content", "posts", "post", "blog", "blogs", "article",
+    "articles", "story", "stories", "headline", "headlines", "announcement", "announcements",
+    "comment", "comments", "tweet", "tweets", "thread", "threads", "read", "reads", "reading",
+    "writing", "writes", "wrote", "listen", "listens", "watch", "watches", "watching", "check",
+    "checks", "checking", "checked",
+    # Weak descriptors and leftover adverbs that are not useful tags.
+    "finally", "final", "early", "late", "soon", "quickly", "slowly", "easily", "simply", "simple",
+    "easy", "hard", "high", "low", "higher", "lower", "bigger", "smaller", "fast", "faster", "slow",
+    "newly", "currently", "previously", "officially", "actually", "basically", "probably", "possibly",
+    "generally", "typically", "mostly", "mainly", "nearly", "almost", "roughly", "approximately",
+    "around", "about", "approximately", "nice", "beautiful", "gorgeous", "amazing", "awesome",
+    "incredible", "impressive", "fantastic", "wonderful", "great", "cool", "neat", "nifty",
+    "interesting", "interesting", "popular", "powerful", "solid", "strong", "weak", "important",
+    "significant", "major", "minor", "key", "core", "extra", "full", "free", "paid", "cheap",
+    "expensive", "affordable", "premium", "budget", "entry", "basic", "advanced", "smart", "intelligent",
+    "fresh", "special", "unique", "custom", "standard", "default", "normal", "regular", "usual",
+    "typical", "common", "rare", "unusual", "weird", "strange", "odd", "fun", "funny", "crazy",
+    "wild", "random", "various", "multiple", "additional", "extra", "several", "couple", "few",
+    "certain", "particular", "specific", "individual", "separate", "separate", "single", "multiple",
 }
 
 
 def meaningful_tags(cluster: list[Item], categories: list[str], limit: int = MAX_TAGS) -> list[str]:
     """Relevance-ranked tags: frequent content words, filtered and capped at `limit`.
 
-    Excludes generic tokens, common English stop words, category names, and any tag
-    that would just repeat a category — so the pipeline never turns everyday words
-    into junk tags.
+    Title words are weighted more heavily than summary words so single-source
+    clusters still surface the story's actual subject instead of alphabetical
+    filler. Excludes generic tokens, common English stop words, category names,
+    and any tag that would just repeat a category.
     """
     counts: dict[str, int] = {}
     for item in cluster:
+        title_tokens = {
+            token
+            for token in re.findall(r"[a-z][a-z0-9]{2,}", str(item.title).lower())
+            if token not in STOPWORDS and len(token) > 3
+        }
         for token in tokens_for(item):
             if len(token) < 4 or token in JUNK_TAG_TOKENS or token in STOPWORDS:
                 continue
             if re.fullmatch(r"[\d.,%]+", token):
                 continue
-            counts[token] = counts.get(token, 0) + 1
+            counts[token] = counts.get(token, 0) + (3 if token in title_tokens else 1)
     ranked = sorted(counts.items(), key=lambda entry: (-entry[1], entry[0]))
     blocked = {category.strip().lower() for category in categories}
     tags: list[str] = []
@@ -1172,6 +1229,7 @@ CATEGORY_DISPLAY = {
     "software": "Software",
     "tutorials": "Tutorials",
     "hacks": "Hacks",
+    "tech news": "Tech News",
 }
 
 
@@ -1581,7 +1639,7 @@ def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> li
     signals = [
         ("health", 4, ("health", "medical", "medicine", "doctor", "hospital", "patient", "treatment", "disease", "virus", "vaccine", "clinical", "drug", "pharmaceutical", "nutrition", "fitness", "mental health", "wellness", "cancer", "diabetes", "heart", "blood pressure", "cholesterol", "obesity", "exercise", "diet", "supplement", "therapy", "symptom", "diagnosis", "cdc", "who", "nih", "fda", "harvard health", "mayo clinic", "webmd", "healthline")),
         ("security", 4, ("security", "breach", "malware", "ransomware", "password", "vulnerability", "exploit", "zero-day", "cyber", "phishing", "hacker", "hacking", "encryption", "data leak", "databreach", "attackers")),
-        ("space", 4, ("nasa", "mars", "moon", "galaxies", "seyfert", "exoplanet", "telescope", "astronomy", "astronomer", "astronomers", "spacecraft", "space station", "spacex", "rocket", "satellite", "orbit", "launch")),
+        ("space", 4, ("nasa", "mars", "moon", "galaxies", "seyfert", "exoplanet", "telescope", "astronomy", "astronomer", "astronomers", "spacecraft", "space station", "spacex", "rocket", "satellite", "orbit")),
         ("ai", 3, ("chatgpt", "openai", "artificial intelligence", "ai model", "llm", "machine learning", "neural network", "deep learning", "generative ai", "gpt", "claude", "gemini")),
         ("phones", 3, ("phone", "phones", "smartphone", "smartphones", "mobile", "foldable", "handset", "flagship")),
         ("android", 3, ("android", "pixel", "samsung", "oneplus", "xiaomi")),
@@ -1609,11 +1667,10 @@ def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> li
             inferred.append("science")
         return inferred[:3]
 
-    for item in cluster:
-        source_cat = str(item.source_category or "").strip().lower()
-        if source_cat and source_cat != "uncategorized" and source_cat not in inferred:
-            inferred.append(source_cat)
-    return inferred[:3] or ["tech"]
+    # No topic signal matched: fall back to a neutral general-tech category
+    # instead of inheriting the feed's own category (which would mislabel, e.g.,
+    # every MacRumors item as "apple" even when the story is unrelated).
+    return ["tech news"]
 
 
 def meta_image_from_page(url: str) -> str | None:
@@ -2459,7 +2516,13 @@ def build_context_paragraph(topic: str, categories: list[str], full_text: str) -
     )
 
 
-def full_article_sections(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
+def full_article_sections(
+    cluster: list[Item],
+    topic: str,
+    categories: list[str],
+    source_count: int,
+    pre_used_keys: set[str] | None = None,
+) -> str:
     """Build a long-form factual article body without formulaic section headings."""
     paragraphs: list[str] = []
     full_text = " ".join(f"{item.title} {item.summary}" for item in cluster)
@@ -2476,15 +2539,29 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
         )
 
     lead_source, lead_sentences = grouped[0]
-    opening = paragraphize_sentences(lead_sentences[:8], size=2, max_paragraphs=4)
+    used_keys: set[str] = set(pre_used_keys or ())
+
+    def claim(sentences: list[str]) -> list[str]:
+        claimed: list[str] = []
+        for sentence in sentences:
+            key = sentence_fingerprint(sentence)
+            if key in used_keys:
+                continue
+            used_keys.add(key)
+            claimed.append(sentence)
+        return claimed
+
+    # Opening leads with 2-3 distinct facts (not a full summary dump).
+    opening = paragraphize_sentences(claim(lead_sentences[:3]), size=1, max_paragraphs=3)
     for paragraph in opening:
         paragraphs.append(f"<p>{html.escape(paragraph)}</p>")
 
     for source_name, sentences in grouped:
         if source_name == lead_source:
-            remaining = sentences[8:]
+            remaining = sentences[3:]
         else:
             remaining = sentences
+        remaining = claim(remaining)
         for paragraph in paragraphize_sentences(remaining, size=4, max_paragraphs=6):
             paragraphs.append(f"<p>{html.escape(paragraph)}</p>")
 
@@ -2505,17 +2582,21 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
             health_ctx = ", ".join(list(dict.fromkeys(term.strip() for term in health_terms[:5])))
             paragraphs.append(f"<p>{html.escape(f'The source summaries describe methods or study design involving {health_ctx}.')}</p>")
 
-    combined_details = extract_combined_details(cluster)
+    combined_details = extract_combined_details(cluster, used_keys)
     if combined_details:
         paragraphs.append(f"<p>{html.escape(combined_details)}</p>")
 
     details_heading = "<h2>Known Details</h2>"
     detail_items = []
     for item in cluster[:6]:
-        if item.summary:
-            summary_text = clean_text(item.summary, max_len=220)
-            if summary_text and len(summary_text) > 18:
-                detail_items.append(summary_text)
+        if not item.summary:
+            continue
+        summary_text = clean_text(item.summary, max_len=220)
+        if len(summary_text) <= 18:
+            continue
+        fresh_sentences = claim(split_sentences(summary_text))
+        if fresh_sentences:
+            detail_items.append(" ".join(fresh_sentences))
     if detail_items:
         bullets = "".join(f"<li>{html.escape(detail)}</li>" for detail in detail_items[:6])
         paragraphs.append(f"{details_heading}<ul>{bullets}</ul>")
@@ -2556,8 +2637,10 @@ def extract_detailed_summary(summary: str) -> str:
     return '. '.join(detailed_sentences) if detailed_sentences else ""
 
 
-def extract_combined_details(cluster: list[Item]) -> str:
-    """Extract and combine factual details from all sources."""
+def extract_combined_details(cluster: list[Item], used_keys: set[str] | None = None) -> str:
+    """Extract and combine factual details from all sources, skipping any sentence
+    that has already appeared earlier in the article."""
+    used_keys = used_keys or set()
     all_sentences = []
     for item in cluster[:4]:
         if item.summary:
@@ -2570,9 +2653,12 @@ def extract_combined_details(cluster: list[Item]) -> str:
                 # Filter out analysis
                 if any(word in sentence.lower() for word in ['matters', 'important', 'significant', 'key', 'crucial', 'essential', 'represents', 'reflects', 'highlights', 'suggests that', 'indicates that', 'however', 'although', 'furthermore']):
                     continue
+                if sentence_fingerprint(sentence) in used_keys:
+                    continue
                 if sentence not in all_sentences:
                     all_sentences.append(sentence)
-    
+                    used_keys.add(sentence_fingerprint(sentence))
+
     return '. '.join(all_sentences[:8]) if all_sentences else ""
 
 
@@ -2679,9 +2765,52 @@ def get_watch_items_html(kind: str, categories: list[str], text: str) -> str:
     return "\n".join(f"<li>{html.escape(item)}</li>" for item in watch_items)
 
 
+MINOR_TITLE_WORDS = frozenset(
+    {
+        "a", "an", "and", "as", "at", "but", "by", "for", "from", "if", "in",
+        "into", "nor", "of", "on", "or", "over", "per", "so", "than", "that",
+        "the", "to", "up", "upon", "via", "vs", "with",
+    }
+)
+
+
+def headline_case(title: str) -> str:
+    """Normalize a headline to proper title case without mangling brands.
+
+    Significant words are capitalized; small function words stay lowercase
+    unless they are the first or last word or follow mid-title punctuation.
+    BRAND_CASING entries are restored verbatim, and words that already carry
+    internal capitalization or are all-caps acronyms are left untouched.
+    """
+    text = re.sub(r"\s+", " ", str(title or "").strip())
+    if not text:
+        return text
+    words = text.split()
+    for index, word in enumerate(words):
+        core = word.strip(".,:;!?\"'()[]-–—")
+        lower = core.lower()
+        if lower in BRAND_CASING:
+            words[index] = word.replace(core, BRAND_CASING[lower], 1)
+            continue
+        if not core:
+            continue
+        if core.isupper() and len(core) <= 6:
+            continue
+        if any(char.isupper() for char in core[1:]) or any(char.isdigit() for char in core):
+            continue
+        previous = words[index - 1] if index > 0 else ""
+        starts_segment = index == 0 or previous.rstrip(" \t")[-1:] in ".!?:;—–"
+        is_last = index == len(words) - 1
+        if starts_segment or is_last or lower not in MINOR_TITLE_WORDS:
+            words[index] = core.capitalize() + word[len(core):]
+        else:
+            words[index] = core.lower() + word[len(core):]
+    return " ".join(words)
+
+
 def enrich_article_for_publication(article: dict[str, Any]) -> dict[str, Any]:
     """Add editorial sections, metadata, and SEO-ready fields for publication."""
-    title = clean_text(str(article.get("title") or "Technology Explained Beyond the Headlines"), max_len=110)
+    title = headline_case(clean_text(str(article.get("title") or "Technology Explained Beyond the Headlines"), max_len=110))
     excerpt = clean_text(str(article.get("excerpt") or article.get("meta_description") or title), max_len=220)
     categories = [
         clean_text(str(value), max_len=40)
@@ -2794,8 +2923,6 @@ def build_chucky_analysis(article: dict[str, Any]) -> str:
     category = canonical_category(categories[0]) if categories else "tech"
     adjective = category.rstrip("s") if category.endswith("s") else category
     category_label = clean_category_name(categories[0]) if categories else "Tech"
-    tags = [clean_text(str(value), max_len=30) for value in article.get("tags", []) if str(value).strip()]
-    tag_phrase = ", ".join(tags[:3]) if tags else category_label
     facts = article.get("fact_sentences") or []
     source_count = int(article.get("source_count") or 0)
     source_names = [entry.get("name", "") for entry in article.get("source_links", []) if isinstance(entry, dict)]
@@ -2835,7 +2962,7 @@ def build_chucky_analysis(article: dict[str, Any]) -> str:
 
     paragraphs.append(
         f"Where I stay skeptical is the usual gap between announcement and reality. Follow-up releases, "
-        f"pricing, availability, and independent testing will decide whether {tag_phrase} keeps its promise. "
+        f"pricing, availability, and independent testing will decide whether this change keeps its promise. "
         "Until then, the smart move is to watch what real-world use actually shows."
     )
 
@@ -2991,11 +3118,15 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
     display_categories = [clean_category_name(value) for value in categories[:3]] or ["Tech"]
 
+    lede = build_lede(cluster, topic, categories, source_count)
+    # Sentences already stated in the lede must not reappear in the body sections.
+    pre_used_keys = {sentence_fingerprint(part) for part in split_sentences(lede)}
+
     body = f"""
 {image_block}
 [more]
-<p>{build_lede(cluster, topic, categories, source_count)}</p>
-{full_article_sections(cluster, topic, categories, source_count)}
+<p>{lede}</p>
+{full_article_sections(cluster, topic, categories, source_count, pre_used_keys)}
 {medical_disclaimer}
 """.strip()
 
@@ -3004,7 +3135,7 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
         "slug": slugify(topic),
         "excerpt": excerpt,
         "categories": display_categories,
-        "tags": meaningful_tags(cluster, display_categories, limit=5),
+        "tags": meaningful_tags(cluster, display_categories, limit=MAX_TAGS),
         "html": body,
         "hero_image_path": str(hero_path) if hero_path else "",
         "hero_image_alt": f"{title} illustration",

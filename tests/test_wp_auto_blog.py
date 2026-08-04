@@ -960,6 +960,32 @@ class FullArticleSectionsTests(unittest.TestCase):
             self.assertNotIn(tag.lower(), wp_auto_blog.JUNK_TAG_TOKENS)
             self.assertNotIn(tag.lower(), wp_auto_blog.STOPWORDS)
 
+    def test_headline_case_capitalizes_mid_title_without_brand_mangling(self) -> None:
+        self.assertEqual(
+            wp_auto_blog.headline_case("nasa, spacex advance wind tunnel tests for starship rocket"),
+            "NASA, SpaceX Advance Wind Tunnel Tests for Starship Rocket",
+        )
+        self.assertEqual(
+            wp_auto_blog.headline_case("porous 3d-printed feet cut quadruped robot power use"),
+            "Porous 3d-printed Feet Cut Quadruped Robot Power Use",
+        )
+        self.assertEqual(
+            wp_auto_blog.headline_case("smarter, not thicker: targeted cooling improves liquid-hydrogen tank insulation"),
+            "Smarter, Not Thicker: Targeted Cooling Improves Liquid-hydrogen Tank Insulation",
+        )
+        self.assertEqual(
+            wp_auto_blog.headline_case("china's ev market is booming. there's just one problem"),
+            "China's EV Market Is Booming. There's Just One Problem",
+        )
+        self.assertEqual(
+            wp_auto_blog.headline_case("chuckys analysis of the ai boom: what comes next"),
+            "Chuckys Analysis of the AI Boom: What Comes Next",
+        )
+        self.assertEqual(
+            wp_auto_blog.headline_case("a guide to the web for beginners"),
+            "A Guide to the Web for Beginners",
+        )
+
 
 class ParseFeedRdfTests(unittest.TestCase):
     def test_parse_feed_reads_namespaced_rdf_items(self) -> None:
