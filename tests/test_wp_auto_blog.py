@@ -1260,7 +1260,7 @@ class PublishGateTests(unittest.TestCase):
         sensor_items = wp_auto_blog.watch_item_phrases("health", ["health"], sensor_text)
         self.assertTrue(any("sensor or measurement" in item for item in sensor_items))
 
-    def test_tag_whitelist_restricts_tags(self) -> None:
+    def test_tag_whitelist_is_preferred_with_title_fallback(self) -> None:
         import logging
         logging.disable(logging.CRITICAL)
         cluster = [
@@ -1280,8 +1280,31 @@ class PublishGateTests(unittest.TestCase):
         with patch.dict(os.environ, {"TAG_WHITELIST": "science, health, research, compounds, disease"}, clear=False):
             tags = wp_auto_blog.meaningful_tags(cluster, ["science"], limit=5)
         self.assertLessEqual(len(tags), 5)
+        self.assertGreaterEqual(len(tags), 2)
+        self.assertIn("Compounds", tags)
+        self.assertIn("Disease", tags)
         for tag in tags:
-            self.assertIn(tag.lower(), {"science", "health", "research", "compounds", "disease"})
+            self.assertNotIn(tag.lower(), {"hidden", "reveal", "behind", "mechanisms"})
+
+    def test_default_tag_whitelist_tags_tech_story(self) -> None:
+        import logging
+        logging.disable(logging.CRITICAL)
+        item = Item(
+            uid="1",
+            source_name="Engadget",
+            source_url="https://example.com",
+            source_category="gadgets",
+            source_quality=4,
+            title="CMF Announces Its First Pair of Open-ear Earbuds for Under $100",
+            link="https://example.com/earbuds",
+            summary="The earbuds feature a 3-point clip structure, custom bass technology, and an app-controlled sound seal system.",
+            published_at=dt.datetime.now(dt.timezone.utc),
+            image_url=None,
+        )
+        with patch.dict(os.environ, {}, clear=False):
+            tags = wp_auto_blog.meaningful_tags([item], ["gadgets"], limit=5)
+        self.assertGreaterEqual(len(tags), 2)
+        self.assertIn("Earbuds", tags)
 
     def test_granular_category_names_mapping(self) -> None:
         self.assertEqual(

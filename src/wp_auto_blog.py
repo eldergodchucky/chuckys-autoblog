@@ -1175,6 +1175,32 @@ BRAND_CASING = {
 }
 
 
+DEFAULT_TAG_WHITELIST = {
+    # Science & health vocabulary
+    "science", "scientists", "research", "researchers", "study", "studies", "discovery", "discoveries",
+    "breakthrough", "experiment", "laboratory", "university", "journal", "findings", "evidence",
+    "biology", "chemistry", "physics", "genetics", "genome", "evolution", "climate", "energy",
+    "materials", "particles", "quantum", "medicine", "medical", "health", "disease", "diseases",
+    "treatment", "treatments", "therapy", "clinical", "trial", "trials", "drug", "drugs", "vaccine",
+    "vaccines", "patient", "patients", "hospital", "nutrition", "fitness", "wellness", "mental health",
+    "cancer", "diabetes", "heart", "brain", "sleep", "diet", "exercise", "obesity", "microbiome",
+    "aging", "dementia", "alzheimer", "anxiety", "depression", "infection", "immune", "antibiotics",
+    # Space
+    "space", "mars", "moon", "moons", "telescope", "telescopes", "astronomy", "astronaut", "astronauts",
+    "spacecraft", "rocket", "rockets", "satellite", "satellites", "orbit", "galaxy", "galaxies",
+    "exoplanet", "comet", "asteroid", "black hole", "solar", "mission", "launch", "esa", "universe",
+    # AI & software
+    "ai", "artificial intelligence", "machine learning", "neural network", "llm", "model", "models",
+    "robot", "robots", "robotics", "autonomous", "automation", "algorithm", "data", "dataset",
+    "software", "app", "apps", "developer", "developers", "api", "cloud", "computing", "database",
+    # Tech & hardware
+    "technology", "tech", "startup", "industry", "cybersecurity", "security", "privacy", "encryption",
+    "smartphone", "smartphones", "phones", "mobile", "gadgets", "earbuds", "wearable", "wearables",
+    "laptop", "chip", "chips", "processor", "battery", "display", "screen", "wireless", "charging",
+    "camera", "sensors", "semiconductor", "network", "internet", "5g", "6g", "hardware",
+}
+
+
 def clean_tag_name(tag: str) -> str:
     tag = tag.strip().lower()
     if tag in BRAND_CASING:
@@ -1233,7 +1259,8 @@ JUNK_TAG_TOKENS = {
     "articles", "story", "stories", "headline", "headlines", "announcement", "announcements",
     "comment", "comments", "tweet", "tweets", "thread", "threads", "read", "reads", "reading",
     "writing", "writes", "wrote", "listen", "listens", "watch", "watches", "watching", "check",
-    "checks", "checking", "checked",
+    "checks", "checking", "checked", "behind", "hidden", "reveal", "reveals", "revealed",
+    "found", "shows", "shown", "show",
     # Weak descriptors and leftover adverbs that are not useful tags.
     "finally", "final", "early", "late", "soon", "quickly", "slowly", "easily", "simply", "simple",
     "easy", "hard", "high", "low", "higher", "lower", "bigger", "smaller", "fast", "faster", "slow",
@@ -1260,21 +1287,25 @@ def meaningful_tags(cluster: list[Item], categories: list[str], limit: int = MAX
     and any tag that would just repeat a category.
 
     The result is additionally constrained to the TAG_WHITELIST when one is
-    configured (comma-separated names in env) plus known brand names, so single
-    common nouns like "compounds" or "hidden" never become tags.
+    configured (comma-separated names in env); otherwise a built-in default
+    whitelist of science/tech vocabulary applies, so single common nouns like
+    "compounds" or "hidden" never become tags. If the whitelist runs dry,
+    remaining slots are filled from title words so no story ships untagged.
     """
     whitelist = {
         clean_text(name, max_len=40).strip().lower()
-        for name in env_list("TAG_WHITELIST", "")
+        for name in (env_list("TAG_WHITELIST", "") or list(DEFAULT_TAG_WHITELIST))
         if name.strip()
     }
     counts: dict[str, int] = {}
+    title_tokens_all: set[str] = set()
     for item in cluster:
         title_tokens = {
             token
             for token in re.findall(r"[a-z][a-z0-9]{2,}", str(item.title).lower())
             if token not in STOPWORDS and len(token) > 3
         }
+        title_tokens_all |= title_tokens
         for token in tokens_for(item):
             if len(token) < 4 or token in JUNK_TAG_TOKENS or token in STOPWORDS:
                 continue
@@ -1284,14 +1315,21 @@ def meaningful_tags(cluster: list[Item], categories: list[str], limit: int = MAX
     ranked = sorted(counts.items(), key=lambda entry: (-entry[1], entry[0]))
     blocked = {category.strip().lower() for category in categories}
     tags: list[str] = []
+    fallback: list[str] = []
     for token, _count in ranked:
         if token in blocked or token in tags:
             continue
         if whitelist and token not in whitelist and token not in BRAND_CASING:
+            if token in title_tokens_all and len(fallback) < limit:
+                fallback.append(clean_tag_name(token))
             continue
         tags.append(clean_tag_name(token))
         if len(tags) >= limit:
             break
+    for tag in fallback:
+        if tag in tags or len(tags) >= limit:
+            continue
+        tags.append(tag)
     return tags
 
 
