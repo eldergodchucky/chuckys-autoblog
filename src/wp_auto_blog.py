@@ -2830,7 +2830,8 @@ def enrich_article_for_publication(article: dict[str, Any]) -> dict[str, Any]:
     body_html = str(article.get("html") or "")
 
     if "<section class=\"editorial-section\"" not in body_html:
-        section_markup = build_editorial_sections(article)
+        enriched_context = dict(article, title=title)
+        section_markup = build_editorial_sections(enriched_context)
         if section_markup:
             body_html = f"{body_html}\n" + "\n".join(section_markup)
 
@@ -2986,9 +2987,28 @@ def build_related_reading_html(article: dict[str, Any]) -> str:
     return f'<p>More coverage from ChuckysCarnage on this topic:</p><ul>{items}</ul>'
 
 
+def site_base_url() -> str:
+    """Return the human-facing blog URL, working with either credential style.
+
+    WP_SITE_URL is used when set. Otherwise WP_BASE_URL is used directly for
+    self-hosted installs, and for WordPress.com the public API base is converted
+    back into the friendly site URL (…/wp/v2/sites/chuckyscarnage.tech.blog →
+    https://chuckyscarnage.tech.blog).
+    """
+    raw = os.getenv("WP_SITE_URL", "").strip().rstrip("/")
+    if not raw:
+        raw = os.getenv("WP_BASE_URL", "").strip().rstrip("/")
+    if not raw:
+        return "https://chuckyscarnage.tech.blog"
+    match = re.search(r"/wp/v2/sites/([^/]+)", raw)
+    if match and "public-api.wordpress.com" in raw:
+        return f"https://{match.group(1)}"
+    return raw
+
+
 def build_keep_exploring_html(article: dict[str, Any]) -> str:
     """A small block of internal links (home page and category archives)."""
-    base_url = os.getenv("WP_BASE_URL", "https://chuckyscarnage.tech.blog").strip().rstrip("/")
+    base_url = site_base_url()
     if not base_url:
         return ""
     links = [f'<li><a href="{html.escape(f"{base_url}/", quote=True)}">Latest posts</a></li>']
