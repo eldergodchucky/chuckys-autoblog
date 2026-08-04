@@ -4101,6 +4101,9 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
         "excerpt": article.get("excerpt", ""),
         "content": content_html,
         "status": post_status(),
+        # Accepted by the wp.com REST API even on the free plan; Jetpack emits
+        # the matching schema JSON-LD in the page head when the plan supports it.
+        "meta": {"jetpack_seo_schema_type": "article"},
     }
     pm = publicize_message(article)
     if pm is None:
