@@ -5,6 +5,7 @@ import sys
 import tempfile
 from pathlib import Path
 import unittest
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
@@ -104,7 +105,12 @@ class FullArticleSectionsTests(unittest.TestCase):
         self.assertIn("<h2>Keep Exploring</h2>", sections)
         self.assertIn('<a href="https://chuckyscarnage.tech.blog/category/science/">Science archive</a>', sections)
         self.assertIn("<h2>About the Author</h2>", sections)
-        self.assertIn("ChuckysCarnage is a technology news site", sections)
+        self.assertIn("<h2>Why This Matters</h2>", sections)
+        self.assertNotIn("matters because it signals a real change in how", sections)
+        self.assertNotIn("This one deserves a second look", sections)
+        self.assertNotIn("My bottom line", sections)
+        self.assertNotIn("Where I stay skeptical", sections)
+        self.assertNotIn("a real development in Science, not just a rumor", sections)
         self.assertNotIn("<h2>Related Reading</h2>", sections)
 
     def test_related_reading_uses_rest_posts_sharing_a_category(self) -> None:
@@ -112,9 +118,9 @@ class FullArticleSectionsTests(unittest.TestCase):
 
         article = {
             "title": "Solid-state batteries double electric car range",
-            "slug": "solid-state-batteries",
+            "slug": "solid-state-batteries-double-ev-range",
             "categories": ["Science"],
-            "tags": ["Battery"],
+            "tags": ["Battery", "EV"],
             "html": "<p>Body.</p>",
         }
 
@@ -124,18 +130,20 @@ class FullArticleSectionsTests(unittest.TestCase):
             if path.startswith("categories?"):
                 return fake_terms
             return [
-                {"id": 100, "title": {"rendered": "Older battery breakthrough explained"}, "link": "https://example.test/older"},
-                {"id": 101, "title": {"rendered": "Solid-state batteries double EV range"}, "link": "https://example.test/solid-state-batteries"},
-                {"id": 102, "title": {"rendered": "Grid operators study fast charging"}, "link": "https://example.test/grid"},
+                {"id": 100, "title": {"rendered": "Older battery breakthrough explained"}, "link": "https://example.test/older-battery-breakthrough"},
+                {"id": 101, "title": {"rendered": "Solid-state batteries double EV range"}, "link": "https://example.test/solid-state-batteries-double-ev-range"},
+                {"id": 102, "title": {"rendered": "Grid operators study fast charging"}, "link": "https://example.test/grid-fast-charging"},
             ]
 
         with patch("wp_auto_blog.wp_request", side_effect=fake_wp_request):
             posts = wp_auto_blog.wp_related_posts(article, limit=2)
             html = wp_auto_blog.build_related_reading_html(article)
 
-        self.assertEqual([post["title"] for post in posts], ["Older battery breakthrough explained", "Grid operators study fast charging"])
-        self.assertIn('href="https://example.test/older"', html)
-        self.assertNotIn("solid-state-batteries", html)
+        self.assertEqual([post["title"] for post in posts], ["Older battery breakthrough explained"])
+        self.assertIn('href="https://example.test/older-battery-breakthrough"', html)
+        # The near-identical self-post and the unrelated grid story must not appear.
+        self.assertNotIn("solid-state-batteries-double-ev-range", html)
+        self.assertNotIn("fast-charging", html)
 
     def test_related_reading_returns_empty_when_api_unavailable(self) -> None:
         from unittest.mock import patch
@@ -1094,6 +1102,139 @@ class ParseFeedRdfTests(unittest.TestCase):
         self.assertEqual(items[0].link, "https://example.org/breakthrough")
         self.assertEqual(items[0].source_category, "health")
         self.assertIsNotNone(items[0].published_at)
+
+
+class PublishGateTests(unittest.TestCase):
+    def _clean_body(self) -> str:
+        return (
+            "<p>MIT researchers reported that a new ceramic electrolyte lets a solid-state "
+            "cell recharge to 80 percent capacity in roughly nine minutes, and the prototype "
+            "held more than 90 percent of its original capacity after 1,200 charge cycles.</p>"
+            "<p>The battery cell uses a sulfide-based electrolyte that stays stable at room "
+            "temperature, which removes the need for the bulky cooling systems found in "
+            "earlier prototypes. The team published its results in a peer-reviewed journal "
+            "after two years of refinement.</p>"
+            "<p>Independent labs have not yet repeated the measurement, and the researchers "
+            "note that their test cells were roughly the size of a credit card, so the "
+            "nine-minute charging figure should be read as a lab result rather than a "
+            "promise about production vehicles.</p>"
+            "<h2>Why This Matters</h2>"
+            "<p>Automakers and phone makers both depend on lithium-ion packs that degrade "
+            "over time and charge slowly. A solid-state pack that survives 1,200 cycles "
+            "without significant loss could extend the useful life of electric vehicles and "
+            "reduce the cost of replacing batteries every few years.</p>"
+            "<p>Manufacturing is the main obstacle. The sulfide electrolyte requires a dry "
+            "assembly line, and the company backing the research has not shared a timeline "
+            "for scaling production beyond laboratory cells.</p>"
+            "<h2>Chucky's Analysis</h2>"
+            "<p>The most convincing part of the announcement is the cycle data, because "
+            "capacity retention over 1,200 cycles is measured, not predicted. The charging "
+            "speed claim is impressive but was tested only on small pouch cells, and large "
+            "packs generate heat that changes how fast they can charge.</p>"
+            "<p>Past solid-state announcements from other labs have stumbled at the scale-up "
+            "step, so the honest expectation is that commercial cells arrive after several "
+            "more years of engineering, not months.</p>"
+            "<h2>Key Takeaways</h2>"
+            "<p>The prototype keeps 90 percent capacity after 1,200 cycles. Recharging to 80 "
+            "percent takes about nine minutes in the lab. Production remains years away "
+            "because dry assembly lines are expensive and untested at scale.</p>"
+            "<h2>Conclusion</h2>"
+            "<p>The result strengthens the case that solid-state batteries are viable, but "
+            "the gap between a lab cell and a factory line remains the deciding factor.</p>"
+            "<h2>Keep Exploring</h2>"
+            "<p>Related coverage of battery research and charging infrastructure appears in "
+            "the Science and Technology sections.</p>"
+        )
+
+    def _article(self, **overrides: object) -> dict[str, object]:
+        article: dict[str, object] = {
+            "title": "Solid-state batteries double electric car range",
+            "slug": "solid-state-batteries-double-ev-range",
+            "excerpt": "A short excerpt.",
+            "categories": ["Science"],
+            "tags": ["Battery"],
+            "html": self._clean_body(),
+            "fact_sentences": [
+                "MIT researchers built a solid-state battery that holds 90 percent capacity after 1,200 charge cycles."
+            ],
+            "source_links": [{"name": "MIT", "url": "https://example.com/mit"}],
+        }
+        article.update(overrides)
+        return article
+
+    def test_clean_article_passes_gates(self) -> None:
+        with patch.dict(os.environ, {"HERO_IMAGE_MODE": "off"}, clear=False):
+            failures = wp_auto_blog.pre_publish_checks(self._article())
+        self.assertEqual(failures, [])
+
+    def test_meta_voice_phrase_blocked(self) -> None:
+        article = self._article(html=self._clean_body() + "<p>This post walks through what changed.</p>")
+        failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertTrue(any("meta-voice phrase" in failure for failure in failures))
+
+    def test_template_leftover_blocked(self) -> None:
+        article = self._article(
+            html=self._clean_body()
+            + "<p>privacy terms covering health and biometric data</p>"
+        )
+        failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertTrue(any("template placeholder" in failure for failure in failures))
+
+    def test_truncation_artifact_blocked(self) -> None:
+        article = self._article(html=self._clean_body() + "<p>&#8230;activates the entire</p>")
+        failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertTrue(any("truncation artifact" in failure for failure in failures))
+
+    def test_duplicate_sentence_blocked(self) -> None:
+        sentence = "Vanderbilt researchers created the first selective compound that inhibits TAOK-1."
+        article = self._article(html=f"<p>{sentence}</p><p>{sentence}</p>")
+        failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertTrue(any("duplicate sentence" in failure for failure in failures), failures)
+
+    def test_title_repetition_blocked(self) -> None:
+        title = "Solid-state batteries double electric car range"
+        article = self._article(
+            html=(
+                f"<p>{title}.</p><p>{title}.</p><p>{title}.</p>"
+                "<h2>Why This Matters</h2><p>Body text.</p>"
+            )
+        )
+        failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertTrue(any("title repeated" in failure for failure in failures), failures)
+
+    def test_watch_items_are_topic_gated(self) -> None:
+        health_text = "Researchers report a promising early trial of a new therapy."
+        items = wp_auto_blog.watch_item_phrases("health", ["health"], health_text)
+        self.assertIn("peer review, replication, or clinical follow-up evidence", items)
+        self.assertNotIn("privacy terms covering health and biometric data", items)
+        self.assertNotIn("subscription pricing", items)
+
+        sensor_text = "A new wearable sensor tracks heart rate with a mobile app."
+        sensor_items = wp_auto_blog.watch_item_phrases("health", ["health"], sensor_text)
+        self.assertTrue(any("sensor or measurement" in item for item in sensor_items))
+
+    def test_tag_whitelist_restricts_tags(self) -> None:
+        import logging
+        logging.disable(logging.CRITICAL)
+        cluster = [
+            Item(
+                uid="1",
+                source_name="Test Source",
+                source_url="https://example.com",
+                source_category="science",
+                source_quality=5,
+                title="Researchers reveal hidden compounds behind a new disease driver",
+                link="https://example.com/post",
+                summary="Compounds, disease drivers, and hidden mechanisms are reported in the study.",
+                published_at=dt.datetime.now(dt.timezone.utc),
+                image_url=None,
+            )
+        ]
+        with patch.dict(os.environ, {"TAG_WHITELIST": "science, health, research, compounds, disease"}, clear=False):
+            tags = wp_auto_blog.meaningful_tags(cluster, ["science"], limit=5)
+        self.assertLessEqual(len(tags), 5)
+        for tag in tags:
+            self.assertIn(tag.lower(), {"science", "health", "research", "compounds", "disease"})
 
 
 if __name__ == "__main__":

@@ -76,6 +76,81 @@ FILLER_PHRASES = {
     "the broader point is that the topic is worth watching",
 }
 
+META_VOICE_PHRASES = {
+    "this post walks through",
+    "this article walks through",
+    "this post covers",
+    "this article covers",
+    "this post explains",
+    "this article explains",
+    "is reporting on",
+    "is reporting that",
+    "this post pulls the reporting together",
+    "this post distills",
+    "we walk through what changed",
+    "in this post, we",
+    "in this article, we",
+    "here's what this post",
+    "this post is about",
+    "the rest of this article",
+}
+
+TEMPLATE_LEFTOVER_FRAGMENTS = {
+    "independent accuracy or validation data",
+    "privacy terms covering health and biometric data",
+    "subscription pricing, device compatibility",
+    "clear guidance about when users should consult",
+    "official confirmation, changelogs, launch notes",
+    "which experiments nasa highlights",
+    "whether riders and pedestrians trust",
+    "clear explanations of limits, uncertainty",
+    "watch the coverage tagged",
+}
+
+MAX_TITLE_REPETITIONS = 2
+
+
+def title_repetition_count(plain_text: str, title: str) -> int:
+    """Count how many times the title (or its normalized core) appears in the body."""
+    normalized = normalize_title(title)
+    if len(normalized) < 8:
+        return 0
+    core_words = normalized.split()
+    body_lower = plain_text.lower()
+    count = 0
+    # Full-title matches first.
+    if normalized in body_lower:
+        count += body_lower.count(normalized)
+    # Count 4+ word fragments of the title to catch lightly reworded repeats.
+    if len(core_words) >= 5:
+        fragments = [" ".join(core_words[i : i + 4]) for i in range(len(core_words) - 3)]
+        seen_fragments: set[str] = set()
+        for fragment in fragments:
+            if fragment in seen_fragments:
+                continue
+            seen_fragments.add(fragment)
+            count += body_lower.count(fragment)
+    return count
+
+
+def duplicate_sentences(plain_text: str, min_len: int = 40) -> list[str]:
+    """Return sentences that appear (near-)identically more than once in the body."""
+    sentences = [
+        sentence.strip()
+        for sentence in re.split(r"(?<=[.!?])\s+", plain_text)
+        if len(sentence.strip()) >= min_len
+    ]
+    seen: dict[str, int] = {}
+    dupes: list[str] = []
+    for sentence in sentences:
+        key = sentence_fingerprint(sentence)
+        if key in seen:
+            if sentence not in dupes and sentence[:120] not in dupes:
+                dupes.append(sentence)
+        else:
+            seen[key] = 1
+    return dupes
+
 STOPWORDS = {
     "about",
     "after",
@@ -352,7 +427,13 @@ def clean_text(value: str, max_len: int = 500) -> str:
     value = re.sub(r"\s+", " ", value).strip()
     if len(value) <= max_len:
         return value
-    return value[: max_len - 1].rsplit(" ", 1)[0] + "..."
+    cut = value[:max_len]
+    boundary = max(cut.rfind(". "), cut.rfind("! "), cut.rfind("? "), cut.rfind(".  "))
+    if boundary > int(max_len * 0.6):
+        cut = cut[: boundary + 1]
+    else:
+        cut = cut.rsplit(" ", 1)[0]
+    return cut.strip()
 
 
 def canonical_url(url: str) -> str:
@@ -1165,7 +1246,16 @@ def meaningful_tags(cluster: list[Item], categories: list[str], limit: int = MAX
     clusters still surface the story's actual subject instead of alphabetical
     filler. Excludes generic tokens, common English stop words, category names,
     and any tag that would just repeat a category.
+
+    The result is additionally constrained to the TAG_WHITELIST when one is
+    configured (comma-separated names in env) plus known brand names, so single
+    common nouns like "compounds" or "hidden" never become tags.
     """
+    whitelist = {
+        clean_text(name, max_len=40).strip().lower()
+        for name in env_list("TAG_WHITELIST", "")
+        if name.strip()
+    }
     counts: dict[str, int] = {}
     for item in cluster:
         title_tokens = {
@@ -1184,6 +1274,8 @@ def meaningful_tags(cluster: list[Item], categories: list[str], limit: int = MAX
     tags: list[str] = []
     for token, _count in ranked:
         if token in blocked or token in tags:
+            continue
+        if whitelist and token not in whitelist and token not in BRAND_CASING:
             continue
         tags.append(clean_tag_name(token))
         if len(tags) >= limit:
@@ -1632,9 +1724,7 @@ def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> li
             return False
         if " " in clean:
             return clean in haystack
-        if len(clean) <= 4:
-            return re.search(rf"\b{re.escape(clean)}\b", haystack) is not None
-        return clean in haystack
+        return re.search(rf"\b{re.escape(clean)}s?\b", haystack) is not None
 
     signals = [
         ("health", 4, ("health", "medical", "medicine", "doctor", "hospital", "patient", "treatment", "disease", "virus", "vaccine", "clinical", "drug", "pharmaceutical", "nutrition", "fitness", "mental health", "wellness", "cancer", "diabetes", "heart", "blood pressure", "cholesterol", "obesity", "exercise", "diet", "supplement", "therapy", "symptom", "diagnosis", "cdc", "who", "nih", "fda", "harvard health", "mayo clinic", "webmd", "healthline")),
@@ -1902,10 +1992,10 @@ def has_term(text: str, terms: tuple[str, ...]) -> bool:
         clean = term.strip().lower()
         if not clean:
             continue
-        if " " in clean or len(clean) <= 4:
+        if " " in clean:
             if re.search(rf"\b{re.escape(clean)}\b", text):
                 return True
-        elif clean in text:
+        elif re.search(rf"\b{re.escape(clean)}s?\b", text):
             return True
     return False
 
@@ -2407,6 +2497,24 @@ def sentence_fingerprint(sentence: str) -> str:
     return re.sub(r"[^a-z0-9]", "", sentence.lower())[:96]
 
 
+def is_feed_boilerplate(sentence: str, item: Item | None = None) -> bool:
+    """True when a sentence is feed boilerplate, not real reporting content.
+
+    Catches the 'The post X appeared first on Y' template many feeds append to
+    every summary, plus sentences that are only the headline itself.
+    """
+    lowered = sentence.strip().lower()
+    if re.search(r"\bappeared first on\b", lowered):
+        return True
+    if re.search(r"\bthe post\b.*\bfirst on\b", lowered):
+        return True
+    if item and item.title:
+        title_fp = sentence_fingerprint(item.title)
+        if title_fp and title_fp == sentence_fingerprint(sentence):
+            return True
+    return False
+
+
 def is_factual_sentence(sentence: str, min_len: int = 26) -> bool:
     cleaned = sentence.strip().strip(".")
     if len(cleaned) < min_len:
@@ -2448,6 +2556,8 @@ def collect_source_sentences(cluster: list[Item], max_per_source: int = 22) -> l
         for candidate in candidates:
             sentence = normalize_sentence(candidate)
             if not is_factual_sentence(sentence):
+                continue
+            if is_feed_boilerplate(sentence, item):
                 continue
             key = sentence_fingerprint(sentence)
             if key in seen:
@@ -2594,7 +2704,12 @@ def full_article_sections(
         summary_text = clean_text(item.summary, max_len=220)
         if len(summary_text) <= 18:
             continue
-        fresh_sentences = claim(split_sentences(summary_text))
+        fresh_sentences = [
+            sentence
+            for sentence in split_sentences(summary_text)
+            if not is_feed_boilerplate(sentence, item)
+        ]
+        fresh_sentences = claim(fresh_sentences)
         if fresh_sentences:
             detail_items.append(" ".join(fresh_sentences))
     if detail_items:
@@ -2603,7 +2718,9 @@ def full_article_sections(
 
     watch_items_html = get_watch_items_html(kind, categories, full_text)
     if watch_items_html:
-        paragraphs.append(f"<p>{html.escape('The strongest next step is to watch for follow-up evidence, policy changes, pricing shifts, or independent testing that could change the first impression.')}</p><ul>{watch_items_html}</ul>")
+        paragraphs.append(
+            f"<p>{html.escape('What to watch:')}</p><ul>{watch_items_html}</ul>"
+        )
 
     source_names = list(dict.fromkeys(item.source_name for item in cluster))
     if len(source_names) > 1:
@@ -2612,7 +2729,10 @@ def full_article_sections(
     body = "\n".join(paragraph for paragraph in paragraphs if paragraph.strip())
     if body.count("<p>") < 4 or len(re.sub(r"<[^>]+>", " ", body).split()) < 90:
         body = body + "\n<p>" + html.escape(
-            "The story is still early and could change as more details, evidence, and independent reactions arrive, which is why the most useful response is to track updates before treating the headline as the final word."
+            "The reporting is early and may change as more details and independent reactions arrive. "
+            "The linked sources above are the place to check for updates, and the sections below "
+            "summarize what the available coverage says so far. Readers should treat the current "
+            "details as provisional until additional outlets weigh in."
         ) + "</p>"
     return body
 
@@ -2649,6 +2769,8 @@ def extract_combined_details(cluster: list[Item], used_keys: set[str] | None = N
             for sentence in sentences:
                 sentence = sentence.strip()
                 if len(sentence) < 25:
+                    continue
+                if is_feed_boilerplate(sentence, item):
                     continue
                 # Filter out analysis
                 if any(word in sentence.lower() for word in ['matters', 'important', 'significant', 'key', 'crucial', 'essential', 'represents', 'reflects', 'highlights', 'suggests that', 'indicates that', 'however', 'although', 'furthermore']):
@@ -2725,44 +2847,69 @@ def get_simple_watch_items(kind: str, categories: list[str], text: str) -> str:
     return "\n".join(f"<li>{html.escape(item)}</li>" for item in items)
 
 
-def get_watch_items_html(kind: str, categories: list[str], text: str) -> str:
-    """Helper function to get watch items as HTML."""
-    if kind == "health" or "health" in categories:
-        watch_items = [
-            "independent accuracy or validation data for the sensor",
-            "privacy terms covering health and biometric data",
-            "subscription pricing, device compatibility, and regional availability",
-            "clear guidance about when users should consult a healthcare professional",
-        ]
-    elif has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
-        watch_items = [
+def watch_item_phrases(kind: str, categories: list[str], text: str) -> list[str]:
+    """Topic-gated follow-up watch items as plain phrases.
+
+    A phrase is emitted only when the story text actually mentions the subject
+    it refers to (or when it is universally true for the story kind), so no
+    generic placeholder list can leak into an unrelated post.
+    """
+    lowered = text.lower()
+    is_health = kind == "health" or "health" in categories
+    items: list[str] = []
+
+    if is_health:
+        if has_term(lowered, ("sensor", "wearable", "monitor", "device", "app", "measure")):
+            items.append("independent accuracy or validation data for the sensor or measurement")
+            items.append("clear guidance about when users should consult a healthcare professional")
+        if has_term(lowered, ("privacy", "biometric", "data protection", "consent")):
+            items.append("privacy terms covering health and biometric data")
+        if has_term(lowered, ("price", "pricing", "subscription", "cost", "insurance")):
+            items.append("subscription pricing, device compatibility, and regional availability")
+        items.append("peer review, replication, or clinical follow-up evidence")
+        return items
+
+    if has_term(lowered, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
+        return [
             "whether crash and intervention data improves over time",
             "how often human safety monitors are involved",
             "what regulators require before wider deployment",
-            "whether riders and pedestrians trust the service in ordinary traffic",
         ]
-    elif "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply")):
-        watch_items = [
-            "which experiments NASA highlights after the payload is unpacked",
-            "early research updates from the space station crew or mission teams",
-            "whether the work supports medicine, materials, robotics, life-support, or exploration",
-            "follow-up results that show what changed after testing in orbit",
+
+    if "space" in categories or has_term(lowered, ("spacex", "dragon", "space station", "nasa", "resupply", "launch", "orbit", "satellite")):
+        return [
+            "scientific results from the mission",
+            "follow-up research publications",
+            "practical applications on Earth",
         ]
-    elif "science" in categories or has_term(text, ("research", "study", "scientists", "experiment", "breakthrough", "discovery", "residual stress")):
-        watch_items = [
+
+    if "science" in categories or has_term(lowered, ("research", "study", "scientists", "experiment", "breakthrough", "discovery")):
+        return [
             "peer review, replication, or follow-up research from other teams",
             "whether the method moves from lab testing into real-world systems",
-            "which industries, tools, or public problems the work could eventually affect",
             "clear explanations of limits, uncertainty, and what still needs proof",
         ]
-    else:
-        watch_items = [
-            "official confirmation, changelogs, launch notes, or product pages",
-            "pricing, availability, and whether the change is limited to specific regions",
-            "device support, privacy terms, battery impact, subscriptions, or compatibility limits",
-            "hands-on reports that show whether the headline holds up in real use",
-        ]
-    return "\n".join(f"<li>{html.escape(item)}</li>" for item in watch_items)
+
+    if has_term(lowered, ("price", "pricing", "subscription", "cost", "release date")):
+        items.append("pricing and availability details")
+    if has_term(lowered, ("privacy", "data", "permission", "consent", "security")):
+        items.append("privacy and security implications")
+    if has_term(lowered, ("app", "update", "software", "firmware", "feature")):
+        items.append("hands-on reports that show whether the headline holds up in real use")
+    items.append("official confirmation and technical details")
+    return items
+
+
+def get_watch_items_html(kind: str, categories: list[str], text: str) -> str:
+    """Helper function to get watch items as HTML."""
+    watch_items = watch_item_phrases(kind, categories, text)
+    if not watch_items:
+        return ""
+    seen: list[str] = []
+    for item in watch_items:
+        if item not in seen:
+            seen.append(item)
+    return "\n".join(f"<li>{html.escape(item)}</li>" for item in seen[:4])
 
 
 MINOR_TITLE_WORDS = frozenset(
@@ -2897,40 +3044,46 @@ def build_editorial_sections(article: dict[str, Any]) -> list[str]:
         markup.append(f'<section class="editorial-section"><h2>Keep Exploring</h2>{exploring}</section>')
     markup.append(
         '<section class="editorial-section"><h2>About the Author</h2>'
-        '<p>ChuckysCarnage is a technology news site that tracks gadgets, software, science, '
-        'and space. Every article is assembled from the day\u2019s independent reporting, checked '
-        'against the original sources, and reviewed for accuracy before it goes live.</p></section>'
+        '<p>ChuckysCarnage is an independent technology news site covering gadgets, software, science, and space. '
+        'Every article is written from the day\u2019s independent reporting, checked against the linked original '
+        'sources, and reviewed for accuracy before it goes live. Corrections are handled through the '
+        'Contact page and the Editorial Policy.</p></section>'
     )
     return markup
 
 
 def build_conclusion_html(article: dict[str, Any]) -> str:
     """A short, fact-anchored wrap-up paragraph for the end of the article."""
-    title = clean_text(str(article.get("title") or "this story"), max_len=110)
     categories = [
         clean_text(str(value), max_len=40)
         for value in article.get("categories", [])
         if str(value).strip()
     ]
-    category_label = clean_category_name(categories[0]) if categories else "Tech"
     facts = article.get("fact_sentences") or []
-    paragraph = (
-        f"The short version: {title} is a real development in {category_label}, "
-        "and the reporting above explains what changed and what it could mean."
-    )
     if facts:
-        paragraph += (
-            f" The detail that stands out: {lower_first(first_sentence(facts[0]).rstrip('.'))}."
-        )
-    paragraph += (
-        " Watch for follow-up coverage, pricing, availability, and independent testing "
-        "before drawing conclusions about real-world impact."
+        paragraph = f"In short: {lower_first(first_sentence(facts[0]).rstrip('.'))}."
+    else:
+        paragraph = "In short: this is an early report based on the linked sources above."
+    watch = watch_item_phrases(
+        canonical_category(categories[0]) if categories else "tech",
+        categories,
+        " ".join(str(value) for value in facts),
     )
+    if watch:
+        paragraph += f" Watch for {'; '.join(watch[:2])} before drawing conclusions about real-world impact."
+    else:
+        paragraph += " Watch for independent confirmation and follow-up reporting before drawing conclusions about real-world impact."
     return f"<p>{html.escape(paragraph)}</p>"
 
 
 def wp_related_posts(article: dict[str, Any], limit: int = 3) -> list[dict[str, str]]:
-    """Fetch recently published posts that share a category with this article."""
+    """Fetch recently published posts that share a category with this article.
+
+    Candidates are ranked by topical keyword overlap with the current article
+    (significant tokens from title, tags, and fact sentences), so same-category
+    but unrelated stories are not presented as "related". Returns [] when no
+    candidate shares enough topical vocabulary.
+    """
     categories = [str(value).strip() for value in article.get("categories", []) if str(value).strip()]
     if not categories:
         return []
@@ -2940,6 +3093,15 @@ def wp_related_posts(article: dict[str, Any], limit: int = 3) -> list[dict[str, 
         return []
     if not ids:
         return []
+
+    own_tokens: set[str] = set()
+    for chunk in [article.get("title", ""), article.get("slug", "")] + [str(value) for value in article.get("tags", [])] + [str(value) for value in article.get("fact_sentences") or []]:
+        for token in re.findall(r"[a-z][a-z0-9]{2,}", str(chunk).lower()):
+            if token not in STOPWORDS and token not in JUNK_TAG_TOKENS and len(token) > 3:
+                own_tokens.add(token)
+    if not own_tokens:
+        return []
+
     query = urllib.parse.urlencode(
         {
             "per_page": 20,
@@ -2956,8 +3118,9 @@ def wp_related_posts(article: dict[str, Any], limit: int = 3) -> list[dict[str, 
         return []
     if not isinstance(matches, list):
         return []
+
     own_slug = str(article.get("slug") or "")
-    posts: list[dict[str, str]] = []
+    scored: list[tuple[int, str, str]] = []
     for post in matches:
         if not isinstance(post, dict):
             continue
@@ -2967,10 +3130,12 @@ def wp_related_posts(article: dict[str, Any], limit: int = 3) -> list[dict[str, 
             continue
         if own_slug and own_slug in str(link):
             continue
-        posts.append({"title": str(title), "link": str(link)})
-        if len(posts) >= limit:
-            break
-    return posts
+        candidate_tokens = set(re.findall(r"[a-z][a-z0-9]{2,}", str(title).lower()))
+        overlap = len(own_tokens & candidate_tokens)
+        if overlap >= 1:
+            scored.append((overlap, str(title), str(link)))
+    scored.sort(key=lambda entry: (-entry[0], entry[1]))
+    return [{"title": title, "link": link} for _overlap, title, link in scored[:limit]]
 
 
 def build_related_reading_html(article: dict[str, Any]) -> str:
@@ -3030,94 +3195,92 @@ def build_keep_exploring_html(article: dict[str, Any]) -> str:
 
 
 def build_why_it_matters(article: dict[str, Any]) -> str:
-    title = clean_text(str(article.get("title") or "this story"), max_len=110)
+    """Fact-anchored framing; never reuses a sentence that fits any story."""
     categories = [
         clean_text(str(value), max_len=40)
         for value in article.get("categories", [])
         if str(value).strip()
     ]
     category = canonical_category(categories[0]) if categories else "tech"
-    adjective = category.rstrip("s") if category.endswith("s") else category
     facts = article.get("fact_sentences") or []
     source_count = int(article.get("source_count") or 0)
     source_names = [entry.get("name", "") for entry in article.get("source_links", []) if isinstance(entry, dict)]
     source_names = list(dict.fromkeys(name for name in source_names if name))
 
-    parts = [f"{title} matters because it signals a real change in how {adjective} products and services are used day to day."]
+    parts: list[str] = []
     if facts:
-        parts.append(f"Concretely, the reporting notes that {lower_first(first_sentence(facts[0]).rstrip('.'))}.")
+        parts.append(f"What changed: {lower_first(first_sentence(facts[0]).rstrip('.'))}.")
+    else:
+        parts.append("The story is still early, and the reporting so far is thin.")
     if source_count > 1:
-        parts.append(f"The story has real legs — at least {source_count} independent outlets have covered it.")
+        parts.append(f"The development is getting attention — at least {source_count} independent outlets have covered it.")
     elif source_names:
-        parts.append(f"The story is being carried by {', '.join(source_names[:3])}.")
-    parts.append(f"For {adjective} readers, the useful frame is: {category_reader_angle(category)}.")
+        parts.append("Independent confirmation is still pending, since coverage so far rests on a single outlet.")
+    parts.append(f"For {category.rstrip('s') if category.endswith('s') else category} readers, {category_reader_angle(category)}.")
     return " ".join(dict.fromkeys(parts))
 
 
 def build_chucky_analysis(article: dict[str, Any]) -> str:
-    title = clean_text(str(article.get("title") or "this story"), max_len=110)
+    """Story-specific analysis. Every sentence must be anchored to the article's
+    own facts; no reusable boilerplate is allowed."""
     categories = [
         clean_text(str(value), max_len=40)
         for value in article.get("categories", [])
         if str(value).strip()
     ]
     category = canonical_category(categories[0]) if categories else "tech"
-    adjective = category.rstrip("s") if category.endswith("s") else category
     category_label = clean_category_name(categories[0]) if categories else "Tech"
     facts = article.get("fact_sentences") or []
     source_count = int(article.get("source_count") or 0)
     source_names = [entry.get("name", "") for entry in article.get("source_links", []) if isinstance(entry, dict)]
     source_names = list(dict.fromkeys(name for name in source_names if name))
-    topic = clean_text(title, max_len=90)
 
-    paragraphs = [
-        f"This one deserves a second look. {topic} is not just another headline — it is a concrete signal about where {adjective} technology is heading, and it matters more than a quick skim.",
-    ]
+    paragraphs: list[str] = []
 
     if facts:
-        anchored = f"The strongest detail in the reporting is that {lower_first(first_sentence(facts[0]).rstrip('.'))}."
+        paragraphs.append(
+            f"The most concrete part of this story is that {lower_first(first_sentence(facts[0]).rstrip('.'))}."
+        )
         if len(facts) > 1:
-            anchored += f" The sources also highlight that {lower_first(first_sentence(facts[1]).rstrip('.'))}."
-        paragraphs.append(anchored)
+            second = first_sentence(facts[1])
+            if sentence_fingerprint(second) != sentence_fingerprint(facts[0]):
+                paragraphs.append(
+                    f"The reporting also notes that {lower_first(second.rstrip('.'))}."
+                )
     else:
         paragraphs.append(
-            f"The most important thing to understand about {topic} is that the consequences will play out in how people actually use it, not in the launch-day noise."
+            "The reporting is thin enough that the most honest reading is to treat the details as provisional until more sources weigh in."
         )
 
-    reader = (
-        f"For readers, the immediate implications are practical: {category_reader_angle(category)}. "
-        "That means the useful questions are about reliability, cost, privacy, support, and whether the "
-        "change improves something you already do."
-    )
     if source_count > 1:
-        reader += (
-            f" The fact that {source_count} outlets are covering this raises my confidence that it is real "
-            "and worth planning around — while leaving room for the usual early-reporting noise."
+        paragraphs.append(
+            f"With {source_count} outlets carrying the story, the core facts are likelier to hold, but details still vary between accounts — which is why the differences matter as much as the headline."
         )
     elif source_names:
-        reader += (
-            f" {source_names[0]} is the primary source here, so I would treat the details as solid but "
-            "not yet independently confirmed."
+        paragraphs.append(
+            f"Because this rests on a single outlet's reporting, treat the specifics as credible but not yet cross-checked; the first independent confirmation is the signal to watch."
         )
-    paragraphs.append(reader)
 
-    paragraphs.append(
-        f"Where I stay skeptical is the usual gap between announcement and reality. Follow-up releases, "
-        f"pricing, availability, and independent testing will decide whether this change keeps its promise. "
-        "Until then, the smart move is to watch what real-world use actually shows."
-    )
+    open_questions = {
+        "health": "what evidence will be required before this reaches routine use, and what the follow-up trials actually show",
+        "ai": "whether the claimed capability survives independent evaluation and what it changes about cost, privacy, or access",
+        "phones": "how the change interacts with carriers, regional rollout, and the devices people already own",
+        "space": "whether the results hold up in the next mission or experiment, and what the data actually shows once analyzed",
+        "security": "how quickly patches or mitigations reach real systems, and how attackers respond",
+        "science": "whether independent teams replicate the finding and what the replication reveals",
+        "tech": "how the change affects the products, prices, and workflows that follow",
+    }
+    question = open_questions.get(category, "how the story develops in independent, verifiable follow-ups")
+    paragraphs.append(f"The open question for {category_label.lower()} readers is {question}.")
 
-    paragraphs.append(
-        f"My bottom line: {topic} is worth following, not because it is exciting, but because it could quietly "
-        f"change everyday decisions in {category_label}. Track the follow-ups, weigh the evidence, and do not "
-        "let the headline outrun the proof."
-    )
-
-    return "\n\n".join(paragraphs)
+    watch = watch_item_phrases(category, categories, " ".join(str(value) for value in facts))
+    if watch:
+        paragraphs.append(f"The signal to watch is {watch[0]}.")
+    return "\n\n".join(dict.fromkeys(paragraphs))
 
 
 def build_key_takeaways(article: dict[str, Any]) -> list[str]:
-    title = clean_text(str(article.get("title") or "this story"), max_len=110)
+    """Takeaways anchored to facts and real watch items, never to tag lists."""
     categories = [
         clean_text(str(value), max_len=40)
         for value in article.get("categories", [])
@@ -3125,19 +3288,21 @@ def build_key_takeaways(article: dict[str, Any]) -> list[str]:
     ]
     category = canonical_category(categories[0]) if categories else "tech"
     category_label = clean_category_name(categories[0]) if categories else "Tech"
-    tags = [clean_text(str(value), max_len=30) for value in article.get("tags", []) if str(value).strip()]
     facts = article.get("fact_sentences") or []
+    tags = [clean_text(str(value), max_len=30) for value in article.get("tags", []) if str(value).strip()]
+    text = " ".join([str(value) for value in facts] + tags)
 
-    takeaways = [f"{title}: a real development in {category_label}, not just a rumor."]
+    takeaways: list[str] = []
     if facts:
         takeaways.append(f"What we know: {lower_first(first_sentence(facts[0]).rstrip('.'))}.")
     else:
         takeaways.append("What we know: the reporting is still early, so treat the details as provisional.")
     takeaways.append(f"What it means for you: {category_reader_angle(category)}.")
-    if tags:
-        takeaways.append(f"What to watch next: follow-up coverage of {', '.join(tags[:3])}, plus independent testing and user feedback.")
+    watch = watch_item_phrases(category, categories, text)
+    if watch:
+        takeaways.append(f"What to watch next: {'; '.join(watch[:3])}.")
     else:
-        takeaways.append("What to watch next: follow-up coverage, pricing, availability, and independent testing.")
+        takeaways.append("What to watch next: independent confirmation and follow-up reporting.")
     return takeaways
 
 
@@ -3170,7 +3335,7 @@ def build_fact_sentences(cluster: list[Item], limit: int = 6) -> list[str]:
     for item in cluster[:4]:
         summary = clean_text(item.summary, max_len=190)
         title = clean_text(item.title, max_len=190)
-        if summary and len(summary) > 30 and summary.lower() != title.lower():
+        if summary and len(summary) > 30 and summary.lower() != title.lower() and not is_feed_boilerplate(summary, item):
             facts.append(summary)
     combined = extract_combined_details(cluster)
     if combined:
@@ -3191,29 +3356,35 @@ def build_fact_sentences(cluster: list[Item], limit: int = 6) -> list[str]:
 
 
 def build_lede(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
-    """A concrete, factual lead that anchors on the strongest source detail."""
+    """A concrete, factual lead that anchors on the strongest source detail.
+
+    Writes like a news report: the story's own actors and findings lead,
+    attribution is embedded naturally, and no meta-commentary about "this
+    post" or "this article" ever appears.
+    """
     topic_phrase = clean_text(topic, max_len=160)
     source_names = list(dict.fromkeys(item.source_name for item in cluster if item.source_name))
     facts = build_fact_sentences(cluster, limit=2)
 
     if facts:
         lead_fact = first_sentence(facts[0])
-        source_tag = source_names[0] if source_names else "the source"
-        return (
-            f"{lead_fact} {source_tag} is reporting on {topic_phrase.lower().rstrip('.')}, "
-            f"and this post walks through what changed and what it means."
-        )
+        context = ""
+        if len(facts) > 1:
+            second = first_sentence(facts[1])
+            if sentence_fingerprint(second) != sentence_fingerprint(lead_fact):
+                context = f" {second}"
+        elif source_names:
+            context = f" The reporting comes from {', '.join(source_names[:2])}."
+        return f"{lead_fact}{context}"
 
     if len(source_names) > 1:
         return (
             f"{topic_phrase} is a story being covered by {len(source_names)} independent "
-            f"sources — {', '.join(source_names[:2])} and others. This post pulls the "
-            "reporting together and looks at what it means for readers."
+            f"sources — {', '.join(source_names[:2])} and others."
         )
     return (
-        f"{topic_phrase} is moving this week, and the reporting from "
-        f"{source_names[0] if source_names else 'the primary source'} gives us a "
-        "clearer look at what changed and what comes next."
+        f"{topic_phrase} — {source_names[0] if source_names else 'the primary source'} "
+        "reports the development in detail, including what changed and what happens next."
     )
 
 
@@ -3555,6 +3726,27 @@ def pre_publish_checks(article: dict[str, Any], cluster: list[Item] | None = Non
     for phrase in FILLER_PHRASES:
         if phrase in lowered:
             failures.append(f"generic filler detected: '{phrase}'")
+
+    for phrase in META_VOICE_PHRASES:
+        if phrase in lowered:
+            failures.append(f"meta-voice phrase detected: '{phrase}'")
+
+    for fragment in TEMPLATE_LEFTOVER_FRAGMENTS:
+        if fragment in lowered:
+            failures.append(f"unfilled template placeholder detected: '{fragment}'")
+
+    if "&#8230;" in html_body or "&hellip;" in html_body or "&#8230" in html_body:
+        failures.append("article body contains a truncation artifact (…/&#8230;)")
+    if re.search(r"\b\.\.\.\b", plain) and "..." in plain:
+        failures.append("article body contains a raw ellipsis artifact")
+
+    dupes = duplicate_sentences(plain)
+    if dupes:
+        failures.append(f"duplicate sentence found in article: '{dupes[0][:80]}...'")
+
+    title_repeats = title_repetition_count(plain, title)
+    if title_repeats > MAX_TITLE_REPETITIONS:
+        failures.append(f"title repeated {title_repeats} times in body; max is {MAX_TITLE_REPETITIONS}")
 
     if env_bool("CHECK_BROKEN_LINKS", True):
         broken_links = check_links_in_html(html_body)
