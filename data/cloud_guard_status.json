@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 11,
-      "created_at": "2026-08-04T18:58:31Z",
-      "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30941115586",
-      "id": 30941115586,
+      "age_minutes": 98,
+      "created_at": "2026-08-04T19:07:17Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30941803250",
+      "id": 30941803250,
       "status": "in_progress"
     }
   ],
-  "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-04T19:10:07.795396+00:00",
-  "fresh_main_runs": [
+  "cancelled_stale_main_runs": [
     {
-      "age_minutes": 11,
-      "created_at": "2026-08-04T18:58:31Z",
-      "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30941115586",
-      "id": 30941115586,
+      "age_minutes": 98,
+      "created_at": "2026-08-04T19:07:17Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30941803250",
+      "id": 30941803250,
       "status": "in_progress"
     }
   ],
+  "finished_at": "2026-08-04T20:45:54.701064+00:00",
+  "fresh_main_runs": [],
   "github_error": "",
-  "latest_age_minutes": 11,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/04/scientists-identify-promising-new-target-behind-treatment-resistance-in-advanced/",
-  "latest_published_at": "2026-08-04T18:58:20+00:00",
-  "latest_title": "Scientists Identify Promising New Target Behind Treatment Resistance in Advanced Breast Cancer",
+  "latest_age_minutes": 9,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/04/solving-the-solvent-problem-to-make-sodium-metal-batteries-a-more-practical-ener/",
+  "latest_published_at": "2026-08-04T20:36:09+00:00",
+  "latest_title": "Solving the Solvent Problem to Make Sodium-metal Batteries a More Practical Energy",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
