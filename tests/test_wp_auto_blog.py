@@ -1283,6 +1283,50 @@ class PublishGateTests(unittest.TestCase):
         for tag in tags:
             self.assertIn(tag.lower(), {"science", "health", "research", "compounds", "disease"})
 
+    def test_granular_category_names_mapping(self) -> None:
+        self.assertEqual(
+            wp_auto_blog.granular_category_names(["health"], "a landmark clinical trial breakthrough"),
+            ["Health Breakthroughs"],
+        )
+        self.assertEqual(
+            wp_auto_blog.granular_category_names(["health"], "routine hospital news"),
+            ["Health News"],
+        )
+        self.assertEqual(
+            wp_auto_blog.granular_category_names(["science", "tech"], "research"),
+            ["Science News", "Tech Advances"],
+        )
+        self.assertEqual(
+            wp_auto_blog.granular_category_names(["space", "ai"], "rocket launch"),
+            ["Space News", "AI News"],
+        )
+        self.assertEqual(
+            wp_auto_blog.granular_category_names(["gadgets"], "earbuds"),
+            ["Gadgets"],
+        )
+
+    def test_coarse_category_key_round_trip(self) -> None:
+        self.assertEqual(wp_auto_blog.coarse_category_key("Health Breakthroughs"), "health")
+        self.assertEqual(wp_auto_blog.coarse_category_key("Health News"), "health")
+        self.assertEqual(wp_auto_blog.coarse_category_key("Science News"), "science")
+        self.assertEqual(wp_auto_blog.coarse_category_key("Space News"), "space")
+        self.assertEqual(wp_auto_blog.coarse_category_key("AI News"), "ai")
+        self.assertEqual(wp_auto_blog.coarse_category_key("Tech Advances"), "tech")
+        self.assertEqual(wp_auto_blog.coarse_category_key("Gadgets"), "gadgets")
+
+    def test_politics_article_blocked_by_gate(self) -> None:
+        article = self._article(
+            html=self._clean_body()
+            + "<p>The president and congress remain split on the budget.</p>"
+        )
+        failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertTrue(any("politics coverage excluded" in failure for failure in failures), failures)
+
+    def test_clean_article_not_blocked_by_politics_gate(self) -> None:
+        article = self._article()
+        failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertFalse(any("politics" in failure for failure in failures), failures)
+
 
 if __name__ == "__main__":
     unittest.main()

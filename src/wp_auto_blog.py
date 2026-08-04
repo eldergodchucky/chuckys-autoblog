@@ -107,6 +107,16 @@ TEMPLATE_LEFTOVER_FRAGMENTS = {
     "watch the coverage tagged",
 }
 
+POLITICS_TERMS = (
+    # Site policy: this blog covers science, technology, and health — no politics.
+    "president", "presidential", "election", "electoral", "impeach",
+    "voters", "ballot", "congress", "senate", "senator", "parliament",
+    "prime minister", "chancellor", "democrat", "republican", "bipartisan",
+    "politician", "political party", "party leader", "geopolitical",
+    "geopolitics", "foreign policy", "embassy", "diplomatic ties",
+    "campaign trail", "sanctions",
+)
+
 MAX_TITLE_REPETITIONS = 2
 
 
@@ -1328,6 +1338,55 @@ CATEGORY_DISPLAY = {
 def clean_category_name(category: str) -> str:
     key = category.strip().lower()
     return CATEGORY_DISPLAY.get(key, category.strip()[:40] or "Tech")
+
+
+BREAKTHROUGH_TERMS = (
+    "breakthrough", "discovery", "first-of-its-kind", "novel", "landmark",
+    "curative", "cure", "regenerative", "gene therapy", "clinical trial",
+    "trial results", "approved", "pioneering", "milestone",
+)
+
+
+def granular_category_names(categories: list[str], text: str) -> list[str]:
+    """Map coarse internal categories to the finer on-site taxonomy.
+
+    Keeps rotation, weights, and story-kind logic working on the coarse names
+    while posts land under richer topics like "Health Breakthroughs",
+    "Science News", "Tech Advances", "Space News", and "AI News".
+    """
+    names: list[str] = []
+    for category in categories:
+        key = category.strip().lower()
+        if key == "health":
+            name = "Health Breakthroughs" if has_term(text, BREAKTHROUGH_TERMS) else "Health News"
+        elif key == "science":
+            name = "Science News"
+        elif key == "space":
+            name = "Space News"
+        elif key == "ai":
+            name = "AI News"
+        elif key == "tech":
+            name = "Tech Advances"
+        else:
+            name = clean_category_name(key)
+        if name not in names:
+            names.append(name)
+    return names
+
+
+def coarse_category_key(name: str) -> str:
+    """Map a granular display name back to its coarse internal category."""
+    value = name.strip().lower()
+    for coarse, prefix in (
+        ("health", "health "),
+        ("science", "science "),
+        ("space", "space "),
+        ("ai", "ai "),
+        ("tech", "tech "),
+    ):
+        if value.startswith(prefix):
+            return coarse
+    return canonical_category(value)
 
 
 def title_case_keywords(words: list[str]) -> str:
@@ -3464,7 +3523,7 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
         max_len=220,
     ) or clean_text(title, max_len=220)
 
-    display_categories = [clean_category_name(value) for value in categories[:3]] or ["Tech"]
+    display_categories = granular_category_names(categories[:3], text) or ["Tech"]
 
     lede = build_lede(cluster, topic, categories, source_count)
     # Sentences already stated in the lede must not reappear in the body sections.
@@ -3782,6 +3841,10 @@ def pre_publish_checks(article: dict[str, Any], cluster: list[Item] | None = Non
         failures.append("no concrete fact (number, name, price) drawn from the source")
 
     lowered = plain.lower()
+    politics_hits = [term for term in POLITICS_TERMS if term in lowered or term in title.lower()]
+    if politics_hits:
+        failures.append(f"politics coverage excluded by site policy: '{politics_hits[0]}'")
+
     for phrase in FILLER_PHRASES:
         if phrase in lowered:
             failures.append(f"generic filler detected: '{phrase}'")
@@ -4405,8 +4468,8 @@ def last_rotation_category(conn: sqlite3.Connection, rotation: list[str]) -> str
     for title, categories_json in rows:
         categories = categories_from_post_row(str(title), categories_json)
         for category in categories:
-            if category in rotation:
-                return category
+            if coarse_category_key(category) in rotation:
+                return coarse_category_key(category)
     return None
 
 

@@ -482,6 +482,41 @@
       "quality": 4,
       "enabled": false,
       "notes": "Disabled by default because its RSS terms are restrictive. Enable only after you are comfortable using it as a topic alert with attribution."
+    },
+    {
+      "name": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "category": "tech",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/feed/",
+      "category": "tech",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Space.com",
+      "url": "https://www.space.com/feeds/all",
+      "category": "space",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Phys.org Medical Research",
+      "url": "https://phys.org/rss-feed/health-news/",
+      "category": "health",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "SciTechDaily Science",
+      "url": "https://scitechdaily.com/news/science/feed/",
+      "category": "science",
+      "quality": 4,
+      "enabled": true
     }
   ]
 }
