@@ -47,8 +47,12 @@ PAGES = [
         "title": "Contact",
         "content": (
             "<p>Have a question, suggestion, correction, partnership opportunity, or business inquiry? We'd love to hear "
-            "from you. Reach out through the comments on our posts or via our official social media channels. We aim to "
-            "respond as quickly as possible.</p>\n"
+            "from you. Reach out through the comments on our posts, via our official social media channels, or directly "
+            "by email. We aim to respond as quickly as possible.</p>\n"
+            "<h2>Email</h2>\n"
+            "<p>You can reach us directly at "
+            "<a href=\"mailto:ChuckysCarnage@gmail.com\">ChuckysCarnage@gmail.com</a>. "
+            "Whether you have a question, spotted a mistake, or want to talk business, we read every message.</p>\n"
             "<h2>Corrections</h2>\n"
             "<p>Spot an error? Tell us and we will review it promptly and publish a correction where needed. See the "
             "<a href=\"/editorial-policy\">Editorial Policy</a> for how we handle accuracy.</p>"
