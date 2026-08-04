@@ -1,35 +1,35 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 55,
-      "created_at": "2026-08-04T08:17:16Z",
+      "age_minutes": 35,
+      "created_at": "2026-08-04T16:49:08Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30891323573",
-      "id": 30891323573,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30930956806",
+      "id": 30930956806,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-04T09:13:09.757360+00:00",
+  "finished_at": "2026-08-04T17:24:30.692071+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 55,
-      "created_at": "2026-08-04T08:17:16Z",
+      "age_minutes": 35,
+      "created_at": "2026-08-04T16:49:08Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30891323573",
-      "id": 30891323573,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30930956806",
+      "id": 30930956806,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 23,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/04/emotion-regulation-therapy-may-help-reduce-problem-alcohol-use/",
-  "latest_published_at": "2026-08-04T08:49:15+00:00",
-  "latest_title": "Emotion Regulation Therapy May Help Reduce Problem Alcohol Use",
+  "latest_age_minutes": 1,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/04/openai-posts-public-rebuttal-to-apple-s-trade-secrets-lawsuit/",
+  "latest_published_at": "2026-08-04T17:22:31+00:00",
+  "latest_title": "OpenAI Posts Public Rebuttal to Apple\u2019s Trade Secrets Lawsuit",
   "main_run_stale_minutes": 95,
-  "message": "Main watchdog is active; rescue stood down.",
+  "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
   "rescue_force_stale_minutes": 25,
   "rescue_stale_minutes": 20,
-  "state": "main_watchdog_active"
+  "state": "fresh"
 }
