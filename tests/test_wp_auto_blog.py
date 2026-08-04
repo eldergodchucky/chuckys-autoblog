@@ -1175,10 +1175,25 @@ class PublishGateTests(unittest.TestCase):
     def test_template_leftover_blocked(self) -> None:
         article = self._article(
             html=self._clean_body()
-            + "<p>privacy terms covering health and biometric data</p>"
+            + "<p>watch the coverage tagged Across, Eastern</p>"
         )
         failures = wp_auto_blog.pre_publish_checks(article)
         self.assertTrue(any("template placeholder" in failure for failure in failures))
+
+    def test_watch_item_phrases_do_not_block_article(self) -> None:
+        # Watch items like these are generated on purpose by watch_item_phrases();
+        # they must never be mistaken for template leftovers.
+        article = self._article(
+            html=self._clean_body()
+            + "<p>What to watch:</p><ul>"
+            "<li>clear explanations of limits, uncertainty, and what still needs proof</li>"
+            "<li>privacy terms covering health and biometric data</li>"
+            "<li>subscription pricing, device compatibility, and regional availability</li>"
+            "<li>clear guidance about when users should consult a healthcare professional</li>"
+            "</ul>"
+        )
+        failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertFalse(any("template placeholder" in failure for failure in failures))
 
     def test_truncation_artifact_blocked(self) -> None:
         article = self._article(html=self._clean_body() + "<p>&#8230;activates the entire</p>")
@@ -1201,6 +1216,26 @@ class PublishGateTests(unittest.TestCase):
         )
         failures = wp_auto_blog.pre_publish_checks(article)
         self.assertTrue(any("title repeated" in failure for failure in failures), failures)
+
+    def test_editorial_sections_use_distinct_fact_claims(self) -> None:
+        claims = {
+            "why": "The study tracked 1,200 participants over four years.",
+            "analysis": "Researchers found the effect persists after controlling for income.",
+            "takeaways": "The result held across all age groups tested.",
+            "conclusion": "Follow-up trials are already being planned.",
+        }
+        article = self._article(_fact_claims=claims)
+        with patch.dict(os.environ, {"HERO_IMAGE_MODE": "off"}, clear=False):
+            failures = wp_auto_blog.pre_publish_checks(article)
+        self.assertEqual(failures, [])
+        why = wp_auto_blog.build_why_it_matters(article)
+        analysis = wp_auto_blog.build_chucky_analysis(article)
+        takeaways = wp_auto_blog.build_key_takeaways(article)
+        conclusion = wp_auto_blog.build_conclusion_html(article)
+        self.assertIn("1,200 participants", why)
+        self.assertIn("controlling for income", analysis)
+        self.assertIn("all age groups", " ".join(takeaways))
+        self.assertIn("follow-up trials", conclusion.lower())
 
     def test_watch_items_are_topic_gated(self) -> None:
         health_text = "Researchers report a promising early trial of a new therapy."

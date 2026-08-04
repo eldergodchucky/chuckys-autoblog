@@ -96,14 +96,14 @@ META_VOICE_PHRASES = {
 }
 
 TEMPLATE_LEFTOVER_FRAGMENTS = {
-    "independent accuracy or validation data",
-    "privacy terms covering health and biometric data",
-    "subscription pricing, device compatibility",
-    "clear guidance about when users should consult",
+    # Only phrases that never legitimately appear in a generated article belong
+    # here. Watch-item phrases (e.g. "clear explanations of limits, uncertainty",
+    # "privacy terms covering health and biometric data") are produced on
+    # purpose by watch_item_phrases(), so listing them here blocked every
+    # health/science article. These four are artifacts of the old templates.
     "official confirmation, changelogs, launch notes",
     "which experiments nasa highlights",
     "whether riders and pedestrians trust",
-    "clear explanations of limits, uncertainty",
     "watch the coverage tagged",
 }
 
@@ -2617,12 +2617,18 @@ def build_context_paragraph(topic: str, categories: list[str], full_text: str) -
         return (
             "The practical value is usually procedural rather than dramatic: the work matters if it produces better measurements, more reliable hardware, or a clearer path to the next experiment."
         )
+    if kind == "science":
+        return (
+            "The scientific context matters more than the headline: the finding only earns "
+            "its place once independent teams have checked the method and the results."
+        )
     if kind == "security":
         return (
             "The practical lesson is operational rather than theatrical: the change matters when it affects patching, exposure, vendor trust, and the way teams respond to risk."
         )
     return (
-        f"The practical point is that {topic_phrase.lower()} can shift how companies, consumers, and builders respond to new tools, costs, and constraints inside the {category_phrase} landscape."
+        "The practical impact will sharpen as the details above are confirmed by follow-up "
+        "coverage, real-world use, and official documentation."
     )
 
 
@@ -3060,7 +3066,10 @@ def build_conclusion_html(article: dict[str, Any]) -> str:
         if str(value).strip()
     ]
     facts = article.get("fact_sentences") or []
-    if facts:
+    claimed = (article.get("_fact_claims") or {}).get("conclusion")
+    if claimed:
+        paragraph = f"In short: {lower_first(claimed).rstrip('.')}."
+    elif facts:
         paragraph = f"In short: {lower_first(first_sentence(facts[0]).rstrip('.'))}."
     else:
         paragraph = "In short: this is an early report based on the linked sources above."
@@ -3208,7 +3217,10 @@ def build_why_it_matters(article: dict[str, Any]) -> str:
     source_names = list(dict.fromkeys(name for name in source_names if name))
 
     parts: list[str] = []
-    if facts:
+    claimed = (article.get("_fact_claims") or {}).get("why")
+    if claimed:
+        parts.append(f"What changed: {claimed}.")
+    elif facts:
         parts.append(f"What changed: {lower_first(first_sentence(facts[0]).rstrip('.'))}.")
     else:
         parts.append("The story is still early, and the reporting so far is thin.")
@@ -3237,7 +3249,12 @@ def build_chucky_analysis(article: dict[str, Any]) -> str:
 
     paragraphs: list[str] = []
 
-    if facts:
+    claimed = (article.get("_fact_claims") or {}).get("analysis")
+    if claimed:
+        paragraphs.append(
+            f"The most concrete part of this story is that {claimed}."
+        )
+    elif facts:
         paragraphs.append(
             f"The most concrete part of this story is that {lower_first(first_sentence(facts[0]).rstrip('.'))}."
         )
@@ -3293,7 +3310,10 @@ def build_key_takeaways(article: dict[str, Any]) -> list[str]:
     text = " ".join([str(value) for value in facts] + tags)
 
     takeaways: list[str] = []
-    if facts:
+    claimed = (article.get("_fact_claims") or {}).get("takeaways")
+    if claimed:
+        takeaways.append(f"What we know: {claimed}.")
+    elif facts:
         takeaways.append(f"What we know: {lower_first(first_sentence(facts[0]).rstrip('.'))}.")
     else:
         takeaways.append("What we know: the reporting is still early, so treat the details as provisional.")
@@ -3329,14 +3349,30 @@ def build_sources_html(article: dict[str, Any]) -> str:
 
 
 def build_fact_sentences(cluster: list[Item], limit: int = 6) -> list[str]:
-    """Collect concrete, fact-like sentences from source material for editorial sections."""
+    """Collect concrete, fact-like sentences from source material for editorial sections.
+
+    Returns sentence-level facts (not whole summaries) so each editorial section
+    can anchor on a different sentence instead of repeating the same lead.
+    """
     full_text = story_text(cluster)
     facts: list[str] = []
     for item in cluster[:4]:
-        summary = clean_text(item.summary, max_len=190)
         title = clean_text(item.title, max_len=190)
-        if summary and len(summary) > 30 and summary.lower() != title.lower() and not is_feed_boilerplate(summary, item):
-            facts.append(summary)
+        summary = clean_text(item.summary, max_len=400)
+        if not summary:
+            continue
+        sentences = split_sentences(summary)
+        for sentence in sentences:
+            sentence = sentence.strip()
+            if len(sentence) < 30:
+                continue
+            if sentence.lower() == title.lower():
+                continue
+            if is_feed_boilerplate(sentence, item):
+                continue
+            facts.append(sentence)
+        if len(facts) >= limit:
+            break
     combined = extract_combined_details(cluster)
     if combined:
         facts.append(combined)
@@ -3462,6 +3498,22 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
         ],
         "fact_sentences": build_fact_sentences(cluster),
     }
+    # Give each editorial section its own anchor sentence so the lead fact is
+    # never repeated across Why This Matters / Analysis / Takeaways / Conclusion.
+    facts = article["fact_sentences"]
+    claim_pool = [first_sentence(fact).rstrip(".") for fact in facts]
+    used_claims = set(sentence_fingerprint(part) for part in split_sentences(lede))
+    claims: dict[str, str] = {}
+    for slot in ("why", "analysis", "takeaways", "conclusion"):
+        for claim in claim_pool:
+            key = sentence_fingerprint(claim)
+            if key not in used_claims:
+                claims[slot] = claim
+                used_claims.add(key)
+                break
+        else:
+            claims[slot] = ""
+    article["_fact_claims"] = claims
     return enrich_article_for_publication(article)
 
 
@@ -4456,8 +4508,13 @@ def run_once(args: argparse.Namespace) -> int:
             print(f"Category rotation target order: {', '.join(rotation_order[:5])}")
 
         max_posts = max(1, env_int("MAX_POSTS_PER_RUN", 1))
-        selected = clusters[:max_posts]
-        for cluster in selected:
+        published_count = 0
+        attempts = 0
+        max_attempts = max(3, max_posts * 4)
+        for cluster in clusters:
+            if published_count >= max_posts or attempts >= max_attempts:
+                break
+            attempts += 1
             unique_sources = sorted({item.source_name for item in cluster})
             source_names = ", ".join(unique_sources)
             category_names = ", ".join(cluster_categories(cluster))
@@ -4493,8 +4550,10 @@ def run_once(args: argparse.Namespace) -> int:
             elif result.get("blocked"):
                 print(f"Blocked low-quality post (did not publish): {article['title']}")
             elif wp_id:
+                published_count += 1
                 print(f"Created WordPress post {wp_id} with status={status}: {result.get('link', '')}")
             else:
+                published_count += 1
                 print(f"Delivered post with status={status}: {result.get('link', '')}")
 
             time.sleep(1)
@@ -4513,7 +4572,7 @@ def run_once(args: argparse.Namespace) -> int:
         else:
             write_run_status(
                 "published",
-                f"Published {len(delivered_posts)} post(s).",
+                f"Published {published_count} post(s).",
                 dry_run=False,
                 feeds=len(feeds),
                 fetched=len(items),
