@@ -909,6 +909,18 @@ class FullArticleSectionsTests(unittest.TestCase):
         self.assertIn("https://example.com/dead", broken)
         self.assertNotIn("https://example.com/ok", broken)
 
+    def test_check_links_ignores_network_timeouts(self) -> None:
+        from unittest.mock import patch
+
+        html = '<p><a href="https://example.com/flaky">source</a></p>'
+
+        def fake_urlopen(request, timeout=None):
+            raise TimeoutError("connection timed out")
+
+        with patch("wp_auto_blog.urllib.request.urlopen", side_effect=fake_urlopen):
+            broken = wp_auto_blog.check_links_in_html(html)
+        self.assertEqual(broken, [])
+
     def test_title_similarity_detects_near_duplicates(self) -> None:
         self.assertGreater(
             wp_auto_blog.title_similarity(

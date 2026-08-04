@@ -3719,6 +3719,13 @@ def url_reachable(url: str, attempts: int = 2) -> bool:
         except urllib.error.HTTPError as exc:
             if exc.code in (403, 429):
                 return True
+            # Other definitive HTTP errors (404, 500, ...) count as broken and
+            # fall through to the retry loop.
+        except (urllib.error.URLError, TimeoutError):
+            # Network-level failure (timeout, DNS, connection refused): the link
+            # is unverifiable, not provably broken — never block a post for a
+            # flaky connection to the source site.
+            return True
         except Exception:
             pass
     return False
