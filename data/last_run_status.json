@@ -1,63 +1,63 @@
 {
   "dry_run": false,
-  "feed_warnings": 8,
+  "feed_warnings": 11,
   "feeds": 59,
-  "fetched": 2495,
-  "finished_at": "2026-08-04T22:20:40.062176+00:00",
-  "inserted": 5,
-  "message": "Published 0 post(s).",
+  "fetched": 2385,
+  "finished_at": "2026-08-05T21:23:14.866065+00:00",
+  "inserted": 7,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "Health News",
+        "AI News"
+      ],
+      "sources": [
+        "TechCrunch",
+        "The Verge"
+      ],
+      "status": "duplicate",
+      "title": "Reddit Is Introducing a New Moderator: AI",
+      "wp_id": 0
+    },
+    {
+      "categories": [
         "AI News",
         "Science News"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Phys.org Technology"
       ],
       "status": "duplicate",
-      "title": "AI Creates Psychiatry Training Cases",
+      "title": "AI Models Nearly Erase Female Characters When They Write Kids Stories About",
       "wp_id": 0
     },
     {
       "categories": [
-        "Health News",
-        "AI News",
+        "Apple",
+        "Security",
+        "Android"
+      ],
+      "sources": [
+        "MacRumors",
+        "The Verge"
+      ],
+      "status": "blocked",
+      "title": "Sunbird's iMessage for Android App Returns to the Google Play Store",
+      "wp_id": null
+    },
+    {
+      "categories": [
+        "Security",
+        "Apple",
         "Science News"
       ],
       "sources": [
-        "Medical Xpress"
+        "MacRumors"
       ],
-      "status": "duplicate",
-      "title": "AI Creates Psychiatry Training Cases",
-      "wp_id": 0
-    },
-    {
-      "categories": [
-        "Health News",
-        "Science News",
-        "AI News"
-      ],
-      "sources": [
-        "Phys.org Medical Research"
-      ],
-      "status": "duplicate",
-      "title": "AI Tool for Computing Radiation Dose Helps Personalize Prostate Cancer Treatment",
-      "wp_id": 0
-    },
-    {
-      "categories": [
-        "Health News",
-        "Science News",
-        "AI News"
-      ],
-      "sources": [
-        "Medical Xpress"
-      ],
-      "status": "duplicate",
-      "title": "AI Tool for Computing Radiation Dose Helps Personalize Prostate Cancer Treatment",
-      "wp_id": 0
+      "status": "publish",
+      "title": "Apple's iCloud Private Relay Is Leaking Users' Real IP Addresses",
+      "wp_id": null
     }
   ],
   "state": "published"
