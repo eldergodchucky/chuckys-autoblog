@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 47,
-      "created_at": "2026-08-05T05:25:51Z",
+      "age_minutes": 27,
+      "created_at": "2026-08-05T08:41:28Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30978076552",
-      "id": 30978076552,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30990066130",
+      "id": 30990066130,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-05T06:13:39.155257+00:00",
+  "finished_at": "2026-08-05T09:09:22.651393+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 47,
-      "created_at": "2026-08-05T05:25:51Z",
+      "age_minutes": 27,
+      "created_at": "2026-08-05T08:41:28Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30978076552",
-      "id": 30978076552,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30990066130",
+      "id": 30990066130,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 6,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/a-full-motion-video-codec-for-the-atari-st/",
-  "latest_published_at": "2026-08-05T06:06:53+00:00",
-  "latest_title": "A Full Motion Video Codec For the Atari ST",
+  "latest_age_minutes": 3,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/lower-cardiac-output-predicts-faster-brain-loss-in-carriers-of-alzheimer-s-disea-2/",
+  "latest_published_at": "2026-08-05T09:05:38+00:00",
+  "latest_title": "Lower Cardiac Output Predicts Faster Brain Loss in Carriers of Alzheimer's Disease",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
