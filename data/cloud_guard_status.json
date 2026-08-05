@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 11,
-      "created_at": "2026-08-05T15:19:19Z",
+      "age_minutes": 40,
+      "created_at": "2026-08-05T16:24:35Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31019693720",
-      "id": 31019693720,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31025126631",
+      "id": 31025126631,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-05T15:30:59.000039+00:00",
+  "finished_at": "2026-08-05T17:05:00.042623+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 11,
-      "created_at": "2026-08-05T15:19:19Z",
+      "age_minutes": 40,
+      "created_at": "2026-08-05T16:24:35Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31019693720",
-      "id": 31019693720,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31025126631",
+      "id": 31025126631,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 10,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/nicer-cycle-9-call-for-proposals-and-reviewers/",
-  "latest_published_at": "2026-08-05T15:20:48+00:00",
-  "latest_title": "NICER Cycle 9 Call for Proposals and Reviewers",
+  "latest_age_minutes": 6,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/most-people-with-eating-disorders-don-t-receive-specialist-nhs-referral/",
+  "latest_published_at": "2026-08-05T16:58:26+00:00",
+  "latest_title": "Most People with Eating Disorders Don\u2019t Receive Specialist NHS Referral",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
