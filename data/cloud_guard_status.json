@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 48,
-      "created_at": "2026-08-05T20:48:15Z",
+      "age_minutes": 51,
+      "created_at": "2026-08-05T21:53:33Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31045803750",
-      "id": 31045803750,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31050557721",
+      "id": 31050557721,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-05T21:36:55.396889+00:00",
+  "finished_at": "2026-08-05T22:45:07.631276+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 48,
-      "created_at": "2026-08-05T20:48:15Z",
+      "age_minutes": 51,
+      "created_at": "2026-08-05T21:53:33Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31045803750",
-      "id": 31045803750,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31050557721",
+      "id": 31050557721,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/azithromycin-shows-lower-copd-flare-up-rates-over-one-year-than-roflumilast/",
-  "latest_published_at": "2026-08-05T21:36:23+00:00",
-  "latest_title": "Azithromycin Shows Lower COPD Flare-up Rates over One Year than Roflumilast",
+  "latest_age_minutes": 2,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/glp-1-drug-linked-to-heart-benefits-for-high-risk-patients/",
+  "latest_published_at": "2026-08-05T22:42:42+00:00",
+  "latest_title": "GLP-1 Drug Linked to Heart Benefits for High-risk Patients",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
