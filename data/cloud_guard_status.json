@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 22,
-      "created_at": "2026-08-05T03:15:23Z",
+      "age_minutes": 47,
+      "created_at": "2026-08-05T05:25:51Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30971729084",
-      "id": 30971729084,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30978076552",
+      "id": 30978076552,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-05T03:38:01.996780+00:00",
+  "finished_at": "2026-08-05T06:13:39.155257+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 22,
-      "created_at": "2026-08-05T03:15:23Z",
+      "age_minutes": 47,
+      "created_at": "2026-08-05T05:25:51Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30971729084",
-      "id": 30971729084,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30978076552",
+      "id": 30978076552,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 1,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/telegram-ceo-says-extortionist-manipulated-apple-into-app-store-removal-2/",
-  "latest_published_at": "2026-08-05T03:36:44+00:00",
-  "latest_title": "Telegram CEO Says Extortionist Manipulated Apple Into App Store Removal",
+  "latest_age_minutes": 6,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/a-full-motion-video-codec-for-the-atari-st/",
+  "latest_published_at": "2026-08-05T06:06:53+00:00",
+  "latest_title": "A Full Motion Video Codec For the Atari ST",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
