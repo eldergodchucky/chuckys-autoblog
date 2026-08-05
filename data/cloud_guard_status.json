@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 51,
-      "created_at": "2026-08-05T21:53:33Z",
+      "age_minutes": 42,
+      "created_at": "2026-08-05T22:58:51Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31050557721",
-      "id": 31050557721,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31054739379",
+      "id": 31054739379,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-05T22:45:07.631276+00:00",
+  "finished_at": "2026-08-05T23:41:40.401768+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 51,
-      "created_at": "2026-08-05T21:53:33Z",
+      "age_minutes": 42,
+      "created_at": "2026-08-05T22:58:51Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31050557721",
-      "id": 31050557721,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31054739379",
+      "id": 31054739379,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 2,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/glp-1-drug-linked-to-heart-benefits-for-high-risk-patients/",
-  "latest_published_at": "2026-08-05T22:42:42+00:00",
-  "latest_title": "GLP-1 Drug Linked to Heart Benefits for High-risk Patients",
+  "latest_age_minutes": 8,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/06/spacex-plans-starlink-mobile-service-to-compete-with-verizon/",
+  "latest_published_at": "2026-08-05T23:32:40+00:00",
+  "latest_title": "SpaceX Plans Starlink Mobile Service to Compete with Verizon",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
