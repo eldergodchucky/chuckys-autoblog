@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 7,
-      "created_at": "2026-08-05T18:37:25Z",
+      "age_minutes": 34,
+      "created_at": "2026-08-05T19:42:58Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31035599107",
-      "id": 31035599107,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31040702160",
+      "id": 31040702160,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-05T18:44:43.100697+00:00",
+  "finished_at": "2026-08-05T20:17:08.391888+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 7,
-      "created_at": "2026-08-05T18:37:25Z",
+      "age_minutes": 34,
+      "created_at": "2026-08-05T19:42:58Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31035599107",
-      "id": 31035599107,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31040702160",
+      "id": 31040702160,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 5,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/how-good-bacteria-from-fecal-transplants-reduce-peanut-allergy/",
-  "latest_published_at": "2026-08-05T18:39:04+00:00",
-  "latest_title": "How Goodd\u2019 Bacteria from Fecal Transplants Reduce Peanut Allergy",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/episode-179-life-support-systems-from-space-station-to-orion/",
+  "latest_published_at": "2026-08-05T20:16:20+00:00",
+  "latest_title": "Episode 179: Life Support Systems: From Space Station to Orion",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
