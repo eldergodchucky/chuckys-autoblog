@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 65,
-      "created_at": "2026-08-04T23:11:13Z",
-      "event": "schedule",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30959131430",
-      "id": 30959131430,
+      "age_minutes": 22,
+      "created_at": "2026-08-05T03:15:23Z",
+      "event": "workflow_dispatch",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30971729084",
+      "id": 30971729084,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-05T00:16:30.761899+00:00",
+  "finished_at": "2026-08-05T03:38:01.996780+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 65,
-      "created_at": "2026-08-04T23:11:13Z",
-      "event": "schedule",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30959131430",
-      "id": 30959131430,
+      "age_minutes": 22,
+      "created_at": "2026-08-05T03:15:23Z",
+      "event": "workflow_dispatch",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30971729084",
+      "id": 30971729084,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 10,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/apple-is-getting-this-wrong/",
-  "latest_published_at": "2026-08-05T00:06:22+00:00",
-  "latest_title": "Apple is getting this wrong",
+  "latest_age_minutes": 1,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/telegram-ceo-says-extortionist-manipulated-apple-into-app-store-removal-2/",
+  "latest_published_at": "2026-08-05T03:36:44+00:00",
+  "latest_title": "Telegram CEO Says Extortionist Manipulated Apple Into App Store Removal",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
