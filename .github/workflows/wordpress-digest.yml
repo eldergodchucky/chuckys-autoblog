@@ -2,8 +2,9 @@ name: Weekly Digest
 
 on:
   schedule:
-    # Sundays at 12:00 UTC: rounds up the week's published stories.
-    - cron: "0 12 * * 0"
+    # Mondays at 05:00 UTC: covers the previous week and lands at the bottom
+    # of the current feed page, as the week's closing post.
+    - cron: "0 5 * * 1"
   workflow_dispatch:
 
 permissions:
