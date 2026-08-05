@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 27,
-      "created_at": "2026-08-05T08:41:28Z",
+      "age_minutes": 36,
+      "created_at": "2026-08-05T10:56:05Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30990066130",
-      "id": 30990066130,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30999407569",
+      "id": 30999407569,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-05T09:09:22.651393+00:00",
+  "finished_at": "2026-08-05T11:32:22.053584+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 27,
-      "created_at": "2026-08-05T08:41:28Z",
+      "age_minutes": 36,
+      "created_at": "2026-08-05T10:56:05Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30990066130",
-      "id": 30990066130,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/30999407569",
+      "id": 30999407569,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 3,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/lower-cardiac-output-predicts-faster-brain-loss-in-carriers-of-alzheimer-s-disea-2/",
-  "latest_published_at": "2026-08-05T09:05:38+00:00",
-  "latest_title": "Lower Cardiac Output Predicts Faster Brain Loss in Carriers of Alzheimer's Disease",
+  "latest_age_minutes": 2,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/05/new-study-highlights-the-weather-driven-costs-of-24-7-clean-power-matching/",
+  "latest_published_at": "2026-08-05T11:29:38+00:00",
+  "latest_title": "New Study Highlights the Weather-driven Costs of 24/7 Clean Power Matching",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
