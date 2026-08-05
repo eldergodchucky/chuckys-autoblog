@@ -727,6 +727,10 @@ class FullArticleSectionsTests(unittest.TestCase):
                         wp_auto_blog.publish_to_wordpress(article)
 
         self.assertEqual(captured["payload"]["publicize_message"], "Test post")
+        self.assertEqual(
+            captured["payload"]["meta"]["jetpack_publicize_message"],
+            "Test post",
+        )
         self.assertNotIn("publicize", captured["payload"])
 
     def test_publish_to_wordpress_disables_publicize_when_off(self) -> None:
@@ -760,6 +764,7 @@ class FullArticleSectionsTests(unittest.TestCase):
 
         self.assertFalse(captured["payload"]["publicize"])
         self.assertNotIn("publicize_message", captured["payload"])
+        self.assertNotIn("jetpack_publicize_message", captured["payload"].get("meta", {}))
 
     def _valid_article(self) -> dict[str, object]:
         body = (

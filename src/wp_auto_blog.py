@@ -4148,6 +4148,10 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
         payload["publicize"] = False
     else:
         payload["publicize_message"] = pm
+        # WordPress.com Publicize reads the per-post share text from post meta;
+        # the top-level publicize_message param is not honored by the REST API,
+        # so the title-only message is stored as meta here as well.
+        payload["meta"]["jetpack_publicize_message"] = pm
     category_ids = wp_term_ids("category", [str(v) for v in article.get("categories", [])])
     tag_ids = wp_term_ids("tag", [str(v) for v in article.get("tags", [])])
     if category_ids:

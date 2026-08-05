@@ -1,6 +1,64 @@
 {
   "dry_run": false,
-  "finished_at": "2026-08-04T19:06:06.471551+00:00",
-  "message": "TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond",
-  "state": "failed"
+  "feed_warnings": 8,
+  "feeds": 59,
+  "fetched": 2495,
+  "finished_at": "2026-08-04T22:20:40.062176+00:00",
+  "inserted": 5,
+  "message": "Published 0 post(s).",
+  "posts": [
+    {
+      "categories": [
+        "Health News",
+        "AI News",
+        "Science News"
+      ],
+      "sources": [
+        "Phys.org Medical Research"
+      ],
+      "status": "duplicate",
+      "title": "AI Creates Psychiatry Training Cases",
+      "wp_id": 0
+    },
+    {
+      "categories": [
+        "Health News",
+        "AI News",
+        "Science News"
+      ],
+      "sources": [
+        "Medical Xpress"
+      ],
+      "status": "duplicate",
+      "title": "AI Creates Psychiatry Training Cases",
+      "wp_id": 0
+    },
+    {
+      "categories": [
+        "Health News",
+        "Science News",
+        "AI News"
+      ],
+      "sources": [
+        "Phys.org Medical Research"
+      ],
+      "status": "duplicate",
+      "title": "AI Tool for Computing Radiation Dose Helps Personalize Prostate Cancer Treatment",
+      "wp_id": 0
+    },
+    {
+      "categories": [
+        "Health News",
+        "Science News",
+        "AI News"
+      ],
+      "sources": [
+        "Medical Xpress"
+      ],
+      "status": "duplicate",
+      "title": "AI Tool for Computing Radiation Dose Helps Personalize Prostate Cancer Treatment",
+      "wp_id": 0
+    }
+  ],
+  "state": "published"
 }
