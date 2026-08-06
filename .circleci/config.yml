@@ -26,6 +26,7 @@ jobs:
       POST_BY_EMAIL_PUBLICIZE: ""
       WP_CREATE_TERMS: "false"
       GLOBAL_DAILY_CAP: "true"
+      MAX_POSTS_PER_DAY: "90"
     steps:
       - checkout
       - run: mkdir -p data
