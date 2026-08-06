@@ -18,6 +18,23 @@ $ErrorActionPreference = "Continue"
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $root
 
+$lockFile = Join-Path $root "data\local_watchdog.lock"
+$lockPid = 0
+if (Test-Path -LiteralPath $lockFile) {
+    try {
+        $lockPid = [int](Get-Content -LiteralPath $lockFile -ErrorAction Stop)
+    } catch {
+        $lockPid = 0
+    }
+    if ($lockPid -gt 0 -and (Get-Process -Id $lockPid -ErrorAction SilentlyContinue)) {
+        "Watchdog already running (PID $lockPid); exiting."
+        exit 0
+    }
+    Remove-Item -LiteralPath $lockFile -ErrorAction SilentlyContinue
+}
+New-Item -ItemType Directory -Force -Path (Split-Path -Parent $lockFile) | Out-Null
+$PID | Out-File -FilePath $lockFile
+
 $python = Join-Path $root ".venv\Scripts\python.exe"
 if (-not (Test-Path -LiteralPath $python)) {
     $python = "python"
@@ -46,3 +63,4 @@ while ($true) {
     & $python src\wp_failover_publish.py *>> $log
     Start-Sleep -Seconds $interval
 }
+Remove-Item -LiteralPath $lockFile -ErrorAction SilentlyContinue

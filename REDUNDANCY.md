@@ -60,13 +60,18 @@ Already configured in `.github/workflows/`. Nothing to do.
 ## Leg 4: Local watchdog (your PC)
 
 `scripts/local_watchdog.ps1` runs the failover publisher every 15 minutes
-while your PC is on — zero cost, zero accounts:
+while your PC is on — zero cost, zero accounts. Already installed on this
+machine as Windows scheduled tasks:
 
-- Manual: `powershell -ExecutionPolicy Bypass -File scripts\local_watchdog.ps1`
-- Automatic: create a **Task Scheduler** task (trigger: at log on; action:
-  `powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\...\scripts\local_watchdog.ps1"`).
-- Optional env: `LOCAL_WATCHDOG_INTERVAL_SECONDS` (default 900),
-  `LOCAL_WATCHDOG_MAX_MINUTES` (default 0 = forever). Log: `data/local_watchdog.log`.
+- `ChuckyAutoblog-WatchdogKeepalive` — starts the watchdog every 30 minutes
+  (it exits instantly if the watchdog is already alive, so a crashed or
+  killed loop is healed within 30 minutes).
+- `ChuckyAutoblog-Digest` — runs the weekly digest every Monday 06:00 local
+  (05:00 UTC, matching the GitHub schedule) in case GitHub misses it.
+- Log: `data/local_watchdog.log`; the singleton lock lives at
+  `data/local_watchdog.lock`.
+
+Manual run: `powershell -ExecutionPolicy Bypass -File scripts\local_watchdog.ps1`
 
 ## How an outage is handled
 
