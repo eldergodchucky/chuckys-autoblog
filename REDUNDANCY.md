@@ -7,8 +7,8 @@ blog feed goes stale, so they never fight each other:
 | Leg        | Executor                  | Cadence         | Status                |
 | ---------- | ------------------------- | --------------- | --------------------- |
 | Primary    | GitHub Actions            | every 15 min    | already running       |
-| Secondary  | GitLab.com CI (scheduled) | every 30 min    | needs your setup      |
-| Tertiary   | CircleCI (scheduled)      | hourly          | needs your setup      |
+| Secondary  | GitLab.com CI (scheduled) | every 30 min    | live                  |
+| Tertiary   | CircleCI (scheduled)      | hourly          | not set up (optional) |
 | Local      | Your PC (watchdog script) | every 15 min    | already running       |
 
 Safety (all legs, code-level):
@@ -31,20 +31,31 @@ Already configured in `.github/workflows/`. Nothing to do.
 
 ## Leg 2: GitLab.com (secondary)
 
+**Live project:** https://gitlab.com/eldergodchucky/chuckys-autoblog (public)
+
+Already done (2026-08-06): project created, repo pushed, CI variables set,
+30-minute schedule active (`*/30 * * * *` UTC on `main`), identity verified.
+If it ever needs to be rebuilt from scratch:
+
 1. Sign up/in at gitlab.com.
-2. **New project > Import project > GitHub** and import
-   `eldergodchucky/chuckys-autoblog`. Keep the project **public** — free CI
-   minutes for public projects are much more generous (50,000/month vs 400
-   for private; this pipeline runs 48 times a day).
+2. Create a project named `chuckys-autoblog` (public — free CI minutes for
+   public projects are much more generous: 50,000/month vs 400 for private;
+   this pipeline runs 48 times a day).
 3. **Settings > CI/CD > Variables** — add (values from your `.env`):
    - `WP_BASE_URL`
    - `WP_USERNAME`
    - `WP_APPLICATION_PASSWORD`
    - `WP_COM_ACCESS_TOKEN` (masked)
    - `POST_BY_EMAIL_ADDRESS`
+   - `MAX_POSTS_PER_DAY=90`
 4. **Build > Pipeline schedules > New schedule**: cron `*/30 * * * *`,
    target branch `main`, timezone UTC. GitLab does the rest —
    `.gitlab-ci.yml` is already in the repo.
+5. New accounts must complete GitLab's **identity verification** (phone or
+   free card authorization) before shared runners will execute CI.
+
+Keep the GitLab copy in sync: push the repo to both remotes
+(`git push origin main && git push gitlab main`).
 
 ## Leg 3: CircleCI (tertiary)
 
