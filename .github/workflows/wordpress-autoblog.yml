@@ -36,6 +36,7 @@ jobs:
       HERO_IMAGE_MODE: real
       MAX_POSTS_PER_RUN: "1"
       MAX_POSTS_PER_DAY: "90"
+      GLOBAL_DAILY_CAP: "true"
       LOOKBACK_HOURS: "96"
       MIN_SOURCES_PER_POST: "2"
       REQUEST_TIMEOUT_SECONDS: "25"

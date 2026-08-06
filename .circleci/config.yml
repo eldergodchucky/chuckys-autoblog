@@ -1,0 +1,48 @@
+# Redundant failover publisher for the auto-blog.
+#
+# Only publishes when the blog feed is stale (src/wp_failover_publish.py),
+# so it never fights GitHub Actions. Setup:
+#   1. Sign in to app.circleci.com with your GitHub account.
+#   2. Projects > "Set Up Project" for chuckys-autoblog (skip the demo).
+#   3. Project Settings > Environment Variables: add the same secrets as
+#      in .env: WP_BASE_URL, WP_USERNAME, WP_APPLICATION_PASSWORD,
+#      WP_COM_ACCESS_TOKEN, POST_BY_EMAIL_ADDRESS.
+#   4. Push this file; the hourly schedule below starts automatically.
+#   Full details: REDUNDANCY.md
+
+version: 2.1
+
+jobs:
+  failover-publish:
+    docker:
+      - image: cimg/python:3.12
+    environment:
+      BLOG_FEED_URL: "https://chuckyscarnage.tech.blog/feed/"
+      FAILOVER_STALE_MINUTES: "30"
+      FAILOVER_COOLDOWN_MINUTES: "75"
+      FAILOVER_LOCK_STALE_MINUTES: "30"
+      POST_STATUS: publish
+      AUTO_PUBLISH_CONFIRM: I_UNDERSTAND_POSTS_GO_LIVE
+      POST_BY_EMAIL_PUBLICIZE: ""
+      WP_CREATE_TERMS: "false"
+      GLOBAL_DAILY_CAP: "true"
+    steps:
+      - checkout
+      - run: mkdir -p data
+      - run: python -m pip install -r requirements.txt
+      - run:
+          name: Publish if blog feed is stale
+          command: python src/wp_failover_publish.py
+
+workflows:
+  version: 2.1
+  publish-on-schedule:
+    triggers:
+      - schedule:
+          cron: "17 * * * *"
+          filters:
+            branches:
+              only:
+                - main
+    jobs:
+      - failover-publish

@@ -4495,6 +4495,37 @@ def todays_post_count(conn: sqlite3.Connection) -> int:
     return int(row[0] if row else 0)
 
 
+def site_posts_today() -> int:
+    """Count posts the site published today (UTC) via the public API.
+
+    This is the global daily cap shared by every publishing platform. Unlike
+    the local sqlite counter, it stays consistent when several CI providers
+    (GitHub Actions, GitLab CI, CircleCI, a local watchdog, ...) run the
+    pipeline in parallel from their own repository copies. Returns -1 when
+    the API is unreachable so callers can fall back to the local count.
+    """
+    now = dt.datetime.now(dt.timezone.utc)
+    start = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    count = 0
+    try:
+        page = 1
+        while True:
+            data = wp_request(
+                f"posts?after={start.strftime('%Y-%m-%dT%H:%M:%S')}&per_page=100&page={page}"
+                "&status=publish&_fields=id"
+            )
+            if not isinstance(data, list):
+                break
+            count += len(data)
+            if len(data) < 100:
+                break
+            page += 1
+    except Exception as exc:
+        print(f"Site-wide post count unavailable ({type(exc).__name__}: {exc}); using local count only.")
+        return -1
+    return count
+
+
 def infer_categories_from_title(title: str) -> list[str]:
     synthetic = Item(
         uid=stable_id("title", title),
@@ -4623,6 +4654,10 @@ def run_once(args: argparse.Namespace) -> int:
         if not args.dry_run:
             max_posts_per_day = max(1, env_int("MAX_POSTS_PER_DAY", 24))
             posted_today = todays_post_count(conn)
+            if env_bool("GLOBAL_DAILY_CAP", True):
+                site_count = site_posts_today()
+                if site_count >= 0:
+                    posted_today = max(posted_today, site_count)
             if posted_today >= max_posts_per_day:
                 message = f"Daily cap reached: {posted_today}/{max_posts_per_day} posts already sent today."
                 print(message)

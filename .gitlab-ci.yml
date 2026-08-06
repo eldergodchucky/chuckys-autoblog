@@ -1,0 +1,42 @@
+# Redundant failover publisher for the auto-blog.
+#
+# Keeps the blog fresh when GitHub Actions is down or slow. It only
+# publishes when the blog feed is stale (see src/wp_failover_publish.py),
+# so it never fights the primary publisher.
+#
+# Setup (5 minutes):
+#   1. On GitLab.com, create a NEW project and import this GitHub repo
+#      (New project > Import project > GitHub). Keeping the project
+#      PUBLIC is best: free CI minutes are much more generous for public
+#      projects.
+#   2. Settings > CI/CD > Variables: add the same secrets as in .env:
+#        WP_BASE_URL, WP_USERNAME, WP_APPLICATION_PASSWORD,
+#        WP_COM_ACCESS_TOKEN, POST_BY_EMAIL_ADDRESS
+#   3. Build > Pipeline schedules: "New schedule", cron "*/30 * * * *",
+#      target branch main, and it will start running.
+#   Full details: REDUNDANCY.md
+
+stages:
+  - publish
+
+variables:
+  BLOG_FEED_URL: "https://chuckyscarnage.tech.blog/feed/"
+  FAILOVER_STALE_MINUTES: "30"
+  FAILOVER_COOLDOWN_MINUTES: "75"
+  FAILOVER_LOCK_STALE_MINUTES: "30"
+  POST_STATUS: publish
+  AUTO_PUBLISH_CONFIRM: I_UNDERSTAND_POSTS_GO_LIVE
+  POST_BY_EMAIL_PUBLICIZE: ""
+  WP_CREATE_TERMS: "false"
+  GLOBAL_DAILY_CAP: "true"
+
+publish:
+  stage: publish
+  image: python:3.12
+  timeout: 20m
+  script:
+    - mkdir -p data
+    - python -m pip install -r requirements.txt
+    - python src/wp_failover_publish.py
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule" && $CI_COMMIT_BRANCH == "main"'

@@ -1,64 +1,8 @@
 {
   "dry_run": false,
-  "feed_warnings": 11,
-  "feeds": 59,
-  "fetched": 2385,
-  "finished_at": "2026-08-05T21:23:14.866065+00:00",
-  "inserted": 7,
-  "message": "Published 1 post(s).",
-  "posts": [
-    {
-      "categories": [
-        "Health News",
-        "AI News"
-      ],
-      "sources": [
-        "TechCrunch",
-        "The Verge"
-      ],
-      "status": "duplicate",
-      "title": "Reddit Is Introducing a New Moderator: AI",
-      "wp_id": 0
-    },
-    {
-      "categories": [
-        "AI News",
-        "Science News"
-      ],
-      "sources": [
-        "Phys.org Technology"
-      ],
-      "status": "duplicate",
-      "title": "AI Models Nearly Erase Female Characters When They Write Kids Stories About",
-      "wp_id": 0
-    },
-    {
-      "categories": [
-        "Apple",
-        "Security",
-        "Android"
-      ],
-      "sources": [
-        "MacRumors",
-        "The Verge"
-      ],
-      "status": "blocked",
-      "title": "Sunbird's iMessage for Android App Returns to the Google Play Store",
-      "wp_id": null
-    },
-    {
-      "categories": [
-        "Security",
-        "Apple",
-        "Science News"
-      ],
-      "sources": [
-        "MacRumors"
-      ],
-      "status": "publish",
-      "title": "Apple's iCloud Private Relay Is Leaking Users' Real IP Addresses",
-      "wp_id": null
-    }
-  ],
-  "state": "published"
+  "finished_at": "2026-08-06T19:31:08.189184+00:00",
+  "max_posts_per_day": 24,
+  "message": "Daily cap reached: 103/24 posts already sent today.",
+  "posted_today": 103,
+  "state": "skipped"
 }
