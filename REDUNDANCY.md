@@ -8,7 +8,7 @@ blog feed goes stale, so they never fight each other:
 | ---------- | ------------------------- | --------------- | --------------------- |
 | Primary    | GitHub Actions            | every 15 min    | already running       |
 | Secondary  | GitLab.com CI (scheduled) | every 30 min    | live                  |
-| Tertiary   | CircleCI (scheduled)      | hourly          | not set up (optional) |
+| Tertiary   | CircleCI (scheduled)      | hourly          | live                |
 | Local      | Your PC (watchdog script) | every 15 min    | already running       |
 
 Safety (all legs, code-level):
@@ -59,11 +59,16 @@ Keep the GitLab copy in sync: push the repo to both remotes
 
 ## Leg 3: CircleCI (tertiary)
 
+**Live project:** https://app.circleci.com/pipelines/github/eldergodchucky/chuckys-autoblog
+
+Already done (2026-08-06): signed in with GitHub, project followed, env
+variables + checkout key set via API, hourly schedule in
+`.circleci/config.yml` (minute 17). If it ever needs to be rebuilt:
+
 1. Sign in at app.circleci.com with your GitHub account.
-2. **Projects > Set Up Project** for `chuckys-autoblog` (skip the demo
-   config; keep our `.circleci/config.yml`).
-3. **Project Settings > Environment Variables** — same five variables as
-   GitLab above.
+2. **Projects > Set Up Project** for `chuckys-autoblog` (use existing config).
+3. **Project Settings > Environment Variables** — same six variables as
+   GitLab above (including `MAX_POSTS_PER_DAY=90`).
 4. Push any commit to `main`; the hourly schedule in `.circleci/config.yml`
    takes over from there. (Hourly cadence keeps the free 2,500 minutes/month
    comfortable while still covering multi-hour outages.)
