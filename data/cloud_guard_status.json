@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 5,
-      "created_at": "2026-08-06T04:28:18Z",
+      "age_minutes": 41,
+      "created_at": "2026-08-06T06:40:26Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31071338951",
-      "id": 31071338951,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31078077904",
+      "id": 31078077904,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-06T04:33:18.311397+00:00",
+  "finished_at": "2026-08-06T07:21:35.200478+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 5,
-      "created_at": "2026-08-06T04:28:18Z",
+      "age_minutes": 41,
+      "created_at": "2026-08-06T06:40:26Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31071338951",
-      "id": 31071338951,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31078077904",
+      "id": 31078077904,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 3,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/06/swallowing-faecal-capsules-reduces-peanut-allergy-in-six-adults/",
-  "latest_published_at": "2026-08-06T04:30:09+00:00",
-  "latest_title": "Swallowing Faecal Capsules Reduces Peanut Allergy in Six Adults",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/06/apples-private-relay-feature-could-reveal-your-ip-address-to-websites-and-services/",
+  "latest_published_at": "2026-08-06T07:21:07+00:00",
+  "latest_title": "Apple's Private Relay feature could reveal your IP address to websites and services",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
