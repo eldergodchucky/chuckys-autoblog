@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 41,
-      "created_at": "2026-08-06T06:40:26Z",
+      "age_minutes": 14,
+      "created_at": "2026-08-06T09:58:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31078077904",
-      "id": 31078077904,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31091356491",
+      "id": 31091356491,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-06T07:21:35.200478+00:00",
+  "finished_at": "2026-08-06T10:13:03.547590+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 41,
-      "created_at": "2026-08-06T06:40:26Z",
+      "age_minutes": 14,
+      "created_at": "2026-08-06T09:58:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31078077904",
-      "id": 31078077904,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31091356491",
+      "id": 31091356491,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/06/apples-private-relay-feature-could-reveal-your-ip-address-to-websites-and-services/",
-  "latest_published_at": "2026-08-06T07:21:07+00:00",
-  "latest_title": "Apple's Private Relay feature could reveal your IP address to websites and services",
+  "latest_age_minutes": 12,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/06/engineered-atomic-interface-opens-a-new-path-for-atomically-thin-transistors/",
+  "latest_published_at": "2026-08-06T10:00:49+00:00",
+  "latest_title": "Engineered Atomic Interface Opens a New Path for Atomically Thin Transistors",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
