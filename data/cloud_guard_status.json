@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 42,
-      "created_at": "2026-08-05T22:58:51Z",
+      "age_minutes": 63,
+      "created_at": "2026-08-06T00:04:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31054739379",
-      "id": 31054739379,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31058507007",
+      "id": 31058507007,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-05T23:41:40.401768+00:00",
+  "finished_at": "2026-08-06T01:08:08.305727+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 42,
-      "created_at": "2026-08-05T22:58:51Z",
+      "age_minutes": 63,
+      "created_at": "2026-08-06T00:04:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31054739379",
-      "id": 31054739379,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31058507007",
+      "id": 31058507007,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 8,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/06/spacex-plans-starlink-mobile-service-to-compete-with-verizon/",
-  "latest_published_at": "2026-08-05T23:32:40+00:00",
-  "latest_title": "SpaceX Plans Starlink Mobile Service to Compete with Verizon",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/06/ted-lasso-season-4-now-streaming-on-apple-tv/",
+  "latest_published_at": "2026-08-06T01:07:14+00:00",
+  "latest_title": "Ted Lasso Season 4 Now Streaming on Apple TV",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
