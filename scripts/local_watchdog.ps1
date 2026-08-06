@@ -41,6 +41,8 @@ if (-not (Test-Path -LiteralPath $python)) {
 }
 $log = Join-Path $root "data\local_watchdog.log"
 New-Item -ItemType Directory -Force -Path (Split-Path -Parent $log) | Out-Null
+$outFile = Join-Path $root "data\watchdog_run_out.txt"
+$errFile = Join-Path $root "data\watchdog_run_err.txt"
 
 $interval = 900
 if ($env:LOCAL_WATCHDOG_INTERVAL_SECONDS) {
@@ -55,12 +57,36 @@ if ($maxMinutes -gt 0) {
     $deadline = (Get-Date).AddMinutes($maxMinutes)
 }
 
+$runTimeoutSec = 180
+if ($env:LOCAL_WATCHDOG_RUN_TIMEOUT_SECONDS) {
+    $runTimeoutSec = [int]$env:LOCAL_WATCHDOG_RUN_TIMEOUT_SECONDS
+}
+
 while ($true) {
     if ($deadline -and (Get-Date) -gt $deadline) {
         break
     }
-    "== $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==" | Out-File -Append -FilePath $log
-    & $python src\wp_failover_publish.py *>> $log
+    $stamp = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'
+    "== $stamp ==" | Out-File -Append -FilePath $log
+    $err = $null
+    $out = $null
+    try {
+        $proc = Start-Process -FilePath $python -ArgumentList "src\wp_failover_publish.py" `
+            -NoNewWindow -PassThru -RedirectStandardOutput $outFile -RedirectStandardError $errFile `
+            -ErrorAction Stop
+        if (-not $proc.WaitForExit($runTimeoutSec * 1000)) {
+            Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+            "KILLED after $runTimeoutSec s timeout" | Out-File -Append -FilePath $log
+        } else {
+            $out = Get-Content -LiteralPath $outFile -Raw -ErrorAction SilentlyContinue
+            $err = Get-Content -LiteralPath $errFile -Raw -ErrorAction SilentlyContinue
+            if ($out) { $out.Trim() | Out-File -Append -FilePath $log }
+            if ($err) { ("STDERR: " + $err.Trim()) | Out-File -Append -FilePath $log }
+        }
+        Remove-Item -LiteralPath $outFile, $errFile -Force -ErrorAction SilentlyContinue
+    } catch {
+        ("WATCHDOG ERROR: " + $_.Exception.Message) | Out-File -Append -FilePath $log
+    }
     Start-Sleep -Seconds $interval
 }
 Remove-Item -LiteralPath $lockFile -ErrorAction SilentlyContinue

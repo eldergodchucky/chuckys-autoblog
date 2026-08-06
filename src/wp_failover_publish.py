@@ -253,18 +253,42 @@ def fetch_latest_post_from_wp_api(api_url: str) -> dict[str, Any]:
 
 
 def fetch_latest_post(feed_url: str) -> dict[str, Any]:
-    try:
-        return fetch_latest_post_from_rss(feed_url)
-    except (OSError, urllib.error.URLError, ET.ParseError, RuntimeError) as rss_exc:
-        api_url = os.getenv("WP_PUBLIC_POSTS_API_URL", DEFAULT_WP_PUBLIC_POSTS_API_URL).strip()
-        if not api_url:
-            raise
+    """Return the newest post known by RSS and/or the WordPress public API.
+
+    RSS feeds can be cached stale while the site is healthy, so the newest
+    timestamp across both sources wins.
+    """
+    api_url = os.getenv("WP_PUBLIC_POSTS_API_URL", DEFAULT_WP_PUBLIC_POSTS_API_URL).strip()
+    candidates: list[tuple[dt.datetime, dict[str, Any]]] = []
+    rss_error = api_error = ""
+
+    if feed_url:
+        try:
+            latest = fetch_latest_post_from_rss(feed_url)
+            candidates.append((latest["published_at"], latest))
+        except (OSError, urllib.error.URLError, ET.ParseError, RuntimeError) as exc:
+            rss_error = str(exc)
+
+    if api_url:
         try:
             latest = fetch_latest_post_from_wp_api(api_url)
-            latest["rss_error"] = str(rss_exc)
-            return latest
-        except (OSError, urllib.error.URLError, json.JSONDecodeError, RuntimeError) as api_exc:
-            raise RuntimeError(f"RSS failed ({rss_exc}); WordPress public API failed ({api_exc})") from api_exc
+            candidates.append((latest["published_at"], latest))
+        except (OSError, urllib.error.URLError, json.JSONDecodeError, RuntimeError) as exc:
+            api_error = str(exc)
+
+    if not candidates:
+        raise RuntimeError(
+            f"RSS failed ({rss_error or 'no feed configured'}); "
+            f"WordPress public API failed ({api_error or 'no API configured'})"
+        )
+
+    candidates.sort(key=lambda item: item[0])
+    latest = candidates[-1][1]
+    if rss_error:
+        latest["rss_error"] = rss_error
+    if api_error:
+        latest["api_error"] = api_error
+    return latest
 
 
 def latest_post_age_minutes(latest: dict[str, Any]) -> int:
