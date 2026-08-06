@@ -40,3 +40,4 @@ publish:
     - python src/wp_failover_publish.py
   rules:
     - if: '$CI_PIPELINE_SOURCE == "schedule" && $CI_COMMIT_BRANCH == "main"'
+    - if: '$CI_PIPELINE_SOURCE == "api" && $CI_COMMIT_BRANCH == "main"'
