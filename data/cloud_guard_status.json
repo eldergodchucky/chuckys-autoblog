@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 20,
-      "created_at": "2026-08-07T10:48:59Z",
+      "age_minutes": 5,
+      "created_at": "2026-08-07T11:54:00Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31171583634",
-      "id": 31171583634,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31175939632",
+      "id": 31175939632,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-07T11:09:52.965521+00:00",
+  "finished_at": "2026-08-07T11:59:50.449939+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 20,
-      "created_at": "2026-08-07T10:48:59Z",
+      "age_minutes": 5,
+      "created_at": "2026-08-07T11:54:00Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31171583634",
-      "id": 31171583634,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31175939632",
+      "id": 31175939632,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 1,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/07/oppo-kicks-off-coloros-17-closed-beta-testing-device-list-and-rollout-dates-confirmed/",
-  "latest_published_at": "2026-08-07T11:08:19+00:00",
-  "latest_title": "Oppo kicks off ColorOS 17 Closed Beta Testing, device list and rollout dates confirmed",
+  "latest_age_minutes": 6,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/07/stopping-adhd-medication-alters-sleep-rhythms-long-after-discontinuation/",
+  "latest_published_at": "2026-08-07T11:53:43+00:00",
+  "latest_title": "Stopping ADHD Medication Alters Sleep Rhythms Long After Discontinuation",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
