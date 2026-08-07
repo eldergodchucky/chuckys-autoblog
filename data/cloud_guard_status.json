@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 30,
-      "created_at": "2026-08-06T14:27:02Z",
+      "age_minutes": 34,
+      "created_at": "2026-08-06T23:58:33Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31110875051",
-      "id": 31110875051,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31132954101",
+      "id": 31132954101,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-06T14:57:30.837283+00:00",
+  "finished_at": "2026-08-07T00:33:11.171969+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 30,
-      "created_at": "2026-08-06T14:27:02Z",
+      "age_minutes": 34,
+      "created_at": "2026-08-06T23:58:33Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31110875051",
-      "id": 31110875051,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31132954101",
+      "id": 31132954101,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 11,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/06/nasa-s-lucy-begins-camera-tests-ahead-of-2027-trojan-flybys/",
-  "latest_published_at": "2026-08-06T14:45:32+00:00",
-  "latest_title": "NASA\u2019s Lucy Begins Camera Tests Ahead of 2027 Trojan Flybys",
+  "latest_age_minutes": 2,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/07/samsung-galaxy-s26-fe-passes-through-the-fcc/",
+  "latest_published_at": "2026-08-07T00:30:43+00:00",
+  "latest_title": "Samsung Galaxy S26 FE Passes Through the FCC",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
