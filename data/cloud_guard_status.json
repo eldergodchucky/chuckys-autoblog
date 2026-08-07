@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 23,
-      "created_at": "2026-08-07T12:58:13Z",
+      "age_minutes": 29,
+      "created_at": "2026-08-07T14:03:52Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31180485768",
-      "id": 31180485768,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31185713045",
+      "id": 31185713045,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-07T13:21:24.855361+00:00",
+  "finished_at": "2026-08-07T14:33:39.544934+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 23,
-      "created_at": "2026-08-07T12:58:13Z",
+      "age_minutes": 29,
+      "created_at": "2026-08-07T14:03:52Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31180485768",
-      "id": 31180485768,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31185713045",
+      "id": 31185713045,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 6,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/07/scientists-tracked-12-people-in-antarctica-for-10-months-what-happened-could-sha/",
-  "latest_published_at": "2026-08-07T13:15:20+00:00",
-  "latest_title": "Scientists Tracked 12 People in Antarctica for 10 Months\u2014what Happened Could Shape",
+  "latest_age_minutes": 12,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/07/iss-results-stem-cells-in-space/",
+  "latest_published_at": "2026-08-07T14:21:23+00:00",
+  "latest_title": "ISS Results: Stem Cells in Space",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
