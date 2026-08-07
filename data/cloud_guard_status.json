@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 29,
-      "created_at": "2026-08-07T14:03:52Z",
+      "age_minutes": 19,
+      "created_at": "2026-08-07T15:09:18Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31185713045",
-      "id": 31185713045,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31191189525",
+      "id": 31191189525,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-07T14:33:39.544934+00:00",
+  "finished_at": "2026-08-07T15:29:16.804490+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 29,
-      "created_at": "2026-08-07T14:03:52Z",
+      "age_minutes": 19,
+      "created_at": "2026-08-07T15:09:18Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31185713045",
-      "id": 31185713045,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31191189525",
+      "id": 31191189525,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 12,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/07/iss-results-stem-cells-in-space/",
-  "latest_published_at": "2026-08-07T14:21:23+00:00",
-  "latest_title": "ISS Results: Stem Cells in Space",
+  "latest_age_minutes": 2,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/07/plasma-gun-technology-could-transform-space-laundry-and-sanitation-for-future-mi/",
+  "latest_published_at": "2026-08-07T15:26:17+00:00",
+  "latest_title": "Plasmaa Gun&#8217; Technology Could Transform Space Laundry and Sanitation for Future Missions",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
