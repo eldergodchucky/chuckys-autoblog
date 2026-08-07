@@ -1,7 +1,7 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 4,
+      "age_minutes": 40,
       "created_at": "2026-08-07T19:29:13Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31211677631",
@@ -10,10 +10,10 @@
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-07T19:33:35.860234+00:00",
+  "finished_at": "2026-08-07T20:10:10.532908+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 4,
+      "age_minutes": 40,
       "created_at": "2026-08-07T19:29:13Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31211677631",
@@ -22,14 +22,14 @@
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 4,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/07/which-do-you-plan-to-buy-iphone-18-pro-or-foldable-iphone/",
-  "latest_published_at": "2026-08-07T19:28:53+00:00",
-  "latest_title": "Which Do You Plan to Buy: iPhone 18 Pro or Foldable iPhone",
+  "latest_age_minutes": 23,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/07/when-security-becomes-a-risk-factor-privacy-risks-of-public-url-scanning-service/",
+  "latest_published_at": "2026-08-07T19:46:45+00:00",
+  "latest_title": "When Security Becomes a Risk Factor\u2014privacy Risks of Public URL-scanning Services",
   "main_run_stale_minutes": 95,
-  "message": "Latest post is fresh; rescue did not publish.",
+  "message": "Main watchdog is active; rescue stood down.",
   "rescue_emergency_stale_minutes": 45,
   "rescue_force_stale_minutes": 25,
   "rescue_stale_minutes": 20,
-  "state": "fresh"
+  "state": "main_watchdog_active"
 }
