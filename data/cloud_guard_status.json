@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 20,
-      "created_at": "2026-08-07T03:12:39Z",
+      "age_minutes": 60,
+      "created_at": "2026-08-07T04:18:09Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31143644621",
-      "id": 31143644621,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31146988282",
+      "id": 31146988282,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-07T03:33:35.307648+00:00",
+  "finished_at": "2026-08-07T05:19:05.467950+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 20,
-      "created_at": "2026-08-07T03:12:39Z",
+      "age_minutes": 60,
+      "created_at": "2026-08-07T04:18:09Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31143644621",
-      "id": 31143644621,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31146988282",
+      "id": 31146988282,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 3,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/07/google-says-hackers-are-calling-financial-firm-employees-to-hack-and-extort/",
-  "latest_published_at": "2026-08-07T03:30:12+00:00",
-  "latest_title": "Google Says Hackers Are Calling Financial Firm Employees to Hack and Extort",
+  "latest_age_minutes": 11,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/07/this-widely-used-plastic-could-be-harming-your-liver/",
+  "latest_published_at": "2026-08-07T05:07:59+00:00",
+  "latest_title": "This Widely Used Plastic Could Be Harming Your Liver",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
