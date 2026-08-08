@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 40,
-      "created_at": "2026-08-08T12:34:19Z",
+      "age_minutes": 20,
+      "created_at": "2026-08-08T13:38:57Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31257544806",
-      "id": 31257544806,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31260032638",
+      "id": 31260032638,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-08T13:14:41.698975+00:00",
+  "finished_at": "2026-08-08T13:59:32.142888+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 40,
-      "created_at": "2026-08-08T12:34:19Z",
+      "age_minutes": 20,
+      "created_at": "2026-08-08T13:38:57Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31257544806",
-      "id": 31257544806,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31260032638",
+      "id": 31260032638,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 10,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/how-your-core-personality-traits-predict-your-drinking-habits-over-time/",
-  "latest_published_at": "2026-08-08T13:03:41+00:00",
-  "latest_title": "How Your Core Personality Traits Predict Your Drinking Habits over Time",
+  "latest_age_minutes": 3,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/study-reveals-prefrontal-cortex-can-hinder-learning-more-efficient-behaviors/",
+  "latest_published_at": "2026-08-08T13:56:16+00:00",
+  "latest_title": "Study Reveals Prefrontal Cortex Can Hinder Learning More Efficient Behaviors",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
