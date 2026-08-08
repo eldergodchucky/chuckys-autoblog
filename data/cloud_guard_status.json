@@ -1,7 +1,7 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 20,
+      "age_minutes": 61,
       "created_at": "2026-08-08T13:38:57Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31260032638",
@@ -10,10 +10,10 @@
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-08T13:59:32.142888+00:00",
+  "finished_at": "2026-08-08T14:40:13.431401+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 20,
+      "age_minutes": 61,
       "created_at": "2026-08-08T13:38:57Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31260032638",
@@ -22,10 +22,10 @@
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 3,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/study-reveals-prefrontal-cortex-can-hinder-learning-more-efficient-behaviors/",
-  "latest_published_at": "2026-08-08T13:56:16+00:00",
-  "latest_title": "Study Reveals Prefrontal Cortex Can Hinder Learning More Efficient Behaviors",
+  "latest_age_minutes": 11,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/not-looking-good-right-now-starship-likely-to-be-lost-at-sea/",
+  "latest_published_at": "2026-08-08T14:28:15+00:00",
+  "latest_title": "Nott Looking Good Right Now&#8217;: Starship Likely to Be Lost at Sea",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
