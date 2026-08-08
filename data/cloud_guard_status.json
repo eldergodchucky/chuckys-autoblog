@@ -1,7 +1,7 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 6,
+      "age_minutes": 59,
       "created_at": "2026-08-08T04:59:26Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31240679280",
@@ -10,10 +10,10 @@
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-08T05:06:07.507750+00:00",
+  "finished_at": "2026-08-08T05:59:23.234235+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 6,
+      "age_minutes": 59,
       "created_at": "2026-08-08T04:59:26Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31240679280",
@@ -22,10 +22,10 @@
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 5,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/greater-intentions-to-take-hypertension-medication/",
-  "latest_published_at": "2026-08-08T05:00:46+00:00",
-  "latest_title": "Greater Intentions to Take Hypertension Medication",
+  "latest_age_minutes": 8,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/google-puts-the-finishing-touches-on-proactive-assistance-ahead-of-pixel-11-launch/",
+  "latest_published_at": "2026-08-08T05:51:02+00:00",
+  "latest_title": "Google puts the finishing touches on Proactive Assistance ahead of Pixel 11 launch",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
