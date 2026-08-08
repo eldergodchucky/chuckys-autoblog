@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 58,
-      "created_at": "2026-08-07T23:36:26Z",
+      "age_minutes": 48,
+      "created_at": "2026-08-08T01:44:10Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31227648693",
-      "id": 31227648693,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31233349988",
+      "id": 31233349988,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-08T00:35:16.507117+00:00",
+  "finished_at": "2026-08-08T02:32:23.080657+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 58,
-      "created_at": "2026-08-07T23:36:26Z",
+      "age_minutes": 48,
+      "created_at": "2026-08-08T01:44:10Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31227648693",
-      "id": 31227648693,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31233349988",
+      "id": 31233349988,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 13,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/framework-customer-information-was-accessed-as-part-of-a-data-breach/",
-  "latest_published_at": "2026-08-08T00:22:09+00:00",
-  "latest_title": "Framework customer information was accessed as part of a data breach",
+  "latest_age_minutes": 14,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/pretreatment-ct-scans-may-contain-clues-about-the-risk-of-medication-related-ost/",
+  "latest_published_at": "2026-08-08T02:17:24+00:00",
+  "latest_title": "Pretreatment CT Scans May Contain Clues About the Risk of Medication-related Osteonecrosis",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
