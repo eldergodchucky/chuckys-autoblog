@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 63,
-      "created_at": "2026-08-08T02:49:25Z",
+      "age_minutes": 6,
+      "created_at": "2026-08-08T04:59:26Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31235833055",
-      "id": 31235833055,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31240679280",
+      "id": 31240679280,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-08T03:53:20.225545+00:00",
+  "finished_at": "2026-08-08T05:06:07.507750+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 63,
-      "created_at": "2026-08-08T02:49:25Z",
+      "age_minutes": 6,
+      "created_at": "2026-08-08T04:59:26Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31235833055",
-      "id": 31235833055,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31240679280",
+      "id": 31240679280,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 15,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/parkinson-s-linked-synuclein-blocks-protein-transport-in-neurons/",
-  "latest_published_at": "2026-08-08T03:38:13+00:00",
-  "latest_title": "Parkinson&#8217;s-linked \u0391-synuclein Blocks Protein Transport in Neurons",
+  "latest_age_minutes": 5,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/greater-intentions-to-take-hypertension-medication/",
+  "latest_published_at": "2026-08-08T05:00:46+00:00",
+  "latest_title": "Greater Intentions to Take Hypertension Medication",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
