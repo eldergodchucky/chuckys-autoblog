@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 45,
-      "created_at": "2026-08-08T11:29:40Z",
+      "age_minutes": 40,
+      "created_at": "2026-08-08T12:34:19Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31255093243",
-      "id": 31255093243,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31257544806",
+      "id": 31257544806,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-08T12:15:30.471123+00:00",
+  "finished_at": "2026-08-08T13:14:41.698975+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 45,
-      "created_at": "2026-08-08T11:29:40Z",
+      "age_minutes": 40,
+      "created_at": "2026-08-08T12:34:19Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31255093243",
-      "id": 31255093243,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31257544806",
+      "id": 31257544806,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 12,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/here-are-the-first-images-of-the-crater-left-on-the-moon/",
-  "latest_published_at": "2026-08-08T12:02:30+00:00",
-  "latest_title": "Here Are the First Images of the Crater Left on the Moon",
+  "latest_age_minutes": 10,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/how-your-core-personality-traits-predict-your-drinking-habits-over-time/",
+  "latest_published_at": "2026-08-08T13:03:41+00:00",
+  "latest_title": "How Your Core Personality Traits Predict Your Drinking Habits over Time",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
