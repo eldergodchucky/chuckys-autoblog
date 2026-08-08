@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 27,
-      "created_at": "2026-08-08T14:44:19Z",
+      "age_minutes": 2,
+      "created_at": "2026-08-08T15:46:23Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31262692088",
-      "id": 31262692088,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31265300937",
+      "id": 31265300937,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-08T15:12:10.340193+00:00",
+  "finished_at": "2026-08-08T15:48:59.709065+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 27,
-      "created_at": "2026-08-08T14:44:19Z",
+      "age_minutes": 2,
+      "created_at": "2026-08-08T15:46:23Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31262692088",
-      "id": 31262692088,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31265300937",
+      "id": 31265300937,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 11,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/the-sun-is-covered-in-tiny-whirlpools-we-ve-never-seen-before/",
-  "latest_published_at": "2026-08-08T15:00:59+00:00",
-  "latest_title": "The Sun Is Covered in Tiny Whirlpools We\u2019ve Never Seen Before",
+  "latest_age_minutes": 9,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/scientists-reveal-how-much-exercise-you-really-need-to-protect-your-heart/",
+  "latest_published_at": "2026-08-08T15:39:52+00:00",
+  "latest_title": "Scientists Reveal How Much Exercise You Really Need to Protect Your Heart",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
