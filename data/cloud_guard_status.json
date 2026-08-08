@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 53,
-      "created_at": "2026-08-08T07:09:13Z",
+      "age_minutes": 39,
+      "created_at": "2026-08-08T08:14:19Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31245521929",
-      "id": 31245521929,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31247958228",
+      "id": 31247958228,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-08T08:02:21.304816+00:00",
+  "finished_at": "2026-08-08T08:53:34.458678+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 53,
-      "created_at": "2026-08-08T07:09:13Z",
+      "age_minutes": 39,
+      "created_at": "2026-08-08T08:14:19Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31245521929",
-      "id": 31245521929,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31247958228",
+      "id": 31247958228,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 7,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/whatsapp-makes-parent-managed-accounts-easier-to-set-up-on-iphone/",
-  "latest_published_at": "2026-08-08T07:55:02+00:00",
-  "latest_title": "WhatsApp makes parent-managed accounts easier to set up on iPhone",
+  "latest_age_minutes": 5,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/nasa-s-imap-mission-releases-new-data-from-7-science-instruments/",
+  "latest_published_at": "2026-08-08T08:47:38+00:00",
+  "latest_title": "NASA\u2019s IMAP Mission Releases New Data from 7 Science Instruments",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
