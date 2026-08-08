@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 28,
-      "created_at": "2026-08-08T10:24:34Z",
+      "age_minutes": 6,
+      "created_at": "2026-08-08T11:29:40Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31252713510",
-      "id": 31252713510,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31255093243",
+      "id": 31255093243,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-08T10:53:12.872819+00:00",
+  "finished_at": "2026-08-08T11:36:17.943242+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 28,
-      "created_at": "2026-08-08T10:24:34Z",
+      "age_minutes": 6,
+      "created_at": "2026-08-08T11:29:40Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31252713510",
-      "id": 31252713510,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31255093243",
+      "id": 31255093243,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 3,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/brain-wiring-patterns-linked-to-harm-avoidance-in-obsessive-compulsive-disorder/",
-  "latest_published_at": "2026-08-08T10:49:58+00:00",
-  "latest_title": "Brain Wiring Patterns Linked to Harm Avoidance in Obsessive-compulsive Disorder",
+  "latest_age_minutes": 6,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/social-prescribing-boosts-health-checks-without-raising-costs/",
+  "latest_published_at": "2026-08-08T11:29:21+00:00",
+  "latest_title": "Social Prescribing Boosts Health Checks Without Raising Costs",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
