@@ -1,7 +1,7 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 6,
+      "age_minutes": 45,
       "created_at": "2026-08-08T11:29:40Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31255093243",
@@ -10,10 +10,10 @@
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-08T11:36:17.943242+00:00",
+  "finished_at": "2026-08-08T12:15:30.471123+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 6,
+      "age_minutes": 45,
       "created_at": "2026-08-08T11:29:40Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31255093243",
@@ -22,10 +22,10 @@
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 6,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/social-prescribing-boosts-health-checks-without-raising-costs/",
-  "latest_published_at": "2026-08-08T11:29:21+00:00",
-  "latest_title": "Social Prescribing Boosts Health Checks Without Raising Costs",
+  "latest_age_minutes": 12,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/here-are-the-first-images-of-the-crater-left-on-the-moon/",
+  "latest_published_at": "2026-08-08T12:02:30+00:00",
+  "latest_title": "Here Are the First Images of the Crater Left on the Moon",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
