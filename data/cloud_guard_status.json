@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 62,
-      "created_at": "2026-08-08T06:04:19Z",
+      "age_minutes": 53,
+      "created_at": "2026-08-08T07:09:13Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31243098578",
-      "id": 31243098578,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31245521929",
+      "id": 31245521929,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-08T07:06:19.709594+00:00",
+  "finished_at": "2026-08-08T08:02:21.304816+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 62,
-      "created_at": "2026-08-08T06:04:19Z",
+      "age_minutes": 53,
+      "created_at": "2026-08-08T07:09:13Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31243098578",
-      "id": 31243098578,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31245521929",
+      "id": 31245521929,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 14,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/q-a-medicare-spending-on-clinical-care-for-people-aging-with-hiv-projected/",
-  "latest_published_at": "2026-08-08T06:51:27+00:00",
-  "latest_title": "Q&amp;A: Medicare Spending on Clinical Care for People Aging with HIV Projected",
+  "latest_age_minutes": 7,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/whatsapp-makes-parent-managed-accounts-easier-to-set-up-on-iphone/",
+  "latest_published_at": "2026-08-08T07:55:02+00:00",
+  "latest_title": "WhatsApp makes parent-managed accounts easier to set up on iPhone",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
