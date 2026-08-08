@@ -1,7 +1,7 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 28,
+      "age_minutes": 56,
       "created_at": "2026-08-08T09:19:42Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31250326933",
@@ -10,10 +10,10 @@
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-08T09:47:42.797809+00:00",
+  "finished_at": "2026-08-08T10:15:46.562096+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 28,
+      "age_minutes": 56,
       "created_at": "2026-08-08T09:19:42Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31250326933",
@@ -22,10 +22,10 @@
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 10,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/on-this-day-in-space-aug-7/",
-  "latest_published_at": "2026-08-08T09:36:58+00:00",
-  "latest_title": "On This Day in Space! Aug. 7",
+  "latest_age_minutes": 7,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/engineers-race-to-save-stricken-link-rescue-spacecraft-before-it-s-too-late/",
+  "latest_published_at": "2026-08-08T10:08:35+00:00",
+  "latest_title": "Engineers Race to Save Stricken LINK Rescue Spacecraft Before It&#8217;s Too Late",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
