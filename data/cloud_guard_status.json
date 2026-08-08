@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 56,
-      "created_at": "2026-08-08T09:19:42Z",
+      "age_minutes": 28,
+      "created_at": "2026-08-08T10:24:34Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31250326933",
-      "id": 31250326933,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31252713510",
+      "id": 31252713510,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-08T10:15:46.562096+00:00",
+  "finished_at": "2026-08-08T10:53:12.872819+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 56,
-      "created_at": "2026-08-08T09:19:42Z",
+      "age_minutes": 28,
+      "created_at": "2026-08-08T10:24:34Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31250326933",
-      "id": 31250326933,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31252713510",
+      "id": 31252713510,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 7,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/engineers-race-to-save-stricken-link-rescue-spacecraft-before-it-s-too-late/",
-  "latest_published_at": "2026-08-08T10:08:35+00:00",
-  "latest_title": "Engineers Race to Save Stricken LINK Rescue Spacecraft Before It&#8217;s Too Late",
+  "latest_age_minutes": 3,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/08/brain-wiring-patterns-linked-to-harm-avoidance-in-obsessive-compulsive-disorder/",
+  "latest_published_at": "2026-08-08T10:49:58+00:00",
+  "latest_title": "Brain Wiring Patterns Linked to Harm Avoidance in Obsessive-compulsive Disorder",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
