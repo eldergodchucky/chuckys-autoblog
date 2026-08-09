@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 40,
-      "created_at": "2026-08-09T11:36:05Z",
+      "age_minutes": 38,
+      "created_at": "2026-08-09T12:40:06Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31311195657",
-      "id": 31311195657,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31313861001",
+      "id": 31313861001,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-09T12:16:43.116462+00:00",
+  "finished_at": "2026-08-09T13:18:36.514366+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 40,
-      "created_at": "2026-08-09T11:36:05Z",
+      "age_minutes": 38,
+      "created_at": "2026-08-09T12:40:06Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31311195657",
-      "id": 31311195657,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31313861001",
+      "id": 31313861001,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 7,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/protein-switch-determines-whether-liposarcoma-cells-will-become-aggressive/",
-  "latest_published_at": "2026-08-09T12:08:43+00:00",
-  "latest_title": "Protein Switchh&#8217; Determines Whether Liposarcoma Cells Will Become Aggressive",
+  "latest_age_minutes": 5,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/wine-beer-or-spirits-massive-study-finds-a-surprising-health-divide/",
+  "latest_published_at": "2026-08-09T13:13:22+00:00",
+  "latest_title": "Wine, Beer, or Spirits? Massive Study Finds a Surprising Health Divide",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
