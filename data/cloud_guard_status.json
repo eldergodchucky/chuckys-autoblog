@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 59,
-      "created_at": "2026-08-09T13:45:14Z",
+      "age_minutes": 25,
+      "created_at": "2026-08-09T14:49:56Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31316628919",
-      "id": 31316628919,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31319483109",
+      "id": 31319483109,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-09T14:45:12.413482+00:00",
+  "finished_at": "2026-08-09T15:14:56.894934+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 59,
-      "created_at": "2026-08-09T13:45:14Z",
+      "age_minutes": 25,
+      "created_at": "2026-08-09T14:49:56Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31316628919",
-      "id": 31316628919,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31319483109",
+      "id": 31319483109,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 11,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/rare-mars-meteorite-preserves-1-27-billion-year-old-clues-to-planet-s-deep-inter/",
-  "latest_published_at": "2026-08-09T14:33:52+00:00",
-  "latest_title": "Rare Mars Meteorite Preserves 1.27-billion-year-old Clues to Planet&#8217;s Deep Interior",
+  "latest_age_minutes": 7,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/this-simple-daily-habit-may-ease-pain-and-depression/",
+  "latest_published_at": "2026-08-09T15:07:03+00:00",
+  "latest_title": "This Simple Daily Habit May Ease Pain and Depression",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
