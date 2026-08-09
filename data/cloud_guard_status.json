@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 49,
-      "created_at": "2026-08-09T09:28:53Z",
+      "age_minutes": 24,
+      "created_at": "2026-08-09T10:32:18Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31306005595",
-      "id": 31306005595,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31308571738",
+      "id": 31308571738,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-09T10:18:38.832290+00:00",
+  "finished_at": "2026-08-09T10:56:58.433554+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 49,
-      "created_at": "2026-08-09T09:28:53Z",
+      "age_minutes": 24,
+      "created_at": "2026-08-09T10:32:18Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31306005595",
-      "id": 31306005595,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31308571738",
+      "id": 31308571738,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 2,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/psychology-research-suggests-a-common-response-to-negative-emotions-is-worse/",
-  "latest_published_at": "2026-08-09T10:16:12+00:00",
-  "latest_title": "Psychology Research Suggests a Common Response to Negative Emotions Is Worse",
+  "latest_age_minutes": 7,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/the-asteroid-that-may-be-three-worlds/",
+  "latest_published_at": "2026-08-09T10:49:10+00:00",
+  "latest_title": "The Asteroid that May Be Three Worlds",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
