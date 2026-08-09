@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 54,
-      "created_at": "2026-08-09T05:16:47Z",
+      "age_minutes": 57,
+      "created_at": "2026-08-09T06:21:16Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31296343466",
-      "id": 31296343466,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31298683993",
+      "id": 31298683993,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-09T06:11:03.372764+00:00",
+  "finished_at": "2026-08-09T07:19:09.388022+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 54,
-      "created_at": "2026-08-09T05:16:47Z",
+      "age_minutes": 57,
+      "created_at": "2026-08-09T06:21:16Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31296343466",
-      "id": 31296343466,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31298683993",
+      "id": 31298683993,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 4,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/indie-app-spotlight-pocket-jam-helps-you-learn-and-practice-your-favorite-songs/",
-  "latest_published_at": "2026-08-09T06:06:53+00:00",
-  "latest_title": "Indie App Spotlight: \u2018Pocket Jam\u2019 helps you learn and practice your favorite songs",
+  "latest_age_minutes": 12,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/weekly-poll-results-smart-glasses-are-a-solution-looking-for-a-problem/",
+  "latest_published_at": "2026-08-09T07:06:34+00:00",
+  "latest_title": "Weekly poll results: smart glasses are a solution looking for a problem",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
