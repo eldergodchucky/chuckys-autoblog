@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 60,
-      "created_at": "2026-08-09T14:49:56Z",
+      "age_minutes": 20,
+      "created_at": "2026-08-09T15:55:06Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31319483109",
-      "id": 31319483109,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31322395885",
+      "id": 31322395885,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-09T15:50:08.347672+00:00",
+  "finished_at": "2026-08-09T16:16:00.980474+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 60,
-      "created_at": "2026-08-09T14:49:56Z",
+      "age_minutes": 20,
+      "created_at": "2026-08-09T15:55:06Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31319483109",
-      "id": 31319483109,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31322395885",
+      "id": 31322395885,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 11,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/best-gaming-laptops-2026-razer/",
-  "latest_published_at": "2026-08-09T15:38:58+00:00",
-  "latest_title": "Best Gaming Laptops (2026): Razer",
+  "latest_age_minutes": 3,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/cancer-cells-exploit-a-hidden-immune-off-switch/",
+  "latest_published_at": "2026-08-09T16:12:24+00:00",
+  "latest_title": "Cancer Cells Exploit a Hidden Immune \u201cOff Switch\u201d",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
