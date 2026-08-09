@@ -1,7 +1,7 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 17,
+      "age_minutes": 59,
       "created_at": "2026-08-09T13:45:14Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31316628919",
@@ -10,10 +10,10 @@
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-09T14:02:48.191332+00:00",
+  "finished_at": "2026-08-09T14:45:12.413482+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 17,
+      "age_minutes": 59,
       "created_at": "2026-08-09T13:45:14Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31316628919",
@@ -22,10 +22,10 @@
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/stress-can-scramble-your-brain-s-internal-gps/",
-  "latest_published_at": "2026-08-09T14:02:16+00:00",
-  "latest_title": "Stress Can Scramble Your Brain\u2019s Internal GPS",
+  "latest_age_minutes": 11,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/rare-mars-meteorite-preserves-1-27-billion-year-old-clues-to-planet-s-deep-inter/",
+  "latest_published_at": "2026-08-09T14:33:52+00:00",
+  "latest_title": "Rare Mars Meteorite Preserves 1.27-billion-year-old Clues to Planet&#8217;s Deep Interior",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
