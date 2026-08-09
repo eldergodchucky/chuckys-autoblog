@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 59,
-      "created_at": "2026-08-09T18:05:47Z",
+      "age_minutes": 33,
+      "created_at": "2026-08-09T19:10:48Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31328146971",
-      "id": 31328146971,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31330963062",
+      "id": 31330963062,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-09T19:04:52.099933+00:00",
+  "finished_at": "2026-08-09T19:44:43.902861+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 59,
-      "created_at": "2026-08-09T18:05:47Z",
+      "age_minutes": 33,
+      "created_at": "2026-08-09T19:10:48Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31328146971",
-      "id": 31328146971,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31330963062",
+      "id": 31330963062,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 10,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/the-dark-triad-and-problematic-sexual-behavior-a-small-piece/",
-  "latest_published_at": "2026-08-09T18:54:38+00:00",
-  "latest_title": "The Dark Triad and Problematic Sexual Behavior: A Small Piece",
+  "latest_age_minutes": 1,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/09/dinosaurs-became-giants-so-why-did-they-never-become-tiny/",
+  "latest_published_at": "2026-08-09T19:43:33+00:00",
+  "latest_title": "Dinosaurs Became Giants \u2014 So Why Did They Never Become Tiny?",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
