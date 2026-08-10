@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 48,
-      "created_at": "2026-08-10T10:00:40Z",
+      "age_minutes": 31,
+      "created_at": "2026-08-10T11:04:57Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31377224292",
-      "id": 31377224292,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31381934200",
+      "id": 31381934200,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-10T10:49:13.215845+00:00",
+  "finished_at": "2026-08-10T11:36:55.999045+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 48,
-      "created_at": "2026-08-10T10:00:40Z",
+      "age_minutes": 31,
+      "created_at": "2026-08-10T11:04:57Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31377224292",
-      "id": 31377224292,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31381934200",
+      "id": 31381934200,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/10/dgce-sig-seminar-27-aug-2026/",
-  "latest_published_at": "2026-08-10T10:48:42+00:00",
-  "latest_title": "DGCE SIG Seminar, 27 Aug 2026",
+  "latest_age_minutes": 14,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/10/iphone-18-pro-costing-apple-38-more-to-make/",
+  "latest_published_at": "2026-08-10T11:22:21+00:00",
+  "latest_title": "iPhone 18 Pro Costing Apple 38% More to Make",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
