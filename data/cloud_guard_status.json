@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 24,
-      "created_at": "2026-08-10T12:10:23Z",
+      "age_minutes": 47,
+      "created_at": "2026-08-10T14:21:46Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31386774578",
-      "id": 31386774578,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31397734687",
+      "id": 31397734687,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-10T12:34:24.193522+00:00",
+  "finished_at": "2026-08-10T15:09:30.304371+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 24,
-      "created_at": "2026-08-10T12:10:23Z",
+      "age_minutes": 47,
+      "created_at": "2026-08-10T14:21:46Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31386774578",
-      "id": 31386774578,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31397734687",
+      "id": 31397734687,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 6,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/10/molecular-mapping-reveals-hidden-cellular-programs-in-heart-transplant-rejection/",
-  "latest_published_at": "2026-08-10T12:27:41+00:00",
-  "latest_title": "Molecular Mapping Reveals Hidden Cellular Programs in Heart Transplant Rejection",
+  "latest_age_minutes": 14,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/10/the-sun-will-vanish-over-europe-in-a-rare-total-solar-eclipse/",
+  "latest_published_at": "2026-08-10T14:55:23+00:00",
+  "latest_title": "The Sun Will Vanish over Europe in a Rare Total Solar Eclipse",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
