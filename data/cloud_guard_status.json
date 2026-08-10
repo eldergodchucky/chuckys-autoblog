@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 47,
-      "created_at": "2026-08-10T14:21:46Z",
+      "age_minutes": 43,
+      "created_at": "2026-08-10T15:27:53Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31397734687",
-      "id": 31397734687,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31403722647",
+      "id": 31403722647,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-10T15:09:30.304371+00:00",
+  "finished_at": "2026-08-10T16:10:56.184729+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 47,
-      "created_at": "2026-08-10T14:21:46Z",
+      "age_minutes": 43,
+      "created_at": "2026-08-10T15:27:53Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31397734687",
-      "id": 31397734687,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31403722647",
+      "id": 31403722647,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 14,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/10/the-sun-will-vanish-over-europe-in-a-rare-total-solar-eclipse/",
-  "latest_published_at": "2026-08-10T14:55:23+00:00",
-  "latest_title": "The Sun Will Vanish over Europe in a Rare Total Solar Eclipse",
+  "latest_age_minutes": 9,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/10/ksc-physical-assets/",
+  "latest_published_at": "2026-08-10T16:00:57+00:00",
+  "latest_title": "KSC Physical Assets",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
