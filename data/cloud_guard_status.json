@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 35,
-      "created_at": "2026-08-10T18:43:50Z",
+      "age_minutes": 15,
+      "created_at": "2026-08-10T19:49:42Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31420544640",
-      "id": 31420544640,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31426013700",
+      "id": 31426013700,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-10T19:19:26.006953+00:00",
+  "finished_at": "2026-08-10T20:05:41.831075+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 35,
-      "created_at": "2026-08-10T18:43:50Z",
+      "age_minutes": 15,
+      "created_at": "2026-08-10T19:49:42Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31420544640",
-      "id": 31420544640,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31426013700",
+      "id": 31426013700,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 1,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/10/ksc-research-technology-development/",
-  "latest_published_at": "2026-08-10T19:17:26+00:00",
-  "latest_title": "KSC Research &amp; Technology Development",
+  "latest_age_minutes": 14,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/10/robot-recycler-salvages-parts-from-broken-machines/",
+  "latest_published_at": "2026-08-10T19:51:20+00:00",
+  "latest_title": "Robot Recycler Salvages Parts from Broken Machines",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
