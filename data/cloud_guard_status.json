@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 45,
-      "created_at": "2026-08-10T08:56:27Z",
+      "age_minutes": 48,
+      "created_at": "2026-08-10T10:00:40Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31372305922",
-      "id": 31372305922,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31377224292",
+      "id": 31377224292,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-10T09:41:49.256952+00:00",
+  "finished_at": "2026-08-10T10:49:13.215845+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 45,
-      "created_at": "2026-08-10T08:56:27Z",
+      "age_minutes": 48,
+      "created_at": "2026-08-10T10:00:40Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31372305922",
-      "id": 31372305922,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31377224292",
+      "id": 31377224292,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 5,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/10/ive-reviewed-android-foldables-for-years-the-iphone-ultra-needs-these-5-things-to-succeed/",
-  "latest_published_at": "2026-08-10T09:36:31+00:00",
-  "latest_title": "I\u2019ve reviewed Android foldables for years. The iPhone Ultra needs these 5 things to succeed",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/10/dgce-sig-seminar-27-aug-2026/",
+  "latest_published_at": "2026-08-10T10:48:42+00:00",
+  "latest_title": "DGCE SIG Seminar, 27 Aug 2026",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
