@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 27,
-      "created_at": "2026-08-10T17:38:41Z",
+      "age_minutes": 35,
+      "created_at": "2026-08-10T18:43:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31415048204",
-      "id": 31415048204,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31420544640",
+      "id": 31420544640,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-10T18:05:46.430042+00:00",
+  "finished_at": "2026-08-10T19:19:26.006953+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 27,
-      "created_at": "2026-08-10T17:38:41Z",
+      "age_minutes": 35,
+      "created_at": "2026-08-10T18:43:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31415048204",
-      "id": 31415048204,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31420544640",
+      "id": 31420544640,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 9,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/10/3d-printing-method-creates-soft-actuators-with-switchable-heat-driven-motion/",
-  "latest_published_at": "2026-08-10T17:55:55+00:00",
-  "latest_title": "3D Printing Method Creates Soft Actuators with Switchable Heat-driven Motion",
+  "latest_age_minutes": 1,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/10/ksc-research-technology-development/",
+  "latest_published_at": "2026-08-10T19:17:26+00:00",
+  "latest_title": "KSC Research &amp; Technology Development",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
