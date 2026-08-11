@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 59,
-      "created_at": "2026-08-10T23:03:30Z",
+      "age_minutes": 2,
+      "created_at": "2026-08-11T02:19:10Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31440834035",
-      "id": 31440834035,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31452006668",
+      "id": 31452006668,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-11T00:03:18.955968+00:00",
+  "finished_at": "2026-08-11T02:21:31.100203+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 59,
-      "created_at": "2026-08-10T23:03:30Z",
+      "age_minutes": 2,
+      "created_at": "2026-08-11T02:19:10Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31440834035",
-      "id": 31440834035,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31452006668",
+      "id": 31452006668,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 11,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/11/molecular-structures-provide-roadmap-for-targeted-parkinson-s-disease-therapeuti/",
-  "latest_published_at": "2026-08-10T23:52:14+00:00",
-  "latest_title": "Molecular Structures Provide Roadmap for Targeted Parkinson&#8217;s Disease Therapeutics",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/11/largest-real-world-study-finds-early-flu-antiviral-treatment-reduces-icu-admissi/",
+  "latest_published_at": "2026-08-11T02:20:46+00:00",
+  "latest_title": "Largest Real-world Study Finds Early Flu Antiviral Treatment Reduces ICU Admissions",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
