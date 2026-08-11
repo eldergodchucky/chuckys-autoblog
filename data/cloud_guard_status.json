@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 48,
-      "created_at": "2026-08-11T04:29:10Z",
+      "age_minutes": 33,
+      "created_at": "2026-08-11T05:34:23Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31458615170",
-      "id": 31458615170,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31462084681",
+      "id": 31462084681,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-11T05:17:36.881446+00:00",
+  "finished_at": "2026-08-11T06:07:58.722754+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 48,
-      "created_at": "2026-08-11T04:29:10Z",
+      "age_minutes": 33,
+      "created_at": "2026-08-11T05:34:23Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31458615170",
-      "id": 31458615170,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31462084681",
+      "id": 31462084681,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 10,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/11/ios-27-hints-at-apple-reference-image-photo-authentication/",
-  "latest_published_at": "2026-08-11T05:06:40+00:00",
-  "latest_title": "iOS 27 Hints at &#039;Apple Reference Image&#039; Photo Authentication",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/11/prediabetes-remission-could-become-a-central-goal-of-diabetes-prevention/",
+  "latest_published_at": "2026-08-11T06:07:27+00:00",
+  "latest_title": "Prediabetes Remission Could Become a Central Goal of Diabetes Prevention",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
