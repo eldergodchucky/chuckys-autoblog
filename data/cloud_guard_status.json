@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 54,
-      "created_at": "2026-08-11T08:49:24Z",
+      "age_minutes": 41,
+      "created_at": "2026-08-11T09:55:04Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31474912998",
-      "id": 31474912998,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31479857071",
+      "id": 31479857071,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-11T09:44:14.494208+00:00",
+  "finished_at": "2026-08-11T10:36:32.515678+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 54,
-      "created_at": "2026-08-11T08:49:24Z",
+      "age_minutes": 41,
+      "created_at": "2026-08-11T09:55:04Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31474912998",
-      "id": 31474912998,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31479857071",
+      "id": 31479857071,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 5,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/11/patients-wary-of-governments/",
-  "latest_published_at": "2026-08-11T09:38:45+00:00",
-  "latest_title": "Patients Wary of Governments",
+  "latest_age_minutes": 8,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/11/google-teases-the-pixel-11-pro-in-new-video/",
+  "latest_published_at": "2026-08-11T10:28:27+00:00",
+  "latest_title": "Google Teases the Pixel 11 Pro in New Video",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
