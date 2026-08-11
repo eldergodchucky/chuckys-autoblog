@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 48,
-      "created_at": "2026-08-11T13:10:48Z",
+      "age_minutes": 50,
+      "created_at": "2026-08-11T14:16:36Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31494853295",
-      "id": 31494853295,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31500655491",
+      "id": 31500655491,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-11T13:59:37.679690+00:00",
+  "finished_at": "2026-08-11T15:07:31.358405+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 48,
-      "created_at": "2026-08-11T13:10:48Z",
+      "age_minutes": 50,
+      "created_at": "2026-08-11T14:16:36Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31494853295",
-      "id": 31494853295,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31500655491",
+      "id": 31500655491,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 15,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/11/nasa-x-59-explainer-science-of-sonic-booms/",
-  "latest_published_at": "2026-08-11T13:44:08+00:00",
-  "latest_title": "NASA X-59 Explainer: Science of Sonic Booms",
+  "latest_age_minutes": 1,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/11/fish-on-trial-does-this-brain-food-help-prevent-alzheimer-s-disease/",
+  "latest_published_at": "2026-08-11T15:06:10+00:00",
+  "latest_title": "Fish on Trial: Does This Brainn Food&#8217; Help Prevent Alzheimer&#8217;s Disease?",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
