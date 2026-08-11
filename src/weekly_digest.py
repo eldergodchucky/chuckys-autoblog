@@ -154,7 +154,7 @@ def build_digest_article(
         "excerpt": f"Our weekly roundup of the most important stories on ChuckysCarnage, from {label}.",
         "html": "\n".join([intro] + sections + [footer]),
         "categories": [DIGEST_CATEGORY],
-        "tags": [],
+        "tags": ["featured"],
     }
 
 
