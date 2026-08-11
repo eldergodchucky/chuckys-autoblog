@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 33,
-      "created_at": "2026-08-11T05:34:23Z",
+      "age_minutes": 60,
+      "created_at": "2026-08-11T06:39:36Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31462084681",
-      "id": 31462084681,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31465903156",
+      "id": 31465903156,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-11T06:07:58.722754+00:00",
+  "finished_at": "2026-08-11T07:40:22.642521+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 33,
-      "created_at": "2026-08-11T05:34:23Z",
+      "age_minutes": 60,
+      "created_at": "2026-08-11T06:39:36Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31462084681",
-      "id": 31462084681,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31465903156",
+      "id": 31465903156,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/11/prediabetes-remission-could-become-a-central-goal-of-diabetes-prevention/",
-  "latest_published_at": "2026-08-11T06:07:27+00:00",
-  "latest_title": "Prediabetes Remission Could Become a Central Goal of Diabetes Prevention",
+  "latest_age_minutes": 3,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/11/your-wear-os-smartwatch-could-soon-show-your-workout-route-more-accurately/",
+  "latest_published_at": "2026-08-11T07:36:56+00:00",
+  "latest_title": "Your Wear OS smartwatch could soon show your workout route more accurately",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
