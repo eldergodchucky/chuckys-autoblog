@@ -1,7 +1,7 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 17,
+      "age_minutes": 59,
       "created_at": "2026-08-10T23:03:30Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31440834035",
@@ -10,10 +10,10 @@
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-10T23:20:57.807404+00:00",
+  "finished_at": "2026-08-11T00:03:18.955968+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 17,
+      "age_minutes": 59,
       "created_at": "2026-08-10T23:03:30Z",
       "event": "workflow_dispatch",
       "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31440834035",
@@ -22,10 +22,10 @@
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/11/study-reveals-growing-signs-of-malaria-drug-resistance-in-ethiopia/",
-  "latest_published_at": "2026-08-10T23:20:32+00:00",
-  "latest_title": "Study Reveals Growing Signs of Malaria Drug Resistance in Ethiopia",
+  "latest_age_minutes": 11,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/11/molecular-structures-provide-roadmap-for-targeted-parkinson-s-disease-therapeuti/",
+  "latest_published_at": "2026-08-10T23:52:14+00:00",
+  "latest_title": "Molecular Structures Provide Roadmap for Targeted Parkinson&#8217;s Disease Therapeutics",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
