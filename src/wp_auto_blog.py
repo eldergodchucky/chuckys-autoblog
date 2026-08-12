@@ -4724,6 +4724,8 @@ def wp_request(path: str, payload: dict[str, Any] | None = None, method: str = "
 
     app_password = os.getenv("WP_APPLICATION_PASSWORD", "")
 
+    access_token = os.getenv("WP_COM_ACCESS_TOKEN", "").strip()
+
     if not base_url or not username or not app_password:
 
         raise RuntimeError("WP_BASE_URL, WP_USERNAME, and WP_APPLICATION_PASSWORD are required.")
@@ -4741,7 +4743,10 @@ def wp_request(path: str, payload: dict[str, Any] | None = None, method: str = "
     else:
         url = f"{base}{rest_root}/{path.lstrip('/')}"
 
-    token = base64.b64encode(f"{username}:{app_password}".encode("utf-8")).decode("ascii")
+    if access_token:
+        authorization = f"Bearer {access_token}"
+    else:
+        authorization = f"Basic {base64.b64encode(f'{username}:{app_password}'.encode('utf-8')).decode('ascii')}"
 
     data = None if payload is None else json.dumps(payload).encode("utf-8")
 
@@ -4753,7 +4758,7 @@ def wp_request(path: str, payload: dict[str, Any] | None = None, method: str = "
 
         headers={
 
-            "Authorization": f"Basic {token}",
+            "Authorization": authorization,
 
             "Content-Type": "application/json",
 
