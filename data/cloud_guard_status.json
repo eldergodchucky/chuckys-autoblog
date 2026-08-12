@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 46,
-      "created_at": "2026-08-12T22:05:27Z",
+      "age_minutes": 42,
+      "created_at": "2026-08-12T23:09:54Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31645450796",
-      "id": 31645450796,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31649858162",
+      "id": 31649858162,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-12T22:52:21.369971+00:00",
+  "finished_at": "2026-08-12T23:52:15.834350+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 46,
-      "created_at": "2026-08-12T22:05:27Z",
+      "age_minutes": 42,
+      "created_at": "2026-08-12T23:09:54Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31645450796",
-      "id": 31645450796,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31649858162",
+      "id": 31649858162,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 14,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/12/claude-cowork-can-now-run-in-a-chrome-sidebar/",
-  "latest_published_at": "2026-08-12T22:38:16+00:00",
-  "latest_title": "Claude Cowork can now run in a Chrome sidebar",
+  "latest_age_minutes": 10,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/google-unveils-latest-pixel-phones-with-slimmer-cameras-and-more-ai-features/",
+  "latest_published_at": "2026-08-12T23:42:08+00:00",
+  "latest_title": "Google unveils latest Pixel phones with slimmer cameras and more AI features",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
