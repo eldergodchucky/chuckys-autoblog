@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 46,
-      "created_at": "2026-08-12T03:42:30Z",
+      "age_minutes": 11,
+      "created_at": "2026-08-12T05:49:18Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31560909735",
-      "id": 31560909735,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31567811907",
+      "id": 31567811907,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-12T04:28:48.004310+00:00",
+  "finished_at": "2026-08-12T06:00:24.031110+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 46,
-      "created_at": "2026-08-12T03:42:30Z",
+      "age_minutes": 11,
+      "created_at": "2026-08-12T05:49:18Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31560909735",
-      "id": 31560909735,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31567811907",
+      "id": 31567811907,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 7,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/12/splitting-a-ball-bearing-to-cut-out-backlash/",
-  "latest_published_at": "2026-08-12T04:21:10+00:00",
-  "latest_title": "Splitting a Ball Bearing to Cut Out Backlash",
+  "latest_age_minutes": 9,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/12/google-tv-just-got-10000-free-movies-and-shows-to-binge/",
+  "latest_published_at": "2026-08-12T05:50:59+00:00",
+  "latest_title": "Google TV just got 10,000 free movies and shows to binge",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
