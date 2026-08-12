@@ -4826,7 +4826,39 @@ def wp_term_ids(kind: str, names: list[str]) -> list[int]:
 
         if create_terms:
 
-            created = wp_request(endpoint, {"name": name}, method="POST")
+            try:
+
+                created = wp_request(endpoint, {"name": name}, method="POST")
+
+            except RuntimeError as exc:
+
+                raw = str(exc)
+
+                marker = '"term_id":'
+
+                idx = raw.find(marker)
+
+                if idx >= 0:
+
+                    digits = ""
+
+                    for ch in raw[idx + len(marker):].lstrip():
+
+                        if ch.isdigit():
+
+                            digits += ch
+
+                        else:
+
+                            break
+
+                    if digits:
+
+                        ids.append(int(digits))
+
+                        continue
+
+                raise
 
             if isinstance(created, dict) and created.get("id"):
 
