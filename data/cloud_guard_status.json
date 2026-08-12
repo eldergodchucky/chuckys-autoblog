@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 54,
-      "created_at": "2026-08-12T21:01:03Z",
+      "age_minutes": 46,
+      "created_at": "2026-08-12T22:05:27Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31640510735",
-      "id": 31640510735,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31645450796",
+      "id": 31645450796,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-12T21:55:46.749721+00:00",
+  "finished_at": "2026-08-12T22:52:21.369971+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 54,
-      "created_at": "2026-08-12T21:01:03Z",
+      "age_minutes": 46,
+      "created_at": "2026-08-12T22:05:27Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31640510735",
-      "id": 31640510735,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31645450796",
+      "id": 31645450796,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 6,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/12/why-ai-may-boost-carbon-emissions-instead-of-cutting-them/",
-  "latest_published_at": "2026-08-12T21:49:27+00:00",
-  "latest_title": "Why AI may boost carbon emissions instead of cutting them",
+  "latest_age_minutes": 14,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/12/claude-cowork-can-now-run-in-a-chrome-sidebar/",
+  "latest_published_at": "2026-08-12T22:38:16+00:00",
+  "latest_title": "Claude Cowork can now run in a Chrome sidebar",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
