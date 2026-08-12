@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 51,
-      "created_at": "2026-08-12T17:47:55Z",
+      "age_minutes": 59,
+      "created_at": "2026-08-12T18:51:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31624426247",
-      "id": 31624426247,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31629770172",
+      "id": 31629770172,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-12T18:39:32.661507+00:00",
+  "finished_at": "2026-08-12T19:51:03.945516+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 51,
-      "created_at": "2026-08-12T17:47:55Z",
+      "age_minutes": 59,
+      "created_at": "2026-08-12T18:51:50Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31624426247",
-      "id": 31624426247,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31629770172",
+      "id": 31629770172,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 5,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/12/plug-and-pwn-attack-uses-fake-usb-devices-for-windows-system-access/",
-  "latest_published_at": "2026-08-12T18:34:31+00:00",
-  "latest_title": "Plug and Pwn attack uses fake USB devices for Windows SYSTEM access",
+  "latest_age_minutes": 10,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/12/here-is-how-much-the-new-pixel-11-phones-cost/",
+  "latest_published_at": "2026-08-12T19:40:23+00:00",
+  "latest_title": "Here is how much the new Pixel 11 phones cost",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
