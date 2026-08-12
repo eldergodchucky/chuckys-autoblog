@@ -4730,7 +4730,16 @@ def wp_request(path: str, payload: dict[str, Any] | None = None, method: str = "
 
 
 
-    url = f"{base_url}/wp-json/wp/v2/{path.lstrip('/')}"
+    base = base_url.rstrip("/")
+    rest_root = "/wp-json/wp/v2"
+    if base.endswith(rest_root):
+        url = f"{base}/{path.lstrip('/')}"
+    elif "wp/v2/sites/" in base:
+        url = f"{base}/{path.lstrip('/')}"
+    elif "public-api.wordpress.com" in base:
+        url = f"{base}/{path.lstrip('/')}"
+    else:
+        url = f"{base}{rest_root}/{path.lstrip('/')}"
 
     token = base64.b64encode(f"{username}:{app_password}".encode("utf-8")).decode("ascii")
 
