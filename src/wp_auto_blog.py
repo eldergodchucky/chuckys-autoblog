@@ -4917,7 +4917,7 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
 
         "excerpt": article.get("excerpt", ""),
 
-        "content": article["html"],
+        "content": str(article["html"]).replace("[more]", "<!--more-->"),
 
         "status": post_status(),
 
@@ -5038,7 +5038,7 @@ def email_shortcodes(article: dict[str, Any]) -> list[str]:
 
 def render_article_html(article: dict[str, Any], hero_src: str = "") -> str:
 
-    body_html = str(article["html"])
+    body_html = str(article["html"]).replace("[more]", "<!--more-->")
 
     if HERO_IMAGE_PLACEHOLDER in body_html:
 
