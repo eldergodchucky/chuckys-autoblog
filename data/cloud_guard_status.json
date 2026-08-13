@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 23,
-      "created_at": "2026-08-13T16:14:58Z",
+      "age_minutes": 26,
+      "created_at": "2026-08-13T17:18:42Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31719703546",
-      "id": 31719703546,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31725058360",
+      "id": 31725058360,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-13T16:38:56.641387+00:00",
+  "finished_at": "2026-08-13T17:44:46.489321+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 23,
-      "created_at": "2026-08-13T16:14:58Z",
+      "age_minutes": 26,
+      "created_at": "2026-08-13T17:18:42Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31719703546",
-      "id": 31719703546,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31725058360",
+      "id": 31725058360,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 7,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/brief-physical-access-may-let-attackers-alter-boeing-737-flight-instructions/",
-  "latest_published_at": "2026-08-13T16:31:48+00:00",
-  "latest_title": "Brief physical access may let attackers alter Boeing 737 flight instructions",
+  "latest_age_minutes": 8,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/previewing-ultrafast-mode-gpt-5-6-sol-at-up-to-14x-the-speed/",
+  "latest_published_at": "2026-08-13T17:35:55+00:00",
+  "latest_title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
