@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 26,
-      "created_at": "2026-08-13T09:51:09Z",
+      "age_minutes": 18,
+      "created_at": "2026-08-13T10:54:43Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31688458801",
-      "id": 31688458801,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31693187336",
+      "id": 31693187336,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-13T10:17:50.030903+00:00",
+  "finished_at": "2026-08-13T11:13:39.727796+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 26,
-      "created_at": "2026-08-13T09:51:09Z",
+      "age_minutes": 18,
+      "created_at": "2026-08-13T10:54:43Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31688458801",
-      "id": 31688458801,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31693187336",
+      "id": 31693187336,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 9,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/there-s-a-fatty-liver-epidemic-ai-could-help-get-ahead-of-it-2/",
-  "latest_published_at": "2026-08-13T10:07:56+00:00",
-  "latest_title": "There\u2019s a Fatty Liver Epidemic. AI Could Help Get Ahead of It",
+  "latest_age_minutes": 1,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/new-private-perceptor-probes-will-keep-an-eye-on-satellites-high-above-3/",
+  "latest_published_at": "2026-08-13T11:11:41+00:00",
+  "latest_title": "New private &#8216;Perceptor&#8217; probes will keep an eye on satellites high above",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
