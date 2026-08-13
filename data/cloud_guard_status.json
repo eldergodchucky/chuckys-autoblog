@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 13,
-      "created_at": "2026-08-13T02:23:05Z",
+      "age_minutes": 1,
+      "created_at": "2026-08-13T04:30:05Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31660653362",
-      "id": 31660653362,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31667210204",
+      "id": 31667210204,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-13T02:36:38.263394+00:00",
+  "finished_at": "2026-08-13T04:32:02.073732+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 13,
-      "created_at": "2026-08-13T02:23:05Z",
+      "age_minutes": 1,
+      "created_at": "2026-08-13T04:30:05Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31660653362",
-      "id": 31660653362,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31667210204",
+      "id": 31667210204,
       "status": "in_progress"
     }
   ],
   "github_error": "",
   "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/apple-in-talks-to-pay-publishers-for-news-content-to-power-siri-ai/",
-  "latest_published_at": "2026-08-13T02:36:12+00:00",
-  "latest_title": "Apple in Talks to Pay Publishers for News Content to Power Siri AI",
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/postpartum-pelvic-floor-symptoms-linked-to-depression-and-low-self-esteem-2/",
+  "latest_published_at": "2026-08-13T04:31:38+00:00",
+  "latest_title": "Postpartum pelvic floor symptoms linked to depression and low self-esteem",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
