@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 46,
-      "created_at": "2026-08-13T21:34:31Z",
+      "age_minutes": 42,
+      "created_at": "2026-08-13T22:38:54Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31746258000",
-      "id": 31746258000,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31750795563",
+      "id": 31750795563,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-13T22:20:57.808026+00:00",
+  "finished_at": "2026-08-13T23:21:01.711862+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 46,
-      "created_at": "2026-08-13T21:34:31Z",
+      "age_minutes": 42,
+      "created_at": "2026-08-13T22:38:54Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31746258000",
-      "id": 31746258000,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31750795563",
+      "id": 31750795563,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 13,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/thursday-packed-with-more-spacewalk-preps-and-advanced-tech-research/",
-  "latest_published_at": "2026-08-13T22:07:31+00:00",
-  "latest_title": "Thursday Packed with More Spacewalk Preps and Advanced Tech Research",
+  "latest_age_minutes": 9,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/14/updated-livery-for-nasa-s-b777-200er-research-aircraft/",
+  "latest_published_at": "2026-08-13T23:11:39+00:00",
+  "latest_title": "Updated Livery for NASA\u2019s B777-200ER Research Aircraft",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
