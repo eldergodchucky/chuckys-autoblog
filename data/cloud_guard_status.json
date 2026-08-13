@@ -1,30 +1,30 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 17,
-      "created_at": "2026-08-13T18:23:02Z",
+      "age_minutes": 19,
+      "created_at": "2026-08-13T19:26:46Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31730441312",
-      "id": 31730441312,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31735871130",
+      "id": 31735871130,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-13T18:40:23.131641+00:00",
+  "finished_at": "2026-08-13T19:46:29.161858+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 17,
-      "created_at": "2026-08-13T18:23:02Z",
+      "age_minutes": 19,
+      "created_at": "2026-08-13T19:26:46Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31730441312",
-      "id": 31730441312,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31735871130",
+      "id": 31735871130,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 0,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/three-new-iphones-launch-next-month-3/",
-  "latest_published_at": "2026-08-13T18:39:53+00:00",
+  "latest_age_minutes": 2,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/three-new-iphones-launch-next-month-4/",
+  "latest_published_at": "2026-08-13T19:43:32+00:00",
   "latest_title": "Three new iPhones launch next month",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
