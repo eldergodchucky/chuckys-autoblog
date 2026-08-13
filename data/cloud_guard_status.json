@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 18,
-      "created_at": "2026-08-13T10:54:43Z",
-      "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31693187336",
-      "id": 31693187336,
+      "age_minutes": 38,
+      "created_at": "2026-08-13T11:23:22Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31695278674",
+      "id": 31695278674,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-13T11:13:39.727796+00:00",
+  "finished_at": "2026-08-13T12:02:04.372248+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 18,
-      "created_at": "2026-08-13T10:54:43Z",
-      "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31693187336",
-      "id": 31693187336,
+      "age_minutes": 38,
+      "created_at": "2026-08-13T11:23:22Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31695278674",
+      "id": 31695278674,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 1,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/new-private-perceptor-probes-will-keep-an-eye-on-satellites-high-above-3/",
-  "latest_published_at": "2026-08-13T11:11:41+00:00",
-  "latest_title": "New private &#8216;Perceptor&#8217; probes will keep an eye on satellites high above",
+  "latest_age_minutes": 2,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/apple-closing-basingstoke-store-as-nearby-reading-location-expands/",
+  "latest_published_at": "2026-08-13T12:00:02+00:00",
+  "latest_title": "Apple Closing Basingstoke Store as Nearby Reading Location Expands",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
