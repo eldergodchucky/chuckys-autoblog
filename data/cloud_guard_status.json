@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 26,
-      "created_at": "2026-08-13T17:18:42Z",
+      "age_minutes": 17,
+      "created_at": "2026-08-13T18:23:02Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31725058360",
-      "id": 31725058360,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31730441312",
+      "id": 31730441312,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-13T17:44:46.489321+00:00",
+  "finished_at": "2026-08-13T18:40:23.131641+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 26,
-      "created_at": "2026-08-13T17:18:42Z",
+      "age_minutes": 17,
+      "created_at": "2026-08-13T18:23:02Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31725058360",
-      "id": 31725058360,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31730441312",
+      "id": 31730441312,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 8,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/previewing-ultrafast-mode-gpt-5-6-sol-at-up-to-14x-the-speed/",
-  "latest_published_at": "2026-08-13T17:35:55+00:00",
-  "latest_title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/three-new-iphones-launch-next-month-3/",
+  "latest_published_at": "2026-08-13T18:39:53+00:00",
+  "latest_title": "Three new iPhones launch next month",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
