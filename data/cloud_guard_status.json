@@ -1,31 +1,31 @@
 {
   "active_main_runs": [
     {
-      "age_minutes": 42,
-      "created_at": "2026-08-12T23:09:54Z",
+      "age_minutes": 13,
+      "created_at": "2026-08-13T02:23:05Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31649858162",
-      "id": 31649858162,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31660653362",
+      "id": 31660653362,
       "status": "in_progress"
     }
   ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-12T23:52:15.834350+00:00",
+  "finished_at": "2026-08-13T02:36:38.263394+00:00",
   "fresh_main_runs": [
     {
-      "age_minutes": 42,
-      "created_at": "2026-08-12T23:09:54Z",
+      "age_minutes": 13,
+      "created_at": "2026-08-13T02:23:05Z",
       "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31649858162",
-      "id": 31649858162,
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31660653362",
+      "id": 31660653362,
       "status": "in_progress"
     }
   ],
   "github_error": "",
-  "latest_age_minutes": 10,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/google-unveils-latest-pixel-phones-with-slimmer-cameras-and-more-ai-features/",
-  "latest_published_at": "2026-08-12T23:42:08+00:00",
-  "latest_title": "Google unveils latest Pixel phones with slimmer cameras and more AI features",
+  "latest_age_minutes": 0,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/13/apple-in-talks-to-pay-publishers-for-news-content-to-power-siri-ai/",
+  "latest_published_at": "2026-08-13T02:36:12+00:00",
+  "latest_title": "Apple in Talks to Pay Publishers for News Content to Power Siri AI",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
