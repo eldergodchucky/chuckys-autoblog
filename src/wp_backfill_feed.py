@@ -7,12 +7,17 @@ import argparse
 import html
 import os
 import re
+import sys
 import tempfile
 import time
 import urllib.request
 from pathlib import Path
 
 import wp_auto_blog as wp
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 
 IMAGE_RE = re.compile(r'<img\b[^>]*\bsrc=["\']([^"\']+)["\']', re.IGNORECASE)
