@@ -104,7 +104,11 @@ MORE_TAG_RE = re.compile(
 )
 
 LEADING_MEDIA_RE = re.compile(
-    r"^\s*(?:<figure\b[^>]*>.*?</figure>|<p\b[^>]*>\s*<img\b[^>]*>\s*</p>|<img\b[^>]*/?>)",
+    r"^\s*(?:<p\b[^>]*>\s*<a\b[^>]*>\s*<img\b[^>]*/?>\s*</a>\s*</p>"
+    r"|<a\b[^>]*>\s*<img\b[^>]*/?>\s*</a>"
+    r"|<figure\b[^>]*>.*?</figure>"
+    r"|<p\b[^>]*>\s*<img\b[^>]*>\s*</p>"
+    r"|<img\b[^>]*/?>)",
     re.IGNORECASE | re.DOTALL,
 )
 
