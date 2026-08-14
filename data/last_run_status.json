@@ -1,8 +1,24 @@
 {
   "dry_run": false,
-  "finished_at": "2026-08-06T19:31:08.189184+00:00",
-  "max_posts_per_day": 24,
-  "message": "Daily cap reached: 103/24 posts already sent today.",
-  "posted_today": 103,
-  "state": "skipped"
+  "feed_warnings": 2,
+  "feeds": 59,
+  "fetched": 2755,
+  "finished_at": "2026-08-14T01:52:16.769237+00:00",
+  "inserted": 4,
+  "message": "Published 1 post(s).",
+  "posts": [
+    {
+      "categories": [
+        "science",
+        "security"
+      ],
+      "sources": [
+        "Phys.org Technology"
+      ],
+      "status": "publish",
+      "title": "New research reveals gaps in passkey security tools for abuse survivors",
+      "wp_id": 19818
+    }
+  ],
+  "state": "published"
 }
