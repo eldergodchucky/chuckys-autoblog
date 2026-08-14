@@ -4350,7 +4350,7 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
 
     # Main story section
 
-    content_sections.append(f"<h2>What's Happening</h2>")
+    content_sections.append("<h2>Reporting</h2>")
 
     content_sections.append(source_info)
 
@@ -4361,12 +4361,6 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
         content_sections.append(details)
 
     
-
-    # Analysis section
-
-    content_sections.append(f"<h2>Why It Matters</h2>")
-
-    content_sections.append(f"<p>{html.escape(angle)}</p>")
 
     content_sections.append(detail_paragraph(topic, cluster))
 
@@ -4384,21 +4378,13 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
 
     
 
-    # Takeaway section
-
-    content_sections.append(f"<h2>The Bottom Line</h2>")
-
-    content_sections.append(f"<p>{html.escape(takeaway)}</p>")
-
-    
-
-    # Watch items (simplified)
+    # Follow-up reporting is kept factual and avoids a formulaic conclusion.
 
     watch_items = get_simple_watch_items(kind, categories, text)
 
     if watch_items:
 
-        content_sections.append(f"<h2>What to Watch</h2>")
+        content_sections.append("<h2>Next Developments</h2>")
 
         content_sections.append(f"<ul>{watch_items}</ul>")
 
@@ -4612,17 +4598,17 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
     focus_keyword = keywords[0] if keywords else "technology"
 
-    meta_description = clean_text(f"{topic}: what happened, why it matters, and what readers should watch next.", max_len=160)
+    meta_description = clean_text(f"{topic}: the latest reporting, details, and context.", max_len=160)
 
     excerpt_details = known_details(cluster)[:2]
 
     if excerpt_details:
 
-        excerpt = f"{topic}: {human_join(excerpt_details)}. A clear look at what is known, why it matters, and what could happen next."
+        excerpt = f"{topic}: {human_join(excerpt_details)}."
 
     else:
 
-        excerpt = f"{topic}: a clear look at what is known, why it matters, and what readers should watch next."
+        excerpt = f"{topic}: the latest reporting and context."
 
 
 
@@ -4630,7 +4616,7 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
     source_names = [item.source_name for item in cluster]
 
-    source_section = f"<p><strong>Sources:</strong> {', '.join(source_names[:2])}</p>" if source_names else ""
+    source_section = ""
 
     
 
@@ -4638,11 +4624,9 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
 {image_block}
 
-<p>{lead_text}</p>
-
-<p>{html.escape(editorial_nut_graph(categories, text))}</p>
-
 <p>[more]</p>
+
+<p>{lead_text}</p>
 
 {full_article_sections(cluster, topic, categories, source_count)}
 
@@ -4879,6 +4863,12 @@ def upload_media_multipart(path: Path, title: str) -> int | None:
 
     token = os.getenv("WP_COM_ACCESS_TOKEN", "").strip()
     site_id = os.getenv("WP_COM_SITE_ID", "").strip()
+    if not site_id:
+        # WordPress.com accepts a site domain here as well as a numeric ID.
+        base_url = os.getenv("WP_BASE_URL", "")
+        marker = "/sites/"
+        if marker in base_url:
+            site_id = base_url.split(marker, 1)[1].split("/", 1)[0].strip()
     if not token or not site_id:
         return None
     boundary = "----chuckyscarnage" + str(int(time.time() * 1000))
@@ -5614,11 +5604,13 @@ def run_once(args: argparse.Namespace) -> int:
 
         if not args.dry_run:
 
-            max_posts_per_day = max(1, env_int("MAX_POSTS_PER_DAY", 24))
+            # Zero explicitly means no daily cap. A 15-minute schedule has its
+            # own natural ceiling of 96 runs per day.
+            max_posts_per_day = env_int("MAX_POSTS_PER_DAY", 0)
 
             posted_today = todays_post_count(conn)
 
-            if posted_today >= max_posts_per_day:
+            if max_posts_per_day > 0 and posted_today >= max_posts_per_day:
 
                 message = f"Daily cap reached: {posted_today}/{max_posts_per_day} posts already sent today."
 
@@ -5868,7 +5860,9 @@ def print_status() -> int:
 
     conn = init_db()
 
-    print(f"Posts today: {todays_post_count(conn)}/{max(1, env_int('MAX_POSTS_PER_DAY', 24))}")
+    max_posts_per_day = env_int("MAX_POSTS_PER_DAY", 0)
+    cap_label = str(max_posts_per_day) if max_posts_per_day > 0 else "unlimited"
+    print(f"Posts today: {todays_post_count(conn)}/{cap_label}")
 
     rows = conn.execute(
 
