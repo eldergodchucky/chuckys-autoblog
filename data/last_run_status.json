@@ -3,23 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T23:23:06.377061+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-14T23:49:21.576205+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "android",
-        "software"
+        "apple"
       ],
       "sources": [
-        "Ars Technica Gadgets",
-        "Engadget",
-        "GSMArena"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Google must make it easier to install alternative app stores",
-      "wp_id": 23378
+      "title": "6 space board games to channel the political drama of 'For All",
+      "wp_id": 23380
     }
   ],
   "state": "published"
