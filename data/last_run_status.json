@@ -3,21 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T22:24:22.016853+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-14T22:51:00.890317+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science"
+        "apple",
+        "android",
+        "software"
       ],
       "sources": [
-        "Phys.org Space"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "New AI model detects hidden signs of solar eruptions hours before they",
-      "wp_id": 23374
+      "title": "Deals: M5 MacBook Air from $1",
+      "wp_id": 23376
     }
   ],
   "state": "published"
