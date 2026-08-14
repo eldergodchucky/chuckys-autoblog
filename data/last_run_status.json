@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T12:10:02.560356+00:00",
-  "inserted": 21,
+  "finished_at": "2026-08-14T13:44:19.321842+00:00",
+  "inserted": 73,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "science",
-        "gadgets"
+        "space",
+        "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "BathMat trial shows promise in cutting ICU workload while improving care",
-      "wp_id": 23348
+      "title": "A Sunflower\u2019s View of Totality",
+      "wp_id": 23350
     }
   ],
   "state": "published"
