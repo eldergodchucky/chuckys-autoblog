@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T09:08:49.496929+00:00",
-  "inserted": 27,
+  "finished_at": "2026-08-14T10:17:23.826869+00:00",
+  "inserted": 20,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "More than half of hippocampal synapses vanish",
-      "wp_id": 23051
+      "title": "'The X-Files' creator Chris Carter says new director's cut of 'I Want",
+      "wp_id": 23344
     }
   ],
   "state": "published"
