@@ -3,21 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T15:35:03.630738+00:00",
-  "inserted": 19,
+  "finished_at": "2026-08-14T16:33:58.634086+00:00",
+  "inserted": 34,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gadgets"
+        "android",
+        "phones"
       ],
       "sources": [
         "Android Authority News",
         "GSMArena"
       ],
       "status": "publish",
-      "title": "Poco F9 Pro and Poco F9 Ultra mega leak brings images",
-      "wp_id": 23354
+      "title": "Samsung Galaxy phone allegedly explodes in pocket",
+      "wp_id": 23356
     }
   ],
   "state": "published"
