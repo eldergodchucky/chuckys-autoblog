@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T18:35:17.163461+00:00",
-  "inserted": 31,
+  "finished_at": "2026-08-14T19:38:58.602371+00:00",
+  "inserted": 28,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "ScienceDaily Top Technology"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Scientists detect a nuclear reactor\u2019s ghostly afterglow for the first time",
-      "wp_id": 23360
+      "title": "The ISS photobombs the sun during the total solar eclipse",
+      "wp_id": 23364
     }
   ],
   "state": "published"
