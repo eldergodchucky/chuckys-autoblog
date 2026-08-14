@@ -3,22 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T16:33:58.634086+00:00",
-  "inserted": 34,
+  "finished_at": "2026-08-14T17:40:08.576114+00:00",
+  "inserted": 37,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "android",
+        "health",
+        "apple",
         "phones"
       ],
       "sources": [
-        "Android Authority News",
-        "GSMArena"
+        "9to5Mac",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Samsung Galaxy phone allegedly explodes in pocket",
-      "wp_id": 23356
+      "title": "Unforgetful is a new app from the creator of Overcast that enhances",
+      "wp_id": 23358
     }
   ],
   "state": "published"
