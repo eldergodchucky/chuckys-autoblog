@@ -3,20 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T19:38:58.602371+00:00",
-  "inserted": 28,
+  "finished_at": "2026-08-14T20:16:38.299479+00:00",
+  "inserted": 13,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "software"
       ],
       "sources": [
-        "Space.com"
+        "Android Authority News",
+        "Engadget",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "The ISS photobombs the sun during the total solar eclipse",
-      "wp_id": 23364
+      "title": "Google now lets you remove the watermark from Gemini\u2019s creations",
+      "wp_id": 23366
     }
   ],
   "state": "published"
