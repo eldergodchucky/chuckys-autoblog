@@ -20,6 +20,7 @@ FIGURE_RE = re.compile(r"<figure\b[^>]*>.*?</figure>", re.IGNORECASE | re.DOTALL
 IMAGE_PARAGRAPH_RE = re.compile(r"<p\b[^>]*>\s*<img\b[^>]*>\s*</p>", re.IGNORECASE | re.DOTALL)
 MORE_RE = re.compile(r"\s*<!--more(?:\s.*?)?-->\s*", re.IGNORECASE)
 PARAGRAPH_RE = re.compile(r"</p>", re.IGNORECASE)
+PLACEHOLDER_IMG_RE = re.compile(r"<img\b[^>]*?__HERO_IMAGE_SRC__[^>]*>", re.IGNORECASE)
 PLACEHOLDERS = {"", "__HERO_IMAGE_SRC__", wp.HERO_IMAGE_PLACEHOLDER}
 
 
@@ -43,7 +44,7 @@ def post_content(post: dict) -> str:
 
 def compact_archive_content(content: str) -> str:
     """Place the More block directly after the lead image for a clean archive."""
-    without_more = MORE_RE.sub("\n", content).strip()
+    without_more = PLACEHOLDER_IMG_RE.sub("", MORE_RE.sub("\n", content)).strip()
     match = FIGURE_RE.search(without_more) or IMAGE_PARAGRAPH_RE.search(without_more)
     if match:
         compacted = f"{without_more[:match.end()]}\n<!--more-->\n{without_more[match.end():].lstrip()}"
