@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T01:52:16.769237+00:00",
+  "finished_at": "2026-08-14T02:36:13.195607+00:00",
   "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "security"
+        "space"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "New research reveals gaps in passkey security tools for abuse survivors",
-      "wp_id": 19818
+      "title": "Proposed 900-telescope array could detect an Earth-like exoplanet's atmosphere in a single",
+      "wp_id": 20039
     }
   ],
   "state": "published"
