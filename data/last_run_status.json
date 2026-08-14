@@ -3,21 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T02:59:48.648460+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-14T04:29:51.475740+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science"
+        "gadgets",
+        "tech"
       ],
       "sources": [
+        "Engadget",
         "TechCrunch"
       ],
       "status": "publish",
-      "title": "Anthropic set AI agents loose on the same task. They started",
-      "wp_id": 20243
+      "title": "X open sources its ranking algorithm",
+      "wp_id": 20528
     }
   ],
   "state": "published"
