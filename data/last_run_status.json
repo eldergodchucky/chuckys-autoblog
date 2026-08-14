@@ -3,25 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T06:02:23.939615+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-14T07:52:00.357268+00:00",
+  "inserted": 8,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "health",
         "apple",
-        "phones"
+        "science"
       ],
       "sources": [
-        "9to5Mac",
-        "BleepingComputer",
-        "Engadget",
-        "TechCrunch"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Apple sends fresh wave of mercenary spyware warnings worldwide",
-      "wp_id": 21073
+      "title": "Rb's unexpected activation of estrogen-responsive genes could explain breast cancer treatment resistance",
+      "wp_id": 22171
     }
   ],
   "state": "published"
