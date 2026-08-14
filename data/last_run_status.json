@@ -1,22 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 4,
   "feeds": 59,
-  "fetched": 2755,
-  "finished_at": "2026-08-14T10:17:23.826869+00:00",
-  "inserted": 20,
+  "fetched": 2705,
+  "finished_at": "2026-08-14T11:17:18.015142+00:00",
+  "inserted": 18,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "software"
       ],
       "sources": [
-        "Space.com"
+        "Android Authority News",
+        "GSMArena"
       ],
       "status": "publish",
-      "title": "'The X-Files' creator Chris Carter says new director's cut of 'I Want",
-      "wp_id": 23344
+      "title": "Gemini 3.7 Flash is here with better coding",
+      "wp_id": 23346
     }
   ],
   "state": "published"
