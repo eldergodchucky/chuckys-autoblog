@@ -1,5 +1,6 @@
 name: WordPress Auto Blog Rescue Guard
 
+# Schedule re-registered 2026-08-14 (cron refresh).
 on:
   schedule:
     # A separate guard only publishes after the public feed is genuinely stale.

@@ -1,5 +1,6 @@
 name: WordPress Auto Blog
 
+# Schedule re-registered 2026-08-14 (cron refresh).
 on:
   schedule:
     - cron: "0,15,30,45 * * * *"
