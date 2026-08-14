@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T21:52:31.875490+00:00",
-  "inserted": 8,
+  "finished_at": "2026-08-14T22:24:22.016853+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Can Venus cast a shadow? Here's how to see it for yourself",
-      "wp_id": 23372
+      "title": "New AI model detects hidden signs of solar eruptions hours before they",
+      "wp_id": 23374
     }
   ],
   "state": "published"
