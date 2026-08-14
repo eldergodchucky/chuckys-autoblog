@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T02:36:13.195607+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-14T02:59:48.648460+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "science"
       ],
       "sources": [
-        "Phys.org Space"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Proposed 900-telescope array could detect an Earth-like exoplanet's atmosphere in a single",
-      "wp_id": 20039
+      "title": "Anthropic set AI agents loose on the same task. They started",
+      "wp_id": 20243
     }
   ],
   "state": "published"
