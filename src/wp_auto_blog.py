@@ -1197,6 +1197,50 @@ def tokens_for(item: Item) -> set[str]:
     return {token for token in tokens if token not in STOPWORDS and len(token) > 2}
 
 
+def recent_site_post_titles(limit: int = 25) -> list[str]:
+    """Titles of the site's most recent published posts. Used to avoid
+    re-publishing the same story when the local state is stale (for example
+    after a rescue run whose sqlite snapshot lagged behind)."""
+    try:
+        response = wp_request(f"posts?per_page={limit}&status=publish&_fields=title")
+    except Exception as exc:  # noqa: BLE001 - a failure here just skips the guard.
+        print(f"Could not fetch recent site titles for dedupe ({type(exc).__name__}: {exc}); skipping site check.")
+        return []
+    titles: list[str] = []
+    if isinstance(response, list):
+        for post in response:
+            title = post.get("title")
+            if isinstance(title, dict):
+                title = title.get("rendered")
+            if title:
+                titles.append(str(title))
+    return titles
+
+
+def title_token_set(title: str) -> set[str]:
+    tokens = re.findall(r"[a-z][a-z0-9]{2,}", title.lower())
+    return {token for token in tokens if token not in STOPWORDS and len(token) > 2}
+
+
+def cluster_overlaps_published(cluster: list[Item], published_titles: list[str]) -> bool:
+    """True if the story a cluster would generate strongly overlaps a post the
+    site already published recently."""
+    cluster_tokens: set[str] = set()
+    for item in cluster:
+        cluster_tokens |= title_token_set(item.title)
+    if not cluster_tokens:
+        return False
+    for title in published_titles:
+        published_tokens = title_token_set(title)
+        common = cluster_tokens & published_tokens
+        if not common:
+            continue
+        smaller = min(len(cluster_tokens), len(published_tokens))
+        if smaller and len(common) >= 3 and len(common) >= 0.5 * smaller:
+            return True
+    return False
+
+
 
 
 
@@ -4958,11 +5002,15 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
             )
             if featured_media_id is not None:
                 payload["featured_media"] = featured_media_id
-                media = wp_request(f"media/{featured_media_id}")
-                if isinstance(media, dict) and media.get("source_url"):
-                    hero_url = str(media["source_url"])
         except Exception as exc:
             print(f"Hero upload skipped ({type(exc).__name__}: {exc}); publishing without a hero image.")
+        if payload.get("featured_media"):
+            try:
+                media = wp_request(f"media/{payload['featured_media']}")
+                if isinstance(media, dict) and media.get("source_url"):
+                    hero_url = str(media["source_url"])
+            except Exception as exc:
+                print(f"Could not resolve hero URL ({type(exc).__name__}: {exc}); using placeholder fallback.")
 
     content = str(article["html"]).replace("[more]", "<!--more-->")
     if HERO_IMAGE_PLACEHOLDER in content:
@@ -5726,6 +5774,29 @@ def run_once(args: argparse.Namespace) -> int:
             )
 
             return 0
+
+        if not args.dry_run:
+
+            published_titles = recent_site_post_titles()
+            if published_titles:
+                before = len(clusters)
+                clusters = [c for c in clusters if not cluster_overlaps_published(c, published_titles)]
+                dropped = before - len(clusters)
+                if dropped:
+                    print(f"Dropped {dropped} cluster(s) duplicating a recently published story.")
+                if not clusters:
+                    message = "Only clusters duplicating recently published stories were available."
+                    print(message)
+                    write_run_status(
+                        "skipped",
+                        message,
+                        dry_run=False,
+                        feeds=len(feeds),
+                        fetched=len(items),
+                        inserted=inserted,
+                        feed_warnings=len(errors),
+                    )
+                    return 0
 
 
 
