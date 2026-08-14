@@ -4926,6 +4926,7 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
         payload["tags"] = tag_ids
 
     hero_path = article_hero_path(article)
+    hero_url = ""
     if hero_path:
         try:
             featured_media_id = upload_media_multipart(
@@ -4933,8 +4934,24 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
             )
             if featured_media_id is not None:
                 payload["featured_media"] = featured_media_id
+                media = wp_request(f"media/{featured_media_id}")
+                if isinstance(media, dict) and media.get("source_url"):
+                    hero_url = str(media["source_url"])
         except Exception as exc:
             print(f"Hero upload skipped ({type(exc).__name__}: {exc}); publishing without a hero image.")
+
+    content = str(article["html"]).replace("[more]", "<!--more-->")
+    if HERO_IMAGE_PLACEHOLDER in content:
+        if hero_url:
+            content = content.replace(HERO_IMAGE_PLACEHOLDER, html.escape(hero_url, quote=True))
+        else:
+            content = re.sub(
+                r'<img\b[^>]*src="__HERO_IMAGE_SRC__"[^>]*>',
+                "",
+                content,
+                flags=re.IGNORECASE,
+            )
+    payload["content"] = content
 
     result = wp_request("posts", payload, method="POST")
 
