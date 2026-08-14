@@ -3,22 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T20:57:39.831422+00:00",
-  "inserted": 11,
+  "finished_at": "2026-08-14T21:28:55.722860+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "phones",
         "science"
       ],
       "sources": [
-        "PsyPost"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Brief smartphone check-ins can forecast the return of psychotic symptoms",
-      "wp_id": 23368
+      "title": "Is empty space really empty? This magnetic star may finally solve",
+      "wp_id": 23370
     }
   ],
   "state": "published"
