@@ -3,23 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T17:40:08.576114+00:00",
-  "inserted": 37,
+  "finished_at": "2026-08-14T18:35:17.163461+00:00",
+  "inserted": 31,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "apple",
-        "phones"
+        "science"
       ],
       "sources": [
-        "9to5Mac",
-        "TechCrunch"
+        "ScienceDaily Top Technology"
       ],
       "status": "publish",
-      "title": "Unforgetful is a new app from the creator of Overcast that enhances",
-      "wp_id": 23358
+      "title": "Scientists detect a nuclear reactor\u2019s ghostly afterglow for the first time",
+      "wp_id": 23360
     }
   ],
   "state": "published"
