@@ -3,22 +3,25 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T04:29:51.475740+00:00",
-  "inserted": 3,
+  "finished_at": "2026-08-14T06:02:23.939615+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "tech"
+        "health",
+        "apple",
+        "phones"
       ],
       "sources": [
+        "9to5Mac",
+        "BleepingComputer",
         "Engadget",
         "TechCrunch"
       ],
       "status": "publish",
-      "title": "X open sources its ranking algorithm",
-      "wp_id": 20528
+      "title": "Apple sends fresh wave of mercenary spyware warnings worldwide",
+      "wp_id": 21073
     }
   ],
   "state": "published"
