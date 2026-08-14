@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T21:28:55.722860+00:00",
-  "inserted": 7,
+  "finished_at": "2026-08-14T21:52:31.875490+00:00",
+  "inserted": 8,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
         "Space.com"
       ],
       "status": "publish",
-      "title": "Is empty space really empty? This magnetic star may finally solve",
-      "wp_id": 23370
+      "title": "Can Venus cast a shadow? Here's how to see it for yourself",
+      "wp_id": 23372
     }
   ],
   "state": "published"
