@@ -3,23 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T20:16:38.299479+00:00",
-  "inserted": 13,
+  "finished_at": "2026-08-14T20:57:39.831422+00:00",
+  "inserted": 11,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "software"
+        "health",
+        "phones",
+        "science"
       ],
       "sources": [
-        "Android Authority News",
-        "Engadget",
-        "TechCrunch"
+        "PsyPost"
       ],
       "status": "publish",
-      "title": "Google now lets you remove the watermark from Gemini\u2019s creations",
-      "wp_id": 23366
+      "title": "Brief smartphone check-ins can forecast the return of psychotic symptoms",
+      "wp_id": 23368
     }
   ],
   "state": "published"
