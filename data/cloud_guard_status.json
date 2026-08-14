@@ -1,35 +1,17 @@
 {
-  "active_main_runs": [
-    {
-      "age_minutes": 27,
-      "created_at": "2026-08-13T23:42:55Z",
-      "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31754811382",
-      "id": 31754811382,
-      "status": "in_progress"
-    }
-  ],
+  "active_main_runs": [],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-14T00:10:15.337251+00:00",
-  "fresh_main_runs": [
-    {
-      "age_minutes": 27,
-      "created_at": "2026-08-13T23:42:55Z",
-      "event": "workflow_dispatch",
-      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/31754811382",
-      "id": 31754811382,
-      "status": "in_progress"
-    }
-  ],
+  "finished_at": "2026-08-14T03:33:18.223640+00:00",
+  "fresh_main_runs": [],
   "github_error": "",
-  "latest_age_minutes": 10,
-  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/14/brain-circuit-keeps-tabs-on-what-just-happened-to-aid-judgment-2/",
-  "latest_published_at": "2026-08-13T23:59:55+00:00",
-  "latest_title": "Brain circuit keeps tabs on what just happened to aid judgment",
+  "latest_age_minutes": 33,
+  "latest_link": "https://chuckyscarnage.tech.blog/2026/08/14/anthropic-set-ai-agents-loose-on-the-same-task-they-started-2/",
+  "latest_published_at": "2026-08-14T02:59:46+00:00",
+  "latest_title": "Anthropic set AI agents loose on the same task. They started",
   "main_run_stale_minutes": 95,
   "message": "Latest post is fresh; rescue did not publish.",
   "rescue_emergency_stale_minutes": 45,
-  "rescue_force_stale_minutes": 25,
-  "rescue_stale_minutes": 20,
+  "rescue_force_stale_minutes": 45,
+  "rescue_stale_minutes": 35,
   "state": "fresh"
 }
