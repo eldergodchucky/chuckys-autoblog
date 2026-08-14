@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T14:41:55.898241+00:00",
-  "inserted": 28,
+  "finished_at": "2026-08-14T15:35:03.630738+00:00",
+  "inserted": 19,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "space"
+        "gadgets"
       ],
       "sources": [
-        "9to5Mac"
+        "Android Authority News",
+        "GSMArena"
       ],
       "status": "publish",
-      "title": "SpaceXAI completes its Cursor acquisition following Grok Bot and Grok 4.6 release",
-      "wp_id": 23352
+      "title": "Poco F9 Pro and Poco F9 Ultra mega leak brings images",
+      "wp_id": 23354
     }
   ],
   "state": "published"
