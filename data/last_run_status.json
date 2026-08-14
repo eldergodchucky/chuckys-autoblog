@@ -3,23 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T22:51:00.890317+00:00",
-  "inserted": 6,
+  "finished_at": "2026-08-14T23:23:06.377061+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
         "android",
         "software"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Ars Technica Gadgets",
+        "Engadget",
+        "GSMArena"
       ],
       "status": "publish",
-      "title": "Deals: M5 MacBook Air from $1",
-      "wp_id": 23376
+      "title": "Google must make it easier to install alternative app stores",
+      "wp_id": 23378
     }
   ],
   "state": "published"
