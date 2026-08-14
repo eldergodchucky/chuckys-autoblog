@@ -21,11 +21,6 @@ if hasattr(sys.stdout, "reconfigure"):
 
 
 IMAGE_RE = re.compile(r'<img\b[^>]*\bsrc=["\']([^"\']+)["\']', re.IGNORECASE)
-FIGURE_RE = re.compile(r"<figure\b[^>]*>.*?</figure>", re.IGNORECASE | re.DOTALL)
-IMAGE_PARAGRAPH_RE = re.compile(r"<p\b[^>]*>\s*<img\b[^>]*>\s*</p>", re.IGNORECASE | re.DOTALL)
-MORE_RE = re.compile(r"\s*<!--more(?:\s.*?)?-->\s*", re.IGNORECASE)
-PARAGRAPH_RE = re.compile(r"</p>", re.IGNORECASE)
-PLACEHOLDER_IMG_RE = re.compile(r"<img\b[^>]*?__HERO_IMAGE_SRC__[^>]*>", re.IGNORECASE)
 PLACEHOLDERS = {"", "__HERO_IMAGE_SRC__", wp.HERO_IMAGE_PLACEHOLDER}
 
 
@@ -45,20 +40,6 @@ def post_content(post: dict) -> str:
     if isinstance(content, dict):
         return str(content.get("raw") or content.get("rendered") or "")
     return str(content or "")
-
-
-def compact_archive_content(content: str) -> str:
-    """Place the More block directly after the lead image for a clean archive."""
-    without_more = PLACEHOLDER_IMG_RE.sub("", MORE_RE.sub("\n", content)).strip()
-    match = FIGURE_RE.search(without_more) or IMAGE_PARAGRAPH_RE.search(without_more)
-    if match:
-        compacted = f"{without_more[:match.end()]}\n<!--more-->\n{without_more[match.end():].lstrip()}"
-        return compacted.strip()
-    paragraph_match = PARAGRAPH_RE.search(without_more)
-    if paragraph_match:
-        compacted = f"{without_more[:paragraph_match.end()]}\n<!--more-->\n{without_more[paragraph_match.end():].lstrip()}"
-        return compacted.strip()
-    return content
 
 
 def first_image_url(content: str) -> str:
@@ -118,15 +99,10 @@ def backfill(apply: bool, limit: int) -> int:
             post_id = int(post["id"])
             title = html.unescape(str(post.get("title", {}).get("raw") or post.get("title", {}).get("rendered") or "Untitled"))
             content = post_content(post)
-            compacted = compact_archive_content(content)
-            payload: dict[str, object] = {}
-            if compacted != content:
-                payload["content"] = compacted
 
             media_id = int(post.get("featured_media") or 0)
             if not media_id:
                 media_id = media_for_post(post_id) or 0
-            needs_featured_image = not media_id
             temporary: Path | None = None
             if not media_id and apply:
                 image_url = first_image_url(content)
@@ -142,10 +118,15 @@ def backfill(apply: bool, limit: int) -> int:
                     finally:
                         if temporary.name.startswith("wp-featured-"):
                             temporary.unlink(missing_ok=True)
+
+            compacted = wp.compact_feed_content(content, bool(media_id))
+            payload: dict[str, object] = {}
+            if compacted != content:
+                payload["content"] = compacted
             if media_id:
                 payload["featured_media"] = media_id
 
-            if not payload and not needs_featured_image:
+            if not payload:
                 skipped += 1
                 continue
             print(f"{'Would update' if not apply else 'Updating'} {post_id}: {title[:72]}")

@@ -96,6 +96,30 @@ POST_METHOD_REST = "rest"
 
 HERO_IMAGE_PLACEHOLDER = "__HERO_IMAGE_SRC__"
 
+PLACEHOLDER_IMG_RE = re.compile(r"<img\b[^>]*?__HERO_IMAGE_SRC__[^>]*>", re.IGNORECASE)
+
+MORE_TAG_RE = re.compile(
+    r"\s*(?:<p\b[^>]*>\s*)?(?:<!--more(?:\s.*?)?-->|\[more\])(?:\s*</p>)?\s*",
+    re.IGNORECASE,
+)
+
+LEADING_MEDIA_RE = re.compile(
+    r"^\s*(?:<figure\b[^>]*>.*?</figure>|<p\b[^>]*>\s*<img\b[^>]*>\s*</p>|<img\b[^>]*/?>)",
+    re.IGNORECASE | re.DOTALL,
+)
+
+
+def compact_feed_content(content: str, has_featured_image: bool) -> str:
+    """Clean content for the compact archive feed: drop placeholder images and
+    the inline hero duplicate, put the Read More marker first so the feed
+    excerpt stays empty (thumbnail, title, Read More only)."""
+    content = PLACEHOLDER_IMG_RE.sub("", content)
+    content = re.sub(r"<figure\b[^>]*>\s*</figure>", "", content, flags=re.IGNORECASE)
+    content = MORE_TAG_RE.sub("", content).strip()
+    if has_featured_image:
+        content = LEADING_MEDIA_RE.sub("", content, count=1).strip()
+    return ("<!--more-->\n" + content).strip()
+
 
 
 STOPWORDS = {
@@ -4951,7 +4975,7 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
                 content,
                 flags=re.IGNORECASE,
             )
-    payload["content"] = content
+    payload["content"] = compact_feed_content(content, bool(payload.get("featured_media")))
 
     result = wp_request("posts", payload, method="POST")
 
