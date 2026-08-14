@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T13:44:19.321842+00:00",
-  "inserted": 73,
+  "finished_at": "2026-08-14T14:41:55.898241+00:00",
+  "inserted": 28,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "space"
       ],
       "sources": [
-        "NASA Science"
+        "9to5Mac"
       ],
       "status": "publish",
-      "title": "A Sunflower\u2019s View of Totality",
-      "wp_id": 23350
+      "title": "SpaceXAI completes its Cursor acquisition following Grok Bot and Grok 4.6 release",
+      "wp_id": 23352
     }
   ],
   "state": "published"
