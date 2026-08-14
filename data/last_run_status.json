@@ -3,22 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-14T07:52:00.357268+00:00",
-  "inserted": 8,
+  "finished_at": "2026-08-14T09:08:49.496929+00:00",
+  "inserted": 27,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "apple",
         "science"
       ],
       "sources": [
         "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Rb's unexpected activation of estrogen-responsive genes could explain breast cancer treatment resistance",
-      "wp_id": 22171
+      "title": "More than half of hippocampal synapses vanish",
+      "wp_id": 23051
     }
   ],
   "state": "published"
