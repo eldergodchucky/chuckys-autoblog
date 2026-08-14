@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2705,
-  "finished_at": "2026-08-14T11:17:18.015142+00:00",
-  "inserted": 18,
+  "fetched": 2755,
+  "finished_at": "2026-08-14T12:10:02.560356+00:00",
+  "inserted": 21,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "software"
+        "health",
+        "science",
+        "gadgets"
       ],
       "sources": [
-        "Android Authority News",
-        "GSMArena"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Gemini 3.7 Flash is here with better coding",
-      "wp_id": 23346
+      "title": "BathMat trial shows promise in cutting ICU workload while improving care",
+      "wp_id": 23348
     }
   ],
   "state": "published"
