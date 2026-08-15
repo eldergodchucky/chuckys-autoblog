@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T22:49:25.062844+00:00",
-  "inserted": 0,
+  "finished_at": "2026-08-15T23:21:11.204937+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "software"
+        "health",
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "Medical Xpress"
       ],
       "status": "publish",
-      "title": "We think these Nikon binoculars are excellent for variable magnification",
-      "wp_id": 28032
+      "title": "Sleep disturbances linked to genetic Alzheimer's risk",
+      "wp_id": 28034
     }
   ],
   "state": "published"
