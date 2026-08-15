@@ -2,22 +2,21 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2755,
-  "finished_at": "2026-08-15T19:28:26.436908+00:00",
-  "inserted": 0,
+  "fetched": 2705,
+  "finished_at": "2026-08-15T19:48:14.868834+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "Medical Xpress"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Researchers examine unanticipated benefits of GLP-1 medications",
-      "wp_id": 28018
+      "title": "Whole-brain activity may better predict variations in stimulation responses",
+      "wp_id": 28020
     }
   ],
   "state": "published"
