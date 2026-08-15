@@ -2,21 +2,22 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2705,
-  "finished_at": "2026-08-15T19:48:14.868834+00:00",
-  "inserted": 1,
+  "fetched": 2745,
+  "finished_at": "2026-08-15T20:23:22.653405+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "space",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Whole-brain activity may better predict variations in stimulation responses",
-      "wp_id": 28020
+      "title": "MAX POWER",
+      "wp_id": 28022
     }
   ],
   "state": "published"
