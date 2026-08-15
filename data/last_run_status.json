@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T23:21:11.204937+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-15T23:46:54.248811+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "Medical Xpress"
+        "SciTechDaily Science",
+        "ScienceDaily Top Science"
       ],
       "status": "publish",
-      "title": "Sleep disturbances linked to genetic Alzheimer's risk",
-      "wp_id": 28034
+      "title": "Scientists Discover a 245-Million-Year-Old Reptile With Its Organs Still Preserved",
+      "wp_id": 28036
     }
   ],
   "state": "published"
