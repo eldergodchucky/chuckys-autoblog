@@ -1,22 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2735,
-  "finished_at": "2026-08-15T16:52:09.746925+00:00",
-  "inserted": 4,
+  "fetched": 2755,
+  "finished_at": "2026-08-15T17:21:39.884856+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "ai",
+        "space"
       ],
       "sources": [
-        "ScienceDaily Health & Medicine"
+        "Engadget",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Common food preservative linked to rising suicide deaths among young people",
-      "wp_id": 28008
+      "title": "SpaceX has officially acquired AI coding startup Cursor",
+      "wp_id": 28010
     }
   ],
   "state": "published"
