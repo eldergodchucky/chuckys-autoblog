@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T22:22:47.759154+00:00",
-  "inserted": 3,
+  "finished_at": "2026-08-15T22:49:25.062844+00:00",
+  "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science"
+        "software"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "AI agents struggle to perform original scientific research",
-      "wp_id": 28030
+      "title": "We think these Nikon binoculars are excellent for variable magnification",
+      "wp_id": 28032
     }
   ],
   "state": "published"
