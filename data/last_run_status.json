@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T06:39:19.407143+00:00",
+  "finished_at": "2026-08-15T07:17:40.151980+00:00",
   "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "health",
+        "science"
       ],
       "sources": [
-        "Phys.org Space"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Tiny satellite will use the dark side of the moon to eavesdrop",
-      "wp_id": 27552
+      "title": "Researchers examine unanticipated benefits of GLP-1 medications",
+      "wp_id": 27858
     }
   ],
   "state": "published"
