@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T15:21:42.882720+00:00",
-  "inserted": 6,
+  "finished_at": "2026-08-15T15:47:17.936241+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "space",
         "science"
       ],
       "sources": [
-        "ScienceDaily Health & Medicine"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "When gut microbes run low on fiber",
-      "wp_id": 28000
+      "title": "NASA Competition Invites Students to Help Imagine a Future Enabled by Lunar",
+      "wp_id": 28002
     }
   ],
   "state": "published"
