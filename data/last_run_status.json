@@ -3,22 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T14:50:17.400584+00:00",
-  "inserted": 11,
+  "finished_at": "2026-08-15T15:21:42.882720+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "science",
-        "gadgets"
+        "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "ScienceDaily Health & Medicine"
       ],
       "status": "publish",
-      "title": "Two devices in one: Metasurface could bring medical imaging to smaller sensors",
-      "wp_id": 27998
+      "title": "When gut microbes run low on fiber",
+      "wp_id": 28000
     }
   ],
   "state": "published"
