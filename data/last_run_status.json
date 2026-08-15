@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2735,
-  "finished_at": "2026-08-15T11:29:31.969649+00:00",
-  "inserted": 10,
+  "fetched": 2755,
+  "finished_at": "2026-08-15T11:49:49.367322+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "health",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "NASA Common Research Model",
-      "wp_id": 27982
+      "title": "Waist size is a powerful indicator of health risks",
+      "wp_id": 27985
     }
   ],
   "state": "published"
