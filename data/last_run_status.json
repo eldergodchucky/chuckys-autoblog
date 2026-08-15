@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T18:30:43.860029+00:00",
-  "inserted": 6,
+  "finished_at": "2026-08-15T18:59:48.079829+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Built-in charge could replace chemical reagents in gold recovery from electronic waste",
-      "wp_id": 28014
+      "title": "Early-universe plasma may have stopped dark photons from heating cosmos",
+      "wp_id": 28016
     }
   ],
   "state": "published"
