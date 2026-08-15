@@ -3,22 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T05:25:52.704598+00:00",
-  "inserted": 3,
+  "finished_at": "2026-08-15T05:52:33.059230+00:00",
+  "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "ai",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "ScienceDaily Health & Medicine"
       ],
       "status": "publish",
-      "title": "AI is already reaching people in distress",
-      "wp_id": 26935
+      "title": "Immune cells flood into the aging brain",
+      "wp_id": 27198
     }
   ],
   "state": "published"
