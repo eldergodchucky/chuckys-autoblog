@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T15:47:17.936241+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-15T16:25:05.383782+00:00",
+  "inserted": 8,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "health",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "ScienceDaily Health & Medicine"
       ],
       "status": "publish",
-      "title": "NASA Competition Invites Students to Help Imagine a Future Enabled by Lunar",
-      "wp_id": 28002
+      "title": "Scientists detect a surprising shift in human blood as CO2 rises",
+      "wp_id": 28004
     }
   ],
   "state": "published"
