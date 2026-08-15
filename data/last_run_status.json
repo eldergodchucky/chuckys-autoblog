@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T21:22:25.878680+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-15T21:47:36.192530+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "space",
         "science"
       ],
       "sources": [
-        "PsyPost"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Adolescent binge drinking permanently alters adult brain sensitivity to alcohol",
-      "wp_id": 28026
+      "title": "High Speed CRM",
+      "wp_id": 28028
     }
   ],
   "state": "published"
