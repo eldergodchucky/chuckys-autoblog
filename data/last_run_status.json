@@ -1,24 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2745,
-  "finished_at": "2026-08-15T02:29:26.192036+00:00",
-  "inserted": 2,
+  "fetched": 2755,
+  "finished_at": "2026-08-15T03:20:46.460616+00:00",
+  "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "health",
-        "space",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "Week Ends Aboard Station With Robotics",
-      "wp_id": 23392
+      "title": "Cancer Stem Cells Have an \u201cEnergy Addiction\u201d \u2013 and Scientists Found",
+      "wp_id": 24340
     }
   ],
   "state": "published"
