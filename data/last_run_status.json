@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T13:53:07.467793+00:00",
-  "inserted": 6,
+  "finished_at": "2026-08-15T14:23:34.506103+00:00",
+  "inserted": 10,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "space",
         "science"
       ],
       "sources": [
-        "PsyPost"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Scientists found a subtle social cue that reveals your choices",
-      "wp_id": 27994
+      "title": "Constipation is common in astronauts\u2014blood tests provide new answers",
+      "wp_id": 27996
     }
   ],
   "state": "published"
