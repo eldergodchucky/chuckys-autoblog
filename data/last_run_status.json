@@ -1,23 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T03:20:46.460616+00:00",
-  "inserted": 0,
+  "finished_at": "2026-08-15T04:05:14.367632+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "ScienceDaily Top Science"
       ],
       "status": "publish",
-      "title": "Cancer Stem Cells Have an \u201cEnergy Addiction\u201d \u2013 and Scientists Found",
-      "wp_id": 24340
+      "title": "Scientists detect a nuclear reactor\u2019s ghostly afterglow for the first time",
+      "wp_id": 25633
     }
   ],
   "state": "published"
