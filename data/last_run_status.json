@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2755,
-  "finished_at": "2026-08-15T01:16:09.533844+00:00",
-  "inserted": 5,
+  "fetched": 2745,
+  "finished_at": "2026-08-15T02:29:26.192036+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "software"
+        "health",
+        "space",
+        "science"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Apple Maps opens ad booking for businesses",
-      "wp_id": 23387
+      "title": "Week Ends Aboard Station With Robotics",
+      "wp_id": 23392
     }
   ],
   "state": "published"
