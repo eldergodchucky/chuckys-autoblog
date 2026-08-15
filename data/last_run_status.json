@@ -1,22 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T07:54:16.256912+00:00",
-  "inserted": 0,
+  "finished_at": "2026-08-15T08:29:52.732892+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Childhood survival linked to socio-economic status in EU study",
-      "wp_id": 27934
+      "title": "Will the new moon race turn Earth's nearest neighbor into a dumping",
+      "wp_id": 27943
     }
   ],
   "state": "published"
