@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T21:47:36.192530+00:00",
+  "finished_at": "2026-08-15T22:22:47.759154+00:00",
   "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "ai",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "High Speed CRM",
-      "wp_id": 28028
+      "title": "AI agents struggle to perform original scientific research",
+      "wp_id": 28030
     }
   ],
   "state": "published"
