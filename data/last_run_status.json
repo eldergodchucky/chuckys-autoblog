@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T17:21:39.884856+00:00",
-  "inserted": 3,
+  "finished_at": "2026-08-15T17:47:38.540796+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "space"
+        "health",
+        "science"
       ],
       "sources": [
-        "Engadget",
-        "TechCrunch"
+        "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "SpaceX has officially acquired AI coding startup Cursor",
-      "wp_id": 28010
+      "title": "Scientists May Have Solved a Long-Standing Melanoma Treatment Mystery",
+      "wp_id": 28012
     }
   ],
   "state": "published"
