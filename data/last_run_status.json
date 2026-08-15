@@ -1,23 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T04:48:23.726842+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-15T05:25:52.704598+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "security"
+        "health",
+        "ai",
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "US Space Force gives Rocket Lab $397 million to build threat-tracking 'Flatellites'",
-      "wp_id": 26229
+      "title": "AI is already reaching people in distress",
+      "wp_id": 26935
     }
   ],
   "state": "published"
