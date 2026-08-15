@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2745,
-  "finished_at": "2026-08-15T20:23:22.653405+00:00",
-  "inserted": 2,
+  "fetched": 2755,
+  "finished_at": "2026-08-15T20:50:07.261263+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "health",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "MAX POWER",
-      "wp_id": 28022
+      "title": "Selenite changes key properties of pancreatic cancer cells in experimental models",
+      "wp_id": 28024
     }
   ],
   "state": "published"
