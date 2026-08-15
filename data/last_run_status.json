@@ -1,22 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T18:59:48.079829+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-15T19:28:26.436908+00:00",
+  "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "health",
+        "science"
       ],
       "sources": [
-        "Phys.org Space"
+        "Medical Xpress"
       ],
       "status": "publish",
-      "title": "Early-universe plasma may have stopped dark photons from heating cosmos",
-      "wp_id": 28016
+      "title": "Researchers examine unanticipated benefits of GLP-1 medications",
+      "wp_id": 28018
     }
   ],
   "state": "published"
