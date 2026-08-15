@@ -1,23 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2755,
-  "finished_at": "2026-08-15T16:25:05.383782+00:00",
-  "inserted": 8,
+  "fetched": 2735,
+  "finished_at": "2026-08-15T16:52:09.746925+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
         "ScienceDaily Health & Medicine"
       ],
       "status": "publish",
-      "title": "Scientists detect a surprising shift in human blood as CO2 rises",
-      "wp_id": 28004
+      "title": "Common food preservative linked to rising suicide deaths among young people",
+      "wp_id": 28008
     }
   ],
   "state": "published"
