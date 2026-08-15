@@ -120,7 +120,7 @@ def backfill(apply: bool, limit: int) -> int:
                             temporary.unlink(missing_ok=True)
 
             compacted = wp.compact_feed_content(content, bool(media_id))
-            payload: dict[str, object] = {}
+            payload: dict[str, object] = {"excerpt": " "}
             if compacted != content:
                 payload["content"] = compacted
             if media_id:

@@ -4977,7 +4977,10 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
 
         "slug": article.get("slug") or slugify(article["title"]),
 
-        "excerpt": article.get("excerpt", ""),
+        # No stored excerpt: the feed must stay title-only (thumbnail, title,
+        # Read More). A populated excerpt field gets rendered on search and
+        # archive pages and would show an article snippet.
+        "excerpt": " ",
 
         "content": str(article["html"]).replace("[more]", "<!--more-->"),
 
