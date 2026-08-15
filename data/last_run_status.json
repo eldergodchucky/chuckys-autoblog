@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T12:38:44.447548+00:00",
-  "inserted": 12,
+  "finished_at": "2026-08-15T13:18:40.673389+00:00",
+  "inserted": 9,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "health",
+        "space"
       ],
       "sources": [
-        "SciTechDaily Science"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Nearly Complete Fossil Reveals Scientists Were Wrong About This Ancient Mammal",
-      "wp_id": 27988
+      "title": "This Week In Space podcast: Episode 223 \u2014 The Lunar Domain",
+      "wp_id": 27992
     }
   ],
   "state": "published"
