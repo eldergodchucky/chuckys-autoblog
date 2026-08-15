@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T17:47:38.540796+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-15T18:30:43.860029+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Scientists May Have Solved a Long-Standing Melanoma Treatment Mystery",
-      "wp_id": 28012
+      "title": "Built-in charge could replace chemical reagents in gold recovery from electronic waste",
+      "wp_id": 28014
     }
   ],
   "state": "published"
