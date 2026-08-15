@@ -3,21 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-15T14:23:34.506103+00:00",
-  "inserted": 10,
+  "finished_at": "2026-08-15T14:50:17.400584+00:00",
+  "inserted": 11,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "health",
+        "science",
+        "gadgets"
       ],
       "sources": [
-        "Phys.org Space"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Constipation is common in astronauts\u2014blood tests provide new answers",
-      "wp_id": 27996
+      "title": "Two devices in one: Metasurface could bring medical imaging to smaller sensors",
+      "wp_id": 27998
     }
   ],
   "state": "published"
