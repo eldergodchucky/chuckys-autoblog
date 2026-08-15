@@ -1,6 +1,25 @@
 {
   "dry_run": false,
-  "finished_at": "2026-08-15T10:00:55.578379+00:00",
-  "message": "TimeoutError: The read operation timed out",
-  "state": "failed"
+  "feed_warnings": 2,
+  "feeds": 59,
+  "fetched": 2755,
+  "finished_at": "2026-08-15T10:32:50.542281+00:00",
+  "inserted": 8,
+  "message": "Published 1 post(s).",
+  "posts": [
+    {
+      "categories": [
+        "gadgets",
+        "tech"
+      ],
+      "sources": [
+        "Engadget",
+        "TechCrunch"
+      ],
+      "status": "publish",
+      "title": "Stripe is reportedly in talks to buy PayPal",
+      "wp_id": 27976
+    }
+  ],
+  "state": "published"
 }
