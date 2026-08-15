@@ -2,22 +2,22 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2755,
-  "finished_at": "2026-08-15T11:00:13.309809+00:00",
-  "inserted": 6,
+  "fetched": 2735,
+  "finished_at": "2026-08-15T11:29:31.969649+00:00",
+  "inserted": 10,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Sleep disturbances linked to genetic Alzheimer's risk",
-      "wp_id": 27979
+      "title": "NASA Common Research Model",
+      "wp_id": 27982
     }
   ],
   "state": "published"
