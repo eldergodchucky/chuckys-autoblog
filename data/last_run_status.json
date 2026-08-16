@@ -1,22 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T20:23:21.879633+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-16T20:49:49.379453+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "health",
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "On this day in space! Aug. 16",
-      "wp_id": 28268
+      "title": "Why Arthritis Can Come Back Stronger After Cancer Immunotherapy",
+      "wp_id": 28274
     }
   ],
   "state": "published"
