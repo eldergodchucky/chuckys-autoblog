@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T08:48:29.319035+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-16T09:28:52.557321+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "security"
+        "space",
+        "science"
       ],
       "sources": [
-        "Hackaday"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Researchers Hack an Airline Analog",
-      "wp_id": 28085
+      "title": "Airborne observatory improves views of solar corona during cloud-covered eclipse",
+      "wp_id": 28087
     }
   ],
   "state": "published"
