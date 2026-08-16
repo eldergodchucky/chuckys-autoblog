@@ -1,22 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T14:50:55.244623+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-16T15:23:29.857741+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "apple",
+        "gadgets"
       ],
       "sources": [
-        "Phys.org Space"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Einstein Probe catches rare X-ray flash from an exploding star",
-      "wp_id": 28215
+      "title": "Apple weekend deals: MacBooks up to $540 off",
+      "wp_id": 28218
     }
   ],
   "state": "published"
