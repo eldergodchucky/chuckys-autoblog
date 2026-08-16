@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T10:50:48.954573+00:00",
+  "finished_at": "2026-08-16T11:21:53.317168+00:00",
   "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "PsyPost"
       ],
       "status": "publish",
-      "title": "Researchers Discover a Potential Weak Spot in One of the Deadliest Brain",
-      "wp_id": 28093
+      "title": "Fluid brain circuits drive the formation of cocaine habits",
+      "wp_id": 28095
     }
   ],
   "state": "published"
