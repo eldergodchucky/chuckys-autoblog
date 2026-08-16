@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T06:05:00.330507+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-16T07:01:00.958672+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "health",
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "Medical Xpress"
       ],
       "status": "publish",
-      "title": "New record! SpaceX launches 2 Falcon 9 rockets just 38 minutes apart",
-      "wp_id": 28073
+      "title": "Waist size is a powerful indicator of health risks",
+      "wp_id": 28076
     }
   ],
   "state": "published"
