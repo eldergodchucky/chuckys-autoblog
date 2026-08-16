@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T18:30:08.937915+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-16T18:59:40.256169+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "space",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "ScienceDaily Top Technology"
       ],
       "status": "publish",
-      "title": "Imaging turnaround time increased from 2023 to 2024",
-      "wp_id": 28233
+      "title": "A black hole shredded a \u201csuper sun\u201d \u2014 but something strange may",
+      "wp_id": 28235
     }
   ],
   "state": "published"
