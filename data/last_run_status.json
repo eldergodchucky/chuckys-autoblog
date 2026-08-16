@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T11:21:53.317168+00:00",
-  "inserted": 7,
+  "finished_at": "2026-08-16T11:46:42.898234+00:00",
+  "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "PsyPost"
+        "Phys.org Space",
+        "WIRED Science"
       ],
       "status": "publish",
-      "title": "Fluid brain circuits drive the formation of cocaine habits",
-      "wp_id": 28095
+      "title": "Astronomers Discover the Existence of a Black Hole Star",
+      "wp_id": 28189
     }
   ],
   "state": "published"
