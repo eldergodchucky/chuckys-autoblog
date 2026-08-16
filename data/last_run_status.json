@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T02:43:55.173472+00:00",
-  "inserted": 3,
+  "finished_at": "2026-08-16T03:35:05.753984+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "health",
-        "science",
-        "gadgets"
+        "science"
       ],
       "sources": [
-        "Medical Xpress"
+        "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "Two devices in one: Metasurface could bring medical imaging to smaller sensors",
-      "wp_id": 28050
+      "title": "New $60 Blood Test Detects Lung Cancer Without Costly DNA Sequencing",
+      "wp_id": 28055
     }
   ],
   "state": "published"
