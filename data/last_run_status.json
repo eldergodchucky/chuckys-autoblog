@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T21:46:13.965490+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-16T22:00:40.133998+00:00",
+  "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
         "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Trouble focusing when upset may signal anxiety and depression symptoms in youth",
-      "wp_id": 28279
+      "title": "Can video games help personalize cognitive care for vulnerable groups?",
+      "wp_id": 28281
     }
   ],
   "state": "published"
