@@ -1,23 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T09:54:22.952770+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-16T10:24:18.970856+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "science"
+        "space",
+        "science",
+        "software"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "New Treatment Targets Gum Disease Without Killing Good Bacteria",
-      "wp_id": 28089
+      "title": "'This goes beyond showcasing technological soft power': China's new moon map signals",
+      "wp_id": 28091
     }
   ],
   "state": "published"
