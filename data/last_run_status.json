@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T09:28:52.557321+00:00",
+  "finished_at": "2026-08-16T09:54:22.952770+00:00",
   "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "health",
         "science"
       ],
       "sources": [
-        "Phys.org Space"
+        "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "Airborne observatory improves views of solar corona during cloud-covered eclipse",
-      "wp_id": 28087
+      "title": "New Treatment Targets Gum Disease Without Killing Good Bacteria",
+      "wp_id": 28089
     }
   ],
   "state": "published"
