@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T17:21:07.825317+00:00",
-  "inserted": 3,
+  "finished_at": "2026-08-16T17:47:00.612528+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "phones"
+        "health",
+        "science"
       ],
       "sources": [
-        "Engadget",
-        "WIRED Gear"
+        "SciTechDaily Health",
+        "ScienceDaily Top Health"
       ],
       "status": "publish",
-      "title": "How to lease an iPhone instead of buying one",
-      "wp_id": 28229
+      "title": "New Research May Change How We Think About Weight Loss Drugs Like",
+      "wp_id": 28231
     }
   ],
   "state": "published"
