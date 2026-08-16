@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T19:48:12.553494+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-16T20:23:21.879633+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "SciTechDaily Science"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Rewriting History: Researchers Uncover a Forgotten Amazon Civilization That May Have Housed",
-      "wp_id": 28239
+      "title": "On this day in space! Aug. 16",
+      "wp_id": 28268
     }
   ],
   "state": "published"
