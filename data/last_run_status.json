@@ -1,22 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T22:59:42.497294+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-16T23:29:03.261917+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "ScienceDaily Top Science"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Common food preservative linked to rising suicide deaths among young people",
-      "wp_id": 28285
+      "title": "How to watch 'Lanterns' \u2014 HBO's gritty new Green Lantern show",
+      "wp_id": 28287
     }
   ],
   "state": "published"
