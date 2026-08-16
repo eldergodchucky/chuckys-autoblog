@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T18:59:40.256169+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-16T19:28:42.100269+00:00",
+  "inserted": 9,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "health",
         "science"
       ],
       "sources": [
-        "ScienceDaily Top Technology"
+        "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "A black hole shredded a \u201csuper sun\u201d \u2014 but something strange may",
-      "wp_id": 28235
+      "title": "Dormant Breast Cancer Cells May Hide Inside Protective Cellular \u201cShields\u201d",
+      "wp_id": 28237
     }
   ],
   "state": "published"
