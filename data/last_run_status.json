@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T14:23:58.087556+00:00",
-  "inserted": 7,
+  "finished_at": "2026-08-16T14:50:55.244623+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Childhood Pesticide Exposure May Shift the Timing of Puberty",
-      "wp_id": 28212
+      "title": "Einstein Probe catches rare X-ray flash from an exploding star",
+      "wp_id": 28215
     }
   ],
   "state": "published"
