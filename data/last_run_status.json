@@ -3,22 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T17:47:00.612528+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-16T18:30:08.937915+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "SciTechDaily Health",
-        "ScienceDaily Top Health"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "New Research May Change How We Think About Weight Loss Drugs Like",
-      "wp_id": 28231
+      "title": "Imaging turnaround time increased from 2023 to 2024",
+      "wp_id": 28233
     }
   ],
   "state": "published"
