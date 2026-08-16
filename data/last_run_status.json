@@ -3,20 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T23:29:03.261917+00:00",
-  "inserted": 3,
+  "finished_at": "2026-08-16T23:49:13.556185+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "android",
+        "gadgets"
       ],
       "sources": [
-        "Space.com"
+        "Engadget",
+        "WIRED Gear"
       ],
       "status": "publish",
-      "title": "How to watch 'Lanterns' \u2014 HBO's gritty new Green Lantern show",
-      "wp_id": 28287
+      "title": "Engadget review recap: Samsung Galaxy Z Fold 8 Ultra",
+      "wp_id": 28289
     }
   ],
   "state": "published"
