@@ -1,24 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T15:23:29.857741+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-16T15:48:19.132750+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "gadgets"
+        "health",
+        "space"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Apple weekend deals: MacBooks up to $540 off",
-      "wp_id": 28218
+      "title": "'Strap yourself in and feel the Gs': NASA announces 'Max Power' aerospace",
+      "wp_id": 28221
     }
   ],
   "state": "published"
