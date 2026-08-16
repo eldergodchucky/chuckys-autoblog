@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T13:21:05.527582+00:00",
-  "inserted": 8,
+  "finished_at": "2026-08-16T13:54:39.119818+00:00",
+  "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "health",
+        "space"
       ],
       "sources": [
-        "PsyPost"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Scientists uncover an energy paradox in the brain during REM sleep",
-      "wp_id": 28206
+      "title": "Artemis II pilot thanks NASA for letting him fly Orion by hand",
+      "wp_id": 28209
     }
   ],
   "state": "published"
