@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T05:44:43.189700+00:00",
+  "finished_at": "2026-08-16T06:05:00.330507+00:00",
   "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "ScienceDaily Top Health"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "When gut microbes run low on fiber",
-      "wp_id": 28069
+      "title": "New record! SpaceX launches 2 Falcon 9 rockets just 38 minutes apart",
+      "wp_id": 28073
     }
   ],
   "state": "published"
