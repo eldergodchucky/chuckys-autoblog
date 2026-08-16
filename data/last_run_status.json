@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T03:35:05.753984+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-16T04:22:39.505397+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "New $60 Blood Test Detects Lung Cancer Without Costly DNA Sequencing",
-      "wp_id": 28055
+      "title": "Neptune's tiny moons tell the story of Triton's destructive capture",
+      "wp_id": 28061
     }
   ],
   "state": "published"
