@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T21:21:23.493601+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-16T21:46:13.965490+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "health",
         "science"
       ],
       "sources": [
-        "Phys.org Space"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Japan aims for the moons of Mars",
-      "wp_id": 28277
+      "title": "Trouble focusing when upset may signal anxiety and depression symptoms in youth",
+      "wp_id": 28279
     }
   ],
   "state": "published"
