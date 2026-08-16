@@ -1,23 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T16:53:21.614836+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-16T17:21:07.825317+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "apple",
+        "phones"
       ],
       "sources": [
-        "NASA Science"
+        "Engadget",
+        "WIRED Gear"
       ],
       "status": "publish",
-      "title": "NASA Undergraduate Student Design Projects",
-      "wp_id": 28227
+      "title": "How to lease an iPhone instead of buying one",
+      "wp_id": 28229
     }
   ],
   "state": "published"
