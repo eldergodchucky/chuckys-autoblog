@@ -3,20 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T01:19:42.185832+00:00",
+  "finished_at": "2026-08-16T02:43:55.173472+00:00",
   "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "health",
+        "science",
+        "gadgets"
       ],
       "sources": [
-        "Phys.org Space"
+        "Medical Xpress"
       ],
       "status": "publish",
-      "title": "'Starwashing': How space companies use the greenwashing playbook while causing environmental damage",
-      "wp_id": 28043
+      "title": "Two devices in one: Metasurface could bring medical imaging to smaller sensors",
+      "wp_id": 28050
     }
   ],
   "state": "published"
