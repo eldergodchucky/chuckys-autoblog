@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T07:01:00.958672+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-16T07:40:15.494089+00:00",
+  "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "Medical Xpress"
+        "ScienceDaily Top Health"
       ],
       "status": "publish",
-      "title": "Waist size is a powerful indicator of health risks",
-      "wp_id": 28076
+      "title": "Common food preservative linked to rising suicide deaths among young people",
+      "wp_id": 28080
     }
   ],
   "state": "published"
