@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T07:40:15.494089+00:00",
+  "finished_at": "2026-08-16T08:02:39.774419+00:00",
   "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "space",
         "science"
       ],
       "sources": [
-        "ScienceDaily Top Health"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Common food preservative linked to rising suicide deaths among young people",
-      "wp_id": 28080
+      "title": "On this day in space! Aug. 15",
+      "wp_id": 28082
     }
   ],
   "state": "published"
