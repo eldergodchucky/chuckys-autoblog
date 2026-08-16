@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T12:40:29.967353+00:00",
-  "inserted": 26,
+  "finished_at": "2026-08-16T13:21:05.527582+00:00",
+  "inserted": 8,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "PsyPost"
       ],
       "status": "publish",
-      "title": "Your Teeth May Reveal a Surprising Clue About Pancreatic Cancer Survival",
-      "wp_id": 28200
+      "title": "Scientists uncover an energy paradox in the brain during REM sleep",
+      "wp_id": 28206
     }
   ],
   "state": "published"
