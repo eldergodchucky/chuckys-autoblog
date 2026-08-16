@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T13:54:39.119818+00:00",
-  "inserted": 0,
+  "finished_at": "2026-08-16T14:23:58.087556+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "space"
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "Artemis II pilot thanks NASA for letting him fly Orion by hand",
-      "wp_id": 28209
+      "title": "Childhood Pesticide Exposure May Shift the Timing of Puberty",
+      "wp_id": 28212
     }
   ],
   "state": "published"
