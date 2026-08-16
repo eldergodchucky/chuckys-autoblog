@@ -1,24 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T10:24:18.970856+00:00",
-  "inserted": 6,
+  "finished_at": "2026-08-16T10:50:48.954573+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science",
-        "software"
+        "health",
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "'This goes beyond showcasing technological soft power': China's new moon map signals",
-      "wp_id": 28091
+      "title": "Researchers Discover a Potential Weak Spot in One of the Deadliest Brain",
+      "wp_id": 28093
     }
   ],
   "state": "published"
