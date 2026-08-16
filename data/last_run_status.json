@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T15:48:19.132750+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-16T16:26:08.424533+00:00",
+  "inserted": 9,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "space"
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "ScienceDaily Top Science"
       ],
       "status": "publish",
-      "title": "'Strap yourself in and feel the Gs': NASA announces 'Max Power' aerospace",
-      "wp_id": 28221
+      "title": "A new Ice Age species was hiding in la brea tar pits",
+      "wp_id": 28225
     }
   ],
   "state": "published"
