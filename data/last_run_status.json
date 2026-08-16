@@ -1,23 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T22:32:00.708144+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-16T22:59:42.497294+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "ScienceDaily Top Science"
       ],
       "status": "publish",
-      "title": "Popular Fertility Drug May Raise Miscarriage Risk Without Improving Live Birth Odds",
-      "wp_id": 28283
+      "title": "Common food preservative linked to rising suicide deaths among young people",
+      "wp_id": 28285
     }
   ],
   "state": "published"
