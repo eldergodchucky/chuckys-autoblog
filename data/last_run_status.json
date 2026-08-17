@@ -3,23 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T23:02:48.845299+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-17T23:38:30.979448+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
         "apple",
-        "android"
+        "phones",
+        "gadgets"
       ],
       "sources": [
-        "9to5Mac iPhone",
-        "Android Authority News"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Android 17 QPR 1 Beta 9 shares its fixes as Google puts",
-      "wp_id": 28398
+      "title": "Leaker details A20 Pro chip\u2019s new speed gains",
+      "wp_id": 28400
     }
   ],
   "state": "published"
