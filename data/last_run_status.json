@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-17T08:44:32.373946+00:00",
-  "inserted": 19,
+  "finished_at": "2026-08-17T09:26:13.468962+00:00",
+  "inserted": 18,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
         "science",
-        "gadgets"
+        "security"
       ],
       "sources": [
-        "ScienceDaily Top Technology"
+        "BleepingComputer"
       ],
       "status": "publish",
-      "title": "Scientists turn DNA into a memory device that uses 100x less power",
-      "wp_id": 28334
+      "title": "Microsoft working on Defender patch for ShieldBreak zero-day",
+      "wp_id": 28340
     }
   ],
   "state": "published"
