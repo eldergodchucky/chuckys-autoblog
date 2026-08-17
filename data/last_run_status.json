@@ -3,23 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-17T03:35:39.250046+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-17T04:27:25.144363+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "android",
-        "software",
-        "gadgets"
+        "health",
+        "science"
       ],
       "sources": [
-        "Android Authority News",
-        "GSMArena"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Android 17 QPR2 Beta 3 is a surprisingly feature-packed update",
-      "wp_id": 28306
+      "title": "Study reports significant reduction in postsurgical scar depth following DC microcurrent stimulation",
+      "wp_id": 28311
     }
   ],
   "state": "published"
