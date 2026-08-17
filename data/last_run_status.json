@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2758,
-  "finished_at": "2026-08-17T17:06:01.080648+00:00",
-  "inserted": 17,
+  "fetched": 2748,
+  "finished_at": "2026-08-17T17:46:45.400790+00:00",
+  "inserted": 27,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science",
-        "gadgets"
+        "gadgets",
+        "tech"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Engadget",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Engineers make edge AI more efficient by redesigning both algorithm and hardware",
-      "wp_id": 28374
+      "title": "Uber partners with Zipline on Eats drone deliveries",
+      "wp_id": 28376
     }
   ],
   "state": "published"
