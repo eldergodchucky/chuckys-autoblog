@@ -3,22 +3,24 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T21:08:50.160870+00:00",
+  "finished_at": "2026-08-17T21:42:25.397519+00:00",
   "inserted": 13,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "tech"
+        "apple",
+        "phones",
+        "software"
       ],
       "sources": [
+        "9to5Mac",
         "Engadget",
-        "TechCrunch"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Reddit begins testing a new audio and video experience",
-      "wp_id": 28390
+      "title": "Sonos just launched Live Activities on iPhone",
+      "wp_id": 28392
     }
   ],
   "state": "published"
