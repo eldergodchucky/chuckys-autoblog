@@ -3,23 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T18:17:13.297913+00:00",
-  "inserted": 19,
+  "finished_at": "2026-08-17T19:03:49.740604+00:00",
+  "inserted": 28,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "phones",
         "software"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "TechCrunch",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Apple releases iOS 26.6.1 for iPhone",
-      "wp_id": 28378
+      "title": "YouTube is changing how it counts views to give the numbers",
+      "wp_id": 28380
     }
   ],
   "state": "published"
