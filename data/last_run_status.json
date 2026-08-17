@@ -1,24 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T22:02:13.836605+00:00",
-  "inserted": 3,
+  "finished_at": "2026-08-17T22:43:21.525851+00:00",
+  "inserted": 8,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "science",
-        "software"
+        "space",
+        "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "NASA Science",
+        "Phys.org Space",
+        "Space.com"
       ],
       "status": "publish",
-      "title": "New guidance encourages GPs and physiologists to ditch unnecessary shoulder scans",
-      "wp_id": 28394
+      "title": "Hubble solves merger mystery from Milky Way's early years",
+      "wp_id": 28396
     }
   ],
   "state": "published"
