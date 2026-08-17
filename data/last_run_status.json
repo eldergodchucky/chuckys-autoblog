@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-16T23:49:13.556185+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-17T01:17:44.257163+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "android",
-        "gadgets"
+        "health",
+        "science"
       ],
       "sources": [
-        "Engadget",
-        "WIRED Gear"
+        "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "Engadget review recap: Samsung Galaxy Z Fold 8 Ultra",
-      "wp_id": 28289
+      "title": "New Drug Turns Cancer\u2019s Favorite Fuel Into a Deadly Weakness",
+      "wp_id": 28297
     }
   ],
   "state": "published"
