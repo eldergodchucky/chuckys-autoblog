@@ -1,23 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T16:39:47.112972+00:00",
-  "inserted": 21,
+  "finished_at": "2026-08-17T17:06:01.080648+00:00",
+  "inserted": 17,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "space"
+        "ai",
+        "science",
+        "gadgets"
       ],
       "sources": [
-        "Space.com"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Wildfire smoke blankets volcanoes across the Pacific Northwest",
-      "wp_id": 28372
+      "title": "Engineers make edge AI more efficient by redesigning both algorithm and hardware",
+      "wp_id": 28374
     }
   ],
   "state": "published"
