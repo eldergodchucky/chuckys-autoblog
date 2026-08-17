@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-17T05:10:46.848216+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-17T05:52:27.428562+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "health",
         "science"
       ],
       "sources": [
-        "ScienceDaily Top Science"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "A black hole shredded a \u201csuper sun\u201d \u2014 but something strange may",
-      "wp_id": 28316
+      "title": "Students who view more social media use more products that often harbor",
+      "wp_id": 28321
     }
   ],
   "state": "published"
