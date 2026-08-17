@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T19:43:43.504056+00:00",
-  "inserted": 26,
+  "finished_at": "2026-08-17T20:03:28.759618+00:00",
+  "inserted": 9,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Hidden immune environment uncovered in thymuses of myasthenia gravis patients",
-      "wp_id": 28384
+      "title": "Next Generation of Planetary Scientists Learn Public Engagement Skills",
+      "wp_id": 28386
     }
   ],
   "state": "published"
