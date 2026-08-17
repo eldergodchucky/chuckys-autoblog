@@ -2,22 +2,22 @@
   "dry_run": false,
   "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2755,
-  "finished_at": "2026-08-17T10:50:15.700725+00:00",
-  "inserted": 9,
+  "fetched": 2756,
+  "finished_at": "2026-08-17T11:27:43.310314+00:00",
+  "inserted": 25,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "science"
+        "science",
+        "security"
       ],
       "sources": [
         "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Fast-spreading malaria parasite mutations in Uganda may weaken Africa's most widely used",
-      "wp_id": 28348
+      "title": "Predicting the conditions that create famine",
+      "wp_id": 28352
     }
   ],
   "state": "published"
