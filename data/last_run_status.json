@@ -1,24 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2748,
-  "finished_at": "2026-08-17T17:46:45.400790+00:00",
-  "inserted": 27,
+  "fetched": 2758,
+  "finished_at": "2026-08-17T18:17:13.297913+00:00",
+  "inserted": 19,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "tech"
+        "apple",
+        "phones",
+        "software"
       ],
       "sources": [
-        "Engadget",
-        "The Verge"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Uber partners with Zipline on Eats drone deliveries",
-      "wp_id": 28376
+      "title": "Apple releases iOS 26.6.1 for iPhone",
+      "wp_id": 28378
     }
   ],
   "state": "published"
