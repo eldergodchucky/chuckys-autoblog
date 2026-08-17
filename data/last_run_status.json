@@ -1,23 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2756,
-  "finished_at": "2026-08-17T11:27:43.310314+00:00",
-  "inserted": 25,
+  "finished_at": "2026-08-17T11:52:56.627560+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "security"
+        "ai",
+        "software"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Engadget",
+        "TechCrunch",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Predicting the conditions that create famine",
-      "wp_id": 28352
+      "title": "Anthropic explains how Claude\u2019s invisible text watermarks will work",
+      "wp_id": 28354
     }
   ],
   "state": "published"
