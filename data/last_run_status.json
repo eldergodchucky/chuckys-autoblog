@@ -1,22 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T14:03:50.555770+00:00",
+  "finished_at": "2026-08-17T14:46:11.268385+00:00",
   "inserted": 19,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "IEEE Spectrum AI"
       ],
       "status": "publish",
-      "title": "A 'river' of cosmic gas 1 trillion miles long sent planets",
-      "wp_id": 28360
+      "title": "AI Used to Verify Toughest Mathematics Proof Yet",
+      "wp_id": 28364
     }
   ],
   "state": "published"
