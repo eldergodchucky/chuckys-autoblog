@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-17T09:26:13.468962+00:00",
-  "inserted": 18,
+  "finished_at": "2026-08-17T10:06:42.981078+00:00",
+  "inserted": 12,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "security"
+        "space"
       ],
       "sources": [
-        "BleepingComputer"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Microsoft working on Defender patch for ShieldBreak zero-day",
-      "wp_id": 28340
+      "title": "Blue Origin adding second pad to Cape Canaveral launch complex amid rocket",
+      "wp_id": 28344
     }
   ],
   "state": "published"
