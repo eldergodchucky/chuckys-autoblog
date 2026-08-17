@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T19:03:49.740604+00:00",
-  "inserted": 28,
+  "finished_at": "2026-08-17T19:43:43.504056+00:00",
+  "inserted": 26,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "software"
+        "health",
+        "science"
       ],
       "sources": [
-        "TechCrunch",
-        "The Verge"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "YouTube is changing how it counts views to give the numbers",
-      "wp_id": 28380
+      "title": "Hidden immune environment uncovered in thymuses of myasthenia gravis patients",
+      "wp_id": 28384
     }
   ],
   "state": "published"
