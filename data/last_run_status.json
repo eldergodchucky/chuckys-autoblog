@@ -3,21 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-17T07:55:45.653349+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-17T08:44:32.373946+00:00",
+  "inserted": 19,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "science",
+        "gadgets"
       ],
       "sources": [
-        "NASA Science"
+        "ScienceDaily Top Technology"
       ],
       "status": "publish",
-      "title": "IAUS 408: Unraveling the joint lives of Stars and Exoplanets",
-      "wp_id": 28332
+      "title": "Scientists turn DNA into a memory device that uses 100x less power",
+      "wp_id": 28334
     }
   ],
   "state": "published"
