@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-17T01:17:44.257163+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-17T02:43:04.357029+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "science"
+        "science",
+        "gadgets"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "New Drug Turns Cancer\u2019s Favorite Fuel Into a Deadly Weakness",
-      "wp_id": 28297
+      "title": "Wearable smart patch could automatically deliver aid during a fentanyl overdose",
+      "wp_id": 28302
     }
   ],
   "state": "published"
