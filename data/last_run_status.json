@@ -3,20 +3,20 @@
   "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T13:28:58.731565+00:00",
-  "inserted": 30,
+  "finished_at": "2026-08-17T14:03:50.555770+00:00",
+  "inserted": 19,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
         "Space.com"
       ],
       "status": "publish",
-      "title": "'This is unprecedented': Why the Pentagon's recent UFO file releases are so",
-      "wp_id": 28358
+      "title": "A 'river' of cosmic gas 1 trillion miles long sent planets",
+      "wp_id": 28360
     }
   ],
   "state": "published"
