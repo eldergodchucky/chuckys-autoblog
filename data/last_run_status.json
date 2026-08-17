@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-17T10:06:42.981078+00:00",
-  "inserted": 12,
+  "finished_at": "2026-08-17T10:50:15.700725+00:00",
+  "inserted": 9,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "health",
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Blue Origin adding second pad to Cape Canaveral launch complex amid rocket",
-      "wp_id": 28344
+      "title": "Fast-spreading malaria parasite mutations in Uganda may weaken Africa's most widely used",
+      "wp_id": 28348
     }
   ],
   "state": "published"
