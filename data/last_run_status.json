@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T16:01:28.278460+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-17T16:39:47.112972+00:00",
+  "inserted": 21,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "security"
+        "health",
+        "space"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Signal-based system brings end-to-end encryption to shared documents",
-      "wp_id": 28370
+      "title": "Wildfire smoke blankets volcanoes across the Pacific Northwest",
+      "wp_id": 28372
     }
   ],
   "state": "published"
