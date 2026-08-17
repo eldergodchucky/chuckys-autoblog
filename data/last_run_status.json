@@ -1,25 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2743,
-  "finished_at": "2026-08-17T15:41:43.914014+00:00",
-  "inserted": 24,
+  "fetched": 2758,
+  "finished_at": "2026-08-17T16:01:28.278460+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "software",
+        "science",
         "security"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "A serious Mac screen sharing vulnerability is being actively exploited",
-      "wp_id": 28368
+      "title": "Signal-based system brings end-to-end encryption to shared documents",
+      "wp_id": 28370
     }
   ],
   "state": "published"
