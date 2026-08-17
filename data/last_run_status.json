@@ -3,21 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T20:03:28.759618+00:00",
-  "inserted": 9,
+  "finished_at": "2026-08-17T20:45:16.310524+00:00",
+  "inserted": 20,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "apple",
+        "phones"
       ],
       "sources": [
-        "NASA Science"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Next Generation of Planetary Scientists Learn Public Engagement Skills",
-      "wp_id": 28386
+      "title": "Here\u2019s what\u2019s new with iOS 27 beta 6",
+      "wp_id": 28388
     }
   ],
   "state": "published"
