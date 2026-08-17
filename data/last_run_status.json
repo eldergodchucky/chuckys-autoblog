@@ -1,25 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2756,
-  "finished_at": "2026-08-17T12:44:59.136598+00:00",
-  "inserted": 24,
+  "fetched": 2758,
+  "finished_at": "2026-08-17T13:28:58.731565+00:00",
+  "inserted": 30,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "android",
-        "phones"
+        "science"
       ],
       "sources": [
-        "Android Authority News",
-        "GSMArena"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Samsung will release 5 new foldables next year",
-      "wp_id": 28356
+      "title": "'This is unprecedented': Why the Pentagon's recent UFO file releases are so",
+      "wp_id": 28358
     }
   ],
   "state": "published"
