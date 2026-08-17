@@ -1,23 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-17T05:52:27.428562+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-17T06:57:14.165678+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Medical Xpress"
       ],
       "status": "publish",
-      "title": "Students who view more social media use more products that often harbor",
-      "wp_id": 28321
+      "title": "Can video games help personalize cognitive care for vulnerable groups?",
+      "wp_id": 28326
     }
   ],
   "state": "published"
