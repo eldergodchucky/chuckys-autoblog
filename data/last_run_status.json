@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2758,
-  "finished_at": "2026-08-17T15:11:58.858768+00:00",
+  "fetched": 2743,
+  "finished_at": "2026-08-17T15:41:43.914014+00:00",
   "inserted": 24,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "apple",
-        "android",
-        "phones"
+        "software",
+        "security"
       ],
       "sources": [
         "9to5Mac",
         "MacRumors"
       ],
       "status": "publish",
-      "title": "Apple Wallet driver\u2019s license is coming to new US state soon",
-      "wp_id": 28366
+      "title": "A serious Mac screen sharing vulnerability is being actively exploited",
+      "wp_id": 28368
     }
   ],
   "state": "published"
