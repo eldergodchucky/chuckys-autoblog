@@ -3,21 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-17T02:43:04.357029+00:00",
+  "finished_at": "2026-08-17T03:35:39.250046+00:00",
   "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
+        "android",
+        "software",
         "gadgets"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Android Authority News",
+        "GSMArena"
       ],
       "status": "publish",
-      "title": "Wearable smart patch could automatically deliver aid during a fentanyl overdose",
-      "wp_id": 28302
+      "title": "Android 17 QPR2 Beta 3 is a surprisingly feature-packed update",
+      "wp_id": 28306
     }
   ],
   "state": "published"
