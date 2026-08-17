@@ -3,21 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T14:46:11.268385+00:00",
-  "inserted": 19,
+  "finished_at": "2026-08-17T15:11:58.858768+00:00",
+  "inserted": 24,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science"
+        "apple",
+        "android",
+        "phones"
       ],
       "sources": [
-        "IEEE Spectrum AI"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "AI Used to Verify Toughest Mathematics Proof Yet",
-      "wp_id": 28364
+      "title": "Apple Wallet driver\u2019s license is coming to new US state soon",
+      "wp_id": 28366
     }
   ],
   "state": "published"
