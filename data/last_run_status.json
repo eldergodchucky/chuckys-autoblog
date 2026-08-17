@@ -3,23 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T20:45:16.310524+00:00",
-  "inserted": 20,
+  "finished_at": "2026-08-17T21:08:50.160870+00:00",
+  "inserted": 13,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "apple",
-        "phones"
+        "gadgets",
+        "tech"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Engadget",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Here\u2019s what\u2019s new with iOS 27 beta 6",
-      "wp_id": 28388
+      "title": "Reddit begins testing a new audio and video experience",
+      "wp_id": 28390
     }
   ],
   "state": "published"
