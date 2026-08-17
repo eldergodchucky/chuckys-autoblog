@@ -1,26 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T21:42:25.397519+00:00",
-  "inserted": 13,
+  "finished_at": "2026-08-17T22:02:13.836605+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "phones",
+        "health",
+        "science",
         "software"
       ],
       "sources": [
-        "9to5Mac",
-        "Engadget",
-        "The Verge"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Sonos just launched Live Activities on iPhone",
-      "wp_id": 28392
+      "title": "New guidance encourages GPs and physiologists to ditch unnecessary shoulder scans",
+      "wp_id": 28394
     }
   ],
   "state": "published"
