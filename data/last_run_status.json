@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2755,
-  "finished_at": "2026-08-17T06:57:14.165678+00:00",
+  "finished_at": "2026-08-17T07:55:45.653349+00:00",
   "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "space",
         "science"
       ],
       "sources": [
-        "Medical Xpress"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Can video games help personalize cognitive care for vulnerable groups?",
-      "wp_id": 28326
+      "title": "IAUS 408: Unraveling the joint lives of Stars and Exoplanets",
+      "wp_id": 28332
     }
   ],
   "state": "published"
