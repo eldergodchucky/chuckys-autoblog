@@ -3,23 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-17T22:43:21.525851+00:00",
-  "inserted": 8,
+  "finished_at": "2026-08-17T23:02:48.845299+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "apple",
+        "android"
       ],
       "sources": [
-        "NASA Science",
-        "Phys.org Space",
-        "Space.com"
+        "9to5Mac iPhone",
+        "Android Authority News"
       ],
       "status": "publish",
-      "title": "Hubble solves merger mystery from Milky Way's early years",
-      "wp_id": 28396
+      "title": "Android 17 QPR 1 Beta 9 shares its fixes as Google puts",
+      "wp_id": 28398
     }
   ],
   "state": "published"
