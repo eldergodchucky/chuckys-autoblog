@@ -1,23 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2760,
-  "finished_at": "2026-08-18T11:53:12.588585+00:00",
-  "inserted": 7,
+  "finished_at": "2026-08-18T12:47:18.197790+00:00",
+  "inserted": 36,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science"
+        "apple",
+        "phones",
+        "gadgets"
       ],
       "sources": [
-        "Phys.org Technology"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "AI framework reconstructs high-resolution fluorescence lifetime images from faster",
-      "wp_id": 28467
+      "title": "iPhone 18 Pro Max Rumored to Get Exclusive Camera Upgrade",
+      "wp_id": 28473
     }
   ],
   "state": "published"
