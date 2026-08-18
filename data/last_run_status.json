@@ -1,25 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-18T04:54:42.802333+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-18T05:31:14.410195+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
         "apple",
-        "phones"
+        "tech"
       ],
       "sources": [
         "9to5Mac",
-        "MacRumors"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "iOS 26.6.1 has fixes for 20+ security issues on iPhone",
-      "wp_id": 28426
+      "title": "Spotify\u2019s new Playlist Notes let users add context to songs",
+      "wp_id": 28431
     }
   ],
   "state": "published"
