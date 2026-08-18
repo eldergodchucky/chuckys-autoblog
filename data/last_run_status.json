@@ -1,25 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 4,
   "feeds": 59,
-  "fetched": 2758,
-  "finished_at": "2026-08-18T10:05:43.919788+00:00",
-  "inserted": 12,
+  "fetched": 2748,
+  "finished_at": "2026-08-18T10:48:45.428963+00:00",
+  "inserted": 14,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "software",
-        "gadgets"
+        "health",
+        "science"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "ScienceDaily Health & Medicine"
       ],
       "status": "publish",
-      "title": "Apple releases public beta 4 for iOS 27",
-      "wp_id": 28455
+      "title": "The bacteria that make cheese taste so good may also benefit your",
+      "wp_id": 28461
     }
   ],
   "state": "published"
