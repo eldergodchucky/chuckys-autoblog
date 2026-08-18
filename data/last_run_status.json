@@ -3,22 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2763,
-  "finished_at": "2026-08-18T21:59:55.870920+00:00",
-  "inserted": 10,
+  "finished_at": "2026-08-18T22:33:38.816784+00:00",
+  "inserted": 27,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
+        "ai",
+        "science",
         "software"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "TechCrunch",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "iCloud, Photos, Find My and More Experiencing Issues",
-      "wp_id": 28513
+      "title": "OpenAI institutes new safeguards after Hugging Face breach",
+      "wp_id": 28515
     }
   ],
   "state": "published"
