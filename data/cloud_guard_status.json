@@ -1,10 +1,28 @@
 {
-  "active_main_runs": [],
+  "active_main_runs": [
+    {
+      "age_minutes": 0,
+      "created_at": "2026-08-18T23:00:05Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/32195262376",
+      "id": 32195262376,
+      "status": "in_progress"
+    }
+  ],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-18T22:38:25.525307+00:00",
-  "fresh_main_runs": [],
+  "finished_at": "2026-08-18T23:00:37.935017+00:00",
+  "fresh_main_runs": [
+    {
+      "age_minutes": 0,
+      "created_at": "2026-08-18T23:00:05Z",
+      "event": "schedule",
+      "html_url": "https://github.com/eldergodchucky/chuckys-autoblog/actions/runs/32195262376",
+      "id": 32195262376,
+      "status": "in_progress"
+    }
+  ],
   "github_error": "",
-  "latest_age_minutes": 4,
+  "latest_age_minutes": 27,
   "latest_link": "https://chuckyscarnage.tech.blog/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/",
   "latest_published_at": "2026-08-18T22:33:29+00:00",
   "latest_title": "OpenAI institutes new safeguards after Hugging Face breach",
