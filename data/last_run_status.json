@@ -1,23 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2762,
-  "finished_at": "2026-08-18T19:59:30.837997+00:00",
-  "inserted": 13,
+  "fetched": 2753,
+  "finished_at": "2026-08-18T20:34:01.843414+00:00",
+  "inserted": 25,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gadgets"
+        "ai",
+        "apple",
+        "phones"
       ],
       "sources": [
-        "Ars Technica Gadgets",
-        "Engadget"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Peacock raises prices by 18 percent after becoming profitable",
-      "wp_id": 28505
+      "title": "Apple\u2019s big Home product overhaul leaked in new report",
+      "wp_id": 28507
     }
   ],
   "state": "published"
