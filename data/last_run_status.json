@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2760,
-  "finished_at": "2026-08-18T11:27:03.142417+00:00",
-  "inserted": 26,
+  "finished_at": "2026-08-18T11:53:12.588585+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "ai",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Curiosity Blog, Sols 4975-4981: Happy 14th Landing Anniversary",
-      "wp_id": 28465
+      "title": "AI framework reconstructs high-resolution fluorescence lifetime images from faster",
+      "wp_id": 28467
     }
   ],
   "state": "published"
