@@ -3,8 +3,8 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2763,
-  "finished_at": "2026-08-18T21:34:26.264686+00:00",
-  "inserted": 17,
+  "finished_at": "2026-08-18T21:59:55.870920+00:00",
+  "inserted": 10,
   "message": "Published 1 post(s).",
   "posts": [
     {
@@ -14,11 +14,11 @@
       ],
       "sources": [
         "9to5Mac",
-        "Apple Newsroom"
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Apple announces changes for apps in the European Union",
-      "wp_id": 28511
+      "title": "iCloud, Photos, Find My and More Experiencing Issues",
+      "wp_id": 28513
     }
   ],
   "state": "published"
