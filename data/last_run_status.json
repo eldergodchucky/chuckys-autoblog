@@ -3,22 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-18T05:31:14.410195+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-18T05:59:19.311007+00:00",
+  "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "tech"
+        "health",
+        "science",
+        "software"
       ],
       "sources": [
-        "9to5Mac",
-        "TechCrunch"
+        "Medical Xpress"
       ],
       "status": "publish",
-      "title": "Spotify\u2019s new Playlist Notes let users add context to songs",
-      "wp_id": 28431
+      "title": "New guidance encourages GPs and physiologists to ditch unnecessary shoulder scans",
+      "wp_id": 28434
     }
   ],
   "state": "published"
