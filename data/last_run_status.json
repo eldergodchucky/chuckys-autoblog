@@ -2,13 +2,14 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2758,
-  "finished_at": "2026-08-17T23:59:59.594671+00:00",
-  "inserted": 4,
+  "fetched": 2738,
+  "finished_at": "2026-08-18T01:45:17.031781+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "ai",
         "apple",
         "software"
       ],
@@ -17,8 +18,8 @@
         "MacRumors"
       ],
       "status": "publish",
-      "title": "Apple Releases macOS Golden Gate Beta 6",
-      "wp_id": 28402
+      "title": "Apple Seeds tvOS 27 Beta 6 to Developers",
+      "wp_id": 28407
     }
   ],
   "state": "published"
