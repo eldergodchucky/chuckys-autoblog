@@ -1,25 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2738,
-  "finished_at": "2026-08-18T01:45:17.031781+00:00",
-  "inserted": 2,
+  "fetched": 2758,
+  "finished_at": "2026-08-18T02:44:21.409274+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "apple",
-        "software"
+        "science",
+        "gadgets"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Apple Seeds tvOS 27 Beta 6 to Developers",
-      "wp_id": 28407
+      "title": "Implantable device may help restore function after spinal cord injury",
+      "wp_id": 28412
     }
   ],
   "state": "published"
