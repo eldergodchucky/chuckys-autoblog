@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2762,
-  "finished_at": "2026-08-18T18:58:28.824102+00:00",
-  "inserted": 23,
+  "finished_at": "2026-08-18T19:33:05.269736+00:00",
+  "inserted": 20,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "ai",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Helio and You: July 2026",
-      "wp_id": 28501
+      "title": "When AI art has no author: Study finds generated images often can't",
+      "wp_id": 28503
     }
   ],
   "state": "published"
