@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2760,
-  "finished_at": "2026-08-18T12:47:18.197790+00:00",
-  "inserted": 36,
+  "finished_at": "2026-08-18T13:43:46.118317+00:00",
+  "inserted": 35,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
+        "android",
         "phones",
-        "gadgets"
+        "software"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Android Authority News",
+        "GSMArena"
       ],
       "status": "publish",
-      "title": "iPhone 18 Pro Max Rumored to Get Exclusive Camera Upgrade",
-      "wp_id": 28473
+      "title": "Fairphone 6+ is now official and coming to the US",
+      "wp_id": 28475
     }
   ],
   "state": "published"
