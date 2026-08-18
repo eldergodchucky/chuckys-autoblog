@@ -1,24 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2744,
-  "finished_at": "2026-08-18T23:37:30.629908+00:00",
-  "inserted": 6,
+  "fetched": 2764,
+  "finished_at": "2026-08-18T23:59:49.149580+00:00",
+  "inserted": 8,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "software"
+        "security"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Next Apple Watch activity challenge supports national parks",
-      "wp_id": 28519
+      "title": "Bee-inspired algorithm helps robot swarms reach consensus",
+      "wp_id": 28521
     }
   ],
   "state": "published"
