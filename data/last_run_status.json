@@ -3,22 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2761,
-  "finished_at": "2026-08-18T17:06:26.299320+00:00",
-  "inserted": 23,
+  "finished_at": "2026-08-18T17:44:57.732422+00:00",
+  "inserted": 27,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "software",
-        "gadgets"
+        "health",
+        "security"
       ],
       "sources": [
-        "TechCrunch",
-        "The Verge"
+        "BBC Health",
+        "The Guardian Health"
       ],
       "status": "publish",
-      "title": "Comcast adds motion sensing to millions of its newer routers",
-      "wp_id": 28491
+      "title": "One dead and hundreds ill in UK salmonella outbreak",
+      "wp_id": 28495
     }
   ],
   "state": "published"
