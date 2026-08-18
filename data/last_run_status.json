@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-18T03:30:27.364334+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-18T04:12:26.481621+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "ai",
         "space"
       ],
       "sources": [
-        "Space.com"
+        "IEEE Spectrum Robotics"
       ],
       "status": "publish",
-      "title": "The 1st 'Star Wars: Ahsoka' season 2 trailer finally gives us",
-      "wp_id": 28417
+      "title": "Is Shipyard Welding the Right First Job for Humanoid Robots?",
+      "wp_id": 28422
     }
   ],
   "state": "published"
