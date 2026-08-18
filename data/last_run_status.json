@@ -2,24 +2,22 @@
   "dry_run": false,
   "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2763,
-  "finished_at": "2026-08-18T22:33:38.816784+00:00",
-  "inserted": 27,
+  "fetched": 2764,
+  "finished_at": "2026-08-18T23:02:28.598762+00:00",
+  "inserted": 10,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science",
-        "software"
+        "apple"
       ],
       "sources": [
-        "TechCrunch",
+        "Engadget",
         "The Verge"
       ],
       "status": "publish",
-      "title": "OpenAI institutes new safeguards after Hugging Face breach",
-      "wp_id": 28515
+      "title": "PlayStation\u2019s wireless gaming speakers launch in November",
+      "wp_id": 28517
     }
   ],
   "state": "published"
