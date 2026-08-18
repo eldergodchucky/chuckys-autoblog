@@ -3,23 +3,22 @@
   "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2760,
-  "finished_at": "2026-08-18T13:43:46.118317+00:00",
-  "inserted": 35,
+  "finished_at": "2026-08-18T14:19:11.257508+00:00",
+  "inserted": 22,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "android",
-        "phones",
-        "software"
+        "apple",
+        "phones"
       ],
       "sources": [
-        "Android Authority News",
-        "GSMArena"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Fairphone 6+ is now official and coming to the US",
-      "wp_id": 28475
+      "title": "New Apple TV 4K to have upgraded Siri Remote",
+      "wp_id": 28477
     }
   ],
   "state": "published"
