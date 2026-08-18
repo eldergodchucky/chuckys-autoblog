@@ -3,22 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-18T09:40:25.434348+00:00",
-  "inserted": 17,
+  "finished_at": "2026-08-18T10:05:43.919788+00:00",
+  "inserted": 12,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "phones",
+        "apple",
+        "software",
         "gadgets"
       ],
       "sources": [
-        "Android Authority News",
-        "GSMArena"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Nothing's CMF teases a new pair of earbuds",
-      "wp_id": 28453
+      "title": "Apple releases public beta 4 for iOS 27",
+      "wp_id": 28455
     }
   ],
   "state": "published"
