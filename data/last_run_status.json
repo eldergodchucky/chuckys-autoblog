@@ -1,23 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-18T04:12:26.481621+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-18T04:54:42.802333+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "ai",
-        "space"
+        "apple",
+        "phones"
       ],
       "sources": [
-        "IEEE Spectrum Robotics"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Is Shipyard Welding the Right First Job for Humanoid Robots?",
-      "wp_id": 28422
+      "title": "iOS 26.6.1 has fixes for 20+ security issues on iPhone",
+      "wp_id": 28426
     }
   ],
   "state": "published"
