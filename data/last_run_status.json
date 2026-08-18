@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2760,
-  "finished_at": "2026-08-18T14:19:11.257508+00:00",
-  "inserted": 22,
+  "finished_at": "2026-08-18T15:03:49.218864+00:00",
+  "inserted": 38,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "phones"
+        "ai",
+        "software"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "TechCrunch",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "New Apple TV 4K to have upgraded Siri Remote",
-      "wp_id": 28477
+      "title": "ChatGPT is getting a dedicated mode for teens",
+      "wp_id": 28479
     }
   ],
   "state": "published"
