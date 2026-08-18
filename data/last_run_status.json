@@ -1,23 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2764,
-  "finished_at": "2026-08-18T23:02:28.598762+00:00",
-  "inserted": 10,
+  "fetched": 2744,
+  "finished_at": "2026-08-18T23:37:30.629908+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple"
+        "apple",
+        "software"
       ],
       "sources": [
-        "Engadget",
-        "The Verge"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "PlayStation\u2019s wireless gaming speakers launch in November",
-      "wp_id": 28517
+      "title": "Next Apple Watch activity challenge supports national parks",
+      "wp_id": 28519
     }
   ],
   "state": "published"
