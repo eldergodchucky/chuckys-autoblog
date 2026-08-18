@@ -1,24 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-18T06:55:30.648349+00:00",
-  "inserted": 12,
+  "finished_at": "2026-08-18T07:39:56.615488+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science",
         "security"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Researchers Discover Rheumatoid Arthritis Vulnerability May Begin Before Birth",
-      "wp_id": 28439
+      "title": "When zombie credit cards attack\u2014a loophole that can reanimate expired cards",
+      "wp_id": 28442
     }
   ],
   "state": "published"
