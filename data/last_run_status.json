@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2758,
-  "finished_at": "2026-08-18T08:16:57.553143+00:00",
-  "inserted": 11,
+  "finished_at": "2026-08-18T08:59:03.326928+00:00",
+  "inserted": 9,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "software"
       ],
       "sources": [
-        "Space.com"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Watch European astronaut make history during spacewalk today",
-      "wp_id": 28446
+      "title": "OpenAI to lease massive new AI data center in US",
+      "wp_id": 28449
     }
   ],
   "state": "published"
