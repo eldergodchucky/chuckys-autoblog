@@ -1,25 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2753,
-  "finished_at": "2026-08-18T20:34:01.843414+00:00",
-  "inserted": 25,
+  "fetched": 2763,
+  "finished_at": "2026-08-18T21:02:00.928207+00:00",
+  "inserted": 22,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
         "apple",
-        "phones"
+        "software"
       ],
       "sources": [
         "9to5Mac",
-        "MacRumors"
+        "MacRumors",
+        "TechCrunch",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Apple\u2019s big Home product overhaul leaked in new report",
-      "wp_id": 28507
+      "title": "Apple overhauls its EU App Store fees",
+      "wp_id": 28509
     }
   ],
   "state": "published"
