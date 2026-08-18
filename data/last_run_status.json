@@ -2,23 +2,22 @@
   "dry_run": false,
   "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2761,
-  "finished_at": "2026-08-18T18:06:19.610016+00:00",
-  "inserted": 17,
+  "fetched": 2762,
+  "finished_at": "2026-08-18T18:58:28.824102+00:00",
+  "inserted": 23,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "space",
         "science"
       ],
       "sources": [
-        "Space.com"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "It's harder to poop in space. Scientists may finally know why",
-      "wp_id": 28497
+      "title": "Helio and You: July 2026",
+      "wp_id": 28501
     }
   ],
   "state": "published"
