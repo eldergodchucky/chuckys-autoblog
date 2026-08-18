@@ -3,22 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2761,
-  "finished_at": "2026-08-18T17:44:57.732422+00:00",
-  "inserted": 27,
+  "finished_at": "2026-08-18T18:06:19.610016+00:00",
+  "inserted": 17,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "health",
-        "security"
+        "space",
+        "science"
       ],
       "sources": [
-        "BBC Health",
-        "The Guardian Health"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "One dead and hundreds ill in UK salmonella outbreak",
-      "wp_id": 28495
+      "title": "It's harder to poop in space. Scientists may finally know why",
+      "wp_id": 28497
     }
   ],
   "state": "published"
