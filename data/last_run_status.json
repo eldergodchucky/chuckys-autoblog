@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2762,
-  "finished_at": "2026-08-18T19:33:05.269736+00:00",
-  "inserted": 20,
+  "finished_at": "2026-08-18T19:59:30.837997+00:00",
+  "inserted": 13,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science"
+        "gadgets"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Ars Technica Gadgets",
+        "Engadget"
       ],
       "status": "publish",
-      "title": "When AI art has no author: Study finds generated images often can't",
-      "wp_id": 28503
+      "title": "Peacock raises prices by 18 percent after becoming profitable",
+      "wp_id": 28505
     }
   ],
   "state": "published"
