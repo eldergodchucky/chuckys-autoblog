@@ -1,24 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2760,
-  "finished_at": "2026-08-18T15:03:49.218864+00:00",
-  "inserted": 38,
+  "finished_at": "2026-08-18T15:48:25.521317+00:00",
+  "inserted": 34,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "software"
+        "phones"
       ],
       "sources": [
-        "TechCrunch",
-        "The Verge"
+        "Engadget",
+        "WIRED Gear"
       ],
       "status": "publish",
-      "title": "ChatGPT is getting a dedicated mode for teens",
-      "wp_id": 28479
+      "title": "Exclusive: You Can Finally Buy a Fairphone\u2014a Sustainable",
+      "wp_id": 28483
     }
   ],
   "state": "published"
