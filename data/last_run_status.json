@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2748,
-  "finished_at": "2026-08-18T10:48:45.428963+00:00",
-  "inserted": 14,
+  "fetched": 2760,
+  "finished_at": "2026-08-18T11:27:03.142417+00:00",
+  "inserted": 26,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "ScienceDaily Health & Medicine"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "The bacteria that make cheese taste so good may also benefit your",
-      "wp_id": 28461
+      "title": "Curiosity Blog, Sols 4975-4981: Happy 14th Landing Anniversary",
+      "wp_id": 28465
     }
   ],
   "state": "published"
