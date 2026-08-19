@@ -3,22 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2764,
-  "finished_at": "2026-08-19T02:58:46.110585+00:00",
-  "inserted": 6,
+  "finished_at": "2026-08-19T03:52:50.779072+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "phones",
-        "science"
+        "space",
+        "science",
+        "gadgets"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Assistance systems to fight shortage of skilled workforce: XR supports sight-impaired people",
-      "wp_id": 28535
+      "title": "Touchdown! Private Chinese rocket aces landing on 2nd-ever flight",
+      "wp_id": 28540
     }
   ],
   "state": "published"
