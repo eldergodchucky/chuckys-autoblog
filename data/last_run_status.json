@@ -3,24 +3,21 @@
   "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-19T20:58:11.518844+00:00",
-  "inserted": 11,
+  "finished_at": "2026-08-19T21:28:55.746740+00:00",
+  "inserted": 16,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "ai",
-        "android"
+        "space",
+        "science"
       ],
       "sources": [
-        "Ars Technica Gadgets",
-        "Engadget",
-        "WIRED Gear"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Google Pixel Watch 5 Review: More Health",
-      "wp_id": 28614
+      "title": "Ancient Milky Way Merger",
+      "wp_id": 28616
     }
   ],
   "state": "published"
