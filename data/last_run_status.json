@@ -3,23 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-19T21:54:07.983560+00:00",
-  "inserted": 8,
+  "finished_at": "2026-08-19T22:25:41.828374+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "apple",
-        "software"
+        "gadgets"
       ],
       "sources": [
-        "9to5Mac",
-        "Engadget"
+        "Engadget",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Meta AI now has a dedicated desktop app for Mac",
-      "wp_id": 28618
+      "title": "Waymo Ojai vans are now available for all riders in three cities",
+      "wp_id": 28620
     }
   ],
   "state": "published"
