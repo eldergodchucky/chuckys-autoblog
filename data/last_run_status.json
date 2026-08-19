@@ -2,22 +2,22 @@
   "dry_run": false,
   "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2765,
-  "finished_at": "2026-08-19T13:44:43.393985+00:00",
-  "inserted": 12,
+  "fetched": 2766,
+  "finished_at": "2026-08-19T14:19:36.482750+00:00",
+  "inserted": 29,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Weight-loss drug users turn to social media over doctors for advice",
-      "wp_id": 28586
+      "title": "Astronomers catch hot birth of galaxy cluster more than 11 billion light-years",
+      "wp_id": 28588
     }
   ],
   "state": "published"
