@@ -3,23 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2765,
-  "finished_at": "2026-08-19T12:48:00.585066+00:00",
-  "inserted": 33,
+  "finished_at": "2026-08-19T13:44:43.393985+00:00",
+  "inserted": 12,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "android",
-        "phones",
-        "gadgets"
+        "health",
+        "science"
       ],
       "sources": [
-        "Android Authority News",
-        "GSMArena"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Samsung Galaxy S26 FE's European Energy Label leaks",
-      "wp_id": 28584
+      "title": "Weight-loss drug users turn to social media over doctors for advice",
+      "wp_id": 28586
     }
   ],
   "state": "published"
