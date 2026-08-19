@@ -2,22 +2,23 @@
   "dry_run": false,
   "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2764,
-  "finished_at": "2026-08-19T05:15:22.840784+00:00",
-  "inserted": 7,
+  "fetched": 2765,
+  "finished_at": "2026-08-19T05:50:33.808822+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "BBC Health",
+        "Phys.org Medical Research",
+        "The Guardian Health"
       ],
       "status": "publish",
-      "title": "Blood test may help guide treatment for metastatic melanoma",
-      "wp_id": 28548
+      "title": "Scientists stunned by children's lung recovery in ultra low emission zone",
+      "wp_id": 28552
     }
   ],
   "state": "published"
