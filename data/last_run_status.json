@@ -1,23 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2714,
-  "finished_at": "2026-08-19T01:47:35.158019+00:00",
-  "inserted": 10,
+  "fetched": 2764,
+  "finished_at": "2026-08-19T02:58:46.110585+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "space"
+        "ai",
+        "phones",
+        "science"
       ],
       "sources": [
-        "Phys.org Space"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Mars attacks: How much dust from the red planet is safe",
-      "wp_id": 28530
+      "title": "Assistance systems to fight shortage of skilled workforce: XR supports sight-impaired people",
+      "wp_id": 28535
     }
   ],
   "state": "published"
