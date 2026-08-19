@@ -1,25 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-19T22:52:33.241229+00:00",
-  "inserted": 8,
+  "finished_at": "2026-08-19T23:23:50.999164+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "space",
-        "science"
+        "health",
+        "science",
+        "security"
       ],
       "sources": [
-        "NASA Science",
-        "Space.com"
+        "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "Private mission to save NASA's Swift space telescope fails",
-      "wp_id": 28622
+      "title": "Is Your Sleep Hiding an Early Warning Sign of Alzheimer\u2019s?",
+      "wp_id": 28624
     }
   ],
   "state": "published"
