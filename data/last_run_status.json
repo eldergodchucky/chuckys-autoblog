@@ -3,22 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-19T18:49:02.756890+00:00",
-  "inserted": 31,
+  "finished_at": "2026-08-19T19:26:30.669126+00:00",
+  "inserted": 30,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
+        "health",
         "science",
-        "security"
+        "gadgets"
       ],
       "sources": [
-        "TechCrunch"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Researchers complain that OpenAI revoked their access to limited cyber program",
-      "wp_id": 28606
+      "title": "Heartbeats power a battery-free pacemaker designed to last a lifetime",
+      "wp_id": 28608
     }
   ],
   "state": "published"
