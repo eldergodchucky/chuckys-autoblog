@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 4,
   "feeds": 59,
-  "fetched": 2766,
-  "finished_at": "2026-08-19T14:19:36.482750+00:00",
-  "inserted": 29,
+  "fetched": 2746,
+  "finished_at": "2026-08-19T15:04:03.127565+00:00",
+  "inserted": 47,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "software"
       ],
       "sources": [
-        "Phys.org Space"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Astronomers catch hot birth of galaxy cluster more than 11 billion light-years",
-      "wp_id": 28588
+      "title": "OpenAI says ads are coming to ChatGPT in Europe next week",
+      "wp_id": 28590
     }
   ],
   "state": "published"
