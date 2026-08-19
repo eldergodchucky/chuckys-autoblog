@@ -3,23 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2765,
-  "finished_at": "2026-08-19T10:06:09.694158+00:00",
-  "inserted": 10,
+  "finished_at": "2026-08-19T10:47:36.188850+00:00",
+  "inserted": 29,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "android",
-        "phones",
-        "software"
+        "health",
+        "science"
       ],
       "sources": [
-        "Android Authority News",
-        "GSMArena"
+        "ScienceDaily Health & Medicine"
       ],
       "status": "publish",
-      "title": "Your Samsung phone can now unlock your Volkswagen EV",
-      "wp_id": 28574
+      "title": "Japanese scientists use tiny silver particles to make DNA assembly up",
+      "wp_id": 28578
     }
   ],
   "state": "published"
