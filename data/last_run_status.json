@@ -3,22 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-19T19:26:30.669126+00:00",
-  "inserted": 30,
+  "finished_at": "2026-08-19T19:51:42.818999+00:00",
+  "inserted": 11,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "health",
-        "science",
-        "gadgets"
+        "space",
+        "science"
       ],
       "sources": [
         "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Heartbeats power a battery-free pacemaker designed to last a lifetime",
-      "wp_id": 28608
+      "title": "From orbit to clinic: HIV drug enters Rett syndrome trial after space-based",
+      "wp_id": 28610
     }
   ],
   "state": "published"
