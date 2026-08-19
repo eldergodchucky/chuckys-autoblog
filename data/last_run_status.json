@@ -1,24 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2765,
-  "finished_at": "2026-08-19T09:36:05.069084+00:00",
-  "inserted": 16,
+  "finished_at": "2026-08-19T10:06:09.694158+00:00",
+  "inserted": 10,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "android",
         "phones",
-        "gadgets"
+        "software"
       ],
       "sources": [
         "Android Authority News",
-        "Engadget"
+        "GSMArena"
       ],
       "status": "publish",
-      "title": "This leaked Motorola accessory could change how you charge your phone",
-      "wp_id": 28572
+      "title": "Your Samsung phone can now unlock your Volkswagen EV",
+      "wp_id": 28574
     }
   ],
   "state": "published"
