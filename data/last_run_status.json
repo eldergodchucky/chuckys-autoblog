@@ -1,24 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2766,
-  "finished_at": "2026-08-19T16:32:26.770700+00:00",
-  "inserted": 38,
+  "finished_at": "2026-08-19T17:04:17.475935+00:00",
+  "inserted": 25,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science",
-        "gadgets"
+        "gadgets",
+        "tech",
+        "apple"
       ],
       "sources": [
-        "Phys.org Technology"
+        "9to5Mac",
+        "Engadget",
+        "TechCrunch",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "'Oxygen tunnel' structure could solve 3D memory reliability problem to boost AI",
-      "wp_id": 28596
+      "title": "Amazon announces huge drone delivery expansion",
+      "wp_id": 28598
     }
   ],
   "state": "published"
