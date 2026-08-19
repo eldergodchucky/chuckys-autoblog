@@ -1,22 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-19T18:00:54.276352+00:00",
-  "inserted": 11,
+  "finished_at": "2026-08-19T18:49:02.756890+00:00",
+  "inserted": 31,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "software"
+        "ai",
+        "science",
+        "security"
       ],
       "sources": [
-        "Space.com"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Mysterious Russian 'space activity' causes US Air Force flight to Antarctica",
-      "wp_id": 28602
+      "title": "Researchers complain that OpenAI revoked their access to limited cyber program",
+      "wp_id": 28606
     }
   ],
   "state": "published"
