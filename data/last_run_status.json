@@ -3,24 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2766,
-  "finished_at": "2026-08-19T15:48:03.481604+00:00",
-  "inserted": 28,
+  "finished_at": "2026-08-19T16:32:26.770700+00:00",
+  "inserted": 38,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "ai",
+        "science",
         "gadgets"
       ],
       "sources": [
-        "Android Authority News",
-        "Engadget",
-        "TechCrunch",
-        "The Verge"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Amazon makes its AI-powered Alexa+ free on Fire TV",
-      "wp_id": 28594
+      "title": "'Oxygen tunnel' structure could solve 3D memory reliability problem to boost AI",
+      "wp_id": 28596
     }
   ],
   "state": "published"
