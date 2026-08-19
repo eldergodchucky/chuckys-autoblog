@@ -1,23 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-19T22:25:41.828374+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-19T22:52:33.241229+00:00",
+  "inserted": 8,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gadgets"
+        "apple",
+        "space",
+        "science"
       ],
       "sources": [
-        "Engadget",
-        "TechCrunch"
+        "NASA Science",
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Waymo Ojai vans are now available for all riders in three cities",
-      "wp_id": 28620
+      "title": "Private mission to save NASA's Swift space telescope fails",
+      "wp_id": 28622
     }
   ],
   "state": "published"
