@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-19T23:23:50.999164+00:00",
-  "inserted": 6,
+  "finished_at": "2026-08-19T23:48:43.605074+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science",
-        "security"
+        "gadgets"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Is Your Sleep Hiding an Early Warning Sign of Alzheimer\u2019s?",
-      "wp_id": 28624
+      "title": "Wearable fans could keep workers cool while reducing office energy use",
+      "wp_id": 28626
     }
   ],
   "state": "published"
