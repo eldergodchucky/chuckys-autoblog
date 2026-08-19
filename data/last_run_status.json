@@ -1,27 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2766,
-  "finished_at": "2026-08-19T17:04:17.475935+00:00",
-  "inserted": 25,
+  "fetched": 2767,
+  "finished_at": "2026-08-19T17:41:50.920027+00:00",
+  "inserted": 22,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "tech",
-        "apple"
+        "apple",
+        "phones",
+        "software"
       ],
       "sources": [
         "9to5Mac",
-        "Engadget",
-        "TechCrunch",
-        "The Verge"
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Amazon announces huge drone delivery expansion",
-      "wp_id": 28598
+      "title": "HomePad code suggests it\u2019ll act like a giant Apple Watch",
+      "wp_id": 28600
     }
   ],
   "state": "published"
