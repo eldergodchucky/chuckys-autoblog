@@ -1,23 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2746,
-  "finished_at": "2026-08-19T15:04:03.127565+00:00",
-  "inserted": 47,
+  "fetched": 2766,
+  "finished_at": "2026-08-19T15:48:03.481604+00:00",
+  "inserted": 28,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "ai",
-        "software"
+        "gadgets"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Android Authority News",
+        "Engadget",
+        "TechCrunch",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "OpenAI says ads are coming to ChatGPT in Europe next week",
-      "wp_id": 28590
+      "title": "Amazon makes its AI-powered Alexa+ free on Fire TV",
+      "wp_id": 28594
     }
   ],
   "state": "published"
