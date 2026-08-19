@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2765,
-  "finished_at": "2026-08-19T06:44:50.977898+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-19T07:27:23.602266+00:00",
+  "inserted": 13,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "health",
+        "science"
       ],
       "sources": [
-        "Phys.org Space"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "NASA's SkyFall Mars helicopters will feature a revolutionary antenna design",
-      "wp_id": 28557
+      "title": "What Ukraine's wartime blood supply transformation can teach the US",
+      "wp_id": 28564
     }
   ],
   "state": "published"
