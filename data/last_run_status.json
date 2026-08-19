@@ -3,20 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2765,
-  "finished_at": "2026-08-19T11:51:58.054436+00:00",
-  "inserted": 8,
+  "finished_at": "2026-08-19T12:48:00.585066+00:00",
+  "inserted": 33,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "android",
+        "phones",
+        "gadgets"
       ],
       "sources": [
-        "Space.com"
+        "Android Authority News",
+        "GSMArena"
       ],
       "status": "publish",
-      "title": "Astronomers discover a giant",
-      "wp_id": 28582
+      "title": "Samsung Galaxy S26 FE's European Energy Label leaks",
+      "wp_id": 28584
     }
   ],
   "state": "published"
