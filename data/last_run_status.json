@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2765,
-  "finished_at": "2026-08-19T10:47:36.188850+00:00",
-  "inserted": 29,
+  "finished_at": "2026-08-19T11:26:09.543080+00:00",
+  "inserted": 21,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "ScienceDaily Health & Medicine"
+        "ScienceDaily Top Science"
       ],
       "status": "publish",
-      "title": "Japanese scientists use tiny silver particles to make DNA assembly up",
-      "wp_id": 28578
+      "title": "16 mummies and a dog reveal a hidden order inside an ancient",
+      "wp_id": 28580
     }
   ],
   "state": "published"
