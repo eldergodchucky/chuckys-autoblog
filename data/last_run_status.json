@@ -1,23 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-19T20:29:07.885293+00:00",
-  "inserted": 31,
+  "finished_at": "2026-08-19T20:58:11.518844+00:00",
+  "inserted": 11,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "health",
+        "ai",
+        "android"
       ],
       "sources": [
-        "NASA Science"
+        "Ars Technica Gadgets",
+        "Engadget",
+        "WIRED Gear"
       ],
       "status": "publish",
-      "title": "NASA Study Reveals Hidden Stage of Arctic Freeze",
-      "wp_id": 28612
+      "title": "Google Pixel Watch 5 Review: More Health",
+      "wp_id": 28614
     }
   ],
   "state": "published"
