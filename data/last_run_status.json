@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2765,
-  "finished_at": "2026-08-19T08:57:50.956738+00:00",
-  "inserted": 17,
+  "finished_at": "2026-08-19T09:36:05.069084+00:00",
+  "inserted": 16,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "phones",
+        "gadgets"
       ],
       "sources": [
-        "NASA Science",
-        "Phys.org Space"
+        "Android Authority News",
+        "Engadget"
       ],
       "status": "publish",
-      "title": "NASA's LRO images Falcon 9 crater on moon",
-      "wp_id": 28570
+      "title": "This leaked Motorola accessory could change how you charge your phone",
+      "wp_id": 28572
     }
   ],
   "state": "published"
