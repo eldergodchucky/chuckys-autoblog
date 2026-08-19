@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-19T19:51:42.818999+00:00",
-  "inserted": 11,
+  "finished_at": "2026-08-19T20:29:07.885293+00:00",
+  "inserted": 31,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "space",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "From orbit to clinic: HIV drug enters Rett syndrome trial after space-based",
-      "wp_id": 28610
+      "title": "NASA Study Reveals Hidden Stage of Arctic Freeze",
+      "wp_id": 28612
     }
   ],
   "state": "published"
