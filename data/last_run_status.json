@@ -3,20 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2765,
-  "finished_at": "2026-08-19T08:05:50.783622+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-19T08:57:50.956738+00:00",
+  "inserted": 17,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "space",
         "science"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "NASA Science",
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Quitting Alcohol Can Change the Brain in Surprising Ways",
-      "wp_id": 28566
+      "title": "NASA's LRO images Falcon 9 crater on moon",
+      "wp_id": 28570
     }
   ],
   "state": "published"
