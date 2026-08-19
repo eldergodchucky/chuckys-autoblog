@@ -1,23 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-19T21:28:55.746740+00:00",
-  "inserted": 16,
+  "finished_at": "2026-08-19T21:54:07.983560+00:00",
+  "inserted": 8,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "apple",
+        "software"
       ],
       "sources": [
-        "NASA Science"
+        "9to5Mac",
+        "Engadget"
       ],
       "status": "publish",
-      "title": "Ancient Milky Way Merger",
-      "wp_id": 28616
+      "title": "Meta AI now has a dedicated desktop app for Mac",
+      "wp_id": 28618
     }
   ],
   "state": "published"
