@@ -3,22 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2765,
-  "finished_at": "2026-08-19T05:50:33.808822+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-19T06:44:50.977898+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "BBC Health",
-        "Phys.org Medical Research",
-        "The Guardian Health"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Scientists stunned by children's lung recovery in ultra low emission zone",
-      "wp_id": 28552
+      "title": "NASA's SkyFall Mars helicopters will feature a revolutionary antenna design",
+      "wp_id": 28557
     }
   ],
   "state": "published"
