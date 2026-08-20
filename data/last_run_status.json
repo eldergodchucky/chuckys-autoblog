@@ -2,21 +2,22 @@
   "dry_run": false,
   "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2767,
-  "finished_at": "2026-08-20T15:17:49.730256+00:00",
-  "inserted": 30,
+  "fetched": 2768,
+  "finished_at": "2026-08-20T16:00:20.818356+00:00",
+  "inserted": 28,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "software"
       ],
       "sources": [
-        "Space.com"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "On this day in space! Aug. 20",
-      "wp_id": 28696
+      "title": "At 0.8 nanometers, carbon film may replace two layers in future chip",
+      "wp_id": 28698
     }
   ],
   "state": "published"
