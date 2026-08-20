@@ -3,21 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-20T02:32:51.876683+00:00",
-  "inserted": 18,
+  "finished_at": "2026-08-20T03:30:58.726526+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "space"
+        "health",
+        "science",
+        "gadgets"
       ],
       "sources": [
-        "TechCrunch"
+        "Medical Xpress"
       ],
       "status": "publish",
-      "title": "Cognition CEO denies report that SpaceX tried to acquire the startup",
-      "wp_id": 28643
+      "title": "Heartbeats power a battery-free pacemaker designed to last a lifetime",
+      "wp_id": 28649
     }
   ],
   "state": "published"
