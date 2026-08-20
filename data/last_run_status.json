@@ -3,23 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-20T19:57:04.499217+00:00",
-  "inserted": 16,
+  "finished_at": "2026-08-20T20:31:12.297390+00:00",
+  "inserted": 21,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
         "apple",
-        "phones"
+        "android",
+        "software"
       ],
       "sources": [
         "9to5Mac",
-        "MacRumors"
+        "Android Authority News"
       ],
       "status": "publish",
-      "title": "Apple Releases New AirPods Beta Firmware With iOS 27 Features",
-      "wp_id": 28714
+      "title": "Nothing OS 5.0 update with Android 17 is \u2018coming soon\u2019",
+      "wp_id": 28716
     }
   ],
   "state": "published"
