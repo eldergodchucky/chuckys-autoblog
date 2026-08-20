@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2768,
-  "finished_at": "2026-08-20T16:45:22.014538+00:00",
-  "inserted": 36,
+  "finished_at": "2026-08-20T17:14:40.341293+00:00",
+  "inserted": 15,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "gadgets"
+        "software"
       ],
       "sources": [
         "9to5Mac",
-        "MacRumors"
+        "Engadget"
       ],
       "status": "publish",
-      "title": "Deals: M5 MacBook Air $1",
-      "wp_id": 28700
+      "title": "Roblox still allows predators to contact children",
+      "wp_id": 28702
     }
   ],
   "state": "published"
