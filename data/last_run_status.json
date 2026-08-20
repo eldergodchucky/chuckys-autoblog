@@ -2,21 +2,24 @@
   "dry_run": false,
   "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2768,
-  "finished_at": "2026-08-20T19:20:07.239737+00:00",
-  "inserted": 31,
+  "fetched": 2769,
+  "finished_at": "2026-08-20T19:57:04.499217+00:00",
+  "inserted": 16,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "apple",
+        "phones"
       ],
       "sources": [
-        "Space.com"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "'Wet Hot American Summer': The raunchy 2000s teen movie that was actually",
-      "wp_id": 28712
+      "title": "Apple Releases New AirPods Beta Firmware With iOS 27 Features",
+      "wp_id": 28714
     }
   ],
   "state": "published"
