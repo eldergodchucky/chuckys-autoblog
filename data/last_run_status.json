@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2768,
-  "finished_at": "2026-08-20T17:14:40.341293+00:00",
-  "inserted": 15,
+  "finished_at": "2026-08-20T17:48:59.386337+00:00",
+  "inserted": 22,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "software"
+        "health",
+        "science"
       ],
       "sources": [
-        "9to5Mac",
-        "Engadget"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Roblox still allows predators to contact children",
-      "wp_id": 28702
+      "title": "A single application of anti-mosquito coating reduces the long-term risk of dengue",
+      "wp_id": 28704
     }
   ],
   "state": "published"
