@@ -1,24 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-20T21:36:48.050194+00:00",
-  "inserted": 17,
+  "finished_at": "2026-08-20T22:03:09.552560+00:00",
+  "inserted": 12,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "ai",
-        "science"
+        "science",
+        "security"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "AI-guided screening identifies nine drugs that may slow childhood dementia",
-      "wp_id": 28720
+      "title": "Someone targeted security researchers using a fake crypto conference as a lure",
+      "wp_id": 28722
     }
   ],
   "state": "published"
