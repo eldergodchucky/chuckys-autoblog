@@ -1,24 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2767,
-  "finished_at": "2026-08-20T11:27:49.482535+00:00",
-  "inserted": 17,
+  "fetched": 2717,
+  "finished_at": "2026-08-20T11:55:52.526081+00:00",
+  "inserted": 20,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
+        "space",
         "software"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Camera-equipped AirPods reportedly won\u2019t launch in 2026",
-      "wp_id": 28686
+      "title": "Partial lunar eclipse live: Latest news",
+      "wp_id": 28688
     }
   ],
   "state": "published"
