@@ -1,22 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2757,
-  "finished_at": "2026-08-20T14:37:26.055066+00:00",
-  "inserted": 37,
+  "fetched": 2767,
+  "finished_at": "2026-08-20T15:17:49.730256+00:00",
+  "inserted": 30,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "PsyPost"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Researchers identify two key factors driving prejudice against asexual individuals",
-      "wp_id": 28694
+      "title": "On this day in space! Aug. 20",
+      "wp_id": 28696
     }
   ],
   "state": "published"
