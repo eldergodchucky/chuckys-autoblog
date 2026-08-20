@@ -1,24 +1,6 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
-  "feeds": 59,
-  "fetched": 2767,
-  "finished_at": "2026-08-20T10:01:58.065822+00:00",
-  "inserted": 16,
-  "message": "Published 1 post(s).",
-  "posts": [
-    {
-      "categories": [
-        "gadgets"
-      ],
-      "sources": [
-        "Engadget",
-        "The Verge"
-      ],
-      "status": "publish",
-      "title": "Sennheiser\u2019s new Momentum 5 earbuds feature easily replaceable batteries",
-      "wp_id": 28682
-    }
-  ],
-  "state": "published"
+  "finished_at": "2026-08-20T10:48:20.528015+00:00",
+  "message": "RuntimeError: WordPress request failed: HTTP 500: <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n\n<head profile=\"http://gmpg.org/xfn/11\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n\n<title>Check back in a few minutes</title>\n\n<meta name=\"generator\" content=\"WordPress MU\" /> <!-- leave this for stats -->\n\n<link rel=\"stylesheet\" href=\"http://wordpress.com/wp-content/themes/h4/global.css\" type=\"text/css\" media=\"screen\" />\n\n<link rel=\"EditURI\" type=\"application/rsd+xml\" title=\"RSD\" href=\"http://wordpress.com/xmlrpc.php?rsd\" />\n<script type=\"text/javascript\">\n\nfunction addLoadEvent(func) {\n  var oldonload = window.onload;\n  if (typeof window.onload != 'function') {\n    window.onload = func;\n  } else {\n    window.onload = function() {\n      oldonload();\n      func();\n    }\n  }\n}\n</script>\n\n</head>\n<body>\n\n<div id=\"page\">\n<div id=\"rapit\">\n\n\t<div id=\"content\" class=\"narrowcolumn\">\n\n    \t\t<div class=\"post\">\n\t\t<h2>Server Maintenance</h2>\n\t\t\t<div class=\"entrytext\">\n\n<p>Your server is going through a few minutes of routine maintenance. Please don't touch your browser for a few minutes.</p>\n<p>What do I do?</p>\n<ul><li> If you were posting a comment or making a post on your blog then <em>do not</em> press BACK on your browser. Wait 5 minutes and press the refresh icon on your browser. Your comment or post will be sent as normal.</li><li> If you are browsing a blog here just wait a few moments and hit refresh. The page you were expecting will appear.</li></ul>\n\n\n\t\t\t</div>\n\t\t</div>\n\t  \t\t</div>\n\n\n<div id=\"beforefooter\">\n</div>\n\n<div id=\"footer\"></div>\n\n</div></div>\n\n<script type=\"text/javascript\" src=\"//stats.wp.com/wpcom.js?22\"></script>\n<script type=\"text/javascript\">\n_error = '500-dbconnect';\nfzd();\n</script>\n\n</body>\n</html>\n",
+  "state": "failed"
 }
