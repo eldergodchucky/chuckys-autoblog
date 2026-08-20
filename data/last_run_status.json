@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-20T08:43:10.649719+00:00",
-  "inserted": 14,
+  "finished_at": "2026-08-20T09:19:07.791142+00:00",
+  "inserted": 11,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "science"
       ],
       "sources": [
-        "Phys.org Space"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Rescue mission is called off for NASA's aging Swift space telescope",
-      "wp_id": 28678
+      "title": "Google Gemini is getting a dedicated student hub",
+      "wp_id": 28680
     }
   ],
   "state": "published"
