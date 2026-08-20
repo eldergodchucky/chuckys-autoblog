@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-20T06:04:08.317030+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-20T07:07:24.195969+00:00",
+  "inserted": 9,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "science"
       ],
       "sources": [
-        "Phys.org Space"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Racing to build a radio telescope on the moon",
-      "wp_id": 28667
+      "title": "More is different when AI agent populations work together",
+      "wp_id": 28671
     }
   ],
   "state": "published"
