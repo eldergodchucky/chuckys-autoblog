@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-20T07:57:36.771555+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-20T08:43:10.649719+00:00",
+  "inserted": 14,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "gadgets"
+        "space"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Hybrid magnetic device enables quantum-inspired secure communication at room temperature",
-      "wp_id": 28675
+      "title": "Rescue mission is called off for NASA's aging Swift space telescope",
+      "wp_id": 28678
     }
   ],
   "state": "published"
