@@ -1,23 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2717,
-  "finished_at": "2026-08-20T11:55:52.526081+00:00",
-  "inserted": 20,
+  "fetched": 2767,
+  "finished_at": "2026-08-20T12:51:17.401330+00:00",
+  "inserted": 21,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "software"
+        "health",
+        "ai",
+        "apple"
       ],
       "sources": [
-        "Space.com"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Partial lunar eclipse live: Latest news",
-      "wp_id": 28688
+      "title": "Apple hits back at OpenAI\u2019s bid to dismiss lawsuit",
+      "wp_id": 28690
     }
   ],
   "state": "published"
