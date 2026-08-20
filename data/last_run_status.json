@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-20T05:31:39.712304+00:00",
-  "inserted": 3,
+  "finished_at": "2026-08-20T06:04:08.317030+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "International study marks step forward in genetic understanding of eating disorders",
-      "wp_id": 28662
+      "title": "Racing to build a radio telescope on the moon",
+      "wp_id": 28667
     }
   ],
   "state": "published"
