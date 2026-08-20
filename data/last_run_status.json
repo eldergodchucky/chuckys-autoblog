@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-20T21:00:02.436340+00:00",
-  "inserted": 13,
+  "finished_at": "2026-08-20T21:36:48.050194+00:00",
+  "inserted": 17,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science",
-        "software"
+        "health",
+        "ai",
+        "science"
       ],
       "sources": [
-        "NASA Science"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "2012 ISSM Workshop",
-      "wp_id": 28718
+      "title": "AI-guided screening identifies nine drugs that may slow childhood dementia",
+      "wp_id": 28720
     }
   ],
   "state": "published"
