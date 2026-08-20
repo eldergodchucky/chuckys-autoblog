@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-20T03:30:58.726526+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-20T04:11:56.656102+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "science",
-        "gadgets"
+        "phones",
+        "space",
+        "science"
       ],
       "sources": [
-        "Medical Xpress"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Heartbeats power a battery-free pacemaker designed to last a lifetime",
-      "wp_id": 28649
+      "title": "Samuel Kim",
+      "wp_id": 28655
     }
   ],
   "state": "published"
