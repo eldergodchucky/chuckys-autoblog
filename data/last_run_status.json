@@ -3,23 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-20T20:31:12.297390+00:00",
-  "inserted": 21,
+  "finished_at": "2026-08-20T21:00:02.436340+00:00",
+  "inserted": 13,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "android",
+        "space",
+        "science",
         "software"
       ],
       "sources": [
-        "9to5Mac",
-        "Android Authority News"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Nothing OS 5.0 update with Android 17 is \u2018coming soon\u2019",
-      "wp_id": 28716
+      "title": "2012 ISSM Workshop",
+      "wp_id": 28718
     }
   ],
   "state": "published"
