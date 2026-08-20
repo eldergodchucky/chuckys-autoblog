@@ -1,25 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2767,
-  "finished_at": "2026-08-20T13:48:27.384442+00:00",
-  "inserted": 38,
+  "fetched": 2757,
+  "finished_at": "2026-08-20T14:37:26.055066+00:00",
+  "inserted": 37,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "space",
         "science"
       ],
       "sources": [
-        "Adafruit Blog",
-        "Space.com"
+        "PsyPost"
       ],
       "status": "publish",
-      "title": "A star racing at 15",
-      "wp_id": 28692
+      "title": "Researchers identify two key factors driving prejudice against asexual individuals",
+      "wp_id": 28694
     }
   ],
   "state": "published"
