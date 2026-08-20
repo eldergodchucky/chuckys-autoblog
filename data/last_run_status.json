@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-19T23:48:43.605074+00:00",
-  "inserted": 3,
+  "finished_at": "2026-08-20T01:15:31.069283+00:00",
+  "inserted": 14,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "gadgets"
+        "space"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Wearable fans could keep workers cool while reducing office energy use",
-      "wp_id": 28626
+      "title": "A SpaceX rocket slammed into the moon this month \u2014",
+      "wp_id": 28635
     }
   ],
   "state": "published"
