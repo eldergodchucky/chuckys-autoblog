@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-20T01:15:31.069283+00:00",
-  "inserted": 14,
+  "finished_at": "2026-08-20T02:32:51.876683+00:00",
+  "inserted": 18,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "ai",
         "space"
       ],
       "sources": [
-        "Space.com"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "A SpaceX rocket slammed into the moon this month \u2014",
-      "wp_id": 28635
+      "title": "Cognition CEO denies report that SpaceX tried to acquire the startup",
+      "wp_id": 28643
     }
   ],
   "state": "published"
