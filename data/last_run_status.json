@@ -3,22 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-20T04:54:49.666667+00:00",
+  "finished_at": "2026-08-20T05:31:39.712304+00:00",
   "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "ai",
         "science"
       ],
       "sources": [
         "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Does your immune system learn like AI?",
-      "wp_id": 28659
+      "title": "International study marks step forward in genetic understanding of eating disorders",
+      "wp_id": 28662
     }
   ],
   "state": "published"
