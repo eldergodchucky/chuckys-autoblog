@@ -3,23 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-20T12:51:17.401330+00:00",
-  "inserted": 21,
+  "finished_at": "2026-08-20T13:48:27.384442+00:00",
+  "inserted": 38,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "health",
-        "ai",
-        "apple"
+        "space",
+        "science"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Adafruit Blog",
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Apple hits back at OpenAI\u2019s bid to dismiss lawsuit",
-      "wp_id": 28690
+      "title": "A star racing at 15",
+      "wp_id": 28692
     }
   ],
   "state": "published"
