@@ -3,21 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2768,
-  "finished_at": "2026-08-20T16:00:20.818356+00:00",
-  "inserted": 28,
+  "finished_at": "2026-08-20T16:45:22.014538+00:00",
+  "inserted": 36,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "software"
+        "apple",
+        "gadgets"
       ],
       "sources": [
-        "Phys.org Technology"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "At 0.8 nanometers, carbon film may replace two layers in future chip",
-      "wp_id": 28698
+      "title": "Deals: M5 MacBook Air $1",
+      "wp_id": 28700
     }
   ],
   "state": "published"
