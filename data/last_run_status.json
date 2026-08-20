@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2768,
-  "finished_at": "2026-08-20T18:40:28.732771+00:00",
-  "inserted": 30,
+  "finished_at": "2026-08-20T19:20:07.239737+00:00",
+  "inserted": 31,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "PsyPost"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Scientists discover an epigenetic mechanism that links childhood trauma to adult stress",
-      "wp_id": 28708
+      "title": "'Wet Hot American Summer': The raunchy 2000s teen movie that was actually",
+      "wp_id": 28712
     }
   ],
   "state": "published"
