@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-20T23:26:19.803338+00:00",
-  "inserted": 12,
+  "finished_at": "2026-08-20T23:52:10.421062+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "software"
+        "apple",
+        "phones",
+        "science"
       ],
       "sources": [
-        "Engadget",
-        "TechCrunch"
+        "9to5Mac iPhone"
       ],
       "status": "publish",
-      "title": "Meta's app for creating generative AI minigames is now available",
-      "wp_id": 28726
+      "title": "Apple bucks downward trend as reports show global smartphone shipment and sales",
+      "wp_id": 28728
     }
   ],
   "state": "published"
