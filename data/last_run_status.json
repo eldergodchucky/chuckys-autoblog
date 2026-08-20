@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2767,
-  "finished_at": "2026-08-20T09:19:07.791142+00:00",
-  "inserted": 11,
+  "finished_at": "2026-08-20T10:01:58.065822+00:00",
+  "inserted": 16,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science"
+        "gadgets"
       ],
       "sources": [
+        "Engadget",
         "The Verge"
       ],
       "status": "publish",
-      "title": "Google Gemini is getting a dedicated student hub",
-      "wp_id": 28680
+      "title": "Sennheiser\u2019s new Momentum 5 earbuds feature easily replaceable batteries",
+      "wp_id": 28682
     }
   ],
   "state": "published"
