@@ -3,20 +3,22 @@
   "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-20T22:46:25.846315+00:00",
-  "inserted": 10,
+  "finished_at": "2026-08-20T23:26:19.803338+00:00",
+  "inserted": 12,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "software"
       ],
       "sources": [
-        "Space.com"
+        "Engadget",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "SpaceX will try for 1st Starship tower catch 'in a few months",
-      "wp_id": 28724
+      "title": "Meta's app for creating generative AI minigames is now available",
+      "wp_id": 28726
     }
   ],
   "state": "published"
