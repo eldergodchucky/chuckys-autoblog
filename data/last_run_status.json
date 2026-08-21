@@ -3,21 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T05:06:11.425640+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-21T05:49:26.761483+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science"
+        "space",
+        "science",
+        "software"
       ],
       "sources": [
-        "Phys.org Technology"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Neural network approach makes AI uncertainty checks far more efficient",
-      "wp_id": 28755
+      "title": "2011 ISSM Workshop",
+      "wp_id": 28758
     }
   ],
   "state": "published"
