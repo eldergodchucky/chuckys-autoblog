@@ -1,24 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T14:00:09.700470+00:00",
-  "inserted": 23,
+  "finished_at": "2026-08-21T14:45:38.815907+00:00",
+  "inserted": 34,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "ai",
         "science"
       ],
       "sources": [
         "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Researchers are closer than ever to an AI-guided device to treat memory",
-      "wp_id": 28793
+      "title": "New brain cell formation stalls in adults with depression",
+      "wp_id": 28795
     }
   ],
   "state": "published"
