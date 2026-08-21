@@ -1,23 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2719,
-  "finished_at": "2026-08-21T11:43:23.900270+00:00",
-  "inserted": 13,
+  "fetched": 2769,
+  "finished_at": "2026-08-21T12:05:00.683935+00:00",
+  "inserted": 10,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Deep learning improves detection of changes in chronic sinus disease on CT",
-      "wp_id": 28783
+      "title": "Could 'dark photons' explain dark matter?",
+      "wp_id": 28785
     }
   ],
   "state": "published"
