@@ -1,23 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2721,
-  "finished_at": "2026-08-21T23:02:59.413828+00:00",
-  "inserted": 7,
+  "fetched": 2769,
+  "finished_at": "2026-08-21T23:39:48.985540+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple"
+        "space",
+        "software",
+        "security"
       ],
       "sources": [
-        "9to5Mac",
-        "TechCrunch"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Walmart to finally start accepting Apple Pay and Google Pay",
-      "wp_id": 28831
+      "title": "Trump signs new national space policy to enable 1",
+      "wp_id": 28833
     }
   ],
   "state": "published"
