@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T09:09:01.779005+00:00",
-  "inserted": 18,
+  "finished_at": "2026-08-21T09:53:31.652192+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Novel stem cell platform improves study of endometriosis",
-      "wp_id": 28773
+      "title": "How can EU battery regulations help improve global sustainability governance in other",
+      "wp_id": 28777
     }
   ],
   "state": "published"
