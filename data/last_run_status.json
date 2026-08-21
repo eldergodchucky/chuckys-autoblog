@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 4,
   "feeds": 59,
-  "fetched": 2769,
-  "finished_at": "2026-08-21T22:35:21.934182+00:00",
-  "inserted": 6,
+  "fetched": 2721,
+  "finished_at": "2026-08-21T23:02:59.413828+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "android"
+        "apple"
       ],
       "sources": [
-        "Android Authority News",
-        "GSMArena"
+        "9to5Mac",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Samsung Galaxy S26 FE gets an early unboxing",
-      "wp_id": 28829
+      "title": "Walmart to finally start accepting Apple Pay and Google Pay",
+      "wp_id": 28831
     }
   ],
   "state": "published"
