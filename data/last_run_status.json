@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T17:15:00.067087+00:00",
-  "inserted": 14,
+  "finished_at": "2026-08-21T17:50:05.720788+00:00",
+  "inserted": 30,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "security"
+        "space",
+        "science"
       ],
       "sources": [
-        "Phys.org Technology"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Genetic algorithms test cybersecurity defenses against adaptive malware",
-      "wp_id": 28805
+      "title": "KOI-884 e",
+      "wp_id": 28807
     }
   ],
   "state": "published"
