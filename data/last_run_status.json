@@ -1,24 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 4,
   "feeds": 59,
-  "fetched": 2769,
-  "finished_at": "2026-08-21T11:04:42.451063+00:00",
-  "inserted": 8,
+  "fetched": 2719,
+  "finished_at": "2026-08-21T11:43:23.900270+00:00",
+  "inserted": 13,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "apple"
+        "health",
+        "science"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Apple Music to Label AI-Generated Songs",
-      "wp_id": 28781
+      "title": "Deep learning improves detection of changes in chronic sinus disease on CT",
+      "wp_id": 28783
     }
   ],
   "state": "published"
