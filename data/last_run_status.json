@@ -3,23 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T21:40:04.690641+00:00",
+  "finished_at": "2026-08-21T22:01:16.738448+00:00",
   "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "apple",
-        "gadgets"
+        "phones",
+        "tech"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Android Authority News",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Apple's Camera-Equipped AirPods: All the New Rumors",
-      "wp_id": 28821
+      "title": "Oura faces lawsuit accusing it of misleading consumers about sleep-tracking accuracy",
+      "wp_id": 28823
     }
   ],
   "state": "published"
