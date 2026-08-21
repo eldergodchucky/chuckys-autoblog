@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T06:48:29.329586+00:00",
-  "inserted": 3,
+  "finished_at": "2026-08-21T07:43:41.002610+00:00",
+  "inserted": 8,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "ai",
+        "apple",
+        "phones",
         "science"
       ],
       "sources": [
-        "Medical Xpress"
+        "9to5Mac"
       ],
       "status": "publish",
-      "title": "AI-guided screening identifies nine drugs that may slow childhood dementia",
-      "wp_id": 28763
+      "title": "Apple bucks downward trend as reports show global smartphone shipment and sales",
+      "wp_id": 28768
     }
   ],
   "state": "published"
