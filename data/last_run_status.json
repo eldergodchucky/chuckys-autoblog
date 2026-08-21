@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T10:31:47.819579+00:00",
-  "inserted": 12,
+  "finished_at": "2026-08-21T11:04:42.451063+00:00",
+  "inserted": 8,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "apple"
       ],
       "sources": [
-        "NASA Science",
-        "Phys.org Space"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Spacewalk Preps Continue to Finish Antenna Installation Job Next Week",
-      "wp_id": 28779
+      "title": "Apple Music to Label AI-Generated Songs",
+      "wp_id": 28781
     }
   ],
   "state": "published"
