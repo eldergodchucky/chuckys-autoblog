@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T08:21:40.606364+00:00",
-  "inserted": 6,
+  "finished_at": "2026-08-21T09:09:01.779005+00:00",
+  "inserted": 18,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science",
-        "software"
+        "health",
+        "science"
       ],
       "sources": [
-        "NASA Science"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "About ISSM",
-      "wp_id": 28771
+      "title": "Novel stem cell platform improves study of endometriosis",
+      "wp_id": 28773
     }
   ],
   "state": "published"
