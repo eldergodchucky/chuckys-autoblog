@@ -1,22 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T13:12:13.429611+00:00",
-  "inserted": 46,
+  "finished_at": "2026-08-21T14:00:09.700470+00:00",
+  "inserted": 23,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "health",
+        "ai",
+        "science"
       ],
       "sources": [
-        "Phys.org Space"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "China is launching a moon mission to find water ice",
-      "wp_id": 28789
+      "title": "Researchers are closer than ever to an AI-guided device to treat memory",
+      "wp_id": 28793
     }
   ],
   "state": "published"
