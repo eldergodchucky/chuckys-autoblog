@@ -1,26 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2669,
-  "finished_at": "2026-08-21T20:33:33.147706+00:00",
-  "inserted": 19,
+  "fetched": 2769,
+  "finished_at": "2026-08-21T21:02:01.260859+00:00",
+  "inserted": 13,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "ai",
-        "apple"
+        "space",
+        "science"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors",
-        "The Verge"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Apple Guts Vision Pro Gaming and Immersive Video Teams",
-      "wp_id": 28817
+      "title": "KOI-319 b",
+      "wp_id": 28819
     }
   ],
   "state": "published"
