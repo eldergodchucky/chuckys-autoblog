@@ -1,24 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-20T23:52:10.421062+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-21T01:18:52.564362+00:00",
+  "inserted": 15,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "phones",
-        "science"
+        "software"
       ],
       "sources": [
-        "9to5Mac iPhone"
+        "Engadget",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Apple bucks downward trend as reports show global smartphone shipment and sales",
-      "wp_id": 28728
+      "title": "Riot is ending active development of 2XKO in December",
+      "wp_id": 28735
     }
   ],
   "state": "published"
