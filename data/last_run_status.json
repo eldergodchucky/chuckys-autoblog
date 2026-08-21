@@ -3,21 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T21:02:01.260859+00:00",
-  "inserted": 13,
+  "finished_at": "2026-08-21T21:40:04.690641+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "apple",
+        "gadgets"
       ],
       "sources": [
-        "NASA Science"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "KOI-319 b",
-      "wp_id": 28819
+      "title": "Apple's Camera-Equipped AirPods: All the New Rumors",
+      "wp_id": 28821
     }
   ],
   "state": "published"
