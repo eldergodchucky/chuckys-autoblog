@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T12:05:00.683935+00:00",
-  "inserted": 10,
+  "finished_at": "2026-08-21T13:12:13.429611+00:00",
+  "inserted": 46,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "Space.com"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Could 'dark photons' explain dark matter?",
-      "wp_id": 28785
+      "title": "China is launching a moon mission to find water ice",
+      "wp_id": 28789
     }
   ],
   "state": "published"
