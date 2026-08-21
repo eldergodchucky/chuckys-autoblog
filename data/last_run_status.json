@@ -3,20 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T09:53:31.652192+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-21T10:31:47.819579+00:00",
+  "inserted": 12,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "space",
         "science"
       ],
       "sources": [
-        "Phys.org Technology"
+        "NASA Science",
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "How can EU battery regulations help improve global sustainability governance in other",
-      "wp_id": 28777
+      "title": "Spacewalk Preps Continue to Finish Antenna Installation Job Next Week",
+      "wp_id": 28779
     }
   ],
   "state": "published"
