@@ -3,20 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T15:18:12.447367+00:00",
-  "inserted": 28,
+  "finished_at": "2026-08-21T16:00:30.842718+00:00",
+  "inserted": 27,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "phones",
+        "gadgets"
       ],
       "sources": [
-        "Space.com"
+        "Android Authority News",
+        "Engadget"
       ],
       "status": "publish",
-      "title": "Ancient stars dazzle in a celestial chandelier",
-      "wp_id": 28797
+      "title": "Walmart surrenders in tap-to-pay war",
+      "wp_id": 28801
     }
   ],
   "state": "published"
