@@ -1,23 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2769,
-  "finished_at": "2026-08-21T19:58:38.746037+00:00",
-  "inserted": 5,
+  "fetched": 2669,
+  "finished_at": "2026-08-21T20:33:33.147706+00:00",
+  "inserted": 19,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "health",
+        "ai",
+        "apple"
       ],
       "sources": [
-        "NASA Science"
+        "9to5Mac",
+        "MacRumors",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "KOI-319 c",
-      "wp_id": 28815
+      "title": "Apple Guts Vision Pro Gaming and Immersive Video Teams",
+      "wp_id": 28817
     }
   ],
   "state": "published"
