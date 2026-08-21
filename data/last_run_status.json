@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T16:45:25.926166+00:00",
-  "inserted": 28,
+  "finished_at": "2026-08-21T17:15:00.067087+00:00",
+  "inserted": 14,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple"
+        "health",
+        "security"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Walmart finally launching Apple Pay support next week",
-      "wp_id": 28803
+      "title": "Genetic algorithms test cybersecurity defenses against adaptive malware",
+      "wp_id": 28805
     }
   ],
   "state": "published"
