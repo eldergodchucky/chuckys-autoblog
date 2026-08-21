@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T19:15:27.545761+00:00",
-  "inserted": 19,
+  "finished_at": "2026-08-21T19:42:08.930832+00:00",
+  "inserted": 15,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "tech"
+        "health",
+        "phones",
+        "science"
       ],
       "sources": [
-        "Engadget",
-        "TechCrunch"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Tesla recalls 3 million cars as part of China-wide push to stop",
-      "wp_id": 28811
+      "title": "Patients with heart failure",
+      "wp_id": 28813
     }
   ],
   "state": "published"
