@@ -1,24 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T19:42:08.930832+00:00",
-  "inserted": 15,
+  "finished_at": "2026-08-21T19:58:38.746037+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "phones",
+        "space",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Patients with heart failure",
-      "wp_id": 28813
+      "title": "KOI-319 c",
+      "wp_id": 28815
     }
   ],
   "state": "published"
