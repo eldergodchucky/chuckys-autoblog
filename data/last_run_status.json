@@ -3,21 +3,21 @@
   "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T01:18:52.564362+00:00",
-  "inserted": 15,
+  "finished_at": "2026-08-21T02:45:44.515602+00:00",
+  "inserted": 8,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "software"
+        "health",
+        "space"
       ],
       "sources": [
-        "Engadget",
-        "The Verge"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Riot is ending active development of 2XKO in December",
-      "wp_id": 28735
+      "title": "A weather satellite 22",
+      "wp_id": 28742
     }
   ],
   "state": "published"
