@@ -3,21 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T18:37:23.020627+00:00",
+  "finished_at": "2026-08-21T19:15:27.545761+00:00",
   "inserted": 19,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science"
+        "gadgets",
+        "tech"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Engadget",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "AI-generated ads outperform human designers in live campaign",
-      "wp_id": 28809
+      "title": "Tesla recalls 3 million cars as part of China-wide push to stop",
+      "wp_id": 28811
     }
   ],
   "state": "published"
