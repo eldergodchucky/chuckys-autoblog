@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T04:24:50.407070+00:00",
+  "finished_at": "2026-08-21T05:06:11.425640+00:00",
   "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "ai",
         "science"
       ],
       "sources": [
-        "Space.com"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Microbes from Earth may survive on the moon",
-      "wp_id": 28751
+      "title": "Neural network approach makes AI uncertainty checks far more efficient",
+      "wp_id": 28755
     }
   ],
   "state": "published"
