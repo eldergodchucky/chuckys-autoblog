@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T16:00:30.842718+00:00",
-  "inserted": 27,
+  "finished_at": "2026-08-21T16:45:25.926166+00:00",
+  "inserted": 28,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "phones",
-        "gadgets"
+        "apple"
       ],
       "sources": [
-        "Android Authority News",
-        "Engadget"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Walmart surrenders in tap-to-pay war",
-      "wp_id": 28801
+      "title": "Walmart finally launching Apple Pay support next week",
+      "wp_id": 28803
     }
   ],
   "state": "published"
