@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T17:50:05.720788+00:00",
-  "inserted": 30,
+  "finished_at": "2026-08-21T18:37:23.020627+00:00",
+  "inserted": 19,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "ai",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "KOI-884 e",
-      "wp_id": 28807
+      "title": "AI-generated ads outperform human designers in live campaign",
+      "wp_id": 28809
     }
   ],
   "state": "published"
