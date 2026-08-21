@@ -3,22 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T07:43:41.002610+00:00",
-  "inserted": 8,
+  "finished_at": "2026-08-21T08:21:40.606364+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "phones",
-        "science"
+        "space",
+        "science",
+        "software"
       ],
       "sources": [
-        "9to5Mac"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Apple bucks downward trend as reports show global smartphone shipment and sales",
-      "wp_id": 28768
+      "title": "About ISSM",
+      "wp_id": 28771
     }
   ],
   "state": "published"
