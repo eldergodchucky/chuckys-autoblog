@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T10:01:02.502874+00:00",
-  "inserted": 0,
+  "finished_at": "2026-08-22T10:34:30.976612+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "Medical Xpress"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "New brain cell formation stalls in adults with depression",
-      "wp_id": 28888
+      "title": "Trump to award NASA's Artemis II astronauts the Congressional Space Medal",
+      "wp_id": 28890
     }
   ],
   "state": "published"
