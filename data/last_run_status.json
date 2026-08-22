@@ -3,21 +3,21 @@
   "feed_warnings": 4,
   "feeds": 59,
   "fetched": 2649,
-  "finished_at": "2026-08-22T15:21:52.842312+00:00",
-  "inserted": 13,
+  "finished_at": "2026-08-22T15:48:00.563825+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "software"
+        "health",
+        "science"
       ],
       "sources": [
-        "Phys.org Technology",
-        "WIRED Gear"
+        "ScienceDaily Health & Medicine"
       ],
       "status": "publish",
-      "title": "Tesla\u2019s Door Handles Lead to Its Biggest Recall Yet",
-      "wp_id": 28908
+      "title": "Tooth count may predict survival after pancreatic cancer surgery",
+      "wp_id": 28910
     }
   ],
   "state": "published"
