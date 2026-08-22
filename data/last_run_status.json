@@ -1,22 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 4,
   "feeds": 59,
-  "fetched": 2769,
-  "finished_at": "2026-08-22T13:53:35.219460+00:00",
-  "inserted": 5,
+  "fetched": 2649,
+  "finished_at": "2026-08-22T14:22:25.815399+00:00",
+  "inserted": 15,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "Phys.org Technology"
+        "WIRED Science"
       ],
       "status": "publish",
-      "title": "Nonmetallic metasurfaces offer a new way to block radiant heat",
-      "wp_id": 28902
+      "title": "NASA Cancels Its Rescue Mission for the Aging Swift Telescope",
+      "wp_id": 28904
     }
   ],
   "state": "published"
