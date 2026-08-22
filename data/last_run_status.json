@@ -3,21 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T02:42:02.416820+00:00",
+  "finished_at": "2026-08-22T03:27:21.395167+00:00",
   "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "ai",
-        "science"
+        "apple",
+        "software"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Engadget",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "When the algorithm determines wages",
-      "wp_id": 28848
+      "title": "Apple is reportedly cutting hundreds of jobs from Siri",
+      "wp_id": 28852
     }
   ],
   "state": "published"
