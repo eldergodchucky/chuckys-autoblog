@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T11:00:47.402126+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-22T11:30:15.220881+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "space"
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "Ars Technica Science"
       ],
       "status": "publish",
-      "title": "Partial lunar eclipse August 2026: Where will it be visible",
-      "wp_id": 28892
+      "title": "Researchers use \"thunderquakes\" to study structure of Earth's surface",
+      "wp_id": 28894
     }
   ],
   "state": "published"
