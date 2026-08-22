@@ -2,22 +2,22 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2769,
-  "finished_at": "2026-08-22T05:56:13.226473+00:00",
-  "inserted": 1,
+  "fetched": 2719,
+  "finished_at": "2026-08-22T06:40:49.860831+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple"
+        "science",
+        "security"
       ],
       "sources": [
-        "Android Authority",
-        "The Verge"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Walmart is finally adding Apple Pay and Google Pay",
-      "wp_id": 28867
+      "title": "US government lab is probing Chinese lidar for security vulnerabilities",
+      "wp_id": 28871
     }
   ],
   "state": "published"
