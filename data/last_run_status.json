@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T09:01:05.969581+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-22T09:36:43.041998+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "health",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "TOI-7394 B b",
-      "wp_id": 28884
+      "title": "Daily 20 mg of zinc reduces infections by nearly 40% in children",
+      "wp_id": 28886
     }
   ],
   "state": "published"
