@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T07:56:09.529997+00:00",
+  "finished_at": "2026-08-22T08:31:12.142814+00:00",
   "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "software"
+        "health",
+        "science"
       ],
       "sources": [
-        "Engadget",
-        "TechCrunch",
-        "The Verge"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "TikTok reaches $400M settlement over children\u2019s privacy lawsuit",
-      "wp_id": 28880
+      "title": "Younger adults with lung cancer more likely to have targetable genetic changes",
+      "wp_id": 28882
     }
   ],
   "state": "published"
