@@ -3,22 +3,21 @@
   "feed_warnings": 4,
   "feeds": 59,
   "fetched": 2649,
-  "finished_at": "2026-08-22T14:49:45.943982+00:00",
-  "inserted": 7,
+  "finished_at": "2026-08-22T15:21:52.842312+00:00",
+  "inserted": 13,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "phones"
+        "software"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Phys.org Technology",
+        "WIRED Gear"
       ],
       "status": "publish",
-      "title": "Weekend Apple deals: $500 off MacBook Pro",
-      "wp_id": 28906
+      "title": "Tesla\u2019s Door Handles Lead to Its Biggest Recall Yet",
+      "wp_id": 28908
     }
   ],
   "state": "published"
