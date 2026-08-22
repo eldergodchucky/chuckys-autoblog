@@ -3,22 +3,21 @@
   "feed_warnings": 4,
   "feeds": 59,
   "fetched": 2649,
-  "finished_at": "2026-08-22T17:47:33.131429+00:00",
-  "inserted": 6,
+  "finished_at": "2026-08-22T18:31:43.500953+00:00",
+  "inserted": 8,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "health",
-        "space",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "Medical Xpress"
       ],
       "status": "publish",
-      "title": "NASA Shares Views of August Solar Eclipse from Ground",
-      "wp_id": 28918
+      "title": "Scientists identify molecule driving one of the deadliest forms of breast cancer",
+      "wp_id": 28920
     }
   ],
   "state": "published"
