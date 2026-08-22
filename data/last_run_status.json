@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-21T23:39:48.985540+00:00",
+  "finished_at": "2026-08-22T00:00:46.073157+00:00",
   "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "software",
-        "security"
+        "ai",
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Trump signs new national space policy to enable 1",
-      "wp_id": 28833
+      "title": "Nvidia just showed that the harness",
+      "wp_id": 28835
     }
   ],
   "state": "published"
