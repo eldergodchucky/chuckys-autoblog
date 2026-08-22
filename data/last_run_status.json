@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T04:50:49.990898+00:00",
+  "finished_at": "2026-08-22T05:28:18.869320+00:00",
   "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Scientists identify molecule driving one of the deadliest forms of breast cancer",
-      "wp_id": 28860
+      "title": "TOI-6158 b",
+      "wp_id": 28865
     }
   ],
   "state": "published"
