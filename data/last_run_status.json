@@ -3,20 +3,22 @@
   "feed_warnings": 4,
   "feeds": 59,
   "fetched": 2649,
-  "finished_at": "2026-08-22T17:21:28.640570+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-22T17:47:33.131429+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "software"
+        "health",
+        "space",
+        "science"
       ],
       "sources": [
-        "Phys.org Technology"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Uber fined nearly $1 billion by Dutch regulators over automated suspensions",
-      "wp_id": 28916
+      "title": "NASA Shares Views of August Solar Eclipse from Ground",
+      "wp_id": 28918
     }
   ],
   "state": "published"
