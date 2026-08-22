@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T01:44:49.200674+00:00",
-  "inserted": 7,
+  "finished_at": "2026-08-22T02:42:02.416820+00:00",
+  "inserted": 3,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "security"
+        "ai",
+        "science"
       ],
       "sources": [
-        "TechCrunch"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Japanese space tech startup Letara expands beyond satellite thrusters with $16M",
-      "wp_id": 28843
+      "title": "When the algorithm determines wages",
+      "wp_id": 28848
     }
   ],
   "state": "published"
