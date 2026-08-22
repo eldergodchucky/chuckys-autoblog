@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 5,
   "feeds": 59,
   "fetched": 2649,
-  "finished_at": "2026-08-22T16:25:13.144685+00:00",
-  "inserted": 7,
+  "finished_at": "2026-08-22T16:51:34.910282+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "ai",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "TOI-5811 B b",
-      "wp_id": 28912
+      "title": "Frontier AI labs still won\u2019t say how they\u2019d contain a rogue model",
+      "wp_id": 28914
     }
   ],
   "state": "published"
