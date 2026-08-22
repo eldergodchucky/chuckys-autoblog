@@ -3,23 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T03:27:21.395167+00:00",
-  "inserted": 3,
+  "finished_at": "2026-08-22T04:07:34.438567+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "apple",
-        "software"
+        "health",
+        "phones",
+        "science"
       ],
       "sources": [
-        "Engadget",
-        "TechCrunch"
+        "Medical Xpress"
       ],
       "status": "publish",
-      "title": "Apple is reportedly cutting hundreds of jobs from Siri",
-      "wp_id": 28852
+      "title": "Patients with heart failure",
+      "wp_id": 28856
     }
   ],
   "state": "published"
