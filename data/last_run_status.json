@@ -1,23 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2719,
-  "finished_at": "2026-08-22T06:40:49.860831+00:00",
-  "inserted": 2,
+  "fetched": 2769,
+  "finished_at": "2026-08-22T07:19:56.111209+00:00",
+  "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "security"
+        "space"
       ],
       "sources": [
-        "TechCrunch"
+        "Adafruit Blog"
       ],
       "status": "publish",
-      "title": "US government lab is probing Chinese lidar for security vulnerabilities",
-      "wp_id": 28871
+      "title": "NASA images reveal 60-foot-wide crater on moon left by SpaceX rocket",
+      "wp_id": 28875
     }
   ],
   "state": "published"
