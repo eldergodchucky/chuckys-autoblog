@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T13:20:18.528917+00:00",
-  "inserted": 8,
+  "finished_at": "2026-08-22T13:53:35.219460+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Researchers find cold storage platelets safe and effective",
-      "wp_id": 28900
+      "title": "Nonmetallic metasurfaces offer a new way to block radiant heat",
+      "wp_id": 28902
     }
   ],
   "state": "published"
