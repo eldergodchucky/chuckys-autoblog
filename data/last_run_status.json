@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T00:00:46.073157+00:00",
-  "inserted": 6,
+  "finished_at": "2026-08-22T01:44:49.200674+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science"
+        "space",
+        "security"
       ],
       "sources": [
         "TechCrunch"
       ],
       "status": "publish",
-      "title": "Nvidia just showed that the harness",
-      "wp_id": 28835
+      "title": "Japanese space tech startup Letara expands beyond satellite thrusters with $16M",
+      "wp_id": 28843
     }
   ],
   "state": "published"
