@@ -3,20 +3,22 @@
   "feed_warnings": 4,
   "feeds": 59,
   "fetched": 2649,
-  "finished_at": "2026-08-22T14:22:25.815399+00:00",
-  "inserted": 15,
+  "finished_at": "2026-08-22T14:49:45.943982+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "apple",
+        "phones"
       ],
       "sources": [
-        "WIRED Science"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "NASA Cancels Its Rescue Mission for the Aging Swift Telescope",
-      "wp_id": 28904
+      "title": "Weekend Apple deals: $500 off MacBook Pro",
+      "wp_id": 28906
     }
   ],
   "state": "published"
