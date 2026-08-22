@@ -3,21 +3,21 @@
   "feed_warnings": 4,
   "feeds": 59,
   "fetched": 2649,
-  "finished_at": "2026-08-22T15:48:00.563825+00:00",
-  "inserted": 6,
+  "finished_at": "2026-08-22T16:25:13.144685+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "ScienceDaily Health & Medicine"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Tooth count may predict survival after pancreatic cancer surgery",
-      "wp_id": 28910
+      "title": "TOI-5811 B b",
+      "wp_id": 28912
     }
   ],
   "state": "published"
