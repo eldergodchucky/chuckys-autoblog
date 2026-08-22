@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T05:28:18.869320+00:00",
-  "inserted": 0,
+  "finished_at": "2026-08-22T05:56:13.226473+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "apple"
       ],
       "sources": [
-        "NASA Science"
+        "Android Authority",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "TOI-6158 b",
-      "wp_id": 28865
+      "title": "Walmart is finally adding Apple Pay and Google Pay",
+      "wp_id": 28867
     }
   ],
   "state": "published"
