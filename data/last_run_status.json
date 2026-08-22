@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T11:51:31.701467+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-22T12:39:40.264063+00:00",
+  "inserted": 15,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Japan unveils Mars moon sample-return spacecraft ahead of Oct. 19 launch (photos)",
-      "wp_id": 28896
+      "title": "AI agents can build consensus on a scale humans can't",
+      "wp_id": 28898
     }
   ],
   "state": "published"
