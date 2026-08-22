@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T09:36:43.041998+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-22T10:01:02.502874+00:00",
+  "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Medical Xpress"
       ],
       "status": "publish",
-      "title": "Daily 20 mg of zinc reduces infections by nearly 40% in children",
-      "wp_id": 28886
+      "title": "New brain cell formation stalls in adults with depression",
+      "wp_id": 28888
     }
   ],
   "state": "published"
