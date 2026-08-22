@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T11:30:15.220881+00:00",
-  "inserted": 7,
+  "finished_at": "2026-08-22T11:51:31.701467+00:00",
+  "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "Ars Technica Science"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Researchers use \"thunderquakes\" to study structure of Earth's surface",
-      "wp_id": 28894
+      "title": "Japan unveils Mars moon sample-return spacecraft ahead of Oct. 19 launch (photos)",
+      "wp_id": 28896
     }
   ],
   "state": "published"
