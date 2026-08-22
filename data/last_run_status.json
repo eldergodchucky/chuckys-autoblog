@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T04:07:34.438567+00:00",
-  "inserted": 2,
+  "finished_at": "2026-08-22T04:50:49.990898+00:00",
+  "inserted": 0,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "health",
-        "phones",
         "science"
       ],
       "sources": [
-        "Medical Xpress"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Patients with heart failure",
-      "wp_id": 28856
+      "title": "Scientists identify molecule driving one of the deadliest forms of breast cancer",
+      "wp_id": 28860
     }
   ],
   "state": "published"
