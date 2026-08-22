@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2769,
-  "finished_at": "2026-08-22T12:39:40.264063+00:00",
-  "inserted": 15,
+  "finished_at": "2026-08-22T13:20:18.528917+00:00",
+  "inserted": 8,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
+        "health",
         "science"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "AI agents can build consensus on a scale humans can't",
-      "wp_id": 28898
+      "title": "Researchers find cold storage platelets safe and effective",
+      "wp_id": 28900
     }
   ],
   "state": "published"
