@@ -1,23 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 5,
+  "feed_warnings": 4,
   "feeds": 59,
   "fetched": 2649,
-  "finished_at": "2026-08-22T16:51:34.910282+00:00",
+  "finished_at": "2026-08-22T17:21:28.640570+00:00",
   "inserted": 2,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science"
+        "software"
       ],
       "sources": [
-        "TechCrunch"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Frontier AI labs still won\u2019t say how they\u2019d contain a rogue model",
-      "wp_id": 28914
+      "title": "Uber fined nearly $1 billion by Dutch regulators over automated suspensions",
+      "wp_id": 28916
     }
   ],
   "state": "published"
