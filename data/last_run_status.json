@@ -1,23 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-25T22:28:51.081849+00:00",
-  "inserted": 6,
+  "finished_at": "2026-08-25T22:58:35.455946+00:00",
+  "inserted": 9,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "software"
+        "health",
+        "science",
+        "gadgets"
       ],
       "sources": [
-        "Phys.org Technology"
+        "MIT Technology Review"
       ],
       "status": "publish",
-      "title": "Is there an AI bubble? No",
-      "wp_id": 29408
+      "title": "AgeLab research inspires an A I startup",
+      "wp_id": 29410
     }
   ],
   "state": "published"
