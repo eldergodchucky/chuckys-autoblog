@@ -2,25 +2,23 @@
   "dry_run": false,
   "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2771,
-  "finished_at": "2026-08-25T13:52:27.146661+00:00",
-  "inserted": 78,
+  "fetched": 2772,
+  "finished_at": "2026-08-25T14:46:23.024722+00:00",
+  "inserted": 42,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "apple",
+        "phones",
         "software"
       ],
       "sources": [
-        "Apple Newsroom",
         "Engadget",
-        "The Verge"
+        "GSMArena"
       ],
       "status": "publish",
-      "title": "Where to preorder the updated Mac Mini and Mac Studio",
-      "wp_id": 29363
+      "title": "Sony Xperia 10 VIII review",
+      "wp_id": 29366
     }
   ],
   "state": "published"
