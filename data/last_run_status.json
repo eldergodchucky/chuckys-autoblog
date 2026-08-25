@@ -1,22 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-25T21:56:20.279503+00:00",
-  "inserted": 12,
+  "finished_at": "2026-08-25T22:28:51.081849+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "software"
       ],
       "sources": [
-        "MIT Technology Review"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "MIT tech powered the Artemis II livestreams",
-      "wp_id": 29405
+      "title": "Is there an AI bubble? No",
+      "wp_id": 29408
     }
   ],
   "state": "published"
