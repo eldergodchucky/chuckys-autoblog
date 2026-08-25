@@ -4590,6 +4590,54 @@ def rephrase_sentence(sentence: str) -> str:
     return clean_fact_sentence(sentence)
 
 
+def fetch_article_facts(url: str, max_chars: int = 6000) -> list[str]:
+    """Download a source page and return cleaned fact sentences from its main text."""
+    if not url or not url.startswith(("http://", "https://")):
+        return []
+    try:
+        request = urllib.request.Request(
+            url,
+            headers={"User-Agent": USER_AGENT},
+        )
+        timeout = env_int("REQUEST_TIMEOUT_SECONDS", 25)
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            charset = response.headers.get_content_charset() or "utf-8"
+            html_text = response.read(300_000).decode(charset, errors="replace")
+    except Exception:
+        return []
+    html_text = re.sub(r"(?is)<(script|style|nav|footer|header|aside|form|noscript)\b.*?</\1>", " ", html_text)
+    match = re.search(r"(?is)<article\b[^>]*>(.*?)</article>", html_text)
+    body = match.group(1) if match else html_text
+    text = re.sub(r"(?is)<[^>]+>", " ", body)
+    text = html.unescape(text)
+    text = re.sub(r"\s+", " ", text)
+    return fact_sentences(text, min_len=45)[:8]
+
+
+def enrich_cluster_facts(cluster: list[Item]) -> dict[str, list[str]]:
+    """Extend each item's fact pool with facts pulled from its source page."""
+    pools: dict[str, list[str]] = {}
+    budget = env_int("ENRICH_MAX_ITEMS", 4)
+    enriched = 0
+    for item in cluster:
+        base = fact_sentences(item.summary or "")
+        if len(item.title) > 30:
+            title_fact = clean_fact_sentence(clean_text(item.title, max_len=160))
+            if title_fact and title_fact.lower() not in {f.lower() for f in base}:
+                base.append(title_fact)
+        extra: list[str] = []
+        if enriched < budget and item.link:
+            extra = [
+                fact
+                for fact in fetch_article_facts(item.link)
+                if fact.lower() not in {f.lower() for f in base}
+            ]
+            if extra:
+                enriched += 1
+        pools[item.uid] = base + extra
+    return pools
+
+
 def full_article_sections(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
     """Assemble a long-form plain news article from cluster facts - no scaffolding.
 
@@ -4600,9 +4648,9 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
     - No subheadings, no canned closing analysis, no "watch items".
     - Ends on the last concrete fact rather than a summary.
     """
-    facts_by_item: list[tuple[Item, list[str]]] = [
-        (item, fact_sentences(item.summary or "")) for item in cluster
-    ]
+    facts_by_item: list[tuple[Item, list[str]]] = []
+    for item, pool in enrich_cluster_facts(cluster).items():
+        facts_by_item.append((item, pool))
     facts_by_item = [(item, facts) for item, facts in facts_by_item if facts]
     paragraphs: list[str] = []
     used: set[str] = set()
