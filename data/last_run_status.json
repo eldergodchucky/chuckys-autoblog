@@ -3,23 +3,24 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2771,
-  "finished_at": "2026-08-25T12:53:40.397164+00:00",
-  "inserted": 22,
+  "finished_at": "2026-08-25T13:52:27.146661+00:00",
+  "inserted": 78,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "ai",
         "apple",
-        "phones",
-        "gadgets"
+        "software"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Apple Newsroom",
+        "Engadget",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "'MacBook Ultra' Coming Soon With Touchscreen and 5 Other Changes",
-      "wp_id": 29358
+      "title": "Where to preorder the updated Mac Mini and Mac Studio",
+      "wp_id": 29363
     }
   ],
   "state": "published"
