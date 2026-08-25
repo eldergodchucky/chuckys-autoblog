@@ -3,22 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2773,
-  "finished_at": "2026-08-25T16:12:03.539105+00:00",
-  "inserted": 27,
+  "finished_at": "2026-08-25T16:57:05.251550+00:00",
+  "inserted": 25,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "software"
+        "security"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "BleepingComputer",
+        "Engadget",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Apple releases new Magic Keyboards with one notable change",
-      "wp_id": 29370
+      "title": "WhatsApp is upgrading its 2FA settings",
+      "wp_id": 29374
     }
   ],
   "state": "published"
