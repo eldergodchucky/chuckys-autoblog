@@ -4345,7 +4345,25 @@ FEED_JUNK_PATTERNS = tuple(
         r"\bjoin (?:our|the) (?:newsletter|mailing list|community|discord|forum)\b[^.]*\.?",
         r"\blet us know (?:what you think|in the comments|your thoughts)\b[^.]*\.?",
         r"\bstay tuned\b[^.]*\.?",
+        r"\baffiliate links?\b[^.]*\.?",
+        r"\bmay earn (?:us|me) a commission\b[^.]*\.?",
+        r"\bwe may (?:earn|receive) (?:a )?commission\b[^.]*\.?",
+        r"\b(?:all products|some products) featured\b[^.]*\.?",
+        r"^general technology\s+",
+        r"^technology news\s+",
+        r"^latest\\s*news\\s+",
     )
+)
+
+# Sentences that look like page chrome: bylines, timestamps, breadcrumbs.
+PAGE_CHROME_SENTENCE = re.compile(
+    r"(?i)(?:"
+    r"\b\d{1,2}:\d{2}\s*(?:am|pm|et|pt|gmt|utc)"
+    r"|\bby [A-Z][\w.'-]*(?: [A-Z][\w.'-]*){0,3}\s*[•|\u2022]"
+    r"|\u2022"
+    r"|\bmin read\b"
+    r"|\bshares?\b\s*(?:comments?)?\s*$"
+    r")"
 )
 
 MARKETING_SWAPS = (
@@ -4449,6 +4467,59 @@ PUBLICATION_NAMES = (
 def _publication_regex(name: str) -> str:
     escaped = re.escape(name)
     return escaped.replace(r"\ ", r"\s+")
+
+
+# Distinctive publication brands that can be removed wherever they appear -
+# these words never double as ordinary nouns or story subjects.
+BARE_PUBLICATION_NAMES = (
+    "Android Authority",
+    "Android Police",
+    "9to5Mac",
+    "9to5Google",
+    "Ars Technica",
+    "GSMArena",
+    "TechRadar",
+    "TechCrunch",
+    "Hackaday",
+    "XDA Developers",
+    "Notebookcheck",
+    "Tom's Hardware",
+    "PC Gamer",
+    "Nintendo Life",
+    "Push Square",
+    "Pureinfotech",
+    "Windows Central",
+    "Windows Report",
+    "AppleInsider",
+    "MacRumors",
+    "Cult of Mac",
+    "PhoneArena",
+    "SamMobile",
+    "Gizmochina",
+    "Wccftech",
+    "Digital Trends",
+    "PCWorld",
+    "How-To Geek",
+    "MakeUseOf",
+    "New Atlas",
+    "VentureBeat",
+    "Engadget",
+    "Gizmodo",
+    "ScienceDaily",
+    "Interesting Engineering",
+    "Study Finds",
+)
+
+
+def strip_bare_publications(text: str) -> tuple[str, int]:
+    """Remove publication brand names outright (not just attribution phrasing)."""
+    hits = 0
+    for name in sorted(BARE_PUBLICATION_NAMES, key=len, reverse=True):
+        esc = _publication_regex(name)
+        text, count = re.subn(rf"(?i)(?:\bat\s+)?\b{esc}\b[,.!]?", " ", text)
+        hits += count
+    text = re.sub(r"[ \t]{2,}", " ", text)
+    return text.strip(), hits
 
 
 def strip_source_mentions(text: str, extra_names: list[str] | None = None) -> tuple[str, int]:
@@ -4561,12 +4632,15 @@ def clean_fact_sentence(sentence: str) -> str:
     for pattern in FEED_JUNK_PATTERNS:
         s = pattern.sub("", s)
     s, _hits = strip_source_mentions(s)
+    s, _hits2 = strip_bare_publications(s)
     for pattern, repl in MARKETING_SWAPS:
         s = re.sub(pattern, repl, s, flags=re.IGNORECASE)
     s = re.sub(r"(?i)^(?:additionally|moreover|furthermore|notably|in addition|however|indeed)\b[,:]?\s*", "", s)
     s = re.sub(r"\b(a) ((?:[aeiou])\w+)\b", _fix_articles, s)
-    s = re.sub(r"\s{2,}", " ", s).strip(" \t-,;:")
+    s = re.sub(r"\s{2,}", " ", s).strip(" \t-,;:•")
     if not s:
+        return ""
+    if PAGE_CHROME_SENTENCE.search(s):
         return ""
     if len(s) > 1:
         s = s[0].upper() + s[1:]
@@ -4655,11 +4729,24 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
     paragraphs: list[str] = []
     used: set[str] = set()
 
+    def is_near_duplicate(fact: str) -> bool:
+        tokens = set(re.findall(r"[a-z0-9]{3,}", fact.lower()))
+        if not tokens:
+            return True
+        for existing in used:
+            existing_tokens = set(re.findall(r"[a-z0-9]{3,}", existing))
+            if not existing_tokens:
+                continue
+            overlap = len(tokens & existing_tokens) / max(len(tokens), len(existing_tokens))
+            if overlap >= 0.62:
+                return True
+        return False
+
     def take(facts: list[str], limit: int) -> list[str]:
         out: list[str] = []
         for fact in facts:
             key = fact.lower()
-            if key in used:
+            if key in used or is_near_duplicate(fact):
                 continue
             used.add(key)
             out.append(fact)
