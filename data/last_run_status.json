@@ -3,20 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2771,
-  "finished_at": "2026-08-25T09:21:40.934578+00:00",
-  "inserted": 19,
+  "finished_at": "2026-08-25T10:02:12.107915+00:00",
+  "inserted": 12,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gadgets"
+        "apple",
+        "android",
+        "phones"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Android Authority News",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Copper tubes gain 5.5-fold condensation heat-transfer boost from water-shedding coating",
-      "wp_id": 29213
+      "title": "Android is getting its own weird dots to cure car sickness",
+      "wp_id": 29215
     }
   ],
   "state": "published"
