@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-25T23:30:43.292427+00:00",
-  "inserted": 11,
+  "finished_at": "2026-08-25T23:53:48.905723+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "NASA Technology"
       ],
       "status": "publish",
-      "title": "First evidence of mirror-like activity found in individual human neurons",
-      "wp_id": 29412
+      "title": "New Next-Gen Dish Adds Muscle to NASA\u2019s Deep Space Network",
+      "wp_id": 29414
     }
   ],
   "state": "published"
