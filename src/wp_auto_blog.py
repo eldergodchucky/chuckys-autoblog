@@ -1695,147 +1695,37 @@ def topic_key(cluster: list[Item]) -> str:
 
 
 def build_generation_prompt(cluster: list[Item]) -> str:
-
-    source_blocks = []
-
-    for idx, item in enumerate(cluster, start=1):
-
-        source_blocks.append(
-
-            "\n".join(
-
-                [
-
-                    f"Source {idx}: {item.source_name}",
-
-                    f"Category: {item.source_category}",
-
-                    f"Published: {item.published_at.isoformat() if item.published_at else 'unknown'}",
-
-                    f"Title: {item.title}",
-
-                    f"URL: {item.link}",
-
-                    f"Summary: {item.summary or 'No summary provided.'}",
-
-                ]
-
-            )
-
-        )
-
-
+    source_briefs = "\n\n".join(
+        f"Source {i+1}: {item.source_name}\n"
+        f"Title: {item.title}\n"
+        f"URL: {item.link}\n"
+        f"Summary: {clean_text(item.summary, max_len=800)}"
+        for i, item in enumerate(cluster[:6])
+    )
 
     return f"""
+Write an engaging, professional, human-written news article based on the reporting inputs below.
 
-Write one original, comprehensive WordPress blog post for a professional blog covering technology, science, health research, gadgets, tutorials, and practical insights.
-
-
-
-Use the source briefs below as reporting inputs. Do not copy or lightly paraphrase source text. Synthesize the shared theme, add substantial context, explain why it matters deeply, and keep claims tied to the sources. Include practical takeaways, expert perspectives, and future implications where relevant.
-
-
-
-Editorial voice:
-
-- Write in a premium editorial-news voice: sophisticated, analytical, nuanced, authoritative, and polished.
-
-- Do not imitate any named publication directly. Use the broad traits of high-end analysis: a strong thesis, elegant sentences, measured judgment, and deep insight.
-
-- Lead with the specific news: what happened, who is involved, what changed, and why readers should care.
-
-- Avoid blog filler such as "this is worth watching", "points to", "the headline is only the start", "quiet side of innovation", and repeated source-list phrasing.
-
-- Do not write generic passages that could fit any science, AI, phone, or gadget story. Every paragraph must contain a concrete fact, consequence, named actor, technical detail, market effect, or reader-facing implication from the source briefs.
-
-- If source briefs are thin, be transparent about what is known and what remains unclear. Do not pad with generic analysis.
-
-- Make the article feel authored by a serious subject-matter expert, not assembled from feeds.
-
-- Prefer argument and consequence over hype. Explain trade-offs, incentives, limitations, second-order effects, and long-term implications.
-
-- For health and medical topics: include appropriate disclaimers, distinguish between correlation and causation, cite peer-reviewed research when available, and emphasize that content is for informational purposes only.
-
-- Write with elaborative depth: explore multiple angles, provide historical context, explain technical concepts clearly, and discuss practical applications.
-
-- Maintain professional objectivity while making complex topics accessible to educated readers.
-
-
+CRITICAL EDITORIAL DIRECTIVES - WRITE LIKE A REAL HUMAN TECH JOURNALIST (e.g. Reuters, Ars Technica, BBC, The Verge):
+- ABSOLUTELY NO GENERIC AI HEADERS: Do NOT use section headers like "Why It Matters", "What Happened", "The Details", "The Bigger Picture", "The Context", "What Readers Should Watch", "Key Takeaways", "Known Details", or "Bottom Line".
+- Subheadings (<h2> or <h3>) MUST be specific to the story topic (e.g., "## Benchmark Performance and Context", "## Pricing and Hardware Requirements", "## Clinical Trial Outcomes").
+- DO NOT use robotic meta-commentary or filler phrases like "For readers, the question is...", "Among the specific figures...", "This is worth watching", "In a broader set of shifts...", or "A little skepticism is not cynicism...".
+- Lead directly with a strong, informative news paragraph stating what happened, who is involved, and key facts.
+- Integrate facts, source attributions, context, numbers, and technical details smoothly into organic narrative paragraphs.
+- Keep claims strictly tied to the provided sources.
 
 Return valid JSON only with these keys:
-
-- title: string (compelling, professional headline)
-
+- title: string (compelling, natural news headline)
 - slug: lowercase URL slug
-
-- excerpt: comprehensive 2-3 sentence summary
-
+- excerpt: clean 2-sentence summary
 - categories: array of 1-3 broad category names
+- tags: array of 6-10 relevant tags
+- html: WordPress-ready HTML string (clean <p>, <h2>, <ul> where natural)
+- meta_description: string (150-160 characters)
+- focus_keyword: string (primary keyword)
 
-- tags: array of 8-12 specific, relevant tags
-
-- html: WordPress-ready HTML string
-
-- meta_description: string (155-160 characters for SEO)
-
-- focus_keyword: string (primary SEO keyword)
-
-
-
-HTML requirements:
-
-- 1000 to 1500 words for comprehensive coverage.
-
-- Use h2 and h3 headings for clear structure.
-
-- Use specific section labels such as "What Happened", "The Details", "Why It Matters", "The Catch", "What Readers Should Watch", and "Bottom Line".
-
-- Include a "Known Details" section with bullet points drawn only from the source briefs.
-
-- Include practical implications, but avoid repetitive generic sections.
-
-- Use natural inline attribution when needed; do not add a source-list section.
-
-- Do not include scripts, iframes, tracking pixels, or affiliate links.
-
-- For health content, include appropriate medical disclaimer at the end.
-
-
-
-Structure the article with:
-
-1. Compelling introduction that sets context and stakes
-
-2. Deep analysis of the topic with multiple perspectives
-
-3. Technical or scientific details explained clearly
-
-4. Practical implications for readers
-
-5. Expert insights and future outlook
-
-6. Clear, actionable takeaways
-
-
-
-SEO requirements:
-
-- Include the focus keyword naturally in the title, first paragraph, and at least one subheading
-
-- Write meta_description that includes the focus keyword and summarizes the article's value
-
-- Use semantic HTML with proper heading hierarchy
-
-- Include relevant internal linking opportunities
-
-
-
-Sources:
-
-
-
-{chr(10).join(source_blocks)}
-
+Source Reporting Inputs:
+{source_briefs}
 """.strip()
 
 
@@ -4392,77 +4282,93 @@ def editorial_nut_graph(categories: list[str], text: str) -> str:
 
 
 
+def generate_topical_subheading(topic: str, category: str, section_num: int) -> str:
+    """Generate a natural, story-specific H2 heading instead of generic AI labels."""
+    topic_clean = re.sub(r'[^a-zA-Z0-9\s]', '', topic)
+    words = [w for w in topic_clean.split() if len(w) > 3 and w.lower() not in STOPWORDS]
+    
+    if section_num == 1:
+        if category in ("ai", "software"):
+            return "Key Developments and Features"
+        elif category in ("health", "science"):
+            return "Research Findings and Methodology"
+        elif category in ("space", "autonomous"):
+            return "Mission Details and Operational Progress"
+        elif category in ("phones", "gadgets", "apple", "android"):
+            return "Specifications and Hardware Details"
+        elif words:
+            return f"Overview of {words[0].capitalize()} Progress"
+        return "Key Details"
+    elif section_num == 2:
+        if category in ("ai", "software"):
+            return "Industry Impact and Integration"
+        elif category in ("health", "science"):
+            return "Clinical Implications and Next Steps"
+        elif category in ("space", "autonomous"):
+            return "Operational Outlook"
+        elif category in ("phones", "gadgets", "apple", "android"):
+            return "Market Impact and Availability"
+        return "Broader Impact"
+    return "Analysis"
+
+
 def full_article_sections(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
+    primary_category = categories[0].lower() if categories else "tech"
+    kind = story_kind(categories, story_text(cluster))
+    paragraphs = []
 
-    text = story_text(cluster)
-
-    headings = section_titles(categories, text)
-
-    angle = professional_angle(topic, categories, text)
-
-    takeaway = category_takeaway(set(categories))
-
-    kind = story_kind(categories, text)
-
+    # Lead Paragraph: Natural news lede
+    lead_item = cluster[0]
+    lead_source = html.escape(lead_item.source_name)
+    lead_link = html.escape(lead_item.link)
+    lead_title = html.escape(clean_text(lead_item.title, max_len=180))
+    lead_summary = html.escape(clean_text(lead_item.summary, max_len=450)) if lead_item.summary else ""
     
+    if lead_summary and lead_summary.lower() != lead_title.lower():
+        paragraphs.append(f'<p><a href="{lead_link}">{lead_source}</a> reports that <strong>{lead_title}</strong>. {lead_summary}</p>')
+    else:
+        paragraphs.append(f'<p><a href="{lead_link}">{lead_source}</a> has reported on <strong>{lead_title}</strong>.</p>')
 
-    # Simplified, more natural structure - fewer sections, less formulaic
+    if len(cluster) > 1:
+        sec_item = cluster[1]
+        sec_source = html.escape(sec_item.source_name)
+        sec_link = html.escape(sec_item.link)
+        sec_title = html.escape(clean_text(sec_item.title, max_len=180))
+        sec_summary = html.escape(clean_text(sec_item.summary, max_len=450)) if sec_item.summary else ""
+        if sec_summary and sec_summary.lower() != sec_title.lower():
+            paragraphs.append(f'<p>Further reporting from <a href="{sec_link}">{sec_source}</a> notes that <strong>{sec_title}</strong>. {sec_summary}</p>')
 
-    details = known_details_html(cluster)
+    # Section 1 Heading (Story-specific, e.g. "Key Developments and Features")
+    h2_1 = generate_topical_subheading(topic, primary_category, 1)
+    paragraphs.append(f"<h2>{html.escape(h2_1)}</h2>")
 
-    source_info = source_report_paragraphs(cluster)
+    for item in cluster[2:5]:
+        s_source = html.escape(item.source_name)
+        s_link = html.escape(item.link)
+        s_title = html.escape(clean_text(item.title, max_len=180))
+        s_summary = html.escape(clean_text(item.summary, max_len=450)) if item.summary else ""
+        if s_summary:
+            paragraphs.append(f'<p><a href="{s_link}">{s_source}</a> also highlights: <strong>{s_title}</strong> — {s_summary}</p>')
 
-    
-
-    # Build a more conversational, less templated article
-
-    content_sections = []
-
-    
-
-    # Main story section
-
-    content_sections.append("<h2>Reporting</h2>")
-
-    content_sections.append(source_info)
-
+    details = extracted_details(cluster)
     if details:
+        detail_bullets = "".join(f"<li>{html.escape(d)}</li>" for d in details[:5])
+        paragraphs.append(f"<ul>{detail_bullets}</ul>")
 
-        content_sections.append(f"<h2>The Details</h2>")
+    # Section 2 Heading (Story-specific, e.g. "Industry Impact and Integration")
+    h2_2 = generate_topical_subheading(topic, primary_category, 2)
+    paragraphs.append(f"<h2>{html.escape(h2_2)}</h2>")
 
-        content_sections.append(details)
+    if kind == "health" or primary_category == "health":
+        paragraphs.append("<p>As with all health and medical research, findings should be evaluated alongside professional clinical guidance and peer-reviewed literature.</p>")
+    elif kind == "ai" or primary_category in ("ai", "software"):
+        paragraphs.append("<p>As software deployment progresses, attention remains centered on real-world performance, user control, and integration across established platforms.</p>")
+    elif primary_category in ("phones", "apple", "android", "gadgets"):
+        paragraphs.append("<p>Pricing, regional release schedules, and system compatibility will determine how broadly these updates reach consumers over the coming months.</p>")
+    else:
+        paragraphs.append("<p>Further developments and official updates are expected as reporting continues across primary sources.</p>")
 
-    
-
-    content_sections.append(detail_paragraph(topic, cluster))
-
-    
-
-    # Context section (only if relevant)
-
-    context = direction_paragraph(categories, text)
-
-    if context:
-
-        content_sections.append(f"<h2>The Context</h2>")
-
-        content_sections.append(context)
-
-    
-
-    # Follow-up reporting is kept factual and avoids a formulaic conclusion.
-
-    watch_items = get_simple_watch_items(kind, categories, text)
-
-    if watch_items:
-
-        content_sections.append("<h2>Next Developments</h2>")
-
-        content_sections.append(f"<ul>{watch_items}</ul>")
-
-    
-
-    return "\n".join(content_sections).strip()
+    return "\n".join(paragraphs).strip()
 
 
 
@@ -4670,17 +4576,13 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
     focus_keyword = keywords[0] if keywords else "technology"
 
-    meta_description = clean_text(f"{topic}: the latest reporting, details, and context.", max_len=160)
-
-    excerpt_details = known_details(cluster)[:2]
-
-    if excerpt_details:
-
-        excerpt = f"{topic}: {human_join(excerpt_details)}."
-
+    lead_summary_clean = clean_text(lead.summary, max_len=240) if lead.summary else ""
+    if lead_summary_clean and lead_summary_clean.lower() != topic.lower():
+        excerpt = lead_summary_clean
+        meta_description = lead_summary_clean[:160]
     else:
-
-        excerpt = f"{topic}: the latest reporting and context."
+        excerpt = f"Reporting on {topic} across primary sources."
+        meta_description = f"Latest reporting and analysis on {topic}."
 
 
 
@@ -4693,19 +4595,15 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
     
 
     body = f"""
-
 {image_block}
 
 <p>[more]</p>
-
-<p>{lead_text}</p>
 
 {full_article_sections(cluster, topic, categories, source_count)}
 
 {source_section}
 
 {medical_disclaimer}
-
 """.strip()
 
 

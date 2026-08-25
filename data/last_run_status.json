@@ -1,24 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 7,
   "feeds": 59,
-  "fetched": 2745,
-  "finished_at": "2026-08-15T02:29:26.192036+00:00",
-  "inserted": 2,
+  "fetched": 2455,
+  "finished_at": "2026-08-15T02:49:56.296747+00:00",
+  "inserted": 314,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "space",
-        "science"
+        "space"
       ],
       "sources": [
-        "NASA Science"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Week Ends Aboard Station With Robotics",
-      "wp_id": 23392
+      "title": "Will the new moon race turn Earth's nearest neighbor into a dumping",
+      "wp_id": 23429
     }
   ],
   "state": "published"
