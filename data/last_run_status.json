@@ -3,20 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2770,
-  "finished_at": "2026-08-25T07:00:24.745903+00:00",
+  "finished_at": "2026-08-25T07:52:40.919079+00:00",
   "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "Phys.org Space"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "New study reveals how space rocks become meteorites",
-      "wp_id": 29200
+      "title": "Watch 2 astronauts replace failed ISS antenna during spacewalk today",
+      "wp_id": 29205
     }
   ],
   "state": "published"
