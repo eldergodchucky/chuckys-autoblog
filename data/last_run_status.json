@@ -1,24 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2773,
-  "finished_at": "2026-08-25T16:57:05.251550+00:00",
-  "inserted": 25,
+  "fetched": 2753,
+  "finished_at": "2026-08-25T17:34:29.028588+00:00",
+  "inserted": 24,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "security"
+        "health",
+        "science"
       ],
       "sources": [
-        "BleepingComputer",
-        "Engadget",
-        "TechCrunch"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "WhatsApp is upgrading its 2FA settings",
-      "wp_id": 29374
+      "title": "Mucus-coated tumor spheres reveal potential targets to curb colorectal cancer spread",
+      "wp_id": 29376
     }
   ],
   "state": "published"
