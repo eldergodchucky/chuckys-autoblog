@@ -3,23 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2771,
-  "finished_at": "2026-08-25T10:02:12.107915+00:00",
-  "inserted": 12,
+  "finished_at": "2026-08-25T10:51:21.226914+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "android",
-        "phones"
+        "health",
+        "science"
       ],
       "sources": [
-        "Android Authority News",
-        "The Verge"
+        "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "Android is getting its own weird dots to cure car sickness",
-      "wp_id": 29215
+      "title": "T Cells Have a Hidden Ability Scientists Never Knew Existed",
+      "wp_id": 29217
     }
   ],
   "state": "published"
