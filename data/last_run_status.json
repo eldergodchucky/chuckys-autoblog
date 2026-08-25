@@ -2,23 +2,21 @@
   "dry_run": false,
   "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2770,
-  "finished_at": "2026-08-25T08:43:19.907859+00:00",
-  "inserted": 10,
+  "fetched": 2771,
+  "finished_at": "2026-08-25T09:21:40.934578+00:00",
+  "inserted": 19,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "security"
+        "gadgets"
       ],
       "sources": [
-        "Phys.org Technology",
-        "TechCrunch"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "US state probes OpenAI over rogue AI hack",
-      "wp_id": 29211
+      "title": "Copper tubes gain 5.5-fold condensation heat-transfer boost from water-shedding coating",
+      "wp_id": 29213
     }
   ],
   "state": "published"
