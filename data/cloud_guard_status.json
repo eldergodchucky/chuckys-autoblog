@@ -1,10 +1,10 @@
 {
   "active_main_runs": [],
   "cancelled_stale_main_runs": [],
-  "finished_at": "2026-08-25T20:51:48.102730+00:00",
+  "finished_at": "2026-08-25T21:18:19.201487+00:00",
   "fresh_main_runs": [],
   "github_error": "",
-  "latest_age_minutes": 4,
+  "latest_age_minutes": 30,
   "latest_link": "https://chuckyscarnage.tech.blog/2026/08/25/claude-cowork-will-now-remember-your-conversations-with-chat/",
   "latest_published_at": "2026-08-25T20:47:26+00:00",
   "latest_title": "Claude Cowork will now remember your conversations with chat",
