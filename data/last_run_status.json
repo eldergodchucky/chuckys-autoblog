@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-25T21:29:17.842527+00:00",
-  "inserted": 28,
+  "finished_at": "2026-08-25T21:56:20.279503+00:00",
+  "inserted": 12,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "gadgets"
+        "space"
       ],
       "sources": [
-        "Phys.org Technology"
+        "MIT Technology Review"
       ],
       "status": "publish",
-      "title": "Erasable semiconductor is programmed with light",
-      "wp_id": 29402
+      "title": "MIT tech powered the Artemis II livestreams",
+      "wp_id": 29405
     }
   ],
   "state": "published"
