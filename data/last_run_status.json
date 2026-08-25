@@ -3,22 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-25T19:36:51.324820+00:00",
-  "inserted": 22,
+  "finished_at": "2026-08-25T20:02:58.571975+00:00",
+  "inserted": 15,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "science",
-        "gadgets"
+        "space",
+        "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Tiny rotating probe delivers 360-degree optical coherence tomography scans inside brain arteries",
-      "wp_id": 29393
+      "title": "NASA Ames Experts Available for Roman Space Telescope Interviews",
+      "wp_id": 29396
     }
   ],
   "state": "published"
