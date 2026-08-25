@@ -1696,23 +1696,22 @@ def topic_key(cluster: list[Item]) -> str:
 
 def build_generation_prompt(cluster: list[Item]) -> str:
     source_briefs = "\n\n".join(
-        f"Source {i+1}: {item.source_name}\n"
+        f"Item {i+1}:\n"
         f"Title: {item.title}\n"
-        f"URL: {item.link}\n"
         f"Summary: {clean_text(item.summary, max_len=800)}"
         for i, item in enumerate(cluster[:6])
     )
 
     return f"""
-Write an engaging, professional, human-written news article based on the reporting inputs below.
+Write an engaging, professional, human-written blog article based on the reporting inputs below.
 
-CRITICAL EDITORIAL DIRECTIVES - WRITE LIKE A REAL HUMAN TECH JOURNALIST (e.g. Reuters, Ars Technica, BBC, The Verge):
+CRITICAL EDITORIAL DIRECTIVES - WRITE LIKE AN INDEPENDENT PROFESSIONAL HUMAN BLOGGER:
+- DO NOT MENTION SOURCE NAMES: Do NOT mention, cite, or name source publications or websites anywhere in the article (e.g. do NOT write "According to Ars Technica", "The Verge reports", "Source 1 notes", etc.). Write the entire article as your own original reporting and analysis.
 - ABSOLUTELY NO GENERIC AI HEADERS: Do NOT use section headers like "Why It Matters", "What Happened", "The Details", "The Bigger Picture", "The Context", "What Readers Should Watch", "Key Takeaways", "Known Details", or "Bottom Line".
 - Subheadings (<h2> or <h3>) MUST be specific to the story topic (e.g., "## Benchmark Performance and Context", "## Pricing and Hardware Requirements", "## Clinical Trial Outcomes").
+- REPHRASE EVERYTHING: Rewrite and rephrase all facts into fresh, original, natural human narrative. Avoid direct quotes or light paraphrasing.
 - DO NOT use robotic meta-commentary or filler phrases like "For readers, the question is...", "Among the specific figures...", "This is worth watching", "In a broader set of shifts...", or "A little skepticism is not cynicism...".
 - Lead directly with a strong, informative news paragraph stating what happened, who is involved, and key facts.
-- Integrate facts, source attributions, context, numbers, and technical details smoothly into organic narrative paragraphs.
-- Keep claims strictly tied to the provided sources.
 
 Return valid JSON only with these keys:
 - title: string (compelling, natural news headline)
@@ -3113,8 +3112,7 @@ def known_details(cluster: list[Item]) -> list[str]:
         summary = clean_text(item.summary, max_len=190)
 
         if title:
-
-            details.append(f"{item.source_name}: {title}")
+            details.append(title)
 
         if summary and summary.lower() != title.lower():
 
@@ -4312,61 +4310,98 @@ def generate_topical_subheading(topic: str, category: str, section_num: int) -> 
     return "Analysis"
 
 
+def rephrase_sentence(sentence: str) -> str:
+    """Originalize and rephrase sentences to sound like an independent human blogger."""
+    s = sentence.strip()
+    if not s:
+        return ""
+    
+    # Strip feed boilerplate
+    s = re.sub(r'\bthe post\b.*\bappeared first on\b.*', '', s, flags=re.IGNORECASE)
+    s = re.sub(r'\bappeared first on\b.*', '', s, flags=re.IGNORECASE)
+    s = re.sub(r'\bread more on\b.*', '', s, flags=re.IGNORECASE)
+    
+    replacements = [
+        (r'\bhas announced\b', 'unveiled'),
+        (r'\bhas released\b', 'introduced'),
+        (r'\bhas launched\b', 'rolled out'),
+        (r'\bshows a (\d+) percent improvement\b', r'delivers a \1% performance boost'),
+        (r'\bdemonstrate a (\d+) percent improvement\b', r'marks a \1% gain'),
+        (r'\baccording to reports\b', 'new data indicates'),
+        (r'\bis expected to be\b', 'promises to be'),
+        (r'\bis designed to\b', 'aims to'),
+        (r'\bfeaturing enhanced\b', 'bringing upgraded'),
+        (r'\bsignificant progress across\b', 'notable breakthroughs in'),
+        (r'\btesting of\b', 'hands-on evaluation of'),
+    ]
+    for pattern, repl in replacements:
+        s = re.sub(pattern, repl, s, flags=re.IGNORECASE)
+        
+    s = s.strip()
+    if len(s) > 5 and not s.endswith(('.', '!', '?')):
+        s += '.'
+    return s
+
+
 def full_article_sections(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
     primary_category = categories[0].lower() if categories else "tech"
     kind = story_kind(categories, story_text(cluster))
     paragraphs = []
 
-    # Lead Paragraph: Natural news lede
+    # Lead Paragraph: Direct news story written as original blogger piece (NO source site names)
     lead_item = cluster[0]
-    lead_source = html.escape(lead_item.source_name)
-    lead_link = html.escape(lead_item.link)
-    lead_title = html.escape(clean_text(lead_item.title, max_len=180))
-    lead_summary = html.escape(clean_text(lead_item.summary, max_len=450)) if lead_item.summary else ""
+    lead_title = clean_text(lead_item.title, max_len=180)
+    lead_summary = clean_text(lead_item.summary, max_len=450) if lead_item.summary else ""
     
     if lead_summary and lead_summary.lower() != lead_title.lower():
-        paragraphs.append(f'<p><a href="{lead_link}">{lead_source}</a> reports that <strong>{lead_title}</strong>. {lead_summary}</p>')
+        rephrased_lead = rephrase_sentence(lead_summary)
+        paragraphs.append(f"<p><strong>{html.escape(lead_title)}</strong>: {html.escape(rephrased_lead)}</p>")
     else:
-        paragraphs.append(f'<p><a href="{lead_link}">{lead_source}</a> has reported on <strong>{lead_title}</strong>.</p>')
+        paragraphs.append(f"<p>Recent developments in <strong>{html.escape(topic)}</strong> mark a significant milestone for the field.</p>")
 
-    if len(cluster) > 1:
-        sec_item = cluster[1]
-        sec_source = html.escape(sec_item.source_name)
-        sec_link = html.escape(sec_item.link)
-        sec_title = html.escape(clean_text(sec_item.title, max_len=180))
-        sec_summary = html.escape(clean_text(sec_item.summary, max_len=450)) if sec_item.summary else ""
-        if sec_summary and sec_summary.lower() != sec_title.lower():
-            paragraphs.append(f'<p>Further reporting from <a href="{sec_link}">{sec_source}</a> notes that <strong>{sec_title}</strong>. {sec_summary}</p>')
+    # Follow-up story coverage (REPHRASED, NO source names mentioned)
+    seen_sentences = set()
+    for item in cluster[1:]:
+        s_title = clean_text(item.title, max_len=180)
+        s_summary = clean_text(item.summary, max_len=450) if item.summary else ""
+        if s_summary and s_summary.lower() != s_title.lower():
+            rephrased = rephrase_sentence(s_summary)
+            if rephrased.lower() not in seen_sentences:
+                seen_sentences.add(rephrased.lower())
+                paragraphs.append(f"<p>Additionally, <strong>{html.escape(s_title)}</strong> highlights how {html.escape(rephrased)}</p>")
 
-    # Section 1 Heading (Story-specific, e.g. "Key Developments and Features")
+    # Subheading 1
     h2_1 = generate_topical_subheading(topic, primary_category, 1)
     paragraphs.append(f"<h2>{html.escape(h2_1)}</h2>")
 
-    for item in cluster[2:5]:
-        s_source = html.escape(item.source_name)
-        s_link = html.escape(item.link)
-        s_title = html.escape(clean_text(item.title, max_len=180))
-        s_summary = html.escape(clean_text(item.summary, max_len=450)) if item.summary else ""
-        if s_summary:
-            paragraphs.append(f'<p><a href="{s_link}">{s_source}</a> also highlights: <strong>{s_title}</strong> — {s_summary}</p>')
+    # Extra rephrased narrative paragraph synthesizing details
+    narrative_parts = []
+    for item in cluster:
+        if item.summary:
+            sentences = [s.strip() for s in re.split(r'[.!?]+', item.summary) if len(s.strip()) > 25]
+            for s in sentences:
+                r_s = rephrase_sentence(s)
+                if r_s and r_s.lower() not in seen_sentences:
+                    seen_sentences.add(r_s.lower())
+                    narrative_parts.append(r_s)
+                    if len(narrative_parts) >= 3:
+                        break
 
-    details = extracted_details(cluster)
-    if details:
-        detail_bullets = "".join(f"<li>{html.escape(d)}</li>" for d in details[:5])
-        paragraphs.append(f"<ul>{detail_bullets}</ul>")
+    if narrative_parts:
+        paragraphs.append(f"<p>{html.escape(' '.join(narrative_parts))}</p>")
 
-    # Section 2 Heading (Story-specific, e.g. "Industry Impact and Integration")
+    # Subheading 2
     h2_2 = generate_topical_subheading(topic, primary_category, 2)
     paragraphs.append(f"<h2>{html.escape(h2_2)}</h2>")
 
     if kind == "health" or primary_category == "health":
-        paragraphs.append("<p>As with all health and medical research, findings should be evaluated alongside professional clinical guidance and peer-reviewed literature.</p>")
+        paragraphs.append("<p>While these clinical developments offer promising insights, real-world adoption will require rigorous peer-reviewed validation and regulatory oversight.</p>")
     elif kind == "ai" or primary_category in ("ai", "software"):
-        paragraphs.append("<p>As software deployment progresses, attention remains centered on real-world performance, user control, and integration across established platforms.</p>")
+        paragraphs.append("<p>As production rollouts expand, attention remains centered on long-term reliability, system latency, and how seamlessly these tools integrate into everyday workflows.</p>")
     elif primary_category in ("phones", "apple", "android", "gadgets"):
-        paragraphs.append("<p>Pricing, regional release schedules, and system compatibility will determine how broadly these updates reach consumers over the coming months.</p>")
+        paragraphs.append("<p>Regional rollout timelines, device compatibility, and final consumer pricing will dictate how rapidly these hardware updates gain traction in the market.</p>")
     else:
-        paragraphs.append("<p>Further developments and official updates are expected as reporting continues across primary sources.</p>")
+        paragraphs.append("<p>As testing and deployment continue, future software iterations and official announcements will provide further clarity on long-term adoption.</p>")
 
     return "\n".join(paragraphs).strip()
 
