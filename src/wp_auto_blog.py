@@ -1702,24 +1702,32 @@ def build_generation_prompt(cluster: list[Item]) -> str:
         for i, item in enumerate(cluster[:6])
     )
 
+    publication_names = ", ".join(sorted({item.source_name for item in cluster}))
+
     return f"""
 Write an engaging, professional, human-written blog article based on the reporting inputs below.
 
 CRITICAL EDITORIAL DIRECTIVES - WRITE LIKE AN INDEPENDENT PROFESSIONAL HUMAN BLOGGER:
-- DO NOT MENTION SOURCE NAMES: Do NOT mention, cite, or name source publications or websites anywhere in the article (e.g. do NOT write "According to Ars Technica", "The Verge reports", "Source 1 notes", etc.). Write the entire article as your own original reporting and analysis.
+- DO NOT MENTION SOURCE NAMES: Do NOT mention, cite, or name source publications or websites anywhere in the article (e.g. do NOT write "According to Ars Technica", "The Verge reports", "Source 1 notes", etc.). Write the entire article as your own original reporting and analysis. Banned publication names for this article: {publication_names}.
 - ABSOLUTELY NO GENERIC AI HEADERS: Do NOT use section headers like "Why It Matters", "What Happened", "The Details", "The Bigger Picture", "The Context", "What Readers Should Watch", "Key Takeaways", "Known Details", or "Bottom Line".
-- Subheadings (<h2> or <h3>) MUST be specific to the story topic (e.g., "## Benchmark Performance and Context", "## Pricing and Hardware Requirements", "## Clinical Trial Outcomes").
-- REPHRASE EVERYTHING: Rewrite and rephrase all facts into fresh, original, natural human narrative. Avoid direct quotes or light paraphrasing.
-- DO NOT use robotic meta-commentary or filler phrases like "For readers, the question is...", "Among the specific figures...", "This is worth watching", "In a broader set of shifts...", or "A little skepticism is not cynicism...".
+- Subheadings (<h2> or <h3>) are allowed ONLY if the story genuinely has distinct facets, and they MUST name the actual subject (e.g., "Battery life and charging", "Clinical trial results"). Never generic labels.
+- REPHRASE EVERYTHING: Rewrite and rephrase all facts into fresh, natural human narrative. No sentence may be copied from the inputs.
 - Lead directly with a strong, informative news paragraph stating what happened, who is involved, and key facts.
 
+STYLE RULES (these make it read human):
+- Vary sentence length. Mix short punchy sentences with longer ones. Paragraphs of 1-3 sentences.
+- NEVER open a paragraph with "Additionally,", "Moreover,", "Furthermore,", "Notably,".
+- NEVER use these words or constructions: "isn't just X, it's Y", "underscores", "testament to", "in the ... landscape/realm/space of", "delve", "game-changer", "ever-evolving", "In today's fast-paced world", "plays a crucial role in", "it's worth noting".
+- NO concluding summary or takeaway paragraph. End the article on its last concrete fact (a price, date, availability window, or next milestone).
+- Use plain words a busy reader knows. Concrete numbers beat adjectives.
+
 Return valid JSON only with these keys:
-- title: string (compelling, natural news headline)
+- title: string (plain specific headline, 6-12 words, no clickbait)
 - slug: lowercase URL slug
 - excerpt: clean 2-sentence summary
 - categories: array of 1-3 broad category names
 - tags: array of 6-10 relevant tags
-- html: WordPress-ready HTML string (clean <p>, <h2>, <ul> where natural)
+- html: WordPress-ready HTML string (clean <p>, <h2> only where natural, <ul> only if listing real items)
 - meta_description: string (150-160 characters)
 - focus_keyword: string (primary keyword)
 
@@ -1747,11 +1755,13 @@ def openai_generate_article(cluster: list[Item]) -> dict[str, Any]:
 
         "instructions": (
 
-            "You are a careful technology editor writing polished analytical news features. "
+            "You are a veteran independent news blogger writing for your own blog. "
 
-            "Create original, cited posts with clear judgement, restrained prose, and useful context. "
+            "You write exactly the way experienced human journalists write: plainly, concretely, in your own voice. "
 
-            "Do not imitate any named publication directly. Do not plagiarize, fabricate, or overstate source claims."
+            "Never mention, cite, or credit other publications, websites, or outlets anywhere in the text. "
+
+            "Never plagiarize or fabricate: stick to what the reporting inputs state and nothing beyond them."
 
         ),
 
@@ -1875,7 +1885,9 @@ def parse_article_json(text: str) -> dict[str, Any]:
 
     if "focus_keyword" not in article:
 
-        article["focus_keyword"] = top_keywords_from_text(article["title"] + " " + article["excerpt"], 1)[0] if article.get("excerpt") else "technology"
+        keyword_hits = top_keywords_from_text(article["title"] + " " + article.get("excerpt", ""), 1) if article.get("excerpt") else []
+
+        article["focus_keyword"] = keyword_hits[0] if keyword_hits else "technology"
 
     return article
 
@@ -4310,98 +4322,315 @@ def generate_topical_subheading(topic: str, category: str, section_num: int) -> 
     return "Analysis"
 
 
-def rephrase_sentence(sentence: str) -> str:
-    """Originalize and rephrase sentences to sound like an independent human blogger."""
-    s = sentence.strip()
+FEED_JUNK_PATTERNS = tuple(
+    re.compile(pattern, re.IGNORECASE)
+    for pattern in (
+        r"\bthe post\b.*?\bappeared first on\b.*",
+        r"\bappeared first on\b.*",
+        r"\bread more\b.*",
+        r"\bread the full (?:story|article|post)\b.*",
+        r"\bclick here\b.*",
+        r"\bsubscribe\b[^.]*\.?",
+        r"\bfollow us on\b[^.]*\.?",
+        r"\bshare this (?:article|post|story)\b[^.]*\.?",
+        r"\bsign up\b[^.]*\.?",
+        r"\bcheck out our\b[^.]*\.?",
+        r"\bjoin (?:our|the) (?:newsletter|mailing list|community|discord|forum)\b[^.]*\.?",
+        r"\blet us know (?:what you think|in the comments|your thoughts)\b[^.]*\.?",
+        r"\bstay tuned\b[^.]*\.?",
+    )
+)
+
+MARKETING_SWAPS = (
+    (r"\bhas announced\b", "announced"),
+    (r"\bhas released\b", "released"),
+    (r"\bhas launched\b", "launched"),
+    (r"\bhas unveiled\b", "unveiled"),
+    (r"\bhas revealed\b", "revealed"),
+    (r"\bis set to\b", "will"),
+    (r"\bare set to\b", "will"),
+    (r"\bis expected to\b", "should"),
+    (r"\bare expected to\b", "should"),
+    (r"\bis designed to\b", "aims to"),
+    (r"\ballows? users to\b", "lets users"),
+    (r"\benables? users to\b", "lets users"),
+    (r"\bprovides? users with\b", "gives users"),
+    (r"\bleverages?\b", "uses"),
+    (r"\butilizes?\b", "uses"),
+    (r"\bin order to\b", "to"),
+    (r"\bdue to the fact that\b", "because"),
+    (r"\bprior to\b", "before"),
+    (r"\bsubsequently\b", "later"),
+    (r"\bapproximately\b", "about"),
+    (r"\bnumerous\b", "many"),
+    (r"\bboasts?\b", "has"),
+    (r"\bthe vast majority of\b", "most"),
+    (r"\ba wide (?:range|array|variety) of\b", "many"),
+    (r"\ba number of\b", "several"),
+    (r"\bstate-of-the-art\b", "modern"),
+    (r"\bseamlessly\b", "smoothly"),
+    (r"\bseamless\b", "smooth"),
+    (r"\brobust\b", "solid"),
+    (r"\bunprecedented\b", "record-setting"),
+    (r"\bcutting-edge\b", "advanced"),
+    (r"\bever-evolving\b", "fast-moving"),
+    (r"\baccording to reports\b", "reportedly"),
+    (r"\bmedia reports suggest\b", "reportedly"),
+    (r"\brumors suggest\b", "reportedly"),
+    (r"\bis rumored to\b", "may"),
+    (r"\bare rumored to\b", "may"),
+    (r"\bis said to\b", "reportedly"),
+)
+
+# Publication brands. These get stripped from generated text wherever they appear,
+# because the blog writes as its own outlet and never cites where stories came from.
+# Deliberately excludes subject-style feed names (NASA, OpenAI, Nature journals read
+# as ordinary nouns in prose and must survive).
+PUBLICATION_NAMES = (
+    "Android Authority",
+    "Android Police",
+    "9to5Mac",
+    "9to5Google",
+    "Ars Technica",
+    "GSMArena",
+    "The Verge",
+    "TechRadar",
+    "TechCrunch",
+    "Hackaday",
+    "XDA Developers",
+    "Notebookcheck",
+    "Tom's Hardware",
+    "PC Gamer",
+    "Nintendo Life",
+    "Push Square",
+    "Pureinfotech",
+    "Windows Central",
+    "Windows Report",
+    "AppleInsider",
+    "MacRumors",
+    "Macworld",
+    "Cult of Mac",
+    "PhoneArena",
+    "SamMobile",
+    "Gizmochina",
+    "Wccftech",
+    "Digital Trends",
+    "PCWorld",
+    "How-To Geek",
+    "MakeUseOf",
+    "New Atlas",
+    "Sci-Fi",
+    "VentureBeat",
+    "Engadget",
+    "Gizmodo",
+    "BGR",
+    "CNET",
+    "Wired",
+    "ScienceDaily",
+    "Phys.org",
+    "Space.com",
+    "IEEE Spectrum",
+    "Interesting Engineering",
+    "The Debrief",
+    "Earth.com",
+    "Study Finds",
+    "ZDNet",
+    "Computerworld",
+)
+
+
+def _publication_regex(name: str) -> str:
+    escaped = re.escape(name)
+    return escaped.replace(r"\ ", r"\s+")
+
+
+def strip_source_mentions(text: str, extra_names: list[str] | None = None) -> tuple[str, int]:
+    """Remove attribution phrasing and publication names from prose."""
+    hits = 0
+    names = list(PUBLICATION_NAMES) + [name for name in (extra_names or []) if name]
+    for name in sorted(names, key=len, reverse=True):
+        esc = _publication_regex(name)
+        patterns = (
+            rf"(?i)\b(?:according to|reported by|as reported by|as per|citing|quoted (?:in|by)|per|via)\s+(?:the\s+)?(?:tech\s+)?(?:site\s+|publication\s+|outlet\s+|blog\s+)?{esc}\b[.,!]?",
+            rf"(?i)\b(?:the\s+)?{esc}\s+(?:reports?|reported|said|says|notes?|noted|reveals?|revealed|claims?|claimed|writes?|wrote|learned|understands|covers?|covered|exclusives?)\b(?:\s+that)?[,:]?",
+        )
+        for pattern in patterns:
+            text, count = re.subn(pattern, " ", text)
+            hits += count
+    generic = (
+        r"(?i)\b(?:the\s+)?(?:publication|outlet|tech site|blog)\s+(?:reports?|reported|notes?|noted|said|writes?)\b[,.]?",
+        r"(?i)\bno official (?:press release|announcement) (?:has been|had been)? ?(?:made|issued) yet\b[.]?",
+    )
+    for pattern in generic:
+        text, count = re.subn(pattern, " ", text)
+        hits += count
+    text = re.sub(r"[ \t]{2,}", " ", text)
+    text = re.sub(r"\s+([.,;:!?)])", r"\1", text)
+    text = re.sub(r"\(\s*\)", "", text)
+    return text.strip(), hits
+
+
+AI_TELL_HEADER = re.compile(
+    r"(?is)<h[23][^>]*>\s*(?:why (?:this|it) matters?|what happened(?: here)?|the details?(?: so far)?|the bigger picture|the (?:bottom line|context|takeaway)|key takeaways?:?|known details|what (?:readers|users|we) (?:should|need to) watch|final thoughts|conclusions?\b|wrapping (?:it )?up)\s*</h[23]>\s*"
+)
+
+AI_TELL_SENTENCE = re.compile(
+    r"(?i)[^\n.<>]*(?:this puts the story in|for readers, the question|it'?s worth noting|it is worth noting|in today'?s fast-paced|only time will tell|at the end of the day|the bottom line(?: here)? is|a little skepticism is not cynicism|among the specific figures|in a broader set of shifts|this is (?:a )?(?:developing|worth watching))[^\n.<>]*\.?"
+)
+
+AI_TELL_SWAPS = (
+    (r"\bdelve into\b", "look at"),
+    (r"\bdelves into\b", "looks at"),
+    (r"\bdelving into\b", "looking at"),
+    (r"\bunderscores?\b", "highlights"),
+    (r"\ba testament to\b", "proof of"),
+    (r"\bin the realm of\b", "in"),
+    (r"\bplays a crucial role in\b", "matters for"),
+    (r"\bplays a vital role in\b", "matters for"),
+    (r"\bgame-changer\b", "big deal"),
+    (r"\bgame-changing\b", "major"),
+    (r"\bever-evolving\b", "fast-moving"),
+    (r"(?im)^(?:in conclusion|ultimately|overall|to sum (?:it all )?up)[,:]?\s*", ""),
+    (r"(?i)(?:(?<=[.\s])|^)((?:ultimately|in conclusion|overall)[,:])[ ]*", ""),
+)
+
+
+def scrub_ai_tells(body: str, extra_names: list[str] | None = None) -> tuple[str, int]:
+    """Remove AI-slop headers, filler meta-commentary sentences, and source mentions from article HTML."""
+    hits = 0
+    body, header_hits = AI_TELL_HEADER.subn("", body)
+    hits += header_hits
+    body = strip_source_mentions(body, extra_names)[0]
+    for pattern, repl in AI_TELL_SWAPS:
+        body, count = re.subn(pattern, repl, body)
+        hits += count
+
+    def clean_para(m: re.Match) -> str:
+        nonlocal hits
+        inner = m.group(1).strip()
+        if not inner or not AI_TELL_SENTENCE.search(inner):
+            return m.group(0)
+        parts = [s for s in re.split(r"(?<=[.!?])\s+", inner) if s.strip()]
+        kept = [s for s in parts if not AI_TELL_SENTENCE.search(s)]
+        dropped = len(parts) - len(kept)
+        if dropped == 0:
+            return m.group(0)
+        hits += dropped
+        if not kept:
+            return ""
+        return "<p>" + " ".join(part.strip() for part in kept) + "</p>"
+
+    body = re.sub(r"(?is)<p[^>]*>(.*?)</p>", clean_para, body)
+    body = re.sub(r"(?is)<p>\s*</p>", "", body)
+    body = re.sub(r"(?is)(<p[^>]*>)\s*,\s*", r"\1", body)
+    body = re.sub(r"(?is),\s*</p>", "</p>", body)
+    body = re.sub(r"(?is)(<p[^>]*>)\s+", r"\1", body)
+
+    def _capitalize(m: re.Match) -> str:
+        return m.group(1) + m.group(2).upper()
+
+    body = re.sub(r"(?is)(<p[^>]*>)([a-z])", _capitalize, body)
+    body = re.sub(r"(?is)([.!?]\s+)([a-z])", lambda m: m.group(1) + m.group(2).upper(), body)
+    body = re.sub(r"[ \t]{2,}", " ", body)
+    return body.strip(), hits
+
+
+_AN_EXCEPTION_PREFIXES = ("on", "us", "eu", "un")
+
+
+def _fix_articles(match: re.Match) -> str:
+    word = match.group(2)
+    lower = word.lower()
+    if any(lower.startswith(prefix) and not lower.startswith("upd") for prefix in _AN_EXCEPTION_PREFIXES):
+        return match.group(0)
+    return f"{match.group(1)}n {word}"
+
+
+def clean_fact_sentence(sentence: str) -> str:
+    """Turn one raw feed sentence into a clean, plain, human-safe sentence."""
+    s = (sentence or "").strip()
     if not s:
         return ""
-    
-    # Strip feed boilerplate
-    s = re.sub(r'\bthe post\b.*\bappeared first on\b.*', '', s, flags=re.IGNORECASE)
-    s = re.sub(r'\bappeared first on\b.*', '', s, flags=re.IGNORECASE)
-    s = re.sub(r'\bread more on\b.*', '', s, flags=re.IGNORECASE)
-    
-    replacements = [
-        (r'\bhas announced\b', 'unveiled'),
-        (r'\bhas released\b', 'introduced'),
-        (r'\bhas launched\b', 'rolled out'),
-        (r'\bshows a (\d+) percent improvement\b', r'delivers a \1% performance boost'),
-        (r'\bdemonstrate a (\d+) percent improvement\b', r'marks a \1% gain'),
-        (r'\baccording to reports\b', 'new data indicates'),
-        (r'\bis expected to be\b', 'promises to be'),
-        (r'\bis designed to\b', 'aims to'),
-        (r'\bfeaturing enhanced\b', 'bringing upgraded'),
-        (r'\bsignificant progress across\b', 'notable breakthroughs in'),
-        (r'\btesting of\b', 'hands-on evaluation of'),
-    ]
-    for pattern, repl in replacements:
+    for pattern in FEED_JUNK_PATTERNS:
+        s = pattern.sub("", s)
+    s, _hits = strip_source_mentions(s)
+    for pattern, repl in MARKETING_SWAPS:
         s = re.sub(pattern, repl, s, flags=re.IGNORECASE)
-        
-    s = s.strip()
-    if len(s) > 5 and not s.endswith(('.', '!', '?')):
-        s += '.'
+    s = re.sub(r"(?i)^(?:additionally|moreover|furthermore|notably|in addition|however|indeed)\b[,:]?\s*", "", s)
+    s = re.sub(r"\b(a) ((?:[aeiou])\w+)\b", _fix_articles, s)
+    s = re.sub(r"\s{2,}", " ", s).strip(" \t-,;:")
+    if not s:
+        return ""
+    if len(s) > 1:
+        s = s[0].upper() + s[1:]
+    if len(s) > 5 and not s.endswith((".", "!", "?")):
+        s += "."
     return s
 
 
+def fact_sentences(text: str, min_len: int = 24) -> list[str]:
+    """Split feed copy into cleaned standalone fact sentences."""
+    out: list[str] = []
+    for raw in re.split(r"(?<=[.!?])\s+", text or ""):
+        cleaned = clean_fact_sentence(raw)
+        if len(cleaned) >= min_len:
+            out.append(cleaned)
+    return out
+
+
+def rephrase_sentence(sentence: str) -> str:
+    """Backwards-compatible wrapper around the fact cleaner."""
+    return clean_fact_sentence(sentence)
+
+
 def full_article_sections(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
-    primary_category = categories[0].lower() if categories else "tech"
-    kind = story_kind(categories, story_text(cluster))
-    paragraphs = []
+    """Assemble a plain human-style news brief: facts only, no scaffolding.
 
-    # Lead Paragraph: Direct news story written as original blogger piece (NO source site names)
+    Rules that keep it reading human:
+    - Lead directly with what happened. No bold-title colons, no template openers.
+    - One idea per paragraph, 1-3 sentences, no filler connectors.
+    - No subheadings, no canned closing analysis, no "watch items".
+    - End on the last concrete fact rather than a summary.
+    """
+    facts_by_item: list[tuple[Item, list[str]]] = [
+        (item, fact_sentences(item.summary or "")) for item in cluster
+    ]
+    paragraphs: list[str] = []
+    used: set[str] = set()
+
+    def take(facts: list[str], limit: int) -> list[str]:
+        out: list[str] = []
+        for fact in facts:
+            key = fact.lower()
+            if key in used:
+                continue
+            used.add(key)
+            out.append(fact)
+            if len(out) >= limit:
+                break
+        return out
+
     lead_item = cluster[0]
-    lead_title = clean_text(lead_item.title, max_len=180)
-    lead_summary = clean_text(lead_item.summary, max_len=450) if lead_item.summary else ""
-    
-    if lead_summary and lead_summary.lower() != lead_title.lower():
-        rephrased_lead = rephrase_sentence(lead_summary)
-        paragraphs.append(f"<p><strong>{html.escape(lead_title)}</strong>: {html.escape(rephrased_lead)}</p>")
-    else:
-        paragraphs.append(f"<p>Recent developments in <strong>{html.escape(topic)}</strong> mark a significant milestone for the field.</p>")
+    lede = take(facts_by_item[0][1], 3)
+    if not lede:
+        fallback_fact = clean_fact_sentence(clean_text(lead_item.title, max_len=160))
+        if fallback_fact:
+            used.add(fallback_fact.lower())
+            lede = [fallback_fact]
+    if lede:
+        paragraphs.append("<p>" + html.escape(" ".join(lede)) + "</p>")
 
-    # Follow-up story coverage (REPHRASED, NO source names mentioned)
-    seen_sentences = set()
-    for item in cluster[1:]:
-        s_title = clean_text(item.title, max_len=180)
-        s_summary = clean_text(item.summary, max_len=450) if item.summary else ""
-        if s_summary and s_summary.lower() != s_title.lower():
-            rephrased = rephrase_sentence(s_summary)
-            if rephrased.lower() not in seen_sentences:
-                seen_sentences.add(rephrased.lower())
-                paragraphs.append(f"<p>Additionally, <strong>{html.escape(s_title)}</strong> highlights how {html.escape(rephrased)}</p>")
+    for _item, facts in facts_by_item[1:]:
+        if len(paragraphs) >= 4:
+            break
+        support = take(facts, 2)
+        if support:
+            paragraphs.append("<p>" + html.escape(" ".join(support)) + "</p>")
 
-    # Subheading 1
-    h2_1 = generate_topical_subheading(topic, primary_category, 1)
-    paragraphs.append(f"<h2>{html.escape(h2_1)}</h2>")
-
-    # Extra rephrased narrative paragraph synthesizing details
-    narrative_parts = []
-    for item in cluster:
-        if item.summary:
-            sentences = [s.strip() for s in re.split(r'[.!?]+', item.summary) if len(s.strip()) > 25]
-            for s in sentences:
-                r_s = rephrase_sentence(s)
-                if r_s and r_s.lower() not in seen_sentences:
-                    seen_sentences.add(r_s.lower())
-                    narrative_parts.append(r_s)
-                    if len(narrative_parts) >= 3:
-                        break
-
-    if narrative_parts:
-        paragraphs.append(f"<p>{html.escape(' '.join(narrative_parts))}</p>")
-
-    # Subheading 2
-    h2_2 = generate_topical_subheading(topic, primary_category, 2)
-    paragraphs.append(f"<h2>{html.escape(h2_2)}</h2>")
-
-    if kind == "health" or primary_category == "health":
-        paragraphs.append("<p>While these clinical developments offer promising insights, real-world adoption will require rigorous peer-reviewed validation and regulatory oversight.</p>")
-    elif kind == "ai" or primary_category in ("ai", "software"):
-        paragraphs.append("<p>As production rollouts expand, attention remains centered on long-term reliability, system latency, and how seamlessly these tools integrate into everyday workflows.</p>")
-    elif primary_category in ("phones", "apple", "android", "gadgets"):
-        paragraphs.append("<p>Regional rollout timelines, device compatibility, and final consumer pricing will dictate how rapidly these hardware updates gain traction in the market.</p>")
-    else:
-        paragraphs.append("<p>As testing and deployment continue, future software iterations and official announcements will provide further clarity on long-term adoption.</p>")
+    if len(paragraphs) < 4:
+        extra = take(facts_by_item[0][1], 2)
+        if extra:
+            paragraphs.append("<p>" + html.escape(" ".join(extra)) + "</p>")
 
     return "\n".join(paragraphs).strip()
 
@@ -4539,13 +4768,9 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
     hero_path = create_hero_image(title, keywords, categories, source_image_urls)
 
-    lead_text = professional_lead(topic, categories, story_text(cluster))
-
     text = story_text(cluster)
 
     kind = story_kind(categories, text)
-
-
 
     image_block = ""
 
@@ -4560,36 +4785,6 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 </figure>
 
 """.strip()
-
-
-
-    angle = professional_angle(topic, categories, text)
-
-    practical_focus = {
-
-        "phones": "Anyone thinking about upgrading should watch pricing, trade-in value, camera claims, battery life, storage options, and how many years of updates the device is likely to receive.",
-
-        "apple": "Apple users should watch whether the change is global or market-specific, whether it affects older hardware, and whether it hints at pressure around the next product cycle.",
-
-        "android": "Android users should watch device support, manufacturer rollout timing, app compatibility, and whether features arrive through system updates, Play services, or individual apps.",
-
-        "ai": "For AI stories, the test is whether the feature is genuinely useful, accurate enough to trust, private enough to use, and affordable enough to keep.",
-
-        "gadgets": "For gadgets, the key is whether the product solves a real daily problem or simply adds another spec that looks good on a marketing page.",
-
-        "autonomous": "For robotaxis, the thing to watch is boring reliability: fewer interventions, clearer safety reporting, and performance that improves outside ideal demo conditions.",
-
-        "space": "For space stories, the key is what the mission or observation makes possible next: new data, new experiments, better hardware, or a stronger foundation for future exploration.",
-
-        "science": "For science and space stories, the practical value is in what the discovery, mission, or experiment could make possible next.",
-
-        "health": "For health and medical stories, readers should watch whether findings are peer-reviewed, whether results are replicated, and how the research might influence treatment options or public policy, while always consulting healthcare professionals for medical advice.",
-
-        "software": "For software, watch whether the change is optional, forced, free, subscription-based, or tied to a specific device or operating system.",
-
-    }
-
-    practical = practical_focus.get(kind) or practical_focus.get(categories[0] if categories else "tech", "The practical move is to watch what changes for real users, real devices, and real workflows.")
 
 
 
@@ -4612,22 +4807,16 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
     focus_keyword = keywords[0] if keywords else "technology"
 
     lead_summary_clean = clean_text(lead.summary, max_len=240) if lead.summary else ""
-    if lead_summary_clean and lead_summary_clean.lower() != topic.lower():
+    excerpt_facts = fact_sentences(lead_summary_clean, 20)
+    if excerpt_facts:
+        excerpt = " ".join(excerpt_facts[:2])
+        meta_description = excerpt_facts[0][:160]
+    elif lead_summary_clean and lead_summary_clean.lower() != topic.lower():
         excerpt = lead_summary_clean
         meta_description = lead_summary_clean[:160]
     else:
-        excerpt = f"Reporting on {topic} across primary sources."
-        meta_description = f"Latest reporting and analysis on {topic}."
-
-
-
-    # Add source attribution
-
-    source_names = [item.source_name for item in cluster]
-
-    source_section = ""
-
-    
+        excerpt = clean_text(title, max_len=200)
+        meta_description = clean_text(title, max_len=160)
 
     body = f"""
 {image_block}
@@ -4635,8 +4824,6 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 <p>[more]</p>
 
 {full_article_sections(cluster, topic, categories, source_count)}
-
-{source_section}
 
 {medical_disclaimer}
 """.strip()
@@ -4671,23 +4858,76 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
 
 
+HIGH_SCRUB_VIOLATIONS = 8
+
+
+def apply_human_scrub(article: dict[str, Any], cluster: list[Item]) -> int:
+    """Deterministic de-bot pass over a generated article.
+
+    Removes source/publication mentions and AI-tell phrasing from every text
+    field, drops generic AI headers, and returns the number of fixes made.
+    """
+    extra_names = sorted({item.source_name for item in cluster})
+    violations = 0
+    for field in ("title", "excerpt", "meta_description"):
+        original = str(article.get(field, "") or "")
+        if not original:
+            continue
+        scrubbed, hits = strip_source_mentions(original, extra_names)
+        if hits:
+            violations += hits
+            article[field] = scrubbed
+    body = str(article.get("html", "") or "")
+    if body:
+        scrubbed_body, hits = scrub_ai_tells(body)
+        violations += hits
+        article["html"] = scrubbed_body
+    return violations
+
+
 def generate_article(cluster: list[Item]) -> dict[str, Any]:
 
     generator = os.getenv("ARTICLE_GENERATOR", GENERATOR_FREE).strip().lower() or GENERATOR_FREE
 
-    if generator == GENERATOR_OPENAI:
+    use_openai = generator == GENERATOR_OPENAI or (generator == "auto" and os.getenv("OPENAI_API_KEY", "").strip())
 
-        return openai_generate_article(cluster)
+    if use_openai:
 
-    if generator == "auto" and os.getenv("OPENAI_API_KEY", "").strip():
+        try:
 
-        return openai_generate_article(cluster)
+            article = openai_generate_article(cluster)
 
-    if generator in {GENERATOR_FREE, "auto"}:
+        except Exception as exc:
 
-        return free_article(cluster)
+            print(f"OpenAI generation failed ({type(exc).__name__}: {str(exc)[:200]}); falling back to template brief.")
 
-    raise RuntimeError(f"Unsupported ARTICLE_GENERATOR: {generator}")
+        else:
+
+            violations = apply_human_scrub(article, cluster)
+
+            if violations >= HIGH_SCRUB_VIOLATIONS:
+
+                try:
+
+                    retry_article = openai_generate_article(cluster)
+
+                    retry_violations = apply_human_scrub(retry_article, cluster)
+
+                    if retry_violations <= violations:
+
+                        article = retry_article
+
+                except Exception:
+
+                    pass
+
+            return article
+
+    article = free_article(cluster)
+
+    apply_human_scrub(article, cluster)
+
+    return article
 
 
 
