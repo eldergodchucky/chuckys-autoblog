@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-25T18:58:29.671167+00:00",
-  "inserted": 30,
+  "finished_at": "2026-08-25T19:36:51.324820+00:00",
+  "inserted": 22,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
+        "health",
         "science",
-        "security"
+        "gadgets"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Major security weaknesses found in leading open-weight LLMs",
-      "wp_id": 29382
+      "title": "Tiny rotating probe delivers 360-degree optical coherence tomography scans inside brain arteries",
+      "wp_id": 29393
     }
   ],
   "state": "published"
