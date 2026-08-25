@@ -1,23 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-25T18:05:21.025868+00:00",
-  "inserted": 33,
+  "finished_at": "2026-08-25T18:58:29.671167+00:00",
+  "inserted": 30,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "science",
+        "security"
       ],
       "sources": [
-        "Space.com"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "On this day in space! Aug. 25",
-      "wp_id": 29378
+      "title": "Major security weaknesses found in leading open-weight LLMs",
+      "wp_id": 29382
     }
   ],
   "state": "published"
