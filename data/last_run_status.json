@@ -3,20 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2770,
-  "finished_at": "2026-08-25T07:52:40.919079+00:00",
-  "inserted": 7,
+  "finished_at": "2026-08-25T08:43:19.907859+00:00",
+  "inserted": 10,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "security"
       ],
       "sources": [
-        "Space.com"
+        "Phys.org Technology",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Watch 2 astronauts replace failed ISS antenna during spacewalk today",
-      "wp_id": 29205
+      "title": "US state probes OpenAI over rogue AI hack",
+      "wp_id": 29211
     }
   ],
   "state": "published"
