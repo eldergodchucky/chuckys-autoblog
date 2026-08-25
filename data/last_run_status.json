@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2753,
-  "finished_at": "2026-08-25T17:34:29.028588+00:00",
-  "inserted": 24,
+  "fetched": 2774,
+  "finished_at": "2026-08-25T18:05:21.025868+00:00",
+  "inserted": 33,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Mucus-coated tumor spheres reveal potential targets to curb colorectal cancer spread",
-      "wp_id": 29376
+      "title": "On this day in space! Aug. 25",
+      "wp_id": 29378
     }
   ],
   "state": "published"
