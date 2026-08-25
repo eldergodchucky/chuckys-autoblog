@@ -3,20 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2770,
-  "finished_at": "2026-08-25T05:18:15.990781+00:00",
-  "inserted": 1,
+  "finished_at": "2026-08-25T05:59:01.707211+00:00",
+  "inserted": 5,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "health",
+        "ai"
       ],
       "sources": [
-        "Space.com"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Pluto losing its planet status may be the best thing that ever",
-      "wp_id": 29191
+      "title": "Who does AI consider an expert? New benchmark shows bias across 22",
+      "wp_id": 29196
     }
   ],
   "state": "published"
