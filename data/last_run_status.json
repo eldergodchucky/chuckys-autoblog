@@ -1,22 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 7,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2455,
-  "finished_at": "2026-08-15T02:49:56.296747+00:00",
-  "inserted": 314,
+  "fetched": 2770,
+  "finished_at": "2026-08-25T03:50:18.288961+00:00",
+  "inserted": 1140,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "apple",
+        "software"
       ],
       "sources": [
-        "Space.com"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Will the new moon race turn Earth's nearest neighbor into a dumping",
-      "wp_id": 23429
+      "title": "New public betas now available for iOS 27",
+      "wp_id": 29182
     }
   ],
   "state": "published"
