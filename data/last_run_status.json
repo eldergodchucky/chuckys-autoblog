@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2771,
-  "finished_at": "2026-08-25T11:28:54.881477+00:00",
-  "inserted": 24,
+  "finished_at": "2026-08-25T11:57:39.414276+00:00",
+  "inserted": 9,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "ai",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "NASA-Supported Study Tracks Carbon Cost of Coastal Erosion",
-      "wp_id": 29219
+      "title": "From X-ray speckles to solar magnetic fields",
+      "wp_id": 29221
     }
   ],
   "state": "published"
