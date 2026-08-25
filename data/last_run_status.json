@@ -3,21 +3,21 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2771,
-  "finished_at": "2026-08-25T10:51:21.226914+00:00",
-  "inserted": 7,
+  "finished_at": "2026-08-25T11:28:54.881477+00:00",
+  "inserted": 24,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "T Cells Have a Hidden Ability Scientists Never Knew Existed",
-      "wp_id": 29217
+      "title": "NASA-Supported Study Tracks Carbon Cost of Coastal Erosion",
+      "wp_id": 29219
     }
   ],
   "state": "published"
