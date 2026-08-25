@@ -1,23 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-25T20:02:58.571975+00:00",
-  "inserted": 15,
+  "finished_at": "2026-08-25T20:47:35.832345+00:00",
+  "inserted": 26,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "software"
       ],
       "sources": [
-        "NASA Science"
+        "9to5Mac",
+        "Android Authority News",
+        "Engadget",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "NASA Ames Experts Available for Roman Space Telescope Interviews",
-      "wp_id": 29396
+      "title": "Claude Cowork will now remember your conversations with chat",
+      "wp_id": 29399
     }
   ],
   "state": "published"
