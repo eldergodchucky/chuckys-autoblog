@@ -1,24 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2770,
-  "finished_at": "2026-08-25T04:39:54.838472+00:00",
-  "inserted": 7,
+  "finished_at": "2026-08-25T05:18:15.990781+00:00",
+  "inserted": 1,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "security",
-        "gadgets"
+        "space"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Spy-device detector users miss nearly 60% of hidden gadgets",
-      "wp_id": 29187
+      "title": "Pluto losing its planet status may be the best thing that ever",
+      "wp_id": 29191
     }
   ],
   "state": "published"
