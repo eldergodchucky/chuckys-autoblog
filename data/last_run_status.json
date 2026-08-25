@@ -3,21 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2770,
-  "finished_at": "2026-08-25T05:59:01.707211+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-25T07:00:24.745903+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "ai"
+        "science"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Who does AI consider an expert? New benchmark shows bias across 22",
-      "wp_id": 29196
+      "title": "New study reveals how space rocks become meteorites",
+      "wp_id": 29200
     }
   ],
   "state": "published"
