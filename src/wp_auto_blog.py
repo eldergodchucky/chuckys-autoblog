@@ -5161,6 +5161,13 @@ def publish_to_wordpress(article: dict[str, Any]) -> dict[str, Any]:
 
     }
 
+    # WordPress.com Publicize reads the per-post share text from post meta; the
+    # top-level publicize_message param is not honored by the REST API, so the
+    # title-only message is stored as meta here as well. This pins every
+    # auto-share (Bluesky/X/Tumblr) to the headline and nothing else, instead of
+    # relying on Jetpack's excerpt-based fallback.
+    payload["meta"] = {"jetpack_publicize_message": clean_text(str(article.get("title", "Generated post")), max_len=280)}
+
     category_ids = wp_term_ids("category", [str(v) for v in article.get("categories", [])])
 
     tag_ids = wp_term_ids("tag", [str(v) for v in article.get("tags", [])])
