@@ -2,22 +2,23 @@
   "dry_run": false,
   "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2772,
-  "finished_at": "2026-08-25T15:30:10.411823+00:00",
-  "inserted": 36,
+  "fetched": 2773,
+  "finished_at": "2026-08-25T16:12:03.539105+00:00",
+  "inserted": 27,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple"
+        "apple",
+        "software"
       ],
       "sources": [
         "9to5Mac",
         "MacRumors"
       ],
       "status": "publish",
-      "title": "Apple Debuts M5 Ultra as Most Powerful Chip Ever",
-      "wp_id": 29368
+      "title": "Apple releases new Magic Keyboards with one notable change",
+      "wp_id": 29370
     }
   ],
   "state": "published"
