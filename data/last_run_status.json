@@ -1,25 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2770,
-  "finished_at": "2026-08-25T03:50:18.288961+00:00",
-  "inserted": 1140,
+  "finished_at": "2026-08-25T04:39:54.838472+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "apple",
-        "software"
+        "science",
+        "security",
+        "gadgets"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "New public betas now available for iOS 27",
-      "wp_id": 29182
+      "title": "Spy-device detector users miss nearly 60% of hidden gadgets",
+      "wp_id": 29187
     }
   ],
   "state": "published"
