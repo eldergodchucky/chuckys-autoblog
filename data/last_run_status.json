@@ -1,25 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2775,
-  "finished_at": "2026-08-26T10:19:29.176848+00:00",
-  "inserted": 12,
+  "finished_at": "2026-08-26T11:02:51.522073+00:00",
+  "inserted": 22,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "phones",
         "software"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Here are all the Apple devices with full Wi-Fi 7 support",
-      "wp_id": 29460
+      "title": "Social media use on the rise among Australian under-16s after ban: Data",
+      "wp_id": 29462
     }
   ],
   "state": "published"
