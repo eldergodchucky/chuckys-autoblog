@@ -1,23 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2724,
-  "finished_at": "2026-08-26T09:42:21.539903+00:00",
-  "inserted": 24,
+  "fetched": 2775,
+  "finished_at": "2026-08-26T10:19:29.176848+00:00",
+  "inserted": 12,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "apple",
+        "phones",
+        "software"
       ],
       "sources": [
-        "NASA Science"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "NASA Ames\u2019 Contributions to Roman\u2019s Mission",
-      "wp_id": 29458
+      "title": "Here are all the Apple devices with full Wi-Fi 7 support",
+      "wp_id": 29460
     }
   ],
   "state": "published"
