@@ -3,22 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2775,
-  "finished_at": "2026-08-26T14:28:12.752929+00:00",
-  "inserted": 52,
+  "finished_at": "2026-08-26T16:02:31.247435+00:00",
+  "inserted": 83,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "phones",
-        "science",
-        "security"
+        "health",
+        "apple"
       ],
       "sources": [
-        "Phys.org Technology"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Using light to distinguish real from fake with hard-to-replicate 'artificial fingerprints'",
-      "wp_id": 29536
+      "title": "Apple upgrading recent Mac mini orders to M6",
+      "wp_id": 29542
     }
   ],
   "state": "published"
