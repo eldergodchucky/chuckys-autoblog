@@ -4351,7 +4351,9 @@ FEED_JUNK_PATTERNS = tuple(
         r"\b(?:all products|some products) featured\b[^.]*\.?",
         r"^general technology\s+",
         r"^technology news\s+",
-        r"^latest\\s*news\\s+",
+        r"^latest news\s+",
+        r"\bskip to (?:main )?content\b.*?",
+        r"\bsubscribe to read\b.*?",
     )
 )
 
@@ -4508,6 +4510,8 @@ BARE_PUBLICATION_NAMES = (
     "ScienceDaily",
     "Interesting Engineering",
     "Study Finds",
+    "MIT Technology Review",
+    "Technology Review",
 )
 
 
@@ -4664,6 +4668,36 @@ def rephrase_sentence(sentence: str) -> str:
     return clean_fact_sentence(sentence)
 
 
+JS_JSON_FACT_MARKERS = re.compile(
+    r"(?i)("
+    r"window\.\w+"
+    r"|\b__\w+__"
+    r"|\{\""
+    r"|\"\s*:\s*[\{\[\"]"
+    r"|\bfunction\s*\("
+    r"|\bvar\s+\w+\s*="
+    r"|=>"
+    r"|\bsrc=\w"
+    r"|\.(?:js|css|json)\b"
+    r"|\b(?:piano|gtm|analytics|tag manager|preloaded state|componentdata)\b"
+    r")"
+)
+
+
+def sanitize_page_html(html_text: str) -> str:
+    """Remove scripts/styles and any truncated dangling tag tails before text extraction."""
+    html_text = re.sub(r"(?is)<(script|style|nav|footer|header|aside|form|noscript|svg|iframe)\b.*?</\1\s*>", " ", html_text)
+    # A truncated read can leave one final block open; trim only if the last
+    # opening tag never closes, so normal pages keep their body text intact.
+    lowered = html_text.lower()
+    for tag in ("<script", "<style"):
+        last_open = lowered.rfind(tag)
+        if last_open != -1 and lowered.find(f"</{tag[1:]}", last_open) == -1:
+            html_text = html_text[:last_open]
+            lowered = html_text.lower()
+    return html_text
+
+
 def fetch_article_facts(url: str, max_chars: int = 6000) -> list[str]:
     """Download a source page and return cleaned fact sentences from its main text."""
     if not url or not url.startswith(("http://", "https://")):
@@ -4676,16 +4710,20 @@ def fetch_article_facts(url: str, max_chars: int = 6000) -> list[str]:
         timeout = env_int("REQUEST_TIMEOUT_SECONDS", 25)
         with urllib.request.urlopen(request, timeout=timeout) as response:
             charset = response.headers.get_content_charset() or "utf-8"
-            html_text = response.read(300_000).decode(charset, errors="replace")
+            html_text = response.read(600_000).decode(charset, errors="replace")
     except Exception:
         return []
-    html_text = re.sub(r"(?is)<(script|style|nav|footer|header|aside|form|noscript)\b.*?</\1>", " ", html_text)
+    # Extract the article region first so page-wide script clusters cannot
+    # trigger the dangling-tag tail trim on the whole document.
     match = re.search(r"(?is)<article\b[^>]*>(.*?)</article>", html_text)
-    body = match.group(1) if match else html_text
-    text = re.sub(r"(?is)<[^>]+>", " ", body)
+    if match and len(match.group(1)) > 500:
+        html_text = match.group(1)
+    html_text = sanitize_page_html(html_text)
+    text = re.sub(r"(?is)<[^>]+>", " ", html_text)
     text = html.unescape(text)
     text = re.sub(r"\s+", " ", text)
-    return fact_sentences(text, min_len=45)[:8]
+    facts = fact_sentences(text, min_len=45)
+    return [fact for fact in facts if not JS_JSON_FACT_MARKERS.search(fact)][:8]
 
 
 def enrich_cluster_facts(cluster: list[Item]) -> dict[str, list[str]]:
