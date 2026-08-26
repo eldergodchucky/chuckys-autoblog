@@ -1,22 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2725,
-  "finished_at": "2026-08-26T12:20:05.969121+00:00",
-  "inserted": 17,
+  "fetched": 2775,
+  "finished_at": "2026-08-26T13:35:49.014554+00:00",
+  "inserted": 52,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "health",
+        "ai",
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "How to watch the Aug. 27-28 partial lunar eclipse live online",
-      "wp_id": 29466
+      "title": "Fundus images predict risk of hypertension and other systemic diseases",
+      "wp_id": 29530
     }
   ],
   "state": "published"
