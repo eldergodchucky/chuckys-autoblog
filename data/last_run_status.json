@@ -3,8 +3,8 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-26T03:55:17.617405+00:00",
-  "inserted": 6,
+  "finished_at": "2026-08-26T04:41:05.021181+00:00",
+  "inserted": 9,
   "message": "Published 1 post(s).",
   "posts": [
     {
@@ -14,13 +14,12 @@
         "software"
       ],
       "sources": [
-        "Engadget",
-        "TechCrunch",
-        "The Verge"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Instagram\u2019s \u2018First Draft\u2019 trims your Reels clips",
-      "wp_id": 29429
+      "title": "Apple Maps launches ads on iPhone",
+      "wp_id": 29433
     }
   ],
   "state": "published"
