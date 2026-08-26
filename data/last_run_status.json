@@ -3,21 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-26T08:00:56.723362+00:00",
-  "inserted": 11,
+  "finished_at": "2026-08-26T08:56:33.213849+00:00",
+  "inserted": 10,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "health",
+        "ai",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "MIT Technology Review"
       ],
       "status": "publish",
-      "title": "NASA\u2019s Pandora Mission Begins Study of Exoplanets",
-      "wp_id": 29449
+      "title": "Your brain on AI",
+      "wp_id": 29454
     }
   ],
   "state": "published"
