@@ -1,23 +1,22 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2775,
-  "finished_at": "2026-08-26T11:46:31.309451+00:00",
-  "inserted": 18,
+  "fetched": 2725,
+  "finished_at": "2026-08-26T12:20:05.969121+00:00",
+  "inserted": 17,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "security"
+        "space"
       ],
       "sources": [
-        "MIT Technology Review"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "A new stamp on cyberfraud prevention",
-      "wp_id": 29464
+      "title": "How to watch the Aug. 27-28 partial lunar eclipse live online",
+      "wp_id": 29466
     }
   ],
   "state": "published"
