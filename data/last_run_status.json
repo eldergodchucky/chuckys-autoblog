@@ -1,23 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-26T07:04:09.835878+00:00",
-  "inserted": 5,
+  "finished_at": "2026-08-26T08:00:56.723362+00:00",
+  "inserted": 11,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "Medical Xpress"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Mucus-coated tumor spheres reveal potential targets to curb colorectal cancer spread",
-      "wp_id": 29446
+      "title": "NASA\u2019s Pandora Mission Begins Study of Exoplanets",
+      "wp_id": 29449
     }
   ],
   "state": "published"
