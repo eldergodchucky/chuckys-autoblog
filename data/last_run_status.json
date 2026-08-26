@@ -1,22 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-25T23:53:48.905723+00:00",
-  "inserted": 4,
+  "finished_at": "2026-08-26T01:20:14.017624+00:00",
+  "inserted": 12,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "ai",
         "space"
       ],
       "sources": [
-        "NASA Technology"
+        "BBC Science & Environment",
+        "Engadget",
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "New Next-Gen Dish Adds Muscle to NASA\u2019s Deep Space Network",
-      "wp_id": 29414
+      "title": "Musk's SpaceX to build $100bn launch facility in Louisiana",
+      "wp_id": 29418
     }
   ],
   "state": "published"
