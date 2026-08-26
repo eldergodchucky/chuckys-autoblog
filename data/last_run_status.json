@@ -1,22 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2775,
-  "finished_at": "2026-08-26T11:02:51.522073+00:00",
-  "inserted": 22,
+  "finished_at": "2026-08-26T11:46:31.309451+00:00",
+  "inserted": 18,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "software"
+        "science",
+        "security"
       ],
       "sources": [
-        "Phys.org Technology"
+        "MIT Technology Review"
       ],
       "status": "publish",
-      "title": "Social media use on the rise among Australian under-16s after ban: Data",
-      "wp_id": 29462
+      "title": "A new stamp on cyberfraud prevention",
+      "wp_id": 29464
     }
   ],
   "state": "published"
