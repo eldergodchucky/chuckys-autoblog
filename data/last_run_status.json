@@ -1,22 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2775,
-  "finished_at": "2026-08-26T17:00:51.318524+00:00",
-  "inserted": 50,
+  "fetched": 2777,
+  "finished_at": "2026-08-26T19:13:36.106808+00:00",
+  "inserted": 99,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "phones",
+        "space"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Motor neurons choreograph fruit fly feeding in millisecond-by-millisecond sequence",
-      "wp_id": 29548
+      "title": "Chance gaze at old Hubble Telescope image leads to discovery that could",
+      "wp_id": 29567
     }
   ],
   "state": "published"
