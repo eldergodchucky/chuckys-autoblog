@@ -3,22 +3,24 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-26T02:49:05.086334+00:00",
-  "inserted": 11,
+  "finished_at": "2026-08-26T03:55:17.617405+00:00",
+  "inserted": 6,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "science"
+        "apple",
+        "phones",
+        "software"
       ],
       "sources": [
-        "Adafruit Blog",
-        "Phys.org Technology"
+        "Engadget",
+        "TechCrunch",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Humanoid robot breaks 100-meter mark with 8.86-second sprint in Beijing",
-      "wp_id": 29424
+      "title": "Instagram\u2019s \u2018First Draft\u2019 trims your Reels clips",
+      "wp_id": 29429
     }
   ],
   "state": "published"
