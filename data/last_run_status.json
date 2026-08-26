@@ -3,22 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2775,
-  "finished_at": "2026-08-26T16:02:31.247435+00:00",
-  "inserted": 83,
+  "finished_at": "2026-08-26T17:00:51.318524+00:00",
+  "inserted": 50,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "apple"
+        "science"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Apple upgrading recent Mac mini orders to M6",
-      "wp_id": 29542
+      "title": "Motor neurons choreograph fruit fly feeding in millisecond-by-millisecond sequence",
+      "wp_id": 29548
     }
   ],
   "state": "published"
