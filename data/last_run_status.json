@@ -3,20 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-26T05:18:00.061318+00:00",
-  "inserted": 7,
+  "finished_at": "2026-08-26T06:01:21.920881+00:00",
+  "inserted": 4,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "software"
+        "health",
+        "science",
+        "security"
       ],
       "sources": [
-        "Space.com"
+        "PsyPost"
       ],
       "status": "publish",
-      "title": "'Aliens: The Video Games' author Mike Diver on overlooked Alien games",
-      "wp_id": 29436
+      "title": "Workplace violence and insecurity might make psychiatric staff more accepting of coercion",
+      "wp_id": 29440
     }
   ],
   "state": "published"
