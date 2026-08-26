@@ -2,22 +2,23 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2777,
-  "finished_at": "2026-08-26T19:13:36.106808+00:00",
-  "inserted": 99,
+  "fetched": 2728,
+  "finished_at": "2026-08-26T22:12:22.456403+00:00",
+  "inserted": 98,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "apple",
         "phones",
-        "space"
+        "science"
       ],
       "sources": [
-        "Space.com"
+        "9to5Mac iPhone"
       ],
       "status": "publish",
-      "title": "Chance gaze at old Hubble Telescope image leads to discovery that could",
-      "wp_id": 29567
+      "title": "Counterpoint: iPhone 17 topped worldwide smartphone sales during Q2",
+      "wp_id": 29585
     }
   ],
   "state": "published"
