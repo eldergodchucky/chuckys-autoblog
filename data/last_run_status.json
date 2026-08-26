@@ -3,22 +3,22 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2775,
-  "finished_at": "2026-08-26T13:35:49.014554+00:00",
+  "finished_at": "2026-08-26T14:28:12.752929+00:00",
   "inserted": 52,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "ai",
-        "science"
+        "phones",
+        "science",
+        "security"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Fundus images predict risk of hypertension and other systemic diseases",
-      "wp_id": 29530
+      "title": "Using light to distinguish real from fake with hard-to-replicate 'artificial fingerprints'",
+      "wp_id": 29536
     }
   ],
   "state": "published"
