@@ -3,23 +3,20 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-26T04:41:05.021181+00:00",
-  "inserted": 9,
+  "finished_at": "2026-08-26T05:18:00.061318+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "phones",
         "software"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Space.com"
       ],
       "status": "publish",
-      "title": "Apple Maps launches ads on iPhone",
-      "wp_id": 29433
+      "title": "'Aliens: The Video Games' author Mike Diver on overlooked Alien games",
+      "wp_id": 29436
     }
   ],
   "state": "published"
