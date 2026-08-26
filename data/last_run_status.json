@@ -1,25 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2774,
-  "finished_at": "2026-08-26T01:20:14.017624+00:00",
-  "inserted": 12,
+  "finished_at": "2026-08-26T02:49:05.086334+00:00",
+  "inserted": 11,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "space"
+        "gadgets",
+        "science"
       ],
       "sources": [
-        "BBC Science & Environment",
-        "Engadget",
-        "Phys.org Space"
+        "Adafruit Blog",
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Musk's SpaceX to build $100bn launch facility in Louisiana",
-      "wp_id": 29418
+      "title": "Humanoid robot breaks 100-meter mark with 8.86-second sprint in Beijing",
+      "wp_id": 29424
     }
   ],
   "state": "published"
