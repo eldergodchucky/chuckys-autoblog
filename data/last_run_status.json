@@ -3,22 +3,23 @@
   "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2779,
-  "finished_at": "2026-08-27T14:29:17.829510+00:00",
-  "inserted": 256,
+  "finished_at": "2026-08-27T23:55:27.416892+00:00",
+  "inserted": 257,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "ai",
-        "software"
+        "software",
+        "gadgets"
       ],
       "sources": [
-        "9to5Mac",
+        "Engadget",
         "The Verge"
       ],
       "status": "publish",
-      "title": "Adobe is adding more AI to Photoshop",
-      "wp_id": 29680
+      "title": "Meta is closing a loophole that allowed people to record with their",
+      "wp_id": 29704
     }
   ],
   "state": "published"
