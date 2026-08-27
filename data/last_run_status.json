@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 1,
   "feeds": 59,
-  "fetched": 2728,
-  "finished_at": "2026-08-26T22:12:22.456403+00:00",
-  "inserted": 98,
+  "fetched": 2779,
+  "finished_at": "2026-08-27T03:20:45.272752+00:00",
+  "inserted": 42,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "apple",
-        "phones",
-        "science"
+        "software"
       ],
       "sources": [
-        "9to5Mac iPhone"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Counterpoint: iPhone 17 topped worldwide smartphone sales during Q2",
-      "wp_id": 29585
+      "title": "Astropad\u2019s new Rock Paper Pencil 4 adds a graphite feel to Apple",
+      "wp_id": 29616
     }
   ],
   "state": "published"
