@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 1,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2779,
-  "finished_at": "2026-08-27T03:20:45.272752+00:00",
-  "inserted": 42,
+  "finished_at": "2026-08-27T14:29:17.829510+00:00",
+  "inserted": 256,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
+        "ai",
         "software"
       ],
       "sources": [
         "9to5Mac",
-        "MacRumors"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Astropad\u2019s new Rock Paper Pencil 4 adds a graphite feel to Apple",
-      "wp_id": 29616
+      "title": "Adobe is adding more AI to Photoshop",
+      "wp_id": 29680
     }
   ],
   "state": "published"
