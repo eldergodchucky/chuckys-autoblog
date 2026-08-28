@@ -4354,6 +4354,14 @@ FEED_JUNK_PATTERNS = tuple(
         r"^latest news\s+",
         r"\bskip to (?:main )?content\b.*?",
         r"\bsubscribe to read\b.*?",
+        r"\|\s*(?:science news(?: from research organizations)?|sciencedaily|newswise|eurekalert|phys\.org|science daily)\b[\s\S]*?",
+        r"\bshare:\s*(?:facebook|twitter|pinterest|linkedin?|linkedin|email|reddit|whatsapp|telegram|messenger|more?)\b[\s\S]*?",
+        r"\bfull story\b[^.]*\.?",
+        r"\b(?:image|photo|credit|image credit|photo credit)\s*:\s*[^.]*\.?",
+        r"\bcredit:\s*[^.]*\.?",
+        r"\bprovided by\b[^.]*\.?",
+        r"\bsource:\s*[^.]*\.?",
+        r"\bemail\b\s*$",
     )
 )
 
@@ -4663,6 +4671,32 @@ def fact_sentences(text: str, min_len: int = 20) -> list[str]:
     return out
 
 
+# Multi-clause junk that can hide inside one period-delimited sentence
+# (feed headers, share bars, captions echo the title). Stripped across the
+# whole text before it is split into sentences, because a single split
+# sentence can otherwise swallow several of these spans.
+JUNK_SPAN_PATTERNS = tuple(
+    re.compile(pattern, re.IGNORECASE)
+    for pattern in (
+        r"\|\s*(?:science news(?: from research organizations)?|sciencedaily|newswise|eurekalert|phys\.org)\b[\s\S]*",
+        r"\bshare:\s*(?:facebook|twitter|pinterest|linkedin|email|reddit|whatsapp|telegram|messenger|more)[^.]*\.?",
+        r"\bfull story\b[^.]*\.?",
+        r"\b(?:image|photo|caption|credit|image credit|photo credit)\s*:\s*[^.]*\.?",
+        r"\bprovided by\b[^.]*\.?",
+        r"\bsource:\s*[^.]*\.?",
+    )
+)
+
+
+def scrub_junk_spans(text: str) -> str:
+    """Strip multi-clause junk/footer spans from raw text before sentenceization."""
+    s = text or ""
+    for pattern in JUNK_SPAN_PATTERNS:
+        s = pattern.sub(" ", s)
+    s = re.sub(r"\s{2,}", " ", s)
+    return s.strip(" \t-,;:•")
+
+
 def rephrase_sentence(sentence: str) -> str:
     """Backwards-compatible wrapper around the fact cleaner."""
     return clean_fact_sentence(sentence)
@@ -4722,6 +4756,7 @@ def fetch_article_facts(url: str, max_chars: int = 6000) -> list[str]:
     text = re.sub(r"(?is)<[^>]+>", " ", html_text)
     text = html.unescape(text)
     text = re.sub(r"\s+", " ", text)
+    text = scrub_junk_spans(text)
     facts = fact_sentences(text, min_len=45)
     return [fact for fact in facts if not JS_JSON_FACT_MARKERS.search(fact)][:8]
 
@@ -4732,7 +4767,7 @@ def enrich_cluster_facts(cluster: list[Item]) -> dict[str, list[str]]:
     budget = env_int("ENRICH_MAX_ITEMS", 4)
     enriched = 0
     for item in cluster:
-        base = fact_sentences(item.summary or "")
+        base = fact_sentences(scrub_junk_spans(item.summary or ""))
         if len(item.title) > 30:
             title_fact = clean_fact_sentence(clean_text(item.title, max_len=160))
             if title_fact and title_fact.lower() not in {f.lower() for f in base}:
