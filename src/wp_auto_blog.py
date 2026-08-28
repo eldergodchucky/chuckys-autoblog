@@ -2010,6 +2010,198 @@ def compact_topic_from_title(title: str) -> str:
 
 
 
+# Verbs and markers that signal a dry, institutional press-release headline.
+# These topics read as "thing enhances some metric in some domain" and reward a
+# factual curiosity rewrite. Vivid source headlines (Hackaday, 9to5, etc.) do
+# not match these and are left untouched.
+DULL_TITLE_HINTS = (
+    "reduce", "reduces", "reduced", "improve", "improves", "improved",
+    "expand", "expands", "expanded", "boost", "boosted", "enhance",
+    "enhances", "enhanced", "increase", "increases", "increased", "help",
+    "helps", "helping", "study", "studies", "analysis", "analyses",
+    "investigate", "investigates", "evaluate", "evaluates", "assessment",
+    "findings", "finding", "researchers", "scientists discovered",
+    "new tool", "new method", "novel approach", "shows potential",
+    "demonstrates", "reveals", "initial results",
+)
+
+
+def _title_is_dull(topic: str) -> bool:
+    t = " " + topic.lower().strip(" .,:;!?") + " "
+    for hint in DULL_TITLE_HINTS:
+        if hint in t:
+            return True
+    return False
+
+
+def hook_title(cluster: list[Item], topic: str) -> str:
+    """Rewrite a dry press-release title into a factual, curiosity-driven hook.
+
+    Only fires when the flattened topic reads like an institutional headline
+    (generic verb, no vivid subject). Derives the hook exclusively from the
+    cluster's real, cleaned facts - never invented. Falls back to the original
+    topic whenever no confident factual angle can be found, so titles are never
+    wrong or clickbaity.
+    """
+    if not _title_is_dull(topic):
+        return topic
+
+    # Pull real, cleaned facts from the lead story to anchor the hook.
+    lead = cluster[0]
+    facts = fact_sentences(scrub_junk_spans(lead.summary or ""), 20)
+    if not facts:
+        facts = [clean_fact_sentence(clean_text(lead.title, max_len=170))]
+        facts = [f for f in facts if f]
+
+    # A concrete named subject makes the strongest factual hook.
+    subject = _concrete_subject(topic)
+    angle = _curiosity_angle(facts)
+
+    if angle:
+        # Front-load the surprising, concrete outcome; keep the subject.
+        hook = angle
+        if subject and subject.lower() not in hook.lower():
+            hook = f"{hook} - {subject}"
+    elif subject and subject.lower() != topic.lower():
+        # No strong angle, but a crisp subject worth front-loading.
+        tail = _trim_after_subject(topic, subject)
+        hook = f"{subject}{tail}" if tail else subject
+    else:
+        return topic
+
+    hook = _title_case_blog(hook)
+    words = hook.split()
+    if 4 <= len(words) <= 13:
+        return " ".join(words).strip(" .,:;!?-")
+    return topic
+
+
+_MAX_SUBJECT_MODIFIERS = 3
+
+
+WEAK_TAIL = {
+    "a", "an", "the", "and", "but", "or", "for", "nor", "of", "in", "on",
+    "to", "with", "at", "by", "that", "its", "their", "his", "her", "this",
+    "these", "those", "not", "so", "as",
+}
+
+
+def _concrete_subject(topic: str) -> str:
+    """Pull a short, nameable subject (company, product, model, substance) from the
+    start of a dry topic. Returns at most a few words; empty string if none."""
+    t = topic.strip(" .,:;!?")
+    norm = re.sub(r"\s+", " ", t).split()
+    if not norm:
+        return ""
+    # Find the first proper-noun token (capitalized) among the leading words.
+    for i, w in enumerate(norm):
+        if i >= 5:
+            break
+        core = w.strip(".,:;!?()'\"")
+        if core and core[0].isupper() and core.lower() not in STOPWORDS:
+            # Assemble the proper-noun phrase: original + capitalized modifiers/numbers.
+            phrase = norm[i:i + _MAX_SUBJECT_MODIFIERS]
+            return " ".join(phrase).strip(" ,:;()'\"")
+    return ""
+
+
+def _curiosity_angle(facts: list[str]) -> str:
+    """Find a concrete, surprising factual outcome worth leading with."""
+    for fact in facts:
+        low = fact.lower()
+        long_enough = len(fact.split()) >= 8
+        has_marker = any(m in low for m in (
+            "found that", "shown that", "could make", "may make",
+            "surprisingly", "unexpectedly", "for the first", "first time",
+            "even though", "despite", "turns out", "now that", "worked",
+            "managed to", "thanks to", "because",
+        ))
+        vivid_verb = any(m in low for m in (
+            "won", "burst", "shake", "switch", "turns", "rival", "beat",
+            "outperformed", "outpaced", "unlocked", "cracked", "pulled off",
+        ))
+        if (has_marker or vivid_verb) and long_enough:
+            return _derive_hook_from_fact(fact)
+    # Weaker but still factual: a specific figure/outcome.
+    for fact in facts:
+        if re.search(r"\d", fact) and len(fact.split()) >= 10:
+            return _derive_hook_from_fact(fact)
+    return ""
+
+
+def _derive_hook_from_fact(fact: str) -> str:
+    """Turn a cleaned factual sentence into a short human headline fragment.
+
+    Prefers the surprising contrast (the 'even though / despite' part) because
+    that is the true hook; otherwise strips the 'researchers found that'
+    preamble and trims to a clean thought.
+    """
+    s = fact.strip(" .")
+    s = re.sub(r"\s+", " ", s)
+    s = re.sub(r"(?i)^a (?:team|group|report|study|analysis)(?: of researchers)?\s+(?:from|at|of)\b[^,.]*[,.]?\s*", "", s)
+    s = re.sub(r"(?i)^(?:researchers|scientists|a team|the team|the researchers|the authors)\s+(?:found|discovered|showed|have found|have shown|report|say)\s+that\s+", "", s)
+    # Prefer the surprising contrast clause: <outcome>, even though <catch>
+    contrast_m = re.search(r"(?i)(even though|despite|though|but|because|even when|although)\s+", s)
+    if contrast_m:
+        lead = s[:contrast_m.start()].strip(" ,")
+        catch = s[contrast_m.start():].strip(" ,.")
+        lead_words = lead.split()
+        catch_words = catch.split()
+        while lead_words and lead_words[-1].rstrip(".,;:") in WEAK_TAIL:
+            lead_words.pop()
+        while catch_words and catch_words[-1].rstrip(".,;:") in ("a", "an", "the", "of", "in", "to", "with", "and", "for", "that", "new", "data", "same", "its", "their", "more"):
+            catch_words.pop()
+        if len(lead_words) > 8:
+            lead_words = lead_words[:8]
+        while lead_words and lead_words[-1].rstrip(".,;:") in ("a", "an", "the", "of", "in", "to", "with", "and", "for", "that"):
+            lead_words.pop()
+        if len(catch_words) > 6:
+            catch_words = catch_words[:6]
+        while catch_words and catch_words[-1].rstrip(".,;:") in ("a", "an", "the", "of", "in", "to", "with", "and", "for", "that", "new", "data", "same", "its", "their", "more"):
+            catch_words.pop()
+        lead = " ".join(lead_words).rstrip(" ,;:")
+        catch = " ".join(catch_words).strip(" ,;:")
+        hook = f"{lead}, {catch}"
+        if 5 <= len(hook.split()) <= 13:
+            return hook
+    # Otherwise keep one clean clause (<= 11 words, no dangling cut).
+    words = s.split()
+    if len(words) > 11:
+        words = words[:11]
+    while words and words[-1].rstrip(".,;:") in WEAK_TAIL:
+        words.pop()
+    head = " ".join(words).strip(" ,:;")
+    return head if head else s
+
+
+def _trim_after_subject(topic: str, subject: str) -> str:
+    """Keep what remains after the subject, trimmed to a sensible tail."""
+    idx = topic.lower().find(subject.lower())
+    if idx < 0:
+        return ""
+    rest = topic[idx + len(subject):].strip(" ,:;-")
+    rest = re.sub(r"\s+", " ", rest)
+    return rest[:60].strip(" ,:;-") if rest else ""
+
+
+def _title_case_blog(title: str) -> str:
+    """Light title casing tuned for a casual blog (keep small words lowercase,
+    preserve acronyms like AI/MRI/NASA)."""
+    small = {"a", "an", "the", "and", "but", "or", "for", "nor", "on", "at", "to", "of", "with", "in", "is", "are", "was", "were", "as", "by"}
+    words = title.split()
+    out = []
+    for i, w in enumerate(words):
+        core = w.strip(".,:;!?()'\"")
+        is_acronym = len(core) <= 5 and core.isupper() and core.isalpha()
+        if is_acronym:
+            out.append(w)
+        elif i == 0 or i == len(words) - 1 or w.lower() not in small:
+            out.append(w.capitalize())
+        else:
+            out.append(w)
+    return " ".join(out)
+
+
 def topic_from_cluster(cluster: list[Item]) -> str:
 
     candidates = [compact_topic_from_title(item.title) for item in cluster]
@@ -4996,7 +5188,7 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
     source_count = len({item.source_name for item in cluster})
 
-    title = topic
+    title = hook_title(cluster, topic)
 
     source_image_urls = source_image_candidates(cluster)
 
