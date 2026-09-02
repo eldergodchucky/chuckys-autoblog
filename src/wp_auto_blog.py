@@ -4990,10 +4990,16 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
     - No subheadings, no canned closing analysis, no "watch items".
     - Ends on the last concrete fact rather than a summary.
     """
+    if not cluster:
+        return ""
+
+    enriched_pools = enrich_cluster_facts(cluster)
     facts_by_item: list[tuple[Item, list[str]]] = []
-    for item, pool in enrich_cluster_facts(cluster).items():
-        facts_by_item.append((item, pool))
-    facts_by_item = [(item, facts) for item, facts in facts_by_item if facts]
+    for item in cluster:
+        pool = enriched_pools.get(item.uid, [])
+        if pool:
+            facts_by_item.append((item, pool))
+
     paragraphs: list[str] = []
     used: set[str] = set()
 
@@ -5028,18 +5034,20 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
             paragraphs.append("<p>" + html.escape(" ".join(sentences)) + "</p>")
 
     lead_item = cluster[0]
-    lede = take(facts_by_item[0][1], 3)
-    if not lede and facts_by_item:
+    lead_facts = facts_by_item[0][1] if facts_by_item else []
+    lede = take(lead_facts, 3)
+    if not lede:
         fallback_fact = clean_fact_sentence(clean_text(lead_item.title, max_len=160))
         if fallback_fact:
             used.add(fallback_fact.lower())
             lede = [fallback_fact]
     add_paragraph(lede)
 
-    # Deep dive on the lead story — pull 4 rounds to build a solid opening block
-    add_paragraph(take(facts_by_item[0][1], 3))
-    add_paragraph(take(facts_by_item[0][1], 3))
-    add_paragraph(take(facts_by_item[0][1], 3))
+    # Deep dive on the lead story — pull rounds to build a solid opening block
+    if lead_facts:
+        add_paragraph(take(lead_facts, 3))
+        add_paragraph(take(lead_facts, 3))
+        add_paragraph(take(lead_facts, 3))
 
     # Round-robin across the remaining sources so every angle gets covered.
     pools = [facts for _item, facts in facts_by_item[1:]]
@@ -5057,11 +5065,12 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
             break
 
     # Anything left over from the lead item closes out the piece.
-    while len(paragraphs) < max_paragraphs:
-        chunk = take(facts_by_item[0][1], 2)
-        if not chunk:
-            break
-        add_paragraph(chunk)
+    if lead_facts:
+        while len(paragraphs) < max_paragraphs:
+            chunk = take(lead_facts, 2)
+            if not chunk:
+                break
+            add_paragraph(chunk)
 
     # If we still have fewer than 6 paragraphs, pull from all pools again with
     # a more lenient pass — better a little repetition than a stub article.
@@ -5362,9 +5371,8 @@ def generate_article(cluster: list[Item]) -> dict[str, Any]:
 
                         article = retry_article
 
-                except Exception:
-
-                    pass
+                except Exception as retry_exc:
+                    print(f"OpenAI retry generation also failed ({type(retry_exc).__name__}: {str(retry_exc)[:150]}); using initial generation.")
 
             return article
 
