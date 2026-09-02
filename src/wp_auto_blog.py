@@ -4924,7 +4924,7 @@ def sanitize_page_html(html_text: str) -> str:
     return html_text
 
 
-def fetch_article_facts(url: str, max_chars: int = 6000) -> list[str]:
+def fetch_article_facts(url: str, max_chars: int = 12000) -> list[str]:
     """Download a source page and return cleaned fact sentences from its main text."""
     if not url or not url.startswith(("http://", "https://")):
         return []
@@ -4939,27 +4939,30 @@ def fetch_article_facts(url: str, max_chars: int = 6000) -> list[str]:
             html_text = response.read(600_000).decode(charset, errors="replace")
     except Exception:
         return []
-    # Extract the article region first so page-wide script clusters cannot
-    # trigger the dangling-tag tail trim on the whole document.
-    match = re.search(r"(?is)<article\b[^>]*>(.*?)</article>", html_text)
-    if match and len(match.group(1)) > 500:
-        html_text = match.group(1)
+    # Extract the article region — try <article> first, then <main>, then <section>
+    for tag in ("article", "main", "section"):
+        m = re.search(rf"(?is)<{tag}\b[^>]*>(.*?)</{tag}>", html_text)
+        if m and len(m.group(1)) > 500:
+            html_text = m.group(1)
+            break
     html_text = sanitize_page_html(html_text)
     text = re.sub(r"(?is)<[^>]+>", " ", html_text)
     text = html.unescape(text)
     text = re.sub(r"\s+", " ", text)
     text = scrub_junk_spans(text)
-    facts = fact_sentences(text, min_len=45)
-    return [fact for fact in facts if not JS_JSON_FACT_MARKERS.search(fact)][:8]
+    # Limit to max_chars of clean text before splitting into sentences
+    text = text[:max_chars]
+    facts = fact_sentences(text, min_len=30)
+    return [fact for fact in facts if not JS_JSON_FACT_MARKERS.search(fact)][:16]
 
 
 def enrich_cluster_facts(cluster: list[Item]) -> dict[str, list[str]]:
     """Extend each item's fact pool with facts pulled from its source page."""
     pools: dict[str, list[str]] = {}
-    budget = env_int("ENRICH_MAX_ITEMS", 4)
+    budget = env_int("ENRICH_MAX_ITEMS", 6)
     enriched = 0
     for item in cluster:
-        base = fact_sentences(scrub_junk_spans(item.summary or ""))
+        base = fact_sentences(scrub_junk_spans(item.summary or ""), min_len=18)
         if len(item.title) > 30:
             title_fact = clean_fact_sentence(clean_text(item.title, max_len=160))
             if title_fact and title_fact.lower() not in {f.lower() for f in base}:
@@ -5002,8 +5005,9 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
             existing_tokens = set(re.findall(r"[a-z0-9]{3,}", existing))
             if not existing_tokens:
                 continue
+            # Raised from 0.62 to 0.75 — allow more unique facts through
             overlap = len(tokens & existing_tokens) / max(len(tokens), len(existing_tokens))
-            if overlap >= 0.62:
+            if overlap >= 0.75:
                 return True
         return False
 
@@ -5032,13 +5036,14 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
             lede = [fallback_fact]
     add_paragraph(lede)
 
-    # Deep dive on the lead story before widening the lens.
+    # Deep dive on the lead story — pull 4 rounds to build a solid opening block
+    add_paragraph(take(facts_by_item[0][1], 3))
     add_paragraph(take(facts_by_item[0][1], 3))
     add_paragraph(take(facts_by_item[0][1], 3))
 
     # Round-robin across the remaining sources so every angle gets covered.
     pools = [facts for _item, facts in facts_by_item[1:]]
-    max_paragraphs = 14
+    max_paragraphs = 18
     while len(paragraphs) < max_paragraphs and any(pools):
         progressed = False
         for index, pool in enumerate(pools):
@@ -5057,6 +5062,20 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
         if not chunk:
             break
         add_paragraph(chunk)
+
+    # If we still have fewer than 6 paragraphs, pull from all pools again with
+    # a more lenient pass — better a little repetition than a stub article.
+    if len(paragraphs) < 6:
+        for _item, pool in facts_by_item:
+            for fact in pool:
+                key = fact.lower()
+                if key not in used and len(fact) >= 30:
+                    used.add(key)
+                    paragraphs.append("<p>" + html.escape(fact) + "</p>")
+                if len(paragraphs) >= 8:
+                    break
+            if len(paragraphs) >= 8:
+                break
 
     return "\n".join(paragraphs).strip()
 
