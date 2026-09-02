@@ -2,24 +2,22 @@
   "dry_run": false,
   "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2779,
-  "finished_at": "2026-08-27T23:55:27.416892+00:00",
-  "inserted": 257,
+  "fetched": 2789,
+  "finished_at": "2026-09-02T23:31:09.916738+00:00",
+  "inserted": 961,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "software",
         "gadgets"
       ],
       "sources": [
-        "Engadget",
-        "The Verge"
+        "Ars Technica Gadgets",
+        "Engadget"
       ],
       "status": "publish",
-      "title": "Meta is closing a loophole that allowed people to record with their",
-      "wp_id": 29704
+      "title": "US court rules Google will not have to sell ad exchange after",
+      "wp_id": 30403
     }
   ],
   "state": "published"
