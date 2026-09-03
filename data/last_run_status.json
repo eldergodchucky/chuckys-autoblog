@@ -1,23 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2789,
-  "finished_at": "2026-09-02T23:31:09.916738+00:00",
-  "inserted": 961,
+  "finished_at": "2026-09-03T01:24:49.665101+00:00",
+  "inserted": 7,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gadgets"
+        "ai",
+        "phones",
+        "software"
       ],
       "sources": [
-        "Ars Technica Gadgets",
-        "Engadget"
+        "TechCrunch",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "US court rules Google will not have to sell ad exchange after",
-      "wp_id": 30403
+      "title": "Amazon\u2019s AI assistant can now spot fake emails from the company",
+      "wp_id": 30410
     }
   ],
   "state": "published"
