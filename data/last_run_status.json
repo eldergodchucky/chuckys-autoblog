@@ -1,23 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
-  "fetched": 2780,
-  "finished_at": "2026-09-03T15:08:25.235475+00:00",
-  "inserted": 160,
+  "fetched": 2792,
+  "finished_at": "2026-09-03T18:40:57.579240+00:00",
+  "inserted": 169,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "security"
+        "health",
+        "science",
+        "gadgets"
       ],
       "sources": [
         "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "AI agents can now remember and hackers can 'poison' their memories\u2014a new",
-      "wp_id": 30454
+      "title": "Your smartwatch may not be as smart as you think",
+      "wp_id": 30464
     }
   ],
   "state": "published"
