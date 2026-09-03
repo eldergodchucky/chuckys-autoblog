@@ -1,24 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2792,
-  "finished_at": "2026-09-03T18:40:57.579240+00:00",
-  "inserted": 169,
+  "fetched": 2787,
+  "finished_at": "2026-09-03T21:23:16.592190+00:00",
+  "inserted": 92,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "health",
-        "science",
-        "gadgets"
+        "science"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Your smartwatch may not be as smart as you think",
-      "wp_id": 30464
+      "title": "Psilocybin prevents chemotherapy-related nerve injury and associated symptoms in preclinical models",
+      "wp_id": 30473
     }
   ],
   "state": "published"
