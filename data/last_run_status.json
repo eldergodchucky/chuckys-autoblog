@@ -2,22 +2,22 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2787,
-  "finished_at": "2026-09-03T21:23:16.592190+00:00",
-  "inserted": 92,
+  "fetched": 2788,
+  "finished_at": "2026-09-03T23:27:13.128268+00:00",
+  "inserted": 52,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Psilocybin prevents chemotherapy-related nerve injury and associated symptoms in preclinical models",
-      "wp_id": 30473
+      "title": "ROSES-25 D.4 Theoretical and Computational Astrophysics Networks",
+      "wp_id": 30478
     }
   ],
   "state": "published"
