@@ -1,25 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 2,
   "feeds": 59,
   "fetched": 2789,
-  "finished_at": "2026-09-03T01:24:49.665101+00:00",
-  "inserted": 7,
+  "finished_at": "2026-09-03T06:14:41.426578+00:00",
+  "inserted": 29,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "phones",
-        "software"
+        "science",
+        "gadgets"
       ],
       "sources": [
-        "TechCrunch",
-        "The Verge"
+        "Adafruit Blog"
       ],
       "status": "publish",
-      "title": "Amazon\u2019s AI assistant can now spot fake emails from the company",
-      "wp_id": 30410
+      "title": "The WT | Wearable Tech Conference is Happening this Month",
+      "wp_id": 30426
     }
   ],
   "state": "published"
