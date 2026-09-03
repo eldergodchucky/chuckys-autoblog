@@ -1,23 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 2,
+  "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2789,
-  "finished_at": "2026-09-03T06:14:41.426578+00:00",
-  "inserted": 29,
+  "fetched": 2790,
+  "finished_at": "2026-09-03T11:21:56.633717+00:00",
+  "inserted": 120,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "gadgets"
+        "space",
+        "science"
       ],
       "sources": [
-        "Adafruit Blog"
+        "Phys.org Space",
+        "Space.com"
       ],
       "status": "publish",
-      "title": "The WT | Wearable Tech Conference is Happening this Month",
-      "wp_id": 30426
+      "title": "Hubble tracks new decagon encircling Saturn's south pole",
+      "wp_id": 30440
     }
   ],
   "state": "published"
