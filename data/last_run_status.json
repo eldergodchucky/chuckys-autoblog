@@ -2,23 +2,22 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 59,
-  "fetched": 2790,
-  "finished_at": "2026-09-03T11:21:56.633717+00:00",
-  "inserted": 120,
+  "fetched": 2780,
+  "finished_at": "2026-09-03T15:08:25.235475+00:00",
+  "inserted": 160,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "security"
       ],
       "sources": [
-        "Phys.org Space",
-        "Space.com"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Hubble tracks new decagon encircling Saturn's south pole",
-      "wp_id": 30440
+      "title": "AI agents can now remember and hackers can 'poison' their memories\u2014a new",
+      "wp_id": 30454
     }
   ],
   "state": "published"
