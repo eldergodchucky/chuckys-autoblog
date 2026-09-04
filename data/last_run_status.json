@@ -3,21 +3,23 @@
   "feed_warnings": 3,
   "feeds": 59,
   "fetched": 2788,
-  "finished_at": "2026-09-03T23:27:13.128268+00:00",
-  "inserted": 52,
+  "finished_at": "2026-09-04T01:12:19.810073+00:00",
+  "inserted": 13,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "software"
       ],
       "sources": [
-        "NASA Science"
+        "Android Authority News",
+        "Engadget",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "ROSES-25 D.4 Theoretical and Computational Astrophysics Networks",
-      "wp_id": 30478
+      "title": "OpenAI launches Astra, its powerful (and controversial) new model",
+      "wp_id": 30485
     }
   ],
   "state": "published"
