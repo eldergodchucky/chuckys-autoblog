@@ -3,23 +3,23 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2818,
-  "finished_at": "2026-09-04T20:23:19.060452+00:00",
+  "finished_at": "2026-09-04T22:29:26.489257+00:00",
   "generation_failures": [],
-  "inserted": 72,
+  "inserted": 26,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "security"
+        "gadgets",
+        "tech"
       ],
       "sources": [
-        "TechCrunch",
+        "Engadget",
         "The Verge"
       ],
       "status": "publish",
-      "title": "Oh good, looks like yet another swarm of rogue AI agents",
-      "wp_id": 30545
+      "title": "The White House is making arcade games racist",
+      "wp_id": 30551
     }
   ],
   "state": "published"
