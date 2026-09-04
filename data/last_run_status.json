@@ -3,27 +3,23 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2818,
-  "finished_at": "2026-09-04T17:50:48.786208+00:00",
-  "generation_failures": [
-    "Skipped candidate 'PESTO Portfolio': Free article failed quality gate: article has only 181 words; article has only 4 paragraphs",
-    "Skipped candidate 'Stars forge and deliver the elements that make up your body \u2014 and scientists may finally know how': Free article failed quality gate: article has only 143 words; article has only 4 paragraphs",
-    "Skipped candidate 'Hubble Telescope sees spectacular 'superbubble' | Space photo of the day for Sept. 4, 2026': Free article failed quality gate: article has only 146 words; article has only 5 paragraphs",
-    "Skipped candidate 'How did the infant sun form? Scientists get surprising new insights from 4.6-billion-year-old space dust': Free article failed quality gate: article has only 159 words; article has only 5 paragraphs; 2 repeated sentence(s)"
-  ],
-  "inserted": 117,
-  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
+  "finished_at": "2026-09-04T20:23:19.060452+00:00",
+  "generation_failures": [],
+  "inserted": 72,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "security"
       ],
       "sources": [
-        "NASA Science"
+        "TechCrunch",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "NASA PICASSO Awards",
-      "wp_id": 30536
+      "title": "Oh good, looks like yet another swarm of rogue AI agents",
+      "wp_id": 30545
     }
   ],
   "state": "published"
