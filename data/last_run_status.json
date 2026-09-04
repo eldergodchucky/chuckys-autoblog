@@ -1,25 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 4,
   "feeds": 62,
   "fetched": 2818,
-  "finished_at": "2026-09-04T10:46:25.388981+00:00",
+  "finished_at": "2026-09-04T14:35:48.149632+00:00",
   "generation_failures": [],
-  "inserted": 64,
+  "inserted": 137,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "apple",
-        "software"
+        "history"
       ],
       "sources": [
-        "Phys.org Technology"
+        "BBC Science & Environment"
       ],
       "status": "publish",
-      "title": "Apple faces \u00a32 billion lawsuit in UK over app privacy feature",
-      "wp_id": 30513
+      "title": "Is a whale fossil the leftovers of a Bronze Age Sunday roast?",
+      "wp_id": 30524
     }
   ],
   "state": "published"
