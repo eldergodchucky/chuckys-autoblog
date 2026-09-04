@@ -1,25 +1,24 @@
 {
   "dry_run": false,
   "feed_warnings": 3,
-  "feeds": 59,
-  "fetched": 2788,
-  "finished_at": "2026-09-04T01:12:19.810073+00:00",
-  "inserted": 13,
+  "feeds": 62,
+  "fetched": 2818,
+  "finished_at": "2026-09-04T05:56:13.195664+00:00",
+  "generation_failures": [],
+  "inserted": 56,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "software"
+        "android",
+        "science"
       ],
       "sources": [
-        "Android Authority News",
-        "Engadget",
-        "TechCrunch"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "OpenAI launches Astra, its powerful (and controversial) new model",
-      "wp_id": 30485
+      "title": "Samsung\u2019s beloved Q Series sound system is hundreds off for Labor Day",
+      "wp_id": 30499
     }
   ],
   "state": "published"
