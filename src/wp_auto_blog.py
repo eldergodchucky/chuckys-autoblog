@@ -1414,6 +1414,8 @@ def category_weights() -> dict[str, int]:
 
             "health": 6,
 
+            "history": 5,
+
             "tech": 4,
 
         },
@@ -1430,7 +1432,7 @@ def category_rotation() -> list[str]:
 
         "CATEGORY_ROTATION",
 
-        "science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks,health",
+        "science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks,health,history",
 
     )
 
@@ -2939,6 +2941,8 @@ def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> li
         ("space", ("nasa", "mars", "moon", "galaxies", "seyfert", "exoplanet", "telescope", "astronomy", "astronomer", "astronomers", "spacecraft", "space station", "spacex", "rocket", "satellite")),
 
         ("science", ("study", "research", "scientists", "science", "researchers")),
+
+        ("history", ("history", "historical", "archaeology", "archaeological", "ancient", "civilization", "empire", "museum", "artifact", "fossil", "excavation")),
 
         ("software", ("app", "apps", "software", "update", "developer")),
 
@@ -4924,7 +4928,7 @@ def sanitize_page_html(html_text: str) -> str:
     return html_text
 
 
-def fetch_article_facts(url: str, max_chars: int = 12000) -> list[str]:
+def fetch_article_facts(url: str, max_chars: int = 24000) -> list[str]:
     """Download a source page and return cleaned fact sentences from its main text."""
     if not url or not url.startswith(("http://", "https://")):
         return []
@@ -4952,8 +4956,8 @@ def fetch_article_facts(url: str, max_chars: int = 12000) -> list[str]:
     text = scrub_junk_spans(text)
     # Limit to max_chars of clean text before splitting into sentences
     text = text[:max_chars]
-    facts = fact_sentences(text, min_len=30)
-    return [fact for fact in facts if not JS_JSON_FACT_MARKERS.search(fact)][:16]
+    facts = fact_sentences(text, min_len=22)
+    return [fact for fact in facts if not JS_JSON_FACT_MARKERS.search(fact)][:30]
 
 
 def enrich_cluster_facts(cluster: list[Item]) -> dict[str, list[str]]:
@@ -5313,6 +5317,35 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 
 
 HIGH_SCRUB_VIOLATIONS = 8
+MIN_ARTICLE_WORDS = 350
+MIN_ARTICLE_PARAGRAPHS = 6
+
+
+def article_quality_failures(article: dict[str, Any]) -> list[str]:
+    """Return publish-blocking quality defects without changing article text."""
+    body = str(article.get("html", "") or "")
+    text = html.unescape(re.sub(r"<[^>]+>", " ", body))
+    words = re.findall(r"\b[\w']+\b", text)
+    paragraphs = re.findall(r"<p\b[^>]*>(.*?)</p>", body, flags=re.IGNORECASE | re.DOTALL)
+    failures: list[str] = []
+
+    if len(words) < env_int("MIN_ARTICLE_WORDS", MIN_ARTICLE_WORDS):
+        failures.append(f"article has only {len(words)} words")
+    if len(paragraphs) < env_int("MIN_ARTICLE_PARAGRAPHS", MIN_ARTICLE_PARAGRAPHS):
+        failures.append(f"article has only {len(paragraphs)} paragraphs")
+
+    sentences = [
+        re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", sentence))).strip().lower()
+        for sentence in re.findall(r"[^.!?]+[.!?]+", text)
+    ]
+    meaningful = [sentence for sentence in sentences if len(sentence.split()) >= 6]
+    duplicates = {sentence for sentence in meaningful if meaningful.count(sentence) > 1}
+    if duplicates:
+        failures.append(f"{len(duplicates)} repeated sentence(s)")
+
+    if AI_TELL_HEADER.search(body):
+        failures.append("generic AI-style heading present")
+    return failures
 
 
 def apply_human_scrub(article: dict[str, Any], cluster: list[Item]) -> int:
@@ -5358,27 +5391,38 @@ def generate_article(cluster: list[Item]) -> dict[str, Any]:
         else:
 
             violations = apply_human_scrub(article, cluster)
+            quality_failures = article_quality_failures(article)
 
-            if violations >= HIGH_SCRUB_VIOLATIONS:
+            if violations >= HIGH_SCRUB_VIOLATIONS or quality_failures:
 
                 try:
 
                     retry_article = openai_generate_article(cluster)
 
                     retry_violations = apply_human_scrub(retry_article, cluster)
+                    retry_quality_failures = article_quality_failures(retry_article)
 
-                    if retry_violations <= violations:
+                    if (not retry_quality_failures and retry_violations <= violations) or (
+                        not quality_failures and retry_violations <= violations
+                    ):
 
                         article = retry_article
 
                 except Exception as retry_exc:
                     print(f"OpenAI retry generation also failed ({type(retry_exc).__name__}: {str(retry_exc)[:150]}); using initial generation.")
 
+            quality_failures = article_quality_failures(article)
+            if quality_failures:
+                raise RuntimeError("Generated article failed quality gate: " + "; ".join(quality_failures))
             return article
 
     article = free_article(cluster)
 
     apply_human_scrub(article, cluster)
+
+    quality_failures = article_quality_failures(article)
+    if quality_failures:
+        raise RuntimeError("Free article failed quality gate: " + "; ".join(quality_failures))
 
     return article
 
@@ -6492,9 +6536,14 @@ def run_once(args: argparse.Namespace) -> int:
 
         max_posts = max(1, env_int("MAX_POSTS_PER_RUN", 1))
 
-        selected = clusters[:max_posts]
+        selected = clusters
+        generation_failures: list[str] = []
 
         for cluster in selected:
+
+            if len(delivered_posts) + len(preview_paths) >= max_posts:
+
+                break
 
             unique_sources = sorted({item.source_name for item in cluster})
 
@@ -6504,7 +6553,19 @@ def run_once(args: argparse.Namespace) -> int:
 
             print(f"Generating {category_names} post from {len(cluster)} items across {len(unique_sources)} sources: {source_names}")
 
-            article = generate_article(cluster)
+            try:
+
+                article = generate_article(cluster)
+
+            except RuntimeError as exc:
+
+                message = f"Skipped candidate '{cluster[0].title}': {exc}"
+
+                generation_failures.append(message)
+
+                print(message)
+
+                continue
 
 
 
@@ -6582,15 +6643,25 @@ def run_once(args: argparse.Namespace) -> int:
 
                 previews=preview_paths,
 
+                generation_failures=generation_failures,
+
             )
 
         else:
 
+            state = "published" if delivered_posts else "skipped"
+
+            message = f"Published {len(delivered_posts)} post(s)."
+
+            if generation_failures:
+
+                message += f" Skipped {len(generation_failures)} low-quality candidate(s)."
+
             write_run_status(
 
-                "published",
+                state,
 
-                f"Published {len(delivered_posts)} post(s).",
+                message,
 
                 dry_run=False,
 
@@ -6603,6 +6674,8 @@ def run_once(args: argparse.Namespace) -> int:
                 feed_warnings=len(errors),
 
                 posts=delivered_posts,
+
+                generation_failures=generation_failures,
 
             )
 

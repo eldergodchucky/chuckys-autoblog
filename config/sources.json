@@ -19,6 +19,27 @@
       "enabled": true
     },
     {
+      "name": "Smithsonian History",
+      "url": "https://www.smithsonianmag.com/rss/latest_articles/",
+      "category": "history",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "HistoryExtra",
+      "url": "https://www.historyextra.com/feed/",
+      "category": "history",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "NASA History",
+      "url": "https://www.nasa.gov/history/feed/",
+      "category": "history",
+      "quality": 5,
+      "enabled": true
+    },
+    {
       "name": "MacRumors",
       "url": "https://feeds.macrumors.com/MacRumors-All",
       "category": "apple",
