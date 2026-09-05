@@ -3,24 +3,22 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2819,
-  "finished_at": "2026-09-05T04:50:40.109697+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Planetary Science Technology Workshop': Free article failed quality gate: article has only 101 words; article has only 4 paragraphs"
-  ],
-  "inserted": 7,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "finished_at": "2026-09-05T08:51:55.328209+00:00",
+  "generation_failures": [],
+  "inserted": 11,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "software"
+        "science",
+        "security"
       ],
       "sources": [
-        "Engadget",
-        "The Verge"
+        "BleepingComputer"
       ],
       "status": "publish",
-      "title": "Nintendo\u2019s next two Direct events are both happening next week",
-      "wp_id": 30575
+      "title": "39 New Methods That Compromise Passkey Authentication",
+      "wp_id": 30595
     }
   ],
   "state": "published"
