@@ -2,26 +2,25 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2818,
-  "finished_at": "2026-09-05T00:20:15.552985+00:00",
+  "fetched": 2819,
+  "finished_at": "2026-09-05T04:50:40.109697+00:00",
   "generation_failures": [
-    "Skipped candidate 'Leaked iPhone roadmap reveals plans for larger foldable, \u2018biggest overhaul,\u2019 more': Free article failed quality gate: article has only 320 words"
+    "Skipped candidate 'Planetary Science Technology Workshop': Free article failed quality gate: article has only 101 words; article has only 4 paragraphs"
   ],
-  "inserted": 8,
+  "inserted": 7,
   "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "phones"
+        "software"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Engadget",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "New iPhone 18 Pro report details flagship camera feature and more",
-      "wp_id": 30559
+      "title": "Nintendo\u2019s next two Direct events are both happening next week",
+      "wp_id": 30575
     }
   ],
   "state": "published"
