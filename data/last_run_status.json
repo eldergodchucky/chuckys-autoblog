@@ -3,23 +3,25 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2818,
-  "finished_at": "2026-09-04T22:29:26.489257+00:00",
-  "generation_failures": [],
-  "inserted": 26,
-  "message": "Published 1 post(s).",
+  "finished_at": "2026-09-05T00:20:15.552985+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Leaked iPhone roadmap reveals plans for larger foldable, \u2018biggest overhaul,\u2019 more': Free article failed quality gate: article has only 320 words"
+  ],
+  "inserted": 8,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "tech"
+        "apple",
+        "phones"
       ],
       "sources": [
-        "Engadget",
-        "The Verge"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "The White House is making arcade games racist",
-      "wp_id": 30551
+      "title": "New iPhone 18 Pro report details flagship camera feature and more",
+      "wp_id": 30559
     }
   ],
   "state": "published"
