@@ -3,36 +3,25 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2819,
-  "finished_at": "2026-09-05T12:28:10.102349+00:00",
+  "finished_at": "2026-09-05T15:28:59.563668+00:00",
   "generation_failures": [
-    "Skipped candidate 'PESTO Portfolio': Free article failed quality gate: article has only 181 words; article has only 4 paragraphs",
-    "Skipped candidate 'KMT-2025-BLG-0975L b': Free article failed quality gate: article has only 119 words; article has only 4 paragraphs",
-    "Skipped candidate 'KMT-2025-BLG-1160L b': Free article failed quality gate: article has only 119 words; article has only 4 paragraphs",
-    "Skipped candidate 'TOI-4409 b': Free article failed quality gate: article has only 113 words; article has only 4 paragraphs",
-    "Skipped candidate 'TOI-3278 b': Free article failed quality gate: article has only 115 words; article has only 4 paragraphs",
-    "Skipped candidate 'TOI-3053 b': Free article failed quality gate: article has only 113 words; article has only 4 paragraphs",
-    "Skipped candidate 'HD 50554 c': Free article failed quality gate: article has only 113 words; article has only 3 paragraphs",
-    "Skipped candidate 'HD 50554 d': Free article failed quality gate: article has only 115 words; article has only 3 paragraphs",
-    "Skipped candidate 'CD-35 2722 B b': Free article failed quality gate: article has only 123 words; article has only 3 paragraphs",
-    "Skipped candidate 'This NASA-funded 'Slingshot' spacecraft idea could map minerals on planets and moons across our solar system': Free article failed quality gate: article has only 157 words; article has only 4 paragraphs",
-    "Skipped candidate 'Stars forge and deliver the elements that make up your body \u2014 and scientists may finally know how': Free article failed quality gate: article has only 143 words; article has only 4 paragraphs",
-    "Skipped candidate 'Scientists detect signals of hydrogen from billions of years ago. Could this help us map out the universe?': Free article failed quality gate: article has only 151 words; article has only 4 paragraphs; 2 repeated sentence(s)",
-    "Skipped candidate 'NASA Ames Fire Department Aircraft Firefighting Training': Free article failed quality gate: article has only 167 words; article has only 5 paragraphs"
+    "Skipped candidate 'CarPlay now works with five major chatbot apps': Free article failed quality gate: article has only 293 words"
   ],
-  "inserted": 43,
-  "message": "Published 1 post(s). Skipped 13 low-quality candidate(s).",
+  "inserted": 35,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "health",
+        "ai",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "2024 MatISSE Program Selections",
-      "wp_id": 30609
+      "title": "People affected by cancer need a stronger voice in shaping generative AI",
+      "wp_id": 30618
     }
   ],
   "state": "published"
