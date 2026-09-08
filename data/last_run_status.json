@@ -3,24 +3,25 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2828,
-  "finished_at": "2026-09-08T21:11:40.886479+00:00",
+  "finished_at": "2026-09-08T23:25:44.484704+00:00",
   "generation_failures": [
-    "Skipped candidate 'Report: Apple Watch shipments rise 14% in Q2 as overall market drops': Free article failed quality gate: article has only 49 words; article has only 2 paragraphs"
+    "Skipped candidate 'On this day in space! Sept. 8, 2004: NASA's Genesis spacecraft crashed in the Utah desert, shattering its samples of solar wind particles from the sun': Free article failed quality gate: article has only 125 words; article has only 3 paragraphs",
+    "Skipped candidate 'Stoke Space raises $1 billion for fully reusable rockets, targets 'early 2027' for 1st-ever launch': Free article failed quality gate: article has only 136 words; article has only 4 paragraphs",
+    "Skipped candidate 'The otherworldly geology of Vasquez Rocks': Free article failed quality gate: article has only 56 words; article has only 2 paragraphs"
   ],
-  "inserted": 896,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 55,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "gadgets"
+        "space"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Engadget"
       ],
       "status": "publish",
-      "title": "A tiny crystal tilt may bring greener magnetic memory closer to everyday",
-      "wp_id": 30873
+      "title": "SpaceX's recovered Starship 40 will take months to get back to Texas",
+      "wp_id": 30878
     }
   ],
   "state": "published"
