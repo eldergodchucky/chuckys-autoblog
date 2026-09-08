@@ -1554,9 +1554,24 @@ def cluster_detail_score(cluster: list[Item]) -> int:
 
 
 
+def is_dense_academic_paper(cluster: list[Item]) -> bool:
+    """Filter out dense academic/clinical papers that read like unreadable raw journal abstracts."""
+    if not cluster:
+        return False
+    lead = cluster[0]
+    title = (lead.title or "").strip()
+    # Extremely long titles with dense medical/biochemical jargon
+    if len(title) > 130 and any(sym in title for sym in ("-induced", "pathway", "axis", "receptor", "kinase", "phosphorylation", "inhibition", "kappa", "NF-κB", "cGAS-STING", "mtDNA")):
+        return True
+    summary = (lead.summary or "").strip()
+    if summary.lower().startswith("download pdf abstract") or "download pdf abstract" in summary.lower():
+        return True
+    return False
+
+
 def publishable_cluster(cluster: list[Item]) -> bool:
 
-    if is_deal_roundup(cluster):
+    if is_deal_roundup(cluster) or is_dense_academic_paper(cluster):
 
         return False
 
@@ -1626,15 +1641,15 @@ def build_clusters(items: list[Item], min_sources: int) -> list[list[Item]]:
 
             shared_terms = item_tokens[item.uid] & item_tokens[candidate.uid]
 
-            if len(shared_terms) < 2:
+            # Require at least 3 shared specific terms (or 2 if very strong similarity)
+            if len(shared_terms) < 3:
 
                 continue
 
             similarity = jaccard(item_tokens[item.uid], item_tokens[candidate.uid])
 
-            same_category = item.source_category == candidate.source_category
-
-            if similarity >= 0.16 or (same_category and similarity >= 0.10):
+            # Tightened: require >= 0.20 similarity across items to prevent mixing separate stories
+            if similarity >= 0.20:
 
                 cluster.append(candidate)
 
@@ -4558,6 +4573,18 @@ FEED_JUNK_PATTERNS = tuple(
         r"\bprovided by\b[^.]*\.?",
         r"\bsource:\s*[^.]*\.?",
         r"\bemail\b\s*$",
+        r"\[\s*\d+\s*comments?\s*\]",
+        r"\brelated (?:roundup|forum|guide)\b.*",
+        r"\bbuyer['’]?s guide\b.*",
+        r"\bdiscuss this (?:article|story|post)\b.*",
+        r"\bsee the full\b.*?\breport\b.*",
+        r"\bdownload pdf abstract\b.*",
+        r"\bdownload (?:pdf|full text)\b.*",
+        r"^download\b.*?\babstract\b",
+        r"\btags:\s*[^.]*",
+        r"\bhands-on:\s*",
+        r"^(?:mobile|computing|tech|news|reviews?|features?)\s+(?:news|mobile|computing)?\s*",
+        r"\b(?:sep|oct|nov|dec|jan|feb|mar|apr|may|jun|jul|aug)\s+\d{1,2}\s+\d{4}\b.*",
     )
 )
 
@@ -4569,6 +4596,11 @@ PAGE_CHROME_SENTENCE = re.compile(
     r"|\u2022"
     r"|\bmin read\b"
     r"|\bshares?\b\s*(?:comments?)?\s*$"
+    r"|\[\s*\d+\s*comments?\s*\]"
+    r"|\b(?:sep|oct|nov|dec|jan|feb|mar|apr|may|jun|jul|aug)\s+\d{1,2}\s+\d{4}\b"
+    r"|\brelated roundup\b"
+    r"|\bdiscuss this article in our forums\b"
+    r"|\bdownload pdf abstract\b"
     r")"
 )
 
@@ -4761,7 +4793,27 @@ AI_TELL_HEADER = re.compile(
 )
 
 AI_TELL_SENTENCE = re.compile(
-    r"(?i)[^\n.<>]*(?:this puts the story in|for readers, the question|it'?s worth noting|it is worth noting|in today'?s fast-paced|only time will tell|at the end of the day|the bottom line(?: here)? is|a little skepticism is not cynicism|among the specific figures|in a broader set of shifts|this is (?:a )?(?:developing|worth watching))[^\n.<>]*\.?"
+    r"(?i)[^\n.<>]*(?:"
+    r"this puts the story in"
+    r"|for readers, the question"
+    r"|it'?s worth noting"
+    r"|it is worth noting"
+    r"|in today'?s fast-paced"
+    r"|only time will tell"
+    r"|at the end of the day"
+    r"|the bottom line(?: here)? is"
+    r"|a little skepticism is not cynicism"
+    r"|among the specific figures"
+    r"|in a broader set of shifts"
+    r"|this is (?:a )?(?:developing|worth watching)"
+    r"|\[\s*\d+\s*comments?\s*\]"
+    r"|related roundup"
+    r"|buyer['’]?s guide"
+    r"|discuss this article in our forums"
+    r"|see the full\b.*?\breport for more information"
+    r"|download (?:pdf|full text|abstract)"
+    r"|\b(?:sep|oct|nov|dec|jan|feb|mar|apr|may|jun|jul|aug)\s+\d{1,2}\s+\d{4}\b"
+    r")[^\n.<>]*\.?"
 )
 
 AI_TELL_SWAPS = (
@@ -4880,6 +4932,12 @@ JUNK_SPAN_PATTERNS = tuple(
         r"\b(?:image|photo|caption|credit|image credit|photo credit)\s*:\s*[^.]*\.?",
         r"\bprovided by\b[^.]*\.?",
         r"\bsource:\s*[^.]*\.?",
+        r"\[\s*\d+\s*comments?\s*\][^.]*\.?",
+        r"\brelated (?:roundup|forum|guide)\s*:\s*[^.]*\.?",
+        r"\bbuyer['’]?s guide\s*:\s*[^.]*\.?",
+        r"\bdiscuss this (?:article|story|post) in our forums[^.]*\.?",
+        r"\bsee the full\b.*?\breport for more information\.?",
+        r"\bdownload pdf abstract[^.]*\.?",
     )
 )
 
@@ -5005,7 +5063,8 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
             facts_by_item.append((item, pool))
 
     paragraphs: list[str] = []
-    used: set[str] = set()
+    # Seed used with cluster item titles so raw headlines aren't echoed inside body paragraphs
+    used: set[str] = {clean_fact_sentence(clean_text(item.title, max_len=160)).lower() for item in cluster if item.title}
 
     def is_near_duplicate(fact: str) -> bool:
         tokens = set(re.findall(r"[a-z0-9]{3,}", fact.lower()))
