@@ -1,25 +1,26 @@
 {
   "dry_run": false,
   "feed_warnings": 3,
-  "feeds": 59,
-  "fetched": 2788,
-  "finished_at": "2026-09-04T01:12:19.810073+00:00",
-  "inserted": 13,
-  "message": "Published 1 post(s).",
+  "feeds": 62,
+  "fetched": 2828,
+  "finished_at": "2026-09-08T21:11:40.886479+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Report: Apple Watch shipments rise 14% in Q2 as overall market drops': Free article failed quality gate: article has only 49 words; article has only 2 paragraphs"
+  ],
+  "inserted": 896,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "software"
+        "science",
+        "gadgets"
       ],
       "sources": [
-        "Android Authority News",
-        "Engadget",
-        "TechCrunch"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "OpenAI launches Astra, its powerful (and controversial) new model",
-      "wp_id": 30485
+      "title": "A tiny crystal tilt may bring greener magnetic memory closer to everyday",
+      "wp_id": 30873
     }
   ],
   "state": "published"
