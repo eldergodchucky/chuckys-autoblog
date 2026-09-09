@@ -1,25 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 5,
   "feeds": 62,
-  "fetched": 2829,
-  "finished_at": "2026-09-09T21:32:57.527319+00:00",
+  "fetched": 2820,
+  "finished_at": "2026-09-09T23:32:44.020072+00:00",
   "generation_failures": [],
-  "inserted": 167,
+  "inserted": 55,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "software"
       ],
       "sources": [
-        "NASA Science",
-        "Phys.org Space"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "NASA\u2019s Chandra Unveils Mysterious X-Ray Objects",
-      "wp_id": 30953
+      "title": "New software tool lets users repair AI-generated 3D models",
+      "wp_id": 30961
     }
   ],
   "state": "published"
