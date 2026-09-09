@@ -3,24 +3,21 @@
   "feed_warnings": 5,
   "feeds": 62,
   "fetched": 2668,
-  "finished_at": "2026-09-09T11:45:24.255210+00:00",
+  "finished_at": "2026-09-09T15:21:44.636876+00:00",
   "generation_failures": [],
-  "inserted": 82,
+  "inserted": 165,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "apple",
-        "phones"
+        "history"
       ],
       "sources": [
-        "Engadget",
-        "Phys.org Technology"
+        "ScienceDaily Top Science"
       ],
       "status": "publish",
-      "title": "New Apple CEO to unveil latest iPhone lineup",
-      "wp_id": 30921
+      "title": "Devil\u2019s Arrows: Ancient builders hauled 55",
+      "wp_id": 30933
     }
   ],
   "state": "published"
