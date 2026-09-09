@@ -1,24 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 5,
+  "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2809,
-  "finished_at": "2026-09-09T18:48:55.865247+00:00",
+  "fetched": 2829,
+  "finished_at": "2026-09-09T21:32:57.527319+00:00",
   "generation_failures": [],
-  "inserted": 221,
+  "inserted": 167,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "NASA Science",
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Nasal spray vaccine protects against bird flu in mice",
-      "wp_id": 30945
+      "title": "NASA\u2019s Chandra Unveils Mysterious X-Ray Objects",
+      "wp_id": 30953
     }
   ],
   "state": "published"
