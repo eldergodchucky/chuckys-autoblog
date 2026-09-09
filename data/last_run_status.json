@@ -1,25 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 5,
   "feeds": 62,
-  "fetched": 2828,
-  "finished_at": "2026-09-09T06:26:47.153519+00:00",
+  "fetched": 2668,
+  "finished_at": "2026-09-09T11:45:24.255210+00:00",
   "generation_failures": [],
-  "inserted": 32,
+  "inserted": 82,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "tech",
-        "gadgets"
+        "health",
+        "apple",
+        "phones"
       ],
       "sources": [
         "Engadget",
-        "TechCrunch"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "The White House removed its border-wall Tetris clone",
-      "wp_id": 30905
+      "title": "New Apple CEO to unveil latest iPhone lineup",
+      "wp_id": 30921
     }
   ],
   "state": "published"
