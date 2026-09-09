@@ -3,23 +3,23 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2828,
-  "finished_at": "2026-09-09T01:25:10.425452+00:00",
+  "finished_at": "2026-09-09T06:26:47.153519+00:00",
   "generation_failures": [],
-  "inserted": 18,
+  "inserted": 32,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "phones",
-        "science"
+        "tech",
+        "gadgets"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Engadget",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "New chip design brings energy-efficient AI computing closer to phones and laptops",
-      "wp_id": 30885
+      "title": "The White House removed its border-wall Tetris clone",
+      "wp_id": 30905
     }
   ],
   "state": "published"
