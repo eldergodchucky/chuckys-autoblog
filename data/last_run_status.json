@@ -3,23 +3,24 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2831,
-  "finished_at": "2026-09-10T01:30:22.887562+00:00",
+  "finished_at": "2026-09-10T06:37:01.409310+00:00",
   "generation_failures": [],
-  "inserted": 26,
+  "inserted": 22,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "phones",
-        "science",
-        "gadgets"
+        "apple",
+        "android",
+        "phones"
       ],
       "sources": [
-        "Phys.org Technology"
+        "9to5Mac iPhone",
+        "Engadget"
       ],
       "status": "publish",
-      "title": "A stolen-phone safeguard could disrupt home alarms and block new flagship phones",
-      "wp_id": 30968
+      "title": "iPhone Duo vs Samsung Galaxy Z Fold 8: here's how they stack",
+      "wp_id": 30986
     }
   ],
   "state": "published"
