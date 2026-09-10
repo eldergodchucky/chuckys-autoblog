@@ -2,22 +2,25 @@
   "dry_run": false,
   "feed_warnings": 4,
   "feeds": 62,
-  "fetched": 2826,
-  "finished_at": "2026-09-10T21:35:16.747852+00:00",
-  "generation_failures": [],
-  "inserted": 83,
-  "message": "Published 1 post(s).",
+  "fetched": 2736,
+  "finished_at": "2026-09-10T23:25:48.657922+00:00",
+  "generation_failures": [
+    "Skipped candidate 'On this day in space! Sept. 10, 2011: NASA launches GRAIL probes to the moon to map lumpy lunar gravity': Free article failed quality gate: article has only 125 words; article has only 4 paragraphs"
+  ],
+  "inserted": 40,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "history"
+        "health",
+        "science"
       ],
       "sources": [
-        "Phys.org Space"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Ancient Swedish Goths had surprisingly accurate calendars",
-      "wp_id": 31031
+      "title": "Neurosurveillance paradigm breaks imaging time barrier to reveal new clues about brain",
+      "wp_id": 31038
     }
   ],
   "state": "published"
