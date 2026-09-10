@@ -1,25 +1,23 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 4,
   "feeds": 62,
-  "fetched": 2835,
-  "finished_at": "2026-09-10T19:01:13.760907+00:00",
+  "fetched": 2826,
+  "finished_at": "2026-09-10T21:35:16.747852+00:00",
   "generation_failures": [],
-  "inserted": 122,
+  "inserted": 83,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "ai",
-        "science"
+        "history"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Protein shape shift reveals how the mpox virus begins replicating",
-      "wp_id": 31024
+      "title": "Ancient Swedish Goths had surprisingly accurate calendars",
+      "wp_id": 31031
     }
   ],
   "state": "published"
