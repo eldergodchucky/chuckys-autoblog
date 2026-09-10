@@ -1,24 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 5,
+  "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2820,
-  "finished_at": "2026-09-09T23:32:44.020072+00:00",
+  "fetched": 2831,
+  "finished_at": "2026-09-10T01:30:22.887562+00:00",
   "generation_failures": [],
-  "inserted": 55,
+  "inserted": 26,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "software"
+        "phones",
+        "science",
+        "gadgets"
       ],
       "sources": [
         "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "New software tool lets users repair AI-generated 3D models",
-      "wp_id": 30961
+      "title": "A stolen-phone safeguard could disrupt home alarms and block new flagship phones",
+      "wp_id": 30968
     }
   ],
   "state": "published"
