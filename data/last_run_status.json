@@ -1,24 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 4,
   "feeds": 62,
-  "fetched": 2831,
-  "finished_at": "2026-09-10T11:52:23.294371+00:00",
-  "generation_failures": [],
-  "inserted": 102,
-  "message": "Published 1 post(s).",
+  "fetched": 2834,
+  "finished_at": "2026-09-10T15:57:27.988168+00:00",
+  "generation_failures": [
+    "Skipped candidate 'EU testing Mythos AI model after Anthropic grants access': Free article failed quality gate: article has only 282 words; article has only 5 paragraphs"
+  ],
+  "inserted": 175,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "software"
+        "security"
       ],
       "sources": [
-        "Engadget",
-        "The Verge"
+        "BleepingComputer",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Nintendo\u2019s latest Switch 2 update adds VRR support in TV mode",
-      "wp_id": 31003
+      "title": "IDScan confirms breach tied to 153 million stolen driver\u2019s licenses",
+      "wp_id": 31015
     }
   ],
   "state": "published"
