@@ -3,25 +3,25 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2839,
-  "finished_at": "2026-09-12T14:09:54.529382+00:00",
+  "finished_at": "2026-09-12T17:11:48.638336+00:00",
   "generation_failures": [
-    "Skipped candidate 'Perseid meteors meet mesmerizing star trails over Egypt's Western Desert': Free article failed quality gate: article has only 131 words; article has only 4 paragraphs",
-    "Skipped candidate 'On this day in space! NASA astronaut Mae Jemison makes history as the 1st Black woman in space': Free article failed quality gate: article has only 164 words",
-    "Skipped candidate 'Apple researchers unveil SimpleDesign, a new AI model for protein design': Free article failed quality gate: article has only 42 words; article has only 2 paragraphs"
+    "Skipped candidate 'Rocket Lab protests NASA's decision to award Blue Origin $700 million Mars orbiter contract': Free article failed quality gate: article has only 116 words; article has only 4 paragraphs",
+    "Skipped candidate 'The best 'Star Trek' spaceships: 14 classic vessels from the Federation and beyond': Free article failed quality gate: article has only 131 words; article has only 4 paragraphs",
+    "Skipped candidate 'Trump is proposing a US Space Academy \u2014 if created, it could blur the lines between NASA and the military (op-ed)': Free article failed quality gate: article has only 133 words; article has only 5 paragraphs"
   ],
-  "inserted": 37,
+  "inserted": 45,
   "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "space"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Brain insulation clues emerge in pediatric sleep apnea model",
-      "wp_id": 31181
+      "title": "Rubin observatory peers deep into the famous COSMOS field",
+      "wp_id": 31198
     }
   ],
   "state": "published"
