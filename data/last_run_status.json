@@ -1,28 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2839,
-  "finished_at": "2026-09-12T19:23:18.629924+00:00",
+  "finished_at": "2026-09-12T21:34:59.452915+00:00",
   "generation_failures": [
-    "Skipped candidate 'Apple researchers unveil SimpleDesign, a new AI model for protein design': Free article failed quality gate: article has only 40 words; article has only 2 paragraphs",
-    "Skipped candidate 'NASA, IBM launch new AI model for studying the moon': Free article failed quality gate: article has only 124 words; article has only 5 paragraphs"
+    "Skipped candidate 'Sam Altman says OpenAI going public in 2026 would be \u2018ill-advised\u2019': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'The best 'Star Trek' spaceships: 14 classic vessels from the Federation and beyond': Free article failed quality gate: article has only 131 words; article has only 4 paragraphs"
   ],
-  "inserted": 16,
+  "inserted": 13,
   "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "phones"
+        "science",
+        "security"
       ],
       "sources": [
-        "GSMArena",
-        "MacRumors"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Apple Store Down Ahead of iPhone 18 Pro Pre-Orders",
-      "wp_id": 31208
+      "title": "LG responds to TV spying allegations",
+      "wp_id": 31217
     }
   ],
   "state": "published"
