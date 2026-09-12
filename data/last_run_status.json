@@ -1,31 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2839,
-  "finished_at": "2026-09-12T06:24:06.514744+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Apple\u2019s iPhone 18 Pro cases are already in stores, and not just for the new models': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Counterpoint: Apple foldable panel shipments could rise 167% by 2030': Free article failed quality gate: article has only 49 words; article has only 2 paragraphs",
-    "Skipped candidate '60 years of Star Trek uniforms: Looking back at the everchanging wardrobe of Starfleet': Free article failed quality gate: article has only 131 words; article has only 4 paragraphs",
-    "Skipped candidate 'Brain scans reveal how recurrent depression leaves a lasting mark on the amygdala': Free article failed quality gate: article has only 46 words; article has only 3 paragraphs",
-    "Skipped candidate 'A star is exploding 45 million light-years away \u2014 here's how you can see it': Free article failed quality gate: article has only 155 words; article has only 5 paragraphs",
-    "Skipped candidate 'Rocket Lab launches mystery satellite to orbit for secret customer (photo)': Free article failed quality gate: article has only 117 words; article has only 5 paragraphs"
-  ],
-  "inserted": 12,
-  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "finished_at": "2026-09-12T11:07:22.839133+00:00",
+  "generation_failures": [],
+  "inserted": 34,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "health",
-        "science"
+        "history"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "BBC Science & Environment"
       ],
       "status": "publish",
-      "title": "Carbon monoxide linked to lower Parkinson's risk",
-      "wp_id": 31146
+      "title": "The slow, muddy work of saving ancient bogs",
+      "wp_id": 31169
     }
   ],
   "state": "published"
