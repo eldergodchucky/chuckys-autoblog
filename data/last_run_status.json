@@ -1,27 +1,28 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 4,
   "feeds": 62,
   "fetched": 2839,
-  "finished_at": "2026-09-12T17:11:48.638336+00:00",
+  "finished_at": "2026-09-12T19:23:18.629924+00:00",
   "generation_failures": [
-    "Skipped candidate 'Rocket Lab protests NASA's decision to award Blue Origin $700 million Mars orbiter contract': Free article failed quality gate: article has only 116 words; article has only 4 paragraphs",
-    "Skipped candidate 'The best 'Star Trek' spaceships: 14 classic vessels from the Federation and beyond': Free article failed quality gate: article has only 131 words; article has only 4 paragraphs",
-    "Skipped candidate 'Trump is proposing a US Space Academy \u2014 if created, it could blur the lines between NASA and the military (op-ed)': Free article failed quality gate: article has only 133 words; article has only 5 paragraphs"
+    "Skipped candidate 'Apple researchers unveil SimpleDesign, a new AI model for protein design': Free article failed quality gate: article has only 40 words; article has only 2 paragraphs",
+    "Skipped candidate 'NASA, IBM launch new AI model for studying the moon': Free article failed quality gate: article has only 124 words; article has only 5 paragraphs"
   ],
-  "inserted": 45,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 16,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "apple",
+        "phones"
       ],
       "sources": [
-        "Phys.org Space"
+        "GSMArena",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Rubin observatory peers deep into the famous COSMOS field",
-      "wp_id": 31198
+      "title": "Apple Store Down Ahead of iPhone 18 Pro Pre-Orders",
+      "wp_id": 31208
     }
   ],
   "state": "published"
