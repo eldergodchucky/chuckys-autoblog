@@ -2,24 +2,24 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2837,
-  "finished_at": "2026-09-11T23:30:10.352103+00:00",
+  "fetched": 2839,
+  "finished_at": "2026-09-12T01:29:14.086077+00:00",
   "generation_failures": [],
-  "inserted": 24,
+  "inserted": 13,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
+        "ai",
         "space",
-        "science",
-        "history"
+        "science"
       ],
       "sources": [
-        "NASA Science"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "Help Refine Data from Space Telescopes with Artifact InSPECtor",
-      "wp_id": 31122
+      "title": "Release of open AI model trained on 17 years of lunar data",
+      "wp_id": 31127
     }
   ],
   "state": "published"
