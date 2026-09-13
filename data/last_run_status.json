@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 4,
   "feeds": 62,
   "fetched": 2839,
-  "finished_at": "2026-09-13T06:36:15.009852+00:00",
+  "finished_at": "2026-09-13T12:19:30.094246+00:00",
   "generation_failures": [],
-  "inserted": 29,
+  "inserted": 37,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "phones"
+        "ai",
+        "software"
       ],
       "sources": [
-        "9to5Mac",
-        "MacRumors"
+        "Phys.org Technology",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "iPhone 18 Pro pre-orders: Here\u2019s what still arrives on launch day",
-      "wp_id": 31255
+      "title": "Altman tells Fortune OpenAI will not go public in 2026",
+      "wp_id": 31285
     }
   ],
   "state": "published"
