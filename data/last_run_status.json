@@ -3,25 +3,26 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2839,
-  "finished_at": "2026-09-12T23:25:26.749758+00:00",
+  "finished_at": "2026-09-13T01:19:52.959304+00:00",
   "generation_failures": [
-    "Skipped candidate 'The best 'Star Trek' spaceships: 14 classic vessels from the Federation and beyond': Free article failed quality gate: article has only 131 words; article has only 4 paragraphs",
-    "Skipped candidate 'Rocket Lab protests NASA's decision to award Blue Origin $700 million Mars orbiter contract': Free article failed quality gate: article has only 116 words; article has only 4 paragraphs",
-    "Skipped candidate 'Trump is proposing a US Space Academy \u2014 if created, it could blur the lines between NASA and the military (op-ed)': Free article failed quality gate: article has only 133 words; article has only 5 paragraphs"
+    "Skipped candidate 'Sam Altman says OpenAI going public in 2026 would be \u2018ill-advised\u2019': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Apple researchers unveil SimpleDesign, a new AI model for protein design': Free article failed quality gate: article has only 40 words; article has only 2 paragraphs"
   ],
   "inserted": 10,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "space"
+        "ai",
+        "science",
+        "security"
       ],
       "sources": [
-        "Phys.org Space"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Japan's Hayabusa2 achieves first-ever laser ranging experiment with an asteroid",
-      "wp_id": 31224
+      "title": "OpenAI\u2019s rogue AI tried to hack another company in May",
+      "wp_id": 31234
     }
   ],
   "state": "published"
