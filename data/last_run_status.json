@@ -3,26 +3,23 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2839,
-  "finished_at": "2026-09-13T01:19:52.959304+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Sam Altman says OpenAI going public in 2026 would be \u2018ill-advised\u2019': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Apple researchers unveil SimpleDesign, a new AI model for protein design': Free article failed quality gate: article has only 40 words; article has only 2 paragraphs"
-  ],
-  "inserted": 10,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "finished_at": "2026-09-13T06:36:15.009852+00:00",
+  "generation_failures": [],
+  "inserted": 29,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science",
-        "security"
+        "apple",
+        "phones"
       ],
       "sources": [
-        "The Verge"
+        "9to5Mac",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "OpenAI\u2019s rogue AI tried to hack another company in May",
-      "wp_id": 31234
+      "title": "iPhone 18 Pro pre-orders: Here\u2019s what still arrives on launch day",
+      "wp_id": 31255
     }
   ],
   "state": "published"
