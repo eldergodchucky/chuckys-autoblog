@@ -3,23 +3,23 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2839,
-  "finished_at": "2026-09-14T01:25:00.255874+00:00",
+  "finished_at": "2026-09-14T06:48:27.831043+00:00",
   "generation_failures": [],
-  "inserted": 10,
+  "inserted": 33,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "tech"
+        "health",
+        "phones",
+        "science"
       ],
       "sources": [
-        "Engadget",
-        "TechCrunch"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Tesla says it will finally unveil the second generation Roadster on October",
-      "wp_id": 31338
+      "title": "Smartphones could be used to screen for cataracts and other eye problems",
+      "wp_id": 31357
     }
   ],
   "state": "published"
