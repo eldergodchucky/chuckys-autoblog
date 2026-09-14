@@ -3,23 +3,22 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2841,
-  "finished_at": "2026-09-14T18:54:46.517597+00:00",
+  "finished_at": "2026-09-14T22:18:39.245740+00:00",
   "generation_failures": [],
-  "inserted": 262,
+  "inserted": 133,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
         "science",
-        "security"
+        "history"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "SciTechDaily Science"
       ],
       "status": "publish",
-      "title": "Metabolic vulnerability identified that may affect heart development",
-      "wp_id": 31399
+      "title": "Scientists Solve a 4",
+      "wp_id": 31408
     }
   ],
   "state": "published"
