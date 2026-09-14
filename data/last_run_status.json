@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2840,
-  "finished_at": "2026-09-14T13:43:19.588609+00:00",
-  "generation_failures": [
-    "Skipped candidate 'James Webb Space Telescope and Hubble discover 27 puzzling new objects orbiting the sun far beyond Neptune': Free article failed quality gate: article has only 133 words; article has only 4 paragraphs"
-  ],
-  "inserted": 125,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "fetched": 2841,
+  "finished_at": "2026-09-14T18:54:46.517597+00:00",
+  "generation_failures": [],
+  "inserted": 262,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "history"
+        "health",
+        "science",
+        "security"
       ],
       "sources": [
-        "SciTechDaily Science"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Fossil Reveals Asmall Dinosaur Living Along Japan\u2019s Coast",
-      "wp_id": 31382
+      "title": "Metabolic vulnerability identified that may affect heart development",
+      "wp_id": 31399
     }
   ],
   "state": "published"
