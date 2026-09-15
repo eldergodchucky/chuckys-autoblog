@@ -1,26 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 6,
+  "feed_warnings": 5,
   "feeds": 62,
-  "fetched": 2761,
-  "finished_at": "2026-09-15T05:55:30.722129+00:00",
+  "fetched": 2781,
+  "finished_at": "2026-09-15T11:16:04.014899+00:00",
   "generation_failures": [],
-  "inserted": 34,
+  "inserted": 91,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "ai",
-        "apple"
+        "space",
+        "history"
       ],
       "sources": [
-        "MacRumors",
-        "The Verge"
+        "Phys.org Space"
       ],
       "status": "publish",
-      "title": "iOS 27 AI Camera Summaries Cost $9.99 for One Camera",
-      "wp_id": 31436
+      "title": "Could the clues to ancient alien civilizations be hiding in moon dust?",
+      "wp_id": 31458
     }
   ],
   "state": "published"
