@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 4,
   "feeds": 62,
   "fetched": 2842,
-  "finished_at": "2026-09-15T19:14:54.866252+00:00",
+  "finished_at": "2026-09-15T22:18:44.956942+00:00",
   "generation_failures": [],
-  "inserted": 164,
+  "inserted": 83,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "tech"
+        "health",
+        "phones",
+        "science"
       ],
       "sources": [
-        "Engadget",
-        "TechCrunch"
+        "Phys.org Medical Research"
       ],
       "status": "publish",
-      "title": "Nitter and XCancel are dead (again) after X\u2019s latest legal actions",
-      "wp_id": 31480
+      "title": "Mobile CT lung cancer screening expands access for underserved populations in Brazil",
+      "wp_id": 31494
     }
   ],
   "state": "published"
