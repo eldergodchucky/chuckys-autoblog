@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 5,
+  "feed_warnings": 4,
   "feeds": 62,
-  "fetched": 2781,
-  "finished_at": "2026-09-15T11:16:04.014899+00:00",
+  "fetched": 2792,
+  "finished_at": "2026-09-15T15:37:07.909602+00:00",
   "generation_failures": [],
-  "inserted": 91,
+  "inserted": 190,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "history"
+        "ai",
+        "software"
       ],
       "sources": [
-        "Phys.org Space"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "Could the clues to ancient alien civilizations be hiding in moon dust?",
-      "wp_id": 31458
+      "title": "Cyber attacks? Bioterrorism? To 'Pace the Frontier' of AI effectively",
+      "wp_id": 31471
     }
   ],
   "state": "published"
