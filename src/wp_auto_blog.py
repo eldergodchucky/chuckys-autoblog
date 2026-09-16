@@ -1560,11 +1560,34 @@ def is_dense_academic_paper(cluster: list[Item]) -> bool:
         return False
     lead = cluster[0]
     title = (lead.title or "").strip()
-    # Extremely long titles with dense medical/biochemical jargon
-    if len(title) > 130 and any(sym in title for sym in ("-induced", "pathway", "axis", "receptor", "kinase", "phosphorylation", "inhibition", "kappa", "NF-κB", "cGAS-STING", "mtDNA")):
+    title_lower = title.lower()
+
+    # If title or summary contains explicit abstract/PDF download markers
+    if "download pdf abstract" in title_lower:
         return True
-    summary = (lead.summary or "").strip()
-    if summary.lower().startswith("download pdf abstract") or "download pdf abstract" in summary.lower():
+    for item in cluster:
+        summ = (item.summary or "").lower()
+        if "download pdf abstract" in summ or summ.startswith("download pdf"):
+            return True
+
+    # Immediate dense academic signatures
+    dense_academic_signatures = (
+        "lim domain", "proteinuria", "proteasome", "cranial anthropometry",
+        "pediarespecg", "pediaraspecg", "cgas-sting", "mtdna", "nf-κb",
+        "histopatholog", "xenograft"
+    )
+    if any(sig in title_lower for sig in dense_academic_signatures):
+        return True
+
+    # Check for dense academic/biochemical/clinical jargon
+    dense_jargon = (
+        "-induced", "pathway", "axis", "receptor", "kinase", "phosphorylation",
+        "inhibition", "kappa", "in vitro", "in vivo", "murine", "cohort study"
+    )
+    # Long or technical titles typical of academic journal papers
+    if len(title) > 75 and any(sym in title_lower for sym in dense_jargon):
+        return True
+    if len(title) > 120 and any(sym in title for sym in ("-induced", "pathway", "axis", "receptor", "kinase", "phosphorylation", "inhibition", "kappa", "NF-κB", "cGAS-STING", "mtDNA")):
         return True
     return False
 
@@ -4584,6 +4607,9 @@ FEED_JUNK_PATTERNS = tuple(
         r"\btags:\s*[^.]*",
         r"\bhands-on:\s*",
         r"^(?:mobile|computing|tech|news|reviews?|features?)\s+(?:news|mobile|computing)?\s*",
+        # Author + date bylines: "Chance Miller Sep 9 2026", "Margo Pierce Science Writer Sep 10, 2026"
+        r"\b[A-Z][a-z]+(?: [A-Z][a-z]+){1,3}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2},?\s+\d{4}\b.*",
+        r"\b[A-Z][a-z]+(?: [A-Z][a-z]+)+,\s+[A-Za-z ]+(?:edited|written|reported)\s+by\b[^.]*\.?",
         r"\b(?:sep|oct|nov|dec|jan|feb|mar|apr|may|jun|jul|aug)\s+\d{1,2}\s+\d{4}\b.*",
     )
 )
@@ -4601,6 +4627,8 @@ PAGE_CHROME_SENTENCE = re.compile(
     r"|\brelated roundup\b"
     r"|\bdiscuss this article in our forums\b"
     r"|\bdownload pdf abstract\b"
+    r"|\b[A-Z][a-z]+(?: [A-Z][a-z]+){1,3}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2},?\s+\d{4}\b"
+    r"|\b[A-Z][a-z]+(?: [A-Z][a-z]+)+,\s+[A-Za-z ]+(?:edited|written|reported)\s+by\b"
     r")"
 )
 
@@ -4889,6 +4917,8 @@ def clean_fact_sentence(sentence: str) -> str:
     s = (sentence or "").strip()
     if not s:
         return ""
+    if PAGE_CHROME_SENTENCE.search(s):
+        return ""
     for pattern in FEED_JUNK_PATTERNS:
         s = pattern.sub("", s)
     s, _hits = strip_source_mentions(s)
@@ -4924,7 +4954,7 @@ def fact_sentences(text: str, min_len: int = 20) -> list[str]:
 # whole text before it is split into sentences, because a single split
 # sentence can otherwise swallow several of these spans.
 JUNK_SPAN_PATTERNS = tuple(
-    re.compile(pattern, re.IGNORECASE)
+    re.compile(pattern, re.IGNORECASE | re.DOTALL)
     for pattern in (
         r"\|\s*(?:science news(?: from research organizations)?|sciencedaily|newswise|eurekalert|phys\.org)\b[\s\S]*",
         r"\bshare:\s*(?:facebook|twitter|pinterest|linkedin|email|reddit|whatsapp|telegram|messenger|more)[^.]*\.?",
@@ -4938,13 +4968,54 @@ JUNK_SPAN_PATTERNS = tuple(
         r"\bdiscuss this (?:article|story|post) in our forums[^.]*\.?",
         r"\bsee the full\b.*?\breport for more information\.?",
         r"\bdownload pdf abstract[^.]*\.?",
+        # Science X / Medical Xpress editorial staff boilerplate and copyright notices
+        r"(?:edited by|reviewed by)\s+[A-Z][a-z]+ [A-Z][a-z]+[^.]*\.?",
+        r"\bLisa Lock\b[^.]*\.?",
+        r"\bRobert Egan\b[^.]*\.?",
+        r"\bMeet our editorial team\b[^\n]*(?:\n(?!\n)[^\n]*)*",
+        r"\bBehind our editorial process\b[^\n]*(?:\n(?!\n)[^\n]*)*",
+        r"\bEditors(?:'| have) (?:highlighted|noted)\b[^\n]*(?:\n(?!\n)[^\n]*)*",
+        r"\bThe GIST\s+Add as preferred source\b[^\n]*(?:\n(?!\n)[^\n]*)*",
+        r"\bfact-checked\s+peer-reviewed publication\b[^.]*\.?",
+        r"\bThis document is subject to copyright\b.*",
+        r"\bApart from any fair dealing for the purpose of\b.*",
+        r"\bThe content is provided for information purposes only\b[^.]*\.?",
+        r"\bCitation:\s*[^.]+retrieved \d+ [A-Z][a-z]+ \d{4} from https?://[^\s]+",
+        r"\bDOI:\s*10\.\d{4,}/\S+",
+        r"\bJournal information:\s*[^.]*\.",
+        r"\bKey medical concepts\b[^\n]*(?:\n(?!\n)[^\n]*)*",
+        r"\bFull profile\s*\u2192\b[^.]*\.?",
+        r"\bScientific (?:Editor|Writer)\b[^.]*\.?",
+        r"\bSenior Editor\b[^.]*\.?",
     )
+)
+
+# Hard-stop markers: portal ads, social footers, comment sections.
+# Everything from the first match onward is discarded as terminal junk.
+_HARD_STOP_PATTERNS = re.compile(
+    r"(?i)(?:"
+    r"ADVERTISEMENT\b"
+    r"|We are on TikTok"
+    r"|Total reader comments"
+    r"|Post your comment"
+    r"|\u00a9 2000-\d{4}\b"
+    r"|© 2000-\d{4}\b"
+    r"|Mobile version Android app"
+    r"|Merch store"
+    r"|Read all comments\b"
+    r"|Home News Reviews Compare Coverage"
+    r"|Related articles\s*\n"
+    r")"
 )
 
 
 def scrub_junk_spans(text: str) -> str:
     """Strip multi-clause junk/footer spans from raw text before sentenceization."""
     s = text or ""
+    # Hard-stop: truncate at portal ads, social footers, comment blocks
+    m = _HARD_STOP_PATTERNS.search(s)
+    if m:
+        s = s[:m.start()]
     for pattern in JUNK_SPAN_PATTERNS:
         s = pattern.sub(" ", s)
     s = re.sub(r"\s{2,}", " ", s)
@@ -6627,6 +6698,18 @@ def run_once(args: argparse.Namespace) -> int:
                 continue
 
 
+
+            # Quality gate: skip stub articles under 150 words
+            _article_html = article.get("html", "") or article.get("content", "") or ""
+            _article_words = len(re.sub(r"<[^>]+>", " ", _article_html).split())
+            if _article_words < 150:
+                _stub_msg = (
+                    f"Skipped stub article '{article.get('title', '?')}' "
+                    f"— only {_article_words} words generated."
+                )
+                print(_stub_msg)
+                generation_failures.append(_stub_msg)
+                continue
 
             if args.dry_run:
 
