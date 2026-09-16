@@ -2,24 +2,25 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2845,
-  "finished_at": "2026-09-16T18:50:45.877454+00:00",
+  "fetched": 2846,
+  "finished_at": "2026-09-16T21:56:50.664209+00:00",
   "generation_failures": [],
-  "inserted": 149,
+  "inserted": 101,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "tech",
-        "gadgets"
+        "ai",
+        "apple",
+        "android"
       ],
       "sources": [
-        "Engadget",
-        "TechCrunch"
+        "GSMArena",
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Anthropic's Claude can now create editable documents",
-      "wp_id": 31587
+      "title": "Apple Memory Supplier Explores U.S. Manufacturing With Intel",
+      "wp_id": 31596
     }
   ],
   "state": "published"
