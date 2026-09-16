@@ -2,27 +2,24 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2843,
-  "finished_at": "2026-09-16T15:01:01.603976+00:00",
-  "generation_failures": [
-    "Skipped candidate 'AI is reshaping open source software and straining the systems that sustain it': Free article failed quality gate: article has only 85 words; article has only 2 paragraphs",
-    "Skipped candidate 'EU chief to unveil social media, gaming curbs for under-15s': Free article failed quality gate: article has only 53 words; article has only 2 paragraphs"
-  ],
-  "inserted": 186,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "fetched": 2845,
+  "finished_at": "2026-09-16T18:50:45.877454+00:00",
+  "generation_failures": [],
+  "inserted": 149,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science",
-        "software"
+        "tech",
+        "gadgets"
       ],
       "sources": [
-        "The Verge"
+        "Engadget",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "The sexy AI-powered dating app scams are here",
-      "wp_id": 31572
+      "title": "Anthropic's Claude can now create editable documents",
+      "wp_id": 31587
     }
   ],
   "state": "published"
