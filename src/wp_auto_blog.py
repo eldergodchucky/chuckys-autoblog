@@ -6724,6 +6724,8 @@ def run_once(args: argparse.Namespace) -> int:
                 )
                 print(_stub_msg)
                 generation_failures.append(_stub_msg)
+                if not args.dry_run:
+                    mark_used(conn, cluster, article, None, "skipped_stub")
                 continue
 
             if args.dry_run:
