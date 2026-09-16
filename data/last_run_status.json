@@ -2,23 +2,27 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2842,
-  "finished_at": "2026-09-16T10:12:35.119676+00:00",
-  "generation_failures": [],
-  "inserted": 70,
-  "message": "Published 1 post(s).",
+  "fetched": 2843,
+  "finished_at": "2026-09-16T15:01:01.603976+00:00",
+  "generation_failures": [
+    "Skipped candidate 'AI is reshaping open source software and straining the systems that sustain it': Free article failed quality gate: article has only 85 words; article has only 2 paragraphs",
+    "Skipped candidate 'EU chief to unveil social media, gaming curbs for under-15s': Free article failed quality gate: article has only 53 words; article has only 2 paragraphs"
+  ],
+  "inserted": 186,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gadgets"
+        "ai",
+        "science",
+        "software"
       ],
       "sources": [
-        "Android Authority News",
-        "Engadget"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "BOOX debuts three new E-Ink tablets",
-      "wp_id": 31553
+      "title": "The sexy AI-powered dating app scams are here",
+      "wp_id": 31572
     }
   ],
   "state": "published"
