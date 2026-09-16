@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2842,
-  "finished_at": "2026-09-15T22:18:44.956942+00:00",
+  "finished_at": "2026-09-16T00:41:28.482867+00:00",
   "generation_failures": [],
-  "inserted": 83,
+  "inserted": 35,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "phones",
+        "android",
+        "space",
         "science"
       ],
       "sources": [
-        "Phys.org Medical Research"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Mobile CT lung cancer screening expands access for underserved populations in Brazil",
-      "wp_id": 31494
+      "title": "NASA Activates Roman\u2019s Primary Instrument",
+      "wp_id": 31503
     }
   ],
   "state": "published"
