@@ -4583,7 +4583,10 @@ FEED_JUNK_PATTERNS = tuple(
         r"\bstay tuned\b[^.]*\.?",
         r"\baffiliate links?\b[^.]*\.?",
         r"\bmay earn (?:us|me) a commission\b[^.]*\.?",
-        r"\bwe may (?:earn|receive) (?:a )?commission\b[^.]*\.?",
+        r"\bwe may (?:earn|receive) (?:a )?(?:commission|small payment)\b[^.]*\.?",
+        r"(?:note:\s*)?(?:is an )?affiliate partner\b.*",
+        r"\bdeals newsletter\b[^.]*\.?",
+        r"\badd as (?:a )?preferred source\b.*",
         r"\b(?:all products|some products) featured\b[^.]*\.?",
         r"^general technology\s+",
         r"^technology news\s+",
@@ -4631,6 +4634,10 @@ PAGE_CHROME_SENTENCE = re.compile(
     r"|\bdownload pdf abstract\b"
     r"|\b[A-Z][a-z]+(?: [A-Z][a-z]+){1,3}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2},?\s+\d{4}\b"
     r"|\b[A-Z][a-z]+(?: [A-Z][a-z]+)+,\s+[A-Za-z ]+(?:edited|written|reported)\s+by\b"
+    r"|\bwhen you click a link\b"
+    r"|\bwe may (?:earn|receive) (?:a )?(?:commission|small payment)\b"
+    r"|\baffiliate partner\b"
+    r"|\bdeals newsletter\b"
     r")"
 )
 
@@ -5006,7 +5013,13 @@ _HARD_STOP_PATTERNS = re.compile(
     r"|Merch store"
     r"|Read all comments\b"
     r"|Home News Reviews Compare Coverage"
-    r"|Related articles\s*\n"
+    r"|\bRelated articles\b"
+    r"|\bRelated stories\b"
+    r"|\bPopular stories\b"
+    r"|\bTrending stories\b"
+    r"|\bAdd as (?:a )?preferred source\b"
+    r"|\bDeals Newsletter\b"
+    r"|Note:\s*(?:is an)?\s*affiliate partner"
     r")"
 )
 
