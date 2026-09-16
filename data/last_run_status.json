@@ -3,23 +3,22 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2842,
-  "finished_at": "2026-09-16T00:41:28.482867+00:00",
+  "finished_at": "2026-09-16T05:19:43.491754+00:00",
   "generation_failures": [],
-  "inserted": 35,
+  "inserted": 37,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "android",
-        "space",
-        "science"
+        "ai",
+        "software"
       ],
       "sources": [
-        "NASA Science"
+        "Phys.org Technology"
       ],
       "status": "publish",
-      "title": "NASA Activates Roman\u2019s Primary Instrument",
-      "wp_id": 31503
+      "title": "EU to propose curbing social media",
+      "wp_id": 31527
     }
   ],
   "state": "published"
