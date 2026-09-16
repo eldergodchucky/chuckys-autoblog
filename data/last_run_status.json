@@ -3,22 +3,22 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2842,
-  "finished_at": "2026-09-16T05:19:43.491754+00:00",
+  "finished_at": "2026-09-16T10:12:35.119676+00:00",
   "generation_failures": [],
-  "inserted": 37,
+  "inserted": 70,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "software"
+        "gadgets"
       ],
       "sources": [
-        "Phys.org Technology"
+        "Android Authority News",
+        "Engadget"
       ],
       "status": "publish",
-      "title": "EU to propose curbing social media",
-      "wp_id": 31527
+      "title": "BOOX debuts three new E-Ink tablets",
+      "wp_id": 31553
     }
   ],
   "state": "published"
