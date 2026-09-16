@@ -1574,7 +1574,9 @@ def is_dense_academic_paper(cluster: list[Item]) -> bool:
     dense_academic_signatures = (
         "lim domain", "proteinuria", "proteasome", "cranial anthropometry",
         "pediarespecg", "pediaraspecg", "cgas-sting", "mtdna", "nf-κb",
-        "histopatholog", "xenograft"
+        "histopatholog", "xenograft", "randomised", "randomized",
+        "controlled trial", "epigenome", "mechanotransduction",
+        "tumor suppressor", "epidemiological", "transmission dynamics"
     )
     if any(sig in title_lower for sig in dense_academic_signatures):
         return True
