@@ -2,30 +2,28 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2846,
-  "finished_at": "2026-09-17T04:54:57.393426+00:00",
+  "fetched": 2845,
+  "finished_at": "2026-09-17T09:52:23.803952+00:00",
   "generation_failures": [
-    "Skipped candidate 'Controlling Tremors with Wearables #WearableWednesday': Free article failed quality gate: article has only 84 words; article has only 3 paragraphs",
-    "Skipped candidate 'Blast exposure in military associated with conditions like seizures, stroke years later': Free article failed quality gate: article has only 113 words; article has only 4 paragraphs",
-    "Skipped candidate 'Blast exposure in military associated with conditions like seizures, stroke years later': Free article failed quality gate: article has only 113 words; article has only 4 paragraphs",
-    "Skipped candidate 'Tiny polymer devices mimic neuron firing, pointing toward energy-efficient edge computing': Free article failed quality gate: article has only 56 words; article has only 2 paragraphs",
-    "Skipped candidate 'One material, two transistor types: 'Universal charge injector' points toward densely stacked AI chips': Free article failed quality gate: article has only 96 words; article has only 3 paragraphs"
+    "Skipped candidate 'Amendment 74: A.14 Atmosphere Research Program Due Date Delay and Clarification Regarding the use of Generative AI': Free article failed quality gate: article has only 239 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Patient-specific AI technique could make minimally invasive surgeries safer and more precise': Free article failed quality gate: article has only 90 words; article has only 4 paragraphs",
+    "Skipped candidate 'Patient-specific AI technique could make minimally invasive surgeries safer and more precise': Free article failed quality gate: article has only 90 words; article has only 4 paragraphs",
+    "Skipped candidate 'AI model spots spoofed website addresses with up to 99% accuracy': Free article failed quality gate: article has only 77 words; article has only 2 paragraphs"
   ],
-  "inserted": 24,
-  "message": "Published 1 post(s). Skipped 5 low-quality candidate(s).",
+  "inserted": 74,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science",
-        "software"
+        "ai",
+        "science"
       ],
       "sources": [
-        "NASA Science"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Cargo Mission and Crew-13 Updates; Station Research",
-      "wp_id": 31623
+      "title": "Anthropic and OpenAI want to embed safety evaluators. Will they really be",
+      "wp_id": 31639
     }
   ],
   "state": "published"
