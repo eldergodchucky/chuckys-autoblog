@@ -3,24 +3,29 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2846,
-  "finished_at": "2026-09-16T21:56:50.664209+00:00",
-  "generation_failures": [],
-  "inserted": 101,
-  "message": "Published 1 post(s).",
+  "finished_at": "2026-09-17T00:11:54.808778+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Controlling Tremors with Wearables #WearableWednesday': Free article failed quality gate: article has only 84 words; article has only 3 paragraphs",
+    "Skipped candidate 'Blast exposure in military associated with conditions like seizures, stroke years later': Free article failed quality gate: article has only 113 words; article has only 4 paragraphs",
+    "Skipped candidate 'Blast exposure in military associated with conditions like seizures, stroke years later': Free article failed quality gate: article has only 113 words; article has only 4 paragraphs",
+    "Skipped candidate 'Tiny polymer devices mimic neuron firing, pointing toward energy-efficient edge computing': Free article failed quality gate: article has only 56 words; article has only 2 paragraphs"
+  ],
+  "inserted": 44,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
         "ai",
-        "apple",
-        "android"
+        "gadgets"
       ],
       "sources": [
-        "GSMArena",
-        "MacRumors"
+        "Android Authority News",
+        "TechCrunch",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Apple Memory Supplier Explores U.S. Manufacturing With Intel",
-      "wp_id": 31596
+      "title": "Google Home will soon let you swap Gemini for Claude",
+      "wp_id": 31604
     }
   ],
   "state": "published"
