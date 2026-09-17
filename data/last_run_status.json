@@ -2,27 +2,28 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2803,
-  "finished_at": "2026-09-17T18:37:56.160337+00:00",
+  "fetched": 2804,
+  "finished_at": "2026-09-17T21:48:16.611565+00:00",
   "generation_failures": [
-    "Skipped candidate 'Purer fentanyl won\u2019t solve the U.S. overdose death crisis, study says': Free article failed quality gate: article has only 66 words; article has only 3 paragraphs",
+    "Skipped candidate 'Degrading dopants could boost organic semiconductor charge levels 100-fold': Free article failed quality gate: article has only 48 words; article has only 2 paragraphs",
+    "Skipped candidate ''Artificial leaf' generates clean hydrogen from contaminated seawater': Free article failed quality gate: article has only 46 words; article has only 2 paragraphs",
     "Skipped candidate 'Huawei unveils new chip technologies as Chinese firm steps up the AI race with Nvidia': Free article failed quality gate: article has only 50 words; article has only 3 paragraphs"
   ],
-  "inserted": 157,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 94,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "ai",
+        "space",
         "science",
         "security"
       ],
       "sources": [
-        "The Verge"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Inside the suddenly explosive world of AI safety",
-      "wp_id": 31671
+      "title": "FORTE",
+      "wp_id": 31679
     }
   ],
   "state": "published"
