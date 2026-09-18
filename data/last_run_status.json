@@ -2,27 +2,47 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2805,
-  "finished_at": "2026-09-18T03:56:22.089662+00:00",
+  "fetched": 2806,
+  "finished_at": "2026-09-18T08:51:40.952852+00:00",
   "generation_failures": [
-    "Skipped candidate 'Degrading dopants could boost organic semiconductor charge levels 100-fold': Free article failed quality gate: article has only 48 words; article has only 2 paragraphs",
-    "Skipped candidate 'Your robotic vacuum is a witness: What home robots mean for evidence, privacy and the law': Free article failed quality gate: article has only 86 words; article has only 4 paragraphs",
-    "Skipped candidate 'Huawei unveils new chip technologies as Chinese firm steps up the AI race with Nvidia': Free article failed quality gate: article has only 50 words; article has only 3 paragraphs"
+    "Skipped candidate 'New findings shed light on rare newly identified TCF7L2-related neurodevelopmental disorder': Free article failed quality gate: article has only 135 words; article has only 4 paragraphs",
+    "Skipped candidate 'New findings shed light on rare newly identified TCF7L2-related neurodevelopmental disorder': Free article failed quality gate: article has only 135 words; article has only 4 paragraphs",
+    "Skipped candidate 'Many dementia patients don't report their diagnosis, study finds': Free article failed quality gate: article has only 81 words; article has only 3 paragraphs",
+    "Skipped candidate 'Many dementia patients don't report their diagnosis, study finds': Free article failed quality gate: article has only 81 words; article has only 3 paragraphs",
+    "Skipped candidate 'Maternal postpartum depressive symptoms linked to nearly triple infant mortality risk': Free article failed quality gate: article has only 81 words; article has only 4 paragraphs",
+    "Skipped candidate 'Maternal postpartum depressive symptoms linked to nearly triple infant mortality risk': Free article failed quality gate: article has only 81 words; article has only 4 paragraphs",
+    "Skipped candidate 'New MRI measure reveals how closely blood flow matches brain cells' energy needs': Free article failed quality gate: article has only 92 words; article has only 4 paragraphs",
+    "Skipped candidate 'New MRI measure reveals how closely blood flow matches brain cells' energy needs': Free article failed quality gate: article has only 92 words; article has only 4 paragraphs",
+    "Skipped candidate 'Teaching the immune system to control HIV': Free article failed quality gate: article has only 119 words; article has only 4 paragraphs",
+    "Skipped candidate 'Clinical physical exercise trial finds changes in mood and new neuron production': Free article failed quality gate: article has only 82 words; article has only 4 paragraphs",
+    "Skipped candidate 'Clinical physical exercise trial finds changes in mood and new neuron production': Free article failed quality gate: article has only 82 words; article has only 4 paragraphs",
+    "Skipped candidate 'Continuous glucose monitors may reveal hidden heart risk patterns in adults without diabetes': Free article failed quality gate: article has only 128 words; article has only 4 paragraphs",
+    "Skipped candidate 'Blood test trends may help identify patients at increased risk of cancer': Free article failed quality gate: article has only 81 words; article has only 4 paragraphs",
+    "Skipped candidate 'HIV injections work better than tablets for young people, clinical trial finds': Free article failed quality gate: article has only 83 words; article has only 4 paragraphs",
+    "Skipped candidate 'HIV injections work better than tablets for young people, clinical trial finds': Free article failed quality gate: article has only 83 words; article has only 4 paragraphs",
+    "Skipped candidate 'Gestures influence the way our brains process grammar': Free article failed quality gate: article has only 75 words; article has only 3 paragraphs",
+    "Skipped candidate 'Gestures influence the way our brains process grammar': Free article failed quality gate: article has only 75 words; article has only 3 paragraphs",
+    "Skipped candidate 'Review finds inconsistent 'neurodivergence' language may complicate research and patient care': Free article failed quality gate: article has only 99 words; article has only 4 paragraphs",
+    "Skipped candidate 'Review finds inconsistent 'neurodivergence' language may complicate research and patient care': Free article failed quality gate: article has only 99 words; article has only 4 paragraphs",
+    "Skipped candidate 'Teaching the immune system to control HIV': Free article failed quality gate: article has only 119 words; article has only 4 paragraphs",
+    "Skipped candidate 'Continuous glucose monitors may reveal hidden heart risk patterns in adults without diabetes': Free article failed quality gate: article has only 128 words; article has only 4 paragraphs",
+    "Skipped candidate 'Blood test trends may help identify patients at increased risk of cancer': Free article failed quality gate: article has only 81 words; article has only 4 paragraphs",
+    "Skipped candidate 'REM and deep sleep, not just total sleep time, associated with disease risk': Free article failed quality gate: article has only 99 words; article has only 4 paragraphs"
   ],
-  "inserted": 26,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 43,
+  "message": "Published 1 post(s). Skipped 23 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "Smithsonian History"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Scientists Created Mice With Half-Human Brains. The Hybrid Animals Could Revolutionize Our",
-      "wp_id": 31705
+      "title": "FarmFlux",
+      "wp_id": 31722
     }
   ],
   "state": "published"
