@@ -2,24 +2,24 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2807,
-  "finished_at": "2026-09-18T21:54:25.488874+00:00",
+  "fetched": 2808,
+  "finished_at": "2026-09-18T23:55:54.949024+00:00",
   "generation_failures": [],
-  "inserted": 36,
+  "inserted": 17,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "android",
-        "phones"
+        "ai",
+        "software"
       ],
       "sources": [
-        "Android Authority News",
-        "Engadget"
+        "Phys.org Technology",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Clicks Communicator surprise spec bump asks \u2018what RAM crisis?\u2019",
-      "wp_id": 31768
+      "title": "Gavin Newsom is pushing for an AI kill switch",
+      "wp_id": 31776
     }
   ],
   "state": "published"
