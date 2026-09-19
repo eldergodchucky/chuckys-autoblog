@@ -3,23 +3,30 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2808,
-  "finished_at": "2026-09-18T23:55:54.949024+00:00",
-  "generation_failures": [],
-  "inserted": 17,
-  "message": "Published 1 post(s).",
+  "finished_at": "2026-09-19T03:30:23.982917+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Running marathons with type 1 diabetes can be safe, small study shows': Free article failed quality gate: article has only 103 words; article has only 3 paragraphs",
+    "Skipped candidate 'Running marathons with type 1 diabetes can be safe, small study shows': Free article failed quality gate: article has only 103 words; article has only 3 paragraphs",
+    "Skipped candidate 'Sex is safe in type 1 diabetes, shows small study using continuous glucose monitoring devices': Free article failed quality gate: article has only 112 words; article has only 5 paragraphs",
+    "Skipped candidate 'Sex is safe in type 1 diabetes, shows small study using continuous glucose monitoring devices': Free article failed quality gate: article has only 112 words; article has only 5 paragraphs",
+    "Skipped candidate 'Apple Releases Xcode 27.1 Beta With iPhone Duo Support': Free article failed quality gate: article has only 87 words; article has only 4 paragraphs",
+    "Skipped candidate 'Waste from paper production could help make stronger, lower-carbon car materials': Free article failed quality gate: article has only 97 words; article has only 3 paragraphs",
+    "Skipped candidate 'Researchers used Claude to breach OpenAI's internal systems': Free article failed quality gate: article has only 42 words; article has only 3 paragraphs"
+  ],
+  "inserted": 11,
+  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "software"
+        "science",
+        "security"
       ],
       "sources": [
-        "Phys.org Technology",
-        "The Verge"
+        "Hackaday"
       ],
       "status": "publish",
-      "title": "Gavin Newsom is pushing for an AI kill switch",
-      "wp_id": 31776
+      "title": "This Week in Security: Flock Cameras Are Old",
+      "wp_id": 31790
     }
   ],
   "state": "published"
