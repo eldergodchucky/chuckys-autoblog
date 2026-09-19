@@ -1,6 +1,6 @@
 {
   "dry_run": false,
-  "finished_at": "2026-09-19T12:38:36.837495+00:00",
+  "finished_at": "2026-09-19T16:05:58.447787+00:00",
   "message": "UnicodeEncodeError: 'ascii' codec can't encode character '\\u2014' in position 36: ordinal not in range(128)",
   "state": "failed"
 }
