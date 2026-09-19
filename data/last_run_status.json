@@ -2,31 +2,24 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2808,
-  "finished_at": "2026-09-19T03:30:23.982917+00:00",
+  "fetched": 2809,
+  "finished_at": "2026-09-19T08:16:53.130199+00:00",
   "generation_failures": [
-    "Skipped candidate 'Running marathons with type 1 diabetes can be safe, small study shows': Free article failed quality gate: article has only 103 words; article has only 3 paragraphs",
-    "Skipped candidate 'Running marathons with type 1 diabetes can be safe, small study shows': Free article failed quality gate: article has only 103 words; article has only 3 paragraphs",
-    "Skipped candidate 'Sex is safe in type 1 diabetes, shows small study using continuous glucose monitoring devices': Free article failed quality gate: article has only 112 words; article has only 5 paragraphs",
-    "Skipped candidate 'Sex is safe in type 1 diabetes, shows small study using continuous glucose monitoring devices': Free article failed quality gate: article has only 112 words; article has only 5 paragraphs",
-    "Skipped candidate 'Apple Releases Xcode 27.1 Beta With iPhone Duo Support': Free article failed quality gate: article has only 87 words; article has only 4 paragraphs",
-    "Skipped candidate 'Waste from paper production could help make stronger, lower-carbon car materials': Free article failed quality gate: article has only 97 words; article has only 3 paragraphs",
-    "Skipped candidate 'Researchers used Claude to breach OpenAI's internal systems': Free article failed quality gate: article has only 42 words; article has only 3 paragraphs"
+    "Skipped candidate 'Hubble spots an out-of-sync galaxy': Free article failed quality gate: article has only 77 words; article has only 3 paragraphs"
   ],
-  "inserted": 11,
-  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
+  "inserted": 9,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "security"
+        "space"
       ],
       "sources": [
-        "Hackaday"
+        "Smithsonian History"
       ],
       "status": "publish",
-      "title": "This Week in Security: Flock Cameras Are Old",
-      "wp_id": 31790
+      "title": "The Moon Just Got a Massive New Crater That's Wider Than Two",
+      "wp_id": 31806
     }
   ],
   "state": "published"
