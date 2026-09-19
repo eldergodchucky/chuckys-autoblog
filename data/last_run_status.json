@@ -1,26 +1,6 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
-  "feeds": 62,
-  "fetched": 2809,
-  "finished_at": "2026-09-19T08:16:53.130199+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Hubble spots an out-of-sync galaxy': Free article failed quality gate: article has only 77 words; article has only 3 paragraphs"
-  ],
-  "inserted": 9,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
-  "posts": [
-    {
-      "categories": [
-        "space"
-      ],
-      "sources": [
-        "Smithsonian History"
-      ],
-      "status": "publish",
-      "title": "The Moon Just Got a Massive New Crater That's Wider Than Two",
-      "wp_id": 31806
-    }
-  ],
-  "state": "published"
+  "finished_at": "2026-09-19T12:38:36.837495+00:00",
+  "message": "UnicodeEncodeError: 'ascii' codec can't encode character '\\u2014' in position 36: ordinal not in range(128)",
+  "state": "failed"
 }
