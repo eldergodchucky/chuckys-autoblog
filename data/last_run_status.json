@@ -1,11 +1,11 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 4,
   "feeds": 62,
   "fetched": 2809,
-  "finished_at": "2026-09-20T20:50:37.646027+00:00",
+  "finished_at": "2026-09-20T23:03:28.795881+00:00",
   "generation_failures": [],
-  "inserted": 20,
+  "inserted": 14,
   "message": "Published 1 post(s).",
   "posts": [
     {
@@ -15,11 +15,11 @@
         "software"
       ],
       "sources": [
-        "BleepingComputer"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Openai Codex Sandboxto Run Commands on Host",
-      "wp_id": 31937
+      "title": "Even mid-sprint to a secret flight",
+      "wp_id": 31948
     }
   ],
   "state": "published"
