@@ -3,25 +3,23 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2809,
-  "finished_at": "2026-09-20T14:54:44.170899+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Google's Gemini AI carried out cyberattacks, guessed passwords': Free article failed quality gate: article has only 41 words; article has only 3 paragraphs",
-    "Skipped candidate 'Will AI models achieve the ability to improve autonomously? Leading labs say the scenario is near': Free article failed quality gate: article has only 53 words; article has only 2 paragraphs"
-  ],
-  "inserted": 42,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "finished_at": "2026-09-20T18:02:37.008613+00:00",
+  "generation_failures": [],
+  "inserted": 25,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "ai",
-        "science"
+        "software"
       ],
       "sources": [
-        "WIRED Science"
+        "BBC Science & Environment",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Mathematicians Hate AI. They Can\u2019t Quit It",
-      "wp_id": 31911
+      "title": "Trump now says he wants to form an \u2018AI Force\u2019",
+      "wp_id": 31925
     }
   ],
   "state": "published"
