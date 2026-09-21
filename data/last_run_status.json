@@ -1,25 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2809,
-  "finished_at": "2026-09-20T23:03:28.795881+00:00",
-  "generation_failures": [],
-  "inserted": 14,
-  "message": "Published 1 post(s).",
+  "finished_at": "2026-09-21T01:07:01.441221+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Google's Gemini AI carried out cyberattacks, guessed passwords': Free article failed quality gate: article has only 41 words; article has only 3 paragraphs"
+  ],
+  "inserted": 17,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science",
-        "software"
+        "health",
+        "science"
       ],
       "sources": [
-        "TechCrunch"
+        "ScienceDaily Health & Medicine"
       ],
       "status": "publish",
-      "title": "Even mid-sprint to a secret flight",
-      "wp_id": 31948
+      "title": "Hidden gut defect that may explain why IBD keeps coming back",
+      "wp_id": 31960
     }
   ],
   "state": "published"
