@@ -1,27 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2809,
-  "finished_at": "2026-09-21T13:11:57.516003+00:00",
-  "generation_failures": [
-    "Skipped candidate 'To understand the solar cycle, notice how the sun sleeps': Free article failed quality gate: article has only 131 words; article has only 4 paragraphs",
-    "Skipped candidate 'Widely Attended Gatherings (WAGs) Determinations': Free article failed quality gate: article has only 3 paragraphs"
-  ],
-  "inserted": 141,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "fetched": 2813,
+  "finished_at": "2026-09-21T18:44:38.609772+00:00",
+  "generation_failures": [],
+  "inserted": 229,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "apple"
       ],
       "sources": [
-        "NASA Science"
+        "Ars Technica Gadgets",
+        "WIRED Gear"
       ],
       "status": "publish",
-      "title": "Johnson Space Center Sparks Curiosity at Houston\u2019s 33rd Annual Japan Festival",
-      "wp_id": 32005
+      "title": "Apple Mac Mini (M6) Review: For the AI Curious",
+      "wp_id": 32026
     }
   ],
   "state": "published"
