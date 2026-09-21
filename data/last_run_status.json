@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 4,
   "feeds": 62,
-  "fetched": 2813,
-  "finished_at": "2026-09-21T18:44:38.609772+00:00",
+  "fetched": 2814,
+  "finished_at": "2026-09-21T22:18:00.983000+00:00",
   "generation_failures": [],
-  "inserted": 229,
+  "inserted": 92,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "apple"
+        "tech",
+        "gadgets"
       ],
       "sources": [
-        "Ars Technica Gadgets",
-        "WIRED Gear"
+        "Engadget",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Apple Mac Mini (M6) Review: For the AI Curious",
-      "wp_id": 32026
+      "title": "Paramount settles lawsuit blocking $110 billion Warner Bros. merger",
+      "wp_id": 32038
     }
   ],
   "state": "published"
