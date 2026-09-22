@@ -1,45 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 3,
+  "feed_warnings": 4,
   "feeds": 62,
   "fetched": 2813,
-  "finished_at": "2026-09-22T11:48:18.346914+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Early Mars rocks reveal at least three separate water episodes': Free article failed quality gate: article has only 122 words; article has only 4 paragraphs",
-    "Skipped candidate 'Bike-sharing can make big dent in tailpipe emissions': Free article failed quality gate: article has only 81 words; article has only 3 paragraphs",
-    "Skipped candidate 'Detect Hidden Cameras with SweepLED': Free article failed quality gate: article has only 55 words; article has only 2 paragraphs",
-    "Skipped candidate 'Ways of Knowing: Our Sun in the Universe Poster': Free article failed quality gate: article has only 199 words; article has only 4 paragraphs",
-    "Skipped candidate 'Ways of Knowing: Our Sun and Earth Poster': Free article failed quality gate: article has only 180 words; article has only 3 paragraphs",
-    "Skipped candidate 'Brain-mapping framework reveals shifts in information flow during pain and movie watching': Free article failed quality gate: article has only 88 words; article has only 2 paragraphs",
-    "Skipped candidate 'Jupiter uses a surprisingly complex system to fend off particles from the sun': Free article failed quality gate: article has only 103 words; article has only 4 paragraphs",
-    "Skipped candidate 'Brain-mapping framework reveals shifts in information flow during pain and movie watching': Free article failed quality gate: article has only 88 words; article has only 2 paragraphs",
-    "Skipped candidate 'Researchers evaluate materials for solid-state batteries under practical manufacturing conditions': Free article failed quality gate: article has only 89 words; article has only 2 paragraphs",
-    "Skipped candidate 'Experimental drug raises energy expenditure but fails to activate brown fat in human study': Free article failed quality gate: article has only 98 words; article has only 4 paragraphs",
-    "Skipped candidate 'Experimental drug raises energy expenditure but fails to activate brown fat in human study': Free article failed quality gate: article has only 98 words; article has only 4 paragraphs",
-    "Skipped candidate 'Lupus patients can lower their heart disease risk by sticking to one common treatment, study says': Free article failed quality gate: article has only 99 words; article has only 4 paragraphs",
-    "Skipped candidate 'Lupus patients can lower their heart disease risk by sticking to one common treatment, study says': Free article failed quality gate: article has only 99 words; article has only 4 paragraphs",
-    "Skipped candidate 'Ways of Knowing: Sun, Earth, and Life Relationships Poster': Free article failed quality gate: article has only 184 words; article has only 4 paragraphs",
-    "Skipped candidate 'Physician warmth and competence may help patients worry less over normal test results': Free article failed quality gate: article has only 109 words; article has only 4 paragraphs",
-    "Skipped candidate 'Physician warmth and competence may help patients worry less over normal test results': Free article failed quality gate: article has only 109 words; article has only 4 paragraphs",
-    "Skipped candidate 'Engaging the core could regulate blood flow in the brain': Free article failed quality gate: article has only 110 words; article has only 4 paragraphs",
-    "Skipped candidate 'Engaging the core could regulate blood flow in the brain': Free article failed quality gate: article has only 110 words; article has only 4 paragraphs",
-    "Skipped candidate 'Postpartum pain and depression hinder women's recovery after childbirth, study finds': Free article failed quality gate: article has only 90 words; article has only 3 paragraphs",
-    "Skipped candidate 'Postpartum pain and depression hinder women's recovery after childbirth, study finds': Free article failed quality gate: article has only 90 words; article has only 3 paragraphs"
-  ],
-  "inserted": 92,
-  "message": "Published 1 post(s). Skipped 20 low-quality candidate(s).",
+  "finished_at": "2026-09-22T16:26:24.753733+00:00",
+  "generation_failures": [],
+  "inserted": 204,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science"
+        "ai",
+        "software"
       ],
       "sources": [
-        "NASA Science"
+        "ScienceDaily Top Technology"
       ],
       "status": "publish",
-      "title": "NASA Welcomes Albania as Newest Artemis Accords Signatory",
-      "wp_id": 32092
+      "title": "MIT\u2019s tiny flying robot gets 450% faster with AI",
+      "wp_id": 32105
     }
   ],
   "state": "published"
