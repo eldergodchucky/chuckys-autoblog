@@ -1,26 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2815,
-  "finished_at": "2026-09-22T19:50:22.274560+00:00",
-  "generation_failures": [],
-  "inserted": 98,
-  "message": "Published 1 post(s).",
+  "fetched": 2817,
+  "finished_at": "2026-09-22T22:46:50.049142+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Is a nearby advanced alien civilization out there waiting to pounce on Earth? Unlikely, says new study': Free article failed quality gate: article has only 50 words; article has only 3 paragraphs"
+  ],
+  "inserted": 83,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "apple",
-        "gadgets"
+        "science",
+        "history"
       ],
       "sources": [
-        "9to5Mac",
-        "TechCrunch"
+        "SciTechDaily Science"
       ],
       "status": "publish",
-      "title": "Apple working on Whoop-style screenless fitness tracker",
-      "wp_id": 32117
+      "title": "Four Million Ancient Coins Reveal What Really Held the Roman Empire Together",
+      "wp_id": 32129
     }
   ],
   "state": "published"
