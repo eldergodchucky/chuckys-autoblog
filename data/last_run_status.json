@@ -1,27 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2814,
-  "finished_at": "2026-09-22T01:02:24.749797+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Detect Hidden Cameras with SweepLED': Free article failed quality gate: article has only 55 words; article has only 2 paragraphs",
-    "Skipped candidate 'Report: AI glasses shipments surged 263% in H1 2026 as Apple prepares to enter the market': Free article failed quality gate: article has only 32 words; article has only 2 paragraphs"
-  ],
-  "inserted": 34,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "fetched": 2813,
+  "finished_at": "2026-09-22T06:15:16.096879+00:00",
+  "generation_failures": [],
+  "inserted": 40,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "security"
+        "health",
+        "space",
+        "science"
       ],
       "sources": [
-        "BleepingComputer",
-        "Phys.org Technology"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Google fined \u20ac403 million over location data privacy violations",
-      "wp_id": 32048
+      "title": "About CSDA",
+      "wp_id": 32070
     }
   ],
   "state": "published"
