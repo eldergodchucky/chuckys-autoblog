@@ -2,23 +2,25 @@
   "dry_run": false,
   "feed_warnings": 4,
   "feeds": 62,
-  "fetched": 2813,
-  "finished_at": "2026-09-22T16:26:24.753733+00:00",
+  "fetched": 2815,
+  "finished_at": "2026-09-22T19:50:22.274560+00:00",
   "generation_failures": [],
-  "inserted": 204,
+  "inserted": 98,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "software"
+        "health",
+        "apple",
+        "gadgets"
       ],
       "sources": [
-        "ScienceDaily Top Technology"
+        "9to5Mac",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "MIT\u2019s tiny flying robot gets 450% faster with AI",
-      "wp_id": 32105
+      "title": "Apple working on Whoop-style screenless fitness tracker",
+      "wp_id": 32117
     }
   ],
   "state": "published"
