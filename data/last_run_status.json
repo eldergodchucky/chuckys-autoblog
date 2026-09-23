@@ -2,31 +2,23 @@
   "dry_run": false,
   "feed_warnings": 4,
   "feeds": 62,
-  "fetched": 2761,
-  "finished_at": "2026-09-23T16:40:55.656501+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Newly discovered inflammatory cell signaling could open the door to autoimmune disease treatments': Free article failed quality gate: article has only 87 words; article has only 4 paragraphs",
-    "Skipped candidate 'Newly discovered inflammatory cell signaling could open the door to autoimmune disease treatments': Free article failed quality gate: article has only 87 words; article has only 4 paragraphs",
-    "Skipped candidate 'Scientists discover previously unknown \u201cmitochondrial plaques\u201d in Alzheimer\u2019s disease brains': Free article failed quality gate: article has only 76 words; article has only 4 paragraphs",
-    "Skipped candidate 'Simple test could take the pain out of uterine cancer check': Free article failed quality gate: article has only 115 words; article has only 4 paragraphs",
-    "Skipped candidate 'Simple test could take the pain out of uterine cancer check': Free article failed quality gate: article has only 115 words; article has only 4 paragraphs",
-    "Skipped candidate 'Researchers find dietary interventions may prevent inflammatory symptoms associated with Hirschsprung disease': Free article failed quality gate: article has only 86 words; article has only 4 paragraphs",
-    "Skipped candidate 'Researchers find dietary interventions may prevent inflammatory symptoms associated with Hirschsprung disease': Free article failed quality gate: article has only 86 words; article has only 4 paragraphs"
-  ],
-  "inserted": 188,
-  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
+  "fetched": 2763,
+  "finished_at": "2026-09-23T19:50:26.405091+00:00",
+  "generation_failures": [],
+  "inserted": 118,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "science"
+        "science",
+        "history"
       ],
       "sources": [
-        "SciTechDaily Health"
+        "Smithsonian History"
       ],
       "status": "publish",
-      "title": "Scientists Discover an Unexpected Connection Between Stem Cells and Childhood Brain Tumors",
-      "wp_id": 32194
+      "title": "Researchers in Turkey Have Unearthed an Ancient Fragment Inscribed With the World\u2019s",
+      "wp_id": 32204
     }
   ],
   "state": "published"
