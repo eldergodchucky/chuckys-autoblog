@@ -2,32 +2,31 @@
   "dry_run": false,
   "feed_warnings": 4,
   "feeds": 62,
-  "fetched": 2758,
-  "finished_at": "2026-09-23T11:59:08.456681+00:00",
+  "fetched": 2761,
+  "finished_at": "2026-09-23T16:40:55.656501+00:00",
   "generation_failures": [
-    "Skipped candidate 'Anthropic, OpenAI release cheaper AI even as safety fears grow': Free article failed quality gate: article has only 44 words; article has only 3 paragraphs",
-    "Skipped candidate 'Worries about an AI internet takeover gain new urgency among doomsday scenarios': Free article failed quality gate: article has only 54 words; article has only 2 paragraphs",
-    "Skipped candidate 'A look at AI doomsday scenarios that researchers say could put humanity at risk': Free article failed quality gate: article has only 91 words; article has only 3 paragraphs",
-    "Skipped candidate 'AI could cut medical device recalls by nearly a third, study finds': Free article failed quality gate: article has only 135 words; article has only 4 paragraphs",
-    "Skipped candidate 'AI could cut medical device recalls by nearly a third, study finds': Free article failed quality gate: article has only 135 words; article has only 4 paragraphs",
-    "Skipped candidate 'When AI disagrees, people change how they perceive the technology\u2014not their original view': Free article failed quality gate: article has only 83 words; article has only 3 paragraphs",
-    "Skipped candidate 'New method makes AI brain-disorder screening more transparent and computationally efficient': Free article failed quality gate: article has only 52 words; article has only 3 paragraphs",
-    "Skipped candidate 'New method makes AI brain-disorder screening more transparent and computationally efficient': Free article failed quality gate: article has only 52 words; article has only 3 paragraphs"
+    "Skipped candidate 'Newly discovered inflammatory cell signaling could open the door to autoimmune disease treatments': Free article failed quality gate: article has only 87 words; article has only 4 paragraphs",
+    "Skipped candidate 'Newly discovered inflammatory cell signaling could open the door to autoimmune disease treatments': Free article failed quality gate: article has only 87 words; article has only 4 paragraphs",
+    "Skipped candidate 'Scientists discover previously unknown \u201cmitochondrial plaques\u201d in Alzheimer\u2019s disease brains': Free article failed quality gate: article has only 76 words; article has only 4 paragraphs",
+    "Skipped candidate 'Simple test could take the pain out of uterine cancer check': Free article failed quality gate: article has only 115 words; article has only 4 paragraphs",
+    "Skipped candidate 'Simple test could take the pain out of uterine cancer check': Free article failed quality gate: article has only 115 words; article has only 4 paragraphs",
+    "Skipped candidate 'Researchers find dietary interventions may prevent inflammatory symptoms associated with Hirschsprung disease': Free article failed quality gate: article has only 86 words; article has only 4 paragraphs",
+    "Skipped candidate 'Researchers find dietary interventions may prevent inflammatory symptoms associated with Hirschsprung disease': Free article failed quality gate: article has only 86 words; article has only 4 paragraphs"
   ],
-  "inserted": 108,
-  "message": "Published 1 post(s). Skipped 8 low-quality candidate(s).",
+  "inserted": 188,
+  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "ai",
+        "health",
         "science"
       ],
       "sources": [
-        "The Verge"
+        "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "OpenAI wants to consult elite mathematicians about how to not fumble again",
-      "wp_id": 32178
+      "title": "Scientists Discover an Unexpected Connection Between Stem Cells and Childhood Brain Tumors",
+      "wp_id": 32194
     }
   ],
   "state": "published"
