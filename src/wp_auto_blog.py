@@ -1414,6 +1414,22 @@ def category_weights() -> dict[str, int]:
 
             "health": 6,
 
+            "politics": 6,
+
+            "world": 6,
+
+            "business": 6,
+
+            "sports": 6,
+
+            "climate": 6,
+
+            "crime": 6,
+
+            "entertainment": 5,
+
+            "celebrities": 5,
+
             "history": 5,
 
             "tech": 4,
@@ -1432,7 +1448,7 @@ def category_rotation() -> list[str]:
 
         "CATEGORY_ROTATION",
 
-        "science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks,health,history",
+        "science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks,health,politics,world,business,sports,climate,crime,entertainment,celebrities,history",
 
     )
 
@@ -2880,6 +2896,34 @@ def category_takeaway(categories: set[str]) -> str:
 
         notes.append("science updates often start as research signals before they turn into products, tools, or policy questions")
 
+    if "politics" in categories:
+
+        notes.append("political coverage matters because it shapes policy, public trust, institutions, and the decisions voters and governments make next")
+
+    if "world" in categories:
+
+        notes.append("world news often matters because regional shocks, diplomacy, trade, and conflict can ripple across markets, migration, and daily life")
+
+    if "business" in categories:
+
+        notes.append("business coverage matters because company moves, hiring, pricing, and supply chains can affect jobs, spending, and the everyday cost of living")
+
+    if "sports" in categories:
+
+        notes.append("sports coverage matters because performance, transfers, injuries, and league decisions influence fan culture, team economics, and public attention")
+
+    if "climate" in categories:
+
+        notes.append("climate and energy reporting matters because storms, heat waves, infrastructure stress, and policy changes can reshape daily life and public planning")
+
+    if "crime" in categories:
+
+        notes.append("crime and legal coverage matters because investigations, court decisions, and public safety issues can reshape trust, governance, and community life")
+
+    if "entertainment" in categories or "celebrities" in categories:
+
+        notes.append("entertainment and celebrity coverage matters when a story shapes culture, fandom, media strategy, or public attention around major personalities")
+
     if "tutorials" in categories or "hacks" in categories:
 
         notes.append("hands-on posts are useful when they point to experiments readers can safely try, adapt, or learn from")
@@ -2928,6 +2972,22 @@ def category_reader_angle(category: str) -> str:
 
         "hacks": "hacks are strongest when they teach a reusable technique rather than a one-off trick",
 
+        "politics": "political coverage matters most when it changes leadership, policy direction, public trust, or what voters and institutions do next",
+
+        "world": "global coverage matters because diplomatic moves, economic shocks, and conflict can ripple across markets, migration, and everyday life",
+
+        "business": "business reporting matters because company decisions, pricing, labor, and supply chains can affect spending, jobs, and the broader economy",
+
+        "sports": "sports coverage matters when results, transfers, injuries, and team strategy change fan expectations, league pressure, and public attention",
+
+        "climate": "climate and energy reporting matters because heat, storms, policy shifts, and infrastructure strain impact safety, costs, and planning",
+
+        "crime": "crime and legal coverage matters when investigations, court decisions, or reforms influence public safety, trust, and institutional accountability",
+
+        "entertainment": "entertainment coverage should be read for culture, media strategy, and public reaction rather than just the headline buzz",
+
+        "celebrities": "celebrity stories matter when they shape public attention, media strategy, social trends, or the cultural conversation around a public figure",
+
         "tech": "platform stories matter when they shift what developers, creators, businesses, or ordinary users can do next",
 
     }
@@ -2969,6 +3029,20 @@ def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> li
     checks = [
 
         ("health", ("health", "medical", "medicine", "doctor", "hospital", "patient", "treatment", "disease", "virus", "vaccine", "clinical", "drug", "pharmaceutical", "nutrition", "fitness", "mental health", "wellness", "cancer", "diabetes", "heart", "blood pressure", "cholesterol", "obesity", "exercise", "diet", "supplement", "therapy", "symptom", "diagnosis", "cdc", "who", "nih", "fda", "harvard health", "mayo clinic", "webmd", "healthline")),
+
+        ("politics", ("politics", "political", "election", "campaign", "president", "prime minister", "government", "parliament", "senate", "congress", "policy", "candidate", "debate", "vote", "voting", "minister", "diplomacy", "foreign policy", "white house", "coalition", "legislation", "supreme court")),
+
+        ("world", ("world", "global", "international", "geopolitics", "diplomacy", "conflict", "war", "trade", "sanctions", "europe", "asia", "africa", "middle east", "security council", "markets", "foreign affairs")),
+
+        ("business", ("business", "company", "companies", "economy", "market", "markets", "trade", "supply chain", "supply chains", "inflation", "prices", "earnings", "startup", "ceo", "merger", "acquisition", "retail", "shipping", "factory", "manufacturing", "stocks")),
+
+        ("sports", ("sports", "sport", "football", "basketball", "baseball", "soccer", "tennis", "league", "match", "team", "transfer", "injury", "championship", "playoff", "roster", "tournament", "cup")),
+
+        ("climate", ("climate", "weather", "heat wave", "storm", "flood", "drought", "energy", "grid", "emissions", "carbon", "temperature", "wildfire", "hurricane", "extreme weather")),
+
+        ("crime", ("crime", "criminal", "court", "courts", "lawsuit", "laws", "trial", "verdict", "police", "fraud", "charges", "sentencing", "justice", "investigation", "scandal", "murder", "theft", "arrest")),
+
+        ("entertainment", ("entertainment", "celebrity", "celebrities", "movie", "film", "music", "tv", "streaming", "box office", "hallmark", "hollywood", "red carpet", "award", "awards", "actor", "actress", "star", "viral fan reaction")),
 
         ("ai", ("chatgpt", "openai", "artificial intelligence", "ai", "gemini", "ai model", "llm", "assistant", "chatbot")),
 
@@ -4539,7 +4613,7 @@ def generate_topical_subheading(topic: str, category: str, section_num: int) -> 
     """Generate a natural, story-specific H2 heading instead of generic AI labels."""
     topic_clean = re.sub(r'[^a-zA-Z0-9\s]', '', topic)
     words = [w for w in topic_clean.split() if len(w) > 3 and w.lower() not in STOPWORDS]
-    
+
     if section_num == 1:
         if category in ("ai", "software"):
             return "Key Developments and Features"
@@ -4549,6 +4623,20 @@ def generate_topical_subheading(topic: str, category: str, section_num: int) -> 
             return "Mission Details and Operational Progress"
         elif category in ("phones", "gadgets", "apple", "android"):
             return "Specifications and Hardware Details"
+        elif category == "politics":
+            return "Political Developments and Stakes"
+        elif category in ("world", "international"):
+            return "Global Context and Fallout"
+        elif category in ("business", "market", "markets"):
+            return "Business Impact and Market Signals"
+        elif category == "sports":
+            return "Game Dynamics and Championship Pressure"
+        elif category == "climate":
+            return "Weather, Energy, and Risk Outlook"
+        elif category == "crime":
+            return "Legal, Public Safety, and Accountability"
+        elif category in ("entertainment", "celebrities"):
+            return "Culture, Buzz, and Public Reaction"
         elif words:
             return f"Overview of {words[0].capitalize()} Progress"
         return "Key Details"
@@ -4561,6 +4649,20 @@ def generate_topical_subheading(topic: str, category: str, section_num: int) -> 
             return "Operational Outlook"
         elif category in ("phones", "gadgets", "apple", "android"):
             return "Market Impact and Availability"
+        elif category == "politics":
+            return "Policy Impact and What Comes Next"
+        elif category in ("world", "international"):
+            return "Regional Consequences and Response"
+        elif category in ("business", "market", "markets"):
+            return "Economic Pressure and Strategic Response"
+        elif category == "sports":
+            return "Momentum, Pressure, and What Changes Next"
+        elif category == "climate":
+            return "Public Risk, Energy Demand, and Adaptation"
+        elif category == "crime":
+            return "What the Ruling Means and What Happens Next"
+        elif category in ("entertainment", "celebrities"):
+            return "Audience Impact and Cultural Aftermath"
         return "Broader Impact"
     return "Analysis"
 
@@ -4638,6 +4740,7 @@ PAGE_CHROME_SENTENCE = re.compile(
     r"|\bwe may (?:earn|receive) (?:a )?(?:commission|small payment)\b"
     r"|\baffiliate partner\b"
     r"|\bdeals newsletter\b"
+    r"|\blee esta historia en espa\u00f1ol\b"
     r")"
 )
 
@@ -4996,6 +5099,12 @@ JUNK_SPAN_PATTERNS = tuple(
         r"\bFull profile\s*\u2192\b[^.]*\.?",
         r"\bScientific (?:Editor|Writer)\b[^.]*\.?",
         r"\bSenior Editor\b[^.]*\.?",
+        # MacRumors related-article sidebar byline: "Title ... one caveat FirstName LastName MonthDay Year"
+        r"(?:one caveat|, with one caveat)\s+[A-Z][a-z]+ [A-Z][a-z]+\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2}\s+\d{4}[^.]*\.?",
+        # Science News source header that duplicates headline
+        r"Science News from research organizations[^.]*\.?",
+        # Social sharing bar text
+        r"\bShare\s+Facebook\s+Twitter\s+LinkedIn\s+Pinterest[^.]*\.?",
     )
 )
 
@@ -5020,6 +5129,10 @@ _HARD_STOP_PATTERNS = re.compile(
     r"|\bAdd as (?:a )?preferred source\b"
     r"|\bDeals Newsletter\b"
     r"|Note:\s*(?:is an)?\s*affiliate partner"
+    r"|Discuss this article in our forums"
+    r"|Science News from research organizations"
+    r"|Share Facebook Twitter LinkedIn Pinterest"
+    r"|Share\s+Facebook\s+Twitter\s+LinkedIn"
     r")"
 )
 
