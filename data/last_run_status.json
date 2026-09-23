@@ -1,6 +1,25 @@
 {
   "dry_run": false,
-  "finished_at": "2026-09-23T01:18:04.368199+00:00",
-  "message": "OSError: image file is truncated (0 bytes not processed)",
-  "state": "failed"
+  "feed_warnings": 4,
+  "feeds": 62,
+  "fetched": 2757,
+  "finished_at": "2026-09-23T06:23:47.144105+00:00",
+  "generation_failures": [],
+  "inserted": 34,
+  "message": "Published 1 post(s).",
+  "posts": [
+    {
+      "categories": [
+        "space",
+        "science"
+      ],
+      "sources": [
+        "NASA Science"
+      ],
+      "status": "publish",
+      "title": "SAGE III/ISS Science Team Meeting Highlights Advancements in Aerosol Products and Strong",
+      "wp_id": 32155
+    }
+  ],
+  "state": "published"
 }
