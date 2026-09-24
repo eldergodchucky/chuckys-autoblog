@@ -1,26 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 4,
+  "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2827,
-  "finished_at": "2026-09-24T15:51:16.804323+00:00",
-  "generation_failures": [
-    "Skipped candidate 'At UN, tech chiefs urge caution in AI development': Free article failed quality gate: article has only 54 words; article has only 2 paragraphs"
-  ],
-  "inserted": 160,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "finished_at": "2026-09-24T19:50:58.304454+00:00",
+  "generation_failures": [],
+  "inserted": 163,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "security"
+        "health",
+        "apple",
+        "space"
       ],
       "sources": [
-        "Cloudflare Blog"
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "How Cloudflare addressed a cross-tenant data exposure vulnerability in Containers",
-      "wp_id": 32277
+      "title": "Apple Watch Ultra 2 vs. Ultra 4 Buyer's Guide: Should You Upgrade?",
+      "wp_id": 32288
     }
   ],
   "state": "published"
