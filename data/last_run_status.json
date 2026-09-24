@@ -2,24 +2,27 @@
   "dry_run": false,
   "feed_warnings": 4,
   "feeds": 62,
-  "fetched": 2766,
-  "finished_at": "2026-09-24T00:56:11.135550+00:00",
-  "generation_failures": [],
-  "inserted": 50,
-  "message": "Published 1 post(s).",
+  "fetched": 2827,
+  "finished_at": "2026-09-24T05:55:04.858704+00:00",
+  "generation_failures": [
+    "Skipped candidate 'AI is finding chart success in Christian, gospel and country music': Free article failed quality gate: article has only 61 words; article has only 3 paragraphs"
+  ],
+  "inserted": 40,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science",
-        "history"
+        "ai",
+        "gadgets"
       ],
       "sources": [
-        "NASA Science"
+        "TechCrunch",
+        "The Verge",
+        "WIRED Gear"
       ],
       "status": "publish",
-      "title": "NASA Selects Far-Infrared Telescope as First in New Mission Class",
-      "wp_id": 32222
+      "title": "Everything new coming to Meta\u2019s AI agent Muse",
+      "wp_id": 32239
     }
   ],
   "state": "published"
