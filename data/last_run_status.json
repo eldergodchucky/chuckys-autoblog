@@ -3,23 +3,23 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2827,
-  "finished_at": "2026-09-24T19:50:58.304454+00:00",
+  "finished_at": "2026-09-24T23:04:04.384341+00:00",
   "generation_failures": [],
-  "inserted": 163,
+  "inserted": 95,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "apple",
-        "space"
+        "space",
+        "science",
+        "history"
       ],
       "sources": [
-        "MacRumors"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Apple Watch Ultra 2 vs. Ultra 4 Buyer's Guide: Should You Upgrade?",
-      "wp_id": 32288
+      "title": "The \u2018Great Debate\u2019: What Really Happened",
+      "wp_id": 32299
     }
   ],
   "state": "published"
