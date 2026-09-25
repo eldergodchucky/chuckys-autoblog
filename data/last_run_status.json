@@ -3,23 +3,31 @@
   "feed_warnings": 3,
   "feeds": 62,
   "fetched": 2828,
-  "finished_at": "2026-09-25T17:27:09.539873+00:00",
-  "generation_failures": [],
-  "inserted": 193,
-  "message": "Published 1 post(s).",
+  "finished_at": "2026-09-25T20:40:45.873423+00:00",
+  "generation_failures": [
+    "Skipped candidate 'An overlooked era of cosmology is stealing the show in the quest to understand the cosmos': Free article failed quality gate: article has only 86 words; article has only 3 paragraphs",
+    "Skipped candidate 'AI hardware design could filter out irrelevant visual data to reduce energy use': Free article failed quality gate: article has only 101 words; article has only 3 paragraphs",
+    "Skipped candidate 'Investigating the cost-effectiveness of AI in public health': Free article failed quality gate: article has only 96 words; article has only 3 paragraphs",
+    "Skipped candidate 'Investigating the cost-effectiveness of AI in public health': Free article failed quality gate: article has only 96 words; article has only 3 paragraphs",
+    "Skipped candidate 'AI model predicts pancreatic cancer risk 3 years before diagnosis': Free article failed quality gate: article has only 83 words; article has only 3 paragraphs",
+    "Skipped candidate 'AI model predicts pancreatic cancer risk 3 years before diagnosis': Free article failed quality gate: article has only 83 words; article has only 3 paragraphs"
+  ],
+  "inserted": 94,
+  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "science",
-        "history"
+        "apple",
+        "phones",
+        "software"
       ],
       "sources": [
-        "NASA Science"
+        "9to5Mac",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "A Brief History of the Discovery of Cosmic Gamma-Ray Bursts",
-      "wp_id": 32372
+      "title": "Leaked images reveal new Apple TV 4K",
+      "wp_id": 32384
     }
   ],
   "state": "published"
