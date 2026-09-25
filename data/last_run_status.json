@@ -3,19 +3,26 @@
   "feed_warnings": 4,
   "feeds": 62,
   "fetched": 2767,
-  "finished_at": "2026-09-25T06:38:59.718618+00:00",
+  "finished_at": "2026-09-25T12:17:41.345359+00:00",
   "generation_failures": [
-    "Skipped candidate 'One gene helps drive growth in two childhood brain tumor groups that lack targeted therapies': Free article failed quality gate: article has only 124 words; article has only 5 paragraphs",
-    "Skipped candidate 'One gene helps drive growth in two childhood brain tumor groups that lack targeted therapies': Free article failed quality gate: article has only 124 words; article has only 5 paragraphs",
-    "Skipped candidate 'Malaria parasite can reawaken after years: New vaccine target may block liver infection': Free article failed quality gate: article has only 78 words; article has only 4 paragraphs",
-    "Skipped candidate 'Malaria parasite can reawaken after years: New vaccine target may block liver infection': Free article failed quality gate: article has only 78 words; article has only 4 paragraphs",
+    "Skipped candidate 'Anti-epileptic drug may reduce migraine aura': Free article failed quality gate: article has only 78 words; article has only 3 paragraphs",
+    "Skipped candidate 'Anti-epileptic drug may reduce migraine aura': Free article failed quality gate: article has only 78 words; article has only 3 paragraphs",
     "Skipped candidate 'New polymer could enable gastrointestinal transit monitoring without ionizing radiation': Free article failed quality gate: article has only 111 words; article has only 4 paragraphs",
     "Skipped candidate 'Women with polycystic ovary syndrome experience complex, nonlinear process of health behavior change among': Free article failed quality gate: article has only 95 words; article has only 4 paragraphs",
     "Skipped candidate 'Women with polycystic ovary syndrome experience complex, nonlinear process of health behavior change among': Free article failed quality gate: article has only 95 words; article has only 4 paragraphs",
-    "Skipped candidate 'New polymer could enable gastrointestinal transit monitoring without ionizing radiation': Free article failed quality gate: article has only 111 words; article has only 4 paragraphs"
+    "Skipped candidate 'New polymer could enable gastrointestinal transit monitoring without ionizing radiation': Free article failed quality gate: article has only 111 words; article has only 4 paragraphs",
+    "Skipped candidate 'Coal-powered economic growth linked to rising urban air pollution and deaths in India': Free article failed quality gate: article has only 75 words; article has only 3 paragraphs",
+    "Skipped candidate 'Coal-powered economic growth linked to rising urban air pollution and deaths in India': Free article failed quality gate: article has only 75 words; article has only 3 paragraphs",
+    "Skipped candidate 'New eye-tracking study reveals how followers use gaze to show conscientiousness': Free article failed quality gate: article has only 46 words; article has only 3 paragraphs",
+    "Skipped candidate 'Malaria parasite can reawaken after years: New vaccine target may block liver infection': Free article failed quality gate: article has only 78 words; article has only 4 paragraphs",
+    "Skipped candidate 'Malaria parasite can reawaken after years: New vaccine target may block liver infection': Free article failed quality gate: article has only 78 words; article has only 4 paragraphs",
+    "Skipped candidate 'Air pollution and cardiovascular disease: Mitochondria may be the missing link': Free article failed quality gate: article has only 116 words; article has only 4 paragraphs",
+    "Skipped candidate 'Air pollution and cardiovascular disease: Mitochondria may be the missing link': Free article failed quality gate: article has only 116 words; article has only 4 paragraphs",
+    "Skipped candidate 'Dopamine prompts brain support cells to boost movement-control neurons, study suggests': Free article failed quality gate: article has only 102 words; article has only 4 paragraphs",
+    "Skipped candidate 'Dopamine prompts brain support cells to boost movement-control neurons, study suggests': Free article failed quality gate: article has only 102 words; article has only 4 paragraphs"
   ],
-  "inserted": 35,
-  "message": "Published 1 post(s). Skipped 8 low-quality candidate(s).",
+  "inserted": 86,
+  "message": "Published 1 post(s). Skipped 15 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
@@ -26,8 +33,8 @@
         "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "Scientists Say Thissimple Habit Could Help Protect Your Brain for Life",
-      "wp_id": 32332
+      "title": "Discover What Maybe Fueling One of the World\u2019s Most Common",
+      "wp_id": 32356
     }
   ],
   "state": "published"
