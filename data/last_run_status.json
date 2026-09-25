@@ -2,32 +2,45 @@
   "dry_run": false,
   "feed_warnings": 3,
   "feeds": 62,
-  "fetched": 2828,
-  "finished_at": "2026-09-25T20:40:45.873423+00:00",
+  "fetched": 2829,
+  "finished_at": "2026-09-25T23:36:13.017653+00:00",
   "generation_failures": [
-    "Skipped candidate 'An overlooked era of cosmology is stealing the show in the quest to understand the cosmos': Free article failed quality gate: article has only 86 words; article has only 3 paragraphs",
+    "Skipped candidate 'NASA, Boeing to Provide Update on Starliner Development': Free article failed quality gate: article has only 207 words; article has only 4 paragraphs; 1 repeated sentence(s)",
     "Skipped candidate 'AI hardware design could filter out irrelevant visual data to reduce energy use': Free article failed quality gate: article has only 101 words; article has only 3 paragraphs",
     "Skipped candidate 'Investigating the cost-effectiveness of AI in public health': Free article failed quality gate: article has only 96 words; article has only 3 paragraphs",
     "Skipped candidate 'Investigating the cost-effectiveness of AI in public health': Free article failed quality gate: article has only 96 words; article has only 3 paragraphs",
     "Skipped candidate 'AI model predicts pancreatic cancer risk 3 years before diagnosis': Free article failed quality gate: article has only 83 words; article has only 3 paragraphs",
-    "Skipped candidate 'AI model predicts pancreatic cancer risk 3 years before diagnosis': Free article failed quality gate: article has only 83 words; article has only 3 paragraphs"
+    "Skipped candidate 'AI model predicts pancreatic cancer risk 3 years before diagnosis': Free article failed quality gate: article has only 83 words; article has only 3 paragraphs",
+    "Skipped candidate 'Study identifies two factors that may help patients benefit from off-the-shelf CAR T-cell therapies': Free article failed quality gate: article has only 95 words; article has only 4 paragraphs",
+    "Skipped candidate 'Study identifies two factors that may help patients benefit from off-the-shelf CAR T-cell therapies': Free article failed quality gate: article has only 95 words; article has only 4 paragraphs",
+    "Skipped candidate 'Dietary supplement may influence lung tumor growth differently in females and males': Free article failed quality gate: article has only 123 words; article has only 3 paragraphs",
+    "Skipped candidate 'Dietary supplement may influence lung tumor growth differently in females and males': Free article failed quality gate: article has only 123 words; article has only 3 paragraphs",
+    "Skipped candidate 'Sunlight and indoor LEDs recharge washable filter that maintains performance for months': Free article failed quality gate: article has only 130 words; article has only 4 paragraphs",
+    "Skipped candidate 'Steatotic liver disease risk scores compared for predicting cirrhosis': Free article failed quality gate: article has only 74 words; article has only 4 paragraphs",
+    "Skipped candidate 'Newfound brain circuit coordinates eating and energy burning when temperatures drop': Free article failed quality gate: article has only 108 words; article has only 4 paragraphs",
+    "Skipped candidate 'Newfound brain circuit coordinates eating and energy burning when temperatures drop': Free article failed quality gate: article has only 108 words; article has only 4 paragraphs",
+    "Skipped candidate 'DNA sequencing test finds answers for patients with inherited muscle disease': Free article failed quality gate: article has only 90 words; article has only 3 paragraphs",
+    "Skipped candidate 'DNA sequencing test finds answers for patients with inherited muscle disease': Free article failed quality gate: article has only 90 words; article has only 3 paragraphs",
+    "Skipped candidate 'Drones could speed up delivery of automated external defibrillators to patients suffering cardiac arrest': Free article failed quality gate: article has only 78 words; article has only 3 paragraphs",
+    "Skipped candidate 'Steatotic liver disease risk scores compared for predicting cirrhosis': Free article failed quality gate: article has only 74 words; article has only 4 paragraphs",
+    "Skipped candidate 'Radiotherapy after surgery significantly reduces atypical meningioma recurrence, clinical trial finds': Free article failed quality gate: article has only 116 words; article has only 5 paragraphs",
+    "Skipped candidate 'Metastatic colorectal cancer is more advanced in younger patients than in older ones, but they survive longer': Free article failed quality gate: article has only 85 words; article has only 4 paragraphs",
+    "Skipped candidate 'Drones could speed up delivery of automated external defibrillators to patients suffering cardiac arrest': Free article failed quality gate: article has only 78 words; article has only 3 paragraphs"
   ],
-  "inserted": 94,
-  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "inserted": 41,
+  "message": "Published 1 post(s). Skipped 21 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "phones",
-        "software"
+        "health",
+        "science"
       ],
       "sources": [
-        "9to5Mac",
-        "The Verge"
+        "SciTechDaily Health"
       ],
       "status": "publish",
-      "title": "Leaked images reveal new Apple TV 4K",
-      "wp_id": 32384
+      "title": "A New RNA Strategy Could Target Thousands of Genetic Disorders",
+      "wp_id": 32398
     }
   ],
   "state": "published"
