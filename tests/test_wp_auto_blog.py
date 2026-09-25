@@ -1034,6 +1034,166 @@ class FullArticleSectionsTests(unittest.TestCase):
         self.assertIn("phones", categories)
         self.assertNotIn("ai", categories)
 
+    def test_story_categories_infer_global_news_topics(self) -> None:
+        now = dt.datetime.now(dt.timezone.utc)
+        cluster = [
+            Item(
+                uid="g1",
+                source_name="Reuters",
+                source_url="https://example.com/reuters",
+                source_category="world",
+                source_quality=5,
+                title="Major election campaign enters final stretch as parties sharpen closing arguments",
+                link="https://example.com/election",
+                summary="World leaders and voters are watching a high-stakes race as candidates sharpen their closing arguments ahead of a decisive vote.",
+                published_at=now,
+            ),
+            Item(
+                uid="g2",
+                source_name="People",
+                source_url="https://example.com/people",
+                source_category="celebrities",
+                source_quality=4,
+                title="Star returns to the spotlight with a surprise appearance and viral fan reaction",
+                link="https://example.com/star",
+                summary="The comeback moment triggered a wave of social buzz and fresh headlines across celebrity coverage.",
+                published_at=now,
+            ),
+        ]
+        categories = wp_auto_blog.story_categories(cluster, "Election showdown sets off global political aftershocks", ["campaign", "celebrity", "international"])
+        self.assertIn("politics", categories)
+        self.assertIn("world", categories)
+        self.assertIn("entertainment", categories)
+
+    def test_story_categories_infer_business_sports_and_climate_topics(self) -> None:
+        now = dt.datetime.now(dt.timezone.utc)
+        business_sports_cluster = [
+            Item(
+                uid="b1",
+                source_name="Reuters",
+                source_url="https://example.com/business",
+                source_category="business",
+                source_quality=5,
+                title="Global chip exports slow as manufacturers warn that trade restrictions could hit supply chains",
+                link="https://example.com/chip-trade",
+                summary="Analysts say the export slowdown is affecting pricing, production plans, and the cost outlook for major manufacturing companies.",
+                published_at=now,
+            ),
+            Item(
+                uid="s1",
+                source_name="ESPN",
+                source_url="https://example.com/espn",
+                source_category="sports",
+                source_quality=5,
+                title="Championship contender shifts lineup after injury setback and last-minute roster changes",
+                link="https://example.com/club-sports",
+                summary="Coaches and players say the late reshuffle changes expectations for the next match and the title race.",
+                published_at=now,
+            ),
+        ]
+        business_sports = wp_auto_blog.story_categories(
+            business_sports_cluster,
+            "Trade pressure and title race reshape the week",
+            ["markets", "championship", "supply chain"],
+        )
+        self.assertIn("business", business_sports)
+        self.assertIn("sports", business_sports)
+
+        climate_cluster = [
+            Item(
+                uid="c1",
+                source_name="BBC Earth",
+                source_url="https://example.com/climate",
+                source_category="climate",
+                source_quality=5,
+                title="Heat wave intensifies as energy grid operators brace for record demand during extreme temperatures",
+                link="https://example.com/heatwave",
+                summary="Officials are watching an extreme weather event that could pressure energy demand and public safety systems.",
+                published_at=now,
+            )
+        ]
+        climate_categories = wp_auto_blog.story_categories(
+            climate_cluster,
+            "Heat wave raises grid strain and emergency planning pressure",
+            ["energy", "weather", "extreme temperatures"],
+        )
+        self.assertIn("climate", climate_categories)
+
+    def test_story_categories_infer_gaming_mobility_crypto_energy_and_defense(self) -> None:
+        now = dt.datetime.now(dt.timezone.utc)
+        gaming_cluster = [
+            Item(
+                uid="gm1",
+                source_name="IGN",
+                source_url="https://example.com/ign",
+                source_category="gaming",
+                source_quality=5,
+                title="Major RPG sequel revealed with new Unreal Engine gameplay demo and release window",
+                link="https://example.com/game",
+                summary="The studio demonstrated new combat mechanics and confirmed PlayStation and Xbox release plans.",
+                published_at=now,
+            )
+        ]
+        self.assertIn("gaming", wp_auto_blog.story_categories(gaming_cluster, "New RPG gameplay unveiled", ["gameplay", "console"]))
+
+        mobility_cluster = [
+            Item(
+                uid="mb1",
+                source_name="InsideEVs",
+                source_url="https://example.com/ev",
+                source_category="mobility",
+                source_quality=5,
+                title="Next-generation electric vehicle reaches 500 miles on solid-state battery test",
+                link="https://example.com/ev-test",
+                summary="Automotive engineers validated fast charging and high range on new EV battery packs.",
+                published_at=now,
+            )
+        ]
+        self.assertIn("mobility", wp_auto_blog.story_categories(mobility_cluster, "Solid-state EV battery milestone", ["electric vehicle", "supercharger"]))
+
+        crypto_cluster = [
+            Item(
+                uid="cr1",
+                source_name="CoinDesk",
+                source_url="https://example.com/crypto",
+                source_category="crypto",
+                source_quality=5,
+                title="Bitcoin reserves surge as institutional investors expand digital asset exposure",
+                link="https://example.com/btc",
+                summary="Blockchain analysts track large institutional inflows into major cryptocurrency treasuries.",
+                published_at=now,
+            )
+        ]
+        self.assertIn("crypto", wp_auto_blog.story_categories(crypto_cluster, "Institutional Bitcoin accumulation", ["cryptocurrency", "blockchain"]))
+
+        energy_defense_cluster = [
+            Item(
+                uid="en1",
+                source_name="Canary Media",
+                source_url="https://example.com/energy",
+                source_category="energy",
+                source_quality=5,
+                title="Nuclear fusion reactor achieves sustained high-temperature plasma milestone",
+                link="https://example.com/fusion",
+                summary="Scientists broke clean energy records during experimental tokamak operations.",
+                published_at=now,
+            ),
+            Item(
+                uid="df1",
+                source_name="The War Zone",
+                source_url="https://example.com/defense",
+                source_category="defense",
+                source_quality=5,
+                title="Air Force tests autonomous drone wingman alongside supersonic fighter jets",
+                link="https://example.com/drone",
+                summary="Defense officials reported successful autonomous flight trials under tactical conditions.",
+                published_at=now,
+            )
+        ]
+        cats = wp_auto_blog.story_categories(energy_defense_cluster, "Clean energy and defense aviation trials", ["fusion", "drone", "aerospace"])
+        self.assertIn("energy", cats)
+        self.assertIn("defense", cats)
+
     def test_meaningful_tags_reject_junk_words(self) -> None:
         now = dt.datetime.now(dt.timezone.utc)
         cluster = [

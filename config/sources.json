@@ -1,13 +1,15 @@
 {
   "source_policy": {
-    "purpose": "Use high-quality RSS feeds as discovery signals for original, cited WordPress posts about science breakthroughs, space, phones, iPhone/iOS, Android, gadgets, AI, software/apps, innovation, tutorials, security, DIY, practical hacks, health research, medical breakthroughs, nutrition, fitness, mental health, and wellness.",
+    "purpose": "Use high-quality RSS feeds as discovery signals for original, cited WordPress posts about science breakthroughs, space, phones, iPhone/iOS, Android, gadgets, AI, software/apps, innovation, tutorials, security, DIY, practical hacks, health research, public policy, politics, world affairs, diplomacy, celebrity news, entertainment, culture, gaming, future mobility & EVs, fintech & crypto, clean energy, and aerospace & defense tech.",
     "rules": [
       "Create original synthesis from multiple sources; do not republish or lightly spin feed text.",
       "Use source titles, summaries, dates, and links as inputs unless the source explicitly allows broader reuse.",
       "Use natural inline attribution with visible source links where the reporting comes from outside sources.",
       "Skip paywalled, single-source, thin, or duplicate stories.",
       "If a source's RSS terms are restrictive, use it only as a topic alert or disable it until reviewed.",
-      "Health and medical content requires extra scrutiny: verify claims, cite peer-reviewed sources when possible, and include appropriate disclaimers."
+      "Health and medical content requires extra scrutiny: verify claims, cite peer-reviewed sources when possible, and include appropriate disclaimers.",
+      "Political, celebrity, and world-news coverage should follow the same original reporting standard: verify the claim, cite the source, and favor depth over rumor or recycled gossip.",
+      "Gaming, mobility, crypto, energy, defense, and political reporting must adhere to the same strict professional human-written journalism standard: original synthesis, active voice, factual precision, zero AI fluff or promotional hype, and natural attribution."
     ]
   },
   "feeds": [
@@ -16,6 +18,118 @@
       "url": "https://www.apple.com/newsroom/rss-feed.rss",
       "category": "apple",
       "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "BBC World",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "category": "world",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Reuters World News",
+      "url": "https://feeds.reuters.com/reuters/worldNews",
+      "category": "world",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "AP Top News",
+      "url": "https://apnews.com/hub/ap-top-news?output=rss",
+      "category": "politics",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "The Guardian World",
+      "url": "https://www.theguardian.com/world/rss",
+      "category": "world",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "The Guardian US Politics",
+      "url": "https://www.theguardian.com/us-news/us-politics/rss",
+      "category": "politics",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Variety Entertainment",
+      "url": "https://variety.com/entertainment/feed/",
+      "category": "entertainment",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "People.com Latest",
+      "url": "https://people.com/rss",
+      "category": "celebrities",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Reuters Business",
+      "url": "https://feeds.reuters.com/reuters/businessNews",
+      "category": "business",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "AP Business",
+      "url": "https://apnews.com/hub/business?output=rss",
+      "category": "business",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "BBC Sport",
+      "url": "https://feeds.bbci.co.uk/sport/rss.xml",
+      "category": "sports",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "ESPN Top Headlines",
+      "url": "https://www.espn.com/espn/rss/news",
+      "category": "sports",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "BBC Climate",
+      "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+      "category": "climate",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Reuters Climate",
+      "url": "https://feeds.reuters.com/reuters/environment",
+      "category": "climate",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "AP Climate",
+      "url": "https://apnews.com/hub/climate-and-environment?output=rss",
+      "category": "climate",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Reuters Legal",
+      "url": "https://feeds.reuters.com/reuters/legalNews",
+      "category": "crime",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "BBC Crime",
+      "url": "https://feeds.bbci.co.uk/news/uk/rss.xml",
+      "category": "crime",
+      "quality": 4,
       "enabled": true
     },
     {
@@ -571,6 +685,97 @@
       "name": "SciTechDaily Science",
       "url": "https://scitechdaily.com/news/science/feed/",
       "category": "science",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "IGN",
+      "url": "https://feeds.feedburner.com/ign/all",
+      "category": "gaming",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "PC Gamer",
+      "url": "https://www.pcgamer.com/rss/",
+      "category": "gaming",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Eurogamer",
+      "url": "https://www.eurogamer.net/feed",
+      "category": "gaming",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "InsideEVs",
+      "url": "https://insideevs.com/rss/news/all/",
+      "category": "mobility",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Motor1",
+      "url": "https://www.motor1.com/rss/news/all/",
+      "category": "mobility",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "CoinDesk",
+      "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+      "category": "crypto",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Cointelegraph",
+      "url": "https://cointelegraph.com/rss",
+      "category": "crypto",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Decrypt",
+      "url": "https://decrypt.co/feed",
+      "category": "crypto",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Canary Media",
+      "url": "https://www.canarymedia.com/feed",
+      "category": "energy",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Energy Storage News",
+      "url": "https://www.energy-storage.news/feed/",
+      "category": "energy",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "The War Zone",
+      "url": "https://www.twz.com/feed",
+      "category": "defense",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Defense News",
+      "url": "https://www.defensenews.com/arc/outboundfeeds/rss/",
+      "category": "defense",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Breaking Defense",
+      "url": "https://breakingdefense.com/feed/",
+      "category": "defense",
       "quality": 4,
       "enabled": true
     }

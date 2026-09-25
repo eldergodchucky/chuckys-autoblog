@@ -1,16 +1,18 @@
 # ChuckysCarnage Auto Blog
 
-An independent technology publication (AI, cybersecurity, science, gaming, space, software, mobile) with a premium WordPress theme and automated article publishing.
+An independent publication covering tech, science, AI, gaming, future mobility, crypto, clean energy, defense, world affairs, business, climate, sports, entertainment, and culture with a premium WordPress theme and automated article publishing.
+
+The editorial model is deliberately broad but quality-first: the site keeps a tech/science core, adds serious hard-news coverage, and only publishes stories that can be supported by strong reporting and clear attribution. This follows the antigravity standard: original synthesis, visible sourcing, and a strong filtering bar against low-quality rumor, filler, or recycled clickbait.
 
 ## Premium Publication Theme
 
 The `wordpress-theme/` folder is a magazine-style premium theme (upload `chuckyscarnage-theme.zip` to WordPress): dark/light themes with system detection, cyan accent, rounded cards, sticky navigation, hero section, Featured/Trending/category/Opinion/Reviews/Guides sections, newsletter signup, popular tags, advanced search with filters, breadcrumbs, article cards with reading time/views/comments/author, related articles, prev/next navigation, author bio, social sharing, comments, back-to-top, XML sitemap, robots.txt, schema markup, and performance optimizations.
 
-This project fetches high-quality tech, science, gadget, security, tutorial, and DIY feeds, groups related items, generates an original cited post, and sends it to WordPress through Post by Email or the REST API.
+This project fetches high-quality feeds across technology, science, gadgets, security, tutorials, gaming, future mobility, crypto, clean energy, defense, business, world affairs, politics, sports, climate, and entertainment, groups related items, generates an original cited post, and sends it to WordPress through Post by Email or the REST API.
 
-The current focus rotates through science breakthroughs, space, AI, gadgets, phones, Android, Apple/iOS, software/apps, security, tutorials, and practical hacks so the blog does not get stuck in one lane.
+The current focus rotates through science breakthroughs, space, AI, gaming, mobility & EVs, crypto & fintech, clean energy, defense & aerospace, gadgets, phones, Android, Apple/iOS, software/apps, security, tutorials, business, global affairs, politics, climate, sports, and entertainment while keeping a strict professional human-written journalism standard. It should not drift into low-value gossip, recycled headlines, or thin listicles.
 
-Health research is included as a normal rotation lane, with extra source scrutiny and a medical disclaimer when a health story is selected. It is not prioritized above the blog's science, space, AI, phone, gadget, software, security, tutorial, and hacks coverage. See `IMPROVEMENTS-SUMMARY.md` and `seo-guide.md` for the handoff notes from the SEO/content update.
+Health research remains a normal rotation lane, with extra source scrutiny and a medical disclaimer when a health story is selected. It is not prioritized above the blog's science, space, AI, phone, gadget, software, security, public-interest, and reporting coverage. See `IMPROVEMENTS-SUMMARY.md` and `seo-guide.md` for the handoff notes from the SEO/content update.
 
 Key safety controls:
 

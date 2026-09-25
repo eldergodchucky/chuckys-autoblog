@@ -1276,7 +1276,11 @@ def focus_keywords() -> list[str]:
 
             "chemistry,climate,energy,robotics,space,nasa,astronomy,planet,moon,mars,telescope,galaxy,"
 
-            "phone,phones,iphone,ios,android,apple,samsung,pixel,gadget,gadgets,ai,software,apps,innovation"
+            "phone,phones,iphone,ios,android,apple,samsung,pixel,gadget,gadgets,ai,software,apps,innovation,"
+            "politics,election,government,senate,congress,diplomacy,world,international,geopolitics,business,economy,"
+            "markets,trade,inflation,earnings,stocks,sports,gaming,playstation,xbox,nintendo,steam,esports,mobility,"
+            "electric vehicle,ev,tesla,robotaxi,autonomous,crypto,bitcoin,ethereum,blockchain,clean energy,nuclear,"
+            "fusion,solar,defense,military,aerospace,fighter jet,drone,pentagon,crime,court,investigation,entertainment,celebrity,history,archaeology"
 
         ),
 
@@ -1324,7 +1328,7 @@ def focus_score(cluster: list[Item]) -> int:
 
 def single_source_categories() -> set[str]:
 
-    return set(env_list("SINGLE_SOURCE_PRIORITY_CATEGORIES", "science,space"))
+    return set(env_list("SINGLE_SOURCE_PRIORITY_CATEGORIES", "science,space,world,politics,business,defense,energy,mobility,gaming,crypto"))
 
 
 
@@ -1432,6 +1436,16 @@ def category_weights() -> dict[str, int]:
 
             "history": 5,
 
+            "gaming": 6,
+
+            "mobility": 6,
+
+            "crypto": 6,
+
+            "energy": 6,
+
+            "defense": 6,
+
             "tech": 4,
 
         },
@@ -1448,7 +1462,7 @@ def category_rotation() -> list[str]:
 
         "CATEGORY_ROTATION",
 
-        "science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks,health,politics,world,business,sports,climate,crime,entertainment,celebrities,history",
+        "science,space,ai,gaming,mobility,crypto,energy,defense,gadgets,phones,android,apple,software,security,tutorials,hacks,health,politics,world,business,sports,climate,crime,entertainment,celebrities,history",
 
     )
 
@@ -2928,6 +2942,30 @@ def category_takeaway(categories: set[str]) -> str:
 
         notes.append("hands-on posts are useful when they point to experiments readers can safely try, adapt, or learn from")
 
+    if "gaming" in categories:
+
+        notes.append("gaming updates can quickly reshape player expectations, hardware demand, online communities, and the broader digital entertainment market")
+
+    if "mobility" in categories:
+
+        notes.append("mobility and EV stories can change consumer buying plans, charging access, battery expectations, and the pace of clean transportation adoption")
+
+    if "crypto" in categories:
+
+        notes.append("crypto and fintech developments can shift financial privacy, institutional investment, regulatory boundaries, and digital asset security")
+
+    if "energy" in categories:
+
+        notes.append("clean energy and grid breakthroughs can lower power generation costs, stabilize regional utilities, and accelerate industrial decarbonization")
+
+    if "defense" in categories:
+
+        notes.append("defense and aerospace reporting can signal shifts in military preparedness, international deterrence, technological dominance, and defense spending")
+
+    if "history" in categories:
+
+        notes.append("historical and archaeological findings can challenge established timelines, preserve cultural heritage, and deepen our understanding of ancient societies")
+
     if "tech" in categories:
 
         notes.append("platform and software shifts can change what developers, creators, and everyday users are able to build")
@@ -2988,6 +3026,18 @@ def category_reader_angle(category: str) -> str:
 
         "celebrities": "celebrity stories matter when they shape public attention, media strategy, social trends, or the cultural conversation around a public figure",
 
+        "gaming": "gaming news matters when new releases, hardware changes, game engine updates, or studio decisions change how players play and what platforms deliver",
+
+        "mobility": "mobility and EV coverage matters because charging speeds, battery longevity, self-driving capabilities, and vehicle pricing directly shape the transition to electric transportation",
+
+        "crypto": "crypto and fintech reporting should be viewed with a focus on real utility, regulatory scrutiny, market stability, and security risks rather than speculative hype",
+
+        "energy": "clean energy developments matter because grid reliability, generation efficiency, storage scalability, and project economics determine how quickly modern infrastructure evolves",
+
+        "defense": "defense and aerospace reporting matters because technological superiority, procurement decisions, and geopolitical posture directly affect international stability and national security",
+
+        "history": "history and archaeology reporting matters because new excavations, archival discoveries, and forensic analysis reshape our understanding of human civilization and cultural heritage",
+
         "tech": "platform stories matter when they shift what developers, creators, businesses, or ordinary users can do next",
 
     }
@@ -3001,8 +3051,6 @@ def category_reader_angle(category: str) -> str:
 def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> list[str]:
 
     text = " ".join([topic, *keywords, *(item.title for item in cluster), *(item.summary for item in cluster)]).lower()
-
-    inferred: list[str] = []
 
 
 
@@ -3018,11 +3066,7 @@ def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> li
 
             return clean in haystack
 
-        if len(clean) <= 4:
-
-            return re.search(rf"\b{re.escape(clean)}\b", haystack) is not None
-
-        return clean in haystack
+        return re.search(rf"\b{re.escape(clean)}\b", haystack) is not None
 
 
 
@@ -3038,11 +3082,21 @@ def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> li
 
         ("sports", ("sports", "sport", "football", "basketball", "baseball", "soccer", "tennis", "league", "match", "team", "transfer", "injury", "championship", "playoff", "roster", "tournament", "cup")),
 
-        ("climate", ("climate", "weather", "heat wave", "storm", "flood", "drought", "energy", "grid", "emissions", "carbon", "temperature", "wildfire", "hurricane", "extreme weather")),
+        ("climate", ("climate", "weather", "heat wave", "storm", "flood", "drought", "emissions", "carbon", "temperature", "wildfire", "hurricane", "extreme weather")),
 
         ("crime", ("crime", "criminal", "court", "courts", "lawsuit", "laws", "trial", "verdict", "police", "fraud", "charges", "sentencing", "justice", "investigation", "scandal", "murder", "theft", "arrest")),
 
         ("entertainment", ("entertainment", "celebrity", "celebrities", "movie", "film", "music", "tv", "streaming", "box office", "hallmark", "hollywood", "red carpet", "award", "awards", "actor", "actress", "star", "viral fan reaction")),
+
+        ("gaming", ("gaming", "video game", "video games", "gameplay", "playstation", "ps5", "xbox", "nintendo", "switch", "steam", "pc gamer", "esports", "rpg", "gta", "unreal engine", "multiplayer", "console", "gamer", "gamers", "game launch")),
+
+        ("mobility", ("electric vehicle", "electric vehicles", "ev", "evs", "tesla", "robotaxi", "robotaxis", "self-driving", "autonomous vehicle", "autonomous driving", "waymo", "rivian", "byd", "automotive", "supercharger", "battery pack", "solid-state battery", "evtol", "flying car", "hybrid vehicle")),
+
+        ("crypto", ("crypto", "cryptocurrency", "bitcoin", "ethereum", "blockchain", "btc", "eth", "stablecoin", "token", "defi", "web3", "digital currency", "crypto wallet", "binance", "coinbase", "sec crypto")),
+
+        ("energy", ("nuclear", "fusion", "fission", "smr", "reactors", "solar", "wind power", "geothermal", "clean tech", "renewables", "battery storage", "power grid", "energy storage", "megawatt", "gigawatt", "clean energy", "energy")),
+
+        ("defense", ("defense", "military", "aerospace", "fighter jet", "drone", "drones", "pentagon", "missile", "hypersonic", "navy", "supersonic", "air force", "stealth", "radar", "space force", "armed forces", "weapons system")),
 
         ("ai", ("chatgpt", "openai", "artificial intelligence", "ai", "gemini", "ai model", "llm", "assistant", "chatbot")),
 
@@ -3066,13 +3120,22 @@ def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> li
 
     ]
 
+    category_scores: dict[str, int] = {}
     padded = f" {text} "
 
     for category, needles in checks:
+        hits = sum(1 for needle in needles if matches_needle(padded, needle))
+        if hits:
+            category_scores[category] = hits
 
-        if any(matches_needle(padded, needle) for needle in needles):
+    for item in cluster:
+        sc = item.source_category.lower()
+        if sc in category_scores:
+            category_scores[sc] += 3
+        elif any(c == sc for c, _ in checks):
+            category_scores[sc] = 3
 
-            inferred.append(category)
+    inferred = sorted(category_scores.keys(), key=lambda c: category_scores[c], reverse=True)
 
     if inferred:
 
@@ -4290,6 +4353,58 @@ def story_kind(categories: list[str], text: str) -> str:
     if has_term(text, ("robotaxi", "robotaxis", "self-driving", "autonomous", "driverless", "tesla")):
 
         return "autonomous"
+
+    if "mobility" in categories:
+
+        return "mobility"
+
+    if "gaming" in categories:
+
+        return "gaming"
+
+    if "crypto" in categories:
+
+        return "crypto"
+
+    if "energy" in categories:
+
+        return "energy"
+
+    if "defense" in categories:
+
+        return "defense"
+
+    if "politics" in categories:
+
+        return "politics"
+
+    if "world" in categories:
+
+        return "world"
+
+    if "business" in categories:
+
+        return "business"
+
+    if "sports" in categories:
+
+        return "sports"
+
+    if "climate" in categories:
+
+        return "climate"
+
+    if "crime" in categories:
+
+        return "crime"
+
+    if "entertainment" in categories or "celebrities" in categories:
+
+        return "entertainment"
+
+    if "history" in categories:
+
+        return "history"
 
     if "space" in categories or has_term(text, ("spacex", "dragon", "space station", "nasa", "resupply", "mars", "moon", "telescope", "astronomy")):
 
