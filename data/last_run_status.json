@@ -2,29 +2,34 @@
   "dry_run": false,
   "feed_warnings": 13,
   "feeds": 91,
-  "fetched": 3708,
-  "finished_at": "2026-09-26T12:29:46.081163+00:00",
+  "fetched": 3694,
+  "finished_at": "2026-09-26T16:41:58.577041+00:00",
   "generation_failures": [
-    "Skipped candidate 'Bitcoin could soon get Zcash-style 'shielded' privacy without changing its rules': Free article failed quality gate: article has only 172 words; article has only 2 paragraphs",
-    "Skipped candidate 'Bitcoin could soon get Zcash-style 'shielded' privacy without changing its rules': Free article failed quality gate: article has only 165 words; article has only 2 paragraphs",
-    "Skipped candidate 'NASA, Boeing to Provide Update on Starliner Development': Free article failed quality gate: article has only 207 words; article has only 4 paragraphs; 1 repeated sentence(s)"
+    "Skipped candidate 'Scientists replace mouse cortex with human brain tissue to study neurological disorders': Free article failed quality gate: article has only 76 words; article has only 4 paragraphs",
+    "Skipped candidate 'Scientists Put Anti-Aging Treatments to the Test \u2013 These Ones Actually Changed Biological Age': Free article failed quality gate: article has only 85 words; article has only 4 paragraphs",
+    "Skipped candidate 'Getting paid to vape? Researchers say that's a dangerous combination': Free article failed quality gate: article has only 64 words; article has only 3 paragraphs",
+    "Skipped candidate 'Getting paid to vape? Researchers say that's a dangerous combination': Free article failed quality gate: article has only 64 words; article has only 3 paragraphs",
+    "Skipped candidate 'Your worldview might dictate how you perceive neutral faces': Free article failed quality gate: article has only 74 words; article has only 4 paragraphs",
+    "Skipped candidate 'Two astronauts who flew farther than anyone before are taking new NASA roles': Free article failed quality gate: article has only 94 words; article has only 3 paragraphs",
+    "Skipped candidate 'Two astronauts who flew farther than anyone before are taking new NASA roles': Free article failed quality gate: article has only 94 words; article has only 3 paragraphs",
+    "Skipped candidate 'The higher your body fat percentage, the less accurate your smartwatch is at measuring calories burned': Free article failed quality gate: article has only 86 words; article has only 5 paragraphs",
+    "Skipped candidate 'The higher your body fat percentage, the less accurate your smartwatch is at measuring calories burned': Free article failed quality gate: article has only 86 words; article has only 5 paragraphs"
   ],
-  "inserted": 122,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 154,
+  "message": "Published 1 post(s). Skipped 9 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "security",
-        "ai",
+        "health",
+        "world",
         "science"
       ],
       "sources": [
-        "BleepingComputer",
-        "TechCrunch"
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "OpenAI's AI agents accidentally uploaded user-provided images to third-party sites",
-      "wp_id": 32447
+      "title": "New research finds 485 chemicals in US pesticide products linked to breast",
+      "wp_id": 32459
     }
   ],
   "state": "published"
