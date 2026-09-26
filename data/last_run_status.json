@@ -1,25 +1,29 @@
 {
   "dry_run": false,
-  "feed_warnings": 13,
+  "feed_warnings": 14,
   "feeds": 91,
-  "fetched": 3743,
-  "finished_at": "2026-09-26T02:02:21.852172+00:00",
-  "generation_failures": [],
-  "inserted": 923,
-  "message": "Published 1 post(s).",
+  "fetched": 3726,
+  "finished_at": "2026-09-26T07:43:02.585517+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Bitcoin could soon get Zcash-style 'shielded' privacy without changing its rules': Free article failed quality gate: article has only 170 words; article has only 2 paragraphs",
+    "Skipped candidate 'KMT-2023-BLG-1118L b': Free article failed quality gate: article has only 117 words; article has only 4 paragraphs",
+    "Skipped candidate 'TOI-426 c': Free article failed quality gate: article has only 112 words; article has only 4 paragraphs"
+  ],
+  "inserted": 71,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "history",
-        "crime",
-        "science"
+        "health",
+        "science",
+        "defense"
       ],
       "sources": [
-        "Smithsonian History"
+        "The Guardian Health"
       ],
       "status": "publish",
-      "title": "Hitler Had an Intense",
-      "wp_id": 32410
+      "title": "Drones could speed up getting defibrillators to people having cardiac arrests",
+      "wp_id": 32428
     }
   ],
   "state": "published"
