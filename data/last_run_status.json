@@ -1,32 +1,51 @@
 {
   "dry_run": false,
-  "feed_warnings": 14,
+  "feed_warnings": 13,
   "feeds": 91,
-  "fetched": 3699,
-  "finished_at": "2026-09-26T19:26:35.307331+00:00",
+  "fetched": 3703,
+  "finished_at": "2026-09-26T22:07:34.332922+00:00",
   "generation_failures": [
-    "Skipped candidate 'Scientists burned their own scrolls to unlock a 2,000-year-old mystery': Free article failed quality gate: article has only 47 words; article has only 2 paragraphs",
-    "Skipped candidate 'The neuroscience of pity: how attractiveness and morality shape empathy': Free article failed quality gate: article has only 77 words; article has only 4 paragraphs",
-    "Skipped candidate 'Scientists may have misread a 2-billion-year-old clue about Earth': Free article failed quality gate: article has only 55 words; article has only 2 paragraphs",
-    "Skipped candidate 'Smoother perovskite films lift three-layer solar cell efficiency to 30.1%': Free article failed quality gate: article has only 78 words; article has only 2 paragraphs",
-    "Skipped candidate 'NASA\u2019s SpaceX Crew-13 On Way to Kennedy': Free article failed quality gate: article has only 294 words",
-    "Skipped candidate 'Bitcoin could soon get Zcash-style 'shielded' privacy without changing its rules': Free article failed quality gate: article has only 168 words; article has only 2 paragraphs"
+    "Skipped candidate 'Scientists replace mouse cortex with human brain tissue to study neurological disorders': Free article failed quality gate: article has only 76 words; article has only 4 paragraphs",
+    "Skipped candidate 'Scientists Put Anti-Aging Treatments to the Test \u2013 These Ones Actually Changed Biological Age': Free article failed quality gate: article has only 85 words; article has only 4 paragraphs",
+    "Skipped candidate 'Blood test shows whether newborns with fever have bacterial or viral infection': Free article failed quality gate: article has only 84 words; article has only 3 paragraphs",
+    "Skipped candidate 'Blood test shows whether newborns with fever have bacterial or viral infection': Free article failed quality gate: article has only 84 words; article has only 3 paragraphs",
+    "Skipped candidate 'The brain still responds to favorite music in dementia': Free article failed quality gate: article has only 102 words; article has only 4 paragraphs",
+    "Skipped candidate 'The brain still responds to favorite music in dementia': Free article failed quality gate: article has only 102 words; article has only 4 paragraphs",
+    "Skipped candidate 'A protein-degradation mechanism opens a new treatment route for an inherited arrhythmia': Free article failed quality gate: article has only 111 words; article has only 3 paragraphs",
+    "Skipped candidate 'A protein-degradation mechanism opens a new treatment route for an inherited arrhythmia': Free article failed quality gate: article has only 111 words; article has only 3 paragraphs",
+    "Skipped candidate 'The higher your body fat percentage, the less accurate your smartwatch is at measuring calories burned': Free article failed quality gate: article has only 86 words; article has only 5 paragraphs",
+    "Skipped candidate 'The higher your body fat percentage, the less accurate your smartwatch is at measuring calories burned': Free article failed quality gate: article has only 86 words; article has only 5 paragraphs",
+    "Skipped candidate 'Getting paid to vape? Researchers say that's a dangerous combination': Free article failed quality gate: article has only 64 words; article has only 3 paragraphs",
+    "Skipped candidate 'Getting paid to vape? Researchers say that's a dangerous combination': Free article failed quality gate: article has only 64 words; article has only 3 paragraphs",
+    "Skipped candidate 'Dogs support police officers with PTSD': Free article failed quality gate: article has only 125 words; article has only 5 paragraphs",
+    "Skipped candidate 'Dogs support police officers with PTSD': Free article failed quality gate: article has only 125 words; article has only 5 paragraphs",
+    "Skipped candidate 'A major risk of breast cancer screening may have been overestimated for decades': Free article failed quality gate: article has only 86 words; article has only 3 paragraphs",
+    "Skipped candidate 'Inhaled drug shows promise for rare lung disease combination': Free article failed quality gate: article has only 115 words; article has only 3 paragraphs",
+    "Skipped candidate 'Inhaled drug shows promise for rare lung disease combination': Free article failed quality gate: article has only 115 words; article has only 3 paragraphs",
+    "Skipped candidate 'A major risk of breast cancer screening may have been overestimated for decades': Free article failed quality gate: article has only 86 words; article has only 3 paragraphs",
+    "Skipped candidate 'That fresh cleaning smell could be filling your home with nanoparticles': Free article failed quality gate: article has only 77 words; article has only 3 paragraphs",
+    "Skipped candidate 'That fresh cleaning smell could be filling your home with nanoparticles': Free article failed quality gate: article has only 77 words; article has only 3 paragraphs",
+    "Skipped candidate 'Reducing ultra-processed foods, being physically active can cut risk of type 2 diabetes, regardless of genetic makeup': Free article failed quality gate: article has only 110 words; article has only 4 paragraphs",
+    "Skipped candidate 'Reducing ultra-processed foods, being physically active can cut risk of type 2 diabetes, regardless of genetic makeup': Free article failed quality gate: article has only 110 words; article has only 4 paragraphs",
+    "Skipped candidate 'Indoor gardening improves mental health and quality of life for cancer patients': Free article failed quality gate: article has only 76 words; article has only 4 paragraphs",
+    "Skipped candidate 'Autism Study Reveals Two Opposing Molecular Patterns in the Brain': Free article failed quality gate: article has only 84 words; article has only 3 paragraphs",
+    "Skipped candidate 'Gen X is drinking more as younger Americans cut back on alcohol, study finds': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'New study of Brazilian twins sheds light on the heritability of our creative confidence': Free article failed quality gate: article has only 73 words; article has only 4 paragraphs"
   ],
-  "inserted": 66,
-  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "inserted": 51,
+  "message": "Published 1 post(s). Skipped 26 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "crypto",
-        "ai",
+        "health",
         "science"
       ],
       "sources": [
-        "Decrypt"
+        "The Guardian Health"
       ],
       "status": "publish",
-      "title": "AI Agents Are Racing to Make Quantum-Safe Bitcoin Cheap\u2014And Winning",
-      "wp_id": 32469
+      "title": "Pennsylvania measles outbreak spreads",
+      "wp_id": 32479
     }
   ],
   "state": "published"
