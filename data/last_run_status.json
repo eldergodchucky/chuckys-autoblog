@@ -1,31 +1,38 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 12,
   "feeds": 91,
-  "fetched": 3629,
-  "finished_at": "2026-09-27T19:36:37.732711+00:00",
+  "fetched": 3689,
+  "finished_at": "2026-09-27T22:35:08.998850+00:00",
   "generation_failures": [
-    "Skipped candidate 'Welcome to Michoud: Take a Look Inside NASA\u2019s Rocket Factory': Free article failed quality gate: article has only 58 words; article has only 3 paragraphs",
-    "Skipped candidate 'Astronomers discover a radio galaxy with evidence of four separate jet outbursts': Free article failed quality gate: article has only 98 words; article has only 2 paragraphs",
+    "Skipped candidate '1.7-billion-year-old fossils reveal a crucial clue to the rise of complex life': Free article failed quality gate: article has only 66 words; article has only 3 paragraphs",
+    "Skipped candidate 'Metabolic architecture: Living systems design could out-perform conventional HVAC': Free article failed quality gate: article has only 122 words; article has only 4 paragraphs",
     "Skipped candidate 'Japanese anime actor fights TikTok over AI voice cloning': Free article failed quality gate: article has only 46 words; article has only 2 paragraphs",
-    "Skipped candidate 'Popular AI models use arbitrary facial features to predict criminality and job performance': Free article failed quality gate: article has only 73 words; article has only 4 paragraphs"
+    "Skipped candidate '3-Million-Year-Old Bones Reveal an Unexpected Chapter in Human Evolution': Free article failed quality gate: article has only 83 words; article has only 3 paragraphs",
+    "Skipped candidate 'Low-dose radiation therapy may slow progression of knee osteoarthritis, long-term study indicates': Free article failed quality gate: article has only 99 words; article has only 4 paragraphs",
+    "Skipped candidate 'Nasal spray brings pain relief for children treated in the emergency department': Free article failed quality gate: article has only 82 words; article has only 3 paragraphs",
+    "Skipped candidate 'Nasal spray brings pain relief for children treated in the emergency department': Free article failed quality gate: article has only 82 words; article has only 3 paragraphs",
+    "Skipped candidate 'Low-dose radiation therapy may slow progression of knee osteoarthritis, long-term study indicates': Free article failed quality gate: article has only 99 words; article has only 4 paragraphs",
+    "Skipped candidate 'Sugar molecule in red meat linked to higher risk of developing type 2 diabetes': Free article failed quality gate: article has only 130 words; article has only 4 paragraphs",
+    "Skipped candidate 'Sugar molecule in red meat linked to higher risk of developing type 2 diabetes': Free article failed quality gate: article has only 130 words; article has only 4 paragraphs",
+    "Skipped candidate 'Dietary patterns linked to favorable blood biomarkers relevant to aging': Free article failed quality gate: article has only 97 words; article has only 4 paragraphs",
+    "Skipped candidate 'Dietary patterns linked to favorable blood biomarkers relevant to aging': Free article failed quality gate: article has only 97 words; article has only 4 paragraphs"
   ],
-  "inserted": 82,
-  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
+  "inserted": 81,
+  "message": "Published 1 post(s). Skipped 12 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "politics",
-        "world",
-        "health"
+        "health",
+        "crime",
+        "science"
       ],
       "sources": [
-        "BBC Health",
-        "The Guardian World"
+        "The Guardian Health"
       ],
       "status": "publish",
-      "title": "'Broken social care will in the end break the NHS",
-      "wp_id": 32554
+      "title": "Does GLP-1 use result in significant hair loss?",
+      "wp_id": 32567
     }
   ],
   "state": "published"
