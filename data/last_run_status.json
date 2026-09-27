@@ -1,6 +1,6 @@
 {
   "dry_run": false,
-  "finished_at": "2026-09-27T00:37:44.281112+00:00",
+  "finished_at": "2026-09-27T05:49:08.276032+00:00",
   "message": "OSError: image file is truncated (12 bytes not processed)",
   "state": "failed"
 }
