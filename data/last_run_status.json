@@ -1,27 +1,31 @@
 {
   "dry_run": false,
-  "feed_warnings": 14,
+  "feed_warnings": 15,
   "feeds": 91,
-  "fetched": 3684,
-  "finished_at": "2026-09-27T15:49:12.096547+00:00",
+  "fetched": 3629,
+  "finished_at": "2026-09-27T19:36:37.732711+00:00",
   "generation_failures": [
-    "Skipped candidate '1.7-billion-year-old fossils reveal a crucial clue to the rise of complex life': Free article failed quality gate: article has only 66 words; article has only 3 paragraphs",
-    "Skipped candidate 'APOD: 2026 September 27 \u2013 Andromeda Before and After Photoshop': Free article failed quality gate: article has only 266 words; article has only 5 paragraphs"
+    "Skipped candidate 'Welcome to Michoud: Take a Look Inside NASA\u2019s Rocket Factory': Free article failed quality gate: article has only 58 words; article has only 3 paragraphs",
+    "Skipped candidate 'Astronomers discover a radio galaxy with evidence of four separate jet outbursts': Free article failed quality gate: article has only 98 words; article has only 2 paragraphs",
+    "Skipped candidate 'Japanese anime actor fights TikTok over AI voice cloning': Free article failed quality gate: article has only 46 words; article has only 2 paragraphs",
+    "Skipped candidate 'Popular AI models use arbitrary facial features to predict criminality and job performance': Free article failed quality gate: article has only 73 words; article has only 4 paragraphs"
   ],
-  "inserted": 135,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 82,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "crypto",
-        "science"
+        "politics",
+        "world",
+        "health"
       ],
       "sources": [
-        "Decrypt"
+        "BBC Health",
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "Bitcoin's Quantum Problemthree Ways Researchers Are Trying to Fix It",
-      "wp_id": 32544
+      "title": "'Broken social care will in the end break the NHS",
+      "wp_id": 32554
     }
   ],
   "state": "published"
