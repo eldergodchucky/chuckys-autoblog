@@ -1,63 +1,29 @@
 {
   "dry_run": false,
-  "feed_warnings": 12,
+  "feed_warnings": 13,
   "feeds": 91,
   "fetched": 3694,
-  "finished_at": "2026-09-28T01:14:10.328292+00:00",
+  "finished_at": "2026-09-28T06:58:25.285923+00:00",
   "generation_failures": [
     "Skipped candidate 'Metabolic architecture: Living systems design could out-perform conventional HVAC': Free article failed quality gate: article has only 122 words; article has only 4 paragraphs",
     "Skipped candidate 'Ethan R. Siegel': Free article failed quality gate: article has only 208 words; article has only 3 paragraphs",
-    "Skipped candidate 'Seth Shostak': Free article failed quality gate: article has only 161 words; article has only 3 paragraphs",
-    "Skipped candidate 'Heat-resistant silicon carbide transistors fabricated on 6-inch wafers, moving closer to practical circuits': Free article failed quality gate: article has only 80 words; article has only 3 paragraphs",
-    "Skipped candidate 'Shipwreck found on Nantucket beach during storm': Free article failed quality gate: article has only 119 words; article has only 3 paragraphs",
-    "Skipped candidate 'Watch: Shipwreck uncovered on Nantucket island during nor'easter storm': Free article failed quality gate: article has only 203 words; article has only 4 paragraphs",
-    "Skipped candidate 'New digital tool helps doctors map critical brain functions during tumor removal': Free article failed quality gate: article has only 130 words; article has only 4 paragraphs",
-    "Skipped candidate 'New digital tool helps doctors map critical brain functions during tumor removal': Free article failed quality gate: article has only 130 words; article has only 4 paragraphs",
-    "Skipped candidate '3-Million-Year-Old Bones Reveal an Unexpected Chapter in Human Evolution': Free article failed quality gate: article has only 83 words; article has only 3 paragraphs",
-    "Skipped candidate 'Low-dose radiation therapy may slow progression of knee osteoarthritis, long-term study indicates': Free article failed quality gate: article has only 99 words; article has only 4 paragraphs",
-    "Skipped candidate 'Low-dose radiation therapy may slow progression of knee osteoarthritis, long-term study indicates': Free article failed quality gate: article has only 99 words; article has only 4 paragraphs",
-    "Skipped candidate 'Sugar molecule in red meat linked to higher risk of developing type 2 diabetes': Free article failed quality gate: article has only 130 words; article has only 4 paragraphs",
-    "Skipped candidate 'Sugar molecule in red meat linked to higher risk of developing type 2 diabetes': Free article failed quality gate: article has only 130 words; article has only 4 paragraphs",
-    "Skipped candidate 'Dietary patterns linked to favorable blood biomarkers relevant to aging': Free article failed quality gate: article has only 97 words; article has only 4 paragraphs",
-    "Skipped candidate 'Dietary patterns linked to favorable blood biomarkers relevant to aging': Free article failed quality gate: article has only 97 words; article has only 4 paragraphs",
-    "Skipped candidate 'Glucosamine, a popular joint supplement, linked to faster Alzheimer\u2019s progression': Free article failed quality gate: article has only 84 words; article has only 3 paragraphs",
-    "Skipped candidate 'Glucosamine, a popular joint supplement, linked to faster Alzheimer\u2019s progression': Free article failed quality gate: article has only 84 words; article has only 3 paragraphs",
-    "Skipped candidate 'Glucosamine, a popular joint supplement, linked to faster Alzheimer\u2019s progression': Free article failed quality gate: article has only 84 words; article has only 3 paragraphs",
-    "Skipped candidate 'Cutting ultra-processed food from school menus will be tricky, study suggests': Free article failed quality gate: article has only 99 words; article has only 3 paragraphs",
-    "Skipped candidate 'Insomnia linked to higher risk of stroke': Free article failed quality gate: article has only 83 words; article has only 3 paragraphs",
-    "Skipped candidate 'Insomnia linked to higher risk of stroke': Free article failed quality gate: article has only 83 words; article has only 3 paragraphs",
-    "Skipped candidate 'Cutting ultra-processed food from school menus will be tricky, study suggests': Free article failed quality gate: article has only 99 words; article has only 3 paragraphs",
-    "Skipped candidate 'Continuous glucose monitoring may lower mortality risk in diabetic patients on insulin': Free article failed quality gate: article has only 120 words; article has only 3 paragraphs",
-    "Skipped candidate 'Exam stress linked to raised blood sugar levels in non-diabetic medical students': Free article failed quality gate: article has only 108 words; article has only 3 paragraphs",
-    "Skipped candidate 'Exam stress linked to raised blood sugar levels in non-diabetic medical students': Free article failed quality gate: article has only 108 words; article has only 3 paragraphs",
-    "Skipped candidate 'State HIV prevention policies may benefit racial and ethnic groups unequally': Free article failed quality gate: article has only 120 words; article has only 3 paragraphs",
-    "Skipped candidate 'Gut microbiome can reveal risk of type 2 diabetes': Free article failed quality gate: article has only 86 words; article has only 3 paragraphs",
-    "Skipped candidate 'Gut microbiome can reveal risk of type 2 diabetes': Free article failed quality gate: article has only 86 words; article has only 3 paragraphs",
-    "Skipped candidate 'Millions more people with overweight could benefit from GLP-1 drugs to protect heart health, study suggests': Free article failed quality gate: article has only 99 words; article has only 4 paragraphs",
-    "Skipped candidate 'Millions more people with overweight could benefit from GLP-1 drugs to protect heart health, study suggests': Free article failed quality gate: article has only 99 words; article has only 4 paragraphs",
-    "Skipped candidate 'Continuous glucose monitoring may lower mortality risk in diabetic patients on insulin': Free article failed quality gate: article has only 120 words; article has only 3 paragraphs",
-    "Skipped candidate 'State HIV prevention policies may benefit racial and ethnic groups unequally': Free article failed quality gate: article has only 120 words; article has only 3 paragraphs",
-    "Skipped candidate 'Database fills gap in long COVID surveillance': Free article failed quality gate: article has only 90 words; article has only 3 paragraphs",
-    "Skipped candidate 'Database fills gap in long COVID surveillance': Free article failed quality gate: article has only 90 words; article has only 3 paragraphs",
-    "Skipped candidate 'People in strained relationships show somewhat higher preference for hearing lies': Free article failed quality gate: article has only 75 words; article has only 3 paragraphs",
-    "Skipped candidate 'Study reveals which values actually stop voters from supporting antidemocratic politicians': Free article failed quality gate: article has only 74 words; article has only 4 paragraphs",
-    "Skipped candidate 'Feeling Lonely Could Take Nearly 6 Years From Your Healthy Lifespan': Free article failed quality gate: article has only 83 words; article has only 4 paragraphs",
-    "Skipped candidate 'Hidden Artery Plaque Found in 1 in 13 Adults Before Age 30': Free article failed quality gate: article has only 85 words; article has only 3 paragraphs"
+    "Skipped candidate '100th Anniversary of the Shapley \u2013 Curtis Great Debate': Free article failed quality gate: article has only 317 words; article has only 3 paragraphs",
+    "Skipped candidate 'Introduction to the 100th Anniversary Debate': Free article failed quality gate: article has only 258 words"
   ],
-  "inserted": 58,
-  "message": "Published 1 post(s). Skipped 38 low-quality candidate(s).",
+  "inserted": 77,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "health",
+        "space",
         "science"
       ],
       "sources": [
-        "The Guardian Health"
+        "NASA Science"
       ],
       "status": "publish",
-      "title": "Three in four UK GPs \u2018too busy to talk to their patients",
-      "wp_id": 32578
+      "title": "Astronomy Picture of the Day\u2019s Frequently Asked Questions (FAQ)",
+      "wp_id": 32597
     }
   ],
   "state": "published"
