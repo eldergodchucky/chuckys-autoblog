@@ -1,41 +1,28 @@
 {
   "dry_run": false,
-  "feed_warnings": 13,
+  "feed_warnings": 14,
   "feeds": 91,
-  "fetched": 3627,
-  "finished_at": "2026-09-28T15:11:34.709563+00:00",
+  "fetched": 3628,
+  "finished_at": "2026-09-28T21:15:37.399950+00:00",
   "generation_failures": [
-    "Skipped candidate 'Stacked AI chip uses fast and slow layers to recognize changes in motion over time': Free article failed quality gate: article has only 79 words; article has only 2 paragraphs",
-    "Skipped candidate 'Nvidia unveils security platform to stop AI agents from going rogue after new, troubling incidents': Free article failed quality gate: article has only 45 words; article has only 2 paragraphs",
-    "Skipped candidate 'AI data centers could meet grid limits with 35 hours of reduced demand, model suggests': Free article failed quality gate: article has only 59 words; article has only 2 paragraphs",
-    "Skipped candidate 'From lab to life: Why translating AI advances to the real world is a major challenge': Free article failed quality gate: article has only 72 words; article has only 2 paragraphs",
-    "Skipped candidate 'Turning to AI for health answers may signal anxiety, depression among young adults': Free article failed quality gate: article has only 94 words; article has only 3 paragraphs",
-    "Skipped candidate 'Turning to AI for health answers may signal anxiety, depression among young adults': Free article failed quality gate: article has only 94 words; article has only 3 paragraphs",
-    "Skipped candidate 'AI and fruit fly tests link BRSK1 gene to rare neurodevelopmental disorder': Free article failed quality gate: article has only 97 words; article has only 4 paragraphs",
-    "Skipped candidate 'AI and fruit fly tests link BRSK1 gene to rare neurodevelopmental disorder': Free article failed quality gate: article has only 97 words; article has only 4 paragraphs",
-    "Skipped candidate 'Electronic skin lets users 'see' touch instantly': Free article failed quality gate: article has only 49 words; article has only 2 paragraphs",
-    "Skipped candidate 'New method automatically maps myelin patterns in the brain, revealing signs of injury': Free article failed quality gate: article has only 101 words; article has only 5 paragraphs",
-    "Skipped candidate 'New method automatically maps myelin patterns in the brain, revealing signs of injury': Free article failed quality gate: article has only 101 words; article has only 5 paragraphs",
-    "Skipped candidate 'Brain stimulation could reshape how you learn new skills': Free article failed quality gate: article has only 78 words; article has only 3 paragraphs",
-    "Skipped candidate 'Brain stimulation could reshape how you learn new skills': Free article failed quality gate: article has only 78 words; article has only 3 paragraphs",
-    "Skipped candidate 'Human breasts might have evolved to keep big-brained infants warm': Free article failed quality gate: article has only 67 words; article has only 4 paragraphs",
-    "Skipped candidate 'Neuroscientists shed light on how the brain juggles talking and listening during real conversation': Free article failed quality gate: article has only 76 words; article has only 4 paragraphs"
+    "Skipped candidate 'Diamond quantum sensor enables AC and DC current ratio checks in one setup': Free article failed quality gate: article has only 79 words; article has only 2 paragraphs",
+    "Skipped candidate 'A fully open-source humanoid arm for physical AI research': Free article failed quality gate: article has only 57 words; article has only 3 paragraphs",
+    "Skipped candidate 'Pressurized wind tunnel experiments could help wind farms generate more power': Free article failed quality gate: article has only 64 words; article has only 3 paragraphs"
   ],
-  "inserted": 438,
-  "message": "Published 1 post(s). Skipped 15 low-quality candidate(s).",
+  "inserted": 363,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "history",
-        "health",
+        "security",
         "science"
       ],
       "sources": [
-        "Smithsonian History"
+        "BleepingComputer"
       ],
       "status": "publish",
-      "title": "Who Wrote Elizabeth I's Most Scathing Letters? New Research Suggests the Tudor",
-      "wp_id": 32629
+      "title": "Over 16,000 Supabase databases expose PII, passwords, auth tokens",
+      "wp_id": 32648
     }
   ],
   "state": "published"
