@@ -2,28 +2,40 @@
   "dry_run": false,
   "feed_warnings": 13,
   "feeds": 91,
-  "fetched": 3694,
-  "finished_at": "2026-09-28T06:58:25.285923+00:00",
+  "fetched": 3627,
+  "finished_at": "2026-09-28T15:11:34.709563+00:00",
   "generation_failures": [
-    "Skipped candidate 'Metabolic architecture: Living systems design could out-perform conventional HVAC': Free article failed quality gate: article has only 122 words; article has only 4 paragraphs",
-    "Skipped candidate 'Ethan R. Siegel': Free article failed quality gate: article has only 208 words; article has only 3 paragraphs",
-    "Skipped candidate '100th Anniversary of the Shapley \u2013 Curtis Great Debate': Free article failed quality gate: article has only 317 words; article has only 3 paragraphs",
-    "Skipped candidate 'Introduction to the 100th Anniversary Debate': Free article failed quality gate: article has only 258 words"
+    "Skipped candidate 'Stacked AI chip uses fast and slow layers to recognize changes in motion over time': Free article failed quality gate: article has only 79 words; article has only 2 paragraphs",
+    "Skipped candidate 'Nvidia unveils security platform to stop AI agents from going rogue after new, troubling incidents': Free article failed quality gate: article has only 45 words; article has only 2 paragraphs",
+    "Skipped candidate 'AI data centers could meet grid limits with 35 hours of reduced demand, model suggests': Free article failed quality gate: article has only 59 words; article has only 2 paragraphs",
+    "Skipped candidate 'From lab to life: Why translating AI advances to the real world is a major challenge': Free article failed quality gate: article has only 72 words; article has only 2 paragraphs",
+    "Skipped candidate 'Turning to AI for health answers may signal anxiety, depression among young adults': Free article failed quality gate: article has only 94 words; article has only 3 paragraphs",
+    "Skipped candidate 'Turning to AI for health answers may signal anxiety, depression among young adults': Free article failed quality gate: article has only 94 words; article has only 3 paragraphs",
+    "Skipped candidate 'AI and fruit fly tests link BRSK1 gene to rare neurodevelopmental disorder': Free article failed quality gate: article has only 97 words; article has only 4 paragraphs",
+    "Skipped candidate 'AI and fruit fly tests link BRSK1 gene to rare neurodevelopmental disorder': Free article failed quality gate: article has only 97 words; article has only 4 paragraphs",
+    "Skipped candidate 'Electronic skin lets users 'see' touch instantly': Free article failed quality gate: article has only 49 words; article has only 2 paragraphs",
+    "Skipped candidate 'New method automatically maps myelin patterns in the brain, revealing signs of injury': Free article failed quality gate: article has only 101 words; article has only 5 paragraphs",
+    "Skipped candidate 'New method automatically maps myelin patterns in the brain, revealing signs of injury': Free article failed quality gate: article has only 101 words; article has only 5 paragraphs",
+    "Skipped candidate 'Brain stimulation could reshape how you learn new skills': Free article failed quality gate: article has only 78 words; article has only 3 paragraphs",
+    "Skipped candidate 'Brain stimulation could reshape how you learn new skills': Free article failed quality gate: article has only 78 words; article has only 3 paragraphs",
+    "Skipped candidate 'Human breasts might have evolved to keep big-brained infants warm': Free article failed quality gate: article has only 67 words; article has only 4 paragraphs",
+    "Skipped candidate 'Neuroscientists shed light on how the brain juggles talking and listening during real conversation': Free article failed quality gate: article has only 76 words; article has only 4 paragraphs"
   ],
-  "inserted": 77,
-  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
+  "inserted": 438,
+  "message": "Published 1 post(s). Skipped 15 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "space",
+        "history",
+        "health",
         "science"
       ],
       "sources": [
-        "NASA Science"
+        "Smithsonian History"
       ],
       "status": "publish",
-      "title": "Astronomy Picture of the Day\u2019s Frequently Asked Questions (FAQ)",
-      "wp_id": 32597
+      "title": "Who Wrote Elizabeth I's Most Scathing Letters? New Research Suggests the Tudor",
+      "wp_id": 32629
     }
   ],
   "state": "published"
