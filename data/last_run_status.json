@@ -2,49 +2,27 @@
   "dry_run": false,
   "feed_warnings": 13,
   "feeds": 91,
-  "fetched": 3854,
-  "finished_at": "2026-09-29T13:49:09.677792+00:00",
+  "fetched": 3834,
+  "finished_at": "2026-09-29T19:09:44.579827+00:00",
   "generation_failures": [
-    "Skipped candidate 'Research provides evidence-based practical tools to reduce ultra-low temperature freezer energy costs': Free article failed quality gate: article has only 70 words; article has only 3 paragraphs",
-    "Skipped candidate 'Konami has a Silent Hill lore bible and no, you can't see it': Free article failed quality gate: article has only 101 words; article has only 4 paragraphs",
-    "Skipped candidate 'Researchers propose a new media framework for humans and AI characters': Free article failed quality gate: article has only 46 words; article has only 2 paragraphs",
-    "Skipped candidate 'German nuclear project's timeline clarified by study of preserved uranium samples': Free article failed quality gate: article has only 121 words; article has only 3 paragraphs",
-    "Skipped candidate 'Helping 'bad' people drew disapproval from some of 21 AI models': Free article failed quality gate: article has only 51 words; article has only 2 paragraphs",
-    "Skipped candidate 'Is it safe to charge your phone overnight?': Free article failed quality gate: article has only 67 words; article has only 3 paragraphs",
-    "Skipped candidate 'Venus flytrap-inspired 'robot hand' material senses objects and grasps them under light': Free article failed quality gate: article has only 85 words; article has only 3 paragraphs",
-    "Skipped candidate 'Fractionated radiosurgery reduces recurrence after surgery for brain metastases, may improve survival': Free article failed quality gate: article has only 89 words; article has only 4 paragraphs",
-    "Skipped candidate 'Fractionated radiosurgery reduces recurrence after surgery for brain metastases, may improve survival': Free article failed quality gate: article has only 89 words; article has only 4 paragraphs",
-    "Skipped candidate 'Researchers suggest tile-based radiation therapy as standard of care to lower risk of recurrence in brain metastases': Free article failed quality gate: article has only 112 words; article has only 3 paragraphs",
-    "Skipped candidate 'Researchers suggest tile-based radiation therapy as standard of care to lower risk of recurrence in brain metastases': Free article failed quality gate: article has only 112 words; article has only 3 paragraphs",
-    "Skipped candidate 'Why men face higher cancer risks may depend on the country they live in': Free article failed quality gate: article has only 126 words; article has only 4 paragraphs",
-    "Skipped candidate 'A blood-based approach could enable personalized immunotherapy without the need for a tumor biopsy': Free article failed quality gate: article has only 78 words; article has only 4 paragraphs",
-    "Skipped candidate 'Researchers slow neurodegeneration in mice by barring T cells from the brain': Free article failed quality gate: article has only 71 words; article has only 3 paragraphs",
-    "Skipped candidate 'Why men face higher cancer risks may depend on the country they live in': Free article failed quality gate: article has only 126 words; article has only 4 paragraphs",
-    "Skipped candidate 'A blood-based approach could enable personalized immunotherapy without the need for a tumor biopsy': Free article failed quality gate: article has only 78 words; article has only 4 paragraphs",
-    "Skipped candidate 'Major trial examines sugar-free sweetened soft drinks': Free article failed quality gate: article has only 63 words; article has only 4 paragraphs",
-    "Skipped candidate 'Major trial examines sugar-free sweetened soft drinks': Free article failed quality gate: article has only 63 words; article has only 4 paragraphs",
-    "Skipped candidate 'As America shifted left under Trump, emotional hostility widened the partisan gap': Free article failed quality gate: article has only 76 words; article has only 4 paragraphs",
-    "Skipped candidate 'A new era of discovery for immunology: Expert Q& A': Free article failed quality gate: article has only 93 words; article has only 4 paragraphs",
-    "Skipped candidate 'A new era of discovery for immunology: Expert Q& A': Free article failed quality gate: article has only 93 words; article has only 4 paragraphs",
-    "Skipped candidate 'New antibodies could lead to first monoclonal treatment for measles': Free article failed quality gate: article has only 75 words; article has only 3 paragraphs",
-    "Skipped candidate 'New antibodies could lead to first monoclonal treatment for measles': Free article failed quality gate: article has only 75 words; article has only 3 paragraphs",
-    "Skipped candidate 'Brain structure linked to how well patients respond to an antidepressant, small study finds': Free article failed quality gate: article has only 76 words; article has only 4 paragraphs",
-    "Skipped candidate 'Research shows promising results for health care professionals using ketogenic diet therapy to treat mental illness': Free article failed quality gate: article has only 76 words; article has only 3 paragraphs",
-    "Skipped candidate 'Research shows promising results for health care professionals using ketogenic diet therapy to treat mental illness': Free article failed quality gate: article has only 76 words; article has only 3 paragraphs",
-    "Skipped candidate 'Genetic analysis reveals potential benefit of aspirin for reducing dementia risk': Free article failed quality gate: article has only 80 words; article has only 4 paragraphs",
-    "Skipped candidate 'Mediterranean diet linked to lower likelihood of acne in adults': Free article failed quality gate: article has only 94 words; article has only 3 paragraphs",
-    "Skipped candidate 'Mediterranean diet linked to lower likelihood of acne in adults': Free article failed quality gate: article has only 94 words; article has only 3 paragraphs",
-    "Skipped candidate 'Genetic analysis reveals potential benefit of aspirin for reducing dementia risk': Free article failed quality gate: article has only 80 words; article has only 4 paragraphs",
-    "Skipped candidate 'Medical cannabis enrollment surged nationwide over past decade, but leveled off as recreational access expanded': Free article failed quality gate: article has only 81 words; article has only 4 paragraphs",
-    "Skipped candidate 'The brain is built from two separate sources, not one, new research suggests': Free article failed quality gate: article has only 74 words; article has only 3 paragraphs",
-    "Skipped candidate 'STAT+: Pharmalittle: We\u2019re reading about Novo licensing a Chinese obesity pill, Merck pulling an antibiotic, and more': Free article failed quality gate: article has only 68 words; article has only 3 paragraphs",
-    "Skipped candidate 'Medical cannabis enrollment surged nationwide over past decade, but leveled off as recreational access expanded': Free article failed quality gate: article has only 81 words; article has only 4 paragraphs",
-    "Skipped candidate 'Rebel Moon 3 Sounds Like It's Unlikely to Happen After Zack Snyder Issues Update': Free article failed quality gate: article has only 30 words; article has only 2 paragraphs",
-    "Skipped candidate 'Diving into an out-of-sync galaxy': Free article failed quality gate: article has only 114 words; article has only 3 paragraphs",
-    "Skipped candidate 'Instagram partner schools can now post content only their students can view': Free article failed quality gate: article has only 307 words"
+    "Skipped candidate 'OpenAI CEO announces new AI agent and avoids mention of security concerns at developer conference': Free article failed quality gate: article has only 53 words; article has only 3 paragraphs",
+    "Skipped candidate 'Anthropic warns of 'existential' AI risks in IPO filing: Report': Free article failed quality gate: article has only 42 words; article has only 3 paragraphs"
   ],
-  "inserted": 504,
-  "message": "Published 0 post(s). Skipped 37 low-quality candidate(s).",
-  "posts": [],
-  "state": "skipped"
+  "inserted": 430,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "posts": [
+    {
+      "categories": [
+        "ai",
+        "science"
+      ],
+      "sources": [
+        "The Verge"
+      ],
+      "status": "publish",
+      "title": "AI Researchers Putout Videos Saying Superintelligence is \u2018exactly as Dangerous",
+      "wp_id": 32717
+    }
+  ],
+  "state": "published"
 }
