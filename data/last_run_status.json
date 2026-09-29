@@ -1,27 +1,29 @@
 {
   "dry_run": false,
-  "feed_warnings": 13,
+  "feed_warnings": 14,
   "feeds": 91,
-  "fetched": 3834,
-  "finished_at": "2026-09-29T19:09:44.579827+00:00",
+  "fetched": 3845,
+  "finished_at": "2026-09-29T22:58:39.786165+00:00",
   "generation_failures": [
-    "Skipped candidate 'OpenAI CEO announces new AI agent and avoids mention of security concerns at developer conference': Free article failed quality gate: article has only 53 words; article has only 3 paragraphs",
-    "Skipped candidate 'Anthropic warns of 'existential' AI risks in IPO filing: Report': Free article failed quality gate: article has only 42 words; article has only 3 paragraphs"
+    "Skipped candidate 'Firefox 157 rolls out Mozilla\u2019s biggest visual refresh in years': Free article failed quality gate: article has only 57 words; article has only 2 paragraphs",
+    "Skipped candidate 'Researchers discover overlooked process of bone renewal': Free article failed quality gate: article has only 156 words; article has only 5 paragraphs",
+    "Skipped candidate 'Researchers discover overlooked process of bone renewal': Free article failed quality gate: article has only 156 words; article has only 5 paragraphs"
   ],
-  "inserted": 430,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 206,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "ai",
+        "health",
+        "energy",
         "science"
       ],
       "sources": [
-        "The Verge"
+        "The Guardian Health"
       ],
       "status": "publish",
-      "title": "AI Researchers Putout Videos Saying Superintelligence is \u2018exactly as Dangerous",
-      "wp_id": 32717
+      "title": "\u2018Godzilla\u2019 of weight-loss drugs could provide other important health benefits",
+      "wp_id": 32732
     }
   ],
   "state": "published"
