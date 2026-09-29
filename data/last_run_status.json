@@ -2,50 +2,15 @@
   "dry_run": false,
   "feed_warnings": 14,
   "feeds": 91,
-  "fetched": 3636,
-  "finished_at": "2026-09-29T01:04:40.814408+00:00",
+  "fetched": 3655,
+  "finished_at": "2026-09-29T06:56:08.742252+00:00",
   "generation_failures": [
-    "Skipped candidate 'Risk from toxic metals can persist months after wildfires, Maui study finds': Free article failed quality gate: article has only 125 words; article has only 5 paragraphs",
-    "Skipped candidate 'AI model achieves 89% accuracy in identifying arrhythmia-related abnormalities in atrial tissue': Free article failed quality gate: article has only 91 words; article has only 4 paragraphs",
-    "Skipped candidate 'AI model achieves 89% accuracy in identifying arrhythmia-related abnormalities in atrial tissue': Free article failed quality gate: article has only 91 words; article has only 4 paragraphs",
-    "Skipped candidate 'Toxic metals found in Maui residents months after 2023 wildfires': Free article failed quality gate: article has only 84 words; article has only 4 paragraphs",
-    "Skipped candidate 'Just 20 seconds of speech could help detect type 2 diabetes using AI-based tool': Free article failed quality gate: article has only 92 words; article has only 3 paragraphs",
-    "Skipped candidate 'Just 20 seconds of speech could help detect type 2 diabetes using AI-based tool': Free article failed quality gate: article has only 92 words; article has only 3 paragraphs",
-    "Skipped candidate 'Stomach bacterium hijacks healing signals to drive precancerous changes, study finds': Free article failed quality gate: article has only 102 words; article has only 4 paragraphs",
-    "Skipped candidate 'Stomach bacterium hijacks healing signals to drive precancerous changes, study finds': Free article failed quality gate: article has only 102 words; article has only 4 paragraphs",
-    "Skipped candidate 'Supervised physical therapy improves short-term knee pain and function after ACL surgery in young adults': Free article failed quality gate: article has only 108 words; article has only 4 paragraphs",
-    "Skipped candidate 'Supervised physical therapy improves short-term knee pain and function after ACL surgery in young adults': Free article failed quality gate: article has only 108 words; article has only 4 paragraphs",
-    "Skipped candidate 'Scientists Find Signs of Brain Aging Decades Before Cognitive Symptoms': Free article failed quality gate: article has only 83 words; article has only 3 paragraphs",
-    "Skipped candidate 'Metabolic activity of gut bacteria can either promote or inhibit function of CAR T cells in cancer therapy': Free article failed quality gate: article has only 137 words; article has only 4 paragraphs",
-    "Skipped candidate 'Metabolic activity of gut bacteria can either promote or inhibit function of CAR T cells in cancer therapy': Free article failed quality gate: article has only 137 words; article has only 4 paragraphs",
-    "Skipped candidate 'Study foresees heightened measles epidemic risk for Florida': Free article failed quality gate: article has only 65 words; article has only 4 paragraphs",
-    "Skipped candidate 'High levels of 'forever chemicals' found in Lancashire residents' blood in ten-year study of exposed communities': Free article failed quality gate: article has only 87 words; article has only 4 paragraphs",
-    "Skipped candidate 'Fluctuations in blood pressure over time linked to death and strokes, analysis of UK data finds': Free article failed quality gate: article has only 112 words; article has only 4 paragraphs",
-    "Skipped candidate 'Fluctuations in blood pressure over time linked to death and strokes, analysis of UK data finds': Free article failed quality gate: article has only 112 words; article has only 4 paragraphs",
-    "Skipped candidate 'Regulator-mandated study finds no link between semaglutide use and pancreatic cancer': Free article failed quality gate: article has only 109 words; article has only 4 paragraphs",
-    "Skipped candidate 'Regulator-mandated study finds no link between semaglutide use and pancreatic cancer': Free article failed quality gate: article has only 109 words; article has only 4 paragraphs",
-    "Skipped candidate 'How moving neighborhood can alter risk of type 2 diabetes': Free article failed quality gate: article has only 85 words; article has only 3 paragraphs",
-    "Skipped candidate 'How moving neighborhood can alter risk of type 2 diabetes': Free article failed quality gate: article has only 85 words; article has only 3 paragraphs",
-    "Skipped candidate 'Mapping how temporary firearm removal orders are used among service members and veterans': Free article failed quality gate: article has only 90 words; article has only 4 paragraphs",
-    "Skipped candidate 'Mapping how temporary firearm removal orders are used among service members and veterans': Free article failed quality gate: article has only 90 words; article has only 4 paragraphs",
-    "Skipped candidate 'Study revisits measures of breastfeeding success\u2014and the consequences for parents': Free article failed quality gate: article has only 73 words; article has only 3 paragraphs",
-    "Skipped candidate 'Study revisits measures of breastfeeding success\u2014and the consequences for parents': Free article failed quality gate: article has only 73 words; article has only 3 paragraphs",
-    "Skipped candidate 'Lower dietary diversity in the first year linked to atopic dermatitis': Free article failed quality gate: article has only 77 words; article has only 4 paragraphs",
-    "Skipped candidate 'Abuse and disability trap: 90% of incarcerated Michigan youth suffered prior abuse': Free article failed quality gate: article has only 63 words; article has only 4 paragraphs",
-    "Skipped candidate 'Study foresees heightened measles epidemic risk for Florida': Free article failed quality gate: article has only 65 words; article has only 4 paragraphs",
-    "Skipped candidate 'High levels of 'forever chemicals' found in Lancashire residents' blood in ten-year study of exposed communities': Free article failed quality gate: article has only 87 words; article has only 4 paragraphs",
-    "Skipped candidate 'Lower dietary diversity in the first year linked to atopic dermatitis': Free article failed quality gate: article has only 77 words; article has only 4 paragraphs",
-    "Skipped candidate 'New study links internet addiction to exhausted physiological stress systems': Free article failed quality gate: article has only 75 words; article has only 3 paragraphs",
-    "Skipped candidate 'Abuse and disability trap: 90% of incarcerated Michigan youth suffered prior abuse': Free article failed quality gate: article has only 63 words; article has only 4 paragraphs",
-    "Skipped candidate 'Experimental Drug Reverses Paralysis and Vision Loss in MS-Like Disease': Free article failed quality gate: article has only 85 words; article has only 3 paragraphs",
-    "Skipped candidate 'Bedside blood test can deliver results in under 10 minutes to guide urgent stroke care': Free article failed quality gate: article has only 102 words; article has only 4 paragraphs",
-    "Skipped candidate 'Myeloma risk modestly increased in adults with an incidentally detected vertebral fracture': Free article failed quality gate: article has only 72 words; article has only 4 paragraphs",
-    "Skipped candidate 'Myeloma risk modestly increased in adults with an incidentally detected vertebral fracture': Free article failed quality gate: article has only 72 words; article has only 4 paragraphs",
-    "Skipped candidate 'Bedside blood test can deliver results in under 10 minutes to guide urgent stroke care': Free article failed quality gate: article has only 102 words; article has only 4 paragraphs",
-    "Skipped candidate 'Meteor hit Oklahoma 100 million years later than previously thought': Free article failed quality gate: article has only 94 words; article has only 3 paragraphs"
+    "Skipped candidate 'A fully open-source humanoid arm for physical AI research': Free article failed quality gate: article has only 57 words; article has only 3 paragraphs",
+    "Skipped candidate 'OpenAI scraps release of new model over safety concerns in internal testing': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate 'Diamond quantum sensor enables AC and DC current ratio checks in one setup': Free article failed quality gate: article has only 79 words; article has only 2 paragraphs"
   ],
-  "inserted": 121,
-  "message": "Published 1 post(s). Skipped 38 low-quality candidate(s).",
+  "inserted": 92,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
@@ -56,8 +21,8 @@
         "Smithsonian History"
       ],
       "status": "publish",
-      "title": "Archaeologists Unearth the 2",
-      "wp_id": 32662
+      "title": "This Massive, Deep-Sea Roly Poly Can Go Years Without Food Thanks",
+      "wp_id": 32685
     }
   ],
   "state": "published"
