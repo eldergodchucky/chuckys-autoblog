@@ -2,24 +2,25 @@
   "dry_run": false,
   "feed_warnings": 14,
   "feeds": 91,
-  "fetched": 3848,
-  "finished_at": "2026-09-30T08:12:21.852615+00:00",
+  "fetched": 3845,
+  "finished_at": "2026-09-30T14:57:59.703951+00:00",
   "generation_failures": [],
-  "inserted": 134,
+  "inserted": 409,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "world",
-        "ai",
-        "science"
+        "crime",
+        "health"
       ],
       "sources": [
-        "BBC World"
+        "BBC World",
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "Chinese AI tool told researchers how to make bioweapons",
-      "wp_id": 32762
+      "title": "Tennessee halts plan to execute woman for first time in 200 years",
+      "wp_id": 32782
     }
   ],
   "state": "published"
