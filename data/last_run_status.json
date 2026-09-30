@@ -1,27 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 13,
+  "feed_warnings": 14,
   "feeds": 91,
-  "fetched": 3849,
-  "finished_at": "2026-09-30T01:57:21.363348+00:00",
-  "generation_failures": [
-    "Skipped candidate 'A Fossil Misidentified for Decades Turns Out To Be a 309-Million-Year-Old Species': Free article failed quality gate: article has only 58 words; article has only 2 paragraphs"
-  ],
-  "inserted": 74,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "fetched": 3848,
+  "finished_at": "2026-09-30T08:12:21.852615+00:00",
+  "generation_failures": [],
+  "inserted": 134,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "history",
-        "health",
+        "world",
+        "ai",
         "science"
       ],
       "sources": [
-        "Smithsonian History"
+        "BBC World"
       ],
       "status": "publish",
-      "title": "MRI Scans Might Reveal Signs of Alzheimer's Disease Seven Years Before",
-      "wp_id": 32745
+      "title": "Chinese AI tool told researchers how to make bioweapons",
+      "wp_id": 32762
     }
   ],
   "state": "published"
