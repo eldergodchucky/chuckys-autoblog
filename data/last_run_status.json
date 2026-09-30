@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 14,
+  "feed_warnings": 13,
   "feeds": 91,
-  "fetched": 3841,
-  "finished_at": "2026-09-30T19:54:39.186515+00:00",
+  "fetched": 3877,
+  "finished_at": "2026-09-30T23:32:34.252565+00:00",
   "generation_failures": [],
-  "inserted": 352,
+  "inserted": 185,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "history",
-        "sports",
-        "space"
+        "defense",
+        "business",
+        "science"
       ],
       "sources": [
-        "Smithsonian History"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Could Saturn's Moon Enceladus Host Alien Life? Earth Microbes Can Live",
-      "wp_id": 32795
+      "title": "Defense Secretary Pete Hegseth Just Launched a 120-day Study - Pentagon Taps Elon",
+      "wp_id": 32809
     }
   ],
   "state": "published"
