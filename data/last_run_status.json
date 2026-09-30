@@ -2,25 +2,24 @@
   "dry_run": false,
   "feed_warnings": 14,
   "feeds": 91,
-  "fetched": 3845,
-  "finished_at": "2026-09-30T14:57:59.703951+00:00",
+  "fetched": 3841,
+  "finished_at": "2026-09-30T19:54:39.186515+00:00",
   "generation_failures": [],
-  "inserted": 409,
+  "inserted": 352,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "crime",
-        "health"
+        "history",
+        "sports",
+        "space"
       ],
       "sources": [
-        "BBC World",
-        "The Guardian World"
+        "Smithsonian History"
       ],
       "status": "publish",
-      "title": "Tennessee halts plan to execute woman for first time in 200 years",
-      "wp_id": 32782
+      "title": "Could Saturn's Moon Enceladus Host Alien Life? Earth Microbes Can Live",
+      "wp_id": 32795
     }
   ],
   "state": "published"
