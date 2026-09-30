@@ -1,29 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 14,
+  "feed_warnings": 13,
   "feeds": 91,
-  "fetched": 3845,
-  "finished_at": "2026-09-29T22:58:39.786165+00:00",
+  "fetched": 3849,
+  "finished_at": "2026-09-30T01:57:21.363348+00:00",
   "generation_failures": [
-    "Skipped candidate 'Firefox 157 rolls out Mozilla\u2019s biggest visual refresh in years': Free article failed quality gate: article has only 57 words; article has only 2 paragraphs",
-    "Skipped candidate 'Researchers discover overlooked process of bone renewal': Free article failed quality gate: article has only 156 words; article has only 5 paragraphs",
-    "Skipped candidate 'Researchers discover overlooked process of bone renewal': Free article failed quality gate: article has only 156 words; article has only 5 paragraphs"
+    "Skipped candidate 'A Fossil Misidentified for Decades Turns Out To Be a 309-Million-Year-Old Species': Free article failed quality gate: article has only 58 words; article has only 2 paragraphs"
   ],
-  "inserted": 206,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 74,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
+        "history",
         "health",
-        "energy",
         "science"
       ],
       "sources": [
-        "The Guardian Health"
+        "Smithsonian History"
       ],
       "status": "publish",
-      "title": "\u2018Godzilla\u2019 of weight-loss drugs could provide other important health benefits",
-      "wp_id": 32732
+      "title": "MRI Scans Might Reveal Signs of Alzheimer's Disease Seven Years Before",
+      "wp_id": 32745
     }
   ],
   "state": "published"
