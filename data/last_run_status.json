@@ -2,27 +2,25 @@
   "dry_run": false,
   "feed_warnings": 14,
   "feeds": 91,
-  "fetched": 3863,
-  "finished_at": "2026-10-01T16:39:56.066452+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Battery-based device could bring carbon capture costs below $100 per ton': Free article failed quality gate: article has only 75 words; article has only 2 paragraphs",
-    "Skipped candidate 'NEAR Intents suffers $3.8M exploit after assistance with Bitget breach': Free article failed quality gate: article has only 183 words; article has only 3 paragraphs"
-  ],
-  "inserted": 442,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "fetched": 3864,
+  "finished_at": "2026-10-01T21:24:34.568195+00:00",
+  "generation_failures": [],
+  "inserted": 262,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "space",
-        "climate",
-        "health"
+        "gadgets",
+        "gaming",
+        "ai"
       ],
       "sources": [
-        "BBC Climate"
+        "Engadget",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "SpaceX launches crew to ISS",
-      "wp_id": 32870
+      "title": "Sony brings AI upscaling to the base PS5",
+      "wp_id": 32884
     }
   ],
   "state": "published"
