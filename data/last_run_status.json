@@ -2,28 +2,24 @@
   "dry_run": false,
   "feed_warnings": 14,
   "feeds": 91,
-  "fetched": 3882,
-  "finished_at": "2026-10-01T02:28:45.074427+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Stratospheric observatory Sunrise-III reveals intricate solar magnetic structures': Free article failed quality gate: article has only 68 words; article has only 2 paragraphs",
-    "Skipped candidate 'Catch a rare lunar occultation of Jupiter plus Saturn at opposition in early October': Free article failed quality gate: article has only 55 words; article has only 2 paragraphs",
-    "Skipped candidate 'Astronomers link mysterious cosmic flashes to collisions of dead stars': Free article failed quality gate: article has only 88 words; article has only 3 paragraphs"
-  ],
-  "inserted": 73,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "fetched": 3874,
+  "finished_at": "2026-10-01T09:20:49.406780+00:00",
+  "generation_failures": [],
+  "inserted": 152,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
+        "world",
+        "space",
         "software"
       ],
       "sources": [
-        "Ars Technica AI",
-        "TechCrunch"
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "Google announces Gemini 4 Argon AI model",
-      "wp_id": 32819
+      "title": "New Google Maps images reveal massive scale of devastation in Gaza",
+      "wp_id": 32845
     }
   ],
   "state": "published"
