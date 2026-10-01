@@ -29,6 +29,7 @@ CONTENT = """<h2 style="text-align:center;">Big news, sharp analysis, and origin
 <li><a href="/category/entertainment/">Entertainment</a></li>
 <li><a href="/category/celebrities/">Celebrities</a></li>
 <li><a href="/category/history/">History</a></li>
+<li><a href="/category/culture/">Culture &amp; Arts</a></li>
 <li><a href="/category/phones/">Phones</a></li>
 <li><a href="/category/apple/">Apple</a></li>
 <li><a href="/category/android/">Android</a></li>

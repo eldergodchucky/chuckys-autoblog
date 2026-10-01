@@ -750,11 +750,23 @@ def parse_date(value: str | None) -> dt.datetime | None:
 
 def request_bytes(url: str, timeout: int) -> bytes:
 
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    import gzip as _gzip
+
+    request = urllib.request.Request(
+        url,
+        headers={"User-Agent": USER_AGENT, "Accept-Encoding": "gzip, identity"},
+    )
 
     with urllib.request.urlopen(request, timeout=timeout) as response:
 
-        return response.read()
+        raw = response.read()
+        enc = response.headers.get("Content-Encoding", "")
+        if enc == "gzip" or (len(raw) >= 2 and raw[:2] == b"\x1f\x8b"):
+            try:
+                raw = _gzip.decompress(raw)
+            except Exception:
+                pass
+        return raw
 
 
 
@@ -1445,6 +1457,8 @@ def category_weights() -> dict[str, int]:
             "energy": 6,
 
             "defense": 6,
+
+            "culture": 5,
 
             "tech": 4,
 
@@ -2966,6 +2980,10 @@ def category_takeaway(categories: set[str]) -> str:
 
         notes.append("historical and archaeological findings can challenge established timelines, preserve cultural heritage, and deepen our understanding of ancient societies")
 
+    if "culture" in categories:
+
+        notes.append("culture and arts coverage matters because design, architecture, literature, and creative industries shape society, identity, and the economy")
+
     if "tech" in categories:
 
         notes.append("platform and software shifts can change what developers, creators, and everyday users are able to build")
@@ -3037,6 +3055,8 @@ def category_reader_angle(category: str) -> str:
         "defense": "defense and aerospace reporting matters because technological superiority, procurement decisions, and geopolitical posture directly affect international stability and national security",
 
         "history": "history and archaeology reporting matters because new excavations, archival discoveries, and forensic analysis reshape our understanding of human civilization and cultural heritage",
+
+        "culture": "culture and arts coverage matters when it reflects broad social trends, shapes public taste, or signals where investment, identity, and creative industries are heading",
 
         "tech": "platform stories matter when they shift what developers, creators, businesses, or ordinary users can do next",
 
@@ -3115,6 +3135,8 @@ def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> li
         ("software", ("app", "apps", "software", "update", "developer")),
 
         ("security", ("security", "hack", "breach", "malware", "password", "vulnerability")),
+
+        ("culture", ("architecture", "design", "art", "fashion", "film festival", "cultural", "heritage", "museum", "opera", "literature", "theatre", "theater", "gallery", "exhibition", "culinary", "cuisine", "photography", "jazz", "ballet", "sculpture")),
 
         ("gadgets", ("gadget", "device", "smartwatch", "wearable", "earbuds", "laptop", "glasses", "robotaxi", "robotaxis")),
 
@@ -4402,6 +4424,10 @@ def story_kind(categories: list[str], text: str) -> str:
 
         return "entertainment"
 
+    if "culture" in categories:
+
+        return "culture"
+
     if "history" in categories:
 
         return "history"
@@ -4954,6 +4980,25 @@ PUBLICATION_NAMES = (
     "Study Finds",
     "ZDNet",
     "Computerworld",
+    "Deutsche Welle",
+    "DW News",
+    "Al Jazeera",
+    "France 24",
+    "Euronews",
+    "South China Morning Post",
+    "The Japan Times",
+    "The Hindu",
+    "AllAfrica",
+    "Daily Maverick",
+    "MercoPress",
+    "CBC News",
+    "UN News",
+    "MarketWatch",
+    "ArchDaily",
+    "The Guardian",
+    "BBC News",
+    "Reuters",
+    "Associated Press",
 )
 
 
@@ -5003,6 +5048,16 @@ BARE_PUBLICATION_NAMES = (
     "Study Finds",
     "MIT Technology Review",
     "Technology Review",
+    "Deutsche Welle",
+    "DW News",
+    "Al Jazeera",
+    "France 24",
+    "Euronews",
+    "South China Morning Post",
+    "MarketWatch",
+    "CBC News",
+    "MercoPress",
+    "Daily Maverick",
 )
 
 
@@ -5019,6 +5074,7 @@ def strip_bare_publications(text: str) -> tuple[str, int]:
 
 def strip_source_mentions(text: str, extra_names: list[str] | None = None) -> tuple[str, int]:
     """Remove attribution phrasing and publication names from prose."""
+    text = _WIRE_DATELINE.sub("", text).strip()
     hits = 0
     names = list(PUBLICATION_NAMES) + [name for name in (extra_names or []) if name]
     for name in sorted(names, key=len, reverse=True):
@@ -5042,6 +5098,11 @@ def strip_source_mentions(text: str, extra_names: list[str] | None = None) -> tu
     text = re.sub(r"\(\s*\)", "", text)
     return text.strip(), hits
 
+
+_WIRE_DATELINE = re.compile(
+    r"^\s*[A-Z][\w\s,./]{0,34}\s*\((?:Reuters|AP|AFP|Bloomberg|DW|SCMP|Euronews|France\s*24|Al\s*Jazeera|Xinhua|UN\s*News)\)\s*[-\u2014\u2013]+\s*",
+    re.IGNORECASE,
+)
 
 AI_TELL_HEADER = re.compile(
     r"(?is)<h[23][^>]*>\s*(?:why (?:this|it) matters?|what happened(?: here)?|the details?(?: so far)?|the bigger picture|the (?:bottom line|context|takeaway)|key takeaways?:?|known details|what (?:readers|users|we) (?:should|need to) watch|final thoughts|conclusions?\b|wrapping (?:it )?up)\s*</h[23]>\s*"

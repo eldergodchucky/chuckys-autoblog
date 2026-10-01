@@ -778,6 +778,125 @@
       "category": "defense",
       "quality": 4,
       "enabled": true
+    },
+    {
+      "name": "DW World",
+      "url": "https://rss.dw.com/rdf/rss-en-all",
+      "category": "world",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "France 24",
+      "url": "https://www.france24.com/en/rss",
+      "category": "world",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Euronews",
+      "url": "https://www.euronews.com/rss?level=theme&name=news",
+      "category": "world",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Al Jazeera",
+      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "category": "world",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "SCMP World",
+      "url": "https://www.scmp.com/rss/4/feed",
+      "category": "world",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "The Japan Times",
+      "url": "https://www.japantimes.co.jp/feed/",
+      "category": "world",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "The Hindu World",
+      "url": "https://www.thehindu.com/news/international/feeder/default.rss",
+      "category": "world",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "AllAfrica",
+      "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+      "category": "world",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "Daily Maverick",
+      "url": "https://www.dailymaverick.co.za/rss/",
+      "category": "world",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "MercoPress",
+      "url": "https://en.mercopress.com/rss/",
+      "category": "world",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "CBC World",
+      "url": "https://www.cbc.ca/cmlink/rss-world",
+      "category": "world",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "UN News",
+      "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+      "category": "world",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "WHO News",
+      "url": "https://www.who.int/rss-feeds/news-english.xml",
+      "category": "health",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "MarketWatch",
+      "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
+      "category": "business",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "BBC Football",
+      "url": "https://feeds.bbci.co.uk/sport/football/rss.xml",
+      "category": "sports",
+      "quality": 5,
+      "enabled": true
+    },
+    {
+      "name": "Formula 1 News",
+      "url": "https://www.formula1.com/content/fom-website/en/latest/all.xml",
+      "category": "sports",
+      "quality": 4,
+      "enabled": true
+    },
+    {
+      "name": "ArchDaily",
+      "url": "https://www.archdaily.com/feed",
+      "category": "culture",
+      "quality": 5,
+      "enabled": true
     }
   ]
 }
