@@ -2,24 +2,27 @@
   "dry_run": false,
   "feed_warnings": 14,
   "feeds": 91,
-  "fetched": 3874,
-  "finished_at": "2026-10-01T09:20:49.406780+00:00",
-  "generation_failures": [],
-  "inserted": 152,
-  "message": "Published 1 post(s).",
+  "fetched": 3863,
+  "finished_at": "2026-10-01T16:39:56.066452+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Battery-based device could bring carbon capture costs below $100 per ton': Free article failed quality gate: article has only 75 words; article has only 2 paragraphs",
+    "Skipped candidate 'NEAR Intents suffers $3.8M exploit after assistance with Bitget breach': Free article failed quality gate: article has only 183 words; article has only 3 paragraphs"
+  ],
+  "inserted": 442,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
         "space",
-        "software"
+        "climate",
+        "health"
       ],
       "sources": [
-        "The Guardian World"
+        "BBC Climate"
       ],
       "status": "publish",
-      "title": "New Google Maps images reveal massive scale of devastation in Gaza",
-      "wp_id": 32845
+      "title": "SpaceX launches crew to ISS",
+      "wp_id": 32870
     }
   ],
   "state": "published"
