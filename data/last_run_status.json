@@ -1,26 +1,49 @@
 {
   "dry_run": false,
-  "feed_warnings": 14,
-  "feeds": 91,
-  "fetched": 3864,
-  "finished_at": "2026-10-01T21:24:34.568195+00:00",
-  "generation_failures": [],
-  "inserted": 262,
-  "message": "Published 1 post(s).",
+  "feed_warnings": 16,
+  "feeds": 108,
+  "fetched": 4352,
+  "finished_at": "2026-10-02T01:03:31.813116+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Newly discovered cell type helps shape blood vessel growth in the heart': Free article failed quality gate: article has only 99 words; article has only 3 paragraphs",
+    "Skipped candidate 'Newly discovered cell type helps shape blood vessel growth in the heart': Free article failed quality gate: article has only 99 words; article has only 3 paragraphs",
+    "Skipped candidate 'Gut bacterial compound worsens brain injury after stroke, study suggests': Free article failed quality gate: article has only 70 words; article has only 3 paragraphs",
+    "Skipped candidate 'Gut bacterial compound worsens brain injury after stroke, study suggests': Free article failed quality gate: article has only 70 words; article has only 3 paragraphs",
+    "Skipped candidate 'Time and space may help caregivers shift from expressing emotions to exploring solutions': Free article failed quality gate: article has only 110 words; article has only 4 paragraphs",
+    "Skipped candidate 'Time and space may help caregivers shift from expressing emotions to exploring solutions': Free article failed quality gate: article has only 110 words; article has only 4 paragraphs",
+    "Skipped candidate 'GLP-1 prescriptions for new mothers have increased sharply': Free article failed quality gate: article has only 70 words; article has only 3 paragraphs",
+    "Skipped candidate 'GLP-1 prescriptions for new mothers have increased sharply': Free article failed quality gate: article has only 70 words; article has only 3 paragraphs",
+    "Skipped candidate 'First successful primate transplant of human pituitary tissue boosts cortisol levels': Free article failed quality gate: article has only 91 words; article has only 4 paragraphs",
+    "Skipped candidate 'First successful primate transplant of human pituitary tissue boosts cortisol levels': Free article failed quality gate: article has only 91 words; article has only 4 paragraphs",
+    "Skipped candidate 'Alzheimer's disease and aging reshape brain communication in different ways': Free article failed quality gate: article has only 101 words; article has only 5 paragraphs",
+    "Skipped candidate 'Alzheimer's disease and aging reshape brain communication in different ways': Free article failed quality gate: article has only 101 words; article has only 5 paragraphs",
+    "Skipped candidate 'Functional decline precedes cardiovascular disease events by many years': Free article failed quality gate: article has only 63 words; article has only 4 paragraphs",
+    "Skipped candidate ''Mini-brains' model myelin damage and regeneration, offering new tool for MS drug testing': Free article failed quality gate: article has only 92 words; article has only 3 paragraphs",
+    "Skipped candidate ''Mini-brains' model myelin damage and regeneration, offering new tool for MS drug testing': Free article failed quality gate: article has only 92 words; article has only 3 paragraphs",
+    "Skipped candidate 'Functional decline precedes cardiovascular disease events by many years': Free article failed quality gate: article has only 63 words; article has only 4 paragraphs",
+    "Skipped candidate 'Almost 1 in 3 adults develop cardiorenal disease or die within 5 years of type 2 diabetes diagnosis': Free article failed quality gate: article has only 97 words; article has only 4 paragraphs",
+    "Skipped candidate 'Almost 1 in 3 adults develop cardiorenal disease or die within 5 years of type 2 diabetes diagnosis': Free article failed quality gate: article has only 97 words; article has only 4 paragraphs",
+    "Skipped candidate 'Reading, socializing and doing puzzles can help preserve cognitive health, large study shows': Free article failed quality gate: article has only 88 words; article has only 4 paragraphs",
+    "Skipped candidate 'Reading, socializing and doing puzzles can help preserve cognitive health, large study shows': Free article failed quality gate: article has only 88 words; article has only 4 paragraphs",
+    "Skipped candidate 'Just 7 Days of Strength Training Triggered Fat-Burning Changes in Mice': Free article failed quality gate: article has only 83 words; article has only 3 paragraphs",
+    "Skipped candidate 'New research reveals why modern display colors can look different to different people': Free article failed quality gate: article has only 95 words; article has only 4 paragraphs",
+    "Skipped candidate 'New research reveals why modern display colors can look different to different people': Free article failed quality gate: article has only 95 words; article has only 4 paragraphs",
+    "Skipped candidate 'STAT+: Medicare Advantage plans shift more costs onto seniors in 2027': Free article failed quality gate: article has only 66 words; article has only 3 paragraphs"
+  ],
+  "inserted": 592,
+  "message": "Published 1 post(s). Skipped 24 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "gaming",
-        "ai"
+        "health",
+        "science"
       ],
       "sources": [
-        "Engadget",
-        "The Verge"
+        "BBC Health"
       ],
       "status": "publish",
-      "title": "Sony brings AI upscaling to the base PS5",
-      "wp_id": 32884
+      "title": "Coroner warns of risk of future deaths at mental health unit where",
+      "wp_id": 32900
     }
   ],
   "state": "published"
