@@ -2,25 +2,60 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4337,
-  "finished_at": "2026-10-02T07:02:50.075479+00:00",
-  "generation_failures": [],
-  "inserted": 216,
-  "message": "Published 1 post(s).",
+  "fetched": 4345,
+  "finished_at": "2026-10-02T13:54:21.167833+00:00",
+  "generation_failures": [
+    "Skipped candidate 'InterPet4D: Capturing human\u2013dog interactions to generate AI-based pet motion generation': Free article failed quality gate: article has only 77 words; article has only 3 paragraphs",
+    "Skipped candidate 'Cybernetic Animated Eyeball #ElectronicHalloween': Free article failed quality gate: article has only 59 words; article has only 2 paragraphs",
+    "Skipped candidate 'Teen suicidal thoughts and attempts began rising around 2009\u20132010 after years of decline, researchers find': Free article failed quality gate: article has only 95 words; article has only 4 paragraphs",
+    "Skipped candidate 'Teen suicidal thoughts and attempts began rising around 2009\u20132010 after years of decline, researchers find': Free article failed quality gate: article has only 95 words; article has only 4 paragraphs",
+    "Skipped candidate 'Study finds nearly fourfold increase in injuries from electric bikes and scooters in recent years': Free article failed quality gate: article has only 86 words; article has only 4 paragraphs",
+    "Skipped candidate 'Study finds nearly fourfold increase in injuries from electric bikes and scooters in recent years': Free article failed quality gate: article has only 86 words; article has only 4 paragraphs",
+    "Skipped candidate 'Missed pediatric visits rose after Chicago immigration crackdown, especially among Spanish-speaking families': Free article failed quality gate: article has only 95 words; article has only 4 paragraphs",
+    "Skipped candidate 'Missed pediatric visits rose after Chicago immigration crackdown, especially among Spanish-speaking families': Free article failed quality gate: article has only 95 words; article has only 4 paragraphs",
+    "Skipped candidate 'Most health institutions failed to address acetaminophen-autism misinformation on Instagram, audit finds': Free article failed quality gate: article has only 84 words; article has only 4 paragraphs",
+    "Skipped candidate 'Most health institutions failed to address acetaminophen-autism misinformation on Instagram, audit finds': Free article failed quality gate: article has only 84 words; article has only 4 paragraphs",
+    "Skipped candidate 'Hands-on treatment studied as an option in treating baby flat head syndrome': Free article failed quality gate: article has only 96 words; article has only 4 paragraphs",
+    "Skipped candidate 'Hands-on treatment studied as an option in treating baby flat head syndrome': Free article failed quality gate: article has only 96 words; article has only 4 paragraphs",
+    "Skipped candidate 'Monitoring online health misinformation can help create useful patient education content': Free article failed quality gate: article has only 83 words; article has only 4 paragraphs",
+    "Skipped candidate 'Monitoring online health misinformation can help create useful patient education content': Free article failed quality gate: article has only 83 words; article has only 4 paragraphs",
+    "Skipped candidate 'TikTok misinformation content on acetaminophen and autism surged after a presidential announcement': Free article failed quality gate: article has only 91 words; article has only 4 paragraphs",
+    "Skipped candidate 'TikTok misinformation content on acetaminophen and autism surged after a presidential announcement': Free article failed quality gate: article has only 91 words; article has only 4 paragraphs",
+    "Skipped candidate 'In-home exposure to e-cigarettes and tobacco linked to children's asthma flare-ups': Free article failed quality gate: article has only 91 words; article has only 4 paragraphs",
+    "Skipped candidate 'In-home exposure to e-cigarettes and tobacco linked to children's asthma flare-ups': Free article failed quality gate: article has only 91 words; article has only 4 paragraphs",
+    "Skipped candidate 'Children and teens experience more injuries on electric or gas-powered bikes than on pedal-assist bikes': Free article failed quality gate: article has only 96 words; article has only 4 paragraphs",
+    "Skipped candidate 'Children and teens experience more injuries on electric or gas-powered bikes than on pedal-assist bikes': Free article failed quality gate: article has only 96 words; article has only 4 paragraphs",
+    "Skipped candidate 'Firearm-owning parents of young children often store at least one firearm without secure storage': Free article failed quality gate: article has only 95 words; article has only 4 paragraphs",
+    "Skipped candidate 'Firearm-owning parents of young children often store at least one firearm without secure storage': Free article failed quality gate: article has only 95 words; article has only 4 paragraphs",
+    "Skipped candidate 'Domestic violence research highlights overlooked links between head injuries and mental health': Free article failed quality gate: article has only 104 words; article has only 4 paragraphs",
+    "Skipped candidate 'Domestic violence research highlights overlooked links between head injuries and mental health': Free article failed quality gate: article has only 104 words; article has only 4 paragraphs",
+    "Skipped candidate 'Digital coloring may ease student stress as effectively as pencils and paper': Free article failed quality gate: article has only 68 words; article has only 4 paragraphs",
+    "Skipped candidate 'Researchers report early results from therapy designed for a single patient with a rare genetic form of ALS': Free article failed quality gate: article has only 76 words; article has only 4 paragraphs",
+    "Skipped candidate 'Researchers report early results from therapy designed for a single patient with a rare genetic form of ALS': Free article failed quality gate: article has only 76 words; article has only 4 paragraphs",
+    "Skipped candidate 'Digital coloring may ease student stress as effectively as pencils and paper': Free article failed quality gate: article has only 68 words; article has only 4 paragraphs",
+    "Skipped candidate 'First week of life seems crucial for future allergy and eczema risk': Free article failed quality gate: article has only 236 words; article has only 5 paragraphs",
+    "Skipped candidate 'STAT+: Pharmalittle: We\u2019re reading about the 340B drug pilot program, an obesity drug disappointment, and more': Free article failed quality gate: article has only 77 words; article has only 3 paragraphs",
+    "Skipped candidate 'Ebola treatment centre was burned down as death toll in Congo passes 4,000': Free article failed quality gate: article has only 106 words; article has only 4 paragraphs",
+    "Skipped candidate 'The clean energy bottleneck isn't technology\u2014it's market design': Free article failed quality gate: article has only 74 words; article has only 3 paragraphs",
+    "Skipped candidate 'Childhood Poverty Linked to More Than 3x Risk of Being Shut Out of Work and Education': Free article failed quality gate: article has only 56 words; article has only 2 paragraphs",
+    "Skipped candidate 'Homo erectus Was Outnumbered 10 to One by Another Human Relative': Free article failed quality gate: article has only 56 words; article has only 3 paragraphs"
+  ],
+  "inserted": 523,
+  "message": "Published 1 post(s). Skipped 34 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "space",
         "world",
-        "history"
+        "politics",
+        "crime"
       ],
       "sources": [
-        "Phys.org Space",
-        "The Guardian World"
+        "Daily Maverick",
+        "France 24"
       ],
       "status": "publish",
-      "title": "SpaceX flight led by first Black female commander sets US speed record",
-      "wp_id": 32922
+      "title": "Students and police clash as France struggles to quell school protests",
+      "wp_id": 32943
     }
   ],
   "state": "published"
