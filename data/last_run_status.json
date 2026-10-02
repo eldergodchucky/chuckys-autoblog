@@ -1,47 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4352,
-  "finished_at": "2026-10-02T19:04:08.336570+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Visual illusion reveals what today's AI vision is missing': Free article failed quality gate: article has only 78 words; article has only 2 paragraphs",
-    "Skipped candidate 'Even when AI behaves just like us, people still rate it as less conscious than humans': Free article failed quality gate: article has only 82 words; article has only 3 paragraphs",
-    "Skipped candidate 'Metabolite-inspired compounds show promise for ulcerative colitis drug discovery': Free article failed quality gate: article has only 94 words; article has only 4 paragraphs",
-    "Skipped candidate 'Metabolite-inspired compounds show promise for ulcerative colitis drug discovery': Free article failed quality gate: article has only 94 words; article has only 4 paragraphs",
-    "Skipped candidate 'Generic, brand-name multiple sclerosis drugs may produce varied effects': Free article failed quality gate: article has only 85 words; article has only 4 paragraphs",
-    "Skipped candidate 'Generic, brand-name multiple sclerosis drugs may produce varied effects': Free article failed quality gate: article has only 85 words; article has only 4 paragraphs",
-    "Skipped candidate 'Adolescents often choose to eat outside school, Swedish study finds': Free article failed quality gate: article has only 88 words; article has only 4 paragraphs",
-    "Skipped candidate 'Adolescents often choose to eat outside school, Swedish study finds': Free article failed quality gate: article has only 88 words; article has only 4 paragraphs",
-    "Skipped candidate 'The risk of looking back at former versions of ourselves': Free article failed quality gate: article has only 100 words; article has only 3 paragraphs",
-    "Skipped candidate 'The risk of looking back at former versions of ourselves': Free article failed quality gate: article has only 100 words; article has only 3 paragraphs",
-    "Skipped candidate 'New weight-loss injection targets fat cells: CBL-514 selectively induces apoptosis of fat cells': Free article failed quality gate: article has only 128 words; article has only 4 paragraphs",
-    "Skipped candidate 'Heel-prick blood samples from newborns could provide important insights into protection against serious infection': Free article failed quality gate: article has only 98 words; article has only 4 paragraphs",
-    "Skipped candidate 'New weight-loss injection targets fat cells: CBL-514 selectively induces apoptosis of fat cells': Free article failed quality gate: article has only 128 words; article has only 4 paragraphs",
-    "Skipped candidate 'Research finds sibling aggression to be common, though often dismissed as 'normal'': Free article failed quality gate: article has only 75 words; article has only 4 paragraphs",
-    "Skipped candidate 'Research finds sibling aggression to be common, though often dismissed as 'normal'': Free article failed quality gate: article has only 75 words; article has only 4 paragraphs",
-    "Skipped candidate 'Longitudinal study highlights the enduring toll of childhood loneliness and social isolation': Free article failed quality gate: article has only 78 words; article has only 4 paragraphs",
-    "Skipped candidate 'Large analysis finds no clear link between rotavirus vaccination and type 1 diabetes': Free article failed quality gate: article has only 128 words; article has only 4 paragraphs",
-    "Skipped candidate 'Large analysis finds no clear link between rotavirus vaccination and type 1 diabetes': Free article failed quality gate: article has only 128 words; article has only 4 paragraphs",
-    "Skipped candidate 'Very low carbohydrate diets linked to health benefits in children with type 1 diabetes': Free article failed quality gate: article has only 98 words; article has only 3 paragraphs",
-    "Skipped candidate 'Very low carbohydrate diets linked to health benefits in children with type 1 diabetes': Free article failed quality gate: article has only 98 words; article has only 3 paragraphs",
-    "Skipped candidate 'Heel-prick blood samples from newborns could provide important insights into protection against serious infection': Free article failed quality gate: article has only 98 words; article has only 4 paragraphs",
-    "Skipped candidate 'Financial and relationship worries predict bad dreams': Free article failed quality gate: article has only 73 words; article has only 4 paragraphs"
-  ],
-  "inserted": 415,
-  "message": "Published 1 post(s). Skipped 22 low-quality candidate(s).",
+  "fetched": 4345,
+  "finished_at": "2026-10-02T22:59:28.329930+00:00",
+  "generation_failures": [],
+  "inserted": 205,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "science"
+        "history",
+        "ai",
+        "space"
       ],
       "sources": [
-        "The Guardian Health"
+        "Smithsonian History"
       ],
       "status": "publish",
-      "title": "They\u2019re delicious, popular and versatile \u2013 but how healthy are berries?",
-      "wp_id": 32957
+      "title": "Google Wants to Send Data Centers to Space\u2014and Just Launched an Experimental",
+      "wp_id": 32971
     }
   ],
   "state": "published"
