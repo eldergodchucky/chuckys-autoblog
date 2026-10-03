@@ -39,6 +39,7 @@ jobs:
       POST_STATUS: publish
       AUTO_PUBLISH_CONFIRM: I_UNDERSTAND_POSTS_GO_LIVE
       ARTICLE_GENERATOR: free
+      MIN_ARTICLE_WORDS: "300"
       HERO_IMAGE_MODE: real
       MAX_POSTS_PER_RUN: "1"
       MAX_POSTS_PER_DAY: "0"
@@ -46,13 +47,13 @@ jobs:
       MIN_SOURCES_PER_POST: "2"
       REQUEST_TIMEOUT_SECONDS: "25"
       RUN_LOCK_STALE_SECONDS: "1800"
-      TOPIC_FOCUS_KEYWORDS: health,medicine,medical,disease,clinical,treatment,patients,nutrition,fitness,mental health,wellness,science,scientists,research,researchers,breakthrough,discovery,experiment,study,physics,biology,chemistry,climate,energy,robotics,space,nasa,astronomy,planet,moon,mars,telescope,galaxy,phone,phones,iphone,ios,android,apple,samsung,pixel,gadget,gadgets,ai,artificial intelligence,software,apps,app,innovation
-      CATEGORY_ROTATION: science,space,ai,gadgets,phones,android,apple,software,security,tutorials,hacks,health,history
-      CATEGORY_WEIGHTS: science=6,space=6,ai=6,gadgets=6,security=6,tutorials=6,hacks=6,phones=6,apple=6,android=6,software=6,health=6,history=5,tech=4
+      TOPIC_FOCUS_KEYWORDS: health,medicine,medical,disease,clinical,treatment,patients,nutrition,fitness,mental health,wellness,science,scientists,research,researchers,breakthrough,discovery,experiment,study,physics,biology,chemistry,climate,energy,robotics,space,nasa,astronomy,planet,moon,mars,telescope,galaxy,phone,phones,iphone,ios,android,apple,samsung,pixel,gadget,gadgets,ai,artificial intelligence,software,apps,app,innovation,politics,election,campaign,president,prime minister,government,parliament,senate,congress,policy,diplomacy,world,global,international,geopolitics,business,economy,market,markets,trade,inflation,earnings,stocks,sports,gaming,video games,playstation,xbox,nintendo,steam,esports,mobility,electric vehicle,ev,tesla,robotaxi,autonomous,crypto,bitcoin,ethereum,blockchain,clean energy,nuclear,fusion,solar,defense,military,aerospace,fighter jet,drone,pentagon,culture,architecture,design,art,fashion,heritage,museum,literature,theatre,film festival,cultural
+      CATEGORY_ROTATION: science,space,ai,gaming,mobility,crypto,energy,defense,gadgets,phones,android,apple,software,security,tutorials,hacks,health,politics,world,business,sports,climate,crime,entertainment,celebrities,history,culture
+      CATEGORY_WEIGHTS: science=6,space=6,ai=6,gaming=6,mobility=6,crypto=6,energy=6,defense=6,gadgets=6,security=6,tutorials=6,hacks=6,phones=6,apple=6,android=6,software=6,health=6,politics=6,world=6,business=6,sports=6,climate=6,crime=6,entertainment=5,celebrities=5,history=5,culture=5,tech=4
       RECENT_CATEGORY_WINDOW: "8"
       RECENT_CATEGORY_PENALTY: "4"
       ALLOW_SINGLE_SOURCE_PRIORITY_POSTS: "true"
-      SINGLE_SOURCE_PRIORITY_CATEGORIES: science,space
+      SINGLE_SOURCE_PRIORITY_CATEGORIES: health,science,space,world,politics,business,defense,energy,mobility,gaming,crypto,culture
       SINGLE_SOURCE_MIN_QUALITY: "4"
       WP_CREATE_TERMS: "true"
       BLOCKLIST_DOMAINS: ""

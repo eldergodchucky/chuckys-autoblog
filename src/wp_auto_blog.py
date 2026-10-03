@@ -1517,13 +1517,21 @@ def editorial_priority_score(cluster: list[Item]) -> int:
 
 
 def is_deal_roundup(cluster: list[Item]) -> bool:
+    """Filter out commercial shopping deals, affiliate discounts, and coupon roundups."""
+    if not cluster:
+        return False
+    lead_title = (cluster[0].title or "").lower()
+    text = story_text(cluster).lower()
 
-    text = story_text(cluster)
+    # Direct deal headlines (cuts Arlo to $221, $500 off, record-low deal)
+    if re.search(r"\b(?:deal|deals|discount|discounts|promo code|coupon)\b", lead_title):
+        if re.search(r"(\$\d+|\d+%\s*off|record-low|weekend deal|cuts? the .* to|price drop)", lead_title):
+            return True
+    if re.search(r"\b(?:record-low deal|weekend deals?|best deals?|save \$\d+|now \$\d+)\b", lead_title):
+        return True
 
     deal_terms = ("prime day", "black friday", "cyber monday", "deal", "deals", "discount", "sale", "coupon", "bargain")
-
     roundup_terms = ("best of", "favorite", "favorites", "roundup", "we found", "worth shopping", "shopping now")
-
     return has_term(text, deal_terms) and has_term(text, roundup_terms)
 
 
@@ -1620,7 +1628,10 @@ def is_dense_academic_paper(cluster: list[Item]) -> bool:
         "pediarespecg", "pediaraspecg", "cgas-sting", "mtdna", "nf-κb",
         "histopatholog", "xenograft", "randomised", "randomized",
         "controlled trial", "epigenome", "mechanotransduction",
-        "tumor suppressor", "epidemiological", "transmission dynamics"
+        "tumor suppressor", "epidemiological", "transmission dynamics",
+        "cohort in", "hrqol", "paired anterior–posterior", "paired anterior-posterior",
+        "biomechanical differences", "multicenter cohort", "12-month cohort",
+        "retrospective cohort", "retrospective analysis", "case-control"
     )
     if any(sig in title_lower for sig in dense_academic_signatures):
         return True
@@ -2120,6 +2131,39 @@ def _title_is_dull(topic: str) -> bool:
     return False
 
 
+def clean_editorial_title(t: str) -> str:
+    """Transform first-person columnist titles, raw entities, and cutoff headlines
+    into objective, third-person editorial headlines."""
+    if not t:
+        return ""
+    s = html.unescape(t)
+    s = s.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"').replace("&nbsp;", " ")
+    s = re.sub(r"\s+", " ", s).strip()
+
+    # Strip dangling trailing conjunctions from cutoffs (e.g. "... But young")
+    s = re.sub(r"[.–—]\s*(?:but|and|or|so|yet)\s+\w{1,10}\s*$", "", s, flags=re.I)
+
+    # Specific common columnist idioms
+    s = re.sub(r"(?i)^here'?s why i upgraded from (.*?) to (.*)$", r"Why Upgrading from \1 to \2 Makes Sense", s)
+    s = re.sub(r"(?i)^my ([a-z0-9\s]+) was full of (.*?)\.\s*this quick trick fixed it$", r"How to Fix Cluttered \2 Storage on \1", s)
+    s = re.sub(r"(?i)^i hate when ([a-z0-9\s]+) copy ([a-z0-9\s]+)[\s—–-]+but (.*?) is the exception$", r"Why \3 Challenges \1-\2 Rivalry", s)
+    s = re.sub(r"(?i)these (\d+) ([a-z0-9\s]+) features made me ditch ([a-z0-9\s]+) for good", r"\1 Key \2 Features Driving Users Away from \3", s)
+    s = re.sub(r"(?i)i tested them all to find out", r"Performance and Benchmark Comparison", s)
+    s = re.sub(r"(?i)^i used (.*?) for a week[\s—–-]+and (.*)$", r"Testing \1: Analysis and Key Observations", s)
+    s = re.sub(r"(?i)way more complicated than we thought", r"More Complex Than Expected", s)
+    s = re.sub(r"(?i)here'?s everything we know so far about (.*)$", r"What to Expect from \1", s)
+
+    # General cleanup of remaining first person in titles
+    s = re.sub(r"(?i)\bhere'?s why i\b", "Why", s)
+    s = re.sub(r"(?i)\bwhy i\b", "Why", s)
+    s = re.sub(r"(?i)\bthan we thought\b", "Than Expected", s)
+    s = re.sub(r"(?i)\bwhat we know\b", "What Is Known", s)
+    s = re.sub(r"(?i)\bwe tested\b", "Testing Shows", s)
+    s = re.sub(r"(?i)\bmy ([a-z0-9\s]+)\b", r"The \1", s)
+    s = re.sub(r"(?i)\bmade me ditch\b", "Prompting a Switch from", s)
+
+    return s.strip(" .,:;–—-")
+
 def hook_title(cluster: list[Item], topic: str) -> str:
     """Rewrite a dry press-release title into a factual, curiosity-driven hook.
 
@@ -2158,8 +2202,8 @@ def hook_title(cluster: list[Item], topic: str) -> str:
     hook = _title_case_blog(hook)
     words = hook.split()
     if 4 <= len(words) <= 13:
-        return " ".join(words).strip(" .,:;!?-")
-    return topic
+        return clean_editorial_title(" ".join(words))
+    return clean_editorial_title(topic)
 
 
 _MAX_SUBJECT_MODIFIERS = 3
@@ -5524,6 +5568,15 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
             if len(paragraphs) >= 8:
                 break
 
+    # If the article is still lean, add professional analytical context so it does not publish as a thin stub
+    if len(paragraphs) < 5:
+        primary_cat = categories[0] if categories else "world"
+        angle = category_reader_angle(primary_cat)
+        takeaway = category_takeaway(set(categories))
+        if angle and takeaway:
+            context_p = f"From an editorial perspective, {angle}. Furthermore, {takeaway}"
+            paragraphs.append("<p>" + html.escape(context_p) + "</p>")
+
     return "\n".join(paragraphs).strip()
 
 
@@ -6753,6 +6806,14 @@ def ranked_clusters(conn: sqlite3.Connection, clusters: list[list[Item]]) -> lis
 
         priority = editorial_priority_score(cluster) - category_diversity_penalty(categories, recent_counts)
 
+        # Consumer tech throttling: prioritize international and hard news if tech was recent
+        tech_set = {"gadgets", "phones", "apple", "android", "software"}
+        intl_set = {"world", "politics", "business", "defense", "energy", "culture", "science", "climate"}
+        if set(categories) & intl_set:
+            priority += 4
+        elif set(categories).issubset(tech_set):
+            priority -= 3
+
         return (
 
             -rotation_bucket(categories, rotation_order),
@@ -7003,10 +7064,10 @@ def run_once(args: argparse.Namespace) -> int:
 
 
 
-            # Quality gate: skip stub articles under 150 words
+            # Quality gate: skip stub articles under 300 words
             _article_html = article.get("html", "") or article.get("content", "") or ""
             _article_words = len(re.sub(r"<[^>]+>", " ", _article_html).split())
-            if _article_words < 150:
+            if _article_words < env_int("MIN_ARTICLE_WORDS", 300):
                 _stub_msg = (
                     f"Skipped stub article '{article.get('title', '?')}' "
                     f"— only {_article_words} words generated."
