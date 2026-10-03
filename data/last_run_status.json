@@ -2,40 +2,25 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4364,
-  "finished_at": "2026-10-03T19:43:20.353787+00:00",
+  "fetched": 4337,
+  "finished_at": "2026-10-03T22:28:35.836351+00:00",
   "generation_failures": [
-    "Skipped candidate 'Chang\u2019e-6 lunar soil contains a surprising magnetic time capsule': Free article failed quality gate: article has only 56 words; article has only 2 paragraphs",
-    "Skipped candidate 'Chang\u2019e-6 lunar soil contains a surprising magnetic time capsule': Free article failed quality gate: article has only 56 words; article has only 2 paragraphs",
-    "Skipped candidate 'Human tau seeds trigger disease-specific shapes in mouse brains, new study finds': Free article failed quality gate: article has only 123 words; article has only 4 paragraphs",
-    "Skipped candidate 'Human tau seeds trigger disease-specific shapes in mouse brains, new study finds': Free article failed quality gate: article has only 123 words; article has only 4 paragraphs",
-    "Skipped candidate 'Climate change affects Indigenous children's health worldwide, review of 53 studies finds': Free article failed quality gate: article has only 82 words; article has only 3 paragraphs",
-    "Skipped candidate 'Climate change affects Indigenous children's health worldwide, review of 53 studies finds': Free article failed quality gate: article has only 82 words; article has only 3 paragraphs",
-    "Skipped candidate 'Hormone therapy before frozen embryo transfer is tied to larger babies but not to differences in early childhood IQ': Free article failed quality gate: article has only 73 words; article has only 3 paragraphs",
-    "Skipped candidate 'This protective enzyme could help stop fatty liver disease from getting worse': Free article failed quality gate: article has only 84 words; article has only 3 paragraphs",
-    "Skipped candidate 'Discovery reveals how nervous system helps control length of protective nerve coatings': Free article failed quality gate: article has only 79 words; article has only 4 paragraphs",
-    "Skipped candidate 'Discovery reveals how nervous system helps control length of protective nerve coatings': Free article failed quality gate: article has only 79 words; article has only 4 paragraphs",
-    "Skipped candidate 'This protective enzyme could help stop fatty liver disease from getting worse': Free article failed quality gate: article has only 84 words; article has only 3 paragraphs",
-    "Skipped candidate 'This protective enzyme could help stop fatty liver disease from getting worse': Free article failed quality gate: article has only 84 words; article has only 3 paragraphs",
-    "Skipped candidate 'Brain scans reveal hyper-connected reward networks in autistic individuals': Free article failed quality gate: article has only 75 words; article has only 4 paragraphs",
-    "Skipped candidate 'Popular GLP-1 Drugs Linked to an Overlooked Side Effect Involving Nails': Free article failed quality gate: article has only 85 words; article has only 3 paragraphs",
-    "Skipped candidate 'Teen cannabis use linked to flattened cognitive development in large U.S. study': Free article failed quality gate: article has only 78 words; article has only 4 paragraphs"
+    "Skipped candidate 'New material provides boost to carbon capture technologies': Free article failed quality gate: article has only 46 words; article has only 2 paragraphs"
   ],
-  "inserted": 102,
-  "message": "Published 1 post(s). Skipped 15 low-quality candidate(s).",
+  "inserted": 73,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "health"
+        "gadgets",
+        "science"
       ],
       "sources": [
-        "BBC World",
-        "France 24"
+        "Engadget"
       ],
       "status": "publish",
-      "title": "Tennessee prison chief to resign after Christa Pike's failed execution",
-      "wp_id": 33048
+      "title": "Online retailers that don't support digital wallets are losing Gen Z customers",
+      "wp_id": 33060
     }
   ],
   "state": "published"
