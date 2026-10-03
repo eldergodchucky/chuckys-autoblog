@@ -1,30 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4362,
-  "finished_at": "2026-10-03T12:47:03.994673+00:00",
+  "fetched": 4363,
+  "finished_at": "2026-10-03T16:49:30.056552+00:00",
   "generation_failures": [
-    "Skipped candidate 'US regulator finds Boeing 737 MAX software bug 'not a safety concern'': Free article failed quality gate: article has only 47 words; article has only 3 paragraphs",
-    "Skipped candidate 'Inside the study for a remedy to fight Congo's deadliest Ebola outbreak': Free article failed quality gate: article has only 93 words; article has only 3 paragraphs",
-    "Skipped candidate 'Inside the study for a remedy to fight Congo's deadliest Ebola outbreak': Free article failed quality gate: article has only 93 words; article has only 3 paragraphs",
-    "Skipped candidate 'Left-wing justifications partly shield antisemitism from liberal disapproval, study suggests': Free article failed quality gate: article has only 79 words; article has only 4 paragraphs"
+    "Skipped candidate 'Chang\u2019e-6 lunar soil contains a surprising magnetic time capsule': Free article failed quality gate: article has only 56 words; article has only 2 paragraphs",
+    "Skipped candidate 'Chang\u2019e-6 lunar soil contains a surprising magnetic time capsule': Free article failed quality gate: article has only 56 words; article has only 2 paragraphs"
   ],
-  "inserted": 216,
-  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
+  "inserted": 218,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "health"
+        "politics",
+        "science"
       ],
       "sources": [
-        "BBC World",
-        "Euronews"
+        "The Guardian US Politics"
       ],
       "status": "publish",
-      "title": "Flydubai co-pilot attacked captain with axe",
-      "wp_id": 33024
+      "title": "The DSA has a believability problem with older Black voters. But young",
+      "wp_id": 33037
     }
   ],
   "state": "published"
