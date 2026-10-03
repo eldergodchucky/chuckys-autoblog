@@ -1721,15 +1721,21 @@ def build_clusters(items: list[Item], min_sources: int) -> list[list[Item]]:
 
             shared_terms = item_tokens[item.uid] & item_tokens[candidate.uid]
 
-            # Require at least 3 shared specific terms (or 2 if very strong similarity)
-            if len(shared_terms) < 3:
+            # Adaptive clustering: hard news wires (world, politics, business, defense, climate, energy, science)
+            # often use varied diplomatic wording for the same event; allow merging at 2 shared terms & 0.15 similarity.
+            hard_news_cats = {"world", "politics", "business", "defense", "climate", "energy", "science"}
+            is_hard_news = bool({item.source_category.lower(), candidate.source_category.lower()} & hard_news_cats)
+
+            min_shared = 2 if is_hard_news else 3
+            if len(shared_terms) < min_shared:
 
                 continue
 
             similarity = jaccard(item_tokens[item.uid], item_tokens[candidate.uid])
 
-            # Tightened: require >= 0.20 similarity across items to prevent mixing separate stories
-            if similarity >= 0.20:
+            min_similarity = 0.15 if is_hard_news else 0.20
+
+            if similarity >= min_similarity:
 
                 cluster.append(candidate)
 
@@ -2911,6 +2917,8 @@ def create_hero_image(title: str, keywords: list[str], categories: list[str], so
     draw.rounded_rectangle((82, 506, 606, 566), radius=16, fill="#020617cc", outline="#ffffff22", width=1)
 
     draw.text((104, 523), label, font=meta_font, fill=text_color)
+
+    IMAGE_DIR.mkdir(parents=True, exist_ok=True)
 
     path = IMAGE_DIR / f"{dt.datetime.now(dt.timezone.utc).strftime('%Y%m%d-%H%M%S')}-{slugify(title)}.png"
 
@@ -5763,12 +5771,25 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
         excerpt = clean_text(title, max_len=200)
         meta_description = clean_text(title, max_len=160)
 
+    # Editorial Related Coverage internal links
+    primary_cat = categories[0] if categories else "world"
+    secondary_cat = categories[1] if len(categories) > 1 else ("world" if primary_cat != "world" else "politics")
+    primary_title = primary_cat.capitalize()
+    secondary_title = secondary_cat.capitalize()
+    related_block = f"""
+<div class="editorial-related-coverage" style="margin-top:2em;padding-top:1.25em;border-top:1px solid #e2e8f0;">
+<p><strong>Related Coverage on ChuckysCarnage:</strong> Explore more in <a href="/category/{slugify(primary_cat)}/">{html.escape(primary_title)}</a> and follow our ongoing reporting in <a href="/category/{slugify(secondary_cat)}/">{html.escape(secondary_title)}</a>.</p>
+</div>
+""".strip()
+
     body = f"""
 {image_block}
 
 <p>[more]</p>
 
 {full_article_sections(cluster, topic, categories, source_count)}
+
+{related_block}
 
 {medical_disclaimer}
 """.strip()
