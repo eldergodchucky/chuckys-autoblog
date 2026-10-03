@@ -2,24 +2,24 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4345,
-  "finished_at": "2026-10-02T22:59:28.329930+00:00",
-  "generation_failures": [],
-  "inserted": 205,
-  "message": "Published 1 post(s).",
+  "fetched": 4368,
+  "finished_at": "2026-10-03T01:53:11.652765+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Renewable energy is reshaping what operators need to know to keep grids stable': Free article failed quality gate: article has only 66 words; article has only 2 paragraphs"
+  ],
+  "inserted": 48,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "history",
-        "ai",
-        "space"
+        "science"
       ],
       "sources": [
-        "Smithsonian History"
+        "BBC Science & Environment"
       ],
       "status": "publish",
-      "title": "Google Wants to Send Data Centers to Space\u2014and Just Launched an Experimental",
-      "wp_id": 32971
+      "title": "Hawaii's iconic 550-year-old H\u014dlei Sea Arch collapses",
+      "wp_id": 32981
     }
   ],
   "state": "published"
