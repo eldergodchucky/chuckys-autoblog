@@ -2,24 +2,23 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4368,
-  "finished_at": "2026-10-03T01:53:11.652765+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Renewable energy is reshaping what operators need to know to keep grids stable': Free article failed quality gate: article has only 66 words; article has only 2 paragraphs"
-  ],
-  "inserted": 48,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "fetched": 4350,
+  "finished_at": "2026-10-03T07:43:32.911201+00:00",
+  "generation_failures": [],
+  "inserted": 154,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science"
+        "defense",
+        "space"
       ],
       "sources": [
-        "BBC Science & Environment"
+        "The War Zone"
       ],
       "status": "publish",
-      "title": "Hawaii's iconic 550-year-old H\u014dlei Sea Arch collapses",
-      "wp_id": 32981
+      "title": "Former SR-71 Engineer Talks NASA\u2019s Blackbird Revival Program",
+      "wp_id": 33005
     }
   ],
   "state": "published"
