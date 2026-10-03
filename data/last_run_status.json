@@ -1,24 +1,30 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4350,
-  "finished_at": "2026-10-03T07:43:32.911201+00:00",
-  "generation_failures": [],
-  "inserted": 154,
-  "message": "Published 1 post(s).",
+  "fetched": 4362,
+  "finished_at": "2026-10-03T12:47:03.994673+00:00",
+  "generation_failures": [
+    "Skipped candidate 'US regulator finds Boeing 737 MAX software bug 'not a safety concern'': Free article failed quality gate: article has only 47 words; article has only 3 paragraphs",
+    "Skipped candidate 'Inside the study for a remedy to fight Congo's deadliest Ebola outbreak': Free article failed quality gate: article has only 93 words; article has only 3 paragraphs",
+    "Skipped candidate 'Inside the study for a remedy to fight Congo's deadliest Ebola outbreak': Free article failed quality gate: article has only 93 words; article has only 3 paragraphs",
+    "Skipped candidate 'Left-wing justifications partly shield antisemitism from liberal disapproval, study suggests': Free article failed quality gate: article has only 79 words; article has only 4 paragraphs"
+  ],
+  "inserted": 216,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "defense",
-        "space"
+        "world",
+        "health"
       ],
       "sources": [
-        "The War Zone"
+        "BBC World",
+        "Euronews"
       ],
       "status": "publish",
-      "title": "Former SR-71 Engineer Talks NASA\u2019s Blackbird Revival Program",
-      "wp_id": 33005
+      "title": "Flydubai co-pilot attacked captain with axe",
+      "wp_id": 33024
     }
   ],
   "state": "published"
