@@ -3,25 +3,28 @@
   "feed_warnings": 16,
   "feeds": 108,
   "fetched": 4298,
-  "finished_at": "2026-10-04T20:57:54.445017+00:00",
+  "finished_at": "2026-10-04T23:53:56.646854+00:00",
   "generation_failures": [
-    "Skipped candidate 'Verstappen gets your vote after marathon in Malaysia': Free article failed quality gate: article has only 253 words; article has only 5 paragraphs"
+    "Skipped candidate 'Deals: here's how to avoid the Galaxy S26 series price hike': Free article failed quality gate: article has only 220 words",
+    "Skipped candidate 'John Ternus is taking a more \u2018hands-on\u2019 role in Apple\u2019s design teams as CEO: report': Free article failed quality gate: article has only 165 words; article has only 4 paragraphs",
+    "Skipped candidate 'Garry Newman responds to s&box criticism in lengthy YouTube comment: 'I don't like giving up on things, I am stubborn'': Free article failed quality gate: article has only 215 words",
+    "Skipped candidate 'Hidden X-ray phase revealed in likely neutron star merger': Free article failed quality gate: article has only 145 words; article has only 4 paragraphs"
   ],
-  "inserted": 102,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 99,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
         "world",
-        "crime",
-        "crypto"
+        "business",
+        "ai"
       ],
       "sources": [
-        "The Guardian World"
+        "Daily Maverick"
       ],
       "status": "publish",
-      "title": "Nigel Farage questioned by standards commissioner over \u00a35m gift",
-      "wp_id": 33156
+      "title": "Musk says he will rename SpaceXAI to SpaceXSI",
+      "wp_id": 33168
     }
   ],
   "state": "published"
