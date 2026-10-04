@@ -1,32 +1,28 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4320,
-  "finished_at": "2026-10-04T07:52:16.190416+00:00",
+  "fetched": 4309,
+  "finished_at": "2026-10-04T13:46:24.540582+00:00",
   "generation_failures": [
-    "Skipped candidate 'Google's Pixel 10a gets $100 more expensive': Free article failed quality gate: article has only 199 words",
-    "Skipped candidate 'Valorant player claims to have inherited hardware ban through secondhand CPU, Riot anticheat boss disputes parts of story': Free article failed quality gate: article has only 232 words",
-    "Skipped candidate 'Pressure builds on Iran as Trump boosts U.S. military presence': Free article failed quality gate: article has only 132 words; article has only 4 paragraphs",
-    "Skipped candidate 'Japanese anime event opens in New Delhi, attracting India\u2019s youth': Free article failed quality gate: article has only 109 words; article has only 4 paragraphs",
-    "Skipped candidate 'Latest news bulletin | October 4th, 2026 \u2013 Morning': Free article failed quality gate: article has only 135 words; article has only 4 paragraphs",
-    "Skipped candidate 'Trump tariffs a mixed bag for U.S. auto industry': Free article failed quality gate: article has only 144 words; article has only 5 paragraphs"
+    "Skipped candidate 'An OpenAI model was caught trying to cheat at StarCraft, and of course it did it by stealing a human's work': Free article failed quality gate: article has only 220 words; article has only 5 paragraphs",
+    "Skipped candidate 'Deals: Amazon's early Prime Deals slash the prices of foldables and flagships': Free article failed quality gate: article has only 229 words",
+    "Skipped candidate 'Our Redmi Note 17 4G battery life and charging tests are ready': Free article failed quality gate: article has only 207 words"
   ],
-  "inserted": 118,
-  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "inserted": 252,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "sports",
-        "crime"
+        "apple",
+        "business"
       ],
       "sources": [
-        "The Guardian World"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "No bail for P-plater over Newcastle crash that left five-year-old in induced",
-      "wp_id": 33096
+      "title": "The iPad Mini is slightly cheaper again during Prime Day",
+      "wp_id": 33124
     }
   ],
   "state": "published"
