@@ -1,27 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4306,
-  "finished_at": "2026-10-04T17:53:54.744068+00:00",
+  "fetched": 4298,
+  "finished_at": "2026-10-04T20:57:54.445017+00:00",
   "generation_failures": [
-    "Skipped candidate 'Yet another free fan level pack for Quake has arrived, and this one's all about a feature rarely seen in id Software's classic shooter': Free article failed quality gate: article has only 233 words"
+    "Skipped candidate 'Verstappen gets your vote after marathon in Malaysia': Free article failed quality gate: article has only 253 words; article has only 5 paragraphs"
   ],
-  "inserted": 172,
+  "inserted": 102,
   "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "software"
+        "world",
+        "crime",
+        "crypto"
       ],
       "sources": [
-        "BBC Sport",
-        "Formula 1 News"
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "Hamilton bemused after glitch turns F1 into 'Lego race'",
-      "wp_id": 33140
+      "title": "Nigel Farage questioned by standards commissioner over \u00a35m gift",
+      "wp_id": 33156
     }
   ],
   "state": "published"
