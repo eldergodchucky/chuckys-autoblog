@@ -2,27 +2,26 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4309,
-  "finished_at": "2026-10-04T13:46:24.540582+00:00",
+  "fetched": 4306,
+  "finished_at": "2026-10-04T17:53:54.744068+00:00",
   "generation_failures": [
-    "Skipped candidate 'An OpenAI model was caught trying to cheat at StarCraft, and of course it did it by stealing a human's work': Free article failed quality gate: article has only 220 words; article has only 5 paragraphs",
-    "Skipped candidate 'Deals: Amazon's early Prime Deals slash the prices of foldables and flagships': Free article failed quality gate: article has only 229 words",
-    "Skipped candidate 'Our Redmi Note 17 4G battery life and charging tests are ready': Free article failed quality gate: article has only 207 words"
+    "Skipped candidate 'Yet another free fan level pack for Quake has arrived, and this one's all about a feature rarely seen in id Software's classic shooter': Free article failed quality gate: article has only 233 words"
   ],
-  "inserted": 252,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 172,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "business"
+        "sports",
+        "software"
       ],
       "sources": [
-        "The Verge"
+        "BBC Sport",
+        "Formula 1 News"
       ],
       "status": "publish",
-      "title": "The iPad Mini is slightly cheaper again during Prime Day",
-      "wp_id": 33124
+      "title": "Hamilton bemused after glitch turns F1 into 'Lego race'",
+      "wp_id": 33140
     }
   ],
   "state": "published"
