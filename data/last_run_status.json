@@ -2,30 +2,31 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4339,
-  "finished_at": "2026-10-04T01:56:29.314225+00:00",
+  "fetched": 4320,
+  "finished_at": "2026-10-04T07:52:16.190416+00:00",
   "generation_failures": [
-    "Skipped candidate 'vivo teases the X Fold6 in India along with an MR headset': Free article failed quality gate: article has only 206 words",
-    "Skipped candidate 'Samsung Galaxy S25 series receiving One UI 9 stable update in the US': Free article failed quality gate: article has only 221 words",
-    "Skipped candidate 'RuneScape 4 announced at RuneFest, full MMO sequel started as expansion to survival game Dragonwilds': Free article failed quality gate: article has only 220 words",
-    "Skipped candidate 'Forget what PC Gamer said: The Witcher 3 will always be my 2015 GOTY': Free article failed quality gate: article has only 183 words",
-    "Skipped candidate 'Fourth RuneScape MMO Built With Unreal Engine in the Works, Jagex Announces RuneScape Animation With MoistCr1TiKaL': Free article failed quality gate: article has only 92 words; article has only 4 paragraphs"
+    "Skipped candidate 'Google's Pixel 10a gets $100 more expensive': Free article failed quality gate: article has only 199 words",
+    "Skipped candidate 'Valorant player claims to have inherited hardware ban through secondhand CPU, Riot anticheat boss disputes parts of story': Free article failed quality gate: article has only 232 words",
+    "Skipped candidate 'Pressure builds on Iran as Trump boosts U.S. military presence': Free article failed quality gate: article has only 132 words; article has only 4 paragraphs",
+    "Skipped candidate 'Japanese anime event opens in New Delhi, attracting India\u2019s youth': Free article failed quality gate: article has only 109 words; article has only 4 paragraphs",
+    "Skipped candidate 'Latest news bulletin | October 4th, 2026 \u2013 Morning': Free article failed quality gate: article has only 135 words; article has only 4 paragraphs",
+    "Skipped candidate 'Trump tariffs a mixed bag for U.S. auto industry': Free article failed quality gate: article has only 144 words; article has only 5 paragraphs"
   ],
-  "inserted": 69,
-  "message": "Published 1 post(s). Skipped 5 low-quality candidate(s).",
+  "inserted": 118,
+  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
         "world",
-        "politics",
-        "software"
+        "sports",
+        "crime"
       ],
       "sources": [
         "The Guardian World"
       ],
       "status": "publish",
-      "title": "Chalmers says global economic turmoil will drive budget cuts",
-      "wp_id": 33074
+      "title": "No bail for P-plater over Newcastle crash that left five-year-old in induced",
+      "wp_id": 33096
     }
   ],
   "state": "published"
