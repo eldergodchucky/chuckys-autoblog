@@ -1,26 +1,31 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4337,
-  "finished_at": "2026-10-03T22:28:35.836351+00:00",
+  "fetched": 4339,
+  "finished_at": "2026-10-04T01:56:29.314225+00:00",
   "generation_failures": [
-    "Skipped candidate 'New material provides boost to carbon capture technologies': Free article failed quality gate: article has only 46 words; article has only 2 paragraphs"
+    "Skipped candidate 'vivo teases the X Fold6 in India along with an MR headset': Free article failed quality gate: article has only 206 words",
+    "Skipped candidate 'Samsung Galaxy S25 series receiving One UI 9 stable update in the US': Free article failed quality gate: article has only 221 words",
+    "Skipped candidate 'RuneScape 4 announced at RuneFest, full MMO sequel started as expansion to survival game Dragonwilds': Free article failed quality gate: article has only 220 words",
+    "Skipped candidate 'Forget what PC Gamer said: The Witcher 3 will always be my 2015 GOTY': Free article failed quality gate: article has only 183 words",
+    "Skipped candidate 'Fourth RuneScape MMO Built With Unreal Engine in the Works, Jagex Announces RuneScape Animation With MoistCr1TiKaL': Free article failed quality gate: article has only 92 words; article has only 4 paragraphs"
   ],
-  "inserted": 73,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 69,
+  "message": "Published 1 post(s). Skipped 5 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "science"
+        "world",
+        "politics",
+        "software"
       ],
       "sources": [
-        "Engadget"
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "Online retailers that don't support digital wallets are losing Gen Z customers",
-      "wp_id": 33060
+      "title": "Chalmers says global economic turmoil will drive budget cuts",
+      "wp_id": 33074
     }
   ],
   "state": "published"
