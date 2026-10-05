@@ -1,30 +1,28 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4298,
-  "finished_at": "2026-10-04T23:53:56.646854+00:00",
+  "fetched": 4319,
+  "finished_at": "2026-10-05T04:28:25.859158+00:00",
   "generation_failures": [
-    "Skipped candidate 'Deals: here's how to avoid the Galaxy S26 series price hike': Free article failed quality gate: article has only 220 words",
-    "Skipped candidate 'John Ternus is taking a more \u2018hands-on\u2019 role in Apple\u2019s design teams as CEO: report': Free article failed quality gate: article has only 165 words; article has only 4 paragraphs",
-    "Skipped candidate 'Garry Newman responds to s&box criticism in lengthy YouTube comment: 'I don't like giving up on things, I am stubborn'': Free article failed quality gate: article has only 215 words",
-    "Skipped candidate 'Hidden X-ray phase revealed in likely neutron star merger': Free article failed quality gate: article has only 145 words; article has only 4 paragraphs"
+    "Skipped candidate 'Mighty Mike Plays Dad Says He Owns 'Like 12 Companies,' Promises Refunds for AI Shirts': Free article failed quality gate: article has only 131 words; article has only 4 paragraphs",
+    "Skipped candidate 'Garry Newman responds to s&box criticism in lengthy YouTube comment: 'I don't like giving up on things, I am stubborn'': Free article failed quality gate: article has only 215 words"
   ],
-  "inserted": 99,
-  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
+  "inserted": 133,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "business",
-        "ai"
+        "science",
+        "politics",
+        "business"
       ],
       "sources": [
-        "Daily Maverick"
+        "MIT Technology Review"
       ],
       "status": "publish",
-      "title": "Musk says he will rename SpaceXAI to SpaceXSI",
-      "wp_id": 33168
+      "title": "EmTech Future 2026: When AI Meets Everything",
+      "wp_id": 33186
     }
   ],
   "state": "published"
