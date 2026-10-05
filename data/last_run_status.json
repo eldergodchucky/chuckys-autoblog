@@ -1,28 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4319,
-  "finished_at": "2026-10-05T04:28:25.859158+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Mighty Mike Plays Dad Says He Owns 'Like 12 Companies,' Promises Refunds for AI Shirts': Free article failed quality gate: article has only 131 words; article has only 4 paragraphs",
-    "Skipped candidate 'Garry Newman responds to s&box criticism in lengthy YouTube comment: 'I don't like giving up on things, I am stubborn'': Free article failed quality gate: article has only 215 words"
-  ],
-  "inserted": 133,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "fetched": 4296,
+  "finished_at": "2026-10-05T11:47:45.611274+00:00",
+  "generation_failures": [],
+  "inserted": 404,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "politics",
-        "business"
+        "crypto",
+        "business",
+        "space"
       ],
       "sources": [
-        "MIT Technology Review"
+        "Decrypt"
       ],
       "status": "publish",
-      "title": "EmTech Future 2026: When AI Meets Everything",
-      "wp_id": 33186
+      "title": "OKX and NYSE Owner ICE Plan 24/7 Tokenized Stock Trading Under SEC",
+      "wp_id": 33213
     }
   ],
   "state": "published"
