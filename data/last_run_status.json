@@ -1,25 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4296,
-  "finished_at": "2026-10-05T11:47:45.611274+00:00",
-  "generation_failures": [],
-  "inserted": 404,
-  "message": "Published 1 post(s).",
+  "fetched": 4340,
+  "finished_at": "2026-10-05T20:19:20.878719+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Virginia\u2019s new energy plan: Make the AI boom work for \u2014 not against \u2014 us': Free article failed quality gate: article has only 181 words; article has only 5 paragraphs"
+  ],
+  "inserted": 619,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "crypto",
-        "business",
-        "space"
+        "defense",
+        "health"
       ],
       "sources": [
-        "Decrypt"
+        "The War Zone"
       ],
       "status": "publish",
-      "title": "OKX and NYSE Owner ICE Plan 24/7 Tokenized Stock Trading Under SEC",
-      "wp_id": 33213
+      "title": "The P-3 Orion Airborne Early Warning Aircraft Has Flown Its Last Mission",
+      "wp_id": 33240
     }
   ],
   "state": "published"
