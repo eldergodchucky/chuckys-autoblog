@@ -1,26 +1,28 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4357,
-  "finished_at": "2026-10-06T14:48:56.679704+00:00",
-  "generation_failures": [],
-  "inserted": 592,
-  "message": "Published 1 post(s).",
+  "fetched": 4341,
+  "finished_at": "2026-10-06T20:01:47.303845+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Apple reportedly planning two rounds of product launches in October': Free article failed quality gate: article has only 201 words"
+  ],
+  "inserted": 434,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "entertainment",
-        "energy"
+        "security",
+        "crime",
+        "business"
       ],
       "sources": [
-        "Al Jazeera",
-        "Daily Maverick"
+        "BBC Crime",
+        "BleepingComputer"
       ],
       "status": "publish",
-      "title": "Francis Halzen wins 2026 Nobel Prize in Physics",
-      "wp_id": 33297
+      "title": "ASOS confirms data breach after \u201cHACKED\u201d in-app notifications",
+      "wp_id": 33313
     }
   ],
   "state": "published"
