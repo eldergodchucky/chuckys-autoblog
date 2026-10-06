@@ -1,26 +1,28 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4340,
-  "finished_at": "2026-10-05T20:19:20.878719+00:00",
+  "fetched": 4330,
+  "finished_at": "2026-10-06T01:24:45.631504+00:00",
   "generation_failures": [
-    "Skipped candidate 'Virginia\u2019s new energy plan: Make the AI boom work for \u2014 not against \u2014 us': Free article failed quality gate: article has only 181 words; article has only 5 paragraphs"
+    "Skipped candidate 'Another report says that the Xiaomi 18 Ultra has been canceled, reveals monster specs': Free article failed quality gate: article has only 205 words",
+    "Skipped candidate 'Apple iPhone 18 Pro Max vs. iPhone 17 Pro Max': Free article failed quality gate: article has only 200 words; article has only 5 paragraphs"
   ],
-  "inserted": 619,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 237,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "defense",
-        "health"
+        "ai",
+        "business",
+        "android"
       ],
       "sources": [
-        "The War Zone"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "The P-3 Orion Airborne Early Warning Aircraft Has Flown Its Last Mission",
-      "wp_id": 33240
+      "title": "Gemini Call for Me might tell your mom you\u2019re running late",
+      "wp_id": 33252
     }
   ],
   "state": "published"
