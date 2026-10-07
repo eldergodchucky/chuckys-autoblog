@@ -1,27 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4348,
-  "finished_at": "2026-10-07T02:44:55.402506+00:00",
+  "fetched": 4358,
+  "finished_at": "2026-10-07T09:23:39.330715+00:00",
   "generation_failures": [
-    "Skipped candidate 'Wizards of the Coast Union Demands Company Stop Pushing Generative AI': Free article failed quality gate: article has only 156 words; article has only 4 paragraphs"
+    "Skipped candidate 'Porsche Just Killed Its Plans For A Gas-Powered 718': Free article failed quality gate: article has only 102 words; article has only 4 paragraphs"
   ],
-  "inserted": 86,
+  "inserted": 334,
   "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gaming",
-        "business",
-        "crime"
+        "world",
+        "mobility"
       ],
       "sources": [
-        "The Verge"
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "Xbox has secured exclusive GTA 6 streaming rights",
-      "wp_id": 33345
+      "title": "Nicolas Ghesqui\u00e8re takes us into the future for Louis Vuitton show",
+      "wp_id": 33375
     }
   ],
   "state": "published"
