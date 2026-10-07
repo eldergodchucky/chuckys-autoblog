@@ -1,26 +1,29 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4358,
-  "finished_at": "2026-10-07T09:23:39.330715+00:00",
+  "fetched": 4351,
+  "finished_at": "2026-10-07T16:49:35.004152+00:00",
   "generation_failures": [
-    "Skipped candidate 'Porsche Just Killed Its Plans For A Gas-Powered 718': Free article failed quality gate: article has only 102 words; article has only 4 paragraphs"
+    "Skipped candidate 'Best Buy Takes $260 Off All iPhone Air Models During Techtober Sale': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Prime Day 2 deals \u2013 Last chance: Mac mini, AirPods, Apple Watch Series 12, Nomad Find My card, AirTag mounts, more': Free article failed quality gate: article has only 218 words; article has only 4 paragraphs",
+    "Skipped candidate 'Shipping Alert: Indigenous Peoples\u2019 Day \u2013 Monday, October 12': Free article failed quality gate: article has only 148 words; article has only 5 paragraphs"
   ],
-  "inserted": 334,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 634,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "mobility"
+        "business",
+        "culture",
+        "gadgets"
       ],
       "sources": [
-        "The Guardian World"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Nicolas Ghesqui\u00e8re takes us into the future for Louis Vuitton show",
-      "wp_id": 33375
+      "title": "Xreal\u2019s most affordable display glasses are $50 off",
+      "wp_id": 33399
     }
   ],
   "state": "published"
