@@ -2,44 +2,26 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4368,
-  "finished_at": "2026-10-06T23:46:25.400810+00:00",
+  "fetched": 4348,
+  "finished_at": "2026-10-07T02:44:55.402506+00:00",
   "generation_failures": [
-    "Skipped candidate 'Cellucor Is Offering Up to 35% Off Its Popular Energy and Fat-Burning Supplements at Amazon During October Prime Day': Free article failed quality gate: article has only 218 words",
-    "Skipped candidate 'Tripping during a political convention was linked to more support for political violence in a recent psychedelic study': Free article failed quality gate: article has only 161 words",
-    "Skipped candidate 'HIV treatment has transformed lives in the UK, but stigma lingers': Free article failed quality gate: article has only 184 words",
-    "Skipped candidate 'HIV treatment has transformed lives in the UK, but stigma lingers': Free article failed quality gate: article has only 184 words",
-    "Skipped candidate 'Pausing certain arthritis drugs after COVID-19 vaccination raises flare risk without improving antibody response': Free article failed quality gate: article has only 181 words",
-    "Skipped candidate 'PSMA PET/CT-targeted biopsy improves detection of clinically significant prostate cancer': Free article failed quality gate: article has only 210 words",
-    "Skipped candidate 'PSMA PET/CT-targeted biopsy improves detection of clinically significant prostate cancer': Free article failed quality gate: article has only 210 words",
-    "Skipped candidate 'Pausing certain arthritis drugs after COVID-19 vaccination raises flare risk without improving antibody response': Free article failed quality gate: article has only 181 words",
-    "Skipped candidate 'Sickle cell pain may involve previously unrecognized biological pathways': Free article failed quality gate: article has only 164 words",
-    "Skipped candidate 'Sickle cell pain may involve previously unrecognized biological pathways': Free article failed quality gate: article has only 164 words",
-    "Skipped candidate 'Cancer rates rising faster among younger people, international study finds': Free article failed quality gate: article has only 208 words",
-    "Skipped candidate 'Cancer rates rising faster among younger people, international study finds': Free article failed quality gate: article has only 199 words",
-    "Skipped candidate 'Pregnancy complications linked to higher risk of cardiac and renal health conditions': Free article failed quality gate: article has only 166 words",
-    "Skipped candidate '1 in 3 with lupus takes supplements, medications with potential for interactions': Free article failed quality gate: article has only 160 words",
-    "Skipped candidate '1 in 3 with lupus takes supplements, medications with potential for interactions': Free article failed quality gate: article has only 160 words",
-    "Skipped candidate 'Apple needs to pay an extra $184 million in Apple Watch patent infringement case': Free article failed quality gate: article has only 214 words",
-    "Skipped candidate 'Pregnancy complications linked to higher risk of cardiac and renal health conditions': Free article failed quality gate: article has only 166 words",
-    "Skipped candidate 'Newborn circumcision is not linked to autism, large U.S. study finds': Free article failed quality gate: article has only 159 words",
-    "Skipped candidate 'Early-onset menopause linked to increased symptoms of anxiety and depression': Free article failed quality gate: article has only 175 words"
+    "Skipped candidate 'Wizards of the Coast Union Demands Company Stop Pushing Generative AI': Free article failed quality gate: article has only 156 words; article has only 4 paragraphs"
   ],
-  "inserted": 257,
-  "message": "Published 1 post(s). Skipped 19 low-quality candidate(s).",
+  "inserted": 86,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "health",
-        "software"
+        "gaming",
+        "business",
+        "crime"
       ],
       "sources": [
-        "The Guardian World"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Sarah Macdonald returns to ABC radio after being sacked in 2024",
-      "wp_id": 33332
+      "title": "Xbox has secured exclusive GTA 6 streaming rights",
+      "wp_id": 33345
     }
   ],
   "state": "published"
