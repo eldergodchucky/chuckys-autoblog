@@ -2,27 +2,30 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4377,
-  "finished_at": "2026-10-07T21:49:21.545603+00:00",
+  "fetched": 4364,
+  "finished_at": "2026-10-08T01:37:07.466983+00:00",
   "generation_failures": [
+    "Skipped candidate 'RFK Jr. Plans Vaccine Injury Initiative, Drawing Wary Eye From Experts': Free article failed quality gate: article has only 138 words; article has only 5 paragraphs",
+    "Skipped candidate 'Blood Bowl 3 is being replaced by Warhammer Blood Bowl: What will happen to everyone's unspent currency?': Free article failed quality gate: article has only 219 words",
+    "Skipped candidate 'Protein LMOD1 offers new clues to muscle regeneration': Free article failed quality gate: article has only 198 words",
+    "Skipped candidate 'Protein LMOD1 offers new clues to muscle regeneration': Free article failed quality gate: article has only 198 words",
     "Skipped candidate ''Amazing' Kane targets 100 international goals': Free article failed quality gate: article has only 232 words; article has only 5 paragraphs",
     "Skipped candidate ''Amazing' Kane targets 100 international goals': Free article failed quality gate: article has only 232 words; article has only 5 paragraphs"
   ],
-  "inserted": 392,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 137,
+  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "sports",
-        "gadgets"
+        "science",
+        "climate"
       ],
       "sources": [
-        "The Verge"
+        "WIRED Science"
       ],
       "status": "publish",
-      "title": "The first Nvidia RTX Spark laptops cost up to $7",
-      "wp_id": 33418
+      "title": "Tropical Storm Isaias Set to Be First Atlantic Hurricane of 2026 Season",
+      "wp_id": 33434
     }
   ],
   "state": "published"
