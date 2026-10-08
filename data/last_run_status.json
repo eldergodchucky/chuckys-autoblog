@@ -2,24 +2,30 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4342,
-  "finished_at": "2026-10-08T08:03:05.065340+00:00",
-  "generation_failures": [],
-  "inserted": 287,
-  "message": "Published 1 post(s).",
+  "fetched": 4358,
+  "finished_at": "2026-10-08T15:39:37.469865+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Largest 2D map of the universe helps scientists discover new gravitational lenses': Free article failed quality gate: article has only 158 words; article has only 4 paragraphs",
+    "Skipped candidate 'Microsoft brings more AI to PCs as it challenges Apple': Free article failed quality gate: article has only 140 words; article has only 4 paragraphs",
+    "Skipped candidate 'Over 6 million bitcoin sit behind exposed public keys as AI warnings mount': Free article failed quality gate: article has only 214 words; article has only 4 paragraphs",
+    "Skipped candidate 'Crypto lending rises again\u2026 but have they solved the risks?': Free article failed quality gate: article has only 125 words; article has only 4 paragraphs",
+    "Skipped candidate ''Make this face look gay': AI models alter faces to give people stereotypical 'gay,' 'straight' or 'criminal' features': Free article failed quality gate: article has only 165 words; article has only 4 paragraphs"
+  ],
+  "inserted": 631,
+  "message": "Published 1 post(s). Skipped 5 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "space",
-        "software"
+        "business",
+        "energy",
+        "ai"
       ],
       "sources": [
-        "BBC Science & Environment"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Margaret Hamilton, Whosesoftware Helped Land Apollo 11 on the Moon, Dies",
-      "wp_id": 33457
+      "title": "Hear from Ambrosia Energy and Bloom Energy execs on where the AI",
+      "wp_id": 33482
     }
   ],
   "state": "published"
