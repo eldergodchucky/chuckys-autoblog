@@ -2,28 +2,27 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4367,
-  "finished_at": "2026-10-08T20:51:56.443502+00:00",
+  "fetched": 4368,
+  "finished_at": "2026-10-09T01:02:42.517074+00:00",
   "generation_failures": [
-    "Skipped candidate 'Environmental exposures associated with Alzheimer's disease and related dementias revealed': Free article failed quality gate: article has only 186 words; article has only 5 paragraphs",
-    "Skipped candidate 'Environmental exposures associated with Alzheimer's disease and related dementias revealed': Free article failed quality gate: article has only 186 words; article has only 5 paragraphs"
+    "Skipped candidate 'China breakthrough projected to push sustainable jet fuel gross profit margin past 50%': Free article failed quality gate: article has only 177 words; article has only 4 paragraphs",
+    "Skipped candidate 'Trump administration investigates 9 universities for alleged visa fraud': Free article failed quality gate: article has only 161 words; article has only 5 paragraphs"
   ],
-  "inserted": 406,
+  "inserted": 235,
   "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "sports",
         "world",
+        "politics",
         "crime"
       ],
       "sources": [
-        "Al Jazeera",
-        "BBC Sport"
+        "Daily Maverick"
       ],
       "status": "publish",
-      "title": "Maresca says 'feeling is fantastic' among Man City squad",
-      "wp_id": 33499
+      "title": "K-WORD: Private conversation is no shield for racist language such",
+      "wp_id": 33515
     }
   ],
   "state": "published"
