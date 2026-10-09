@@ -2,27 +2,27 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4368,
-  "finished_at": "2026-10-09T01:02:42.517074+00:00",
+  "fetched": 4354,
+  "finished_at": "2026-10-09T07:25:47.367614+00:00",
   "generation_failures": [
-    "Skipped candidate 'China breakthrough projected to push sustainable jet fuel gross profit margin past 50%': Free article failed quality gate: article has only 177 words; article has only 4 paragraphs",
-    "Skipped candidate 'Trump administration investigates 9 universities for alleged visa fraud': Free article failed quality gate: article has only 161 words; article has only 5 paragraphs"
+    "Skipped candidate 'SpaceX\u2019s Starlink Mobile plans are pressuring AT&T and Verizon shares': Free article failed quality gate: article has only 104 words; article has only 4 paragraphs",
+    "Skipped candidate 'Ether bets were wiped out at six times bitcoin\u2019s rate in crypto\u2019s $1 billion flush': Free article failed quality gate: article has only 215 words; article has only 4 paragraphs"
   ],
-  "inserted": 235,
+  "inserted": 243,
   "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
         "world",
-        "politics",
-        "crime"
+        "health",
+        "business"
       ],
       "sources": [
         "Daily Maverick"
       ],
       "status": "publish",
-      "title": "K-WORD: Private conversation is no shield for racist language such",
-      "wp_id": 33515
+      "title": "FINANCE WELLNESS COACH: Plan ahead for ownership after the death",
+      "wp_id": 33536
     }
   ],
   "state": "published"
