@@ -1,26 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4364,
-  "finished_at": "2026-10-09T14:32:38.802073+00:00",
+  "fetched": 4373,
+  "finished_at": "2026-10-09T19:49:43.324173+00:00",
   "generation_failures": [
-    "Skipped candidate 'DWF Labs subsidiaries sue BitGo for $141 million over alleged token lock-up breach': Free article failed quality gate: article has only 234 words; article has only 4 paragraphs"
+    "Skipped candidate 'AI builds custom decision-making software in about an hour instead of months': Free article failed quality gate: article has only 148 words; article has only 4 paragraphs"
   ],
-  "inserted": 558,
+  "inserted": 465,
   "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "business"
+        "gaming",
+        "crime",
+        "software"
       ],
       "sources": [
-        "MacRumors"
+        "Eurogamer"
       ],
       "status": "publish",
-      "title": "Mac Shipments Fall, But Apple Still Gains Ground in Shrinking Market",
-      "wp_id": 33554
+      "title": "Rockstar HR manager claims he had \"little interest\" in staff's union membership",
+      "wp_id": 33571
     }
   ],
   "state": "published"
