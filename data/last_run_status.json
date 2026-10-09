@@ -1,27 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4373,
-  "finished_at": "2026-10-09T19:49:43.324173+00:00",
-  "generation_failures": [
-    "Skipped candidate 'AI builds custom decision-making software in about an hour instead of months': Free article failed quality gate: article has only 148 words; article has only 4 paragraphs"
-  ],
-  "inserted": 465,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "fetched": 4376,
+  "finished_at": "2026-10-09T23:52:01.488224+00:00",
+  "generation_failures": [],
+  "inserted": 182,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "gaming",
-        "crime",
-        "software"
+        "gadgets",
+        "mobility",
+        "world"
       ],
       "sources": [
-        "Eurogamer"
+        "WIRED Gear"
       ],
       "status": "publish",
-      "title": "Rockstar HR manager claims he had \"little interest\" in staff's union membership",
-      "wp_id": 33571
+      "title": "Tesla\u2019s \u2018Full Self-Driving\u2019 Becomes \u2018Assisted Driving\u2019 in Europe",
+      "wp_id": 33586
     }
   ],
   "state": "published"
