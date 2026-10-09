@@ -2,27 +2,25 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4354,
-  "finished_at": "2026-10-09T07:25:47.367614+00:00",
+  "fetched": 4364,
+  "finished_at": "2026-10-09T14:32:38.802073+00:00",
   "generation_failures": [
-    "Skipped candidate 'SpaceX\u2019s Starlink Mobile plans are pressuring AT&T and Verizon shares': Free article failed quality gate: article has only 104 words; article has only 4 paragraphs",
-    "Skipped candidate 'Ether bets were wiped out at six times bitcoin\u2019s rate in crypto\u2019s $1 billion flush': Free article failed quality gate: article has only 215 words; article has only 4 paragraphs"
+    "Skipped candidate 'DWF Labs subsidiaries sue BitGo for $141 million over alleged token lock-up breach': Free article failed quality gate: article has only 234 words; article has only 4 paragraphs"
   ],
-  "inserted": 243,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 558,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "health",
+        "apple",
         "business"
       ],
       "sources": [
-        "Daily Maverick"
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "FINANCE WELLNESS COACH: Plan ahead for ownership after the death",
-      "wp_id": 33536
+      "title": "Mac Shipments Fall, But Apple Still Gains Ground in Shrinking Market",
+      "wp_id": 33554
     }
   ],
   "state": "published"
