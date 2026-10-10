@@ -2,16 +2,16 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4376,
-  "finished_at": "2026-10-10T16:08:54.580343+00:00",
+  "fetched": 4393,
+  "finished_at": "2026-10-10T20:06:15.330718+00:00",
   "generation_failures": [
-    "Skipped candidate 'This is when the Infinix GT 50 Pro is finally launching in India': Free article failed quality gate: article has only 200 words",
+    "Skipped candidate 'Deals: Some Galaxy and Pixel phones kept their Prime Day prices - no Prime required now, though': Free article failed quality gate: article has only 231 words",
     "Skipped candidate 'Accessory Deals This Weekend: Save on TVs, Headphones, and Smart Home Gear': Free article failed quality gate: article has only 5 paragraphs; 3 repeated sentence(s)",
-    "Skipped candidate 'Kia Expects The Affordable EV3 To Be Its Best-Selling EV In The U.S.': Free article failed quality gate: article has only 110 words; article has only 4 paragraphs",
-    "Skipped candidate 'S&P 500 at 10,000 or bust: New ETF offers investors all-or-nothing bet on the index': Free article failed quality gate: article has only 80 words; article has only 4 paragraphs",
+    "Skipped candidate 'Taxing stocks, estates and employee benefits could keep Social Security from running out of money. Here\u2019s who could pay the most.': Free article failed quality gate: article has only 125 words; article has only 5 paragraphs",
+    "Skipped candidate 'The studio behind Star Wars Zero Company is bringing back some of its furloughed staff': Free article failed quality gate: article has only 225 words",
     "Skipped candidate 'Latest news bulletin | October 10th, 2026 \u2013 Evening': Free article failed quality gate: article has only 134 words; article has only 4 paragraphs"
   ],
-  "inserted": 329,
+  "inserted": 271,
   "message": "Published 1 post(s). Skipped 5 low-quality candidate(s).",
   "posts": [
     {
@@ -21,12 +21,11 @@
         "business"
       ],
       "sources": [
-        "Al Jazeera",
-        "The Guardian US Politics"
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "Why is US turning to Russia for diesel despite sanctions?",
-      "wp_id": 33637
+      "title": "Ukraine hit by deadly Russian strikes as \u2018thanks\u2019 for Trump diesel deal",
+      "wp_id": 33652
     }
   ],
   "state": "published"
