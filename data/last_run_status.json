@@ -2,29 +2,31 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4410,
-  "finished_at": "2026-10-10T10:50:51.480604+00:00",
+  "fetched": 4376,
+  "finished_at": "2026-10-10T16:08:54.580343+00:00",
   "generation_failures": [
-    "Skipped candidate 'XRP Ledger patched decade-old bug that could create billions of dollars in XRP from nothing': Free article failed quality gate: article has only 4 paragraphs",
-    "Skipped candidate 'Robinhood Chain slowdown spreads from fees to trading as transactions fall more than 40%': Free article failed quality gate: article has only 196 words; article has only 4 paragraphs",
-    "Skipped candidate 'Visa survey says nearly half of APAC consumers open to using stablecoins by 2031': Free article failed quality gate: article has only 188 words; article has only 4 paragraphs",
-    "Skipped candidate 'Bitcoin's volatility has plunged, but extreme price swings are more frequent than in 2018': Free article failed quality gate: article has only 210 words; article has only 4 paragraphs"
+    "Skipped candidate 'This is when the Infinix GT 50 Pro is finally launching in India': Free article failed quality gate: article has only 200 words",
+    "Skipped candidate 'Accessory Deals This Weekend: Save on TVs, Headphones, and Smart Home Gear': Free article failed quality gate: article has only 5 paragraphs; 3 repeated sentence(s)",
+    "Skipped candidate 'Kia Expects The Affordable EV3 To Be Its Best-Selling EV In The U.S.': Free article failed quality gate: article has only 110 words; article has only 4 paragraphs",
+    "Skipped candidate 'S&P 500 at 10,000 or bust: New ETF offers investors all-or-nothing bet on the index': Free article failed quality gate: article has only 80 words; article has only 4 paragraphs",
+    "Skipped candidate 'Latest news bulletin | October 10th, 2026 \u2013 Evening': Free article failed quality gate: article has only 134 words; article has only 4 paragraphs"
   ],
-  "inserted": 185,
-  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
+  "inserted": 329,
+  "message": "Published 1 post(s). Skipped 5 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
         "world",
-        "health",
-        "energy"
+        "politics",
+        "business"
       ],
       "sources": [
-        "The Guardian World"
+        "Al Jazeera",
+        "The Guardian US Politics"
       ],
       "status": "publish",
-      "title": "\u2018Like a drill going into my eye\u2019: why the mystery over Havana",
-      "wp_id": 33623
+      "title": "Why is US turning to Russia for diesel despite sanctions?",
+      "wp_id": 33637
     }
   ],
   "state": "published"
