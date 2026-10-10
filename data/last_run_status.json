@@ -1,32 +1,30 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4398,
-  "finished_at": "2026-10-10T04:41:53.817514+00:00",
+  "fetched": 4410,
+  "finished_at": "2026-10-10T10:50:51.480604+00:00",
   "generation_failures": [
-    "Skipped candidate 'OnePlus plans on launching two flagships in India, here's when': Free article failed quality gate: article has only 224 words",
-    "Skipped candidate 'Oppo Find X10 Pro Max Hasselblad teleconverter kit unboxing and hands-on': Free article failed quality gate: article has only 198 words",
-    "Skipped candidate '2026's OLED monitors can nearly recreate the sublime clarity of a '90s CRT, but Windows will have to change before we can achieve true nirvana': Free article failed quality gate: article has only 244 words",
-    "Skipped candidate 'Is iPhone 18 demand cooling off? Here\u2019s how deep Apple reportedly is cutting component orders.': Free article failed quality gate: article has only 121 words; article has only 4 paragraphs",
-    "Skipped candidate 'TrendForce warns of higher notebook prices and weaker demand in 2027': Free article failed quality gate: article has only 130 words; article has only 4 paragraphs",
-    "Skipped candidate 'XRP Ledger patched decade-old bug that could create billions of dollars in XRP from nothing': Free article failed quality gate: article has only 218 words; article has only 4 paragraphs",
-    "Skipped candidate ''Overcooked broke you apart and Stage Fright is there to put you back together'': Free article failed quality gate: article has only 209 words"
+    "Skipped candidate 'XRP Ledger patched decade-old bug that could create billions of dollars in XRP from nothing': Free article failed quality gate: article has only 4 paragraphs",
+    "Skipped candidate 'Robinhood Chain slowdown spreads from fees to trading as transactions fall more than 40%': Free article failed quality gate: article has only 196 words; article has only 4 paragraphs",
+    "Skipped candidate 'Visa survey says nearly half of APAC consumers open to using stablecoins by 2031': Free article failed quality gate: article has only 188 words; article has only 4 paragraphs",
+    "Skipped candidate 'Bitcoin's volatility has plunged, but extreme price swings are more frequent than in 2018': Free article failed quality gate: article has only 210 words; article has only 4 paragraphs"
   ],
-  "inserted": 65,
-  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
+  "inserted": 185,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gaming",
-        "software"
+        "world",
+        "health",
+        "energy"
       ],
       "sources": [
-        "Eurogamer"
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "After modders removed Skate's live service bits",
-      "wp_id": 33599
+      "title": "\u2018Like a drill going into my eye\u2019: why the mystery over Havana",
+      "wp_id": 33623
     }
   ],
   "state": "published"
