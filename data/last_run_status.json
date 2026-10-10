@@ -1,31 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4393,
-  "finished_at": "2026-10-10T20:06:15.330718+00:00",
+  "fetched": 4395,
+  "finished_at": "2026-10-10T23:35:24.245025+00:00",
   "generation_failures": [
     "Skipped candidate 'Deals: Some Galaxy and Pixel phones kept their Prime Day prices - no Prime required now, though': Free article failed quality gate: article has only 231 words",
-    "Skipped candidate 'Accessory Deals This Weekend: Save on TVs, Headphones, and Smart Home Gear': Free article failed quality gate: article has only 5 paragraphs; 3 repeated sentence(s)",
     "Skipped candidate 'Taxing stocks, estates and employee benefits could keep Social Security from running out of money. Here\u2019s who could pay the most.': Free article failed quality gate: article has only 125 words; article has only 5 paragraphs",
-    "Skipped candidate 'The studio behind Star Wars Zero Company is bringing back some of its furloughed staff': Free article failed quality gate: article has only 225 words",
-    "Skipped candidate 'Latest news bulletin | October 10th, 2026 \u2013 Evening': Free article failed quality gate: article has only 134 words; article has only 4 paragraphs"
+    "Skipped candidate 'The studio behind Star Wars Zero Company is bringing back some of its furloughed staff': Free article failed quality gate: article has only 225 words"
   ],
-  "inserted": 271,
-  "message": "Published 1 post(s). Skipped 5 low-quality candidate(s).",
+  "inserted": 108,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "politics",
         "business"
       ],
       "sources": [
-        "The Guardian World"
+        "Hackaday"
       ],
       "status": "publish",
-      "title": "Ukraine hit by deadly Russian strikes as \u2018thanks\u2019 for Trump diesel deal",
-      "wp_id": 33652
+      "title": "Poking at the Radxa Dragon Q8B Raspberry Pi 5 Killer",
+      "wp_id": 33668
     }
   ],
   "state": "published"
