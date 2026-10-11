@@ -1,27 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 18,
   "feeds": 108,
-  "fetched": 4394,
-  "finished_at": "2026-10-11T02:14:05.437083+00:00",
-  "generation_failures": [
-    "Skipped candidate 'This Simple Once-a-Week Exercise Could Help Keep Blood Pressure Lower': Free article failed quality gate: article has only 167 words; article has only 5 paragraphs",
-    "Skipped candidate 'Most labs testing children for cardiac troponin lack pediatric reference ranges, survey finds': Free article failed quality gate: article has only 173 words"
-  ],
-  "inserted": 33,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "fetched": 4342,
+  "finished_at": "2026-10-11T08:59:04.347295+00:00",
+  "generation_failures": [],
+  "inserted": 189,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "politics"
+        "politics",
+        "climate",
+        "history"
       ],
       "sources": [
-        "BBC Sport"
+        "The Guardian US Politics"
       ],
       "status": "publish",
-      "title": "Leinster stroll past Cardiff for happy homecoming",
-      "wp_id": 33686
+      "title": "\u2018Gaza is a moral tear in the universe\u2019: Naomi Klein and Astra",
+      "wp_id": 33710
     }
   ],
   "state": "published"
