@@ -2,26 +2,26 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4395,
-  "finished_at": "2026-10-10T23:35:24.245025+00:00",
+  "fetched": 4394,
+  "finished_at": "2026-10-11T02:14:05.437083+00:00",
   "generation_failures": [
-    "Skipped candidate 'Deals: Some Galaxy and Pixel phones kept their Prime Day prices - no Prime required now, though': Free article failed quality gate: article has only 231 words",
-    "Skipped candidate 'Taxing stocks, estates and employee benefits could keep Social Security from running out of money. Here\u2019s who could pay the most.': Free article failed quality gate: article has only 125 words; article has only 5 paragraphs",
-    "Skipped candidate 'The studio behind Star Wars Zero Company is bringing back some of its furloughed staff': Free article failed quality gate: article has only 225 words"
+    "Skipped candidate 'This Simple Once-a-Week Exercise Could Help Keep Blood Pressure Lower': Free article failed quality gate: article has only 167 words; article has only 5 paragraphs",
+    "Skipped candidate 'Most labs testing children for cardiac troponin lack pediatric reference ranges, survey finds': Free article failed quality gate: article has only 173 words"
   ],
-  "inserted": 108,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 33,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business"
+        "sports",
+        "politics"
       ],
       "sources": [
-        "Hackaday"
+        "BBC Sport"
       ],
       "status": "publish",
-      "title": "Poking at the Radxa Dragon Q8B Raspberry Pi 5 Killer",
-      "wp_id": 33668
+      "title": "Leinster stroll past Cardiff for happy homecoming",
+      "wp_id": 33686
     }
   ],
   "state": "published"
