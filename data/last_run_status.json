@@ -2,26 +2,25 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4328,
-  "finished_at": "2026-10-11T19:41:48.576355+00:00",
+  "fetched": 4351,
+  "finished_at": "2026-10-11T23:13:03.464255+00:00",
   "generation_failures": [
-    "Skipped candidate 'Apple TV 4K Getting A19 Chip and Easier-to-Find Siri Remote': Free article failed quality gate: article has only 289 words",
-    "Skipped candidate 'New Apple TV 4K and HomePod Mini to Ship on October 30': Free article failed quality gate: article has only 200 words; article has only 5 paragraphs"
+    "Skipped candidate 'Zinc-air batteries gain new momentum with long-lasting catalyst': Free article failed quality gate: article has only 177 words; article has only 5 paragraphs"
   ],
-  "inserted": 232,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 111,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "entertainment"
+        "gaming",
+        "sports"
       ],
       "sources": [
-        "TechCrunch"
+        "Eurogamer"
       ],
       "status": "publish",
-      "title": "What to know about the landmark Warner Bros. Discovery sale",
-      "wp_id": 33747
+      "title": "Marvel T\u014dkon: Fighting Souls Revealed Its Full Year 1 DLC Roster",
+      "wp_id": 33764
     }
   ],
   "state": "published"
