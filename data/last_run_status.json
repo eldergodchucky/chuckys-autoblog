@@ -1,25 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 17,
+  "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4332,
-  "finished_at": "2026-10-11T15:29:30.728960+00:00",
-  "generation_failures": [],
-  "inserted": 278,
-  "message": "Published 1 post(s).",
+  "fetched": 4328,
+  "finished_at": "2026-10-11T19:41:48.576355+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Apple TV 4K Getting A19 Chip and Easier-to-Find Siri Remote': Free article failed quality gate: article has only 289 words",
+    "Skipped candidate 'New Apple TV 4K and HomePod Mini to Ship on October 30': Free article failed quality gate: article has only 200 words; article has only 5 paragraphs"
+  ],
+  "inserted": 232,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "science",
-        "health"
+        "business",
+        "entertainment"
       ],
       "sources": [
-        "Daily Maverick"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "THE CONVERSATION: How pond algae led to a Nobel and new ways",
-      "wp_id": 33734
+      "title": "What to know about the landmark Warner Bros. Discovery sale",
+      "wp_id": 33747
     }
   ],
   "state": "published"
