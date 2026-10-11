@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 18,
+  "feed_warnings": 17,
   "feeds": 108,
-  "fetched": 4342,
-  "finished_at": "2026-10-11T08:59:04.347295+00:00",
+  "fetched": 4332,
+  "finished_at": "2026-10-11T15:29:30.728960+00:00",
   "generation_failures": [],
-  "inserted": 189,
+  "inserted": 278,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "politics",
-        "climate",
-        "history"
+        "world",
+        "science",
+        "health"
       ],
       "sources": [
-        "The Guardian US Politics"
+        "Daily Maverick"
       ],
       "status": "publish",
-      "title": "\u2018Gaza is a moral tear in the universe\u2019: Naomi Klein and Astra",
-      "wp_id": 33710
+      "title": "THE CONVERSATION: How pond algae led to a Nobel and new ways",
+      "wp_id": 33734
     }
   ],
   "state": "published"
