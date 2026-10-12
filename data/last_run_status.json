@@ -2,28 +2,27 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4358,
-  "finished_at": "2026-10-12T09:37:47.537510+00:00",
+  "fetched": 4441,
+  "finished_at": "2026-10-12T19:22:21.008996+00:00",
   "generation_failures": [
-    "Skipped candidate 'Chinese desalination plant cuts 60% energy use, turns waste brine into industrial salt': Free article failed quality gate: article has only 169 words; article has only 4 paragraphs",
-    "Skipped candidate 'As AI and the Iran war loom, China\u2019s energy technocrats are on the fast track': Free article failed quality gate: article has only 176 words; article has only 5 paragraphs"
+    "Skipped candidate 'One UI 9 for the Galaxy S24 series, Galaxy Z Fold6 and Flip6 reaches the US': Free article failed quality gate: article has only 229 words",
+    "Skipped candidate 'Meet the Anthropic Engineer Keeping Its AI Agent Trustworthy': Free article failed quality gate: article has only 210 words; article has only 5 paragraphs"
   ],
-  "inserted": 302,
+  "inserted": 789,
   "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
         "defense",
-        "energy"
+        "business",
+        "software"
       ],
       "sources": [
-        "France 24",
-        "The Hindu World"
+        "Defense News"
       ],
       "status": "publish",
-      "title": "North Korea fires multiple ballistic missiles off east coast",
-      "wp_id": 33799
+      "title": "Sikorsky packs 4 Nomad drones into a single shipping container",
+      "wp_id": 33823
     }
   ],
   "state": "published"
