@@ -1,27 +1,29 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4354,
-  "finished_at": "2026-10-12T02:27:36.844675+00:00",
+  "fetched": 4358,
+  "finished_at": "2026-10-12T09:37:47.537510+00:00",
   "generation_failures": [
-    "Skipped candidate 'Ledger attack spreads to EU, AI finds \u201918 trillion XRP\u2019 bug: Hodler\u2019s Digest': Free article failed quality gate: article has only 127 words; article has only 4 paragraphs",
-    "Skipped candidate 'XRP Ledger defends emergency patch for unlimited XRP bug': Free article failed quality gate: article has only 93 words; article has only 4 paragraphs"
+    "Skipped candidate 'Chinese desalination plant cuts 60% energy use, turns waste brine into industrial salt': Free article failed quality gate: article has only 169 words; article has only 4 paragraphs",
+    "Skipped candidate 'As AI and the Iran war loom, China\u2019s energy technocrats are on the fast track': Free article failed quality gate: article has only 176 words; article has only 5 paragraphs"
   ],
-  "inserted": 75,
+  "inserted": 302,
   "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "crypto",
-        "business"
+        "world",
+        "defense",
+        "energy"
       ],
       "sources": [
-        "Decrypt"
+        "France 24",
+        "The Hindu World"
       ],
       "status": "publish",
-      "title": "Tokenized Stocks Show Real Demand But Remain Volatile and Illiquid",
-      "wp_id": 33776
+      "title": "North Korea fires multiple ballistic missiles off east coast",
+      "wp_id": 33799
     }
   ],
   "state": "published"
