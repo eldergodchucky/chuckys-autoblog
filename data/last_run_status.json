@@ -1,36 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 108,
-  "fetched": 4461,
-  "finished_at": "2026-10-13T01:35:25.934459+00:00",
+  "fetched": 4447,
+  "finished_at": "2026-10-13T08:30:06.896064+00:00",
   "generation_failures": [
-    "Skipped candidate 'Ledger finds unauthorized hardware implant in CryptoBilis-sold wallet amid fund theft reports': Free article failed quality gate: article has only 154 words",
-    "Skipped candidate 'Doory is an open-source Canva': Free article failed quality gate: article has only 152 words; article has only 5 paragraphs",
-    "Skipped candidate '8-channel analog monitor with NXP HEF4052BP and Arduino': Free article failed quality gate: article has only 130 words; article has only 4 paragraphs",
-    "Skipped candidate 'The Tiny XTEINK X4 Pro Ebook Reader Is on Sale for Its Lowest-Ever Price': Free article failed quality gate: article has only 104 words; article has only 4 paragraphs",
-    "Skipped candidate 'WhatsApp starts testing scheduled messages': Free article failed quality gate: article has only 212 words",
-    "Skipped candidate 'Google adds new Metal Mesh bands for the Fitbit Air in two colors': Free article failed quality gate: article has only 212 words",
-    "Skipped candidate 'M6 MacBook Pro: Three new upgrades launching later this month': Free article failed quality gate: article has only 117 words; article has only 4 paragraphs",
-    "Skipped candidate 'Apple TV\u2019s new podcast explores haunting true story involving a heart transplant': Free article failed quality gate: article has only 131 words; article has only 5 paragraphs",
-    "Skipped candidate 'Apple and Epic clash over document production in latest App Store court filing': Free article failed quality gate: article has only 127 words; article has only 4 paragraphs",
-    "Skipped candidate 'From laser shields to iPhone detectors: inside China\u2019s booming secrecy industry': Free article failed quality gate: article has only 171 words; article has only 4 paragraphs"
+    "Skipped candidate 'SpaceX launches Falcon 9 Starlink mission for 1st time in more than 3 weeks (photos)': Free article failed quality gate: article has only 212 words"
   ],
-  "inserted": 279,
-  "message": "Published 1 post(s). Skipped 10 low-quality candidate(s).",
+  "inserted": 275,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "crime",
-        "software"
+        "health",
+        "business"
       ],
       "sources": [
-        "Daily Maverick"
+        "The Guardian Health"
       ],
       "status": "publish",
-      "title": "ANC vs IEC: \u2018Drastic",
-      "wp_id": 33845
+      "title": "Bedbug infestation forces Qantas to ground plane in Rome",
+      "wp_id": 33868
     }
   ],
   "state": "published"
