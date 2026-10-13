@@ -1,26 +1,28 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
-  "feeds": 108,
-  "fetched": 4447,
-  "finished_at": "2026-10-13T08:30:06.896064+00:00",
+  "feed_warnings": 17,
+  "feeds": 127,
+  "fetched": 4932,
+  "finished_at": "2026-10-13T16:22:50.179459+00:00",
   "generation_failures": [
-    "Skipped candidate 'SpaceX launches Falcon 9 Starlink mission for 1st time in more than 3 weeks (photos)': Free article failed quality gate: article has only 212 words"
+    "Skipped candidate 'New Apple TV 4K Adds Far-Field Microphones for Hands-Free Siri': Free article failed quality gate: article has only 253 words"
   ],
-  "inserted": 275,
+  "inserted": 1242,
   "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "business"
+        "apple",
+        "gadgets",
+        "ai"
       ],
       "sources": [
-        "The Guardian Health"
+        "9to5Mac",
+        "Engadget"
       ],
       "status": "publish",
-      "title": "Bedbug infestation forces Qantas to ground plane in Rome",
-      "wp_id": 33868
+      "title": "Google Antigravity is now built into Gemini app for macOS",
+      "wp_id": 33899
     }
   ],
   "state": "published"
