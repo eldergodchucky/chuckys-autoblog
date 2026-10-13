@@ -20,10 +20,10 @@ PAGES = [
         "title": "About ChuckysCarnage",
         "content": (
             "<h2>What this site is</h2>\n"
-            "<p>ChuckysCarnage is an independent technology news site covering science, space, AI, "
-            "gadgets, phones, software, security, and health research. Each post is written from the "
-            "day's publicly available reporting, links back to the original sources, and adds an "
-            "original analysis of what the news actually means.</p>\n"
+            "<p>ChuckysCarnage is an independent global news and technology publication covering "
+            "international affairs, politics, business, science, culture, climate, and tech innovation. "
+            "Each post is written from the day's publicly available reporting, links back to the original sources, "
+            "and adds an original analysis of what the news actually means.</p>\n"
             "<h2>How articles are made</h2>\n"
             "<p>Every article starts with the reporting published by the outlets and organizations "
             "linked in the post. The facts are summarized and checked against those sources, and the "

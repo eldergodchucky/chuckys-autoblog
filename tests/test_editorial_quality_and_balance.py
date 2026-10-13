@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 import wp_auto_blog
-from wp_auto_blog import Item, clean_editorial_title, is_deal_roundup, is_dense_academic_paper, article_quality_failures
+from wp_auto_blog import Item, clean_editorial_title, is_deal_roundup, is_dense_academic_paper, article_quality_failures, publishable_cluster
 
 
 class EditorialQualityAndBalanceTests(unittest.TestCase):
@@ -21,6 +21,7 @@ class EditorialQualityAndBalanceTests(unittest.TestCase):
             ("I used Pixel’s new battery summaries for a week — and Google has work to do", "Testing Pixel's new battery summaries: Analysis and Key Observations"),
             ("T-Mobile’s leaked T-Mix plans are way more complicated than we thought", "T-Mobile's leaked T-Mix plans are More Complex Than Expected"),
             ("Here’s everything we know so far about Apple’s next entry-level iPad: A19 chip", "What to Expect from Apple's next entry-level iPad: A19 chip"),
+            ("5 reasons I’m keeping my Fitbit Air and not buying a Fitbit Edge", "Comparing Fitbit Air and Fitbit Edge: Key Decision Factors"),
         ]
         for original, expected in cases:
             cleaned = clean_editorial_title(original)
@@ -32,18 +33,46 @@ class EditorialQualityAndBalanceTests(unittest.TestCase):
         self.assertEqual(cleaned, "The DSA has a believability problem with older Black voters")
 
     def test_deal_filtering(self):
-        deal_item = Item(
-            uid="item-deal-1",
-            source_name="9to5Toys",
-            source_url="https://9to5toys.com",
-            source_category="gadgets",
-            source_quality=4,
-            title="Record-low deal cuts the Arlo Ultra 4K HDR 2-camera SmartHub bundle to $221",
-            link="https://9to5toys.com/deal",
-            summary="Save big on this security camera bundle today.",
-            published_at=dt.datetime.now(dt.timezone.utc),
-        )
-        self.assertTrue(is_deal_roundup([deal_item]))
+        deal_titles = [
+            "Record-low deal cuts the Arlo Ultra 4K HDR 2-camera SmartHub bundle to $221",
+            "Amazon Discounting 2026 MacBook Pro by as Much as $600 This Week",
+            "Deals: Early Prime Day deals on Samsung foldables now live, Pixel",
+            "Today’s 9to5Toys Lunch Break is headlined by Apple’s most affordable",
+            "Amazon Takes $199 Off Nearly Every M5 MacBook Air, Starting at $899.99",
+        ]
+        for title in deal_titles:
+            deal_item = Item(
+                uid=f"item-deal-{hash(title)}",
+                source_name="DealNews",
+                source_url="https://dealnews.com",
+                source_category="gadgets",
+                source_quality=4,
+                title=title,
+                link="https://dealnews.com/deal",
+                summary="Save big on this product today.",
+                published_at=dt.datetime.now(dt.timezone.utc),
+            )
+            self.assertTrue(is_deal_roundup([deal_item]), f"Failed to filter deal: {title}")
+
+    def test_podcast_and_linkdump_filtering(self):
+        dump_titles = [
+            "9to5Mac Daily: October 12",
+            "Hackaday Links: October 11",
+            "Morning Briefing: Global News Roundup",
+        ]
+        for title in dump_titles:
+            item = Item(
+                uid=f"item-dump-{hash(title)}",
+                source_name="TechDaily",
+                source_url="https://techdaily.com",
+                source_category="tech",
+                source_quality=4,
+                title=title,
+                link="https://techdaily.com/links",
+                summary="Here are the top links and podcast highlights for today.",
+                published_at=dt.datetime.now(dt.timezone.utc),
+            )
+            self.assertFalse(publishable_cluster([item]), f"Failed to filter linkdump/podcast: {title}")
 
     def test_dense_academic_paper_filtering(self):
         paper_item = Item(

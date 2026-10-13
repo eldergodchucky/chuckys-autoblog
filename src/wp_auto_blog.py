@@ -1523,11 +1523,13 @@ def is_deal_roundup(cluster: list[Item]) -> bool:
     lead_title = (cluster[0].title or "").lower()
     text = story_text(cluster).lower()
 
-    # Direct deal headlines (cuts Arlo to $221, $500 off, record-low deal)
-    if re.search(r"\b(?:deal|deals|discount|discounts|promo code|coupon)\b", lead_title):
-        if re.search(r"(\$\d+|\d+%\s*off|record-low|weekend deal|cuts? the .* to|price drop)", lead_title):
+    # Direct deal headlines (cuts Arlo to $221, $500 off, record-low deal, Amazon discounting, lunch break)
+    if re.search(r"\b(?:deal|deals|discount|discounts|discounting|promo code|coupon)\b", lead_title):
+        if re.search(r"(\$\d+|\d+%\s*off|record-low|weekend deal|cuts? the .* to|price drop|by as much as \$\d+)", lead_title):
             return True
-    if re.search(r"\b(?:record-low deal|weekend deals?|best deals?|save \$\d+|now \$\d+)\b", lead_title):
+    if re.search(r"\b(?:record-low deal|weekend deals?|best deals?|save \$\d+|now \$\d+|takes \$\d+ off|prime day deals?|lunch break|on sale at record)\b", lead_title):
+        return True
+    if re.search(r"\bdiscounting\b.*?\bby as much as\b", lead_title):
         return True
 
     deal_terms = ("prime day", "black friday", "cyber monday", "deal", "deals", "discount", "sale", "coupon", "bargain")
@@ -1653,6 +1655,10 @@ def publishable_cluster(cluster: list[Item]) -> bool:
 
     if is_deal_roundup(cluster) or is_dense_academic_paper(cluster):
 
+        return False
+
+    lead_title = (cluster[0].title or "").lower()
+    if re.search(r"\b(?:9to5mac daily|hackaday links|morning briefing|podcast episode|lunch break)\b", lead_title):
         return False
 
     return cluster_detail_score(cluster) >= env_int("MIN_CLUSTER_DETAIL_SCORE", 5)
@@ -2150,6 +2156,13 @@ def clean_editorial_title(t: str) -> str:
     s = re.sub(r"[.–—]\s*(?:but|and|or|so|yet)\s+\w{1,10}\s*$", "", s, flags=re.I)
 
     # Specific common columnist idioms
+    m_compare = re.match(r"(?i)^(?:\d+\s+)?reasons i(?:'m| am)? keeping (.*?) and not buying (.*)$", s)
+    if m_compare:
+        item1 = re.sub(r"(?i)\bmy\s+", "", m_compare.group(1)).strip()
+        item2 = re.sub(r"(?i)\b(?:a|an|the)\s+", "", m_compare.group(2)).strip()
+        return f"Comparing {item1} and {item2}: Key Decision Factors"
+
+    s = re.sub(r"(?i)^(\d+) reasons i(?:'m| am)? (?:keeping|buying|not buying|using) (.*)$", r"Key Factors in Evaluating \2", s)
     s = re.sub(r"(?i)^here'?s why i upgraded from (.*?) to (.*)$", r"Why Upgrading from \1 to \2 Makes Sense", s)
     s = re.sub(r"(?i)^my ([a-z0-9\s]+) was full of (.*?)\.\s*this quick trick fixed it$", r"How to Fix Cluttered \2 Storage on \1", s)
     s = re.sub(r"(?i)^i hate when ([a-z0-9\s]+) copy ([a-z0-9\s]+)[\s—–-]+but (.*?) is the exception$", r"Why \3 Challenges \1-\2 Rivalry", s)
@@ -2169,6 +2182,7 @@ def clean_editorial_title(t: str) -> str:
     s = re.sub(r"(?i)\bmade me ditch\b", "Prompting a Switch from", s)
 
     return s.strip(" .,:;–—-")
+
 
 def hook_title(cluster: list[Item], topic: str) -> str:
     """Rewrite a dry press-release title into a factual, curiosity-driven hook.
@@ -5051,6 +5065,19 @@ PUBLICATION_NAMES = (
     "BBC News",
     "Reuters",
     "Associated Press",
+    "The Art Newspaper",
+    "Artnet",
+    "Architectural Review",
+    "Variety",
+    "The Hollywood Reporter",
+    "Foreign Policy",
+    "Fortune",
+    "World Nuclear News",
+    "CleanTechnica",
+    "OilPrice",
+    "USNI News",
+    "Sky Sports",
+    "Autosport",
 )
 
 
@@ -5110,6 +5137,16 @@ BARE_PUBLICATION_NAMES = (
     "CBC News",
     "MercoPress",
     "Daily Maverick",
+    "The Art Newspaper",
+    "Artnet",
+    "Architectural Review",
+    "Variety",
+    "The Hollywood Reporter",
+    "Foreign Policy",
+    "Fortune",
+    "CleanTechnica",
+    "OilPrice",
+    "Autosport",
 )
 
 
@@ -6828,8 +6865,8 @@ def ranked_clusters(conn: sqlite3.Connection, clusters: list[list[Item]]) -> lis
         priority = editorial_priority_score(cluster) - category_diversity_penalty(categories, recent_counts)
 
         # Consumer tech throttling: prioritize international and hard news if tech was recent
-        tech_set = {"gadgets", "phones", "apple", "android", "software"}
-        intl_set = {"world", "politics", "business", "defense", "energy", "culture", "science", "climate"}
+        tech_set = {"gadgets", "phones", "apple", "android", "software", "hacks", "tutorials"}
+        intl_set = {"world", "politics", "business", "defense", "energy", "culture", "science", "climate", "sports", "entertainment", "history", "crime"}
         if set(categories) & intl_set:
             priority += 4
         elif set(categories).issubset(tech_set):

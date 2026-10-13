@@ -897,6 +897,120 @@
       "category": "culture",
       "quality": 5,
       "enabled": true
+    },
+    {
+      "name": "The Art Newspaper",
+      "url": "https://www.theartnewspaper.com/rss.xml",
+      "category": "culture",
+      "quality": 5
+    },
+    {
+      "name": "Artnet News",
+      "url": "https://news.artnet.com/feed",
+      "category": "culture",
+      "quality": 5
+    },
+    {
+      "name": "Architectural Review",
+      "url": "https://www.architectural-review.com/feed",
+      "category": "culture",
+      "quality": 5
+    },
+    {
+      "name": "Variety",
+      "url": "https://variety.com/feed/",
+      "category": "culture",
+      "quality": 5
+    },
+    {
+      "name": "BBC Culture & Arts",
+      "url": "https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml",
+      "category": "culture",
+      "quality": 5
+    },
+    {
+      "name": "The Hollywood Reporter",
+      "url": "https://www.hollywoodreporter.com/feed/",
+      "category": "entertainment",
+      "quality": 5
+    },
+    {
+      "name": "Foreign Policy",
+      "url": "https://foreignpolicy.com/feed/",
+      "category": "politics",
+      "quality": 5
+    },
+    {
+      "name": "Politico Top News",
+      "url": "https://rss.politico.com/politics-news.xml",
+      "category": "politics",
+      "quality": 5
+    },
+    {
+      "name": "NYT World News",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+      "category": "world",
+      "quality": 5
+    },
+    {
+      "name": "Guardian Environment",
+      "url": "https://www.theguardian.com/environment/rss",
+      "category": "climate",
+      "quality": 5
+    },
+    {
+      "name": "NYT Climate",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml",
+      "category": "climate",
+      "quality": 5
+    },
+    {
+      "name": "World Nuclear News",
+      "url": "https://www.world-nuclear-news.org/rss",
+      "category": "energy",
+      "quality": 5
+    },
+    {
+      "name": "CleanTechnica Global",
+      "url": "https://cleantechnica.com/feed/",
+      "category": "energy",
+      "quality": 5
+    },
+    {
+      "name": "OilPrice Energy",
+      "url": "https://oilprice.com/rss/main",
+      "category": "energy",
+      "quality": 5
+    },
+    {
+      "name": "CNBC International",
+      "url": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
+      "category": "business",
+      "quality": 5
+    },
+    {
+      "name": "Fortune Global",
+      "url": "https://fortune.com/feed/",
+      "category": "business",
+      "quality": 5
+    },
+    {
+      "name": "USNI Defense",
+      "url": "https://news.usni.org/feed",
+      "category": "defense",
+      "quality": 5
+    },
+    {
+      "name": "Sky Sports Global",
+      "url": "https://www.skysports.com/rss/12040",
+      "category": "sports",
+      "quality": 5
+    },
+    {
+      "name": "Autosport Motorsport",
+      "url": "https://www.autosport.com/rss/f1/news/",
+      "category": "sports",
+      "quality": 5
     }
   ]
 }
