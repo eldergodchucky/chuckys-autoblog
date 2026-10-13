@@ -1,28 +1,36 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 108,
-  "fetched": 4441,
-  "finished_at": "2026-10-12T19:22:21.008996+00:00",
+  "fetched": 4461,
+  "finished_at": "2026-10-13T01:35:25.934459+00:00",
   "generation_failures": [
-    "Skipped candidate 'One UI 9 for the Galaxy S24 series, Galaxy Z Fold6 and Flip6 reaches the US': Free article failed quality gate: article has only 229 words",
-    "Skipped candidate 'Meet the Anthropic Engineer Keeping Its AI Agent Trustworthy': Free article failed quality gate: article has only 210 words; article has only 5 paragraphs"
+    "Skipped candidate 'Ledger finds unauthorized hardware implant in CryptoBilis-sold wallet amid fund theft reports': Free article failed quality gate: article has only 154 words",
+    "Skipped candidate 'Doory is an open-source Canva': Free article failed quality gate: article has only 152 words; article has only 5 paragraphs",
+    "Skipped candidate '8-channel analog monitor with NXP HEF4052BP and Arduino': Free article failed quality gate: article has only 130 words; article has only 4 paragraphs",
+    "Skipped candidate 'The Tiny XTEINK X4 Pro Ebook Reader Is on Sale for Its Lowest-Ever Price': Free article failed quality gate: article has only 104 words; article has only 4 paragraphs",
+    "Skipped candidate 'WhatsApp starts testing scheduled messages': Free article failed quality gate: article has only 212 words",
+    "Skipped candidate 'Google adds new Metal Mesh bands for the Fitbit Air in two colors': Free article failed quality gate: article has only 212 words",
+    "Skipped candidate 'M6 MacBook Pro: Three new upgrades launching later this month': Free article failed quality gate: article has only 117 words; article has only 4 paragraphs",
+    "Skipped candidate 'Apple TV\u2019s new podcast explores haunting true story involving a heart transplant': Free article failed quality gate: article has only 131 words; article has only 5 paragraphs",
+    "Skipped candidate 'Apple and Epic clash over document production in latest App Store court filing': Free article failed quality gate: article has only 127 words; article has only 4 paragraphs",
+    "Skipped candidate 'From laser shields to iPhone detectors: inside China\u2019s booming secrecy industry': Free article failed quality gate: article has only 171 words; article has only 4 paragraphs"
   ],
-  "inserted": 789,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 279,
+  "message": "Published 1 post(s). Skipped 10 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "defense",
-        "business",
+        "world",
+        "crime",
         "software"
       ],
       "sources": [
-        "Defense News"
+        "Daily Maverick"
       ],
       "status": "publish",
-      "title": "Sikorsky packs 4 Nomad drones into a single shipping container",
-      "wp_id": 33823
+      "title": "ANC vs IEC: \u2018Drastic",
+      "wp_id": 33845
     }
   ],
   "state": "published"
