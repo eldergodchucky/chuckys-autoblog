@@ -1,28 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 17,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 4932,
-  "finished_at": "2026-10-13T16:22:50.179459+00:00",
+  "fetched": 4907,
+  "finished_at": "2026-10-13T21:27:30.911097+00:00",
   "generation_failures": [
-    "Skipped candidate 'New Apple TV 4K Adds Far-Field Microphones for Hands-Free Siri': Free article failed quality gate: article has only 253 words"
+    "Skipped candidate 'Less platinum, cheaper hydrogen: Ultrathin electrolyzer coatings show promise': Free article failed quality gate: article has only 167 words; article has only 5 paragraphs",
+    "Skipped candidate 'Soft robotic fish combines high-speed swimming with 3D maneuverability': Free article failed quality gate: article has only 163 words; article has only 5 paragraphs"
   ],
-  "inserted": 1242,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 557,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "gadgets",
-        "ai"
+        "energy",
+        "science"
       ],
       "sources": [
-        "9to5Mac",
-        "Engadget"
+        "OilPrice Energy"
       ],
       "status": "publish",
-      "title": "Google Antigravity is now built into Gemini app for macOS",
-      "wp_id": 33899
+      "title": "Princeton Researchers Finda Lower-energy Route to Fusion Ignition",
+      "wp_id": 33915
     }
   ],
   "state": "published"
