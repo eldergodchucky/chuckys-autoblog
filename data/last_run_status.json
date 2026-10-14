@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 17,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 4913,
-  "finished_at": "2026-10-14T05:20:00.609710+00:00",
+  "fetched": 4976,
+  "finished_at": "2026-10-14T10:29:22.517967+00:00",
   "generation_failures": [],
-  "inserted": 191,
+  "inserted": 414,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "entertainment",
-        "sports",
-        "crime"
+        "climate",
+        "history",
+        "culture"
       ],
       "sources": [
-        "The Hollywood Reporter"
+        "Guardian Environment"
       ],
       "status": "publish",
-      "title": "Ben Affleck Calls Filming \u2018Justice League\u2019 a \u201cLow Point\u201d in His Career",
-      "wp_id": 33944
+      "title": "Wildlife photographer of the year 2026 winners \u2013 in pictures",
+      "wp_id": 33964
     }
   ],
   "state": "published"
