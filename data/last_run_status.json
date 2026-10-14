@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 4976,
-  "finished_at": "2026-10-14T10:29:22.517967+00:00",
+  "fetched": 5000,
+  "finished_at": "2026-10-14T15:26:08.930498+00:00",
   "generation_failures": [],
-  "inserted": 414,
+  "inserted": 542,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "climate",
-        "history",
-        "culture"
+        "sports",
+        "politics",
+        "software"
       ],
       "sources": [
-        "Guardian Environment"
+        "Sky Sports Global"
       ],
       "status": "publish",
-      "title": "Wildlife photographer of the year 2026 winners \u2013 in pictures",
-      "wp_id": 33964
+      "title": "Feyi-Waboso expected to be fit for England's Nations Championship campaign",
+      "wp_id": 33981
     }
   ],
   "state": "published"
