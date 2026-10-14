@@ -2,24 +2,24 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5000,
-  "finished_at": "2026-10-14T15:26:08.930498+00:00",
+  "fetched": 5001,
+  "finished_at": "2026-10-14T19:38:26.966889+00:00",
   "generation_failures": [],
-  "inserted": 542,
+  "inserted": 472,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "sports",
+        "world",
         "politics",
-        "software"
+        "security"
       ],
       "sources": [
-        "Sky Sports Global"
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "Feyi-Waboso expected to be fit for England's Nations Championship campaign",
-      "wp_id": 33981
+      "title": "New UK sanctions powers will enable action against supporters of illegal Israeli",
+      "wp_id": 33995
     }
   ],
   "state": "published"
