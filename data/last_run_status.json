@@ -2,26 +2,24 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 4907,
-  "finished_at": "2026-10-13T21:27:30.911097+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Less platinum, cheaper hydrogen: Ultrathin electrolyzer coatings show promise': Free article failed quality gate: article has only 167 words; article has only 5 paragraphs",
-    "Skipped candidate 'Soft robotic fish combines high-speed swimming with 3D maneuverability': Free article failed quality gate: article has only 163 words; article has only 5 paragraphs"
-  ],
-  "inserted": 557,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "fetched": 4919,
+  "finished_at": "2026-10-14T00:31:08.198052+00:00",
+  "generation_failures": [],
+  "inserted": 241,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "energy",
-        "science"
+        "crypto",
+        "ai",
+        "crime"
       ],
       "sources": [
-        "OilPrice Energy"
+        "Decrypt"
       ],
       "status": "publish",
-      "title": "Princeton Researchers Finda Lower-energy Route to Fusion Ignition",
-      "wp_id": 33915
+      "title": "Character.AI Files for Bankruptcy as Disney Bids $20 Million\u2014And Users Get Grief",
+      "wp_id": 33924
     }
   ],
   "state": "published"
