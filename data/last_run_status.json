@@ -1,25 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5001,
-  "finished_at": "2026-10-14T19:38:26.966889+00:00",
-  "generation_failures": [],
-  "inserted": 472,
-  "message": "Published 1 post(s).",
+  "fetched": 4981,
+  "finished_at": "2026-10-14T22:42:05.022008+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Hegseth calls US$1.5 trillion defence budget \u2018critical\u2019 to counter China': Free article failed quality gate: article has only 169 words; article has only 4 paragraphs"
+  ],
+  "inserted": 381,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "politics",
-        "security"
+        "crypto",
+        "ai",
+        "science"
       ],
       "sources": [
-        "The Guardian World"
+        "Decrypt"
       ],
       "status": "publish",
-      "title": "New UK sanctions powers will enable action against supporters of illegal Israeli",
-      "wp_id": 33995
+      "title": "Godfather of AI and 400 Scientists Want AI Models Cut Off",
+      "wp_id": 34005
     }
   ],
   "state": "published"
