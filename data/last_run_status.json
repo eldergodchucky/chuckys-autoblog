@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 17,
   "feeds": 127,
-  "fetched": 4919,
-  "finished_at": "2026-10-14T00:31:08.198052+00:00",
+  "fetched": 4913,
+  "finished_at": "2026-10-14T05:20:00.609710+00:00",
   "generation_failures": [],
-  "inserted": 241,
+  "inserted": 191,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "crypto",
-        "ai",
+        "entertainment",
+        "sports",
         "crime"
       ],
       "sources": [
-        "Decrypt"
+        "The Hollywood Reporter"
       ],
       "status": "publish",
-      "title": "Character.AI Files for Bankruptcy as Disney Bids $20 Million\u2014And Users Get Grief",
-      "wp_id": 33924
+      "title": "Ben Affleck Calls Filming \u2018Justice League\u2019 a \u201cLow Point\u201d in His Career",
+      "wp_id": 33944
     }
   ],
   "state": "published"
