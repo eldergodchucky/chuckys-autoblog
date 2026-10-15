@@ -1,29 +1,6 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
-  "feeds": 127,
-  "fetched": 5134,
-  "finished_at": "2026-10-15T15:16:11.865310+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Apple sets cutoff time for getting fastest iPhone Duo pre-order': Free article failed quality gate: article has only 184 words"
-  ],
-  "inserted": 537,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
-  "posts": [
-    {
-      "categories": [
-        "apple",
-        "business",
-        "health"
-      ],
-      "sources": [
-        "9to5Mac",
-        "MacRumors"
-      ],
-      "status": "publish",
-      "title": "John Ternus talks iPhone Duo",
-      "wp_id": 34079
-    }
-  ],
-  "state": "published"
+  "finished_at": "2026-10-15T19:15:11.462799+00:00",
+  "message": "OSError: image file is truncated (22 bytes not processed)",
+  "state": "failed"
 }
