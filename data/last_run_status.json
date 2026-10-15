@@ -2,28 +2,24 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5016,
-  "finished_at": "2026-10-15T00:56:48.884461+00:00",
-  "generation_failures": [
-    "Skipped candidate 'How RNA molecules influence the development of aggressive leukemia': Free article failed quality gate: article has only 235 words",
-    "Skipped candidate 'How RNA molecules influence the development of aggressive leukemia': Free article failed quality gate: article has only 235 words",
-    "Skipped candidate '3 months after launch, Riot announces League of Legends Classic will be killed in January: 'most have gone back to other parts of League'': Free article failed quality gate: article has only 241 words"
-  ],
-  "inserted": 123,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "fetched": 4989,
+  "finished_at": "2026-10-15T05:39:19.235724+00:00",
+  "generation_failures": [],
+  "inserted": 197,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "world"
+        "world",
+        "politics",
+        "security"
       ],
       "sources": [
-        "Al Jazeera",
-        "BBC Sport"
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "PSG beat Man City 4-2 in Champions League thriller",
-      "wp_id": 34016
+      "title": "Indonesia fights fire with dry ice as toxic haze spreads across region",
+      "wp_id": 34038
     }
   ],
   "state": "published"
