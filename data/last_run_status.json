@@ -1,25 +1,28 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 4989,
-  "finished_at": "2026-10-15T05:39:19.235724+00:00",
-  "generation_failures": [],
-  "inserted": 197,
-  "message": "Published 1 post(s).",
+  "fetched": 5165,
+  "finished_at": "2026-10-15T10:21:47.164347+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Using electronic structure to guide AI in designing new materials': Free article failed quality gate: article has only 181 words; article has only 5 paragraphs",
+    "Skipped candidate 'Oppo's Reno17 series could launch next month with 200MP rear camera': Free article failed quality gate: article has only 207 words",
+    "Skipped candidate 'Apple Intelligence is finally coming to China, but without Siri AI': Free article failed quality gate: article has only 213 words"
+  ],
+  "inserted": 510,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "politics",
-        "security"
+        "business",
+        "ai"
       ],
       "sources": [
-        "The Guardian World"
+        "Fortune Global"
       ],
       "status": "publish",
-      "title": "Indonesia fights fire with dry ice as toxic haze spreads across region",
-      "wp_id": 34038
+      "title": "What is it like running a Fortune 500 business? HP\u2019s regional CTO",
+      "wp_id": 34058
     }
   ],
   "state": "published"
