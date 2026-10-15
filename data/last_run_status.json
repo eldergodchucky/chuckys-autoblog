@@ -1,6 +1,49 @@
 {
   "dry_run": false,
-  "finished_at": "2026-10-15T19:15:11.462799+00:00",
-  "message": "OSError: image file is truncated (22 bytes not processed)",
-  "state": "failed"
+  "feed_warnings": 15,
+  "feeds": 127,
+  "fetched": 5182,
+  "finished_at": "2026-10-15T22:25:30.075943+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Astronomers discover the 1st ever green star, a cosmic zombie just in time for Halloween': Free article failed quality gate: article has only 212 words",
+    "Skipped candidate 'New cyber threat to water systems exposes limits of encryption': Free article failed quality gate: article has only 162 words; article has only 5 paragraphs",
+    "Skipped candidate 'HIV finds escape routes from a preventive antibody\u2014but newer antibodies may close them': Free article failed quality gate: article has only 173 words",
+    "Skipped candidate 'HIV finds escape routes from a preventive antibody\u2014but newer antibodies may close them': Free article failed quality gate: article has only 173 words",
+    "Skipped candidate 'Human learning is an underestimated factor in the success of human\u2013AI teams': Free article failed quality gate: article has only 193 words; article has only 5 paragraphs",
+    "Skipped candidate 'Protein modification partially reverses cancer-related muscle wasting in preclinical study': Free article failed quality gate: article has only 205 words",
+    "Skipped candidate 'Protein modification partially reverses cancer-related muscle wasting in preclinical study': Free article failed quality gate: article has only 205 words",
+    "Skipped candidate 'Skin has a sex: Females and males do not renew their skin in the same way': Free article failed quality gate: article has only 209 words",
+    "Skipped candidate 'Skin has a sex: Females and males do not renew their skin in the same way': Free article failed quality gate: article has only 209 words",
+    "Skipped candidate 'Rural women face higher death rates for breast cancer\u2014and the gap is widening': Free article failed quality gate: article has only 185 words",
+    "Skipped candidate 'Nanoscale coating boosts hydrogen cell efficiency and durability by improving internal contact': Free article failed quality gate: article has only 172 words; article has only 4 paragraphs",
+    "Skipped candidate 'Rural women face higher death rates for breast cancer\u2014and the gap is widening': Free article failed quality gate: article has only 185 words",
+    "Skipped candidate 'Greater contact with nature linked to a more positive relationship with food': Free article failed quality gate: article has only 176 words",
+    "Skipped candidate 'Greater contact with nature linked to a more positive relationship with food': Free article failed quality gate: article has only 176 words",
+    "Skipped candidate 'Family genetics study questions the role of genetic nurture in ADHD': Free article failed quality gate: article has only 156 words; article has only 5 paragraphs",
+    "Skipped candidate 'Your job says little about what you want in a partner, study suggests': Free article failed quality gate: article has only 162 words",
+    "Skipped candidate 'AI could help predict which HPV infections progress to cancer': Free article failed quality gate: article has only 179 words",
+    "Skipped candidate 'AI could help predict which HPV infections progress to cancer': Free article failed quality gate: article has only 179 words",
+    "Skipped candidate 'Who gets Alzheimer's drugs? Race, vulnerability and health status shape access': Free article failed quality gate: article has only 167 words",
+    "Skipped candidate 'Antibody screening approach could speed development of immune-based cancer treatments': Free article failed quality gate: article has only 160 words; article has only 5 paragraphs",
+    "Skipped candidate 'Antibody screening approach could speed development of immune-based cancer treatments': Free article failed quality gate: article has only 160 words; article has only 5 paragraphs",
+    "Skipped candidate 'Who gets Alzheimer's drugs? Race, vulnerability and health status shape access': Free article failed quality gate: article has only 167 words"
+  ],
+  "inserted": 275,
+  "message": "Published 1 post(s). Skipped 22 low-quality candidate(s).",
+  "posts": [
+    {
+      "categories": [
+        "crypto",
+        "ai",
+        "science"
+      ],
+      "sources": [
+        "Decrypt"
+      ],
+      "status": "publish",
+      "title": "Hidden Text, Afake Mailbox: How Researchers Got Rogue AI Agents",
+      "wp_id": 34104
+    }
+  ],
+  "state": "published"
 }
