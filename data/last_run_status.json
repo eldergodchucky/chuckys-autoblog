@@ -2,26 +2,28 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 4981,
-  "finished_at": "2026-10-14T22:42:05.022008+00:00",
+  "fetched": 5016,
+  "finished_at": "2026-10-15T00:56:48.884461+00:00",
   "generation_failures": [
-    "Skipped candidate 'Hegseth calls US$1.5 trillion defence budget \u2018critical\u2019 to counter China': Free article failed quality gate: article has only 169 words; article has only 4 paragraphs"
+    "Skipped candidate 'How RNA molecules influence the development of aggressive leukemia': Free article failed quality gate: article has only 235 words",
+    "Skipped candidate 'How RNA molecules influence the development of aggressive leukemia': Free article failed quality gate: article has only 235 words",
+    "Skipped candidate '3 months after launch, Riot announces League of Legends Classic will be killed in January: 'most have gone back to other parts of League'': Free article failed quality gate: article has only 241 words"
   ],
-  "inserted": 381,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 123,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "crypto",
-        "ai",
-        "science"
+        "sports",
+        "world"
       ],
       "sources": [
-        "Decrypt"
+        "Al Jazeera",
+        "BBC Sport"
       ],
       "status": "publish",
-      "title": "Godfather of AI and 400 Scientists Want AI Models Cut Off",
-      "wp_id": 34005
+      "title": "PSG beat Man City 4-2 in Champions League thriller",
+      "wp_id": 34016
     }
   ],
   "state": "published"
