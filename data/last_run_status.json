@@ -2,26 +2,28 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5196,
-  "finished_at": "2026-10-16T21:34:31.590150+00:00",
+  "fetched": 5189,
+  "finished_at": "2026-10-16T23:55:39.063162+00:00",
   "generation_failures": [
-    "Skipped candidate 'Roundtables: A Conversation With the Creator of AI-Designed Viruses': Free article failed quality gate: article has only 186 words; article has only 5 paragraphs",
-    "Skipped candidate 'Nvidia App Update Will Let AI Agents Tune Your Graphics Card, but Some Users are Warning to Turn It Off': Free article failed quality gate: article has only 134 words; article has only 4 paragraphs"
+    "Skipped candidate 'Moto G47 Power is coming with a much larger battery than the G47': Free article failed quality gate: article has only 216 words",
+    "Skipped candidate 'Apple\u2019s $1,999 iPhone Duo puts the company's status-symbol power to the test': Free article failed quality gate: article has only 118 words; article has only 4 paragraphs",
+    "Skipped candidate 'If you haven't pre-ordered an iPhone Duo yet, you're in for a long, long wait': Free article failed quality gate: article has only 219 words"
   ],
-  "inserted": 230,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 118,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "politics",
-        "climate"
+        "energy",
+        "world",
+        "business"
       ],
       "sources": [
-        "Guardian Environment"
+        "CleanTechnica Global"
       ],
       "status": "publish",
-      "title": "Brazilian Amazon deforestation falls to lowest on record as pivotal vote looms",
-      "wp_id": 34185
+      "title": "Delaying ETS2 Will Not Protect Households from the Next Energy Crisis",
+      "wp_id": 34196
     }
   ],
   "state": "published"
