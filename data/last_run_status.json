@@ -2,28 +2,30 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5188,
-  "finished_at": "2026-10-16T00:37:17.318859+00:00",
+  "fetched": 5195,
+  "finished_at": "2026-10-16T05:05:17.585369+00:00",
   "generation_failures": [
-    "Skipped candidate 'Pro Dota 2 Player Claims He Had to Play a Full Match in Front of Police Officers to Prove His Identity': Free article failed quality gate: article has only 127 words; article has only 5 paragraphs",
-    "Skipped candidate 'Oops, Apple's Website Just Hinted at iPad Mini 8': Free article failed quality gate: article has only 259 words",
-    "Skipped candidate 'Nanoscale coating boosts hydrogen cell efficiency and durability by improving internal contact': Free article failed quality gate: article has only 172 words; article has only 4 paragraphs"
+    "Skipped candidate 'Japan\u2019s national security strategy could be up for a major overhaul': Free article failed quality gate: article has only 116 words; article has only 4 paragraphs",
+    "Skipped candidate 'Lunar fault maps reveal how much the moon is shrinking': Free article failed quality gate: article has only 106 words; article has only 4 paragraphs",
+    "Skipped candidate 'Rigorous analysis confirms NASA's Artemis II heat shield performance': Free article failed quality gate: article has only 98 words; article has only 5 paragraphs"
   ],
-  "inserted": 136,
+  "inserted": 167,
   "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "history"
+        "entertainment",
+        "gaming",
+        "culture"
       ],
       "sources": [
-        "BBC Sport",
-        "Sky Sports Global"
+        "IGN",
+        "The Hollywood Reporter",
+        "Variety"
       ],
       "status": "publish",
-      "title": "Minus 17 to European dreams as Bournemouth fairytale continues",
-      "wp_id": 34115
+      "title": "The Batman Part 2 Brings in Director Steven Soderbergh to Finish Film",
+      "wp_id": 34134
     }
   ],
   "state": "published"
