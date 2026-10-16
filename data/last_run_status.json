@@ -1,26 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 17,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5133,
-  "finished_at": "2026-10-16T18:25:23.313280+00:00",
-  "generation_failures": [],
-  "inserted": 384,
-  "message": "Published 1 post(s).",
+  "fetched": 5196,
+  "finished_at": "2026-10-16T21:34:31.590150+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Roundtables: A Conversation With the Creator of AI-Designed Viruses': Free article failed quality gate: article has only 186 words; article has only 5 paragraphs",
+    "Skipped candidate 'Nvidia App Update Will Let AI Agents Tune Your Graphics Card, but Some Users are Warning to Turn It Off': Free article failed quality gate: article has only 134 words; article has only 4 paragraphs"
+  ],
+  "inserted": 230,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
         "politics",
-        "space"
+        "climate"
       ],
       "sources": [
-        "France 24",
-        "The Guardian World"
+        "Guardian Environment"
       ],
       "status": "publish",
-      "title": "Starlink access still not fully restored for Ukraine\u2019s military",
-      "wp_id": 34174
+      "title": "Brazilian Amazon deforestation falls to lowest on record as pivotal vote looms",
+      "wp_id": 34185
     }
   ],
   "state": "published"
