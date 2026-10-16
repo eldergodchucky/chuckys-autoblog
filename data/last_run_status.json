@@ -1,29 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 17,
   "feeds": 127,
-  "fetched": 5193,
-  "finished_at": "2026-10-16T14:37:17.301479+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Researchers develop new AI tool to better predict stroke risk': Free article failed quality gate: article has only 161 words; article has only 5 paragraphs",
-    "Skipped candidate 'Researchers develop new AI tool to better predict stroke risk': Free article failed quality gate: article has only 161 words; article has only 5 paragraphs",
-    "Skipped candidate 'AI agents get better by anticipating errors in their own software changes': Free article failed quality gate: article has only 187 words; article has only 5 paragraphs",
-    "Skipped candidate 'Researchers dispute whether AI has passed the Turing test': Free article failed quality gate: article has only 144 words; article has only 4 paragraphs"
-  ],
-  "inserted": 492,
-  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
+  "fetched": 5133,
+  "finished_at": "2026-10-16T18:25:23.313280+00:00",
+  "generation_failures": [],
+  "inserted": 384,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science"
+        "world",
+        "politics",
+        "space"
       ],
       "sources": [
-        "The Verge"
+        "France 24",
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "Meta\u2019s new terms may allow it to train AI on news sites",
-      "wp_id": 34161
+      "title": "Starlink access still not fully restored for Ukraine\u2019s military",
+      "wp_id": 34174
     }
   ],
   "state": "published"
