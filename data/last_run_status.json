@@ -2,30 +2,28 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5195,
-  "finished_at": "2026-10-16T05:05:17.585369+00:00",
+  "fetched": 5188,
+  "finished_at": "2026-10-16T09:51:42.722538+00:00",
   "generation_failures": [
-    "Skipped candidate 'Japan\u2019s national security strategy could be up for a major overhaul': Free article failed quality gate: article has only 116 words; article has only 4 paragraphs",
-    "Skipped candidate 'Lunar fault maps reveal how much the moon is shrinking': Free article failed quality gate: article has only 106 words; article has only 4 paragraphs",
-    "Skipped candidate 'Rigorous analysis confirms NASA's Artemis II heat shield performance': Free article failed quality gate: article has only 98 words; article has only 5 paragraphs"
+    "Skipped candidate 'UN chief says \u2018subsidising fossil fuels is subsidising suicide\u2019': Free article failed quality gate: article has only 99 words; article has only 4 paragraphs",
+    "Skipped candidate 'Bitcoin may seek 20-month trend line reclaim before new record highs: CryptoQuant': Free article failed quality gate: article has only 140 words; article has only 4 paragraphs",
+    "Skipped candidate 'Dubai Police Gets New 920-HP Lamborghini Hybrid Supercar': Free article failed quality gate: article has only 111 words; article has only 4 paragraphs"
   ],
-  "inserted": 167,
+  "inserted": 332,
   "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "entertainment",
-        "gaming",
-        "culture"
+        "world",
+        "crime",
+        "software"
       ],
       "sources": [
-        "IGN",
-        "The Hollywood Reporter",
-        "Variety"
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "The Batman Part 2 Brings in Director Steven Soderbergh to Finish Film",
-      "wp_id": 34134
+      "title": "Elizabeth Struhs\u2019 child protection case not \u2018prioritised\u2019 due to high workload",
+      "wp_id": 34148
     }
   ],
   "state": "published"
