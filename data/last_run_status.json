@@ -1,27 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 17,
   "feeds": 127,
-  "fetched": 5176,
-  "finished_at": "2026-10-17T15:37:07.110667+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Apple @ Work: How I\u2019m preparing my fleet for Rosetta\u2019s removal in macOS 27': Free article failed quality gate: article has only 209 words; article has only 5 paragraphs"
-  ],
-  "inserted": 231,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "fetched": 5091,
+  "finished_at": "2026-10-17T17:58:19.900198+00:00",
+  "generation_failures": [],
+  "inserted": 130,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "crime",
-        "apple"
+        "energy",
+        "ai",
+        "science"
       ],
       "sources": [
-        "BBC World"
+        "OilPrice Energy"
       ],
       "status": "publish",
-      "title": "Rare pink diamond goes on display in France 100 years after amateur",
-      "wp_id": 34263
+      "title": "Texas Researchers Saypermian Wastewater Could Cool AI Data Centers",
+      "wp_id": 34270
     }
   ],
   "state": "published"
