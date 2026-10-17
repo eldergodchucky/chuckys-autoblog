@@ -1,25 +1,29 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5210,
-  "finished_at": "2026-10-17T03:19:00.097188+00:00",
-  "generation_failures": [],
-  "inserted": 84,
-  "message": "Published 1 post(s).",
+  "fetched": 5178,
+  "finished_at": "2026-10-17T08:00:25.156423+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Early MS treatments impact relapses and brain scarring differently, but not disability': Free article failed quality gate: article has only 182 words",
+    "Skipped candidate 'Early MS treatments impact relapses and brain scarring differently, but not disability': Free article failed quality gate: article has only 182 words",
+    "Skipped candidate 'Super Smash Bros. Player Mew2King Banned From Tournament After Bug Bites Spark Health Concerns': Free article failed quality gate: article has only 134 words; article has only 5 paragraphs"
+  ],
+  "inserted": 126,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "crypto",
-        "space",
-        "mobility"
+        "business",
+        "sports",
+        "climate"
       ],
       "sources": [
-        "Decrypt"
+        "Fortune Global"
       ],
       "status": "publish",
-      "title": "Tesla Roadster Rocket Is the Cool 'Flying' Car You Can\u2019t Have",
-      "wp_id": 34212
+      "title": "The $124 trillion Great Wealth Transfer and women\u2019s earning power has created",
+      "wp_id": 34234
     }
   ],
   "state": "published"
