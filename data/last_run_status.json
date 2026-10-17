@@ -2,28 +2,24 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5189,
-  "finished_at": "2026-10-16T23:55:39.063162+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Moto G47 Power is coming with a much larger battery than the G47': Free article failed quality gate: article has only 216 words",
-    "Skipped candidate 'Apple\u2019s $1,999 iPhone Duo puts the company's status-symbol power to the test': Free article failed quality gate: article has only 118 words; article has only 4 paragraphs",
-    "Skipped candidate 'If you haven't pre-ordered an iPhone Duo yet, you're in for a long, long wait': Free article failed quality gate: article has only 219 words"
-  ],
-  "inserted": 118,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "fetched": 5210,
+  "finished_at": "2026-10-17T03:19:00.097188+00:00",
+  "generation_failures": [],
+  "inserted": 84,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "energy",
-        "world",
-        "business"
+        "crypto",
+        "space",
+        "mobility"
       ],
       "sources": [
-        "CleanTechnica Global"
+        "Decrypt"
       ],
       "status": "publish",
-      "title": "Delaying ETS2 Will Not Protect Households from the Next Energy Crisis",
-      "wp_id": 34196
+      "title": "Tesla Roadster Rocket Is the Cool 'Flying' Car You Can\u2019t Have",
+      "wp_id": 34212
     }
   ],
   "state": "published"
