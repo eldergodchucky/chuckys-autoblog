@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 17,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5091,
-  "finished_at": "2026-10-17T17:58:19.900198+00:00",
+  "fetched": 5161,
+  "finished_at": "2026-10-17T20:20:45.016799+00:00",
   "generation_failures": [],
-  "inserted": 130,
+  "inserted": 196,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "energy",
-        "ai",
-        "science"
+        "crypto",
+        "software",
+        "business"
       ],
       "sources": [
-        "OilPrice Energy"
+        "Decrypt"
       ],
       "status": "publish",
-      "title": "Texas Researchers Saypermian Wastewater Could Cool AI Data Centers",
-      "wp_id": 34270
+      "title": "Chinese Startup StepFun Launches a Phone Built Around an AI Agent",
+      "wp_id": 34281
     }
   ],
   "state": "published"
