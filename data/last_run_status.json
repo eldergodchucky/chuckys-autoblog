@@ -2,28 +2,27 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5178,
-  "finished_at": "2026-10-17T08:00:25.156423+00:00",
+  "fetched": 5171,
+  "finished_at": "2026-10-17T12:08:41.177008+00:00",
   "generation_failures": [
-    "Skipped candidate 'Early MS treatments impact relapses and brain scarring differently, but not disability': Free article failed quality gate: article has only 182 words",
-    "Skipped candidate 'Early MS treatments impact relapses and brain scarring differently, but not disability': Free article failed quality gate: article has only 182 words",
-    "Skipped candidate 'Super Smash Bros. Player Mew2King Banned From Tournament After Bug Bites Spark Health Concerns': Free article failed quality gate: article has only 134 words; article has only 5 paragraphs"
+    "Skipped candidate 'Mobile app monitoring may reduce serious complications after surgery, new study finds': Free article failed quality gate: article has only 194 words",
+    "Skipped candidate 'Mobile app monitoring may reduce serious complications after surgery, new study finds': Free article failed quality gate: article has only 194 words"
   ],
-  "inserted": 126,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 209,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "sports",
-        "climate"
+        "health",
+        "culture",
+        "entertainment"
       ],
       "sources": [
-        "Fortune Global"
+        "Variety"
       ],
       "status": "publish",
-      "title": "The $124 trillion Great Wealth Transfer and women\u2019s earning power has created",
-      "wp_id": 34234
+      "title": "\u2018Trust Me, I\u2019m a Doctor\u2019 Review: Kal Penn and Abbie Cornish Star",
+      "wp_id": 34254
     }
   ],
   "state": "published"
