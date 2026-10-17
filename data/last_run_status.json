@@ -2,24 +2,26 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5161,
-  "finished_at": "2026-10-17T20:20:45.016799+00:00",
-  "generation_failures": [],
-  "inserted": 196,
-  "message": "Published 1 post(s).",
+  "fetched": 5170,
+  "finished_at": "2026-10-17T22:33:14.516650+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Brain injury care guidelines for first responders released': Free article failed quality gate: article has only 217 words",
+    "Skipped candidate 'Brain injury care guidelines for first responders released': Free article failed quality gate: article has only 217 words"
+  ],
+  "inserted": 87,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "crypto",
-        "software",
-        "business"
+        "sports",
+        "history"
       ],
       "sources": [
-        "Decrypt"
+        "Sky Sports Global"
       ],
       "status": "publish",
-      "title": "Chinese Startup StepFun Launches a Phone Built Around an AI Agent",
-      "wp_id": 34281
+      "title": "Van Gerwen suffers another early exit as Van Veen makes history",
+      "wp_id": 34291
     }
   ],
   "state": "published"
