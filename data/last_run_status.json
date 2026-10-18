@@ -1,25 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5133,
-  "finished_at": "2026-10-18T16:46:05.677078+00:00",
-  "generation_failures": [],
-  "inserted": 212,
-  "message": "Published 1 post(s).",
+  "fetched": 5107,
+  "finished_at": "2026-10-18T19:01:01.080017+00:00",
+  "generation_failures": [
+    "Skipped candidate 'China urged to copy Pentagon\u2019s hi-tech warfare project without US conflicts of interest': Free article failed quality gate: article has only 166 words; article has only 4 paragraphs"
+  ],
+  "inserted": 152,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gaming",
-        "software",
-        "culture"
+        "energy",
+        "history",
+        "security"
       ],
       "sources": [
-        "The Verge"
+        "CleanTechnica Global"
       ],
       "status": "publish",
-      "title": "Lenovo\u2019s fast, comfy SteamOS handheld is hundreds off",
-      "wp_id": 34373
+      "title": "Electrification Changes What Energy Security Means",
+      "wp_id": 34383
     }
   ],
   "state": "published"
