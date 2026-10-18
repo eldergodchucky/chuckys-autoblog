@@ -1,27 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 17,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5157,
-  "finished_at": "2026-10-18T00:23:24.873098+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Several Afghan Taliban personnel killed in alleged retaliatory action along border: Pakistan officials': Free article failed quality gate: article has only 104 words; article has only 4 paragraphs",
-    "Skipped candidate 'Simulations explore nuclear mitigation of asteroid threats': Free article failed quality gate: article has only 118 words; article has only 4 paragraphs"
-  ],
-  "inserted": 76,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "fetched": 5168,
+  "finished_at": "2026-10-18T04:58:32.228370+00:00",
+  "generation_failures": [],
+  "inserted": 56,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "space"
+        "business",
+        "ai"
       ],
       "sources": [
-        "BBC World"
+        "Fortune Global"
       ],
       "status": "publish",
-      "title": "Photos show luxury boat with 50m pool and water slides near Kim",
-      "wp_id": 34299
+      "title": "\u2018How many canaries have we killed in the coal mine?\u2019 \u2014 Wall",
+      "wp_id": 34322
     }
   ],
   "state": "published"
