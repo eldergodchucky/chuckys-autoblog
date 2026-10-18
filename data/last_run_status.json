@@ -3,22 +3,23 @@
   "feed_warnings": 15,
   "feeds": 127,
   "fetched": 5168,
-  "finished_at": "2026-10-18T04:58:32.228370+00:00",
+  "finished_at": "2026-10-18T09:25:08.913884+00:00",
   "generation_failures": [],
-  "inserted": 56,
+  "inserted": 177,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "ai"
+        "gadgets",
+        "gaming",
+        "entertainment"
       ],
       "sources": [
-        "Fortune Global"
+        "Engadget"
       ],
       "status": "publish",
-      "title": "\u2018How many canaries have we killed in the coal mine?\u2019 \u2014 Wall",
-      "wp_id": 34322
+      "title": "What to check if your Nintendo Switch 2 isn't connecting",
+      "wp_id": 34340
     }
   ],
   "state": "published"
