@@ -1,27 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 17,
   "feeds": 127,
-  "fetched": 5170,
-  "finished_at": "2026-10-17T22:33:14.516650+00:00",
+  "fetched": 5157,
+  "finished_at": "2026-10-18T00:23:24.873098+00:00",
   "generation_failures": [
-    "Skipped candidate 'Brain injury care guidelines for first responders released': Free article failed quality gate: article has only 217 words",
-    "Skipped candidate 'Brain injury care guidelines for first responders released': Free article failed quality gate: article has only 217 words"
+    "Skipped candidate 'Several Afghan Taliban personnel killed in alleged retaliatory action along border: Pakistan officials': Free article failed quality gate: article has only 104 words; article has only 4 paragraphs",
+    "Skipped candidate 'Simulations explore nuclear mitigation of asteroid threats': Free article failed quality gate: article has only 118 words; article has only 4 paragraphs"
   ],
-  "inserted": 87,
+  "inserted": 76,
   "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "history"
+        "world",
+        "space"
       ],
       "sources": [
-        "Sky Sports Global"
+        "BBC World"
       ],
       "status": "publish",
-      "title": "Van Gerwen suffers another early exit as Van Veen makes history",
-      "wp_id": 34291
+      "title": "Photos show luxury boat with 50m pool and water slides near Kim",
+      "wp_id": 34299
     }
   ],
   "state": "published"
