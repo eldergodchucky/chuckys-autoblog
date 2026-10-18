@@ -1,27 +1,28 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5107,
-  "finished_at": "2026-10-18T19:01:01.080017+00:00",
+  "fetched": 5143,
+  "finished_at": "2026-10-18T21:26:47.530642+00:00",
   "generation_failures": [
-    "Skipped candidate 'China urged to copy Pentagon\u2019s hi-tech warfare project without US conflicts of interest': Free article failed quality gate: article has only 166 words; article has only 4 paragraphs"
+    "Skipped candidate 'Computer scientist Margaret Hamilton was a problem-solver for the ages (op-ed)': Free article failed quality gate: article has only 226 words",
+    "Skipped candidate 'U.S.-designated terrorist Muhammad Sarwar dies in Lahore': Free article failed quality gate: article has only 125 words; article has only 4 paragraphs"
   ],
-  "inserted": 152,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 126,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "energy",
-        "history",
-        "security"
+        "sports",
+        "world"
       ],
       "sources": [
-        "CleanTechnica Global"
+        "Al Jazeera",
+        "BBC Sport"
       ],
       "status": "publish",
-      "title": "Electrification Changes What Energy Security Means",
-      "wp_id": 34383
+      "title": "Madueke's 'anger and conviction' shows he's more than a 'finisher'",
+      "wp_id": 34391
     }
   ],
   "state": "published"
