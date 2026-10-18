@@ -3,26 +3,22 @@
   "feed_warnings": 15,
   "feeds": 127,
   "fetched": 5143,
-  "finished_at": "2026-10-18T21:26:47.530642+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Computer scientist Margaret Hamilton was a problem-solver for the ages (op-ed)': Free article failed quality gate: article has only 226 words",
-    "Skipped candidate 'U.S.-designated terrorist Muhammad Sarwar dies in Lahore': Free article failed quality gate: article has only 125 words; article has only 4 paragraphs"
-  ],
-  "inserted": 126,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "finished_at": "2026-10-18T23:33:18.212464+00:00",
+  "generation_failures": [],
+  "inserted": 93,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "world"
+        "crime",
+        "security"
       ],
       "sources": [
-        "Al Jazeera",
-        "BBC Sport"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Madueke's 'anger and conviction' shows he's more than a 'finisher'",
-      "wp_id": 34391
+      "title": "A Savannah police officer gave her Flock login to her ICE agent",
+      "wp_id": 34399
     }
   ],
   "state": "published"
