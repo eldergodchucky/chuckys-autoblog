@@ -1,28 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5155,
-  "finished_at": "2026-10-18T13:27:50.181264+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Next-generation total-body PET scanner can produce diagnostic-quality images in as little as 1 minute': Free article failed quality gate: article has only 192 words",
-    "Skipped candidate 'Next-generation total-body PET scanner can produce diagnostic-quality images in as little as 1 minute': Free article failed quality gate: article has only 192 words",
-    "Skipped candidate 'Scientists Discover a Surprising New Effect of a Popular Blood Pressure Drug': Free article failed quality gate: article has only 169 words; article has only 5 paragraphs"
-  ],
-  "inserted": 186,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "fetched": 5133,
+  "finished_at": "2026-10-18T16:46:05.677078+00:00",
+  "generation_failures": [],
+  "inserted": 212,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "climate",
-        "health"
+        "gaming",
+        "software",
+        "culture"
       ],
       "sources": [
-        "Guardian Environment"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "US workers facing deadly heat borrow from tomato pickers to win key",
-      "wp_id": 34360
+      "title": "Lenovo\u2019s fast, comfy SteamOS handheld is hundreds off",
+      "wp_id": 34373
     }
   ],
   "state": "published"
