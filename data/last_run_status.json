@@ -2,23 +2,25 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5143,
-  "finished_at": "2026-10-18T23:33:18.212464+00:00",
+  "fetched": 5147,
+  "finished_at": "2026-10-19T01:46:02.186011+00:00",
   "generation_failures": [],
-  "inserted": 93,
+  "inserted": 55,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "crime",
-        "security"
+        "health",
+        "science",
+        "world"
       ],
       "sources": [
-        "The Verge"
+        "Phys.org Medical Research",
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "A Savannah police officer gave her Flock login to her ICE agent",
-      "wp_id": 34399
+      "title": "Warning signs could predict inflammatory bowel disease a decade before diagnosis",
+      "wp_id": 34409
     }
   ],
   "state": "published"
