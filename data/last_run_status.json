@@ -1,27 +1,28 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 17,
   "feeds": 127,
-  "fetched": 5131,
-  "finished_at": "2026-10-19T06:57:31.339154+00:00",
+  "fetched": 4995,
+  "finished_at": "2026-10-19T14:27:56.913804+00:00",
   "generation_failures": [
-    "Skipped candidate 'Legacy of Japanese woman\u2019s apple pie store lives on in California': Free article failed quality gate: article has only 115 words; article has only 4 paragraphs"
+    "Skipped candidate 'Nobody should buy the $299 Apple TV 4K, but it could have been worse': Free article failed quality gate: article has only 143 words; article has only 4 paragraphs",
+    "Skipped candidate 'Enigmatic Mercury will remain a puzzle until someone sends a lander': Free article failed quality gate: article has only 132 words; article has only 4 paragraphs"
   ],
-  "inserted": 235,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 647,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "science",
-        "politics"
+        "defense",
+        "crime",
+        "science"
       ],
       "sources": [
-        "The Guardian Health"
+        "Defense News"
       ],
       "status": "publish",
-      "title": "Burnham urged to launch inquiry into unequal health impacts of air pollution",
-      "wp_id": 34433
+      "title": "Groups Seek Clarityon Motive Behind Pentagon's Study of Women in Combat",
+      "wp_id": 34462
     }
   ],
   "state": "published"
