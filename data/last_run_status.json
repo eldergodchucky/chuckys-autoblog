@@ -1,28 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 17,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 4995,
-  "finished_at": "2026-10-19T14:27:56.913804+00:00",
+  "fetched": 5038,
+  "finished_at": "2026-10-19T20:08:17.479157+00:00",
   "generation_failures": [
-    "Skipped candidate 'Nobody should buy the $299 Apple TV 4K, but it could have been worse': Free article failed quality gate: article has only 143 words; article has only 4 paragraphs",
-    "Skipped candidate 'Enigmatic Mercury will remain a puzzle until someone sends a lander': Free article failed quality gate: article has only 132 words; article has only 4 paragraphs"
+    "Skipped candidate 'Formula One Has a Big AI Problem. Should the Next F1 Game Recreate It?': Free article failed quality gate: article has only 105 words; article has only 4 paragraphs",
+    "Skipped candidate 'Razer\u2019s fastest Huntsman keyboard drops back to all-time low': Free article failed quality gate: article has only 96 words; article has only 4 paragraphs",
+    "Skipped candidate 'LEGO and Netflix Team Up for 37,000-Piece Kpop Demon Hunters Build': Free article failed quality gate: article has only 210 words; article has only 5 paragraphs"
   ],
-  "inserted": 647,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 613,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "defense",
-        "crime",
-        "science"
+        "gaming"
       ],
       "sources": [
-        "Defense News"
+        "Eurogamer"
       ],
       "status": "publish",
-      "title": "Groups Seek Clarityon Motive Behind Pentagon's Study of Women in Combat",
-      "wp_id": 34462
+      "title": "Final Fantasy 7 Revelation's Hard Mode is available from the start this",
+      "wp_id": 34482
     }
   ],
   "state": "published"
