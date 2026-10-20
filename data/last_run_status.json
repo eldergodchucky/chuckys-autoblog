@@ -1,25 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5098,
-  "finished_at": "2026-10-20T13:02:52.059577+00:00",
+  "fetched": 5113,
+  "finished_at": "2026-10-20T18:01:07.683080+00:00",
   "generation_failures": [],
-  "inserted": 576,
+  "inserted": 573,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "ai",
-        "security"
+        "phones",
+        "gadgets",
+        "world"
       ],
       "sources": [
-        "Fortune Global"
+        "Android Authority News",
+        "Engadget"
       ],
       "status": "publish",
-      "title": "Exclusive: AI security company Gray Swan relaunches its red-teaming Arena contest",
-      "wp_id": 34543
+      "title": "Spotify is dancing around its AI 'slop and spam' problem",
+      "wp_id": 34559
     }
   ],
   "state": "published"
