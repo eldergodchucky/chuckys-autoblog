@@ -1,24 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 17,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5033,
-  "finished_at": "2026-10-20T07:36:09.835913+00:00",
+  "fetched": 5098,
+  "finished_at": "2026-10-20T13:02:52.059577+00:00",
   "generation_failures": [],
-  "inserted": 246,
+  "inserted": 576,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "history"
+        "business",
+        "ai",
+        "security"
       ],
       "sources": [
-        "Sky Sports Global"
+        "Fortune Global"
       ],
       "status": "publish",
-      "title": "Purdy makes NFL history as 49ers beat Commanders to stay perfect",
-      "wp_id": 34523
+      "title": "Exclusive: AI security company Gray Swan relaunches its red-teaming Arena contest",
+      "wp_id": 34543
     }
   ],
   "state": "published"
