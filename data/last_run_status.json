@@ -2,25 +2,29 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5113,
-  "finished_at": "2026-10-20T18:01:07.683080+00:00",
-  "generation_failures": [],
-  "inserted": 573,
-  "message": "Published 1 post(s).",
+  "fetched": 5087,
+  "finished_at": "2026-10-20T21:32:36.135766+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Ted Sarandos Addresses Netflix Content Exec Purge: \u2018I Know That We Could Do Better\u2019': Free article failed quality gate: article has only 233 words; article has only 5 paragraphs",
+    "Skipped candidate 'Fridge\u2011free vaccines could reach more people, but there are still practical challenges in African settings': Free article failed quality gate: article has only 232 words",
+    "Skipped candidate 'Fridge\u2011free vaccines could reach more people, but there are still practical challenges in African settings': Free article failed quality gate: article has only 232 words",
+    "Skipped candidate 'Apple caps iPhone Duo purchases at two per person in an attempt to tackle scalpers': Free article failed quality gate: article has only 222 words"
+  ],
+  "inserted": 393,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "phones",
-        "gadgets",
-        "world"
+        "business",
+        "ai",
+        "space"
       ],
       "sources": [
-        "Android Authority News",
-        "Engadget"
+        "Fortune Global"
       ],
       "status": "publish",
-      "title": "Spotify is dancing around its AI 'slop and spam' problem",
-      "wp_id": 34559
+      "title": "SpaceX posts first operating profit as public company as AI revenue nearly",
+      "wp_id": 34573
     }
   ],
   "state": "published"
