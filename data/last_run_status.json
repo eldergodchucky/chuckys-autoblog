@@ -1,24 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 17,
   "feeds": 127,
-  "fetched": 5042,
-  "finished_at": "2026-10-20T02:09:56.987243+00:00",
+  "fetched": 5033,
+  "finished_at": "2026-10-20T07:36:09.835913+00:00",
   "generation_failures": [],
-  "inserted": 76,
+  "inserted": 246,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "crypto",
-        "space"
+        "sports",
+        "history"
       ],
       "sources": [
-        "Decrypt"
+        "Sky Sports Global"
       ],
       "status": "publish",
-      "title": "Anthropic Gives 5% of Itself to the Public. Musk Answers by Giving",
-      "wp_id": 34506
+      "title": "Purdy makes NFL history as 49ers beat Commanders to stay perfect",
+      "wp_id": 34523
     }
   ],
   "state": "published"
