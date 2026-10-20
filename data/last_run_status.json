@@ -1,25 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 17,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5028,
-  "finished_at": "2026-10-19T23:44:22.143904+00:00",
+  "fetched": 5042,
+  "finished_at": "2026-10-20T02:09:56.987243+00:00",
   "generation_failures": [],
-  "inserted": 301,
+  "inserted": 76,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "energy",
-        "mobility",
-        "business"
+        "crypto",
+        "space"
       ],
       "sources": [
-        "CleanTechnica Global"
+        "Decrypt"
       ],
       "status": "publish",
-      "title": "Hybrid Sales Rise While Battery Electric Sales Remain Lower After Tax Credit",
-      "wp_id": 34497
+      "title": "Anthropic Gives 5% of Itself to the Public. Musk Answers by Giving",
+      "wp_id": 34506
     }
   ],
   "state": "published"
