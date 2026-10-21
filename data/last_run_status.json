@@ -2,27 +2,26 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5119,
-  "finished_at": "2026-10-21T04:49:29.349569+00:00",
+  "fetched": 5076,
+  "finished_at": "2026-10-21T09:53:16.014640+00:00",
   "generation_failures": [
-    "Skipped candidate 'Americans are putting more additives\u2014and calories\u2014in their coffee': Free article failed quality gate: article has only 175 words"
+    "Skipped candidate 'Bluesound Adds Native Apple Music Support': Free article failed quality gate: article has only 280 words"
   ],
-  "inserted": 146,
+  "inserted": 369,
   "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "science",
-        "software"
+        "apple",
+        "business",
+        "culture"
       ],
       "sources": [
-        "Medical Xpress",
-        "The Guardian Health"
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "New 'circadian' subtype of depression identified",
-      "wp_id": 34599
+      "title": "Apple CEO John Ternus Explains What Makes Good Product Design",
+      "wp_id": 34618
     }
   ],
   "state": "published"
