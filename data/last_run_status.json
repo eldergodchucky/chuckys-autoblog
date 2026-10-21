@@ -1,27 +1,30 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5076,
-  "finished_at": "2026-10-21T09:53:16.014640+00:00",
+  "fetched": 5085,
+  "finished_at": "2026-10-21T14:56:07.234474+00:00",
   "generation_failures": [
-    "Skipped candidate 'Bluesound Adds Native Apple Music Support': Free article failed quality gate: article has only 280 words"
+    "Skipped candidate 'Too much RNA can starve cells of energy, scientists discover': Free article failed quality gate: article has only 171 words; article has only 5 paragraphs",
+    "Skipped candidate 'Too much RNA can starve cells of energy, scientists discover': Free article failed quality gate: article has only 171 words; article has only 5 paragraphs",
+    "Skipped candidate 'Astronomers uncover the engine behind the most powerful stellar flares in the Kepler field': Free article failed quality gate: article has only 163 words; article has only 4 paragraphs",
+    "Skipped candidate 'Too much RNA can starve cells of energy, scientists discover': Free article failed quality gate: article has only 137 words; article has only 4 paragraphs"
   ],
-  "inserted": 369,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 533,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "business",
-        "culture"
+        "science",
+        "climate",
+        "health"
       ],
       "sources": [
-        "MacRumors"
+        "Guardian Environment"
       ],
       "status": "publish",
-      "title": "Apple CEO John Ternus Explains What Makes Good Product Design",
-      "wp_id": 34618
+      "title": "More than a million mice used in Australian research annually",
+      "wp_id": 34633
     }
   ],
   "state": "published"
