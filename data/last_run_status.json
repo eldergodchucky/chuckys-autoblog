@@ -1,30 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5085,
-  "finished_at": "2026-10-21T14:56:07.234474+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Too much RNA can starve cells of energy, scientists discover': Free article failed quality gate: article has only 171 words; article has only 5 paragraphs",
-    "Skipped candidate 'Too much RNA can starve cells of energy, scientists discover': Free article failed quality gate: article has only 171 words; article has only 5 paragraphs",
-    "Skipped candidate 'Astronomers uncover the engine behind the most powerful stellar flares in the Kepler field': Free article failed quality gate: article has only 163 words; article has only 4 paragraphs",
-    "Skipped candidate 'Too much RNA can starve cells of energy, scientists discover': Free article failed quality gate: article has only 137 words; article has only 4 paragraphs"
-  ],
-  "inserted": 533,
-  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
+  "fetched": 5065,
+  "finished_at": "2026-10-21T19:09:48.143160+00:00",
+  "generation_failures": [],
+  "inserted": 484,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "climate",
-        "health"
+        "entertainment",
+        "android",
+        "culture"
       ],
       "sources": [
-        "Guardian Environment"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "More than a million mice used in Australian research annually",
-      "wp_id": 34633
+      "title": "Samsung\u2019s latest 55-inch Frame TV is down to its lowest price yet",
+      "wp_id": 34650
     }
   ],
   "state": "published"
