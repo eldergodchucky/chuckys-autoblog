@@ -3,23 +3,23 @@
   "feed_warnings": 16,
   "feeds": 127,
   "fetched": 5065,
-  "finished_at": "2026-10-21T19:09:48.143160+00:00",
+  "finished_at": "2026-10-21T22:24:07.845794+00:00",
   "generation_failures": [],
-  "inserted": 484,
+  "inserted": 370,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "entertainment",
-        "android",
-        "culture"
+        "history",
+        "health",
+        "science"
       ],
       "sources": [
-        "The Verge"
+        "Smithsonian History"
       ],
       "status": "publish",
-      "title": "Samsung\u2019s latest 55-inch Frame TV is down to its lowest price yet",
-      "wp_id": 34650
+      "title": "Archaeologists May Have Solved the Mystery of a Roman Sarcophagus Excavated",
+      "wp_id": 34659
     }
   ],
   "state": "published"
