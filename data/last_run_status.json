@@ -3,23 +3,22 @@
   "feed_warnings": 16,
   "feeds": 127,
   "fetched": 5064,
-  "finished_at": "2026-10-22T05:49:59.577821+00:00",
+  "finished_at": "2026-10-22T11:18:29.668579+00:00",
   "generation_failures": [],
-  "inserted": 214,
+  "inserted": 423,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "ai",
-        "security"
+        "business",
+        "ai"
       ],
       "sources": [
-        "AllAfrica"
+        "MIT Technology Review"
       ],
       "status": "publish",
-      "title": "Nigeria: I Heard Miners Screaming Before They Died",
-      "wp_id": 34691
+      "title": "Making the case for context-aware AI",
+      "wp_id": 34710
     }
   ],
   "state": "published"
