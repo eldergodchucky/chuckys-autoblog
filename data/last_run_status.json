@@ -2,26 +2,24 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5061,
-  "finished_at": "2026-10-22T00:50:49.600502+00:00",
-  "generation_failures": [
-    "Skipped candidate '\u2018Comrade Raul\u2019: Beijing defends Cuba\u2019s ex-leader over Florida murder warrant': Free article failed quality gate: article has only 180 words; article has only 5 paragraphs"
-  ],
-  "inserted": 147,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "fetched": 5064,
+  "finished_at": "2026-10-22T05:49:59.577821+00:00",
+  "generation_failures": [],
+  "inserted": 214,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "world",
-        "politics",
-        "crime"
+        "ai",
+        "security"
       ],
       "sources": [
-        "Daily Maverick"
+        "AllAfrica"
       ],
       "status": "publish",
-      "title": "TRC Roulette : Former justice minister Brigitte Mabandla denies instruction to halt",
-      "wp_id": 34670
+      "title": "Nigeria: I Heard Miners Screaming Before They Died",
+      "wp_id": 34691
     }
   ],
   "state": "published"
