@@ -2,24 +2,26 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5065,
-  "finished_at": "2026-10-21T22:24:07.845794+00:00",
-  "generation_failures": [],
-  "inserted": 370,
-  "message": "Published 1 post(s).",
+  "fetched": 5061,
+  "finished_at": "2026-10-22T00:50:49.600502+00:00",
+  "generation_failures": [
+    "Skipped candidate '\u2018Comrade Raul\u2019: Beijing defends Cuba\u2019s ex-leader over Florida murder warrant': Free article failed quality gate: article has only 180 words; article has only 5 paragraphs"
+  ],
+  "inserted": 147,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "history",
-        "health",
-        "science"
+        "world",
+        "politics",
+        "crime"
       ],
       "sources": [
-        "Smithsonian History"
+        "Daily Maverick"
       ],
       "status": "publish",
-      "title": "Archaeologists May Have Solved the Mystery of a Roman Sarcophagus Excavated",
-      "wp_id": 34659
+      "title": "TRC Roulette : Former justice minister Brigitte Mabandla denies instruction to halt",
+      "wp_id": 34670
     }
   ],
   "state": "published"
