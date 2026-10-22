@@ -1,24 +1,29 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5064,
-  "finished_at": "2026-10-22T11:18:29.668579+00:00",
-  "generation_failures": [],
-  "inserted": 423,
-  "message": "Published 1 post(s).",
+  "fetched": 5067,
+  "finished_at": "2026-10-22T15:59:17.764443+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Adding a Mirena IUD during surgery can reduce the risk of hysterectomy in women with heavy menstrual bleeding': Free article failed quality gate: article has only 176 words",
+    "Skipped candidate 'Adding a Mirena IUD during surgery can reduce the risk of hysterectomy in women with heavy menstrual bleeding': Free article failed quality gate: article has only 176 words",
+    "Skipped candidate ''What we were cooking was really cool': An award-winning science fiction author was working on Mass Effect 5's story': Free article failed quality gate: article has only 247 words"
+  ],
+  "inserted": 529,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "ai"
+        "sports",
+        "health"
       ],
       "sources": [
-        "MIT Technology Review"
+        "BBC Football",
+        "Sky Sports Global"
       ],
       "status": "publish",
-      "title": "Making the case for context-aware AI",
-      "wp_id": 34710
+      "title": "Who was right about Man Utd tactics: Carrick or Fernandes?",
+      "wp_id": 34725
     }
   ],
   "state": "published"
