@@ -3,27 +3,23 @@
   "feed_warnings": 15,
   "feeds": 127,
   "fetched": 5067,
-  "finished_at": "2026-10-22T15:59:17.764443+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Adding a Mirena IUD during surgery can reduce the risk of hysterectomy in women with heavy menstrual bleeding': Free article failed quality gate: article has only 176 words",
-    "Skipped candidate 'Adding a Mirena IUD during surgery can reduce the risk of hysterectomy in women with heavy menstrual bleeding': Free article failed quality gate: article has only 176 words",
-    "Skipped candidate ''What we were cooking was really cool': An award-winning science fiction author was working on Mass Effect 5's story': Free article failed quality gate: article has only 247 words"
-  ],
-  "inserted": 529,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "finished_at": "2026-10-22T19:55:26.105062+00:00",
+  "generation_failures": [],
+  "inserted": 446,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "health"
+        "world",
+        "defense",
+        "security"
       ],
       "sources": [
-        "BBC Football",
-        "Sky Sports Global"
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "Who was right about Man Utd tactics: Carrick or Fernandes?",
-      "wp_id": 34725
+      "title": "Unsafe water, burning eyes and kerosene slicks: residents demand answers on River",
+      "wp_id": 34737
     }
   ],
   "state": "published"
