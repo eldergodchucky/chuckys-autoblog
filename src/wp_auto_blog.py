@@ -1523,11 +1523,13 @@ def is_deal_roundup(cluster: list[Item]) -> bool:
     lead_title = (cluster[0].title or "").lower()
     text = story_text(cluster).lower()
 
-    # Direct deal headlines (cuts Arlo to $221, $500 off, record-low deal, Amazon discounting, lunch break)
+    # Direct deal headlines (cuts Arlo to $221, cuts $900 off, lowest price yet, record-low deal, Amazon discounting, lunch break)
     if re.search(r"\b(?:deal|deals|discount|discounts|discounting|promo code|coupon)\b", lead_title):
         if re.search(r"(\$\d+|\d+%\s*off|record-low|weekend deal|cuts? the .* to|price drop|by as much as \$\d+)", lead_title):
             return True
-    if re.search(r"\b(?:record-low deal|weekend deals?|best deals?|save \$\d+|now \$\d+|takes \$\d+ off|prime day deals?|lunch break|on sale at record)\b", lead_title):
+    if re.search(r"\b(?:record-low deal|weekend deals?|best deals?|save \$\d+|now \$\d+|takes \$\d+ off|cuts?\s+\$\d+\s+off|prime day deals?|lunch break|on sale at record)\b", lead_title):
+        return True
+    if re.search(r"\b(?:down to its lowest price|lowest price (?:yet|ever|record)|all-time low price|at its lowest price)\b", lead_title):
         return True
     if re.search(r"\bdiscounting\b.*?\bby as much as\b", lead_title):
         return True
@@ -3158,7 +3160,7 @@ def story_categories(cluster: list[Item], topic: str, keywords: list[str]) -> li
 
     checks = [
 
-        ("health", ("health", "medical", "medicine", "doctor", "hospital", "patient", "treatment", "disease", "virus", "vaccine", "clinical", "drug", "pharmaceutical", "nutrition", "fitness", "mental health", "wellness", "cancer", "diabetes", "heart", "blood pressure", "cholesterol", "obesity", "exercise", "diet", "supplement", "therapy", "symptom", "diagnosis", "cdc", "who", "nih", "fda", "harvard health", "mayo clinic", "webmd", "healthline")),
+        ("health", ("health", "medical", "medicine", "doctor", "hospital", "patient", "treatment", "disease", "virus", "vaccine", "clinical", "drug", "pharmaceutical", "nutrition", "fitness", "mental health", "wellness", "cancer", "diabetes", "heart", "blood pressure", "cholesterol", "obesity", "exercise", "diet", "supplement", "therapy", "symptom", "diagnosis", "cdc", "world health organization", "nih", "fda", "harvard health", "mayo clinic", "webmd", "healthline")),
 
         ("politics", ("politics", "political", "election", "campaign", "president", "prime minister", "government", "parliament", "senate", "congress", "policy", "candidate", "debate", "vote", "voting", "minister", "diplomacy", "foreign policy", "white house", "coalition", "legislation", "supreme court")),
 
@@ -6864,13 +6866,16 @@ def ranked_clusters(conn: sqlite3.Connection, clusters: list[list[Item]]) -> lis
 
         priority = editorial_priority_score(cluster) - category_diversity_penalty(categories, recent_counts)
 
-        # Consumer tech throttling: prioritize international and hard news if tech was recent
-        tech_set = {"gadgets", "phones", "apple", "android", "software", "hacks", "tutorials"}
-        intl_set = {"world", "politics", "business", "defense", "energy", "culture", "science", "climate", "sports", "entertainment", "history", "crime"}
-        if set(categories) & intl_set:
-            priority += 4
-        elif set(categories).issubset(tech_set):
-            priority -= 3
+        # International & hard news priority: boost other topics by at least 10%
+        tech_set = {"gadgets", "phones", "apple", "android", "software", "hacks", "tutorials", "ai", "tech"}
+        intl_set = {"world", "politics", "business", "defense", "energy", "culture", "science", "climate", "sports", "entertainment", "history", "crime", "space", "health"}
+        has_intl = bool(set(categories) & intl_set)
+        is_pure_tech = bool(set(categories) & tech_set) and not has_intl
+
+        if has_intl:
+            priority += 7
+        elif is_pure_tech or set(categories).issubset(tech_set):
+            priority -= 5
 
         return (
 

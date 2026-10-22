@@ -39,6 +39,9 @@ class EditorialQualityAndBalanceTests(unittest.TestCase):
             "Deals: Early Prime Day deals on Samsung foldables now live, Pixel",
             "Today’s 9to5Toys Lunch Break is headlined by Apple’s most affordable",
             "Amazon Takes $199 Off Nearly Every M5 MacBook Air, Starting at $899.99",
+            "Amazon cuts $900 off the 2026 MacBook Pro with M5 Max chip",
+            "Samsung’s latest 55-inch Frame TV is down to its lowest price yet",
+            "Sony's WH-1000XM5 are at an all-time low price for Prime Day",
         ]
         for title in deal_titles:
             deal_item = Item(
@@ -95,6 +98,23 @@ class EditorialQualityAndBalanceTests(unittest.TestCase):
         }
         failures = article_quality_failures(stub_article)
         self.assertTrue(any("words" in f for f in failures))
+
+
+
+    def test_health_who_false_positive_avoided(self):
+        sports_item = Item(
+            uid="item-sports-who",
+            source_name="BBC Sport",
+            source_url="https://bbc.com/sport",
+            source_category="sports",
+            source_quality=5,
+            title="Who was right about Man Utd tactics: Carrick or Fernandes?",
+            link="https://bbc.com/sport/football/1",
+            summary="A tactical breakdown of the latest football match.",
+            published_at=dt.datetime.now(dt.timezone.utc),
+        )
+        cats = wp_auto_blog.story_categories([sports_item], sports_item.title, [])
+        self.assertNotIn("health", cats, "English question word 'Who' should not trigger health category")
 
 
 if __name__ == "__main__":
