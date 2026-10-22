@@ -1,25 +1,28 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 17,
   "feeds": 127,
-  "fetched": 5067,
-  "finished_at": "2026-10-22T19:55:26.105062+00:00",
-  "generation_failures": [],
-  "inserted": 446,
-  "message": "Published 1 post(s).",
+  "fetched": 5058,
+  "finished_at": "2026-10-22T23:02:38.347154+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Epic announces game jam where you have to use AI, then walks back the requirement': Free article failed quality gate: article has only 233 words",
+    "Skipped candidate 'Apple's iWork Apps Get 'Intelligent Assistant' and iPhone Duo Support': Free article failed quality gate: article has only 285 words"
+  ],
+  "inserted": 317,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "defense",
-        "security"
+        "apple",
+        "ai",
+        "software"
       ],
       "sources": [
-        "The Guardian World"
+        "MacRumors"
       ],
       "status": "publish",
-      "title": "Unsafe water, burning eyes and kerosene slicks: residents demand answers on River",
-      "wp_id": 34737
+      "title": "1Password for Agents Keeps Your Passwords Hidden From AI",
+      "wp_id": 34748
     }
   ],
   "state": "published"
