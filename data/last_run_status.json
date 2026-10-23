@@ -2,29 +2,24 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5036,
-  "finished_at": "2026-10-23T11:57:49.974511+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Updated cancer treatment framework offers new guidance on actionability and resistance biomarkers': Free article failed quality gate: article has only 234 words",
-    "Skipped candidate 'Updated cancer treatment framework offers new guidance on actionability and resistance biomarkers': Free article failed quality gate: article has only 234 words",
-    "Skipped candidate '[Update 3] Notice and Advisory for Business Partners and Former Employees Regarding Unauthorized Access to Group Managed Server and Potential Data Exposure': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Retail sales in Great Britain fall as struggling households cut back': Free article failed quality gate: 3 repeated sentence(s)"
-  ],
-  "inserted": 477,
-  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
+  "fetched": 5046,
+  "finished_at": "2026-10-23T16:42:48.327251+00:00",
+  "generation_failures": [],
+  "inserted": 491,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "world",
-        "software"
+        "defense",
+        "business",
+        "security"
       ],
       "sources": [
-        "Formula 1 News"
+        "Breaking Defense"
       ],
       "status": "publish",
-      "title": "McLaren drivers 'still allowed to race' each other \u2013 Norris",
-      "wp_id": 34805
+      "title": "Qatari Barzan unveils aerial drones",
+      "wp_id": 34821
     }
   ],
   "state": "published"
