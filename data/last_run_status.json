@@ -2,33 +2,33 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5089,
-  "finished_at": "2026-10-23T20:08:51.478764+00:00",
+  "fetched": 5074,
+  "finished_at": "2026-10-23T23:11:02.378330+00:00",
   "generation_failures": [
-    "Skipped candidate 'HomeKit Weekly: SwitchBot\u2019s new light bars bring 12-zone color to Apple Home': Free article failed quality gate: article has only 219 words; 1 repeated sentence(s)",
-    "Skipped candidate 'KPop Demon Hunters Is Getting Yet Another Immersive Gaming Experience in Early 2027': Free article failed quality gate: article has only 185 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate ''I'm forever grateful to BioWare': 16 game developers share the moment a BioWare game inspired them to join the industry': Free article failed quality gate: article has only 143 words",
-    "Skipped candidate 'FemShep Voice Actor Jennifer Hale Speaks Out After Mass Effect 5 Trailer Leaks Online': Free article failed quality gate: article has only 177 words; article has only 5 paragraphs",
-    "Skipped candidate ''Every single week it's going to feel like the sky is falling': Cloudflare CEO says strap in for 'a couple years' of AI-powered internet security mayhem': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Creative Assembly exec pins the blame for the Shogun 2 remaster mess on someone else: 'This was not a Creative Assembly developed game'': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'As devastating Xbox \"reset\" continues, Dishonored studio Arkane Lyon reportedly only has until November to find a new buyer before it's closed': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Ahead of GTA 6, PlayStation 5 Sales Were Up 22%, Likely Due To Wolverine': Free article failed quality gate: article has only 140 words; article has only 5 paragraphs",
-    "Skipped candidate 'Mass Effect 5 Details Revealed Following Cancellation, Including 'Hitman-Style Freedom' in Missions': Free article failed quality gate: article has only 209 words; article has only 5 paragraphs"
+    "Skipped candidate 'NASA's Freeze-Resistant Moon Battery Could Eventually Reach EVs': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Trump's Reverse Nixon Strategy: Bring Russia In, Shut China Out': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Collaboration on Autonomous Undersea Warfare is on Track, AUKUS Officials Say': Free article failed quality gate: article has only 243 words; 1 repeated sentence(s)",
+    "Skipped candidate 'U.S. Energy Department designates helium as critical material': Free article failed quality gate: article has only 172 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Wells Fargo and five others object to OKX-ICE tokenized stock listings: Report': Free article failed quality gate: article has only 159 words; article has only 5 paragraphs",
+    "Skipped candidate 'A Team of Astronomers Thinks They Have Identified the Exact Night Sky That Inspired Vincent van Gogh's 'Starry Night.' Not Everyone Is Convinced': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 352,
-  "message": "Published 1 post(s). Skipped 9 low-quality candidate(s).",
+  "inserted": 203,
+  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gaming",
-        "software"
+        "sports",
+        "apple",
+        "entertainment"
       ],
       "sources": [
-        "Eurogamer"
+        "9to5Mac",
+        "Formula 1 News",
+        "Sky Sports Global"
       ],
       "status": "publish",
-      "title": "Mass Effect crossover items have seemingly been removed from Battlefield 6 following",
-      "wp_id": 34834
+      "title": "Leclerc edges Antonelli to complete US GP practice double",
+      "wp_id": 34847
     }
   ],
   "state": "published"
