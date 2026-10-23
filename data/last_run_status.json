@@ -1,25 +1,30 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5072,
-  "finished_at": "2026-10-23T06:21:37.712193+00:00",
-  "generation_failures": [],
-  "inserted": 225,
-  "message": "Published 1 post(s).",
+  "fetched": 5036,
+  "finished_at": "2026-10-23T11:57:49.974511+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Updated cancer treatment framework offers new guidance on actionability and resistance biomarkers': Free article failed quality gate: article has only 234 words",
+    "Skipped candidate 'Updated cancer treatment framework offers new guidance on actionability and resistance biomarkers': Free article failed quality gate: article has only 234 words",
+    "Skipped candidate '[Update 3] Notice and Advisory for Business Partners and Former Employees Regarding Unauthorized Access to Group Managed Server and Potential Data Exposure': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Retail sales in Great Britain fall as struggling households cut back': Free article failed quality gate: 3 repeated sentence(s)"
+  ],
+  "inserted": 477,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "climate",
-        "politics",
-        "crime"
+        "sports",
+        "world",
+        "software"
       ],
       "sources": [
-        "Guardian Environment"
+        "Formula 1 News"
       ],
       "status": "publish",
-      "title": "In allowing coal expansion in the Hunter",
-      "wp_id": 34781
+      "title": "McLaren drivers 'still allowed to race' each other \u2013 Norris",
+      "wp_id": 34805
     }
   ],
   "state": "published"
