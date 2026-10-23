@@ -117,5 +117,38 @@ class EditorialQualityAndBalanceTests(unittest.TestCase):
         self.assertNotIn("health", cats, "English question word 'Who' should not trigger health category")
 
 
+
+    def test_international_dateline_prepended(self):
+        item = Item(
+            uid="item-test-dateline",
+            source_name="Reuters",
+            source_url="https://reuters.com",
+            source_category="world",
+            source_quality=5,
+            title="Diplomats convene in Geneva for emergency trade talks",
+            link="https://reuters.com/article/1",
+            summary="Diplomats from 40 nations gathered in Geneva on Friday to negotiate a new global trade protocol.",
+            published_at=dt.datetime.now(dt.timezone.utc),
+        )
+        art = wp_auto_blog.free_article([item])
+        self.assertIn("<strong>GENEVA — </strong>", art["html"])
+
+    def test_key_developments_box_present(self):
+        item = Item(
+            uid="item-test-glance",
+            source_name="Nature",
+            source_url="https://nature.com",
+            source_category="science",
+            source_quality=5,
+            title="Scientists observe quantum coherence at room temperature",
+            link="https://nature.com/article/2",
+            summary="Researchers observed quantum coherence lasting several microseconds at room temperature. The breakthrough could accelerate the development of commercial quantum sensors.",
+            published_at=dt.datetime.now(dt.timezone.utc),
+        )
+        art = wp_auto_blog.free_article([item])
+        self.assertIn("Key Developments", art["html"])
+        self.assertIn("article-at-a-glance", art["html"])
+
+
 if __name__ == "__main__":
     unittest.main()

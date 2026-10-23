@@ -2536,6 +2536,7 @@ def create_hero_image(title: str, keywords: list[str], categories: list[str], so
 
     def save_real_thumbnail(source_image: Any, theme: str, accent: str, text_color: str) -> Path:
 
+        IMAGE_DIR.mkdir(parents=True, exist_ok=True)
         background = cover_resize(source_image, width, height).convert("RGBA")
 
         dim = Image.new("RGBA", (width, height), (0, 0, 0, 36))
@@ -2833,6 +2834,36 @@ def create_hero_image(title: str, keywords: list[str], categories: list[str], so
         "science": ("#0f172a", "#164e63", "#f8fafc", "#38bdf8", "#08111d"),
 
         "tech": ("#111827", "#0f766e", "#f8fafc", "#22d3ee", "#07121c"),
+
+        "world": ("#0f172a", "#1e3a8a", "#f8fafc", "#60a5fa", "#0c1529"),
+
+        "politics": ("#1e1b4b", "#4c0519", "#f8fafc", "#f43f5e", "#13091e"),
+
+        "business": ("#062016", "#044e3b", "#f8fafc", "#34d399", "#061510"),
+
+        "climate": ("#042f2e", "#0f766e", "#f8fafc", "#2dd4bf", "#041c1b"),
+
+        "culture": ("#2e1065", "#581c87", "#f8fafc", "#c084fc", "#1c093a"),
+
+        "defense": ("#18181b", "#3f3f46", "#f8fafc", "#fbbf24", "#0f0f12"),
+
+        "energy": ("#172554", "#78350f", "#f8fafc", "#f59e0b", "#0d1730"),
+
+        "health": ("#083344", "#155e75", "#f8fafc", "#38bdf8", "#051f29"),
+
+        "sports": ("#0c1c38", "#7c2d12", "#f8fafc", "#fb923c", "#0a1426"),
+
+        "history": ("#271810", "#451a03", "#f8fafc", "#d97706", "#170f0a"),
+
+        "crime": ("#18181b", "#450a0a", "#f8fafc", "#f87171", "#120808"),
+
+        "entertainment": ("#1e1b4b", "#701a75", "#f8fafc", "#e879f9", "#140c2a"),
+
+        "crypto": ("#1e1b4b", "#064e3b", "#f8fafc", "#10b981", "#0b192c"),
+
+        "mobility": ("#022c22", "#134e4a", "#f8fafc", "#2dd4bf", "#041c17"),
+
+        "gaming": ("#2e1065", "#431407", "#f8fafc", "#f97316", "#180928"),
 
     }
 
@@ -5508,6 +5539,31 @@ def enrich_cluster_facts(cluster: list[Item]) -> dict[str, list[str]]:
     return pools
 
 
+def extract_international_dateline(text: str, categories: list[str]) -> str:
+    intl_cats = {"world", "politics", "defense", "climate", "energy", "business", "crime"}
+    if not (set(categories) & intl_cats):
+        return ""
+
+    locations = [
+        ("Washington", "WASHINGTON"), ("Geneva", "GENEVA"), ("London", "LONDON"),
+        ("Tokyo", "TOKYO"), ("Paris", "PARIS"), ("Berlin", "BERLIN"),
+        ("Beijing", "BEIJING"), ("Brussels", "BRUSSELS"), ("Kyiv", "KYIV"),
+        ("Moscow", "MOSCOW"), ("Jerusalem", "JERUSALEM"), ("Seoul", "SEOUL"),
+        ("Taipei", "TAIPEI"), ("New Delhi", "NEW DELHI"), ("Canberra", "CANBERRA"),
+        ("Ottawa", "OTTAWA"), ("Singapore", "SINGAPORE"), ("Nairobi", "NAIROBI"),
+        ("Johannesburg", "JOHANNESBURG"), ("Rome", "ROME"), ("Madrid", "MADRID"),
+        ("Riyadh", "RIYADH"), ("Cairo", "CAIRO"), ("Ankara", "ANKARA"),
+        ("United Nations", "UNITED NATIONS"), ("Nigeria", "ABUJA"), ("Australia", "CANBERRA"),
+        ("China", "BEIJING"), ("Japan", "TOKYO"), ("Germany", "BERLIN"),
+        ("France", "PARIS"), ("Ukraine", "KYIV"), ("South Africa", "JOHANNESBURG"),
+        ("Taiwan", "TAIPEI"), ("India", "NEW DELHI"), ("Israel", "JERUSALEM"),
+    ]
+    for needle, dateline in locations:
+        if re.search(rf"\b{re.escape(needle)}\b", text, re.I):
+            return f"<strong>{dateline} — </strong>"
+    return ""
+
+
 def full_article_sections(cluster: list[Item], topic: str, categories: list[str], source_count: int) -> str:
     """Assemble a long-form plain news article from cluster facts - no scaffolding.
 
@@ -5570,7 +5626,10 @@ def full_article_sections(cluster: list[Item], topic: str, categories: list[str]
         if fallback_fact:
             used.add(fallback_fact.lower())
             lede = [fallback_fact]
-    add_paragraph(lede)
+    dateline_prefix = extract_international_dateline(" ".join([topic, *lede]), categories)
+    if lede:
+        lead_p = dateline_prefix + html.escape(" ".join(lede))
+        paragraphs.append("<p>" + lead_p + "</p>")
 
     # Deep dive on the lead story — pull rounds to build a solid opening block
     if lead_facts:
@@ -5810,6 +5869,20 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
         excerpt = clean_text(title, max_len=200)
         meta_description = clean_text(title, max_len=160)
 
+    # Executive "Key Developments" summary box
+    key_facts = [f.strip() for f in fact_sentences(text, 20) if len(f.strip()) >= 30 and not f.strip().lower().startswith("here")][:2]
+    key_developments_block = ""
+    if key_facts:
+        bullets = "\n".join(f"  <li>{html.escape(f)}</li>" for f in key_facts)
+        key_developments_block = f'''
+<div class="article-at-a-glance" style="background:#f8fafc; border-left:4px solid #2563eb; padding:14px 18px; margin:18px 0; border-radius:4px;">
+<p style="margin:0 0 8px 0; font-weight:700; text-transform:uppercase; font-size:0.82em; color:#1e293b; letter-spacing:0.06em;">Key Developments</p>
+<ul style="margin:0; padding-left:18px; color:#334155; line-height:1.6;">
+{bullets}
+</ul>
+</div>
+'''.strip()
+
     # Editorial Related Coverage internal links
     primary_cat = categories[0] if categories else "world"
     secondary_cat = categories[1] if len(categories) > 1 else ("world" if primary_cat != "world" else "politics")
@@ -5825,6 +5898,8 @@ def free_article(cluster: list[Item]) -> dict[str, Any]:
 {image_block}
 
 <p>[more]</p>
+
+{key_developments_block}
 
 {full_article_sections(cluster, topic, categories, source_count)}
 
