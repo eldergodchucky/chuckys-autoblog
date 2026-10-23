@@ -1,25 +1,34 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5046,
-  "finished_at": "2026-10-23T16:42:48.327251+00:00",
-  "generation_failures": [],
-  "inserted": 491,
-  "message": "Published 1 post(s).",
+  "fetched": 5089,
+  "finished_at": "2026-10-23T20:08:51.478764+00:00",
+  "generation_failures": [
+    "Skipped candidate 'HomeKit Weekly: SwitchBot\u2019s new light bars bring 12-zone color to Apple Home': Free article failed quality gate: article has only 219 words; 1 repeated sentence(s)",
+    "Skipped candidate 'KPop Demon Hunters Is Getting Yet Another Immersive Gaming Experience in Early 2027': Free article failed quality gate: article has only 185 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate ''I'm forever grateful to BioWare': 16 game developers share the moment a BioWare game inspired them to join the industry': Free article failed quality gate: article has only 143 words",
+    "Skipped candidate 'FemShep Voice Actor Jennifer Hale Speaks Out After Mass Effect 5 Trailer Leaks Online': Free article failed quality gate: article has only 177 words; article has only 5 paragraphs",
+    "Skipped candidate ''Every single week it's going to feel like the sky is falling': Cloudflare CEO says strap in for 'a couple years' of AI-powered internet security mayhem': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Creative Assembly exec pins the blame for the Shogun 2 remaster mess on someone else: 'This was not a Creative Assembly developed game'': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'As devastating Xbox \"reset\" continues, Dishonored studio Arkane Lyon reportedly only has until November to find a new buyer before it's closed': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Ahead of GTA 6, PlayStation 5 Sales Were Up 22%, Likely Due To Wolverine': Free article failed quality gate: article has only 140 words; article has only 5 paragraphs",
+    "Skipped candidate 'Mass Effect 5 Details Revealed Following Cancellation, Including 'Hitman-Style Freedom' in Missions': Free article failed quality gate: article has only 209 words; article has only 5 paragraphs"
+  ],
+  "inserted": 352,
+  "message": "Published 1 post(s). Skipped 9 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "defense",
-        "business",
-        "security"
+        "gaming",
+        "software"
       ],
       "sources": [
-        "Breaking Defense"
+        "Eurogamer"
       ],
       "status": "publish",
-      "title": "Qatari Barzan unveils aerial drones",
-      "wp_id": 34821
+      "title": "Mass Effect crossover items have seemingly been removed from Battlefield 6 following",
+      "wp_id": 34834
     }
   ],
   "state": "published"
