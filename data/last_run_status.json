@@ -2,52 +2,24 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5082,
-  "finished_at": "2026-10-23T01:26:57.235290+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Autonomous triangular modules could build tomorrow's mega-observatories': Free article failed quality gate: article has only 245 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Researchers show how leukemia cells 'hide' from treatment': Free article failed quality gate: article has only 233 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Researchers show how leukemia cells 'hide' from treatment': Free article failed quality gate: article has only 233 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Chinese astronomers find real 3-body system. It is not what Liu Cixin thinks': Free article failed quality gate: article has only 204 words",
-    "Skipped candidate 'Social determinants linked with kidney failure risk among survivors of critical illness and acute kidney injury': Free article failed quality gate: article has only 239 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Social determinants linked with kidney failure risk among survivors of critical illness and acute kidney injury': Free article failed quality gate: article has only 239 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Child health in England at risk from sharp rise in NHS waiting times, report says': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'App's AI 'eyes' for blind users fall short, researchers find': Free article failed quality gate: article has only 236 words; article has only 5 paragraphs; 2 repeated sentence(s)",
-    "Skipped candidate 'PC shipments dropped over 20 percent in Q3 due to RAM price hikes': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Standardized kidney biopsy protocol is safe in high-risk patients': Free article failed quality gate: article has only 231 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Standardized kidney biopsy protocol is safe in high-risk patients': Free article failed quality gate: article has only 231 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Nurses are an important resource in Swedish bowel cancer screening': Free article failed quality gate: article has only 253 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Early uptake for oral semaglutide proves rapid relative to injectables': Free article failed quality gate: article has only 197 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Nurses are an important resource in Swedish bowel cancer screening': Free article failed quality gate: article has only 253 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Prevalence of binge eating 40.5% in U.S. high school students': Free article failed quality gate: article has only 198 words",
-    "Skipped candidate 'Early uptake for oral semaglutide proves rapid relative to injectables': Free article failed quality gate: article has only 197 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Beyond the ACE score: A single number may miss the complexity of childhood trauma, study suggests': Free article failed quality gate: article has only 250 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Prevalence of binge eating 40.5% in U.S. high school students': Free article failed quality gate: article has only 198 words",
-    "Skipped candidate 'Beyond the ACE score: A single number may miss the complexity of childhood trauma, study suggests': Free article failed quality gate: article has only 250 words; 1 repeated sentence(s)",
-    "Skipped candidate 'From red mud to green concrete: Low-carbon construction material can cut carbon footprint': Free article failed quality gate: article has only 215 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Ancient Skeletons Reveal a Secret Hidden in Medieval Sicily for 1,000 Years': Free article failed quality gate: article has only 223 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Clinical support tool helps primary care health professionals detect and treat chronic kidney disease': Free article failed quality gate: article has only 219 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Clinical support tool helps primary care health professionals detect and treat chronic kidney disease': Free article failed quality gate: article has only 219 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Adults with type 1 diabetes more likely to have depressive, anxiety symptoms': Free article failed quality gate: article has only 223 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Adults with type 1 diabetes more likely to have depressive, anxiety symptoms': Free article failed quality gate: article has only 223 words; 1 repeated sentence(s)",
-    "Skipped candidate 'US cannabis legalization linked to rise in cardiovascular hospital admissions': Free article failed quality gate: article has only 214 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Haematology centre for cancer patients at risk over 'disgraceful' funds move': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'US cannabis legalization linked to rise in cardiovascular hospital admissions': Free article failed quality gate: article has only 214 words; 1 repeated sentence(s)"
-  ],
-  "inserted": 104,
-  "message": "Published 1 post(s). Skipped 28 low-quality candidate(s).",
+  "fetched": 5072,
+  "finished_at": "2026-10-23T06:21:37.712193+00:00",
+  "generation_failures": [],
+  "inserted": 225,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "health"
+        "climate",
+        "politics",
+        "crime"
       ],
       "sources": [
-        "WIRED Science"
+        "Guardian Environment"
       ],
       "status": "publish",
-      "title": "What to Know About Shamonda Virus Following the First Reported Human Infection",
-      "wp_id": 34759
+      "title": "In allowing coal expansion in the Hunter",
+      "wp_id": 34781
     }
   ],
   "state": "published"
