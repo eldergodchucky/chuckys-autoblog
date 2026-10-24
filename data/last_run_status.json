@@ -1,26 +1,6 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
-  "feeds": 127,
-  "fetched": 5064,
-  "finished_at": "2026-10-24T14:49:39.741689+00:00",
-  "generation_failures": [],
-  "inserted": 230,
-  "message": "Published 1 post(s).",
-  "posts": [
-    {
-      "categories": [
-        "security",
-        "ai",
-        "science"
-      ],
-      "sources": [
-        "WIRED Security"
-      ],
-      "status": "publish",
-      "title": "The PHP Meltdown Shows How AI Makes Bugs More Exploitable",
-      "wp_id": 34914
-    }
-  ],
-  "state": "published"
+  "finished_at": "2026-10-24T17:54:41.439846+00:00",
+  "message": "OSError: image file is truncated (18 bytes not processed)",
+  "state": "failed"
 }
