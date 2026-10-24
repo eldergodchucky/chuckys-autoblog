@@ -2,33 +2,27 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5074,
-  "finished_at": "2026-10-23T23:11:02.378330+00:00",
+  "fetched": 5075,
+  "finished_at": "2026-10-24T01:37:40.585212+00:00",
   "generation_failures": [
-    "Skipped candidate 'NASA's Freeze-Resistant Moon Battery Could Eventually Reach EVs': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Trump's Reverse Nixon Strategy: Bring Russia In, Shut China Out': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Collaboration on Autonomous Undersea Warfare is on Track, AUKUS Officials Say': Free article failed quality gate: article has only 243 words; 1 repeated sentence(s)",
-    "Skipped candidate 'U.S. Energy Department designates helium as critical material': Free article failed quality gate: article has only 172 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Wells Fargo and five others object to OKX-ICE tokenized stock listings: Report': Free article failed quality gate: article has only 159 words; article has only 5 paragraphs",
-    "Skipped candidate 'A Team of Astronomers Thinks They Have Identified the Exact Night Sky That Inspired Vincent van Gogh's 'Starry Night.' Not Everyone Is Convinced': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'Pentagon designates China-backed campus cultural centers a threat to US national security': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'US, allies and China vie for influence through Pacific security deals': Free article failed quality gate: article has only 242 words; article has only 5 paragraphs; 1 repeated sentence(s)"
   ],
-  "inserted": 203,
-  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "inserted": 73,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "apple",
-        "entertainment"
+        "security",
+        "science",
+        "software"
       ],
       "sources": [
-        "9to5Mac",
-        "Formula 1 News",
-        "Sky Sports Global"
+        "BleepingComputer"
       ],
       "status": "publish",
-      "title": "Leclerc edges Antonelli to complete US GP practice double",
-      "wp_id": 34847
+      "title": "Abandoned Popcorn Time app exposed millions of devices to RCE attacks",
+      "wp_id": 34860
     }
   ],
   "state": "published"
