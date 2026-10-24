@@ -2,38 +2,25 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5069,
-  "finished_at": "2026-10-24T06:32:22.508227+00:00",
-  "generation_failures": [
-    "Skipped candidate 'NASA lays out plan for Artemis 3 moon-lander test flight \u2014but when will it launch?': Free article failed quality gate: article has only 243 words; 1 repeated sentence(s)",
-    "Skipped candidate 'SpaceX launches Starlink satellites from California as Falcon 9 cadence slows (photos)': Free article failed quality gate: article has only 220 words",
-    "Skipped candidate 'Avengers: Doomsday Casts Sandra H\u00fcller in Cameo Role': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Bolsonaro apologises twice to Lula in a calmer final debate as polls show a dead heat': Free article failed quality gate: article has only 225 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Ken Atchity, \u2018The Meg\u2019 Producer and Literary Agent, Dies at 82': Free article failed quality gate: article has only 232 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Zendaya Sets Best Actress Oscar Campaign for Dune: Part 3': Free article failed quality gate: article has only 155 words; article has only 5 paragraphs",
-    "Skipped candidate 'Ethan Klein Says He\u2019s Working to \u201cUrgently Remove My Ownership, Financial Stakes\u201d From H3 Podcast After Wife Hila Klein Reveals His Affair': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Chappell Roan Enlists PinkPantheress to Close Out Super Graphic Spectacular Fundraising Shows': Free article failed quality gate: article has only 289 words",
-    "Skipped candidate 'Ken Atchity, Producer on \u2018Joe Somebody\u2019 and \u2018The Meg,\u2019 Dies at 82': Free article failed quality gate: article has only 245 words",
-    "Skipped candidate '\u2018Crawl 2\u2019 Adds Sarah Niles, Ray Panthaki and 3 More Ahead of 2027 Paramount Release (Exclusive)': Free article failed quality gate: article has only 296 words",
-    "Skipped candidate '\u2018It\u2019s part of our history\u2019: can the men\u00fa del d\u00eda survive Spain\u2019s changing eating habits?': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Live: Hundreds of protests expected in France amid high tensions and heavy police presence': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'LOCAL ELECTIONS 2026: Slovo Park could be a Joburg success, but residents have lost hope in elections': Free article failed quality gate: 1 repeated sentence(s)"
-  ],
-  "inserted": 141,
-  "message": "Published 1 post(s). Skipped 13 low-quality candidate(s).",
+  "fetched": 5077,
+  "finished_at": "2026-10-24T11:31:23.023819+00:00",
+  "generation_failures": [],
+  "inserted": 224,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "crime",
-        "politics",
-        "world"
+        "world",
+        "defense",
+        "space"
       ],
       "sources": [
-        "BBC Crime"
+        "BBC World",
+        "France 24"
       ],
       "status": "publish",
-      "title": "The gang murder and the women who went to the White House",
-      "wp_id": 34880
+      "title": "Ukraine says Starlink and Starshield connection 'stable' again",
+      "wp_id": 34897
     }
   ],
   "state": "published"
