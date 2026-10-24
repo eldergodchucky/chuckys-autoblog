@@ -1,32 +1,28 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5059,
-  "finished_at": "2026-10-24T20:22:47.594154+00:00",
+  "fetched": 5068,
+  "finished_at": "2026-10-24T22:40:50.003696+00:00",
   "generation_failures": [
-    "Skipped candidate 'Observe El Ni\u00f1o with NASA': Free article failed quality gate: article has only 182 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'This Week In Space podcast: Episode 233 \u2014 The Artemis Generation': Free article failed quality gate: article has only 264 words; 1 repeated sentence(s)",
-    "Skipped candidate 'On this day in space! Oct. 24, 1946: V-2 rocket takes 1st photos of Earth from space': Free article failed quality gate: article has only 281 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Ukraine\u2019s military says Starlink satellite connection stable after recent restrictions': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Andrew Garfield and Gabrielle Union Attend Ferragamo Dinner in Beverly Hills and More Red Carpet Photos: October 2026': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'The Surprise Guest in \u2018You Can See Everything\u2019 Could Win an Oscar. Should They?': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Box Office: \u2018Clayface\u2019 Lands at No. 1 with $10.4 Million Debut, \u2018You Can See Everything\u2019 Adds $6.14 Million on Friday': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'If Tesla\u2019s Robotaxi Miles Keep Compounding at 20% a Week, the Math Gets Interesting Fast': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 188,
-  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
+  "inserted": 114,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "culture",
-        "entertainment"
+        "world",
+        "energy",
+        "defense"
       ],
       "sources": [
-        "BBC Culture & Arts"
+        "TechCrunch",
+        "The Hindu World"
       ],
       "status": "publish",
-      "title": "TV stars to marry in chapel home after proposal 'on Welsh soil'",
-      "wp_id": 34941
+      "title": "Starlink seems to be working normally again in Ukraine",
+      "wp_id": 34954
     }
   ],
   "state": "published"
