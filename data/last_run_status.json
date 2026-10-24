@@ -2,25 +2,24 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5077,
-  "finished_at": "2026-10-24T11:31:23.023819+00:00",
+  "fetched": 5064,
+  "finished_at": "2026-10-24T14:49:39.741689+00:00",
   "generation_failures": [],
-  "inserted": 224,
+  "inserted": 230,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "defense",
-        "space"
+        "security",
+        "ai",
+        "science"
       ],
       "sources": [
-        "BBC World",
-        "France 24"
+        "WIRED Security"
       ],
       "status": "publish",
-      "title": "Ukraine says Starlink and Starshield connection 'stable' again",
-      "wp_id": 34897
+      "title": "The PHP Meltdown Shows How AI Makes Bugs More Exploitable",
+      "wp_id": 34914
     }
   ],
   "state": "published"
