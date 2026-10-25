@@ -2,29 +2,26 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5070,
-  "finished_at": "2026-10-25T14:24:36.335172+00:00",
+  "fetched": 5061,
+  "finished_at": "2026-10-25T17:47:07.753771+00:00",
   "generation_failures": [
     "Skipped candidate 'Eye of Sauron: long-range hidden spy camera detection and positioning with inbuilt memory EM radiation': Free article failed quality gate: article has only 204 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Polls open in Brazil presidential runoff': Free article failed quality gate: article has only 214 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Hundreds of thousands march in France to protest against government': Free article failed quality gate: article has only 212 words; 1 repeated sentence(s)",
-    "Skipped candidate 'On this day in space! Oct. 25, 1671: Astronomer Giovanni Cassini discovers Iapetus, Saturn's 'yin-yang' moon': Free article failed quality gate: article has only 219 words; 1 repeated sentence(s)",
-    "Skipped candidate 'October's 'Hunter's Moon' stalks into the autumn sky tonight: Here's what you need to know': Free article failed quality gate: article has only 232 words; 1 repeated sentence(s)"
+    "Skipped candidate 'Building Passive Headphones': Free article failed quality gate: article has only 170 words; article has only 5 paragraphs; 1 repeated sentence(s)"
   ],
-  "inserted": 246,
-  "message": "Published 1 post(s). Skipped 5 low-quality candidate(s).",
+  "inserted": 206,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "entertainment"
+        "gadgets",
+        "gaming"
       ],
       "sources": [
-        "Fortune Global"
+        "WIRED Gear"
       ],
       "status": "publish",
-      "title": "Rich Eisen went from SportsCenter to NFL Network to owning his show",
-      "wp_id": 35021
+      "title": "Wallhack M-001 Review: When Fun Overrides Specs",
+      "wp_id": 35035
     }
   ],
   "state": "published"
