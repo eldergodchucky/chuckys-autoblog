@@ -2,27 +2,36 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5068,
-  "finished_at": "2026-10-24T22:40:50.003696+00:00",
+  "fetched": 5091,
+  "finished_at": "2026-10-25T00:34:19.146704+00:00",
   "generation_failures": [
-    "Skipped candidate 'If Tesla\u2019s Robotaxi Miles Keep Compounding at 20% a Week, the Math Gets Interesting Fast': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'Ukraine\u2019s military says Starlink satellite connection stable after recent restrictions': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Israelis hold final rally against Netanyahu ahead of what may be the most consequential election in the country\u2019s history': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Hundreds of thousands march across France in protests over schools and policing': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate '\u2018SNL U.K.\u2019 Cold Open Spoofs Andy Burnham on \u2018Gogglebox,\u2019 Prince William on \u2018The Graham Norton Show,\u2019 \u2018The Celebrity Traitors\u2019 and More': Free article failed quality gate: article has only 270 words; 3 repeated sentence(s)",
+    "Skipped candidate 'Violent clashes as Albanian government cracks down on protests': Free article failed quality gate: article has only 213 words",
+    "Skipped candidate 'California leaders rebuke Trump administration\u2019s push over alleged noncitizen voting': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Brazil\u2019s candidates hold final rallies before knife-edge run off': Free article failed quality gate: article has only 242 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Tens of thousands of Lula supporters rally on eve of Brazilian election runoff': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'California leaders rebuke Trump administration\u2019s push over alleged noncitizen voting': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate ''The marches went well' \u2013 French government on demonstrations a week after looting and violence': Free article failed quality gate: article has only 263 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Deals: iPhone Duo launches, faces off against Galaxy Z Fold8, Motorola Razr Fold and others': Free article failed quality gate: article has only 260 words; 1 repeated sentence(s)"
   ],
-  "inserted": 114,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 76,
+  "message": "Published 1 post(s). Skipped 11 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
         "energy",
-        "defense"
+        "business",
+        "sports"
       ],
       "sources": [
-        "TechCrunch",
-        "The Hindu World"
+        "CleanTechnica Global"
       ],
       "status": "publish",
-      "title": "Starlink seems to be working normally again in Ukraine",
-      "wp_id": 34954
+      "title": "Volkswagen Unleashes Wicked ID. Unyx 09 in China for $27",
+      "wp_id": 34965
     }
   ],
   "state": "published"
