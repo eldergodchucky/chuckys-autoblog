@@ -2,33 +2,23 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5068,
-  "finished_at": "2026-10-25T20:30:16.438765+00:00",
-  "generation_failures": [
-    "Skipped candidate 'New animal model offers more precise way to study calorie-burning brown fat': Free article failed quality gate: article has only 243 words; 1 repeated sentence(s)",
-    "Skipped candidate 'New animal model offers more precise way to study calorie-burning brown fat': Free article failed quality gate: article has only 243 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Beyond national interest: role of ethics and emotions in world politics': Free article failed quality gate: article has only 192 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Can psychedelics soothe an overactive immune system? New meta-analysis investigates': Free article failed quality gate: article has only 248 words",
-    "Skipped candidate 'Can psychedelics soothe an overactive immune system? New meta-analysis investigates': Free article failed quality gate: article has only 248 words",
-    "Skipped candidate 'How the menstrual cycle might alter ADHD symptoms in women taking stimulant medication': Free article failed quality gate: article has only 210 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Young adults who fear rejection also tend to fear death more, psychology study finds': Free article failed quality gate: article has only 209 words; 1 repeated sentence(s)"
-  ],
-  "inserted": 187,
-  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
+  "fetched": 5073,
+  "finished_at": "2026-10-25T22:48:07.114317+00:00",
+  "generation_failures": [],
+  "inserted": 101,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "health",
-        "defense"
+        "crime",
+        "politics"
       ],
       "sources": [
-        "Al Jazeera",
-        "The Hindu World"
+        "BBC Crime"
       ],
       "status": "publish",
-      "title": "Israeli air strikes kill several across Gaza Strip: local authorities",
-      "wp_id": 35048
+      "title": "Board of Deputies of British Jews declares Greens to be racist party",
+      "wp_id": 35061
     }
   ],
   "state": "published"
