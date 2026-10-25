@@ -2,26 +2,29 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5077,
-  "finished_at": "2026-10-25T10:03:07.767202+00:00",
+  "fetched": 5070,
+  "finished_at": "2026-10-25T14:24:36.335172+00:00",
   "generation_failures": [
-    "Skipped candidate 'Brazil chooses between Lula and Bolsonaro in its tightest runoff in recent history': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'Eye of Sauron: long-range hidden spy camera detection and positioning with inbuilt memory EM radiation': Free article failed quality gate: article has only 204 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Polls open in Brazil presidential runoff': Free article failed quality gate: article has only 214 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Hundreds of thousands march in France to protest against government': Free article failed quality gate: article has only 212 words; 1 repeated sentence(s)",
+    "Skipped candidate 'On this day in space! Oct. 25, 1671: Astronomer Giovanni Cassini discovers Iapetus, Saturn's 'yin-yang' moon': Free article failed quality gate: article has only 219 words; 1 repeated sentence(s)",
+    "Skipped candidate 'October's 'Hunter's Moon' stalks into the autumn sky tonight: Here's what you need to know': Free article failed quality gate: article has only 232 words; 1 repeated sentence(s)"
   ],
-  "inserted": 164,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 246,
+  "message": "Published 1 post(s). Skipped 5 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "world",
-        "history"
+        "business",
+        "entertainment"
       ],
       "sources": [
-        "BBC Sport"
+        "Fortune Global"
       ],
       "status": "publish",
-      "title": "Antonelli stands on brink of history in Austin",
-      "wp_id": 35003
+      "title": "Rich Eisen went from SportsCenter to NFL Network to owning his show",
+      "wp_id": 35021
     }
   ],
   "state": "published"
