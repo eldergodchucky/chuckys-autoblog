@@ -2,27 +2,26 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5092,
-  "finished_at": "2026-10-25T05:22:15.662651+00:00",
+  "fetched": 5077,
+  "finished_at": "2026-10-25T10:03:07.767202+00:00",
   "generation_failures": [
-    "Skipped candidate 'Littler seals second-best average ever at European Championship': Free article failed quality gate: 2 repeated sentence(s)"
+    "Skipped candidate 'Brazil chooses between Lula and Bolsonaro in its tightest runoff in recent history': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 77,
+  "inserted": 164,
   "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "entertainment",
-        "culture",
-        "sports"
+        "sports",
+        "world",
+        "history"
       ],
       "sources": [
-        "The Hollywood Reporter",
-        "Variety"
+        "BBC Sport"
       ],
       "status": "publish",
-      "title": "Navarrete vs. Foster Livestream: Where to Watch the Title Fight Online",
-      "wp_id": 34983
+      "title": "Antonelli stands on brink of history in Austin",
+      "wp_id": 35003
     }
   ],
   "state": "published"
