@@ -2,26 +2,33 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5061,
-  "finished_at": "2026-10-25T17:47:07.753771+00:00",
+  "fetched": 5068,
+  "finished_at": "2026-10-25T20:30:16.438765+00:00",
   "generation_failures": [
-    "Skipped candidate 'Eye of Sauron: long-range hidden spy camera detection and positioning with inbuilt memory EM radiation': Free article failed quality gate: article has only 204 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Building Passive Headphones': Free article failed quality gate: article has only 170 words; article has only 5 paragraphs; 1 repeated sentence(s)"
+    "Skipped candidate 'New animal model offers more precise way to study calorie-burning brown fat': Free article failed quality gate: article has only 243 words; 1 repeated sentence(s)",
+    "Skipped candidate 'New animal model offers more precise way to study calorie-burning brown fat': Free article failed quality gate: article has only 243 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Beyond national interest: role of ethics and emotions in world politics': Free article failed quality gate: article has only 192 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Can psychedelics soothe an overactive immune system? New meta-analysis investigates': Free article failed quality gate: article has only 248 words",
+    "Skipped candidate 'Can psychedelics soothe an overactive immune system? New meta-analysis investigates': Free article failed quality gate: article has only 248 words",
+    "Skipped candidate 'How the menstrual cycle might alter ADHD symptoms in women taking stimulant medication': Free article failed quality gate: article has only 210 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Young adults who fear rejection also tend to fear death more, psychology study finds': Free article failed quality gate: article has only 209 words; 1 repeated sentence(s)"
   ],
-  "inserted": 206,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 187,
+  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "gaming"
+        "world",
+        "health",
+        "defense"
       ],
       "sources": [
-        "WIRED Gear"
+        "Al Jazeera",
+        "The Hindu World"
       ],
       "status": "publish",
-      "title": "Wallhack M-001 Review: When Fun Overrides Specs",
-      "wp_id": 35035
+      "title": "Israeli air strikes kill several across Gaza Strip: local authorities",
+      "wp_id": 35048
     }
   ],
   "state": "published"
