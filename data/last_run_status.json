@@ -2,31 +2,28 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5088,
-  "finished_at": "2026-10-26T01:02:04.138056+00:00",
+  "fetched": 5073,
+  "finished_at": "2026-10-26T06:01:56.395201+00:00",
   "generation_failures": [
-    "Skipped candidate 'Bullet left on Victorian Labor minister\u2019s car with \u2018RAT\u2019 etched on to it': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'GREEN CORRIDOR CHAOS: Cable thieves, sewage spills and invasive plants are choking the Baakens Valley': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'UNHEALTHY ALTERCATION: Union demands Kariega hospital security upgrades after violent trauma unit clash': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Lula pulls off Brazil\u2019s first-ever run-off comeback to beat Trump ally Flavio Bolsonaro': Free article failed quality gate: 3 repeated sentence(s)",
-    "Skipped candidate '\u2018Like a stone in our hearts\u2019: PM leads Helen Haines tributes as parliament pauses to praise \u2018fighter\u2019': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Australia politics live: MPs to honour Haines with \u2018civility pledge\u2019 and orange cockatoos; access to contraception and UTI treatment to become cheaper and easier': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest': Free article failed quality gate: article has only 167 words; article has only 5 paragraphs; 1 repeated sentence(s)"
   ],
-  "inserted": 94,
-  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "inserted": 177,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "health",
-        "culture"
+        "business",
+        "crypto",
+        "ai"
       ],
       "sources": [
-        "Daily Maverick"
+        "CNBC International",
+        "CoinDesk",
+        "MarketWatch"
       ],
       "status": "publish",
-      "title": "SHOT IN THE ARM: Doctors break ground on new R528m Baywest hospital",
-      "wp_id": 35071
+      "title": "SpaceX closes $40 billion debt deal for AI chips",
+      "wp_id": 35095
     }
   ],
   "state": "published"
