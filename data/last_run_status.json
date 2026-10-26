@@ -2,28 +2,41 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5073,
-  "finished_at": "2026-10-26T06:01:56.395201+00:00",
+  "fetched": 5062,
+  "finished_at": "2026-10-26T12:48:23.491718+00:00",
   "generation_failures": [
-    "Skipped candidate 'AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest': Free article failed quality gate: article has only 167 words; article has only 5 paragraphs; 1 repeated sentence(s)"
+    "Skipped candidate 'New 3D thermal invisibility cloak makes objects disappear from infrared cameras': Free article failed quality gate: article has only 217 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'OnePlus Buds Clip go official with dual drivers and up to 40 hours of battery life': Free article failed quality gate: article has only 281 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Political endorsements by scientific journals reduce public trust in research': Free article failed quality gate: article has only 201 words; 1 repeated sentence(s)",
+    "Skipped candidate 'A Simple Diet Change Could Transform Kidney Disease Treatment, 10-Year Study Finds': Free article failed quality gate: article has only 226 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Medical education: How are residents using AI?': Free article failed quality gate: article has only 225 words; 2 repeated sentence(s)",
+    "Skipped candidate 'Medical education: How are residents using AI?': Free article failed quality gate: article has only 225 words; 2 repeated sentence(s)",
+    "Skipped candidate 'Scientists Discover a Protective Gene That Could Help Keep the Brain Young': Free article failed quality gate: article has only 226 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Scientists identify rare mutations in 36 genes that sharply raise the odds of OCD and tic disorders': Free article failed quality gate: article has only 222 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Why do people with psychopathic traits enjoy fear? New psychology research offers a clue': Free article failed quality gate: article has only 190 words",
+    "Skipped candidate 'Exercise doesn't just strengthen your heart. It rewires it': Free article failed quality gate: article has only 168 words",
+    "Skipped candidate 'Exercise doesn't just strengthen your heart. It rewires it': Free article failed quality gate: article has only 168 words",
+    "Skipped candidate 'Exercise doesn't just strengthen your heart. It rewires it': Free article failed quality gate: article has only 160 words",
+    "Skipped candidate 'The pet I\u2019ll never forget: Clement was hit by a car and left to die in a ditch \u2013 then found his beautiful purpose': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'NHS consultants to go on two-day strike in England in November, says BMA': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate '\u2018It\u2019s a mess right now\u2019: RFK\u2019s sweeping changes place new vaccines in limbo': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate '\u2018It\u2019s a mess right now\u2019: RFK\u2019s sweeping changes place new vaccines in limbo': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 177,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 524,
+  "message": "Published 1 post(s). Skipped 16 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "crypto",
-        "ai"
+        "health",
+        "world",
+        "politics"
       ],
       "sources": [
-        "CNBC International",
-        "CoinDesk",
-        "MarketWatch"
+        "AllAfrica"
       ],
       "status": "publish",
-      "title": "SpaceX closes $40 billion debt deal for AI chips",
-      "wp_id": 35095
+      "title": "Nigeria: Ebola - Nigeria's Index Patient Evacuated to Switzerland",
+      "wp_id": 35124
     }
   ],
   "state": "published"
