@@ -2,23 +2,31 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5073,
-  "finished_at": "2026-10-25T22:48:07.114317+00:00",
-  "generation_failures": [],
-  "inserted": 101,
-  "message": "Published 1 post(s).",
+  "fetched": 5088,
+  "finished_at": "2026-10-26T01:02:04.138056+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Bullet left on Victorian Labor minister\u2019s car with \u2018RAT\u2019 etched on to it': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'GREEN CORRIDOR CHAOS: Cable thieves, sewage spills and invasive plants are choking the Baakens Valley': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'UNHEALTHY ALTERCATION: Union demands Kariega hospital security upgrades after violent trauma unit clash': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Lula pulls off Brazil\u2019s first-ever run-off comeback to beat Trump ally Flavio Bolsonaro': Free article failed quality gate: 3 repeated sentence(s)",
+    "Skipped candidate '\u2018Like a stone in our hearts\u2019: PM leads Helen Haines tributes as parliament pauses to praise \u2018fighter\u2019': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Australia politics live: MPs to honour Haines with \u2018civility pledge\u2019 and orange cockatoos; access to contraception and UTI treatment to become cheaper and easier': Free article failed quality gate: 1 repeated sentence(s)"
+  ],
+  "inserted": 94,
+  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "crime",
-        "politics"
+        "world",
+        "health",
+        "culture"
       ],
       "sources": [
-        "BBC Crime"
+        "Daily Maverick"
       ],
       "status": "publish",
-      "title": "Board of Deputies of British Jews declares Greens to be racist party",
-      "wp_id": 35061
+      "title": "SHOT IN THE ARM: Doctors break ground on new R528m Baywest hospital",
+      "wp_id": 35071
     }
   ],
   "state": "published"
