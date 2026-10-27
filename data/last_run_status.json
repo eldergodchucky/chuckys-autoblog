@@ -1,60 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5030,
-  "finished_at": "2026-10-26T23:10:00.022699+00:00",
+  "fetched": 5081,
+  "finished_at": "2026-10-27T02:07:30.833278+00:00",
   "generation_failures": [
-    "Skipped candidate 'iOS 27.2 Lets You Watch Four Live Sports Streams on iPhone': Free article failed quality gate: article has only 271 words; 3 repeated sentence(s)",
-    "Skipped candidate 'Instagram takes on YouTube with new 90-minute horizontal video format': Free article failed quality gate: article has only 133 words; article has only 5 paragraphs",
-    "Skipped candidate 'iOS 27.2 Features: Everything New in iOS 27.2': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate 'iPhone AI Images and Edits Now Have a Hidden Watermark': Free article failed quality gate: article has only 239 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Ollama for Mac gains support for local text-to-speech models': Free article failed quality gate: article has only 163 words; article has only 5 paragraphs",
-    "Skipped candidate 'Toastie Might Be the Weirdest iPhone Duo Game So Far': Free article failed quality gate: article has only 282 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Apple Says Siri AI Will Support Even More Languages Later This Year': Free article failed quality gate: article has only 186 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Analog astronauts: How living underwater can prepare humans for space missions': Free article failed quality gate: article has only 258 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Lithium removal extends perovskite solar cell lifespan to advance commercialization efforts': Free article failed quality gate: article has only 177 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Added antibody step improves the reliability of Alzheimer's blood tests': Free article failed quality gate: article has only 268 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Added antibody step improves the reliability of Alzheimer's blood tests': Free article failed quality gate: article has only 268 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Meta plans to raise $35 billion to fund its AI ambitions': Free article failed quality gate: article has only 167 words",
-    "Skipped candidate 'Rare gene variants linked to dental differences that shape our smiles': Free article failed quality gate: article has only 272 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Rare gene variants linked to dental differences that shape our smiles': Free article failed quality gate: article has only 272 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Weight-loss surgery produces lasting diabetes remission, long-term study finds': Free article failed quality gate: article has only 224 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Weight-loss surgery produces lasting diabetes remission, long-term study finds': Free article failed quality gate: article has only 224 words; 1 repeated sentence(s)",
-    "Skipped candidate 'New targeted therapy improved survival for patients with KRAS-mutated lung cancer': Free article failed quality gate: article has only 234 words",
-    "Skipped candidate 'New targeted therapy improved survival for patients with KRAS-mutated lung cancer': Free article failed quality gate: article has only 234 words",
-    "Skipped candidate 'Location of rare cancer impacts survival, study suggests': Free article failed quality gate: article has only 188 words",
-    "Skipped candidate 'Location of rare cancer impacts survival, study suggests': Free article failed quality gate: article has only 188 words",
-    "Skipped candidate 'Large meta-analysis sheds new light on how SGLT2 inhibitors affect blood and iron parameters': Free article failed quality gate: article has only 219 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Large meta-analysis sheds new light on how SGLT2 inhibitors affect blood and iron parameters': Free article failed quality gate: article has only 219 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Small deep brain structure may play major role in sustaining working memory, mouse experiments suggest': Free article failed quality gate: article has only 284 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Serbian student movement eyes power after election triumph': Free article failed quality gate: article has only 266 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Shared framework aims to redefine heart health for girls and women': Free article failed quality gate: article has only 262 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Small deep brain structure may play major role in sustaining working memory, mouse experiments suggest': Free article failed quality gate: article has only 284 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Shared framework aims to redefine heart health for girls and women': Free article failed quality gate: article has only 262 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Airborne ESKAPE pathogens at inner-city clinic resist advanced antibiotics': Free article failed quality gate: article has only 193 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Airborne ESKAPE pathogens at inner-city clinic resist advanced antibiotics': Free article failed quality gate: article has only 193 words; 1 repeated sentence(s)",
-    "Skipped candidate 'A pixel art fish tank for the Interstate 75 matrix LED controller for two panel displays': Free article failed quality gate: article has only 208 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Amazon cuts 35% off the ELEPHAS Roku TV smart projector': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'GameSir Pocket Taco gets a 20% discount on Amazon': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Samsung\u2019s Switch 2-ready MicroSD Express card is on sale for less than $50': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate 'Brazil\u2019s Vote Is a Victory for the Amazon, Environmentalists Say': Free article failed quality gate: article has only 175 words; 1 repeated sentence(s)"
+    "Skipped candidate 'OpenAI Launches GPT-6.1 Terra, Its Half-Good AI Model at Half the Price': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Injective launches onchain futures market tracking Nvidia GPU rental costs': Free article failed quality gate: article has only 170 words; article has only 5 paragraphs"
   ],
-  "inserted": 341,
-  "message": "Published 1 post(s). Skipped 34 low-quality candidate(s).",
+  "inserted": 131,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "energy",
-        "business",
-        "software"
+        "crypto"
       ],
       "sources": [
-        "OilPrice Energy"
+        "Decrypt"
       ],
       "status": "publish",
-      "title": "Alleged Russian Funding Prompts Executive Exodus at U.S. LNG Firm",
-      "wp_id": 35160
+      "title": "Canada\u2019s Draft Stablecoin Rules Cap Redemption Fees at 1% and Ban Yield",
+      "wp_id": 35172
     }
   ],
   "state": "published"
