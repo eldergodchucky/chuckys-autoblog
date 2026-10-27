@@ -1,26 +1,29 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5081,
-  "finished_at": "2026-10-27T02:07:30.833278+00:00",
+  "fetched": 5079,
+  "finished_at": "2026-10-27T07:54:03.708396+00:00",
   "generation_failures": [
-    "Skipped candidate 'OpenAI Launches GPT-6.1 Terra, Its Half-Good AI Model at Half the Price': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Injective launches onchain futures market tracking Nvidia GPU rental costs': Free article failed quality gate: article has only 170 words; article has only 5 paragraphs"
+    "Skipped candidate 'Chinese scientists create powerful catalyst to turn air on Mars into rocket fuel': Free article failed quality gate: article has only 251 words; article has only 5 paragraphs; 1 repeated sentence(s)"
   ],
-  "inserted": 131,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 237,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "crypto"
+        "world",
+        "sports",
+        "entertainment"
       ],
       "sources": [
-        "Decrypt"
+        "BBC World",
+        "France 24",
+        "The Hindu World"
       ],
       "status": "publish",
-      "title": "Canada\u2019s Draft Stablecoin Rules Cap Redemption Fees at 1% and Ban Yield",
-      "wp_id": 35172
+      "title": "Mbappe dropped by Chinese brands for \u2018offending national sentiments\u2019",
+      "wp_id": 35194
     }
   ],
   "state": "published"
