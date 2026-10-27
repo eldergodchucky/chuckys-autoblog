@@ -1,29 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5079,
-  "finished_at": "2026-10-27T07:54:03.708396+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Chinese scientists create powerful catalyst to turn air on Mars into rocket fuel': Free article failed quality gate: article has only 251 words; article has only 5 paragraphs; 1 repeated sentence(s)"
-  ],
-  "inserted": 237,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "fetched": 5066,
+  "finished_at": "2026-10-27T14:04:43.258611+00:00",
+  "generation_failures": [],
+  "inserted": 595,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "sports",
-        "entertainment"
+        "apple",
+        "ai",
+        "culture"
       ],
       "sources": [
-        "BBC World",
-        "France 24",
-        "The Hindu World"
+        "9to5Mac",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Mbappe dropped by Chinese brands for \u2018offending national sentiments\u2019",
-      "wp_id": 35194
+      "title": "Opera One now lets Mac users run Apple\u2019s foundation model directly",
+      "wp_id": 35211
     }
   ],
   "state": "published"
