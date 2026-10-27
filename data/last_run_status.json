@@ -2,45 +2,23 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5074,
-  "finished_at": "2026-10-27T19:28:13.462699+00:00",
-  "generation_failures": [
-    "Skipped candidate 'How a Montreal neighborhood could meet more of its own food, energy and water needs': Free article failed quality gate: article has only 241 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Glioblastoma's secret weapon: Silencing the brain's off switch': Free article failed quality gate: article has only 286 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Glioblastoma's secret weapon: Silencing the brain's off switch': Free article failed quality gate: article has only 286 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Slovenia mourns loss of glacier on its highest peak after scorching summer': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Viruses obey the laws of physics\u2014understanding why they infect people differently could lead to better treatments': Free article failed quality gate: article has only 222 words",
-    "Skipped candidate 'Viruses obey the laws of physics\u2014understanding why they infect people differently could lead to better treatments': Free article failed quality gate: article has only 222 words",
-    "Skipped candidate 'Highest endometrial cancer rates found in San Antonio region': Free article failed quality gate: article has only 241 words",
-    "Skipped candidate 'Highest endometrial cancer rates found in San Antonio region': Free article failed quality gate: article has only 241 words",
-    "Skipped candidate 'Planned power shutoffs aimed at preventing wildfires may increase risk of acute respiratory illness': Free article failed quality gate: article has only 249 words; 2 repeated sentence(s)",
-    "Skipped candidate 'Planned power shutoffs aimed at preventing wildfires may increase risk of acute respiratory illness': Free article failed quality gate: article has only 249 words; 2 repeated sentence(s)",
-    "Skipped candidate 'Blood pressure pregnancy clue could open door to new treatments': Free article failed quality gate: article has only 224 words",
-    "Skipped candidate 'Blood pressure pregnancy clue could open door to new treatments': Free article failed quality gate: article has only 224 words",
-    "Skipped candidate 'Most childhood physical abuse perpetrated within the home, new study finds': Free article failed quality gate: article has only 175 words",
-    "Skipped candidate 'Most childhood physical abuse perpetrated within the home, new study finds': Free article failed quality gate: article has only 175 words",
-    "Skipped candidate 'Nurse-led program shown to improve midlife dementia risk profiles in new study': Free article failed quality gate: article has only 217 words",
-    "Skipped candidate 'Nurse-led program shown to improve midlife dementia risk profiles in new study': Free article failed quality gate: article has only 217 words",
-    "Skipped candidate 'Switching on healthy silent genes reveals new way to treat Prader-Willi syndrome': Free article failed quality gate: article has only 205 words",
-    "Skipped candidate 'Switching on healthy silent genes reveals new way to treat Prader-Willi syndrome': Free article failed quality gate: article has only 205 words",
-    "Skipped candidate 'Household chaos does not directly cause poor grades, twin study suggests': Free article failed quality gate: article has only 200 words",
-    "Skipped candidate 'Higher medical fees increase expected pain and reduce willingness to book appointments': Free article failed quality gate: article has only 232 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Higher medical fees increase expected pain and reduce willingness to book appointments': Free article failed quality gate: article has only 232 words; 1 repeated sentence(s)"
-  ],
-  "inserted": 589,
-  "message": "Published 1 post(s). Skipped 21 low-quality candidate(s).",
+  "fetched": 5080,
+  "finished_at": "2026-10-27T23:05:42.185908+00:00",
+  "generation_failures": [],
+  "inserted": 351,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "business"
+        "android",
+        "entertainment"
       ],
       "sources": [
-        "WIRED Science"
+        "Android Authority"
       ],
       "status": "publish",
-      "title": "Anthropic Flags Gas Supply as One of Its Biggest Near-Term Risks",
-      "wp_id": 35226
+      "title": "Score $100 off the XGIMI MoGo 4 portable projector",
+      "wp_id": 35237
     }
   ],
   "state": "published"
