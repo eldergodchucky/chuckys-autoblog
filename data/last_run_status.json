@@ -2,23 +2,33 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5080,
-  "finished_at": "2026-10-27T23:05:42.185908+00:00",
-  "generation_failures": [],
-  "inserted": 351,
-  "message": "Published 1 post(s).",
+  "fetched": 5089,
+  "finished_at": "2026-10-28T02:18:06.086421+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Drinking Tea May Lower Your Risk of Vascular Disease \u2013 but There\u2019s a Catch': Free article failed quality gate: article has only 213 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Trump\u2019s cuts have exposed US to \u2018cascade\u2019 of El Ni\u00f1o dangers, experts warn': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Trump says government to \u2018terminate\u2019 Biden-era methane emissions rules': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate '\u2018Altadena: One Fire After Another\u2019 Documentary Set by Former \u201960 Minutes\u2019 Producers (EXCLUSIVE)': Free article failed quality gate: article has only 276 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Trump says government to \u2018terminate\u2019 Biden-era methane emissions rules': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate '\u2018I use disposable cups\u2019: Chris Minns backflips on takeaway coffee cups after media and business backlash': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Politico Plans Live Video Coverage of Midterm Elections': Free article failed quality gate: article has only 276 words; 2 repeated sentence(s)",
+    "Skipped candidate 'Why were you shown that ad? Most platforms still won't say, despite EU law': Free article failed quality gate: article has only 244 words; article has only 5 paragraphs",
+    "Skipped candidate 'Apple Shares tvOS 27.2 Release Notes With List of New Features': Free article failed quality gate: 2 repeated sentence(s)"
+  ],
+  "inserted": 152,
+  "message": "Published 1 post(s). Skipped 9 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "android",
-        "entertainment"
+        "ai",
+        "software"
       ],
       "sources": [
-        "Android Authority"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Score $100 off the XGIMI MoGo 4 portable projector",
-      "wp_id": 35237
+      "title": "Parents sue OpenAI, alleging GPT-4o coached their daughter off seizure medication",
+      "wp_id": 35253
     }
   ],
   "state": "published"
