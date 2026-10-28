@@ -2,26 +2,27 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5104,
-  "finished_at": "2026-10-28T15:48:03.621185+00:00",
+  "fetched": 5081,
+  "finished_at": "2026-10-28T20:50:45.625710+00:00",
   "generation_failures": [
-    "Skipped candidate 'Three new discoveries in mathematics, computer science, and physics': Free article failed quality gate: article has only 191 words; 1 repeated sentence(s)"
+    "Skipped candidate 'Practice Japanese on an Inkplate 4Tempera eInk device, open source': Free article failed quality gate: article has only 178 words; 1 repeated sentence(s)"
   ],
-  "inserted": 678,
+  "inserted": 590,
   "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "health",
-        "ai"
+        "gaming",
+        "gadgets",
+        "business"
       ],
       "sources": [
-        "Fortune Global"
+        "Engadget",
+        "IGN"
       ],
       "status": "publish",
-      "title": "Waters\u2019 new AI tool targets one of the pharmaceutical industry\u2019s most tedious",
-      "wp_id": 35301
+      "title": "Sony's new see-through DualSense controllers let you game like its 1999",
+      "wp_id": 35317
     }
   ],
   "state": "published"
