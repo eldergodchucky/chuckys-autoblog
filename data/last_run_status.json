@@ -2,24 +2,26 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5081,
-  "finished_at": "2026-10-28T08:55:12.776293+00:00",
-  "generation_failures": [],
-  "inserted": 310,
-  "message": "Published 1 post(s).",
+  "fetched": 5104,
+  "finished_at": "2026-10-28T15:48:03.621185+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Three new discoveries in mathematics, computer science, and physics': Free article failed quality gate: article has only 191 words; 1 repeated sentence(s)"
+  ],
+  "inserted": 678,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "politics",
-        "crime"
+        "business",
+        "health",
+        "ai"
       ],
       "sources": [
-        "AllAfrica"
+        "Fortune Global"
       ],
       "status": "publish",
-      "title": "Tanzania: Authorities Weaponize Counterterrorism Laws to Restrict Civic Space Amid Pervasive Impunity",
-      "wp_id": 35279
+      "title": "Waters\u2019 new AI tool targets one of the pharmaceutical industry\u2019s most tedious",
+      "wp_id": 35301
     }
   ],
   "state": "published"
