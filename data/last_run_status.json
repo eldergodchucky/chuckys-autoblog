@@ -1,28 +1,37 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 17,
   "feeds": 127,
-  "fetched": 5081,
-  "finished_at": "2026-10-28T20:50:45.625710+00:00",
+  "fetched": 5048,
+  "finished_at": "2026-10-29T00:40:00.223947+00:00",
   "generation_failures": [
-    "Skipped candidate 'Practice Japanese on an Inkplate 4Tempera eInk device, open source': Free article failed quality gate: article has only 178 words; 1 repeated sentence(s)"
+    "Skipped candidate 'On this day in space! Oct. 28, 1971: Britain launches its 1st satellite Prospero into space on a Black Arrow rocket': Free article failed quality gate: article has only 232 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Tesla\u2019s Full Self Driving Has Now Dramatically Reduced the Number of Reasons to Intervene or Complain': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'EU natural gas prices top \u20ac100 for first time since 2022': Free article failed quality gate: article has only 251 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Peace Talks Won\u2019t Save Oil Buyers From $100-Plus Oil': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Waymo for Business | Ramp': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Solar Has Overtaken Nuclear in the Global Power Mix': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'After Years-Long Community Objection, Dairyland Power Pulls the Plug on NTEC Gas Plant': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'How Trump\u2019s Russian Diesel Could End Up in Cuba Instead': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Oil Refineries Become Prime Targets as Global Fuel Shortage Worsens': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Jetson Launches Fixed Price Heat Pump Water Heater with Installation Included': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Canadian \u2018crypto king\u2019 case to go to jury as criminal trial winds down': Free article failed quality gate: article has only 154 words; article has only 5 paragraphs",
+    "Skipped candidate 'Bitcoin-backed mortgages are coming to Canada, but borrowers are still unaware of the cost': Free article failed quality gate: article has only 141 words; article has only 5 paragraphs"
   ],
-  "inserted": 590,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 277,
+  "message": "Published 1 post(s). Skipped 12 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gaming",
-        "gadgets",
-        "business"
+        "crypto",
+        "ai"
       ],
       "sources": [
-        "Engadget",
-        "IGN"
+        "Decrypt"
       ],
       "status": "publish",
-      "title": "Sony's new see-through DualSense controllers let you game like its 1999",
-      "wp_id": 35317
+      "title": "Chip Maker SK Hynix Posts Record Quarter as AI Memory Demand Overwhelms",
+      "wp_id": 35333
     }
   ],
   "state": "published"
