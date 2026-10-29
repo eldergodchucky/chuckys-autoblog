@@ -2,23 +2,24 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5058,
-  "finished_at": "2026-10-29T13:39:03.412492+00:00",
+  "fetched": 5084,
+  "finished_at": "2026-10-29T19:15:57.026956+00:00",
   "generation_failures": [],
-  "inserted": 594,
+  "inserted": 552,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "security"
+        "entertainment",
+        "business",
+        "ai"
       ],
       "sources": [
-        "Daily Maverick"
+        "The Hollywood Reporter"
       ],
       "status": "publish",
-      "title": "El Salvador to send over 2",
-      "wp_id": 35381
+      "title": "Universal Music Group Posts $3.78 Billion in Revenue For Q3",
+      "wp_id": 35397
     }
   ],
   "state": "published"
