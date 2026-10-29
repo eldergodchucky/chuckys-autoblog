@@ -1,27 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 17,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 4984,
-  "finished_at": "2026-10-29T06:31:20.405617+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Huawei's Starlight brand to debut with a wide-screen phone, leak claims': Free article failed quality gate: article has only 261 words; 1 repeated sentence(s)",
-    "Skipped candidate 'GTA 6's NPCs have about 600,000 animations, as well as personality traits that take 'demographic and professional' variables into account': Free article failed quality gate: 2 repeated sentence(s)"
-  ],
-  "inserted": 232,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "fetched": 5058,
+  "finished_at": "2026-10-29T13:39:03.412492+00:00",
+  "generation_failures": [],
+  "inserted": 594,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "world"
+        "world",
+        "security"
       ],
       "sources": [
-        "Sky Sports Global"
+        "Daily Maverick"
       ],
       "status": "publish",
-      "title": "Wolff explains Antonelli turnaround after 'tears'",
-      "wp_id": 35357
+      "title": "El Salvador to send over 2",
+      "wp_id": 35381
     }
   ],
   "state": "published"
