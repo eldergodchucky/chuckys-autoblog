@@ -2,24 +2,28 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5084,
-  "finished_at": "2026-10-29T19:15:57.026956+00:00",
-  "generation_failures": [],
-  "inserted": 552,
-  "message": "Published 1 post(s).",
+  "fetched": 5086,
+  "finished_at": "2026-10-29T23:21:24.789013+00:00",
+  "generation_failures": [
+    "Skipped candidate '237-Million-Year-Old Fossils Reveal an Amphibian That Shouldn\u2019t Have Existed': Free article failed quality gate: article has only 194 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Tumor mutations and immune activity may reveal who benefits from investigational lymphoma drug': Free article failed quality gate: article has only 281 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Tumor mutations and immune activity may reveal who benefits from investigational lymphoma drug': Free article failed quality gate: article has only 281 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Hegseth reportedly fires high-ranking army strategist over alleged leaks': Free article failed quality gate: 1 repeated sentence(s)"
+  ],
+  "inserted": 369,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "entertainment",
-        "business",
-        "ai"
+        "politics",
+        "crime"
       ],
       "sources": [
-        "The Hollywood Reporter"
+        "The Guardian US Politics"
       ],
       "status": "publish",
-      "title": "Universal Music Group Posts $3.78 Billion in Revenue For Q3",
-      "wp_id": 35397
+      "title": "Trump administration opens criminal investigation over alleged noncitizen voting in California",
+      "wp_id": 35418
     }
   ],
   "state": "published"
