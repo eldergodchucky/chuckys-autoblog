@@ -2,31 +2,25 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5090,
-  "finished_at": "2026-10-30T02:49:55.877201+00:00",
+  "fetched": 5088,
+  "finished_at": "2026-10-30T09:42:57.486720+00:00",
   "generation_failures": [
-    "Skipped candidate 'iPhone Air 2 specs surface again in new leak': Free article failed quality gate: article has only 260 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Modular Desk Organizer #3DThursday #3DPrinting': Free article failed quality gate: article has only 216 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Skydance Reveals Key TV and Streaming Leadership Roles': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'El Ni\u00f1o-driven drought in Papua New Guinea a \u2018national crisis\u2019 as rivers dry up and local farms fail': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Rivian third-quarter earnings beat estimates as software revenue, R2 deliveries rise': Free article failed quality gate: article has only 159 words; article has only 5 paragraphs",
-    "Skipped candidate '8-hour BESS market \u2018completely artificial\u2019, but asymmetric registration adds value, says Tesla at All-Energy Australia 2026': Free article failed quality gate: article has only 178 words; article has only 5 paragraphs",
-    "Skipped candidate 'Volkswagen Q3 Loss Largest Since Dieselgate': Free article failed quality gate: 2 repeated sentence(s)"
+    "Skipped candidate 'The Nokia 2360 Flip is a dual-display feature phone with an SOS button': Free article failed quality gate: article has only 258 words; 1 repeated sentence(s)"
   ],
-  "inserted": 135,
-  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
+  "inserted": 421,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "history"
+        "gadgets",
+        "health"
       ],
       "sources": [
-        "Fortune Global"
+        "WIRED Gear"
       ],
       "status": "publish",
-      "title": "Alphabet just had its worst day as a public company. BofA now",
-      "wp_id": 35430
+      "title": "Gift Ideas for Friends (2026): Wellness Tech",
+      "wp_id": 35458
     }
   ],
   "state": "published"
