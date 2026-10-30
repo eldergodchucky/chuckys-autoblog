@@ -2,25 +2,36 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5088,
-  "finished_at": "2026-10-30T09:42:57.486720+00:00",
+  "fetched": 5096,
+  "finished_at": "2026-10-30T16:17:18.143607+00:00",
   "generation_failures": [
-    "Skipped candidate 'The Nokia 2360 Flip is a dual-display feature phone with an SOS button': Free article failed quality gate: article has only 258 words; 1 repeated sentence(s)"
+    "Skipped candidate 'New Treatment Strategy Makes Cancer Cells Run Out of Energy and Die': Free article failed quality gate: article has only 217 words; 1 repeated sentence(s)",
+    "Skipped candidate 'A Promising Way To Reverse Cognitive Decline Just Failed a Major Clinical Test': Free article failed quality gate: article has only 239 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Alcohol use held steady among cancer survivors': Free article failed quality gate: article has only 191 words",
+    "Skipped candidate 'Alcohol use held steady among cancer survivors': Free article failed quality gate: article has only 191 words",
+    "Skipped candidate 'CDK1 protein offers clues to which breast cancers will resist targeted therapy': Free article failed quality gate: article has only 228 words",
+    "Skipped candidate 'CDK1 protein offers clues to which breast cancers will resist targeted therapy': Free article failed quality gate: article has only 228 words",
+    "Skipped candidate 'Hospitalized medical patients may fare better when treated by female physicians, study finds': Free article failed quality gate: article has only 258 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Hospitalized medical patients may fare better when treated by female physicians, study finds': Free article failed quality gate: article has only 258 words; 1 repeated sentence(s)",
+    "Skipped candidate 'One in four Americans have exaggerated or made up symptoms to try to get antibiotics': Free article failed quality gate: article has only 266 words; 1 repeated sentence(s)",
+    "Skipped candidate 'One in four Americans have exaggerated or made up symptoms to try to get antibiotics': Free article failed quality gate: article has only 266 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Mood symptoms in bipolar disorder correlate with changes in sexual desire and distress': Free article failed quality gate: article has only 200 words"
   ],
-  "inserted": 421,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 675,
+  "message": "Published 1 post(s). Skipped 11 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "health"
+        "history",
+        "health",
+        "sports"
       ],
       "sources": [
-        "WIRED Gear"
+        "Smithsonian History"
       ],
       "status": "publish",
-      "title": "Gift Ideas for Friends (2026): Wellness Tech",
-      "wp_id": 35458
+      "title": "Three in Four Former NFL Players Who Died From 2008 Through 2023",
+      "wp_id": 35478
     }
   ],
   "state": "published"
