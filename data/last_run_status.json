@@ -1,6 +1,29 @@
 {
   "dry_run": false,
-  "finished_at": "2026-10-30T20:54:47.941181+00:00",
-  "message": "OSError: image file is truncated (45 bytes not processed)",
-  "state": "failed"
+  "feed_warnings": 15,
+  "feeds": 127,
+  "fetched": 5113,
+  "finished_at": "2026-10-31T00:30:16.234187+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Scientists Discover a Surprising New Target for Treating Type 2 Diabetes': Free article failed quality gate: article has only 235 words; 1 repeated sentence(s)"
+  ],
+  "inserted": 199,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "posts": [
+    {
+      "categories": [
+        "entertainment",
+        "culture",
+        "crime"
+      ],
+      "sources": [
+        "The Hollywood Reporter",
+        "Variety"
+      ],
+      "status": "publish",
+      "title": "Selma Blair Apologizes for Plane Incident: \u2018I Am So Sorry\u2019",
+      "wp_id": 35507
+    }
+  ],
+  "state": "published"
 }
