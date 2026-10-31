@@ -2,13 +2,18 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5113,
-  "finished_at": "2026-10-31T00:30:16.234187+00:00",
+  "fetched": 5112,
+  "finished_at": "2026-10-31T06:12:47.653371+00:00",
   "generation_failures": [
-    "Skipped candidate 'Scientists Discover a Surprising New Target for Treating Type 2 Diabetes': Free article failed quality gate: article has only 235 words; 1 repeated sentence(s)"
+    "Skipped candidate 'Scientists Discover a Surprising New Target for Treating Type 2 Diabetes': Free article failed quality gate: article has only 235 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Apple iPhone 18 Pro vs. iPhone 18 Pro Max': Free article failed quality gate: article has only 234 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Grand Theft Callout: \u2018GTA 6\u2019 fans are missing work on the game\u2019s release day because they \u2018don\u2019t want to wait\u2019 anymore': Free article failed quality gate: article has only 181 words; article has only 5 paragraphs",
+    "Skipped candidate 'Halloween Protests & French Promises, US Mid Term Mood, What now for Israel?': Free article failed quality gate: article has only 244 words",
+    "Skipped candidate 'A top-secret spy mission, a decades-old scandal \u2013 and the Austin Powers-esque saga to lift the lid': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate '\u2018Reparations now\u2019: King and Burham face protests at Antigua Commonwealth summit': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 199,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 137,
+  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
@@ -21,8 +26,8 @@
         "Variety"
       ],
       "status": "publish",
-      "title": "Selma Blair Apologizes for Plane Incident: \u2018I Am So Sorry\u2019",
-      "wp_id": 35507
+      "title": "LAPD Arrests Two for Murder of Christina Downer",
+      "wp_id": 35529
     }
   ],
   "state": "published"
