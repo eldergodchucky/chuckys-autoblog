@@ -2,32 +2,38 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5112,
-  "finished_at": "2026-10-31T06:12:47.653371+00:00",
+  "fetched": 5090,
+  "finished_at": "2026-10-31T12:33:22.452742+00:00",
   "generation_failures": [
-    "Skipped candidate 'Scientists Discover a Surprising New Target for Treating Type 2 Diabetes': Free article failed quality gate: article has only 235 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Apple iPhone 18 Pro vs. iPhone 18 Pro Max': Free article failed quality gate: article has only 234 words; 1 repeated sentence(s)",
+    "Skipped candidate '\u2018Bunch of baloney\u2019: calls grow for Cop summit reforms as countries on track to fail nature targets': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Trump beware: US voters are concerned about government corruption': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Train Disaster Is a Blow to Spain\u2019s Leader, Already an Election Underdog': Free article failed quality gate: article has only 166 words; article has only 5 paragraphs",
+    "Skipped candidate 'Protesters gather at Poland's Top court': Free article failed quality gate: article has only 214 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Trump beware: US voters are concerned about government corruption': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'France: Two rallies against racism near Paris': Free article failed quality gate: article has only 223 words; 1 repeated sentence(s)",
+    "Skipped candidate 'French Interior Minister fears disorder after dark on Halloween': Free article failed quality gate: article has only 249 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Meta settles, leaving Snap sole defendant in new social media trial': Free article failed quality gate: article has only 182 words",
     "Skipped candidate 'Grand Theft Callout: \u2018GTA 6\u2019 fans are missing work on the game\u2019s release day because they \u2018don\u2019t want to wait\u2019 anymore': Free article failed quality gate: article has only 181 words; article has only 5 paragraphs",
-    "Skipped candidate 'Halloween Protests & French Promises, US Mid Term Mood, What now for Israel?': Free article failed quality gate: article has only 244 words",
-    "Skipped candidate 'A top-secret spy mission, a decades-old scandal \u2013 and the Austin Powers-esque saga to lift the lid': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate '\u2018Reparations now\u2019: King and Burham face protests at Antigua Commonwealth summit': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'Election integrity, extremism and Pete Hegseth: nine voters on the US midterm election': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate 'Luigi Mangione\u2019s lawyers file to dismiss state charges, citing double jeopardy law': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'China places former Sinopec and CNOOC boss Fu Chengyu, 75, under corruption probe': Free article failed quality gate: article has only 236 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Live: France\u2019s top court bans Halloween protest in the heart of Paris, permits route on outskirts': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Florid language and long silences: five things we learned from week three of Russell Brand\u2019s rape trial': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Sanjay Gupta, Indian Director of \u2018Kaante\u2019 and \u2018Zinda,\u2019 Dies at 59': Free article failed quality gate: article has only 289 words; 1 repeated sentence(s)"
   ],
-  "inserted": 137,
-  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "inserted": 242,
+  "message": "Published 1 post(s). Skipped 15 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "entertainment",
-        "culture",
         "crime"
       ],
       "sources": [
-        "The Hollywood Reporter",
-        "Variety"
+        "BBC Crime"
       ],
       "status": "publish",
-      "title": "LAPD Arrests Two for Murder of Christina Downer",
-      "wp_id": 35529
+      "title": "How man's Halloween house display has become bittersweet tradition",
+      "wp_id": 35554
     }
   ],
   "state": "published"
