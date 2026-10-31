@@ -1,39 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5090,
-  "finished_at": "2026-10-31T12:33:22.452742+00:00",
-  "generation_failures": [
-    "Skipped candidate '\u2018Bunch of baloney\u2019: calls grow for Cop summit reforms as countries on track to fail nature targets': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Trump beware: US voters are concerned about government corruption': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Train Disaster Is a Blow to Spain\u2019s Leader, Already an Election Underdog': Free article failed quality gate: article has only 166 words; article has only 5 paragraphs",
-    "Skipped candidate 'Protesters gather at Poland's Top court': Free article failed quality gate: article has only 214 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Trump beware: US voters are concerned about government corruption': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'France: Two rallies against racism near Paris': Free article failed quality gate: article has only 223 words; 1 repeated sentence(s)",
-    "Skipped candidate 'French Interior Minister fears disorder after dark on Halloween': Free article failed quality gate: article has only 249 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Meta settles, leaving Snap sole defendant in new social media trial': Free article failed quality gate: article has only 182 words",
-    "Skipped candidate 'Grand Theft Callout: \u2018GTA 6\u2019 fans are missing work on the game\u2019s release day because they \u2018don\u2019t want to wait\u2019 anymore': Free article failed quality gate: article has only 181 words; article has only 5 paragraphs",
-    "Skipped candidate 'Election integrity, extremism and Pete Hegseth: nine voters on the US midterm election': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate 'Luigi Mangione\u2019s lawyers file to dismiss state charges, citing double jeopardy law': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'China places former Sinopec and CNOOC boss Fu Chengyu, 75, under corruption probe': Free article failed quality gate: article has only 236 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Live: France\u2019s top court bans Halloween protest in the heart of Paris, permits route on outskirts': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Florid language and long silences: five things we learned from week three of Russell Brand\u2019s rape trial': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Sanjay Gupta, Indian Director of \u2018Kaante\u2019 and \u2018Zinda,\u2019 Dies at 59': Free article failed quality gate: article has only 289 words; 1 repeated sentence(s)"
-  ],
-  "inserted": 242,
-  "message": "Published 1 post(s). Skipped 15 low-quality candidate(s).",
+  "fetched": 5023,
+  "finished_at": "2026-10-31T17:24:02.422662+00:00",
+  "generation_failures": [],
+  "inserted": 312,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "crime"
+        "world",
+        "politics",
+        "defense"
       ],
       "sources": [
-        "BBC Crime"
+        "Al Jazeera",
+        "NYT World News"
       ],
       "status": "publish",
-      "title": "How man's Halloween house display has become bittersweet tradition",
-      "wp_id": 35554
+      "title": "Syria considering entry into Mecca defence pact",
+      "wp_id": 35573
     }
   ],
   "state": "published"
