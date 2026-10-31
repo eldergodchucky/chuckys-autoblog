@@ -2,25 +2,28 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5023,
-  "finished_at": "2026-10-31T17:24:02.422662+00:00",
-  "generation_failures": [],
-  "inserted": 312,
-  "message": "Published 1 post(s).",
+  "fetched": 4990,
+  "finished_at": "2026-10-31T20:38:27.996524+00:00",
+  "generation_failures": [
+    "Skipped candidate 'HMD Pulse Pro 2nd Edition shows up at a retailer with a new chipset': Free article failed quality gate: article has only 291 words; 1 repeated sentence(s)",
+    "Skipped candidate 'OpenAI pares fundraising goal, now seeking up to $20 billion in latest round': Free article failed quality gate: article has only 166 words; article has only 5 paragraphs",
+    "Skipped candidate 'Anthropic updates Claude to 'steer it away' from letting users clone games following weeks of Steam being inundated with AI slop': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate 'The Mortuary Assistant dev on laying his cancelled Paranormal Activity game to rest, resurrecting it as a Halloween freebie, and a potential return to his biggest game': Free article failed quality gate: 1 repeated sentence(s)"
+  ],
+  "inserted": 162,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "politics",
-        "defense"
+        "security",
+        "ai"
       ],
       "sources": [
-        "Al Jazeera",
-        "NYT World News"
+        "BleepingComputer"
       ],
       "status": "publish",
-      "title": "Syria considering entry into Mecca defence pact",
-      "wp_id": 35573
+      "title": "Northflank security breach leads to abuse of customers' AI API keys",
+      "wp_id": 35585
     }
   ],
   "state": "published"
