@@ -1,31 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5018,
-  "finished_at": "2026-10-31T23:48:23.002404+00:00",
+  "fetched": 5079,
+  "finished_at": "2026-11-01T04:46:27.597320+00:00",
   "generation_failures": [
-    "Skipped candidate 'Michael Douglas Shares Update on Jack Nicholson: \u201cHe\u2019s Well. He Has Disappeared\u201d': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate '\u2018Before the Rain\u2019 Director Milcho Manchevski on Tokyo Competition Title \u2018Sister Brother Manhole Cover,\u2019 Whistleblowing and the \u2018Death of Beauty\u2019 in Cinema': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Tokyo Asian Future Drama \u2018Jani Be Good\u2019 Probes Silence and Motherhood in a Chinese-Indonesian Family, Marking Ariani Darmawan\u2019s Return': Free article failed quality gate: article has only 288 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Alex Gibney-Produced \u2018Mohabat,\u2019 Directed by James Longley, Wins at Ji.hlava: \u2018Meticulously Researched and Exquisitely Crafted\u2019': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate 'Alex Gibney-Produced \u2018Mohabat,\u2019 Directed by James Longley, Wins at Ji.hlava: The Film Is \u2018Meticulously Researched and Exquisitely Crafted\u2019': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate 'Paul Bettany Says He \u2018Blew Out\u2019 10 Blood Vessels in His Eye While Filming \u2018VisionQuest\u2019: \u2018I Was Just Wildly Overacting\u2019': Free article failed quality gate: article has only 298 words; article has only 5 paragraphs; 1 repeated sentence(s)"
+    "Skipped candidate 'Narcissistic parents tend to lean on their children for emotional support, and that is linked to depression later on': Free article failed quality gate: article has only 222 words; 1 repeated sentence(s)"
   ],
-  "inserted": 203,
-  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "inserted": 132,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "entertainment"
+        "world",
+        "health",
+        "politics"
       ],
       "sources": [
-        "Engadget"
+        "BBC World"
       ],
       "status": "publish",
-      "title": "5 Netflix tips we all wish we knew sooner",
-      "wp_id": 35600
+      "title": "India's opposition set to hold mega rally seeking election chief's resignation",
+      "wp_id": 35622
     }
   ],
   "state": "published"
