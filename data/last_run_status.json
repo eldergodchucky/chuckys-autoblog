@@ -1,33 +1,6 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
-  "feeds": 127,
-  "fetched": 5088,
-  "finished_at": "2026-11-01T17:17:05.723500+00:00",
-  "generation_failures": [
-    "Skipped candidate 'AI agents bypassed crypto spending limits without human approval, researchers find in a new test': Free article failed quality gate: article has only 167 words; article has only 5 paragraphs",
-    "Skipped candidate 'Vision-language AI agent could help radiologists interpret ultrasounds faster and more accurately': Free article failed quality gate: article has only 244 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Vision-language AI agent could help radiologists interpret ultrasounds faster and more accurately': Free article failed quality gate: article has only 244 words; 1 repeated sentence(s)",
-    "Skipped candidate 'This is the biggest threat to the AI-powered bull market': Free article failed quality gate: article has only 129 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Anthropic\u2019s potential $2 trillion IPO could turn staff into millionaires\u2014but the AI firm is asking candidates what they\u2019d do if stock fell to zero': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'How a small Wisconsin city scuttled a secretive $1.6bn datacenter project': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'It's not just Steam: New game pages created per day on Itch.io have doubled in the last two months, with AI slop the likely culprit': Free article failed quality gate: 1 repeated sentence(s)"
-  ],
-  "inserted": 335,
-  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
-  "posts": [
-    {
-      "categories": [
-        "security",
-        "ai"
-      ],
-      "sources": [
-        "BleepingComputer"
-      ],
-      "status": "publish",
-      "title": "OpenAI says it's doubling Pro usage limits and bringing Work features",
-      "wp_id": 35677
-    }
-  ],
-  "state": "published"
+  "finished_at": "2026-11-01T21:16:41.186321+00:00",
+  "message": "OSError: image file is truncated (41 bytes not processed)",
+  "state": "failed"
 }
