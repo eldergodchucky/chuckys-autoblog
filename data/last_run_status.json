@@ -2,26 +2,34 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5079,
-  "finished_at": "2026-11-01T04:46:27.597320+00:00",
+  "fetched": 5095,
+  "finished_at": "2026-11-01T11:33:33.799022+00:00",
   "generation_failures": [
-    "Skipped candidate 'Narcissistic parents tend to lean on their children for emotional support, and that is linked to depression later on': Free article failed quality gate: article has only 222 words; 1 repeated sentence(s)"
+    "Skipped candidate 'Spewing U.S. election falsehoods, AI chatbots face scrutiny': Free article failed quality gate: article has only 189 words; 1 repeated sentence(s)",
+    "Skipped candidate 'President Trump says U.S. still has \u2018one or two targets\u2019 in Iran': Free article failed quality gate: article has only 204 words",
+    "Skipped candidate 'Latest news bulletin | November 1st, 2026 \u2013 Midday': Free article failed quality gate: article has only 168 words; article has only 5 paragraphs",
+    "Skipped candidate 'Latest news bulletin | November 1st, 2026 \u2013 Morning': Free article failed quality gate: article has only 167 words; article has only 5 paragraphs",
+    "Skipped candidate '\u2018SNL\u2019 Weekend Update Finally Weighs in on Israel': Free article failed quality gate: article has only 233 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Youth Olympic Games kick off in Dakar': Free article failed quality gate: article has only 260 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Senegal hosts first Olympic event on African continent': Free article failed quality gate: article has only 173 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Iran security chief says US letter signals \u2018positive\u2019 shift': Free article failed quality gate: article has only 162 words; article has only 5 paragraphs",
+    "Skipped candidate 'Jacinda Ardern in Sydney Opera House talk advises politicians to \u2018rebuild trust by building financial security\u2019': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Israeli protesters urge Jewish-Arab coalition government': Free article failed quality gate: article has only 198 words; 1 repeated sentence(s)"
   ],
-  "inserted": 132,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 222,
+  "message": "Published 1 post(s). Skipped 10 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
         "world",
-        "health",
         "politics"
       ],
       "sources": [
-        "BBC World"
+        "Daily Maverick"
       ],
       "status": "publish",
-      "title": "India's opposition set to hold mega rally seeking election chief's resignation",
-      "wp_id": 35622
+      "title": "LOCAL ELECTIONS 2026: Ten critical questions as South Africa heads into high-stakes",
+      "wp_id": 35650
     }
   ],
   "state": "published"
