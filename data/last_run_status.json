@@ -2,34 +2,31 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5095,
-  "finished_at": "2026-11-01T11:33:33.799022+00:00",
+  "fetched": 5088,
+  "finished_at": "2026-11-01T17:17:05.723500+00:00",
   "generation_failures": [
-    "Skipped candidate 'Spewing U.S. election falsehoods, AI chatbots face scrutiny': Free article failed quality gate: article has only 189 words; 1 repeated sentence(s)",
-    "Skipped candidate 'President Trump says U.S. still has \u2018one or two targets\u2019 in Iran': Free article failed quality gate: article has only 204 words",
-    "Skipped candidate 'Latest news bulletin | November 1st, 2026 \u2013 Midday': Free article failed quality gate: article has only 168 words; article has only 5 paragraphs",
-    "Skipped candidate 'Latest news bulletin | November 1st, 2026 \u2013 Morning': Free article failed quality gate: article has only 167 words; article has only 5 paragraphs",
-    "Skipped candidate '\u2018SNL\u2019 Weekend Update Finally Weighs in on Israel': Free article failed quality gate: article has only 233 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Youth Olympic Games kick off in Dakar': Free article failed quality gate: article has only 260 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Senegal hosts first Olympic event on African continent': Free article failed quality gate: article has only 173 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Iran security chief says US letter signals \u2018positive\u2019 shift': Free article failed quality gate: article has only 162 words; article has only 5 paragraphs",
-    "Skipped candidate 'Jacinda Ardern in Sydney Opera House talk advises politicians to \u2018rebuild trust by building financial security\u2019': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Israeli protesters urge Jewish-Arab coalition government': Free article failed quality gate: article has only 198 words; 1 repeated sentence(s)"
+    "Skipped candidate 'AI agents bypassed crypto spending limits without human approval, researchers find in a new test': Free article failed quality gate: article has only 167 words; article has only 5 paragraphs",
+    "Skipped candidate 'Vision-language AI agent could help radiologists interpret ultrasounds faster and more accurately': Free article failed quality gate: article has only 244 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Vision-language AI agent could help radiologists interpret ultrasounds faster and more accurately': Free article failed quality gate: article has only 244 words; 1 repeated sentence(s)",
+    "Skipped candidate 'This is the biggest threat to the AI-powered bull market': Free article failed quality gate: article has only 129 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Anthropic\u2019s potential $2 trillion IPO could turn staff into millionaires\u2014but the AI firm is asking candidates what they\u2019d do if stock fell to zero': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'How a small Wisconsin city scuttled a secretive $1.6bn datacenter project': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'It's not just Steam: New game pages created per day on Itch.io have doubled in the last two months, with AI slop the likely culprit': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 222,
-  "message": "Published 1 post(s). Skipped 10 low-quality candidate(s).",
+  "inserted": 335,
+  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "politics"
+        "security",
+        "ai"
       ],
       "sources": [
-        "Daily Maverick"
+        "BleepingComputer"
       ],
       "status": "publish",
-      "title": "LOCAL ELECTIONS 2026: Ten critical questions as South Africa heads into high-stakes",
-      "wp_id": 35650
+      "title": "OpenAI says it's doubling Pro usage limits and bringing Work features",
+      "wp_id": 35677
     }
   ],
   "state": "published"
