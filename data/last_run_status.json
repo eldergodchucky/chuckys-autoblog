@@ -1,6 +1,32 @@
 {
   "dry_run": false,
-  "finished_at": "2026-11-01T21:16:41.186321+00:00",
-  "message": "OSError: image file is truncated (41 bytes not processed)",
-  "state": "failed"
+  "feed_warnings": 16,
+  "feeds": 127,
+  "fetched": 5072,
+  "finished_at": "2026-11-02T00:52:32.261912+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Mars dust may be less abrasive than lunar dust, spacesuit samples suggest': Free article failed quality gate: article has only 207 words; article has only 5 paragraphs; 2 repeated sentence(s)",
+    "Skipped candidate 'What does Yamaha\u2019s shock MotoGP boycott mean for F1 in Qatar and Abu Dhabi?': Free article failed quality gate: article has only 152 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'NASA hopes the commercial space industry can help save Hubble': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Korea Box Office: Anime Hit \u2018Chiikawa\u2019 Retains Lead as Brad Pitt Thriller \u2018Heart of the Beast\u2019 Debuts': Free article failed quality gate: article has only 271 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Martha Stewart Responds to Backlash Over Halloween Costume Depicting Homeless Person: \u201cNever My Intention\u201d': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Hilary Duff Says She Was \u2018F\u2014ing Done\u2019 With \u2018Lizzie McGuire\u2019 When It Ended and Never Wanted to Sing \u2018What Dreams Are Made Of\u2019 Again: I Was \u2018Exhausted By It\u2019': Free article failed quality gate: 1 repeated sentence(s)"
+  ],
+  "inserted": 161,
+  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "posts": [
+    {
+      "categories": [
+        "culture",
+        "entertainment"
+      ],
+      "sources": [
+        "Variety"
+      ],
+      "status": "publish",
+      "title": "Dustin Hoffman Says Filming \u2018The Graduate\u2019 Was a \u2018Terrible Experience\u2019 and Director",
+      "wp_id": 35707
+    }
+  ],
+  "state": "published"
 }
