@@ -2,41 +2,27 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5080,
-  "finished_at": "2026-11-02T07:22:10.436445+00:00",
+  "fetched": 5078,
+  "finished_at": "2026-11-02T17:24:20.555865+00:00",
   "generation_failures": [
-    "Skipped candidate 'Karma\u2019s Revero Just Became A 1,200-HP V8 Hybrid Track Weapon': Free article failed quality gate: article has only 129 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate ''The Sea God Surveys': Watch Rocket Lab launch Japanese Earth-observing satellite today': Free article failed quality gate: article has only 248 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Chinese mechanic reports short-lived GE engine blades in Boeing 787': Free article failed quality gate: article has only 242 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Japan weighs $500 billion defense spending plan, sources say': Free article failed quality gate: article has only 153 words; article has only 5 paragraphs",
-    "Skipped candidate 'Four crew members eject safely after two Navy jets crash during air show in Idaho': Free article failed quality gate: article has only 155 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'South Korea to double spending on AI and chips in 2027': Free article failed quality gate: article has only 161 words; article has only 5 paragraphs",
-    "Skipped candidate 'China\u2019s top three airlines head for full-year losses as fuel costs weigh': Free article failed quality gate: article has only 200 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Here's one bit of good news for Mass Effect: modders are bringing the multiplayer mode to Mass Effect Legendary Edition': Free article failed quality gate: article has only 255 words; 1 repeated sentence(s)",
-    "Skipped candidate 'China Box Office: \u2018Resident Evil\u2019 Holds Top Spot for Fourth Straight Frame as 2014\u2019s \u2018John Wick\u2019 Debuts in Third': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Obsidian's Josh Sawyer on RPG cities: 'Compared to a dungeon, generally speaking, a town is 4x the expense per square foot'': Free article failed quality gate: article has only 285 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Dave Bautista Reveals He's Gained 20 Pounds of Muscle to Play Kratos in the God of War Series': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'BTCPay, a bitcoin payment tool, tells users to switch off their servers after reports of drained wallets': Free article failed quality gate: article has only 163 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Footage of what sure looks like a Persona 1 remake has leaked': Free article failed quality gate: article has only 279 words; 2 repeated sentence(s)",
-    "Skipped candidate 'Five days deliver 38% of Australia\u2019s NEM BESS fleet revenue for October': Free article failed quality gate: article has only 137 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Nigeria: Funding - Why Stronger Partnerships Are Essential to Unlocking Nigeria's Investment Potential': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'AGL refers 2GWh BESS in Queensland to Australia\u2019s EPBC Act as ACEnergy submits 250MW Victoria project': Free article failed quality gate: article has only 148 words; article has only 5 paragraphs"
+    "Skipped candidate 'Nvidia, Costco and Nike join pushback against OKX\u2013ICE tokenized stock plans': Free article failed quality gate: article has only 182 words; article has only 5 paragraphs",
+    "Skipped candidate 'Anti-Oligarchy Activists Plan to Dox Elon Musk and Hundreds of Billionaire-Linked Homes': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate 'Enterprise Hulk Towed from Newport News Shipbuilding': Free article failed quality gate: article has only 272 words; 1 repeated sentence(s)"
   ],
-  "inserted": 259,
-  "message": "Published 1 post(s). Skipped 16 low-quality candidate(s).",
+  "inserted": 814,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "culture",
-        "entertainment",
-        "energy"
+        "defense",
+        "business"
       ],
       "sources": [
-        "Variety"
+        "Breaking Defense"
       ],
       "status": "publish",
-      "title": "Siddhant Chaturvedi, Alizeh, Jimmy Shergill\u2019s 1990s British Punjabi Music Drama \u2018Bolo Bolo",
-      "wp_id": 35731
+      "title": "Saab unveils new speed assault boat for Swedish Navy",
+      "wp_id": 35764
     }
   ],
   "state": "published"
