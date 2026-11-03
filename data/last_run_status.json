@@ -2,27 +2,27 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5078,
-  "finished_at": "2026-11-02T17:24:20.555865+00:00",
+  "fetched": 5102,
+  "finished_at": "2026-11-03T00:01:06.717036+00:00",
   "generation_failures": [
-    "Skipped candidate 'Nvidia, Costco and Nike join pushback against OKX\u2013ICE tokenized stock plans': Free article failed quality gate: article has only 182 words; article has only 5 paragraphs",
-    "Skipped candidate 'Anti-Oligarchy Activists Plan to Dox Elon Musk and Hundreds of Billionaire-Linked Homes': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate 'Enterprise Hulk Towed from Newport News Shipbuilding': Free article failed quality gate: article has only 272 words; 1 repeated sentence(s)"
+    "Skipped candidate 'A Buggy World of Warcraft Mount Has Renewed Player Frustrations at the State of Retail': Free article failed quality gate: article has only 193 words; article has only 5 paragraphs",
+    "Skipped candidate 'Xbox\u2019s former COO has \u2018serious concerns\u2019 about her abrupt departure': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 814,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 575,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "defense",
-        "business"
+        "politics",
+        "world",
+        "gaming"
       ],
       "sources": [
-        "Breaking Defense"
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "Saab unveils new speed assault boat for Swedish Navy",
-      "wp_id": 35764
+      "title": "\u2018A despicable betrayal\u2019: Democrats incensed by Haley Stevens\u2019s endorsement of Mike Rogers",
+      "wp_id": 35786
     }
   ],
   "state": "published"
