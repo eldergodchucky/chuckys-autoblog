@@ -1,30 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5034,
-  "finished_at": "2026-11-03T06:31:26.648146+00:00",
-  "generation_failures": [
-    "Skipped candidate 'The ETS Investment Engine: Scaling Europe\u2019s Strategic E-fuel Market for Shipping & Aviation': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'More of the Same Expensive Dependence on Fossil Fuels in TEP and APS 2026 Energy Plans': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Australia lifts rates to 18-year high as AI boom, energy costs fuel inflation': Free article failed quality gate: article has only 174 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Apple's Q4 2026 Earnings Call Takeaways': Free article failed quality gate: 1 repeated sentence(s)"
-  ],
-  "inserted": 328,
-  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
+  "fetched": 5087,
+  "finished_at": "2026-11-03T14:37:21.688243+00:00",
+  "generation_failures": [],
+  "inserted": 661,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "business",
+        "gadgets",
         "defense",
-        "ai"
+        "space"
       ],
       "sources": [
-        "TechCrunch"
+        "Engadget"
       ],
       "status": "publish",
-      "title": "Ukraine\u2019s new pocket-sized gadget turns Russian drones\u2019 cameras against them",
-      "wp_id": 35813
+      "title": "NASA's Swift observatory is expected to return to Earth on November 4",
+      "wp_id": 35836
     }
   ],
   "state": "published"
