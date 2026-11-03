@@ -1,28 +1,30 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5102,
-  "finished_at": "2026-11-03T00:01:06.717036+00:00",
+  "fetched": 5034,
+  "finished_at": "2026-11-03T06:31:26.648146+00:00",
   "generation_failures": [
-    "Skipped candidate 'A Buggy World of Warcraft Mount Has Renewed Player Frustrations at the State of Retail': Free article failed quality gate: article has only 193 words; article has only 5 paragraphs",
-    "Skipped candidate 'Xbox\u2019s former COO has \u2018serious concerns\u2019 about her abrupt departure': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'The ETS Investment Engine: Scaling Europe\u2019s Strategic E-fuel Market for Shipping & Aviation': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'More of the Same Expensive Dependence on Fossil Fuels in TEP and APS 2026 Energy Plans': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Australia lifts rates to 18-year high as AI boom, energy costs fuel inflation': Free article failed quality gate: article has only 174 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Apple's Q4 2026 Earnings Call Takeaways': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 575,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 328,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "politics",
-        "world",
-        "gaming"
+        "business",
+        "defense",
+        "ai"
       ],
       "sources": [
-        "The Guardian World"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "\u2018A despicable betrayal\u2019: Democrats incensed by Haley Stevens\u2019s endorsement of Mike Rogers",
-      "wp_id": 35786
+      "title": "Ukraine\u2019s new pocket-sized gadget turns Russian drones\u2019 cameras against them",
+      "wp_id": 35813
     }
   ],
   "state": "published"
