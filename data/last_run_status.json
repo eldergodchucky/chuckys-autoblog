@@ -1,28 +1,34 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 19,
   "feeds": 127,
-  "fetched": 5090,
-  "finished_at": "2026-11-04T00:56:39.900485+00:00",
+  "fetched": 4947,
+  "finished_at": "2026-11-04T07:20:37.668168+00:00",
   "generation_failures": [
-    "Skipped candidate 'Leading AI models are biased against certain accents when scoring interviews, presentations and tests': Free article failed quality gate: article has only 201 words; 1 repeated sentence(s)",
-    "Skipped candidate 'AI \u2018godfather\u2019 Geoffrey Hinton: it might turn out we were better off without AI': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'OpenAI employees warned about operational security lapses for years, sources say': Free article failed quality gate: article has only 212 words",
+    "Skipped candidate 'Japanese stocks sink as U.S. midterm results hit tech shares': Free article failed quality gate: article has only 172 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Ethereum dev targets 2028 for quantum resistance, a year early': Free article failed quality gate: article has only 156 words; article has only 5 paragraphs",
+    "Skipped candidate 'James Talarico wins Texas Senate race in historic victory for Democrats': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'UK apologises to Ukrainian child refugees who were told to study Russian': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'James Talarico wins Texas Senate race in historic victory for Democrats': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'The next global pandemic could be brewing on a mink farm in Utah \u2013 and little is being done to stop it | George Monbiot': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Red and blue America have united in their hatred for Donald Trump | Ben Davis': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 360,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 313,
+  "message": "Published 1 post(s). Skipped 8 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
         "world",
-        "ai",
-        "crime"
+        "politics",
+        "history"
       ],
       "sources": [
-        "Daily Maverick"
+        "Al Jazeera"
       ],
       "status": "publish",
-      "title": "Setback for Google as EU court adviser warns AI chatbot may breach",
-      "wp_id": 35872
+      "title": "Sherrod Brown, an Ohio Democrat, wins return to US Senate",
+      "wp_id": 35891
     }
   ],
   "state": "published"
