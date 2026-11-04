@@ -2,53 +2,27 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5106,
-  "finished_at": "2026-11-03T20:42:50.915953+00:00",
+  "fetched": 5090,
+  "finished_at": "2026-11-04T00:56:39.900485+00:00",
   "generation_failures": [
-    "Skipped candidate 'Scientists Discover a Hidden Factor That Could Be Making Deadly Cancers Harder To Treat': Free article failed quality gate: article has only 221 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Apple Seeds First iOS 27.3 Beta': Free article failed quality gate: 3 repeated sentence(s)",
-    "Skipped candidate 'Everything new in iOS 27.3 beta 1 so far': Free article failed quality gate: article has only 178 words; 1 repeated sentence(s)",
-    "Skipped candidate 'iOS 27.3 Beta Brings Back Apple's Redesigned Health App': Free article failed quality gate: 3 repeated sentence(s)",
-    "Skipped candidate 'Postoperative complications elevated for patients with systemic lupus erythematosus': Free article failed quality gate: article has only 183 words",
-    "Skipped candidate 'Postoperative complications elevated for patients with systemic lupus erythematosus': Free article failed quality gate: article has only 183 words",
-    "Skipped candidate 'iOS 27.3 adds all-new Apple Health app, details here': Free article failed quality gate: article has only 176 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Treatment satisfaction higher for patients with rheumatoid arthritis choosing their own treatment': Free article failed quality gate: article has only 201 words",
-    "Skipped candidate 'Treatment satisfaction higher for patients with rheumatoid arthritis choosing their own treatment': Free article failed quality gate: article has only 201 words",
-    "Skipped candidate 'New clues about why the eye's iris sheds in pigmentary glaucoma': Free article failed quality gate: article has only 211 words; 1 repeated sentence(s)",
-    "Skipped candidate 'New clues about why the eye's iris sheds in pigmentary glaucoma': Free article failed quality gate: article has only 211 words; 1 repeated sentence(s)",
-    "Skipped candidate 'The menstrual cycle may shape how much cannabis women use, new research suggests': Free article failed quality gate: article has only 210 words",
-    "Skipped candidate 'Newborn deaths fell by 50% in Flint following the launch of Rx Kids, new research finds': Free article failed quality gate: article has only 254 words",
-    "Skipped candidate 'Newborn deaths fell by 50% in Flint following the launch of Rx Kids, new research finds': Free article failed quality gate: article has only 254 words",
-    "Skipped candidate 'AI-supported screening strategy could improve cervical cancer detection in low-resource settings': Free article failed quality gate: article has only 260 words; 1 repeated sentence(s)",
-    "Skipped candidate 'AI-supported screening strategy could improve cervical cancer detection in low-resource settings': Free article failed quality gate: article has only 260 words; 1 repeated sentence(s)",
-    "Skipped candidate 'A Hidden Weakness in the Brain\u2019s Defenses Could Help Explain Alzheimer\u2019s Disease': Free article failed quality gate: article has only 230 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Ultrathin optical coherence tomography endoscope could enable imaging during retinal surgery': Free article failed quality gate: article has only 277 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Women and men show similar short-term outcomes after aspiration thrombectomy for pulmonary embolism': Free article failed quality gate: article has only 249 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Women and men show similar short-term outcomes after aspiration thrombectomy for pulmonary embolism': Free article failed quality gate: article has only 249 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Ultrathin optical coherence tomography endoscope could enable imaging during retinal surgery': Free article failed quality gate: article has only 277 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Researchers warned of North Korean hacking tactics years before record $6.3B Binance heist': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Runner, 24, Dies During Her First Marathon': Free article failed quality gate: article has only 200 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Apple Fitness+ Gets Gym Strength Plans in iOS 27.3': Free article failed quality gate: article has only 287 words; 2 repeated sentence(s)",
-    "Skipped candidate 'Veterans Day Apple Watch Activity Challenge Launches November 11': Free article failed quality gate: article has only 299 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Apple Watch Challenge set for Veterans Day': Free article failed quality gate: article has only 179 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Food scores or warning labels? New study offers clues for Europe's nutrition labeling debate': Free article failed quality gate: article has only 246 words",
-    "Skipped candidate 'Food scores or warning labels? New study offers clues for Europe's nutrition labeling debate': Free article failed quality gate: article has only 246 words"
+    "Skipped candidate 'Leading AI models are biased against certain accents when scoring interviews, presentations and tests': Free article failed quality gate: article has only 201 words; 1 repeated sentence(s)",
+    "Skipped candidate 'AI \u2018godfather\u2019 Geoffrey Hinton: it might turn out we were better off without AI': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 686,
-  "message": "Published 1 post(s). Skipped 28 low-quality candidate(s).",
+  "inserted": 360,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
         "world",
-        "health",
-        "entertainment"
+        "ai",
+        "crime"
       ],
       "sources": [
         "Daily Maverick"
       ],
       "status": "publish",
-      "title": "After the Bell: The great financial squeeze \u2014 a new movie coming",
-      "wp_id": 35858
+      "title": "Setback for Google as EU court adviser warns AI chatbot may breach",
+      "wp_id": 35872
     }
   ],
   "state": "published"
