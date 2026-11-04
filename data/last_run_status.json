@@ -1,34 +1,38 @@
 {
   "dry_run": false,
-  "feed_warnings": 19,
+  "feed_warnings": 17,
   "feeds": 127,
-  "fetched": 4947,
-  "finished_at": "2026-11-04T07:20:37.668168+00:00",
+  "fetched": 4959,
+  "finished_at": "2026-11-04T15:42:31.469674+00:00",
   "generation_failures": [
-    "Skipped candidate 'OpenAI employees warned about operational security lapses for years, sources say': Free article failed quality gate: article has only 212 words",
-    "Skipped candidate 'Japanese stocks sink as U.S. midterm results hit tech shares': Free article failed quality gate: article has only 172 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Ethereum dev targets 2028 for quantum resistance, a year early': Free article failed quality gate: article has only 156 words; article has only 5 paragraphs",
-    "Skipped candidate 'James Talarico wins Texas Senate race in historic victory for Democrats': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'UK apologises to Ukrainian child refugees who were told to study Russian': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'James Talarico wins Texas Senate race in historic victory for Democrats': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'The next global pandemic could be brewing on a mink farm in Utah \u2013 and little is being done to stop it | George Monbiot': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Red and blue America have united in their hatred for Donald Trump | Ben Davis': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'Live updates: Bitcoin and stocks post big gains, reversing overnight plunge following Blue Wave landslide': Free article failed quality gate: article has only 160 words; article has only 5 paragraphs",
+    "Skipped candidate 'Schools that want Google Search for students will have to accept its AI too': Free article failed quality gate: article has only 268 words; 1 repeated sentence(s)",
+    "Skipped candidate 'macOS 27.3 Makes Markdown Files Easier to Read': Free article failed quality gate: 4 repeated sentence(s)",
+    "Skipped candidate 'US midterm elections 2026 live updates: Democrats take control of Congress in major setback for Trump': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Albanese government warned it\u2019s \u2018sleepwalking into another robodebt scenario\u2019 over use of algorithms and AI': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'US midterm elections 2026 live updates: Democrats take control of Congress in major setback for Trump': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate 'European Gas Prices Fall 2% as Traders Wait on Trump\u2019s Next Move in Iran': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Bitcoin Shrugs Off Midterms as Experts Say Democratic Sweep Was 'Priced In'': Free article failed quality gate: article has only 131 words; article has only 5 paragraphs",
+    "Skipped candidate 'Google Calendar phishing campaign hijacks sessions, bypasses MFA': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Russia and Ukraine Head to White House for Melania Trump-Led Talks': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Democrats Win Texas Oil Regulator Seat for First Time Since 1990': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'US Oil Inventories Fall Further As Demand Holds': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 313,
-  "message": "Published 1 post(s). Skipped 8 low-quality candidate(s).",
+  "inserted": 647,
+  "message": "Published 1 post(s). Skipped 12 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "politics",
-        "history"
+        "gaming",
+        "politics"
       ],
       "sources": [
-        "Al Jazeera"
+        "Eurogamer",
+        "IGN"
       ],
       "status": "publish",
-      "title": "Sherrod Brown, an Ohio Democrat, wins return to US Senate",
-      "wp_id": 35891
+      "title": "Halo and Destiny composer Marty O'Donnell loses his race for a seat",
+      "wp_id": 35920
     }
   ],
   "state": "published"
