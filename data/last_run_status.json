@@ -1,39 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5016,
-  "finished_at": "2026-11-04T21:32:45.627892+00:00",
+  "fetched": 5061,
+  "finished_at": "2026-11-05T01:50:55.524145+00:00",
   "generation_failures": [
-    "Skipped candidate 'UAE Weighs Plans for Third Strait of Hormuz Bypass Pipeline': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Iran War and AI Boom Drive Global Gas Supply Crunch': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Coinbase Says 99% of Customer Crypto Is Offline and Out of Hackers\u2019 Reach': Free article failed quality gate: article has only 156 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'US Voters Back AI Data Center Restrictions in At Least 29 Communities': Free article failed quality gate: article has only 178 words; article has only 5 paragraphs",
-    "Skipped candidate 'Trump-linked tokens lead crypto losses after Democrats sweep in the US midterms': Free article failed quality gate: article has only 165 words; article has only 5 paragraphs",
-    "Skipped candidate 'Report: Apple reduces employees\u2019 AI token allowances as Ternus moves to cut costs': Free article failed quality gate: article has only 173 words; article has only 5 paragraphs",
-    "Skipped candidate 'Riot shares surge on $28B AI lease as Hut 8 sinks on revenue miss': Free article failed quality gate: article has only 160 words; article has only 5 paragraphs",
-    "Skipped candidate 'Experimental ultrasound implant could help guide care after spinal cord injury': Free article failed quality gate: article has only 285 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Experimental ultrasound implant could help guide care after spinal cord injury': Free article failed quality gate: article has only 285 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Proning and high-frequency oscillation may not reduce duration of ventilation for children with lung injury': Free article failed quality gate: article has only 272 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Proning and high-frequency oscillation may not reduce duration of ventilation for children with lung injury': Free article failed quality gate: article has only 272 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Tony Awards Will Remain on CBS Through 2032 Under New Five-Year Deal': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate ''Sticker-like' transfer printing could help scale up production of solid-state batteries': Free article failed quality gate: article has only 245 words; article has only 5 paragraphs; 1 repeated sentence(s)"
+    "Skipped candidate 'The Chicks Recall \u2018the Incident\u2019 and Compare Bush to Trump in \u2018Taking the Long Way\u2019 20th Anniversary Shows at L.A.\u2019s Dolby: Concert Review': Free article failed quality gate: article has only 281 words; 1 repeated sentence(s)"
   ],
-  "inserted": 571,
-  "message": "Published 1 post(s). Skipped 13 low-quality candidate(s).",
+  "inserted": 335,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "entertainment",
-        "business",
-        "sports"
+        "history",
+        "culture"
       ],
       "sources": [
-        "The Hollywood Reporter"
+        "Smithsonian History"
       ],
       "status": "publish",
-      "title": "TKO Raises Guidance Again As UFC Powers Q3 Earnings",
-      "wp_id": 35936
+      "title": "Actually, You Can Go Back to Constantinople. A Landmark Exhibition Reconstructs",
+      "wp_id": 35948
     }
   ],
   "state": "published"
