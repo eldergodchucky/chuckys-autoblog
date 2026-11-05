@@ -2,25 +2,27 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5061,
-  "finished_at": "2026-11-05T01:50:55.524145+00:00",
+  "fetched": 5053,
+  "finished_at": "2026-11-05T09:03:48.266643+00:00",
   "generation_failures": [
-    "Skipped candidate 'The Chicks Recall \u2018the Incident\u2019 and Compare Bush to Trump in \u2018Taking the Long Way\u2019 20th Anniversary Shows at L.A.\u2019s Dolby: Concert Review': Free article failed quality gate: article has only 281 words; 1 repeated sentence(s)"
+    "Skipped candidate 'Accused double murderer gives evidence in high-profile case \u2013 as it happened': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Beau Lamarre-Condon tells double murder trial he went through Jesse Baird\u2019s phone and poured water into his fuel tank': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 335,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 345,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "history",
-        "culture"
+        "culture",
+        "world",
+        "crime"
       ],
       "sources": [
-        "Smithsonian History"
+        "Variety"
       ],
       "status": "publish",
-      "title": "Actually, You Can Go Back to Constantinople. A Landmark Exhibition Reconstructs",
-      "wp_id": 35948
+      "title": "Ranbir Kapoor and Yash\u2019s \u2018Ramayana\u2019 Makers on Retelling India\u2019s Epic",
+      "wp_id": 35975
     }
   ],
   "state": "published"
