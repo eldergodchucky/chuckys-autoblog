@@ -1,27 +1,47 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5007,
-  "finished_at": "2026-11-05T17:27:07.985527+00:00",
+  "fetched": 5062,
+  "finished_at": "2026-11-05T22:49:45.232162+00:00",
   "generation_failures": [
-    "Skipped candidate 'USS Stout Loses Power During Port Visit Due to \u2018Engineering Casualty\u2019': Free article failed quality gate: article has only 211 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Abdul El-Sayed\u2019s victory has laid bare a truth about America's view on Israel | Peter Beinart': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate 'What to Know About the Bomb Threats Disrupting Flights in Europe': Free article failed quality gate: article has only 189 words; 1 repeated sentence(s)"
+    "Skipped candidate 'Apple Arcade Adds Crossy Road Rush and NBA 2K27': Free article failed quality gate: article has only 263 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Xbox enters the 'faster PC launcher' arms race, its app loads faster now too': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate 'Sam Altman is annoyed his DRAM comment was 'taken out of context'': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate '52-Year-Old YouTuber Learns Karate by Studying Tekken to Train With His Son': Free article failed quality gate: article has only 130 words; article has only 5 paragraphs",
+    "Skipped candidate 'Bethesda Is Already Selling The Elder Scrolls 6: Sentinel Merch': Free article failed quality gate: article has only 218 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'G2 Esports Parts Ways With Head Coach Luka 'Perkz' Perkovi\u0107 After His 'Tweet Bomb' Sparks Backlash': Free article failed quality gate: article has only 126 words; article has only 5 paragraphs",
+    "Skipped candidate 'It's Official: Marvel Has Finally Undone the Controversial Spider-Man - One More Day Storyline': Free article failed quality gate: article has only 128 words; article has only 5 paragraphs",
+    "Skipped candidate 'EA is bringing 25 classic PC games to Steam': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'New instrument at Brazil's Sirius accelerator enables researchers to observe solar cells in operation': Free article failed quality gate: article has only 253 words; 1 repeated sentence(s)",
+    "Skipped candidate 'France's Debt Crisis Could Trigger a Much Bigger European Meltdown': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'BLE noise on a specific ADC with an nRF54L15': Free article failed quality gate: article has only 193 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate ''We got it done!' Spacewalking astronauts finish installing next-gen ISS solar arrays': Free article failed quality gate: article has only 290 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Batteries Are Taking the Gas Peaker\u2019s Best Hours': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'India's Renewables Have Saved $100 Billion in Fuel Imports, IEA Says': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'ConocoPhillips Doubles Profit to $4 Billion, Raises Dividend': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate 'Mercado Bitcoin Said Its Hack Was Contained, But Blockchain Data Tells a Different Story': Free article failed quality gate: article has only 153 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Asian crypto exchanges batten down the hatches as hacks surge: Asia Express': Free article failed quality gate: article has only 180 words; article has only 5 paragraphs",
+    "Skipped candidate 'Zcash Upgrade Could Lock $16 Million in Crypto Forever': Free article failed quality gate: article has only 156 words; article has only 5 paragraphs",
+    "Skipped candidate 'American Bitcoin\u2019s $126M profit masks mining pressure as rivals turn to AI': Free article failed quality gate: article has only 147 words; article has only 5 paragraphs",
+    "Skipped candidate 'Engineered protein that cuts Alzheimer's-linked brain deposits opens potential therapeutic avenue': Free article failed quality gate: article has only 230 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Engineered protein that cuts Alzheimer's-linked brain deposits opens potential therapeutic avenue': Free article failed quality gate: article has only 230 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Sony brings back the original Walkman headphones with USB-C': Free article failed quality gate: article has only 276 words; 1 repeated sentence(s)"
   ],
-  "inserted": 767,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 507,
+  "message": "Published 1 post(s). Skipped 22 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "defense"
+        "sports",
+        "software"
       ],
       "sources": [
-        "Breaking Defense"
+        "Formula 1 News"
       ],
       "status": "publish",
-      "title": "Eurofighter eyes sales of 200 additional aircraft",
-      "wp_id": 35998
+      "title": "Bottas offers update on Cadillac F1 future",
+      "wp_id": 36015
     }
   ],
   "state": "published"
