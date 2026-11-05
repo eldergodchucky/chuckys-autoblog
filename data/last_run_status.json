@@ -1,28 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5053,
-  "finished_at": "2026-11-05T09:03:48.266643+00:00",
+  "fetched": 5007,
+  "finished_at": "2026-11-05T17:27:07.985527+00:00",
   "generation_failures": [
-    "Skipped candidate 'Accused double murderer gives evidence in high-profile case \u2013 as it happened': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Beau Lamarre-Condon tells double murder trial he went through Jesse Baird\u2019s phone and poured water into his fuel tank': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'USS Stout Loses Power During Port Visit Due to \u2018Engineering Casualty\u2019': Free article failed quality gate: article has only 211 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Abdul El-Sayed\u2019s victory has laid bare a truth about America's view on Israel | Peter Beinart': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate 'What to Know About the Bomb Threats Disrupting Flights in Europe': Free article failed quality gate: article has only 189 words; 1 repeated sentence(s)"
   ],
-  "inserted": 345,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 767,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "culture",
-        "world",
-        "crime"
+        "defense"
       ],
       "sources": [
-        "Variety"
+        "Breaking Defense"
       ],
       "status": "publish",
-      "title": "Ranbir Kapoor and Yash\u2019s \u2018Ramayana\u2019 Makers on Retelling India\u2019s Epic",
-      "wp_id": 35975
+      "title": "Eurofighter eyes sales of 200 additional aircraft",
+      "wp_id": 35998
     }
   ],
   "state": "published"
