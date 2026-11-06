@@ -2,32 +2,39 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5072,
-  "finished_at": "2026-11-06T11:04:52.583994+00:00",
+  "fetched": 5096,
+  "finished_at": "2026-11-06T17:59:45.871391+00:00",
   "generation_failures": [
-    "Skipped candidate '4-billion-year-old 'Rosetta Stone' found in Sahara Desert could unlock the secret history of water on Mars': Free article failed quality gate: article has only 268 words; 2 repeated sentence(s)",
-    "Skipped candidate 'Why Abdul El-Sayed\u2019s victory matters beyond Michigan | Explained': Free article failed quality gate: article has only 233 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Making history in Dakar 2026: Six young refugees, one Olympic dream': Free article failed quality gate: article has only 194 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Macau ex-lawmaker sentenced to 12.5 years in prison in city\u2019s first national security trial': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Uncertainty over Nigeria vote as court bars opposition leader': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'AI-powered smartwatch detects high blood pressure with sensitivity similar to office screening': Free article failed quality gate: article has only 252 words; 1 repeated sentence(s)",
+    "Skipped candidate 'AI-powered smartwatch detects high blood pressure with sensitivity similar to office screening': Free article failed quality gate: article has only 252 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Harnessing atomic structure to advance next-generation memory storage': Free article failed quality gate: article has only 177 words; 1 repeated sentence(s)",
+    "Skipped candidate 'AI learns from the products of thinking, not thought itself. That's a problem for machines\u2014and for us': Free article failed quality gate: article has only 204 words",
+    "Skipped candidate 'Crypto Liquidations Top $1 Billion as Bitcoin Tests 11-Week Low': Free article failed quality gate: article has only 156 words; article has only 5 paragraphs",
+    "Skipped candidate 'Trump administration scraps meeting of panel that includes Meta's Zuckerberg, Nvidia's Huang': Free article failed quality gate: article has only 181 words; article has only 5 paragraphs",
+    "Skipped candidate 'Big Tech lost big in the 2026 election': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'AI is the new dating dealbreaker': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'After the midterms, is the AI industry in for a rough two years?': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Tesla & SpaceX Lost $420 Billion In Market Cap This Week \u2014 Didn\u2019t Have To Be This Way': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Democrats won big in Ohio on working-class issues. Can they deliver?': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Q&A: How is American manufacturing evolving with AI and robotics?': Free article failed quality gate: article has only 186 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Burnham aims for \u2018quite radical change\u2019 in support for young people': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 401,
-  "message": "Published 1 post(s). Skipped 5 low-quality candidate(s).",
+  "inserted": 712,
+  "message": "Published 1 post(s). Skipped 13 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "politics",
-        "crime"
+        "apple",
+        "software",
+        "politics"
       ],
       "sources": [
-        "Al Jazeera",
-        "Daily Maverick",
-        "The Japan Times"
+        "MacRumors",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Jailed Malaysian ex-PM Najib pays fine",
-      "wp_id": 36054
+      "title": "The iPhone Duo has more than 100",
+      "wp_id": 36072
     }
   ],
   "state": "published"
