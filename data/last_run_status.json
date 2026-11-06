@@ -2,46 +2,35 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5062,
-  "finished_at": "2026-11-05T22:49:45.232162+00:00",
+  "fetched": 5070,
+  "finished_at": "2026-11-06T03:16:32.232425+00:00",
   "generation_failures": [
-    "Skipped candidate 'Apple Arcade Adds Crossy Road Rush and NBA 2K27': Free article failed quality gate: article has only 263 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Xbox enters the 'faster PC launcher' arms race, its app loads faster now too': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate 'Sam Altman is annoyed his DRAM comment was 'taken out of context'': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate '52-Year-Old YouTuber Learns Karate by Studying Tekken to Train With His Son': Free article failed quality gate: article has only 130 words; article has only 5 paragraphs",
-    "Skipped candidate 'Bethesda Is Already Selling The Elder Scrolls 6: Sentinel Merch': Free article failed quality gate: article has only 218 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'G2 Esports Parts Ways With Head Coach Luka 'Perkz' Perkovi\u0107 After His 'Tweet Bomb' Sparks Backlash': Free article failed quality gate: article has only 126 words; article has only 5 paragraphs",
-    "Skipped candidate 'It's Official: Marvel Has Finally Undone the Controversial Spider-Man - One More Day Storyline': Free article failed quality gate: article has only 128 words; article has only 5 paragraphs",
-    "Skipped candidate 'EA is bringing 25 classic PC games to Steam': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'New instrument at Brazil's Sirius accelerator enables researchers to observe solar cells in operation': Free article failed quality gate: article has only 253 words; 1 repeated sentence(s)",
-    "Skipped candidate 'France's Debt Crisis Could Trigger a Much Bigger European Meltdown': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'BLE noise on a specific ADC with an nRF54L15': Free article failed quality gate: article has only 193 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Chances are, US-China truce will be extended at Shenzhen Apec summit': Free article failed quality gate: article has only 241 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Marco Rubio denies plans to leave post for White House bid': Free article failed quality gate: article has only 172 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Connecting artificial intelligence with the tools of astrophysical research': Free article failed quality gate: article has only 212 words; 1 repeated sentence(s)",
+    "Skipped candidate 'T-Mobile owner on Elon Musk launching a wireless carrier: \u2018Welcome to the party\u2019': Free article failed quality gate: 1 repeated sentence(s)",
     "Skipped candidate ''We got it done!' Spacewalking astronauts finish installing next-gen ISS solar arrays': Free article failed quality gate: article has only 290 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Batteries Are Taking the Gas Peaker\u2019s Best Hours': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'India's Renewables Have Saved $100 Billion in Fuel Imports, IEA Says': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'ConocoPhillips Doubles Profit to $4 Billion, Raises Dividend': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate 'Mercado Bitcoin Said Its Hack Was Contained, But Blockchain Data Tells a Different Story': Free article failed quality gate: article has only 153 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Asian crypto exchanges batten down the hatches as hacks surge: Asia Express': Free article failed quality gate: article has only 180 words; article has only 5 paragraphs",
-    "Skipped candidate 'Zcash Upgrade Could Lock $16 Million in Crypto Forever': Free article failed quality gate: article has only 156 words; article has only 5 paragraphs",
-    "Skipped candidate 'American Bitcoin\u2019s $126M profit masks mining pressure as rivals turn to AI': Free article failed quality gate: article has only 147 words; article has only 5 paragraphs",
-    "Skipped candidate 'Engineered protein that cuts Alzheimer's-linked brain deposits opens potential therapeutic avenue': Free article failed quality gate: article has only 230 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Engineered protein that cuts Alzheimer's-linked brain deposits opens potential therapeutic avenue': Free article failed quality gate: article has only 230 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Sony brings back the original Walkman headphones with USB-C': Free article failed quality gate: article has only 276 words; 1 repeated sentence(s)"
+    "Skipped candidate 'Andy Weir says his sci-fi audio drama 'Exoplanet' is a way to 'revive the old art of radio plays' (interview)': Free article failed quality gate: article has only 294 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Astronomers deliver the sharpest and deepest view yet of the low-frequency radio sky': Free article failed quality gate: article has only 261 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Apple expected to bid for F1 streaming rights in more countries, says Formula 1 CEO': Free article failed quality gate: article has only 263 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Rosamund Pike Set to Star in and Produce \u2018Feed\u2019, Body Horror Movie From Leslye Headland': Free article failed quality gate: article has only 284 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Lionsgate Quarterly Revenue Pops 41% on Strength of \u2018Michael,\u2019 TV Series Sales as Studio Narrows Net Loss': Free article failed quality gate: article has only 246 words; 2 repeated sentence(s)",
+    "Skipped candidate 'Letterboxd in Negotiations to Be Acquired by New York Times Company': Free article failed quality gate: article has only 266 words; 1 repeated sentence(s)"
   ],
-  "inserted": 507,
-  "message": "Published 1 post(s). Skipped 22 low-quality candidate(s).",
+  "inserted": 235,
+  "message": "Published 1 post(s). Skipped 11 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "software"
+        "entertainment",
+        "business"
       ],
       "sources": [
-        "Formula 1 News"
+        "The Hollywood Reporter"
       ],
       "status": "publish",
-      "title": "Bottas offers update on Cadillac F1 future",
-      "wp_id": 36015
+      "title": "Live Nation Reports $10.1 Billion In Revenue In Jump From Last Year",
+      "wp_id": 36030
     }
   ],
   "state": "published"
