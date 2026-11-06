@@ -1,40 +1,42 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5096,
-  "finished_at": "2026-11-06T17:59:45.871391+00:00",
+  "fetched": 5083,
+  "finished_at": "2026-11-06T22:58:41.671581+00:00",
   "generation_failures": [
-    "Skipped candidate 'AI-powered smartwatch detects high blood pressure with sensitivity similar to office screening': Free article failed quality gate: article has only 252 words; 1 repeated sentence(s)",
-    "Skipped candidate 'AI-powered smartwatch detects high blood pressure with sensitivity similar to office screening': Free article failed quality gate: article has only 252 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Harnessing atomic structure to advance next-generation memory storage': Free article failed quality gate: article has only 177 words; 1 repeated sentence(s)",
-    "Skipped candidate 'AI learns from the products of thinking, not thought itself. That's a problem for machines\u2014and for us': Free article failed quality gate: article has only 204 words",
-    "Skipped candidate 'Crypto Liquidations Top $1 Billion as Bitcoin Tests 11-Week Low': Free article failed quality gate: article has only 156 words; article has only 5 paragraphs",
-    "Skipped candidate 'Trump administration scraps meeting of panel that includes Meta's Zuckerberg, Nvidia's Huang': Free article failed quality gate: article has only 181 words; article has only 5 paragraphs",
-    "Skipped candidate 'Big Tech lost big in the 2026 election': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'AI is the new dating dealbreaker': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'After the midterms, is the AI industry in for a rough two years?': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Tesla & SpaceX Lost $420 Billion In Market Cap This Week \u2014 Didn\u2019t Have To Be This Way': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Democrats won big in Ohio on working-class issues. Can they deliver?': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Q&A: How is American manufacturing evolving with AI and robotics?': Free article failed quality gate: article has only 186 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Burnham aims for \u2018quite radical change\u2019 in support for young people': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'AI better assesses heart function from MRI than clinicians': Free article failed quality gate: article has only 205 words; 1 repeated sentence(s)",
+    "Skipped candidate 'AI better assesses heart function from MRI than clinicians': Free article failed quality gate: article has only 205 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Three new techniques target hidden AI backdoors without major performance losses': Free article failed quality gate: article has only 212 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'On this day in space! Nov. 6, 1572: A German astronomer discovers the Tycho supernova with the naked eye, but everyone thought the cosmic explosion was a 'new star'': Free article failed quality gate: article has only 257 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Mindfulness therapy assisted by ketamine may strengthen body awareness to reduce opioid cravings': Free article failed quality gate: article has only 281 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Mindfulness therapy assisted by ketamine may strengthen body awareness to reduce opioid cravings': Free article failed quality gate: article has only 281 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Mother and baby's immune cells linked to aggressive placental inflammation in preterm cases': Free article failed quality gate: article has only 289 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Mother and baby's immune cells linked to aggressive placental inflammation in preterm cases': Free article failed quality gate: article has only 289 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Why humans punish: A study of two distinct societies reveals a shared sense of justice': Free article failed quality gate: article has only 208 words",
+    "Skipped candidate 'Brain stimulation made people see sexualized women less like objects in a lab test': Free article failed quality gate: article has only 211 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Two compounds target drug-resistant brain cancer cells in laboratory tests': Free article failed quality gate: article has only 261 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Two compounds target drug-resistant brain cancer cells in laboratory tests': Free article failed quality gate: article has only 261 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Biotech Firm Claims Some Credit for Groundbreaking Virus Research': Free article failed quality gate: article has only 171 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Kids Who Learn To Swim Early May Have an Unexpected Advantage in School': Free article failed quality gate: article has only 220 words; 1 repeated sentence(s)",
+    "Skipped candidate 'New research identifies biological differences in pancreatic cancer': Free article failed quality gate: article has only 194 words",
+    "Skipped candidate 'New research identifies biological differences in pancreatic cancer': Free article failed quality gate: article has only 194 words"
   ],
-  "inserted": 712,
-  "message": "Published 1 post(s). Skipped 13 low-quality candidate(s).",
+  "inserted": 363,
+  "message": "Published 1 post(s). Skipped 16 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "apple",
-        "software",
-        "politics"
+        "history",
+        "science",
+        "crime"
       ],
       "sources": [
-        "MacRumors",
-        "The Verge"
+        "Smithsonian History"
       ],
       "status": "publish",
-      "title": "The iPhone Duo has more than 100",
-      "wp_id": 36072
+      "title": "Where Did Stonehenge's Mysterious",
+      "wp_id": 36085
     }
   ],
   "state": "published"
