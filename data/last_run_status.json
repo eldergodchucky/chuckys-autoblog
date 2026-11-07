@@ -2,40 +2,32 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5065,
-  "finished_at": "2026-11-07T15:52:14.657882+00:00",
+  "fetched": 5046,
+  "finished_at": "2026-11-07T19:58:48.607611+00:00",
   "generation_failures": [
-    "Skipped candidate '\u2018Shock absorbers\u2019: Korn Ferry says managers are carrying AI change that executives aren\u2019t ready to lead': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'AMD CEO Lisa Su: 'We are a data center-first company'': Free article failed quality gate: article has only 226 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Berkshire Hathaway stock is a haven again as investors flee AI bloodbath while its own portfolio takes a hit amid reshuffling': Free article failed quality gate: 1 repeated sentence(s)",
     "Skipped candidate 'The US let Nvidia sell chips to an empty office in China': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Prior expertise may determine whether AI builds skills or substitutes for them, field experiment suggests': Free article failed quality gate: article has only 210 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Top China university stops using AI to spot absent-minded students after backlash': Free article failed quality gate: article has only 229 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'NYT Cooking\u2019s AI assistant saved my weeknight chicken, but almost ruined my cake': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate 'How the loss of male-dominated industrial jobs pushes communities to the political right': Free article failed quality gate: article has only 205 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Blackouts and water shortages in Kyiv after Russia strikes Ukraine\u2019s energy grid': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Japan announces emergency cybersecurity package following a wave of attacks': Free article failed quality gate: article has only 193 words; article has only 5 paragraphs",
-    "Skipped candidate 'Manila weighs second South China Sea legal case against Beijing: analyst': Free article failed quality gate: article has only 233 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Watch live: French presidential candidate Jean-Luc M\u00e9lenchon launches campaign': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Latest news bulletin | November 7th, 2026 \u2013 Midday': Free article failed quality gate: article has only 167 words; article has only 5 paragraphs",
-    "Skipped candidate 'Yemen: 30 dead in strikes on Taiz market': Free article failed quality gate: article has only 228 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Vance distancing himself from Trump ahead of 2028 Presidential race: Ex-U.S. NSA Bolton': Free article failed quality gate: article has only 170 words; article has only 5 paragraphs"
+    "Skipped candidate 'Google to add vocabulary for corrected words to Gboard's Rambler voice typing feature': Free article failed quality gate: article has only 243 words; 1 repeated sentence(s)",
+    "Skipped candidate ''I Feel Like Modding is Kind Of Dying' \u2013 Mass Effect 3 Multiplayer Modder on AI's Impact on the Scene': Free article failed quality gate: article has only 186 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'NYT Cooking\u2019s AI assistant saved my weeknight chicken, but almost ruined my cake': Free article failed quality gate: 2 repeated sentence(s)"
   ],
-  "inserted": 340,
-  "message": "Published 1 post(s). Skipped 13 low-quality candidate(s).",
+  "inserted": 229,
+  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "politics",
-        "health"
+        "business",
+        "culture",
+        "politics"
       ],
       "sources": [
-        "France 24",
-        "NYT World News",
-        "The Guardian World"
+        "CNBC International",
+        "Variety"
       ],
       "status": "publish",
-      "title": "\ud83d\udd34 At least five people killed in shooting in Krakow",
-      "wp_id": 36138
+      "title": "Trump offers UFC chief Dana White press secretary job",
+      "wp_id": 36154
     }
   ],
   "state": "published"
