@@ -2,34 +2,24 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5092,
-  "finished_at": "2026-11-07T02:39:47.444689+00:00",
-  "generation_failures": [
-    "Skipped candidate 'South African trial tests off-the-shelf killer cells against lymphoma': Free article failed quality gate: article has only 207 words",
-    "Skipped candidate 'South African trial tests off-the-shelf killer cells against lymphoma': Free article failed quality gate: article has only 207 words",
-    "Skipped candidate 'Why humans punish: A study of two distinct societies reveals a shared sense of justice': Free article failed quality gate: article has only 208 words",
-    "Skipped candidate 'Rockstar's having sale on old GTA games on the only platform Grand Theft Auto 6 isn't coming to (ours)': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Fox Commits to Carrying Non-Fox Content on Roku for at Least 3 Years as DOJ Closes Antitrust Investigation': Free article failed quality gate: article has only 271 words; article has only 5 paragraphs; 2 repeated sentence(s)",
-    "Skipped candidate 'Three men charged in US with using AI to impersonate CEOs and steal millions': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Kenyan cult leader sentenced to 200 years in prison': Free article failed quality gate: article has only 238 words; 1 repeated sentence(s)",
-    "Skipped candidate 'WTA chair apologises to Pegula after 'diva' comment broadcast': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Ousted Paraguay president under house arrest after banking crisis leaves 60% of country unable to access accounts': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Paraguay\u2019s Senate removes Santiago Pe\u00f1a, who is placed under arrest, and Pedro Alliana takes office': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Man in custody after being found in vehicle near White House with guns': Free article failed quality gate: 1 repeated sentence(s)"
-  ],
-  "inserted": 138,
-  "message": "Published 1 post(s). Skipped 11 low-quality candidate(s).",
+  "fetched": 5097,
+  "finished_at": "2026-11-07T09:18:42.408960+00:00",
+  "generation_failures": [],
+  "inserted": 184,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "crime"
+        "world",
+        "climate",
+        "health"
       ],
       "sources": [
-        "BBC Crime"
+        "The Guardian World"
       ],
       "status": "publish",
-      "title": "'My mortgage is going up \u00a3200': How rising interest rates are hitting",
-      "wp_id": 36097
+      "title": "What\u2019s the point? Ten years after the Paris treaty",
+      "wp_id": 36117
     }
   ],
   "state": "published"
