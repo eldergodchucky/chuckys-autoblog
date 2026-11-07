@@ -1,33 +1,24 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5046,
-  "finished_at": "2026-11-07T19:58:48.607611+00:00",
-  "generation_failures": [
-    "Skipped candidate 'AMD CEO Lisa Su: 'We are a data center-first company'': Free article failed quality gate: article has only 226 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Berkshire Hathaway stock is a haven again as investors flee AI bloodbath while its own portfolio takes a hit amid reshuffling': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'The US let Nvidia sell chips to an empty office in China': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Google to add vocabulary for corrected words to Gboard's Rambler voice typing feature': Free article failed quality gate: article has only 243 words; 1 repeated sentence(s)",
-    "Skipped candidate ''I Feel Like Modding is Kind Of Dying' \u2013 Mass Effect 3 Multiplayer Modder on AI's Impact on the Scene': Free article failed quality gate: article has only 186 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'NYT Cooking\u2019s AI assistant saved my weeknight chicken, but almost ruined my cake': Free article failed quality gate: 2 repeated sentence(s)"
-  ],
-  "inserted": 229,
-  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "fetched": 5057,
+  "finished_at": "2026-11-07T23:30:46.516823+00:00",
+  "generation_failures": [],
+  "inserted": 216,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "culture",
-        "politics"
+        "gadgets",
+        "business"
       ],
       "sources": [
-        "CNBC International",
-        "Variety"
+        "Engadget"
       ],
       "status": "publish",
-      "title": "Trump offers UFC chief Dana White press secretary job",
-      "wp_id": 36154
+      "title": "There is no end in sight for the GPU supply problem",
+      "wp_id": 36168
     }
   ],
   "state": "published"
