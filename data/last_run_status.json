@@ -1,42 +1,35 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5083,
-  "finished_at": "2026-11-06T22:58:41.671581+00:00",
+  "fetched": 5092,
+  "finished_at": "2026-11-07T02:39:47.444689+00:00",
   "generation_failures": [
-    "Skipped candidate 'AI better assesses heart function from MRI than clinicians': Free article failed quality gate: article has only 205 words; 1 repeated sentence(s)",
-    "Skipped candidate 'AI better assesses heart function from MRI than clinicians': Free article failed quality gate: article has only 205 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Three new techniques target hidden AI backdoors without major performance losses': Free article failed quality gate: article has only 212 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'On this day in space! Nov. 6, 1572: A German astronomer discovers the Tycho supernova with the naked eye, but everyone thought the cosmic explosion was a 'new star'': Free article failed quality gate: article has only 257 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Mindfulness therapy assisted by ketamine may strengthen body awareness to reduce opioid cravings': Free article failed quality gate: article has only 281 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Mindfulness therapy assisted by ketamine may strengthen body awareness to reduce opioid cravings': Free article failed quality gate: article has only 281 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Mother and baby's immune cells linked to aggressive placental inflammation in preterm cases': Free article failed quality gate: article has only 289 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Mother and baby's immune cells linked to aggressive placental inflammation in preterm cases': Free article failed quality gate: article has only 289 words; 1 repeated sentence(s)",
+    "Skipped candidate 'South African trial tests off-the-shelf killer cells against lymphoma': Free article failed quality gate: article has only 207 words",
+    "Skipped candidate 'South African trial tests off-the-shelf killer cells against lymphoma': Free article failed quality gate: article has only 207 words",
     "Skipped candidate 'Why humans punish: A study of two distinct societies reveals a shared sense of justice': Free article failed quality gate: article has only 208 words",
-    "Skipped candidate 'Brain stimulation made people see sexualized women less like objects in a lab test': Free article failed quality gate: article has only 211 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Two compounds target drug-resistant brain cancer cells in laboratory tests': Free article failed quality gate: article has only 261 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Two compounds target drug-resistant brain cancer cells in laboratory tests': Free article failed quality gate: article has only 261 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Biotech Firm Claims Some Credit for Groundbreaking Virus Research': Free article failed quality gate: article has only 171 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Kids Who Learn To Swim Early May Have an Unexpected Advantage in School': Free article failed quality gate: article has only 220 words; 1 repeated sentence(s)",
-    "Skipped candidate 'New research identifies biological differences in pancreatic cancer': Free article failed quality gate: article has only 194 words",
-    "Skipped candidate 'New research identifies biological differences in pancreatic cancer': Free article failed quality gate: article has only 194 words"
+    "Skipped candidate 'Rockstar's having sale on old GTA games on the only platform Grand Theft Auto 6 isn't coming to (ours)': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Fox Commits to Carrying Non-Fox Content on Roku for at Least 3 Years as DOJ Closes Antitrust Investigation': Free article failed quality gate: article has only 271 words; article has only 5 paragraphs; 2 repeated sentence(s)",
+    "Skipped candidate 'Three men charged in US with using AI to impersonate CEOs and steal millions': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Kenyan cult leader sentenced to 200 years in prison': Free article failed quality gate: article has only 238 words; 1 repeated sentence(s)",
+    "Skipped candidate 'WTA chair apologises to Pegula after 'diva' comment broadcast': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Ousted Paraguay president under house arrest after banking crisis leaves 60% of country unable to access accounts': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Paraguay\u2019s Senate removes Santiago Pe\u00f1a, who is placed under arrest, and Pedro Alliana takes office': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Man in custody after being found in vehicle near White House with guns': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 363,
-  "message": "Published 1 post(s). Skipped 16 low-quality candidate(s).",
+  "inserted": 138,
+  "message": "Published 1 post(s). Skipped 11 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "history",
-        "science",
         "crime"
       ],
       "sources": [
-        "Smithsonian History"
+        "BBC Crime"
       ],
       "status": "publish",
-      "title": "Where Did Stonehenge's Mysterious",
-      "wp_id": 36085
+      "title": "'My mortgage is going up \u00a3200': How rising interest rates are hitting",
+      "wp_id": 36097
     }
   ],
   "state": "published"
