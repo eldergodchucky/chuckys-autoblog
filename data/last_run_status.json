@@ -2,29 +2,28 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5072,
-  "finished_at": "2026-11-08T02:41:17.701381+00:00",
+  "fetched": 5079,
+  "finished_at": "2026-11-08T09:31:34.953116+00:00",
   "generation_failures": [
-    "Skipped candidate 'Popular Dairy Alternatives Could Be Leaving You Short of Essential Nutrients': Free article failed quality gate: article has only 231 words; 1 repeated sentence(s)",
-    "Skipped candidate 'A Healthier Form of Salt Could Prevent Nearly 3 Million Deaths Every Year, Scientists Say': Free article failed quality gate: article has only 238 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Subtle mood changes in late life may follow early Alzheimer\u2019s brain changes, study suggests': Free article failed quality gate: article has only 212 words; 1 repeated sentence(s)"
+    "Skipped candidate '\u2018No vote, no warning, just plain math\u2019: Social Security is six years from an automatic 22% cut\u2014and most Americans have no idea': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'SoftBank and ABB consider China carve-out to salvage robotics deal': Free article failed quality gate: article has only 181 words; article has only 5 paragraphs",
+    "Skipped candidate 'Newsroom bomb threats follow escalating European flight hoaxes': Free article failed quality gate: article has only 146 words; article has only 5 paragraphs"
   ],
-  "inserted": 96,
+  "inserted": 190,
   "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
         "sports",
-        "health",
-        "world"
+        "entertainment",
+        "gaming"
       ],
       "sources": [
-        "BBC Sport",
-        "Sky Sports Global"
+        "Formula 1 News"
       ],
       "status": "publish",
-      "title": "World number one Rybakina withdraws from WTA Finals",
-      "wp_id": 36180
+      "title": "Hamilton's remarkable projects away from F1",
+      "wp_id": 36206
     }
   ],
   "state": "published"
