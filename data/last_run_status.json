@@ -2,28 +2,34 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5079,
-  "finished_at": "2026-11-08T09:31:34.953116+00:00",
+  "fetched": 5059,
+  "finished_at": "2026-11-08T16:16:59.564660+00:00",
   "generation_failures": [
-    "Skipped candidate '\u2018No vote, no warning, just plain math\u2019: Social Security is six years from an automatic 22% cut\u2014and most Americans have no idea': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'SoftBank and ABB consider China carve-out to salvage robotics deal': Free article failed quality gate: article has only 181 words; article has only 5 paragraphs",
-    "Skipped candidate 'Newsroom bomb threats follow escalating European flight hoaxes': Free article failed quality gate: article has only 146 words; article has only 5 paragraphs"
+    "Skipped candidate 'A Guide to COP31 Climate Talks in Antalya, Turkey': Free article failed quality gate: article has only 148 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'A Guide to COP31 Climate Talks in Antalya, Turkey': Free article failed quality gate: article has only 148 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Iris Ohyama data cloud breach exposes info of 7.7 million customers': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Game theory helps SETI search for alien civilizations': Free article failed quality gate: article has only 193 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Who is King Ghidorah? The cosmic connections of Godzilla Minus Zero's foe': Free article failed quality gate: article has only 238 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Legendary sci-fi magazine 'Starlog' returns as a yearly release, just in time for its 50th anniversary': Free article failed quality gate: article has only 277 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Will China\u2019s slow and steady moon landing plan be a safer bet than the US\u2019?': Free article failed quality gate: article has only 228 words; article has only 5 paragraphs",
+    "Skipped candidate 'On this day in space! Nov. 8, 2005: Europe launches Venus Express, its first mission to Venus': Free article failed quality gate: article has only 160 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Box Office: \u2018Godzilla Minus Zero\u2019 Roars With $31 Million Debut, \u2018Cat in the Hat\u2019 Fizzles With $20 Million': Free article failed quality gate: 2 repeated sentence(s)"
   ],
-  "inserted": 190,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 342,
+  "message": "Published 1 post(s). Skipped 9 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "sports",
+        "world",
         "entertainment",
-        "gaming"
+        "culture"
       ],
       "sources": [
-        "Formula 1 News"
+        "AllAfrica"
       ],
       "status": "publish",
-      "title": "Hamilton's remarkable projects away from F1",
-      "wp_id": 36206
+      "title": "Africa: CANEX WKND 2026 Showcases Africa's Creative Brilliance in a Night",
+      "wp_id": 36230
     }
   ],
   "state": "published"
