@@ -1,24 +1,30 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5057,
-  "finished_at": "2026-11-07T23:30:46.516823+00:00",
-  "generation_failures": [],
-  "inserted": 216,
-  "message": "Published 1 post(s).",
+  "fetched": 5072,
+  "finished_at": "2026-11-08T02:41:17.701381+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Popular Dairy Alternatives Could Be Leaving You Short of Essential Nutrients': Free article failed quality gate: article has only 231 words; 1 repeated sentence(s)",
+    "Skipped candidate 'A Healthier Form of Salt Could Prevent Nearly 3 Million Deaths Every Year, Scientists Say': Free article failed quality gate: article has only 238 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Subtle mood changes in late life may follow early Alzheimer\u2019s brain changes, study suggests': Free article failed quality gate: article has only 212 words; 1 repeated sentence(s)"
+  ],
+  "inserted": 96,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "business"
+        "sports",
+        "health",
+        "world"
       ],
       "sources": [
-        "Engadget"
+        "BBC Sport",
+        "Sky Sports Global"
       ],
       "status": "publish",
-      "title": "There is no end in sight for the GPU supply problem",
-      "wp_id": 36168
+      "title": "World number one Rybakina withdraws from WTA Finals",
+      "wp_id": 36180
     }
   ],
   "state": "published"
