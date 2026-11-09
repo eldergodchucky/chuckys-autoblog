@@ -1,33 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 17,
   "feeds": 127,
-  "fetched": 5064,
-  "finished_at": "2026-11-09T00:05:29.772233+00:00",
-  "generation_failures": [
-    "Skipped candidate 'JWST tracks more than 100 magnified stellar events in the Dragon galaxy': Free article failed quality gate: article has only 257 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Survival after sudden cardiac arrest didn\u2019t improve despite training bystanders, emergency responders': Free article failed quality gate: article has only 207 words",
-    "Skipped candidate 'A sample of over 5,000 drives reveals one problem with new HDDs': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'AI chatbots can flip-flop on false claims when users keep repeating them': Free article failed quality gate: article has only 204 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Self-perception might matter more than observable social skills for autistic teens\u2019 well-being': Free article failed quality gate: article has only 197 words",
-    "Skipped candidate 'Toddler temperament is linked to common DNA variations, large genetic study finds': Free article failed quality gate: article has only 211 words; 1 repeated sentence(s)",
-    "Skipped candidate 'GPs to offer 300,000 patients extra support to ease winter strain on NHS': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Only 6.4% of stroke survivors receive enough therapy, finds \u2018damning\u2019 report': Free article failed quality gate: 1 repeated sentence(s)"
-  ],
-  "inserted": 171,
-  "message": "Published 1 post(s). Skipped 8 low-quality candidate(s).",
+  "fetched": 4996,
+  "finished_at": "2026-11-09T06:31:37.712505+00:00",
+  "generation_failures": [],
+  "inserted": 240,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "health",
-        "science"
+        "gadgets",
+        "business",
+        "apple"
       ],
       "sources": [
-        "BBC Health"
+        "Engadget"
       ],
       "status": "publish",
-      "title": "New contract will make it 'easier' to get GP appointments",
-      "wp_id": 36260
+      "title": "10 Apple products and features that transformed under Tim Cook's leadership",
+      "wp_id": 36286
     }
   ],
   "state": "published"
