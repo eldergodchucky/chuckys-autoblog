@@ -2,28 +2,27 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5102,
-  "finished_at": "2026-11-10T16:12:25.969155+00:00",
+  "fetched": 5116,
+  "finished_at": "2026-11-10T21:51:27.421862+00:00",
   "generation_failures": [
-    "Skipped candidate 'I don't want AI in my online search. What options do I have?': Free article failed quality gate: article has only 187 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Photoshop, Lightroom, and Premiere are making it easier to remove things': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'The robot boom: Are businesses ready for an AI-powered workforce?': Free article failed quality gate: article has only 209 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Researchers remove 'speed bottleneck' in flash storage to help accelerate AI inference': Free article failed quality gate: article has only 211 words; article has only 5 paragraphs; 1 repeated sentence(s)"
+    "Skipped candidate 'Someone Got Halo 1 Running on a Sega Dreamcast': Free article failed quality gate: article has only 201 words; article has only 5 paragraphs; 1 repeated sentence(s)"
   ],
-  "inserted": 754,
-  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
+  "inserted": 616,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "ai",
-        "science"
+        "world",
+        "defense",
+        "politics"
       ],
       "sources": [
-        "TechCrunch"
+        "Al Jazeera",
+        "Defense News"
       ],
       "status": "publish",
-      "title": "Reddit is turning user conversations into AI-powered product reviews",
-      "wp_id": 36380
+      "title": "US voters want Democrats focused on ending Iran war",
+      "wp_id": 36394
     }
   ],
   "state": "published"
