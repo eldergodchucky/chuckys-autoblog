@@ -2,49 +2,28 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5097,
-  "finished_at": "2026-11-10T07:48:42.325303+00:00",
+  "fetched": 5102,
+  "finished_at": "2026-11-10T16:12:25.969155+00:00",
   "generation_failures": [
-    "Skipped candidate 'Balloon technique may help improve circulation to heart and brain during cardiac arrest': Free article failed quality gate: article has only 270 words",
-    "Skipped candidate 'Balloon technique may help improve circulation to heart and brain during cardiac arrest': Free article failed quality gate: article has only 270 words",
-    "Skipped candidate 'How human movement predicts health measures across multiple body systems': Free article failed quality gate: article has only 285 words; 1 repeated sentence(s)",
-    "Skipped candidate 'How human movement predicts health measures across multiple body systems': Free article failed quality gate: article has only 285 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Wildlife import linked to higher risk of animal-human disease outbreaks': Free article failed quality gate: article has only 286 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Wildlife import linked to higher risk of animal-human disease outbreaks': Free article failed quality gate: article has only 286 words; 1 repeated sentence(s)",
-    "Skipped candidate 'China uses military drones, heavy-lift and C909 planes in huge forest fire drill': Free article failed quality gate: article has only 255 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Police investigate as nearly 30 Santa Barbara half-marathon runners fall ill with \u2018unusual symptoms\u2019': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Identifiable hallucinatory presences may flag more advanced Parkinson's disease, study finds': Free article failed quality gate: article has only 210 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Identifiable hallucinatory presences may flag more advanced Parkinson's disease, study finds': Free article failed quality gate: article has only 210 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Putting paternal mental health in the spotlight': Free article failed quality gate: article has only 245 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Putting paternal mental health in the spotlight': Free article failed quality gate: article has only 245 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Visuals, numbers can shape perceptions of Lyme disease risk': Free article failed quality gate: article has only 198 words",
-    "Skipped candidate 'Visuals, numbers can shape perceptions of Lyme disease risk': Free article failed quality gate: article has only 198 words",
-    "Skipped candidate 'Childhood trauma associated with gambling harms in later life': Free article failed quality gate: article has only 234 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Childhood trauma associated with gambling harms in later life': Free article failed quality gate: article has only 234 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Medicare reimbursement rates for dermatology decline 29%, adjusted for inflation': Free article failed quality gate: article has only 232 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Medicare reimbursement rates for dermatology decline 29%, adjusted for inflation': Free article failed quality gate: article has only 232 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Canadian court certifies class action against Apple over Google search deal': Free article failed quality gate: article has only 171 words; article has only 5 paragraphs",
-    "Skipped candidate 'Samsung Galaxy A34 gets updated to One UI 9 based on Android 17': Free article failed quality gate: article has only 269 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Senate advances bill to speed up projects from gas pipelines to clean energy': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Sierra Club Welcomes CalPERS\u2019 $71 Billion Climate-Solutions Investment Milestone, Urges Fund to End Financing of Fossil Fuel Expansion': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Heat-trapping carbon pollution drops, but scientists cite Iran war rather than energy progress': Free article failed quality gate: article has only 198 words; article has only 5 paragraphs; 2 repeated sentence(s)",
-    "Skipped candidate 'Tuesday briefing: The world is falling short on climate action. Can Cop31 change that?': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'I don't want AI in my online search. What options do I have?': Free article failed quality gate: article has only 187 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Photoshop, Lightroom, and Premiere are making it easier to remove things': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'The robot boom: Are businesses ready for an AI-powered workforce?': Free article failed quality gate: article has only 209 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Researchers remove 'speed bottleneck' in flash storage to help accelerate AI inference': Free article failed quality gate: article has only 211 words; article has only 5 paragraphs; 1 repeated sentence(s)"
   ],
-  "inserted": 343,
-  "message": "Published 1 post(s). Skipped 24 low-quality candidate(s).",
+  "inserted": 754,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "climate",
-        "crime"
+        "ai",
+        "science"
       ],
       "sources": [
-        "AllAfrica"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Africa: COP31 - Africa's 18m Workers Sound Alarm",
-      "wp_id": 36354
+      "title": "Reddit is turning user conversations into AI-powered product reviews",
+      "wp_id": 36380
     }
   ],
   "state": "published"
