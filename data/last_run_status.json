@@ -2,50 +2,25 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5098,
-  "finished_at": "2026-11-09T16:49:44.836050+00:00",
+  "fetched": 5094,
+  "finished_at": "2026-11-10T00:36:05.286971+00:00",
   "generation_failures": [
-    "Skipped candidate 'Medical breakthrough offers hope to people with same stiff person syndrome as C\u00e9line Dion': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Burnham warns that NHS will \u2018struggle\u2019 to cope if consultants don\u2019t resume talks over pay \u2013 UK politics live': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'The brain's 'dimmer switch' could help explain why attention drifts': Free article failed quality gate: article has only 264 words; 1 repeated sentence(s)",
-    "Skipped candidate 'The brain's 'dimmer switch' could help explain why attention drifts': Free article failed quality gate: article has only 264 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Polish prosecutors say \u2018too early\u2019 to tell if Krak\u00f3w gunman was motivated by political ideology': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Two-year study will examine how gender-affirming hormone therapy affects energy use and blood vessel function': Free article failed quality gate: article has only 290 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Two-year study will examine how gender-affirming hormone therapy affects energy use and blood vessel function': Free article failed quality gate: article has only 290 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Early trial results suggest potential new treatment for stiff person syndrome': Free article failed quality gate: article has only 199 words",
-    "Skipped candidate 'Early trial results suggest potential new treatment for stiff person syndrome': Free article failed quality gate: article has only 199 words",
-    "Skipped candidate 'Cluster headache linked to pronounced levels of burnout symptoms': Free article failed quality gate: article has only 226 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Cluster headache linked to pronounced levels of burnout symptoms': Free article failed quality gate: article has only 226 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Study challenges long-held fears about overactive bladder drugs and dementia': Free article failed quality gate: article has only 226 words",
-    "Skipped candidate 'Study challenges long-held fears about overactive bladder drugs and dementia': Free article failed quality gate: article has only 226 words",
-    "Skipped candidate 'STAT+: Gene therapy\u2019s long-debated cancer risk materializes': Free article failed quality gate: article has only 207 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Burnham warns that NHS will \u2018struggle\u2019 to cope if consultants don\u2019t resume talks over pay \u2013 UK politics live': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Burnham warns that NHS will \u2018struggle\u2019 to cope if consultants don\u2019t resume talks over pay \u2013 UK politics live': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'US youths see nearly 4,000 food marketing messages on digital media each year': Free article failed quality gate: article has only 210 words; 1 repeated sentence(s)",
-    "Skipped candidate 'US youths see nearly 4,000 food marketing messages on digital media each year': Free article failed quality gate: article has only 210 words; 1 repeated sentence(s)",
-    "Skipped candidate 'STAT+: Eli Lilly\u2019s GLP-1 pill Foundayo helped alleviate sleep apnea in studies': Free article failed quality gate: article has only 209 words",
-    "Skipped candidate 'It takes a neighborhood to keep kids active': Free article failed quality gate: article has only 196 words",
-    "Skipped candidate 'It takes a neighborhood to keep kids active': Free article failed quality gate: article has only 196 words",
-    "Skipped candidate 'Republicans much more likely to think Tylenol in pregnancy is tied to autism, no matter how the question is asked': Free article failed quality gate: article has only 209 words",
-    "Skipped candidate 'STAT+: FDA warns GLP-1 drugs carry potential risk of rare eye condition': Free article failed quality gate: article has only 200 words",
-    "Skipped candidate '9to5Mac Overtime 089: Live Rewind, Siri Recap, and Apple Watch privacy': Free article failed quality gate: article has only 282 words; 1 repeated sentence(s)",
-    "Skipped candidate 'A failed trial for a heart drug casts shadow over rivals developing similar therapies': Free article failed quality gate: article has only 176 words",
-    "Skipped candidate 'Kenya: DCI Recovers Sh3.6bn Drugs in Kwale, Arrests Three Suspects': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'SS United States Towed from Mobile Berth Ahead of Sinking': Free article failed quality gate: article has only 281 words; article has only 5 paragraphs; 3 repeated sentence(s)"
   ],
-  "inserted": 774,
-  "message": "Published 1 post(s). Skipped 26 low-quality candidate(s).",
+  "inserted": 681,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "entertainment",
-        "health"
+        "business",
+        "history"
       ],
       "sources": [
-        "The Hollywood Reporter"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "\u2018The Other Elliot Sister\u2019 Greenlit at BritBox With Launch of Austen Anthology",
-      "wp_id": 36314
+      "title": "Jensen Huang reportedly engaged a PR firm with a history of handling",
+      "wp_id": 36335
     }
   ],
   "state": "published"
