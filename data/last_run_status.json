@@ -2,27 +2,24 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5116,
-  "finished_at": "2026-11-10T21:51:27.421862+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Someone Got Halo 1 Running on a Sega Dreamcast': Free article failed quality gate: article has only 201 words; article has only 5 paragraphs; 1 repeated sentence(s)"
-  ],
-  "inserted": 616,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "fetched": 5120,
+  "finished_at": "2026-11-11T01:45:13.036828+00:00",
+  "generation_failures": [],
+  "inserted": 266,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "defense",
-        "politics"
+        "security",
+        "crime",
+        "ai"
       ],
       "sources": [
-        "Al Jazeera",
-        "Defense News"
+        "BleepingComputer"
       ],
       "status": "publish",
-      "title": "US voters want Democrats focused on ending Iran war",
-      "wp_id": 36394
+      "title": "Railway breach leads to $740",
+      "wp_id": 36405
     }
   ],
   "state": "published"
