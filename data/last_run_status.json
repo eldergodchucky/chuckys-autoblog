@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5120,
-  "finished_at": "2026-11-11T01:45:13.036828+00:00",
+  "fetched": 5105,
+  "finished_at": "2026-11-11T08:28:22.461166+00:00",
   "generation_failures": [],
-  "inserted": 266,
+  "inserted": 334,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "security",
-        "crime",
-        "ai"
+        "sports",
+        "world",
+        "entertainment"
       ],
       "sources": [
-        "BleepingComputer"
+        "Sky Sports Global"
       ],
       "status": "publish",
-      "title": "Railway breach leads to $740",
-      "wp_id": 36405
+      "title": "White: Opetaia could become a global star with spectacular Wilder win",
+      "wp_id": 36425
     }
   ],
   "state": "published"
