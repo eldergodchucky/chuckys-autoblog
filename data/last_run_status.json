@@ -1,25 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5105,
-  "finished_at": "2026-11-11T08:28:22.461166+00:00",
+  "fetched": 5103,
+  "finished_at": "2026-11-11T16:31:13.700657+00:00",
   "generation_failures": [],
-  "inserted": 334,
+  "inserted": 692,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "world",
-        "entertainment"
+        "defense",
+        "security",
+        "culture"
       ],
       "sources": [
-        "Sky Sports Global"
+        "Breaking Defense"
       ],
       "status": "publish",
-      "title": "White: Opetaia could become a global star with spectacular Wilder win",
-      "wp_id": 36425
+      "title": "Turkey prepares to withdraw from base in Iraq in shift for Ankara-Baghdad",
+      "wp_id": 36452
     }
   ],
   "state": "published"
