@@ -1,25 +1,51 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5103,
-  "finished_at": "2026-11-11T16:31:13.700657+00:00",
-  "generation_failures": [],
-  "inserted": 692,
-  "message": "Published 1 post(s).",
+  "fetched": 5104,
+  "finished_at": "2026-11-11T23:00:53.047031+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Giana Sisters developer Black Forest Games buys itself out of Embracer: 'Some of the best games of the last decade came from teams of fifty, not five hundred'': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Former id Software developers form their own employee-owned shooter studio in the wake of Microsoft's mass layoffs': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'AI-powered imaging tracks thousands of brain cancer cells moving through living tissue': Free article failed quality gate: article has only 269 words; 1 repeated sentence(s)",
+    "Skipped candidate 'AI-powered imaging tracks thousands of brain cancer cells moving through living tissue': Free article failed quality gate: article has only 269 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Roblox Horror Hit Dandy's World Is Finally Leaving Alpha With a Massive 1.0 Update, New Game Mode, and More': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate 'Most top mobile games in Japan still don't fully reveal loot box odds, despite decade-old industry rules': Free article failed quality gate: article has only 229 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Crimson Desert wins 'PC Game of the Year' at the 2026 Golden Joystick Awards': Free article failed quality gate: article has only 245 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Street Fighter Just Barely Fails to Fight Off Original Street Fighter at the Box Office as New Movie Leaves 1,700 Theaters': Free article failed quality gate: article has only 161 words; article has only 5 paragraphs",
+    "Skipped candidate 'Bethesda shoots down Elder Scrolls 6: Sentinel announcement rumor on Skyrim's 15th anniversary': Free article failed quality gate: article has only 267 words; 1 repeated sentence(s)",
+    "Skipped candidate 'GTA 6 Fans Think a Beloved Legacy Character from a Previous Game Is Hiding in the Latest Trailer': Free article failed quality gate: article has only 130 words; article has only 5 paragraphs",
+    "Skipped candidate 'The Rings of Power Stars React to This Week's Big Season 3 Deaths': Free article failed quality gate: article has only 139 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Don't expect more information on The Elder Scrolls 6: Sentinel \"for some time,\" Bethesda says': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'We can't see Fast Radio Bursts but we can now hear them thanks to a Finnish Cathedral': Free article failed quality gate: article has only 258 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Burnham Heads to COP31 Torn Between Cheaper Power and Net Zero': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Falling oil prices are no longer enough to bring down borrowing costs in the world\u2019s most important bond market': Free article failed quality gate: article has only 171 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Yttrium's 125-Fold Price Gap Looms Over Trump-Xi Talks in Shenzhen': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Uncalled US House races could send more crypto allies to Congress': Free article failed quality gate: article has only 153 words; article has only 5 paragraphs",
+    "Skipped candidate 'Bitcoin Short-Term Holders Send $3.6 Billion in BTC to Exchanges at a Loss': Free article failed quality gate: article has only 143 words; article has only 5 paragraphs",
+    "Skipped candidate 'Nvidia-Backed CoreWeave Is Surging: Here\u2019s What It Means for the AI Boom': Free article failed quality gate: article has only 171 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Binance warns iPhone crypto holders of security flaw researchers say remains unpatched': Free article failed quality gate: article has only 158 words; article has only 5 paragraphs",
+    "Skipped candidate 'RSF calls for release of French reporter Christophe Gleizes, detained in Algeria': Free article failed quality gate: article has only 266 words; 1 repeated sentence(s)",
+    "Skipped candidate 'This New AI Music Model Is Already Better Than Suno\u2014We Put ACE to the Test': Free article failed quality gate: article has only 169 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Binance warns iPhone crypto holders of security flaw researchers say remains unpatched': Free article failed quality gate: article has only 157 words; article has only 5 paragraphs",
+    "Skipped candidate 'Tether's Tiny AI Agent Beats Models 2.5 Times Its Size at Controlling Your Phone': Free article failed quality gate: article has only 173 words; article has only 5 paragraphs",
+    "Skipped candidate 'Stablecoin Drain, ETF Outflows Leave Bitcoin 'Running on Empty'': Free article failed quality gate: article has only 110 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'The Secret of Monkey Island: all 13 versions side by side': Free article failed quality gate: article has only 201 words; article has only 5 paragraphs; 2 repeated sentence(s)",
+    "Skipped candidate 'The Arduino Nano family is now XL': Free article failed quality gate: article has only 175 words; article has only 5 paragraphs; 1 repeated sentence(s)"
+  ],
+  "inserted": 544,
+  "message": "Published 1 post(s). Skipped 27 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "defense",
-        "security",
-        "culture"
+        "sports"
       ],
       "sources": [
-        "Breaking Defense"
+        "Formula 1 News"
       ],
       "status": "publish",
-      "title": "Turkey prepares to withdraw from base in Iraq in shift for Ankara-Baghdad",
-      "wp_id": 36452
+      "title": "Ricciardo reacts to his best career moments",
+      "wp_id": 36477
     }
   ],
   "state": "published"
