@@ -2,53 +2,27 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5113,
-  "finished_at": "2026-11-12T03:45:51.850923+00:00",
-  "generation_failures": [
-    "Skipped candidate 'The unfolding Jensen Huang scandal: a timeline': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Hegseth scolded by security at Tomb of the Unknown Soldier': Free article failed quality gate: article has only 139 words; article has only 5 paragraphs",
-    "Skipped candidate 'Asteroid mining will crash the platinum market, but that's good news for Earth': Free article failed quality gate: article has only 212 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Independent technique validates landmark M87* image': Free article failed quality gate: article has only 234 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Jessica Chastain Returning to Broadway in New Play \u2018Lost Lear\u2019': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Randall England, \u2018General Hospital\u2019 Star, Dies at 75': Free article failed quality gate: article has only 268 words; 1 repeated sentence(s)",
-    "Skipped candidate 'The 2026 LEGO Star Wars Advent Calendar Is Discounted at Target After Amazon Sells Out': Free article failed quality gate: article has only 270 words; 1 repeated sentence(s)",
-    "Skipped candidate 'CD Projekt used AI to modify the voice of Geralt's Polish actor after a stroke left it significantly changed: 'This was a special case'': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Lionsgate Acquires Alma Har\u2019el\u2019s \u2018Wet\u2019 Starring Connor Storrie, Javier Bardem, Odessa A\u2019zion and More': Free article failed quality gate: article has only 244 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Jamie Campbell Bower Calls Rings of Power Season 3 the 'Perfect Kind of Antidote' After Stranger Things': Free article failed quality gate: article has only 162 words; article has only 5 paragraphs",
-    "Skipped candidate 'Sun Valley Film Festival to Open With \u2018The Debut\u2019; Honorees Announced': Free article failed quality gate: article has only 296 words; 2 repeated sentence(s)",
-    "Skipped candidate 'Anthony Clark, \u2018Yes, Dear\u2019 Star and Comedian, Dies at 62': Free article failed quality gate: article has only 256 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Tarantino Fired M\u00e9lanie Laurent From \u2018Inglourious Basterds\u2019 After \u2018Terrible\u2019 Table Read and Axed Isabelle Huppert for Not Showing Up: \u2018I Don\u2019t Owe You Jack S\u2014\u2018': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'RAISING THE BAR: Bloukrans Bridge crossing was monkey business for SA daredevil Thomas van Tonder': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Where to Watch the New \u2018Secret Lives of Mormon Wives: Orange County\u2019 Spinoff': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Why Did Polynesians Suddenly Sail Across the Pacific After 1,700 Years? Scientists May Have Found the Answer': Free article failed quality gate: article has only 204 words; article has only 5 paragraphs",
-    "Skipped candidate 'A Natural \u201cVarnish\u201d May Explain How 37,000-Year-Old Cave Art Survived': Free article failed quality gate: article has only 226 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'After cracking down on 'cheat' mods in Helldivers 2 and taking another Steam review beating, Arrowhead plans hotfix that should allow harmless cosmetics': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Democrat Scott Colom seals historic win in Mississippi Senate race': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Democrat Scott Colom unseats Cindy Hyde-Smith in stunning Mississippi Senate win': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate 'Historic US ocean liner sinks near Florida to become world\u2019s largest artificial reef': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Bronze leg found in Scottish bog sheds new light on Roman occupation': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Historic US ocean liner sinks near Florida to become world\u2019s largest artificial reef': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'European leaders gather in Dublin under the shadow of hybrid threats': Free article failed quality gate: article has only 226 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Clinical trial explores potential brain health benefits of dietary supplement': Free article failed quality gate: article has only 240 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Clinical trial explores potential brain health benefits of dietary supplement': Free article failed quality gate: article has only 240 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Pausing blood pressure meds on day of surgery benefits older adults': Free article failed quality gate: article has only 266 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Pausing blood pressure meds on day of surgery benefits older adults': Free article failed quality gate: article has only 266 words; 1 repeated sentence(s)"
-  ],
-  "inserted": 221,
-  "message": "Published 1 post(s). Skipped 28 low-quality candidate(s).",
+  "fetched": 5123,
+  "finished_at": "2026-11-12T11:56:14.974717+00:00",
+  "generation_failures": [],
+  "inserted": 516,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "crime",
-        "science",
-        "gadgets"
+        "world",
+        "business",
+        "politics"
       ],
       "sources": [
-        "BBC Crime"
+        "Al Jazeera",
+        "BBC World",
+        "CNBC International",
+        "Daily Maverick"
       ],
       "status": "publish",
-      "title": "Trying Tourette's device was the best day of my life",
-      "wp_id": 36489
+      "title": "US envoys arrive in Moscow for Russia-Ukraine talks with Putin",
+      "wp_id": 36522
     }
   ],
   "state": "published"
