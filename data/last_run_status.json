@@ -2,27 +2,31 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5123,
-  "finished_at": "2026-11-12T11:56:14.974717+00:00",
-  "generation_failures": [],
-  "inserted": 516,
-  "message": "Published 1 post(s).",
+  "fetched": 5113,
+  "finished_at": "2026-11-12T19:40:26.435329+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Google announces Gemini 4 Hydrogen with \u2018significant leaps\u2019 in speed, intelligence': Free article failed quality gate: article has only 170 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'AI used to better predict kidney stone composition': Free article failed quality gate: article has only 245 words; 1 repeated sentence(s)",
+    "Skipped candidate 'AI used to better predict kidney stone composition': Free article failed quality gate: article has only 245 words; 1 repeated sentence(s)"
+  ],
+  "inserted": 717,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
         "business",
-        "politics"
+        "crypto",
+        "ai"
       ],
       "sources": [
-        "Al Jazeera",
-        "BBC World",
         "CNBC International",
-        "Daily Maverick"
+        "Decrypt",
+        "Fortune Global",
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "US envoys arrive in Moscow for Russia-Ukraine talks with Putin",
-      "wp_id": 36522
+      "title": "Anthropic\u2019s blockbuster IPO just got harder after Jensen Huang\u2019s dramatic exit",
+      "wp_id": 36542
     }
   ],
   "state": "published"
