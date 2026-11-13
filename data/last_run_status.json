@@ -2,39 +2,30 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5110,
-  "finished_at": "2026-11-13T07:23:13.535403+00:00",
+  "fetched": 5098,
+  "finished_at": "2026-11-13T15:37:53.833638+00:00",
   "generation_failures": [
-    "Skipped candidate 'More than 60% of Germany\u2019s female soldiers report harassment or abuse': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate '74 terrorists killed in multiple operations: Pakistani Army': Free article failed quality gate: article has only 155 words; article has only 5 paragraphs",
-    "Skipped candidate 'China stages unannounced Pacific drills in \u2018silent intimidation\u2019 of Taiwan, officials say': Free article failed quality gate: article has only 158 words; article has only 5 paragraphs",
-    "Skipped candidate 'What Happens in Vegas Should Inform the Rest of the Country': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'UN climate summit pushes electrification goal as groups call for mining safeguards': Free article failed quality gate: article has only 186 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Senate Republicans Begin the Process of Jamming BAAJA While Trump Threatens to Ignore It': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Rare Earth Wars: U.S. General Sounds Alarm Over China's Military Leverage': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate 'Oil Prices Head for Second Weekly Loss Despite Fresh Middle East Attacks': Free article failed quality gate: 2 repeated sentence(s)",
-    "Skipped candidate 'Phantom energy: New report exposes empty promises behind nuclear power and data centers': Free article failed quality gate: article has only 175 words; article has only 5 paragraphs",
-    "Skipped candidate 'Nvidia\u2019s former CEO Jensen Huang summoned to testify before U.S. lawmakers: Senator': Free article failed quality gate: article has only 244 words",
-    "Skipped candidate 'Trump nominates Hester Peirce successor among SEC, CFTC picks': Free article failed quality gate: article has only 155 words; article has only 5 paragraphs",
-    "Skipped candidate 'Bitcoin ETFs are now down over $1.5 billion in net outflows for the year': Free article failed quality gate: article has only 139 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Ethereum treasury firm BTCS sold ether at a loss to keep $64 million Aave loan healthy': Free article failed quality gate: article has only 152 words; article has only 5 paragraphs"
+    "Skipped candidate 'AI analysis of heart ultrasounds may help flag long-term cardiovascular or dementia-related death risk': Free article failed quality gate: article has only 223 words",
+    "Skipped candidate 'AI analysis of heart ultrasounds may help flag long-term cardiovascular or dementia-related death risk': Free article failed quality gate: article has only 223 words",
+    "Skipped candidate ''Heist of a new kind': AI-enabled scam reportedly managed to steal $110 million from French bank': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Reddit tells me it\u2019s not going to make a penny in affiliates from Reddit Reviews and is working hard to avoid inauthentic content': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 282,
-  "message": "Published 1 post(s). Skipped 13 low-quality candidate(s).",
+  "inserted": 650,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "crypto",
-        "security"
+        "business",
+        "politics",
+        "ai"
       ],
       "sources": [
-        "BBC World",
-        "Daily Maverick"
+        "CNBC International",
+        "The Verge"
       ],
       "status": "publish",
-      "title": "North Korean hackers used fake video calls in $400m crypto hack",
-      "wp_id": 36572
+      "title": "What\u2019s really at stake in the Jensen Huang saga",
+      "wp_id": 36597
     }
   ],
   "state": "published"
