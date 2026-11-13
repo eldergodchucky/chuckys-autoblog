@@ -2,31 +2,62 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5113,
-  "finished_at": "2026-11-12T19:40:26.435329+00:00",
+  "fetched": 5118,
+  "finished_at": "2026-11-13T00:45:44.615688+00:00",
   "generation_failures": [
-    "Skipped candidate 'Google announces Gemini 4 Hydrogen with \u2018significant leaps\u2019 in speed, intelligence': Free article failed quality gate: article has only 170 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'AI used to better predict kidney stone composition': Free article failed quality gate: article has only 245 words; 1 repeated sentence(s)",
-    "Skipped candidate 'AI used to better predict kidney stone composition': Free article failed quality gate: article has only 245 words; 1 repeated sentence(s)"
+    "Skipped candidate 'Helmet Stand \u2013 Modular Stand for Cosplay Helmets #3DThursday #3DPrinting': Free article failed quality gate: article has only 177 words; 3 repeated sentence(s)",
+    "Skipped candidate 'The Oura Ring 4 is almost as good as the newer model, but $150 cheaper': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Cactus Planter \u2013 Cartoon-Styled 3-Slot Planter with Drainage #3DThursday #3DPrinting': Free article failed quality gate: article has only 178 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Cozy Pinecone Cottage for Tealight Candles \u2013 Woodland Gnome-Style #3DThursday #3DPrinting': Free article failed quality gate: article has only 187 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Molecular mapping of 8 million cells brings cerebral architecture into focus': Free article failed quality gate: article has only 243 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Molecular mapping of 8 million cells brings cerebral architecture into focus': Free article failed quality gate: article has only 243 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Cancer vaccines show promise for treatment and prevention': Free article failed quality gate: article has only 252 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Cancer vaccines show promise for treatment and prevention': Free article failed quality gate: article has only 252 words; 1 repeated sentence(s)",
+    "Skipped candidate 'What spaceflight reveals about nerves and bone recovery': Free article failed quality gate: article has only 258 words; 1 repeated sentence(s)",
+    "Skipped candidate 'What spaceflight reveals about nerves and bone recovery': Free article failed quality gate: article has only 258 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Once considered junk, cellular 'chimeras' emerge as key to better cancer care': Free article failed quality gate: article has only 210 words",
+    "Skipped candidate 'Once considered junk, cellular 'chimeras' emerge as key to better cancer care': Free article failed quality gate: article has only 210 words",
+    "Skipped candidate 'Pilot study tests cell therapy for difficult-to-heal diabetic foot ulcers': Free article failed quality gate: article has only 211 words",
+    "Skipped candidate 'Pilot study tests cell therapy for difficult-to-heal diabetic foot ulcers': Free article failed quality gate: article has only 211 words",
+    "Skipped candidate 'Organ-on-chip shows how tumors interact with nerves and blood vessels': Free article failed quality gate: article has only 259 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Organ-on-chip shows how tumors interact with nerves and blood vessels': Free article failed quality gate: article has only 259 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Palworld developer Pocketpair gives employees time off for 'a 5-day business trip in Vice City when GTA 6 launches'': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate 'A novel pathogenic mechanism of nephrotic syndrome induced by direct stimulation of Ephrin-B1': Free article failed quality gate: article has only 219 words; 1 repeated sentence(s)",
+    "Skipped candidate 'A novel pathogenic mechanism of nephrotic syndrome induced by direct stimulation of Ephrin-B1': Free article failed quality gate: article has only 219 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Paid sexual exchanges are far more common among young adults than once thought, new study suggests': Free article failed quality gate: article has only 208 words; 1 repeated sentence(s)",
+    "Skipped candidate 'A $1 LSD booklet from 1967 anticipated much of today\u2019s psychedelic safety advice, study suggests': Free article failed quality gate: article has only 215 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Experimental blood test detects early breast cancer and predicts recurrence': Free article failed quality gate: article has only 280 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Experimental blood test detects early breast cancer and predicts recurrence': Free article failed quality gate: article has only 280 words; 1 repeated sentence(s)",
+    "Skipped candidate 'One-hour test could help doctors better spot memory problems': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate 'Personalized mobile health coaching offers new approach to preventing gestational diabetes in high-risk pregnancies': Free article failed quality gate: article has only 220 words",
+    "Skipped candidate 'One-hour test could help doctors better spot memory problems': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate 'Personalized mobile health coaching offers new approach to preventing gestational diabetes in high-risk pregnancies': Free article failed quality gate: article has only 220 words",
+    "Skipped candidate 'AI-powered lung cancer atlas identifies cell types linked to higher risk of spread': Free article failed quality gate: article has only 272 words; 1 repeated sentence(s)",
+    "Skipped candidate 'AI-powered lung cancer atlas identifies cell types linked to higher risk of spread': Free article failed quality gate: article has only 272 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Health scoring system could help reduce deaths among children with malnutrition in low-resource communities': Free article failed quality gate: article has only 242 words",
+    "Skipped candidate 'Health scoring system could help reduce deaths among children with malnutrition in low-resource communities': Free article failed quality gate: article has only 242 words",
+    "Skipped candidate 'Rethinking the road to cancer care in Rwanda': Free article failed quality gate: article has only 215 words",
+    "Skipped candidate 'Rethinking the road to cancer care in Rwanda': Free article failed quality gate: article has only 215 words",
+    "Skipped candidate ''There's no such thing as safe' in contact sports, brain injury expert says': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Siri AI Coming to Older Apple TV 4K Models in tvOS 27.2.1': Free article failed quality gate: 4 repeated sentence(s)",
+    "Skipped candidate 'Opera One for iOS adds Data Saver feature, cutting browsing data usage by up to 80%': Free article failed quality gate: article has only 167 words; article has only 5 paragraphs",
+    "Skipped candidate 'Hands-On With the New Apple TV 4K and Siri AI': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 717,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 397,
+  "message": "Published 1 post(s). Skipped 37 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "crypto",
-        "ai"
+        "culture",
+        "science",
+        "history"
       ],
       "sources": [
-        "CNBC International",
-        "Decrypt",
-        "Fortune Global",
-        "TechCrunch"
+        "The Art Newspaper"
       ],
       "status": "publish",
-      "title": "Anthropic\u2019s blockbuster IPO just got harder after Jensen Huang\u2019s dramatic exit",
-      "wp_id": 36542
+      "title": "Philadelphia city council investigates sudden closure of oldest natural history research institution",
+      "wp_id": 36556
     }
   ],
   "state": "published"
