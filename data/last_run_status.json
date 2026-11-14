@@ -2,26 +2,24 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5089,
-  "finished_at": "2026-11-14T20:03:39.273425+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Using AI to accelerate neuroscience research': Free article failed quality gate: article has only 218 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Using AI to accelerate neuroscience research': Free article failed quality gate: article has only 218 words; 1 repeated sentence(s)"
-  ],
-  "inserted": 232,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "fetched": 5095,
+  "finished_at": "2026-11-14T23:57:07.582815+00:00",
+  "generation_failures": [],
+  "inserted": 149,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "ai"
+        "gadgets",
+        "health",
+        "software"
       ],
       "sources": [
-        "Fortune Global"
+        "Engadget"
       ],
       "status": "publish",
-      "title": "The downfall of AI\u2019s $5.7 trillion man",
-      "wp_id": 36697
+      "title": "This underrated Google Health app feature can make food tracking less annoying",
+      "wp_id": 36712
     }
   ],
   "state": "published"
