@@ -2,26 +2,25 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5107,
-  "finished_at": "2026-11-13T21:40:54.040908+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Nintendo takes down Switch emulators and mod chip firmware in massive GitHub DMCA sweep': Free article failed quality gate: article has only 192 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate '9to5Mac Overtime 090: iPhone Duo honeymoon': Free article failed quality gate: article has only 227 words; 1 repeated sentence(s)"
-  ],
-  "inserted": 530,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "fetched": 5114,
+  "finished_at": "2026-11-14T01:51:28.445071+00:00",
+  "generation_failures": [],
+  "inserted": 237,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "entertainment",
-        "health"
+        "world",
+        "defense",
+        "history"
       ],
       "sources": [
-        "The Hollywood Reporter"
+        "The Hindu World",
+        "The War Zone"
       ],
       "status": "publish",
-      "title": "The 5 Best Red Light Therapy Panels for Improving Your Health At-Home",
-      "wp_id": 36617
+      "title": "FAA Orders Ground Stop For All Flights Across The U.S. (Updated)",
+      "wp_id": 36631
     }
   ],
   "state": "published"
