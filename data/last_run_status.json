@@ -2,28 +2,61 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5115,
-  "finished_at": "2026-11-14T08:42:54.709330+00:00",
+  "fetched": 5105,
+  "finished_at": "2026-11-14T15:24:17.794851+00:00",
   "generation_failures": [
-    "Skipped candidate 'Researchers trial AI coach for diabetes': Free article failed quality gate: article has only 242 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Researchers trial AI coach for diabetes': Free article failed quality gate: article has only 242 words; 1 repeated sentence(s)",
-    "Skipped candidate 'AI supercharges laser physics with a stunning 250x speed boost': Free article failed quality gate: article has only 194 words; article has only 5 paragraphs; 1 repeated sentence(s)"
+    "Skipped candidate 'How to use the new remote finding features on the Apple TV 4K (4th gen)': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Preliminary study finds a clue in the quest to help diagnose CTE in the living': Free article failed quality gate: article has only 221 words",
+    "Skipped candidate 'Preliminary study finds a clue in the quest to help diagnose CTE in the living': Free article failed quality gate: article has only 221 words",
+    "Skipped candidate 'See Jupiter and Mars make a spectacular close approach overnight Nov. 15-16': Free article failed quality gate: article has only 265 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Stanford scientists discover hidden brain signals that predict Alzheimer\u2019s years before symptoms': Free article failed quality gate: article has only 227 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Stanford scientists discover hidden brain signals that predict Alzheimer\u2019s years before symptoms': Free article failed quality gate: article has only 227 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Exercise after ACL surgery may protect knees from early osteoarthritis': Free article failed quality gate: article has only 228 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Scientists find a simple daily routine linked to less pain and depression': Free article failed quality gate: article has only 245 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Exercise after ACL surgery may protect knees from early osteoarthritis': Free article failed quality gate: article has only 228 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Scientists find a simple daily routine linked to less pain and depression': Free article failed quality gate: article has only 237 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Scientists find a simple daily routine linked to less pain and depression': Free article failed quality gate: article has only 245 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Scientists created a Doctor Octopus-inspired brain interface for controlling robotic arms': Free article failed quality gate: article has only 187 words",
+    "Skipped candidate 'Scientists Discover How Exercise Could Help Protect the Brain From Parkinson\u2019s': Free article failed quality gate: article has only 216 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Scientists Develop Injectable Glucose Sensor That Could Change Diabetes Care': Free article failed quality gate: article has only 232 words; 1 repeated sentence(s)",
+    "Skipped candidate 'New case study offers causal evidence linking the right amygdala to PTSD': Free article failed quality gate: article has only 203 words; 1 repeated sentence(s)",
+    "Skipped candidate 'A Simple Pill Could Cure a Common Cause of High Blood Pressure': Free article failed quality gate: article has only 234 words; 1 repeated sentence(s)",
+    "Skipped candidate 'People tend to underestimate how much they get in the way of their partner\u2019s goals': Free article failed quality gate: article has only 211 words",
+    "Skipped candidate 'Predator-like scent activates an anxiety-related brain circuit in mice': Free article failed quality gate: article has only 237 words; 2 repeated sentence(s)",
+    "Skipped candidate 'Predator-like scent activates an anxiety-related brain circuit in mice': Free article failed quality gate: article has only 237 words; 2 repeated sentence(s)",
+    "Skipped candidate 'Inside Ethiopia's war: Rare access to a hospital treating victims of renewed fighting': Free article failed quality gate: article has only 241 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Pope Leo XIV continues trip through South America as health authorities keep watch': Free article failed quality gate: article has only 190 words",
+    "Skipped candidate 'Health is wealth? Polymarket and Kalshi now host bets on measles and other US health crises': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Apple @ Work: The spiritual successor to the Xserve is here, thanks to Apple silicon and MLX': Free article failed quality gate: article has only 277 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Early Black Friday Apple deals: AirPods, AirTag 2, MacBook Air, Apple Pencil, Mac mini, more': Free article failed quality gate: article has only 5 paragraphs; 2 repeated sentence(s)",
+    "Skipped candidate 'India seeks to triple clean energy capacity to 900 gigawatts by 2035, but major hurdles remain': Free article failed quality gate: article has only 237 words",
+    "Skipped candidate 'On this day in space! Nov. 14, 1969: NASA's Apollo 12 astronauts launch to the moon on a 'pinpoint landing' lunar mission': Free article failed quality gate: article has only 219 words; 1 repeated sentence(s)",
+    "Skipped candidate 'A giant icy world hiding beyond Pluto could be our sixth dwarf planet': Free article failed quality gate: article has only 214 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'A giant icy world hiding beyond Pluto could be our sixth dwarf planet': Free article failed quality gate: article has only 214 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Choking fires, deadly heat and devastating floods: 2026 in extreme weather': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Choking fires, deadly heat and devastating floods: 2026 in extreme weather': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Stanford scientists discover hidden brain signals that predict Alzheimer\u2019s years before symptoms': Free article failed quality gate: article has only 203 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Wearing briefs boosts erectile dysfunction risk, 26,000-man study in China finds': Free article failed quality gate: article has only 215 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Microsoft says services fully restored after global outage hits governments': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Dishonored 2 director Harvey Smith wants to honour sacred imsim texts while finding news ways to surprise fans: \"That's the two wolves inside me\"': Free article failed quality gate: article has only 274 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Greenpeace boulders may delay building of \u00a312bn windfarms in North Sea': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Indigenous students retrace Lewis and Clark\u2019s historic journey: \u2018We can\u2019t protect what we cannot see\u2019': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 186,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 342,
+  "message": "Published 1 post(s). Skipped 36 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "crime",
-        "ai"
+        "world",
+        "politics",
+        "climate"
       ],
       "sources": [
-        "Fortune Global"
+        "France 24"
       ],
       "status": "publish",
-      "title": "Air traffic control, phone systems and emails are all down following China\u2019s",
-      "wp_id": 36658
+      "title": "'Climate action is alive': Triumphant Democrats attend COP31 summit shunned by Trump",
+      "wp_id": 36682
     }
   ],
   "state": "published"
