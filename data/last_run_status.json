@@ -2,25 +2,28 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5114,
-  "finished_at": "2026-11-14T01:51:28.445071+00:00",
-  "generation_failures": [],
-  "inserted": 237,
-  "message": "Published 1 post(s).",
+  "fetched": 5115,
+  "finished_at": "2026-11-14T08:42:54.709330+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Researchers trial AI coach for diabetes': Free article failed quality gate: article has only 242 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Researchers trial AI coach for diabetes': Free article failed quality gate: article has only 242 words; 1 repeated sentence(s)",
+    "Skipped candidate 'AI supercharges laser physics with a stunning 250x speed boost': Free article failed quality gate: article has only 194 words; article has only 5 paragraphs; 1 repeated sentence(s)"
+  ],
+  "inserted": 186,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "defense",
-        "history"
+        "business",
+        "crime",
+        "ai"
       ],
       "sources": [
-        "The Hindu World",
-        "The War Zone"
+        "Fortune Global"
       ],
       "status": "publish",
-      "title": "FAA Orders Ground Stop For All Flights Across The U.S. (Updated)",
-      "wp_id": 36631
+      "title": "Air traffic control, phone systems and emails are all down following China\u2019s",
+      "wp_id": 36658
     }
   ],
   "state": "published"
