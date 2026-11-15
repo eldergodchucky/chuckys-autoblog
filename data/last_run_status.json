@@ -3,30 +3,23 @@
   "feed_warnings": 16,
   "feeds": 127,
   "fetched": 5088,
-  "finished_at": "2026-11-15T19:11:06.731043+00:00",
-  "generation_failures": [
-    "Skipped candidate 'Scout Steps Toward Mass Production, With 200,000+ Reservations On The Line': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Accelerating Electrification Can Unlock the Full Benefits of Spain\u2019s Renewables Leadership': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'TSMC employee data breach linked to cloud provider': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Apple's Smart Glasses Strategy Hinges on Siri and iPhone Apps': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Early Apple Watch Black Friday Deals Arrive With Series 12 Hitting New Record Lows': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Treyarch lays off lead Call of Duty writer and Zombies veteran after \"approximately 20 years\" of service': Free article failed quality gate: 1 repeated sentence(s)"
-  ],
-  "inserted": 336,
-  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "finished_at": "2026-11-15T23:25:20.678674+00:00",
+  "generation_failures": [],
+  "inserted": 169,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "culture",
         "world",
-        "business"
+        "business",
+        "mobility"
       ],
       "sources": [
-        "Variety"
+        "Daily Maverick"
       ],
       "status": "publish",
-      "title": "Box Office: Johnny Depp\u2019s \u2018Ebenezer\u2019 Opens to No. 1 With $19 Million",
-      "wp_id": 36781
+      "title": "WHERE TO INVEST: Woolworths and Metair reflect SA\u2019s mounting retail and industrial",
+      "wp_id": 36798
     }
   ],
   "state": "published"
