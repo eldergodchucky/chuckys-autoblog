@@ -1,41 +1,32 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5129,
-  "finished_at": "2026-11-15T05:11:17.703630+00:00",
+  "fetched": 5086,
+  "finished_at": "2026-11-15T12:46:36.622879+00:00",
   "generation_failures": [
-    "Skipped candidate 'A First-of-Its-Kind Drug Could Change How Scientists Fight Prostate Cancer': Free article failed quality gate: article has only 230 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Scientists Discover a Surprising New Power of Honey That Could Protect Your Skin': Free article failed quality gate: article has only 230 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Powerful New Weight-Loss Drug Could Change How Millions Treat Painful Knee Arthritis': Free article failed quality gate: article has only 230 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Keep health at the center of public discussions on nuclear risk, researchers urge': Free article failed quality gate: article has only 210 words",
-    "Skipped candidate 'Keep health at the center of public discussions on nuclear risk, researchers urge': Free article failed quality gate: article has only 210 words",
-    "Skipped candidate '2027 UGA football commit dies following 'sudden medical emergency'': Free article failed quality gate: article has only 149 words",
-    "Skipped candidate 'WoW: Forever dungeon mobs no longer give EXP if they're trivial for anyone in the party': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'U.S. loses measles elimination status as cases break records': Free article failed quality gate: article has only 174 words",
-    "Skipped candidate 'Indie App Spotlight: \u2018Milton\u2019 lets you turn your old iPad into a home dashboard': Free article failed quality gate: article has only 215 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Euclid discovers ancient cosmic beacons from the dawn of time, shining like a trillion suns': Free article failed quality gate: article has only 202 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Euclid discovers ancient cosmic beacons from the dawn of time, shining like a trillion suns': Free article failed quality gate: article has only 202 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Is this iconic black hole image accurate? New study delivers an independent result': Free article failed quality gate: article has only 149 words",
-    "Skipped candidate 'Scientists discover a bizarre paradox among endangered penguins': Free article failed quality gate: article has only 202 words; article has only 5 paragraphs; 1 repeated sentence(s)"
+    "Skipped candidate 'Weekly poll: how long do you plan to keep your current phone?': Free article failed quality gate: article has only 240 words; 1 repeated sentence(s)",
+    "Skipped candidate '160 questions, only one wrong: top scorer in South Korea tax exam admits AI cheating': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'South Korea probes top exam scorer after AI cheating confession': Free article failed quality gate: article has only 177 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Otter.ai\u2019s CEO grew up with rationed food in China\u2014now his AI startup makes $100 million a year, and he runs on Arnold Schwarzenegger\u2019s smoothie daily': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate ''Is this a cyberattack?' Grounded flights, a Microsoft outage and AI chaos fuel cybersecurity fears': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Trump administration planning to reimburse doctors treating vaccine \u2018injury\u2019': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Trident nuclear submarine concludes record underwater deployment': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 162,
-  "message": "Published 1 post(s). Skipped 13 low-quality candidate(s).",
+  "inserted": 257,
+  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "space",
-        "science"
+        "politics",
+        "defense"
       ],
       "sources": [
-        "Al Jazeera",
-        "BBC Science & Environment",
-        "France 24"
+        "The Guardian US Politics"
       ],
       "status": "publish",
-      "title": "SpaceX\u2019s Starship nails a smooth return with historic catch",
-      "wp_id": 36734
+      "title": "Black voters helped Democrats win in Georgia. Now they expect to be",
+      "wp_id": 36763
     }
   ],
   "state": "published"
