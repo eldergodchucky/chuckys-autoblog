@@ -1,25 +1,41 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5095,
-  "finished_at": "2026-11-14T23:57:07.582815+00:00",
-  "generation_failures": [],
-  "inserted": 149,
-  "message": "Published 1 post(s).",
+  "fetched": 5129,
+  "finished_at": "2026-11-15T05:11:17.703630+00:00",
+  "generation_failures": [
+    "Skipped candidate 'A First-of-Its-Kind Drug Could Change How Scientists Fight Prostate Cancer': Free article failed quality gate: article has only 230 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Scientists Discover a Surprising New Power of Honey That Could Protect Your Skin': Free article failed quality gate: article has only 230 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Powerful New Weight-Loss Drug Could Change How Millions Treat Painful Knee Arthritis': Free article failed quality gate: article has only 230 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Keep health at the center of public discussions on nuclear risk, researchers urge': Free article failed quality gate: article has only 210 words",
+    "Skipped candidate 'Keep health at the center of public discussions on nuclear risk, researchers urge': Free article failed quality gate: article has only 210 words",
+    "Skipped candidate '2027 UGA football commit dies following 'sudden medical emergency'': Free article failed quality gate: article has only 149 words",
+    "Skipped candidate 'WoW: Forever dungeon mobs no longer give EXP if they're trivial for anyone in the party': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'U.S. loses measles elimination status as cases break records': Free article failed quality gate: article has only 174 words",
+    "Skipped candidate 'Indie App Spotlight: \u2018Milton\u2019 lets you turn your old iPad into a home dashboard': Free article failed quality gate: article has only 215 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Euclid discovers ancient cosmic beacons from the dawn of time, shining like a trillion suns': Free article failed quality gate: article has only 202 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Euclid discovers ancient cosmic beacons from the dawn of time, shining like a trillion suns': Free article failed quality gate: article has only 202 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Is this iconic black hole image accurate? New study delivers an independent result': Free article failed quality gate: article has only 149 words",
+    "Skipped candidate 'Scientists discover a bizarre paradox among endangered penguins': Free article failed quality gate: article has only 202 words; article has only 5 paragraphs; 1 repeated sentence(s)"
+  ],
+  "inserted": 162,
+  "message": "Published 1 post(s). Skipped 13 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "health",
-        "software"
+        "world",
+        "space",
+        "science"
       ],
       "sources": [
-        "Engadget"
+        "Al Jazeera",
+        "BBC Science & Environment",
+        "France 24"
       ],
       "status": "publish",
-      "title": "This underrated Google Health app feature can make food tracking less annoying",
-      "wp_id": 36712
+      "title": "SpaceX\u2019s Starship nails a smooth return with historic catch",
+      "wp_id": 36734
     }
   ],
   "state": "published"
