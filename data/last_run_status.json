@@ -2,24 +2,28 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5088,
-  "finished_at": "2026-11-15T23:25:20.678674+00:00",
-  "generation_failures": [],
-  "inserted": 169,
-  "message": "Published 1 post(s).",
+  "fetched": 5095,
+  "finished_at": "2026-11-16T02:58:29.553003+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Our new blog for science': Free article failed quality gate: article has only 124 words; article has only 5 paragraphs",
+    "Skipped candidate 'A step toward defining the Standard Model on a lattice': Free article failed quality gate: article has only 137 words; article has only 5 paragraphs",
+    "Skipped candidate 'STAT+: Apple and OpenEvidence launch experimental health chat app': Free article failed quality gate: article has only 187 words",
+    "Skipped candidate 'Apple\u2019s new study looks to improve the effectiveness of AI health tools': Free article failed quality gate: 1 repeated sentence(s)"
+  ],
+  "inserted": 130,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
         "business",
-        "mobility"
+        "ai"
       ],
       "sources": [
-        "Daily Maverick"
+        "Fortune Global"
       ],
       "status": "publish",
-      "title": "WHERE TO INVEST: Woolworths and Metair reflect SA\u2019s mounting retail and industrial",
-      "wp_id": 36798
+      "title": "Treasury Secretary Scott Bessent says if Nvidia was a bank",
+      "wp_id": 36811
     }
   ],
   "state": "published"
