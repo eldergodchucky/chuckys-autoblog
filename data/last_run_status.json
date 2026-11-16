@@ -1,27 +1,25 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5137,
-  "finished_at": "2026-11-16T10:50:51.705617+00:00",
-  "generation_failures": [
-    "Skipped candidate 'New wearable ultrasound patch boosts REM sleep without drugs or surgery': Free article failed quality gate: article has only 236 words; 1 repeated sentence(s)"
-  ],
-  "inserted": 474,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "fetched": 5111,
+  "finished_at": "2026-11-16T20:51:00.771334+00:00",
+  "generation_failures": [],
+  "inserted": 903,
+  "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
-        "sports",
-        "health",
-        "entertainment"
+        "defense",
+        "space",
+        "security"
       ],
       "sources": [
-        "BBC Football"
+        "Breaking Defense"
       ],
       "status": "publish",
-      "title": "Burnham urges caution on scrapping 3pm TV blackout",
-      "wp_id": 36838
+      "title": "Vulcan failure deepens concerns over US military launch capacity",
+      "wp_id": 36865
     }
   ],
   "state": "published"
