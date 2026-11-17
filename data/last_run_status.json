@@ -2,26 +2,27 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5127,
-  "finished_at": "2026-11-17T12:22:09.361822+00:00",
+  "fetched": 5136,
+  "finished_at": "2026-11-17T21:16:03.262733+00:00",
   "generation_failures": [
-    "Skipped candidate 'Optimizely Hack Hijacked Ledger, BBC and 176 Other Sites to Swap Crypto Wallet Addresses': Free article failed quality gate: article has only 127 words; article has only 5 paragraphs",
-    "Skipped candidate 'Fed Governor Michael Barr warns AI agents could trigger bank runs in minutes': Free article failed quality gate: article has only 159 words; article has only 5 paragraphs"
+    "Skipped candidate 'AI can identify themes in human interviews but still misses nuances in meaning': Free article failed quality gate: article has only 165 words; article has only 5 paragraphs",
+    "Skipped candidate 'iOS 27.3\u2019s redesigned Apple Health app requires newer iPhone model': Free article failed quality gate: article has only 170 words; 1 repeated sentence(s)"
   ],
-  "inserted": 589,
+  "inserted": 858,
   "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "security"
+        "entertainment",
+        "ai",
+        "android"
       ],
       "sources": [
-        "Daily Maverick"
+        "The Hollywood Reporter"
       ],
       "status": "publish",
-      "title": "Somaliland briefly detains Americans accused of threatening national security",
-      "wp_id": 36911
+      "title": "Joaquin Phoenix Stars in Jonathan Glazer-Directed Film for Gentle Monster\u2019s AI-Powered Glasses",
+      "wp_id": 36932
     }
   ],
   "state": "published"
