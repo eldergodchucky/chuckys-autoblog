@@ -2,24 +2,52 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5111,
-  "finished_at": "2026-11-16T20:51:00.771334+00:00",
-  "generation_failures": [],
-  "inserted": 903,
-  "message": "Published 1 post(s).",
+  "fetched": 5117,
+  "finished_at": "2026-11-17T03:30:27.348914+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Gabe Newell stuns superyacht enthusiasts by treating crew like human beings: 'That is something we've never really seen before in our industry'': Free article failed quality gate: article has only 265 words; 1 repeated sentence(s)",
+    "Skipped candidate 'GTA 6 Gets New Screenshots Highlighting Leonida's Dynamic Weather': Free article failed quality gate: article has only 130 words; article has only 5 paragraphs",
+    "Skipped candidate 'Hacker behind 2022 GTA VI leaks pleads guilty': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'The Shokz OpenRun Pro Sport Headphone for Runners Drops to Just $89.99 for Black Friday': Free article failed quality gate: 2 repeated sentence(s)",
+    "Skipped candidate 'That 007 First Light theme song I didn't like is up for a Grammy Award': Free article failed quality gate: article has only 287 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Genetic 'dimmer switch' can protect against severe disease in rare muscular dystrophy': Free article failed quality gate: article has only 253 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Genetic 'dimmer switch' can protect against severe disease in rare muscular dystrophy': Free article failed quality gate: article has only 253 words; 1 repeated sentence(s)",
+    "Skipped candidate 'UK\u2019s National Health Service Is Urging Gamers to Protect Their Hands Ahead of GTA 6 Launch': Free article failed quality gate: article has only 171 words",
+    "Skipped candidate 'The \"Next James Bond\" Actors Who Never Played James Bond': Free article failed quality gate: article has only 128 words; article has only 5 paragraphs",
+    "Skipped candidate 'Subway Is Releasing a GTA 6-Themed Sandwich, but There's a Catch': Free article failed quality gate: article has only 110 words; article has only 5 paragraphs",
+    "Skipped candidate 'Minister O\u2019Brien Announces Completion of Over 300,000 Home Energy Upgrades with Government Support Since 2019': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Euclid's H-alpha observations map where stars form in distant galaxies': Free article failed quality gate: article has only 213 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Why Iraq Just Fast-Tracked Chevron\u2019s Takeover Of A 14-Billion-Barrel Supergiant': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'NAED Energy Holding Inc. Details the Rating of Its PV-1 Tandem Cell Line: 16,000 Wafers per Hour per Line, 4.6 GW from Six Lines': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'The Army Just Did Something Extraordinary To Break China\u2019s Rare Earth Monopoly': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate '10 Numbers That Might Change How You See Asia': Free article failed quality gate: article has only 150 words; article has only 5 paragraphs",
+    "Skipped candidate 'As Hearings Begin, Sierra Club Virginia Calls for the SCC to Stop the Dominion NextEra Merger': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Uganda Pushes First Oil to Mid-2027 as Iran War Holds Up Equipment': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Airlines Face Fuel Crisis as Price Hedges Expire': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Hackers inject credit card, crypto-stealing malware into 178 major websites': Free article failed quality gate: article has only 168 words; article has only 5 paragraphs",
+    "Skipped candidate 'Alibaba's Qwen 4 Max Leads China's AI Agent Race\u2014But You Can't Download It': Free article failed quality gate: article has only 180 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'German lawmakers back crypto freezes outside criminal cases': Free article failed quality gate: article has only 131 words; article has only 5 paragraphs",
+    "Skipped candidate 'Binance hack may push institutions to outside custody, FalconX exec says': Free article failed quality gate: article has only 174 words; article has only 5 paragraphs",
+    "Skipped candidate 'Nvidia shares fall 4% as board reportedly rules out Huang return': Free article failed quality gate: article has only 139 words; article has only 5 paragraphs",
+    "Skipped candidate 'Sunspot dynamic fibrils linked to slow magnetoacoustic waves': Free article failed quality gate: article has only 209 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Credit without debit: A new way for hackers to target bank accounts': Free article failed quality gate: article has only 227 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Police searching for three stolen Melbourne Cup trophies worth $1m each': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'UEFA backs France\u2019s Diallo to stand against Infantino in FIFA election': Free article failed quality gate: article has only 189 words; article has only 5 paragraphs"
+  ],
+  "inserted": 395,
+  "message": "Published 1 post(s). Skipped 28 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "defense",
-        "space",
-        "security"
+        "sports"
       ],
       "sources": [
-        "Breaking Defense"
+        "BBC Sport",
+        "Sky Sports Global"
       ],
       "status": "publish",
-      "title": "Vulcan failure deepens concerns over US military launch capacity",
-      "wp_id": 36865
+      "title": "Littler hits triple-bull, but Price checkout doesn't add up",
+      "wp_id": 36888
     }
   ],
   "state": "published"
