@@ -1,36 +1,32 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5143,
-  "finished_at": "2026-11-18T11:17:46.180978+00:00",
+  "fetched": 5164,
+  "finished_at": "2026-11-18T19:31:40.913154+00:00",
   "generation_failures": [
-    "Skipped candidate 'Cambridge Dictionary chooses 'human' as word of the year in response to AI fears': Free article failed quality gate: article has only 182 words; article has only 5 paragraphs",
-    "Skipped candidate 'POLICY GAP: SA varsities write the AI rules the education department has yet to deliver': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate '\u2018Phantom forests\u2019 in Australia\u2019s arid outback used to create carbon credits meant to offset emissions, report claims': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate '\u2018Phantom forests\u2019 in Australia\u2019s arid outback used to create carbon credits meant to offset emissions, report claims': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate ''All eyes on talks with Putin, Xi' as Trump arrives at APEC summit': Free article failed quality gate: article has only 251 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Yvette Cooper announces new health support for most vulnerable people in England': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Ford Is Bringing The F-150 To Japan': Free article failed quality gate: article has only 154 words; article has only 5 paragraphs",
-    "Skipped candidate 'Shabana Mahmood pledges to tackle \u2018corrosive and growing perception of two-tier policing\u2019 \u2013 UK politics live': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Shabana Mahmood to set out plans to tackle \u2018corrosive\u2019 perception of two-tier policing': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Yvette Cooper announces new health support for most vulnerable people in England': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'Researchers compare AI tools for analyzing tumor tissue': Free article failed quality gate: article has only 233 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Researchers compare AI tools for analyzing tumor tissue': Free article failed quality gate: article has only 233 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Can a Tek oscilloscope read Adabot\u2019s mind?': Free article failed quality gate: article has only 182 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Embark Studios apologizes for replacing esports casters with AI voices in now-deleted The Finals video': Free article failed quality gate: article has only 296 words; 1 repeated sentence(s)",
+    "Skipped candidate 'ChatGPT app gains enhanced Live Dictation streaming without 10-minute limit': Free article failed quality gate: article has only 163 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Bitcoin Tanks Ahead of Anthropic\u2019s IPO. Should We Really Blame AI?': Free article failed quality gate: article has only 129 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Bitcoin Miners Are Selling Their Stacks to Fund the AI Boom': Free article failed quality gate: article has only 165 words; article has only 5 paragraphs"
   ],
-  "inserted": 540,
-  "message": "Published 1 post(s). Skipped 10 low-quality candidate(s).",
+  "inserted": 870,
+  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "politics",
-        "crime"
+        "security",
+        "ai"
       ],
       "sources": [
-        "AllAfrica"
+        "WIRED Security"
       ],
       "status": "publish",
-      "title": "Nigeria: Senate Urges INEC to Disqualify Candidates Over Violence",
-      "wp_id": 36977
+      "title": "An AI Debt Collection Service Exposed 6.6 Million Accounts and 315",
+      "wp_id": 37003
     }
   ],
   "state": "published"
