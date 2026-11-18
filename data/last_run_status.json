@@ -2,30 +2,35 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5148,
-  "finished_at": "2026-11-18T02:57:56.943845+00:00",
+  "fetched": 5143,
+  "finished_at": "2026-11-18T11:17:46.180978+00:00",
   "generation_failures": [
-    "Skipped candidate '\u2018Dancing With the Stars\u2019: All 34 Winners': Free article failed quality gate: article has only 196 words; article has only 5 paragraphs",
-    "Skipped candidate 'Defibrillator drones could arrive ahead of ambulances in hundreds of cardiac arrest cases': Free article failed quality gate: article has only 241 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Defibrillator drones could arrive ahead of ambulances in hundreds of cardiac arrest cases': Free article failed quality gate: article has only 241 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Pakistani man sentenced to 27 years in US prison over Trump murder plot': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'Cambridge Dictionary chooses 'human' as word of the year in response to AI fears': Free article failed quality gate: article has only 182 words; article has only 5 paragraphs",
+    "Skipped candidate 'POLICY GAP: SA varsities write the AI rules the education department has yet to deliver': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate '\u2018Phantom forests\u2019 in Australia\u2019s arid outback used to create carbon credits meant to offset emissions, report claims': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate '\u2018Phantom forests\u2019 in Australia\u2019s arid outback used to create carbon credits meant to offset emissions, report claims': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate ''All eyes on talks with Putin, Xi' as Trump arrives at APEC summit': Free article failed quality gate: article has only 251 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Yvette Cooper announces new health support for most vulnerable people in England': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Ford Is Bringing The F-150 To Japan': Free article failed quality gate: article has only 154 words; article has only 5 paragraphs",
+    "Skipped candidate 'Shabana Mahmood pledges to tackle \u2018corrosive and growing perception of two-tier policing\u2019 \u2013 UK politics live': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Shabana Mahmood to set out plans to tackle \u2018corrosive\u2019 perception of two-tier policing': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Yvette Cooper announces new health support for most vulnerable people in England': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 422,
-  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
+  "inserted": 540,
+  "message": "Published 1 post(s). Skipped 10 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
         "world",
-        "crime",
-        "politics"
+        "politics",
+        "crime"
       ],
       "sources": [
-        "The Guardian World",
-        "The Hindu World"
+        "AllAfrica"
       ],
       "status": "publish",
-      "title": "Pakistani man sentenced to 27 years in US prison over Trump murder",
-      "wp_id": 36949
+      "title": "Nigeria: Senate Urges INEC to Disqualify Candidates Over Violence",
+      "wp_id": 36977
     }
   ],
   "state": "published"
