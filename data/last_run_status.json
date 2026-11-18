@@ -2,27 +2,30 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5136,
-  "finished_at": "2026-11-17T21:16:03.262733+00:00",
+  "fetched": 5148,
+  "finished_at": "2026-11-18T02:57:56.943845+00:00",
   "generation_failures": [
-    "Skipped candidate 'AI can identify themes in human interviews but still misses nuances in meaning': Free article failed quality gate: article has only 165 words; article has only 5 paragraphs",
-    "Skipped candidate 'iOS 27.3\u2019s redesigned Apple Health app requires newer iPhone model': Free article failed quality gate: article has only 170 words; 1 repeated sentence(s)"
+    "Skipped candidate '\u2018Dancing With the Stars\u2019: All 34 Winners': Free article failed quality gate: article has only 196 words; article has only 5 paragraphs",
+    "Skipped candidate 'Defibrillator drones could arrive ahead of ambulances in hundreds of cardiac arrest cases': Free article failed quality gate: article has only 241 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Defibrillator drones could arrive ahead of ambulances in hundreds of cardiac arrest cases': Free article failed quality gate: article has only 241 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Pakistani man sentenced to 27 years in US prison over Trump murder plot': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 858,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 422,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "entertainment",
-        "ai",
-        "android"
+        "world",
+        "crime",
+        "politics"
       ],
       "sources": [
-        "The Hollywood Reporter"
+        "The Guardian World",
+        "The Hindu World"
       ],
       "status": "publish",
-      "title": "Joaquin Phoenix Stars in Jonathan Glazer-Directed Film for Gentle Monster\u2019s AI-Powered Glasses",
-      "wp_id": 36932
+      "title": "Pakistani man sentenced to 27 years in US prison over Trump murder",
+      "wp_id": 36949
     }
   ],
   "state": "published"
