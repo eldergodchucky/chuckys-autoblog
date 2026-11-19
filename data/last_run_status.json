@@ -1,25 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5160,
-  "finished_at": "2026-11-19T09:14:11.810873+00:00",
+  "fetched": 5173,
+  "finished_at": "2026-11-19T18:20:54.481820+00:00",
   "generation_failures": [],
-  "inserted": 421,
+  "inserted": 873,
   "message": "Published 1 post(s).",
   "posts": [
     {
       "categories": [
         "business",
-        "ai",
-        "apple"
+        "gadgets",
+        "politics"
       ],
       "sources": [
+        "Engadget",
         "Fortune Global"
       ],
       "status": "publish",
-      "title": "iPhone designer Tony Fadell\u2019s next big thing: Bringing AI to fashion",
-      "wp_id": 37041
+      "title": "Here are some photos of Elon Musk",
+      "wp_id": 37060
     }
   ],
   "state": "published"
