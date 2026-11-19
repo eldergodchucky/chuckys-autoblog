@@ -2,31 +2,27 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5164,
-  "finished_at": "2026-11-18T19:31:40.913154+00:00",
+  "fetched": 5174,
+  "finished_at": "2026-11-19T01:27:36.928483+00:00",
   "generation_failures": [
-    "Skipped candidate 'Researchers compare AI tools for analyzing tumor tissue': Free article failed quality gate: article has only 233 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Researchers compare AI tools for analyzing tumor tissue': Free article failed quality gate: article has only 233 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Can a Tek oscilloscope read Adabot\u2019s mind?': Free article failed quality gate: article has only 182 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Embark Studios apologizes for replacing esports casters with AI voices in now-deleted The Finals video': Free article failed quality gate: article has only 296 words; 1 repeated sentence(s)",
-    "Skipped candidate 'ChatGPT app gains enhanced Live Dictation streaming without 10-minute limit': Free article failed quality gate: article has only 163 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Bitcoin Tanks Ahead of Anthropic\u2019s IPO. Should We Really Blame AI?': Free article failed quality gate: article has only 129 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Bitcoin Miners Are Selling Their Stacks to Fund the AI Boom': Free article failed quality gate: article has only 165 words; article has only 5 paragraphs"
+    "Skipped candidate 'Webb confirms first-of-its-kind merger of a supergiant and smaller sun-like star': Free article failed quality gate: article has only 233 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Astronomers witness a star eating its companion in 1st-of-its-kind observation': Free article failed quality gate: article has only 255 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Spectral clues suggest hollow-core magnetic jet in brightest-ever gamma-ray burst': Free article failed quality gate: article has only 229 words; article has only 5 paragraphs; 1 repeated sentence(s)"
   ],
-  "inserted": 870,
-  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
+  "inserted": 484,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "security",
-        "ai"
+        "world",
+        "space"
       ],
       "sources": [
-        "WIRED Security"
+        "Al Jazeera"
       ],
       "status": "publish",
-      "title": "An AI Debt Collection Service Exposed 6.6 Million Accounts and 315",
-      "wp_id": 37003
+      "title": "NASA\u2019s Voyager 1 hits record one light-day distance",
+      "wp_id": 37018
     }
   ],
   "state": "published"
