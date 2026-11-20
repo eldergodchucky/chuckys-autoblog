@@ -1,28 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 19,
   "feeds": 127,
-  "fetched": 5099,
-  "finished_at": "2026-11-20T17:00:07.468630+00:00",
+  "fetched": 5046,
+  "finished_at": "2026-11-20T23:04:16.065316+00:00",
   "generation_failures": [
-    "Skipped candidate 'Jennifer Lopez Wears 186-Carat Diamond Necklace to \u2018JLo Show\u2019 Premiere: \u2018There\u2019s Security All Around\u2019': Free article failed quality gate: article has only 5 paragraphs; 2 repeated sentence(s)",
-    "Skipped candidate 'This Week In Security: Java4Shell, Optimizely Malware, Shrinking Disclosure Deadlines, Unpatchable Freezers': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Still tracking company passwords in spreadsheets? You\u2019re flying blind.': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'Trouble at Mars: NASA's Perseverance rover, Odyssey orbiter halt science work due to glitches': Free article failed quality gate: article has only 253 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Don't turn the moon into the Wild West, scientists warn': Free article failed quality gate: article has only 228 words; 1 repeated sentence(s)"
   ],
-  "inserted": 791,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 491,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "security",
-        "crime"
+        "defense",
+        "space"
       ],
       "sources": [
-        "TechCrunch"
+        "The War Zone"
       ],
       "status": "publish",
-      "title": "A transcription firm used by police",
-      "wp_id": 37131
+      "title": "Mysterious MQ-25 Stingray-Like Chinese Drone Emerges At Little-Known Flight Test Center",
+      "wp_id": 37148
     }
   ],
   "state": "published"
