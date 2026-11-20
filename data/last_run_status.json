@@ -1,26 +1,33 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5173,
-  "finished_at": "2026-11-19T18:20:54.481820+00:00",
-  "generation_failures": [],
-  "inserted": 873,
-  "message": "Published 1 post(s).",
+  "fetched": 5189,
+  "finished_at": "2026-11-20T00:48:55.079984+00:00",
+  "generation_failures": [
+    "Skipped candidate 'Study reveals data centers\u2019 long-distance damage to air quality': Free article failed quality gate: article has only 215 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'If tiny 'primordial' black holes exist, here's how we might find them': Free article failed quality gate: article has only 283 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Potatoes grown in moon dirt are as nutritious as Earth potatoes': Free article failed quality gate: article has only 173 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Why did only blue LED win the Nobel Prize?': Free article failed quality gate: article has only 174 words; article has only 5 paragraphs; 2 repeated sentence(s)",
+    "Skipped candidate 'Hex LED Desk Lamp (WLED) \u2013 Honeycomb Structure with 784 FCOB RGBW LEDs #3DThursday #3DPrinting': Free article failed quality gate: article has only 183 words; 1 repeated sentence(s)",
+    "Skipped candidate 'LLM assisted reverse engineering': Free article failed quality gate: article has only 208 words; article has only 5 paragraphs; 2 repeated sentence(s)"
+  ],
+  "inserted": 542,
+  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business",
         "gadgets",
-        "politics"
+        "ai",
+        "apple"
       ],
       "sources": [
         "Engadget",
-        "Fortune Global"
+        "The Verge"
       ],
       "status": "publish",
-      "title": "Here are some photos of Elon Musk",
-      "wp_id": 37060
+      "title": "Apple is hiring engineers to build its own AI agent",
+      "wp_id": 37079
     }
   ],
   "state": "published"
