@@ -2,32 +2,29 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5189,
-  "finished_at": "2026-11-20T00:48:55.079984+00:00",
+  "fetched": 5183,
+  "finished_at": "2026-11-20T08:09:39.623287+00:00",
   "generation_failures": [
-    "Skipped candidate 'Study reveals data centers\u2019 long-distance damage to air quality': Free article failed quality gate: article has only 215 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'If tiny 'primordial' black holes exist, here's how we might find them': Free article failed quality gate: article has only 283 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Potatoes grown in moon dirt are as nutritious as Earth potatoes': Free article failed quality gate: article has only 173 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Why did only blue LED win the Nobel Prize?': Free article failed quality gate: article has only 174 words; article has only 5 paragraphs; 2 repeated sentence(s)",
-    "Skipped candidate 'Hex LED Desk Lamp (WLED) \u2013 Honeycomb Structure with 784 FCOB RGBW LEDs #3DThursday #3DPrinting': Free article failed quality gate: article has only 183 words; 1 repeated sentence(s)",
-    "Skipped candidate 'LLM assisted reverse engineering': Free article failed quality gate: article has only 208 words; article has only 5 paragraphs; 2 repeated sentence(s)"
+    "Skipped candidate 'Can depression really become dazzling dance? The biggest ever BalletBoyz show is a huge feat': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Singapore sees 65% decline in cervical cancer mortality rate since 1990, but screening gaps remain': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Singapore sees 65% decline in cervical cancer mortality rate since 1990, but screening gaps remain': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate '\u2018I perfected deception\u2019: My secret life as a relapsed alcoholic \u2013 podcast': Free article failed quality gate: article has only 272 words; 2 repeated sentence(s)"
   ],
-  "inserted": 542,
-  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "inserted": 370,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "ai",
-        "apple"
+        "sports",
+        "health",
+        "world"
       ],
       "sources": [
-        "Engadget",
-        "The Verge"
+        "Sky Sports Global"
       ],
       "status": "publish",
-      "title": "Apple is hiring engineers to build its own AI agent",
-      "wp_id": 37079
+      "title": "How West Ham striker's testicular cancer tragedy is educating next generation",
+      "wp_id": 37100
     }
   ],
   "state": "published"
