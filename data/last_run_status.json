@@ -1,36 +1,29 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5152,
-  "finished_at": "2026-11-21T12:27:12.328470+00:00",
+  "fetched": 5061,
+  "finished_at": "2026-11-21T19:40:58.340933+00:00",
   "generation_failures": [
-    "Skipped candidate 'Criticism from Tucker Carlson and Joe Rogan cut Trump\u2019s sway over Republicans in half in experiment on the Epstein files': Free article failed quality gate: article has only 201 words",
-    "Skipped candidate 'Princess Kate Cancer Documentary \u2018Heal\u2019 Sets BBC, NBC and International Premiere Dates': Free article failed quality gate: article has only 237 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Psychologists find a hidden asymmetry in how people judge potential partners': Free article failed quality gate: article has only 208 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Upskilling health professionals to deliver emotional well-being support for people with diabetes': Free article failed quality gate: article has only 245 words; 2 repeated sentence(s)",
-    "Skipped candidate 'Upskilling health professionals to deliver emotional well-being support for people with diabetes': Free article failed quality gate: article has only 245 words; 2 repeated sentence(s)",
-    "Skipped candidate 'Former Brazilian President Jair Bolsonaro hospitalised in Bras\u00edlia with abdominal pain': Free article failed quality gate: article has only 231 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Top Drug Kingpin Is Captured by Mexican Army as Gunfire Erupts': Free article failed quality gate: article has only 177 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Letby trial doctor barred from treating patients was expert witness in another case': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'New Once-Daily Pill Slashes Bad Cholesterol by Nearly 65% in Clinical Trial': Free article failed quality gate: article has only 224 words; 1 repeated sentence(s)",
-    "Skipped candidate '\u2018Legally, they don\u2019t exist\u2019: the hybrid crabs puzzling biologists and fishers': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'COP31: Deep divisions persist over energy, finance and science': Free article failed quality gate: article has only 274 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Countries race to secure Cop31 deal': Free article failed quality gate: article has only 243 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Cold gives way to rain in parts of UK as weather warning issued for south-west England': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'GTA 6 Transgressor locations: How to restore the first car for Wyman': Free article failed quality gate: article has only 283 words; 1 repeated sentence(s)"
   ],
-  "inserted": 297,
-  "message": "Published 1 post(s). Skipped 10 low-quality candidate(s).",
+  "inserted": 359,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "science",
-        "world",
-        "climate"
+        "gaming",
+        "software"
       ],
       "sources": [
-        "BBC Science & Environment"
+        "Eurogamer"
       ],
       "status": "publish",
-      "title": "Fight over fossil fuels leaves COP31 climate talks in deadlock",
-      "wp_id": 37191
+      "title": "Phasmophobia's next update lets you ask ghosts to throw things and it's",
+      "wp_id": 37215
     }
   ],
   "state": "published"
