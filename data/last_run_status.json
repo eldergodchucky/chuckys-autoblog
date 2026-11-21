@@ -2,35 +2,35 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5165,
-  "finished_at": "2026-11-21T04:01:06.240877+00:00",
+  "fetched": 5152,
+  "finished_at": "2026-11-21T12:27:12.328470+00:00",
   "generation_failures": [
-    "Skipped candidate 'Florida Joker gets his wish: He's a 'special voice actor' in Grand Theft Auto 6': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'GTA 6 Triggers Busiest Traffic Day in Comcast History': Free article failed quality gate: article has only 152 words; article has only 5 paragraphs",
-    "Skipped candidate 'Try this GTA 6 movement speed setting to make Jason and Lucia walk faster': Free article failed quality gate: article has only 299 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Satoru Gojo's English Voice Actor Didn't Realize These Wild Lines He Recorded Were for GTA 6': Free article failed quality gate: article has only 169 words; article has only 5 paragraphs",
-    "Skipped candidate 'One hand on the controller, one on the pizza roll: How America fed itself through GTA VI\u2019s $3.79 billion launch night': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'GTA made its name satirizing America \u2014 then reality caught up': Free article failed quality gate: article has only 194 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Fallout-Themed AriZona Iced Tea Gets Black Friday Discount, Including New 'Apocalyptic Orange' Flavor': Free article failed quality gate: article has only 273 words; 1 repeated sentence(s)",
-    "Skipped candidate 'I didn't realize Etsy was selling bridges now': Free article failed quality gate: article has only 275 words; 1 repeated sentence(s)",
-    "Skipped candidate 'GTA 6 has secret playlists, and all you have to do is scan a few posters to unlock them': Free article failed quality gate: article has only 270 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Despite GTA 6's huge map, it only takes about 4 minutes to fly across it in a plane': Free article failed quality gate: article has only 292 words; 1 repeated sentence(s)",
-    "Skipped candidate 'The Official Lord of the Rings Pizza Cutter Drops to a New Low Price at Amazon': Free article failed quality gate: article has only 242 words; 1 repeated sentence(s)"
+    "Skipped candidate 'Criticism from Tucker Carlson and Joe Rogan cut Trump\u2019s sway over Republicans in half in experiment on the Epstein files': Free article failed quality gate: article has only 201 words",
+    "Skipped candidate 'Princess Kate Cancer Documentary \u2018Heal\u2019 Sets BBC, NBC and International Premiere Dates': Free article failed quality gate: article has only 237 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Psychologists find a hidden asymmetry in how people judge potential partners': Free article failed quality gate: article has only 208 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Upskilling health professionals to deliver emotional well-being support for people with diabetes': Free article failed quality gate: article has only 245 words; 2 repeated sentence(s)",
+    "Skipped candidate 'Upskilling health professionals to deliver emotional well-being support for people with diabetes': Free article failed quality gate: article has only 245 words; 2 repeated sentence(s)",
+    "Skipped candidate 'Former Brazilian President Jair Bolsonaro hospitalised in Bras\u00edlia with abdominal pain': Free article failed quality gate: article has only 231 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Top Drug Kingpin Is Captured by Mexican Army as Gunfire Erupts': Free article failed quality gate: article has only 177 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Letby trial doctor barred from treating patients was expert witness in another case': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'New Once-Daily Pill Slashes Bad Cholesterol by Nearly 65% in Clinical Trial': Free article failed quality gate: article has only 224 words; 1 repeated sentence(s)",
+    "Skipped candidate '\u2018Legally, they don\u2019t exist\u2019: the hybrid crabs puzzling biologists and fishers': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 160,
-  "message": "Published 1 post(s). Skipped 11 low-quality candidate(s).",
+  "inserted": 297,
+  "message": "Published 1 post(s). Skipped 10 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gadgets",
-        "gaming"
+        "science",
+        "world",
+        "climate"
       ],
       "sources": [
-        "Engadget"
+        "BBC Science & Environment"
       ],
       "status": "publish",
-      "title": "Why you shouldn't depend on GTA 6 to auto-save",
-      "wp_id": 37166
+      "title": "Fight over fossil fuels leaves COP31 climate talks in deadlock",
+      "wp_id": 37191
     }
   ],
   "state": "published"
