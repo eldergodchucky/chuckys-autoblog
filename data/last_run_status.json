@@ -1,30 +1,6 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
-  "feeds": 127,
-  "fetched": 5061,
-  "finished_at": "2026-11-21T19:40:58.340933+00:00",
-  "generation_failures": [
-    "Skipped candidate 'COP31: Deep divisions persist over energy, finance and science': Free article failed quality gate: article has only 274 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Countries race to secure Cop31 deal': Free article failed quality gate: article has only 243 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Cold gives way to rain in parts of UK as weather warning issued for south-west England': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'GTA 6 Transgressor locations: How to restore the first car for Wyman': Free article failed quality gate: article has only 283 words; 1 repeated sentence(s)"
-  ],
-  "inserted": 359,
-  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
-  "posts": [
-    {
-      "categories": [
-        "gaming",
-        "software"
-      ],
-      "sources": [
-        "Eurogamer"
-      ],
-      "status": "publish",
-      "title": "Phasmophobia's next update lets you ask ghosts to throw things and it's",
-      "wp_id": 37215
-    }
-  ],
-  "state": "published"
+  "finished_at": "2026-11-21T23:57:53.718525+00:00",
+  "message": "OSError: image file is truncated (23 bytes not processed)",
+  "state": "failed"
 }
