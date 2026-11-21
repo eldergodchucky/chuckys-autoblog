@@ -1,27 +1,36 @@
 {
   "dry_run": false,
-  "feed_warnings": 19,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5046,
-  "finished_at": "2026-11-20T23:04:16.065316+00:00",
+  "fetched": 5165,
+  "finished_at": "2026-11-21T04:01:06.240877+00:00",
   "generation_failures": [
-    "Skipped candidate 'Trouble at Mars: NASA's Perseverance rover, Odyssey orbiter halt science work due to glitches': Free article failed quality gate: article has only 253 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Don't turn the moon into the Wild West, scientists warn': Free article failed quality gate: article has only 228 words; 1 repeated sentence(s)"
+    "Skipped candidate 'Florida Joker gets his wish: He's a 'special voice actor' in Grand Theft Auto 6': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'GTA 6 Triggers Busiest Traffic Day in Comcast History': Free article failed quality gate: article has only 152 words; article has only 5 paragraphs",
+    "Skipped candidate 'Try this GTA 6 movement speed setting to make Jason and Lucia walk faster': Free article failed quality gate: article has only 299 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Satoru Gojo's English Voice Actor Didn't Realize These Wild Lines He Recorded Were for GTA 6': Free article failed quality gate: article has only 169 words; article has only 5 paragraphs",
+    "Skipped candidate 'One hand on the controller, one on the pizza roll: How America fed itself through GTA VI\u2019s $3.79 billion launch night': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'GTA made its name satirizing America \u2014 then reality caught up': Free article failed quality gate: article has only 194 words; article has only 5 paragraphs; 1 repeated sentence(s)",
+    "Skipped candidate 'Fallout-Themed AriZona Iced Tea Gets Black Friday Discount, Including New 'Apocalyptic Orange' Flavor': Free article failed quality gate: article has only 273 words; 1 repeated sentence(s)",
+    "Skipped candidate 'I didn't realize Etsy was selling bridges now': Free article failed quality gate: article has only 275 words; 1 repeated sentence(s)",
+    "Skipped candidate 'GTA 6 has secret playlists, and all you have to do is scan a few posters to unlock them': Free article failed quality gate: article has only 270 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Despite GTA 6's huge map, it only takes about 4 minutes to fly across it in a plane': Free article failed quality gate: article has only 292 words; 1 repeated sentence(s)",
+    "Skipped candidate 'The Official Lord of the Rings Pizza Cutter Drops to a New Low Price at Amazon': Free article failed quality gate: article has only 242 words; 1 repeated sentence(s)"
   ],
-  "inserted": 491,
-  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
+  "inserted": 160,
+  "message": "Published 1 post(s). Skipped 11 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "defense",
-        "space"
+        "gadgets",
+        "gaming"
       ],
       "sources": [
-        "The War Zone"
+        "Engadget"
       ],
       "status": "publish",
-      "title": "Mysterious MQ-25 Stingray-Like Chinese Drone Emerges At Little-Known Flight Test Center",
-      "wp_id": 37148
+      "title": "Why you shouldn't depend on GTA 6 to auto-save",
+      "wp_id": 37166
     }
   ],
   "state": "published"
