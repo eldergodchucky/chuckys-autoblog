@@ -1,32 +1,31 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5098,
-  "finished_at": "2026-11-22T13:39:01.778223+00:00",
+  "fetched": 5128,
+  "finished_at": "2026-11-22T20:31:40.142824+00:00",
   "generation_failures": [
-    "Skipped candidate 'Beijing vows to defend interests as US bars Chinese telecoms from accessing phone numbers': Free article failed quality gate: article has only 246 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Reported FBI hack 'not good' but could have benefits, Trump says': Free article failed quality gate: article has only 163 words; article has only 5 paragraphs",
-    "Skipped candidate 'Bitcoin briefly drops to $17K on Kraken, exchange upholds trades': Free article failed quality gate: article has only 123 words; article has only 5 paragraphs",
-    "Skipped candidate '10 things that worry me about chasing the 2027 total solar eclipse in Egypt': Free article failed quality gate: article has only 250 words; 1 repeated sentence(s)",
-    "Skipped candidate 'China\u2019s shale gas star Xie Jun under investigation for corruption: authorities': Free article failed quality gate: article has only 258 words; article has only 5 paragraphs; 1 repeated sentence(s)",
-    "Skipped candidate 'Princess of Wales opens up about cancer': Free article failed quality gate: article has only 215 words; 1 repeated sentence(s)"
+    "Skipped candidate 'The $25 Billion Problem Facing Australia\u2019s Hydropower Revolution': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Google Backs Superhot Geothermal in 50 MW Oregon Power Deal': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'California\u2019s Wildfire Crisis Is Threatening Its Energy Future': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 316,
-  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "inserted": 393,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "gaming",
-        "entertainment",
-        "ai"
+        "sports",
+        "world",
+        "culture"
       ],
       "sources": [
-        "Eurogamer"
+        "Al Jazeera",
+        "BBC Sport",
+        "ESPN Top Headlines"
       ],
       "status": "publish",
-      "title": "Binding of Isaac dev pulls AI-generated music from Repentance+ after players expose",
-      "wp_id": 37283
+      "title": "Ngumoha stars as Liverpool thrash 10-man Man Utd",
+      "wp_id": 37308
     }
   ],
   "state": "published"
