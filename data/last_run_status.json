@@ -1,6 +1,33 @@
 {
   "dry_run": false,
-  "finished_at": "2026-11-21T23:57:53.718525+00:00",
-  "message": "OSError: image file is truncated (23 bytes not processed)",
-  "state": "failed"
+  "feed_warnings": 17,
+  "feeds": 127,
+  "fetched": 5075,
+  "finished_at": "2026-11-22T05:40:53.959907+00:00",
+  "generation_failures": [
+    "Skipped candidate 'New Research Reveals Why the Keto Diet Can Trigger Inflammation Instead of Fighting It': Free article failed quality gate: article has only 211 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Why Ozempic Weight Loss Stalls for Some People but Not Others': Free article failed quality gate: article has only 222 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Wind Could Cut the Cost of Round-the-Clock Solar Power by 18%, Ember Says': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Ford Begins Producing Its Own LFP Batteries': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'AI Boom Forces Massive Investment in Power Grids Worldwide': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Chainflip confirms $12M hack, offers attacker 10% bounty': Free article failed quality gate: article has only 165 words; article has only 5 paragraphs; 1 repeated sentence(s)"
+  ],
+  "inserted": 122,
+  "message": "Published 1 post(s). Skipped 6 low-quality candidate(s).",
+  "posts": [
+    {
+      "categories": [
+        "sports",
+        "entertainment",
+        "culture"
+      ],
+      "sources": [
+        "Formula 1 News"
+      ],
+      "status": "publish",
+      "title": "GALLERY: Celebrities go head-to-head in Las Vegas LEGO race",
+      "wp_id": 37254
+    }
+  ],
+  "state": "published"
 }
