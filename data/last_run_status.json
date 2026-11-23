@@ -2,30 +2,29 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5128,
-  "finished_at": "2026-11-22T20:31:40.142824+00:00",
+  "fetched": 5165,
+  "finished_at": "2026-11-23T01:07:57.273601+00:00",
   "generation_failures": [
-    "Skipped candidate 'The $25 Billion Problem Facing Australia\u2019s Hydropower Revolution': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Google Backs Superhot Geothermal in 50 MW Oregon Power Deal': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'California\u2019s Wildfire Crisis Is Threatening Its Energy Future': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'Ron Johnson\u2019s Social Security gaffe buried important news': Free article failed quality gate: article has only 142 words; article has only 5 paragraphs",
+    "Skipped candidate 'On China, is Trump bucking the US national security establishment?': Free article failed quality gate: article has only 160 words; article has only 5 paragraphs",
+    "Skipped candidate 'Watch live on Nov. 23: Amazon launching 1st batch of internet satellites since Vulcan Centaur failure': Free article failed quality gate: article has only 251 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Molly Meldrum, Countdown host and promoter of Australian music, dies aged 83': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 393,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 220,
+  "message": "Published 1 post(s). Skipped 4 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "sports",
+        "entertainment",
         "world",
-        "culture"
+        "gadgets"
       ],
       "sources": [
-        "Al Jazeera",
-        "BBC Sport",
-        "ESPN Top Headlines"
+        "The Hollywood Reporter"
       ],
       "status": "publish",
-      "title": "Ngumoha stars as Liverpool thrash 10-man Man Utd",
-      "wp_id": 37308
+      "title": "SHEGLAM Opens the Wizards\u2019 Vault With Its Third Harry Potter Makeup Collection",
+      "wp_id": 37324
     }
   ],
   "state": "published"
