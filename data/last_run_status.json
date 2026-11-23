@@ -2,25 +2,26 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5170,
-  "finished_at": "2026-11-23T09:07:59.785026+00:00",
+  "fetched": 5178,
+  "finished_at": "2026-11-23T21:27:08.073203+00:00",
   "generation_failures": [
-    "Skipped candidate 'Steve McQueen's Ferrari NART Spider Just Sold For $18.9 Million': Free article failed quality gate: article has only 143 words; article has only 5 paragraphs; 1 repeated sentence(s)"
+    "Skipped candidate 'I Designed My Dream Ferrari 296 Challenge Stradale. It's Ridiculous': Free article failed quality gate: article has only 110 words; article has only 5 paragraphs"
   ],
-  "inserted": 337,
+  "inserted": 1018,
   "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "culture",
-        "history"
+        "business",
+        "defense",
+        "world"
       ],
       "sources": [
-        "The Art Newspaper"
+        "Fortune Global"
       ],
       "status": "publish",
-      "title": "Chile\u2019s first Anglican church to host a new museum",
-      "wp_id": 37350
+      "title": "The Iran war drained U.S. missile stocks needed to deter China",
+      "wp_id": 37381
     }
   ],
   "state": "published"
