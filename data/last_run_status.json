@@ -1,44 +1,37 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5166,
-  "finished_at": "2026-11-24T05:28:45.398044+00:00",
+  "fetched": 5109,
+  "finished_at": "2026-11-24T16:12:56.596977+00:00",
   "generation_failures": [
-    "Skipped candidate 'Researchers report Wolbachia-based (wMel) mosquito intervention reduces arboviral infections in Brazil': Free article failed quality gate: article has only 245 words; 2 repeated sentence(s)",
-    "Skipped candidate 'Researchers report Wolbachia-based (wMel) mosquito intervention reduces arboviral infections in Brazil': Free article failed quality gate: article has only 245 words; 2 repeated sentence(s)",
-    "Skipped candidate 'Alzheimer's drug diranersen shows clinical benefit in trial': Free article failed quality gate: article has only 239 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Alzheimer's drug diranersen shows clinical benefit in trial': Free article failed quality gate: article has only 239 words; 1 repeated sentence(s)",
-    "Skipped candidate 'STAT+: Medicare estimates $9.2 billion in savings from third round of negotiated drug prices': Free article failed quality gate: article has only 200 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Study suggests cognitive skills shape how young children learn new words from screen versus paper books': Free article failed quality gate: article has only 215 words; 1 repeated sentence(s)",
-    "Skipped candidate 'More American Women Are Turning to Natural Family Planning, Study Shows': Free article failed quality gate: article has only 171 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Research highlights long-term health risks of gestational diabetes': Free article failed quality gate: article has only 237 words",
-    "Skipped candidate 'Research highlights long-term health risks of gestational diabetes': Free article failed quality gate: article has only 237 words",
-    "Skipped candidate 'Childhood diet high in fruit and fish linked to lower Crohn's disease risk': Free article failed quality gate: article has only 234 words",
-    "Skipped candidate 'Parents strongly accept intestinal ultrasound for pediatric IBD monitoring': Free article failed quality gate: article has only 189 words",
-    "Skipped candidate 'Childhood diet high in fruit and fish linked to lower Crohn's disease risk': Free article failed quality gate: article has only 234 words",
-    "Skipped candidate 'Parents strongly accept intestinal ultrasound for pediatric IBD monitoring': Free article failed quality gate: article has only 189 words",
-    "Skipped candidate 'ICE operation in Minneapolis likely led to fewer health care visits for Spanish-speaking patients, analysis finds': Free article failed quality gate: article has only 228 words",
-    "Skipped candidate 'ICE operation in Minneapolis likely led to fewer health care visits for Spanish-speaking patients, analysis finds': Free article failed quality gate: article has only 228 words",
-    "Skipped candidate 'Music before and during coronary angiography linked to lower blood pressure': Free article failed quality gate: article has only 232 words",
-    "Skipped candidate 'Music before and during coronary angiography linked to lower blood pressure': Free article failed quality gate: article has only 232 words"
+    "Skipped candidate 'Mamdani says Nvidia drama shows stock market is overly dependent on AI': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Predicting the unknown: A robust approach lets AI extrapolate to undiscovered materials': Free article failed quality gate: article has only 227 words; 1 repeated sentence(s)",
+    "Skipped candidate ''Glosslighting' the public: Study calls for overhaul of industry-led AI buzzwords': Free article failed quality gate: article has only 161 words; 1 repeated sentence(s)",
+    "Skipped candidate 'From Vulnerability Noise to Resilience: Rethinking Security in the AI Era': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Amazon\u2019s Decart acquisition is a bet on using software to narrow the gap with Nvidia in the AI chip race': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Raising the stakes for enterprise networks with AI modernization': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Tech sell-off resumes as Nvidia shares drop 5% and Anthropic tumbles below IPO price \u2013 as it happened': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'The New York Times warns photographers not to update Photoshop over AI features': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Mamdani says Nvidia drama shows stock market is overly dependent on AI': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Meta launches Muse in UK \u2013 the AI agent that can do your Christmas shopping': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 385,
-  "message": "Published 1 post(s). Skipped 17 low-quality candidate(s).",
+  "inserted": 858,
+  "message": "Published 1 post(s). Skipped 10 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "crime",
-        "health"
+        "politics",
+        "business",
+        "crime"
       ],
       "sources": [
-        "Al Jazeera",
-        "France 24"
+        "MarketWatch",
+        "The Guardian US Politics"
       ],
       "status": "publish",
-      "title": "Mexico to try \u2018El Chapo Isidro\u2019 despite US extradition request",
-      "wp_id": 37409
+      "title": "Jimmy Kimmel on Jensen Huang\u2019s return to Nvidia: \u2018What a profoundly stupid",
+      "wp_id": 37442
     }
   ],
   "state": "published"
