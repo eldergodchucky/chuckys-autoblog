@@ -2,26 +2,43 @@
   "dry_run": false,
   "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5178,
-  "finished_at": "2026-11-23T21:27:08.073203+00:00",
+  "fetched": 5166,
+  "finished_at": "2026-11-24T05:28:45.398044+00:00",
   "generation_failures": [
-    "Skipped candidate 'I Designed My Dream Ferrari 296 Challenge Stradale. It's Ridiculous': Free article failed quality gate: article has only 110 words; article has only 5 paragraphs"
+    "Skipped candidate 'Researchers report Wolbachia-based (wMel) mosquito intervention reduces arboviral infections in Brazil': Free article failed quality gate: article has only 245 words; 2 repeated sentence(s)",
+    "Skipped candidate 'Researchers report Wolbachia-based (wMel) mosquito intervention reduces arboviral infections in Brazil': Free article failed quality gate: article has only 245 words; 2 repeated sentence(s)",
+    "Skipped candidate 'Alzheimer's drug diranersen shows clinical benefit in trial': Free article failed quality gate: article has only 239 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Alzheimer's drug diranersen shows clinical benefit in trial': Free article failed quality gate: article has only 239 words; 1 repeated sentence(s)",
+    "Skipped candidate 'STAT+: Medicare estimates $9.2 billion in savings from third round of negotiated drug prices': Free article failed quality gate: article has only 200 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Study suggests cognitive skills shape how young children learn new words from screen versus paper books': Free article failed quality gate: article has only 215 words; 1 repeated sentence(s)",
+    "Skipped candidate 'More American Women Are Turning to Natural Family Planning, Study Shows': Free article failed quality gate: article has only 171 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Research highlights long-term health risks of gestational diabetes': Free article failed quality gate: article has only 237 words",
+    "Skipped candidate 'Research highlights long-term health risks of gestational diabetes': Free article failed quality gate: article has only 237 words",
+    "Skipped candidate 'Childhood diet high in fruit and fish linked to lower Crohn's disease risk': Free article failed quality gate: article has only 234 words",
+    "Skipped candidate 'Parents strongly accept intestinal ultrasound for pediatric IBD monitoring': Free article failed quality gate: article has only 189 words",
+    "Skipped candidate 'Childhood diet high in fruit and fish linked to lower Crohn's disease risk': Free article failed quality gate: article has only 234 words",
+    "Skipped candidate 'Parents strongly accept intestinal ultrasound for pediatric IBD monitoring': Free article failed quality gate: article has only 189 words",
+    "Skipped candidate 'ICE operation in Minneapolis likely led to fewer health care visits for Spanish-speaking patients, analysis finds': Free article failed quality gate: article has only 228 words",
+    "Skipped candidate 'ICE operation in Minneapolis likely led to fewer health care visits for Spanish-speaking patients, analysis finds': Free article failed quality gate: article has only 228 words",
+    "Skipped candidate 'Music before and during coronary angiography linked to lower blood pressure': Free article failed quality gate: article has only 232 words",
+    "Skipped candidate 'Music before and during coronary angiography linked to lower blood pressure': Free article failed quality gate: article has only 232 words"
   ],
-  "inserted": 1018,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 385,
+  "message": "Published 1 post(s). Skipped 17 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "defense",
-        "world"
+        "world",
+        "crime",
+        "health"
       ],
       "sources": [
-        "Fortune Global"
+        "Al Jazeera",
+        "France 24"
       ],
       "status": "publish",
-      "title": "The Iran war drained U.S. missile stocks needed to deter China",
-      "wp_id": 37381
+      "title": "Mexico to try \u2018El Chapo Isidro\u2019 despite US extradition request",
+      "wp_id": 37409
     }
   ],
   "state": "published"
