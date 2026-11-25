@@ -1,32 +1,27 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5107,
-  "finished_at": "2026-11-25T09:17:40.686700+00:00",
+  "fetched": 5163,
+  "finished_at": "2026-11-25T19:32:45.697891+00:00",
   "generation_failures": [
-    "Skipped candidate 'Early-stage breast cancer gains first newly approved hormone therapy in more than 20 years': Free article failed quality gate: article has only 222 words",
-    "Skipped candidate 'Early-stage breast cancer gains first newly approved hormone therapy in more than 20 years': Free article failed quality gate: article has only 222 words",
-    "Skipped candidate '\u2018Nature\u2019s Ozempic\u2019: oat sales soar as shoppers seek out foods that mimic effect of GLP-1s': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'In Waves review \u2013 love, grief and surfing at heart of profoundly moving animated tale': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'IVF, elective abortion, gender-affirming care and VAD to cease under Catholic ownership of private hospitals': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Books, wisdom keepers and psychic abilities among sources of birth keeper\u2019s knowledge, inquest hears': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Labor wins Greens support for trust changes in exchange for scrapping jet fuel subsidies for the wealthy': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'FCC authorizes SpaceX to deploy 1M satellites for orbital AI data centers': Free article failed quality gate: article has only 155 words; article has only 5 paragraphs",
+    "Skipped candidate 'Green light for Starmind: SpaceX gets approval to deploy 1 million AI satellites': Free article failed quality gate: article has only 254 words; 1 repeated sentence(s)"
   ],
-  "inserted": 375,
-  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
+  "inserted": 843,
+  "message": "Published 1 post(s). Skipped 2 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "world",
-        "health"
+        "ai",
+        "science"
       ],
       "sources": [
-        "AllAfrica"
+        "TechCrunch"
       ],
       "status": "publish",
-      "title": "Nigeria: 20% HIV Diagnosis Gap Threatens Nigeria's 2030 Aids Target",
-      "wp_id": 37492
+      "title": "Want to buy your kid an AI toy this Christmas? Not",
+      "wp_id": 37519
     }
   ],
   "state": "published"
