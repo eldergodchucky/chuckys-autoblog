@@ -2,28 +2,31 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5094,
-  "finished_at": "2026-11-25T00:46:27.179992+00:00",
+  "fetched": 5107,
+  "finished_at": "2026-11-25T09:17:40.686700+00:00",
   "generation_failures": [
-    "Skipped candidate 'iPhone 18e is reportedly getting a redesigned camera island': Free article failed quality gate: article has only 261 words; 1 repeated sentence(s)",
-    "Skipped candidate 'GTA VI was the biggest launch in PlayStation history': Free article failed quality gate: article has only 258 words; 1 repeated sentence(s)",
-    "Skipped candidate 'Why Trump's Flagship Lithium Project Now Costs 31% More Than Planned': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'Early-stage breast cancer gains first newly approved hormone therapy in more than 20 years': Free article failed quality gate: article has only 222 words",
+    "Skipped candidate 'Early-stage breast cancer gains first newly approved hormone therapy in more than 20 years': Free article failed quality gate: article has only 222 words",
+    "Skipped candidate '\u2018Nature\u2019s Ozempic\u2019: oat sales soar as shoppers seek out foods that mimic effect of GLP-1s': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'In Waves review \u2013 love, grief and surfing at heart of profoundly moving animated tale': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'IVF, elective abortion, gender-affirming care and VAD to cease under Catholic ownership of private hospitals': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Books, wisdom keepers and psychic abilities among sources of birth keeper\u2019s knowledge, inquest hears': Free article failed quality gate: 1 repeated sentence(s)",
+    "Skipped candidate 'Labor wins Greens support for trust changes in exchange for scrapping jet fuel subsidies for the wealthy': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 674,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 375,
+  "message": "Published 1 post(s). Skipped 7 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "business",
-        "ai",
-        "science"
+        "world",
+        "health"
       ],
       "sources": [
-        "Fortune Global"
+        "AllAfrica"
       ],
       "status": "publish",
-      "title": "OpenAI chief scientist thinks \u2018perplexity\u2019 might be the key to coordinating",
-      "wp_id": 37465
+      "title": "Nigeria: 20% HIV Diagnosis Gap Threatens Nigeria's 2030 Aids Target",
+      "wp_id": 37492
     }
   ],
   "state": "published"
