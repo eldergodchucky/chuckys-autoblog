@@ -2,36 +2,28 @@
   "dry_run": false,
   "feed_warnings": 16,
   "feeds": 127,
-  "fetched": 5109,
-  "finished_at": "2026-11-24T16:12:56.596977+00:00",
+  "fetched": 5094,
+  "finished_at": "2026-11-25T00:46:27.179992+00:00",
   "generation_failures": [
-    "Skipped candidate 'Mamdani says Nvidia drama shows stock market is overly dependent on AI': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Predicting the unknown: A robust approach lets AI extrapolate to undiscovered materials': Free article failed quality gate: article has only 227 words; 1 repeated sentence(s)",
-    "Skipped candidate ''Glosslighting' the public: Study calls for overhaul of industry-led AI buzzwords': Free article failed quality gate: article has only 161 words; 1 repeated sentence(s)",
-    "Skipped candidate 'From Vulnerability Noise to Resilience: Rethinking Security in the AI Era': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Amazon\u2019s Decart acquisition is a bet on using software to narrow the gap with Nvidia in the AI chip race': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Raising the stakes for enterprise networks with AI modernization': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Tech sell-off resumes as Nvidia shares drop 5% and Anthropic tumbles below IPO price \u2013 as it happened': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'The New York Times warns photographers not to update Photoshop over AI features': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Mamdani says Nvidia drama shows stock market is overly dependent on AI': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'Meta launches Muse in UK \u2013 the AI agent that can do your Christmas shopping': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'iPhone 18e is reportedly getting a redesigned camera island': Free article failed quality gate: article has only 261 words; 1 repeated sentence(s)",
+    "Skipped candidate 'GTA VI was the biggest launch in PlayStation history': Free article failed quality gate: article has only 258 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Why Trump's Flagship Lithium Project Now Costs 31% More Than Planned': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 858,
-  "message": "Published 1 post(s). Skipped 10 low-quality candidate(s).",
+  "inserted": 674,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "politics",
         "business",
-        "crime"
+        "ai",
+        "science"
       ],
       "sources": [
-        "MarketWatch",
-        "The Guardian US Politics"
+        "Fortune Global"
       ],
       "status": "publish",
-      "title": "Jimmy Kimmel on Jensen Huang\u2019s return to Nvidia: \u2018What a profoundly stupid",
-      "wp_id": 37442
+      "title": "OpenAI chief scientist thinks \u2018perplexity\u2019 might be the key to coordinating",
+      "wp_id": 37465
     }
   ],
   "state": "published"
