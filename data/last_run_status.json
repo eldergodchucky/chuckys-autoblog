@@ -1,26 +1,29 @@
 {
   "dry_run": false,
-  "feed_warnings": 15,
+  "feed_warnings": 14,
   "feeds": 127,
-  "fetched": 5160,
-  "finished_at": "2026-11-26T11:24:32.512992+00:00",
+  "fetched": 5182,
+  "finished_at": "2026-11-26T20:26:10.351738+00:00",
   "generation_failures": [
-    "Skipped candidate 'Older Australians suffering under Labor\u2019s \u2018botched\u2019 aged care at home program, inquiry finds': Free article failed quality gate: 1 repeated sentence(s)"
+    "Skipped candidate 'On this day in space! Nov. 26, 2011: NASA's 2-ton nuclear-powered Curiosity rover launches to Mars': Free article failed quality gate: article has only 254 words; 1 repeated sentence(s)",
+    "Skipped candidate 'Taiwan Navy Receives Last Tuo Chiang-class Missile Corvettes': Free article failed quality gate: article has only 230 words; 1 repeated sentence(s)",
+    "Skipped candidate 'NATO deploys AWACS airborne radar to monitor Polish airspace': Free article failed quality gate: article has only 182 words; article has only 5 paragraphs; 1 repeated sentence(s)"
   ],
-  "inserted": 490,
-  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
+  "inserted": 668,
+  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "culture",
-        "entertainment"
+        "world",
+        "politics",
+        "defense"
       ],
       "sources": [
-        "BBC Culture & Arts"
+        "Al Jazeera"
       ],
       "status": "publish",
-      "title": "BBC Radio 1's Big Weekend 2027 heads to Brighton",
-      "wp_id": 37564
+      "title": "Guinea-Bissau military leaders delay presidential election until 2028",
+      "wp_id": 37590
     }
   ],
   "state": "published"
