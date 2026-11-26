@@ -1,29 +1,26 @@
 {
   "dry_run": false,
-  "feed_warnings": 16,
+  "feed_warnings": 15,
   "feeds": 127,
-  "fetched": 5161,
-  "finished_at": "2026-11-26T02:29:47.175066+00:00",
+  "fetched": 5160,
+  "finished_at": "2026-11-26T11:24:32.512992+00:00",
   "generation_failures": [
-    "Skipped candidate 'Judge Blocks FCC\u2019s Move Against ABC\u2019s Station Licenses: \u2018This Is Not a Close Case\u2019': Free article failed quality gate: 1 repeated sentence(s)",
-    "Skipped candidate 'How to prepare youth to respond to firearm injury risk': Free article failed quality gate: article has only 229 words; 1 repeated sentence(s)",
-    "Skipped candidate 'How to prepare youth to respond to firearm injury risk': Free article failed quality gate: article has only 229 words; 1 repeated sentence(s)"
+    "Skipped candidate 'Older Australians suffering under Labor\u2019s \u2018botched\u2019 aged care at home program, inquiry finds': Free article failed quality gate: 1 repeated sentence(s)"
   ],
-  "inserted": 506,
-  "message": "Published 1 post(s). Skipped 3 low-quality candidate(s).",
+  "inserted": 490,
+  "message": "Published 1 post(s). Skipped 1 low-quality candidate(s).",
   "posts": [
     {
       "categories": [
-        "climate",
-        "politics",
-        "business"
+        "culture",
+        "entertainment"
       ],
       "sources": [
-        "Guardian Environment"
+        "BBC Culture & Arts"
       ],
       "status": "publish",
-      "title": "It\u2019s time for Australia to tax our gas industry. It is",
-      "wp_id": 37537
+      "title": "BBC Radio 1's Big Weekend 2027 heads to Brighton",
+      "wp_id": 37564
     }
   ],
   "state": "published"
